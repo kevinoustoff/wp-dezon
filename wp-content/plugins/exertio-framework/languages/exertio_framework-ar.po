@@ -1,0 +1,4134 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"Project-Id-Version: Exertio Framework\n"
+"POT-Creation-Date: 2021-03-12 13:16+0500\n"
+"PO-Revision-Date: 2021-03-12 13:19+0500\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: index.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: ar\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: functions.php:34 plugin-files/cpt/project.php:1102
+#: plugin-files/cpt/services.php:760
+msgid "Select Attachments"
+msgstr "تحديد المرفقات"
+
+#: functions.php:35
+msgid "Ad Files"
+msgstr "ملفات إعلانية"
+
+#: functions.php:36
+msgid "Select Image"
+msgstr "اختيار صورة"
+
+#: functions.php:38
+msgid "You can add max 10 new fields"
+msgstr "يمكنك إضافة الحد الأقصى 10 حقول جديدة"
+
+#: functions.php:39
+msgid "Are your sure?"
+msgstr "هل أنت متأكد؟"
+
+#: functions.php:40
+msgid "Something went wrong"
+msgstr "حدث خطأ ما"
+
+#: functions.php:41
+msgid "Award Date"
+msgstr "تاريخ الجائزة"
+
+#: functions.php:42
+msgid "Award Name"
+msgstr "اسم الجائزة"
+
+#: functions.php:43
+msgid "Project URL"
+msgstr "رابط المشروع"
+
+#: functions.php:44 plugin-files/cpt/disputes.php:42
+msgid "Project Name"
+msgstr "اسم المشروع"
+
+#: functions.php:45 plugin-files/cpt/freelancers.php:798
+msgid "Experience Title"
+msgstr "عنوان الخبرة"
+
+#: functions.php:46 plugin-files/cpt/freelancers.php:798
+msgid "Company Name"
+msgstr "اسم الشركة"
+
+#: functions.php:47 functions.php:53
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#: functions.php:48 functions.php:54 plugin-files/cpt/freelancers.php:798
+#: plugin-files/cpt/freelancers.php:826
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#: functions.php:49 plugin-files/cpt/freelancers.php:798
+#: plugin-files/cpt/freelancers.php:826
+msgid "Leave it empty to set it current job"
+msgstr "اتركه فارغاً لتعيين الوظيفة الحالية"
+
+#: functions.php:50 plugin-files/cpt/freelancers.php:798
+#: plugin-files/cpt/freelancers.php:826 plugin-files/cpt/project.php:254
+msgid "Description"
+msgstr "الوصف"
+
+#: functions.php:51 plugin-files/cpt/freelancers.php:826
+msgid "Education Title"
+msgstr "عنوان التعليم"
+
+#: functions.php:52
+msgid "Institute Name"
+msgstr "اسم المعهد"
+
+#: functions.php:55
+msgid "Leave it empty to set it current education"
+msgstr "اتركها فارغة لتحددها للتعليم الحالي"
+
+#: functions.php:79 functions.php:101 plugin-files/cpt/freelancers.php:667
+#: plugin-files/cpt/freelancers.php:700
+msgid "Skills percentage"
+msgstr "حدد النسبة المئوية للمهارات علي التوالي"
+
+#: inc/basic-function.php:34
+msgid " Verified"
+msgstr "مَضْبُوط ; مُبَرْهَن ; مُثْبَت ; مُحَقّق ; مُدَقّق ; مُدَلّل عَلَيْه ; مُصَدَّق"
+
+#: inc/basic-function.php:64 plugin-files/cpt/company.php:539
+#: plugin-files/cpt/freelancers.php:861
+msgid "Verified"
+msgstr "التحقق"
+
+#: inc/basic-function.php:138
+msgid "No Result Found"
+msgstr "لم يتم العثور على نتائج"
+
+#: inc/basic-function.php:214 inc/basic-function.php:219
+msgid "Disabled for demo"
+msgstr "معطل"
+
+#: inc/basic-function.php:268
+msgid "Activation email sent."
+msgstr "تم إرسال البريد الإلكتروني للتنشيط."
+
+#: inc/basic-function.php:273
+msgid "Activation email is not sent. Please contact admin"
+msgstr "لا يتم إرسال البريد الإلكتروني التنشيط. يرجى الاتصال بالمسؤول"
+
+#: inc/crons.php:94 inc/crons.php:207 plugin-files/cpt/project.php:840
+msgid "Hourly"
+msgstr "بالساعه"
+
+#: inc/crons.php:98 inc/crons.php:211
+msgid "Twice a days"
+msgstr "مرتين في اليوم"
+
+#: inc/crons.php:102 inc/crons.php:215
+msgid "Once a days"
+msgstr "مرة في اليوم"
+
+#: inc/custom-functions.php:206 inc/custom-functions.php:270
+#: inc/custom-functions.php:338 inc/custom-functions.php:393
+msgid "First"
+msgstr "الأول"
+
+#: inc/custom-functions.php:228 inc/custom-functions.php:292
+#: inc/custom-functions.php:360 inc/custom-functions.php:415
+msgid "Last"
+msgstr "الأخير"
+
+#: inc/custom-functions.php:442 inc/custom-functions.php:476
+msgid "Expired "
+msgstr "منتهي"
+
+#: inc/custom-functions.php:446 inc/custom-functions.php:480
+msgid " Days left"
+msgstr "أيام المتبقية."
+
+#: inc/custom-functions.php:450 inc/custom-functions.php:484
+msgid "Closing Today "
+msgstr "إغلاق اليوم "
+
+#: inc/custom-functions.php:461
+msgid "Never Expire "
+msgstr "لا تنتهى أبداً"
+
+#: inc/custom-functions.php:526
+msgid "You do not have enough amount in your wallet to assign this project"
+msgstr "ليس لديك كمية كافية في محفظتك لتعيين هذا المشروع"
+
+#: inc/custom-functions.php:547
+msgid "Can not update project status, please contact admin"
+msgstr "لا يمكن تحديث حالة المشروع، يرجى الاتصال المسؤول"
+
+#: inc/custom-functions.php:581
+msgid "Can not update project logs, please contact admin"
+msgstr "لا يمكن تحديث سجلات المشروع، يرجى الاتصال admin"
+
+#: inc/custom-functions.php:599
+msgid "Project assigned successfully"
+msgstr "المشروع الذي تم تعيينه بنجاح"
+
+#: inc/custom-functions.php:607
+msgid "Can not assign project!!! please contact Admin"
+msgstr "لا يمكن تعيين المشروع!!! يرجى الاتصال بالمسؤول"
+
+#: inc/custom-functions.php:652 inc/custom-functions.php:1565
+#: inc/disputes.php:206
+msgid "Message sent"
+msgstr "تم ارسال الرسالة"
+
+#: inc/custom-functions.php:657 inc/custom-functions.php:1570
+#: inc/disputes.php:211
+msgid "Error!!! Message sending failed."
+msgstr "الخطا!!! فشل إرسال الرسالة."
+
+#: inc/custom-functions.php:663 inc/custom-functions.php:1576
+#: inc/disputes.php:217
+msgid "Message field can not be empty"
+msgstr "لا يمكن أن يكون حقل الرسالة فارغاً"
+
+#: inc/custom-functions.php:727
+msgid ""
+"Sorry, only JPG, JPEG, PNG, docx, pptx, xlsx, pdf and zip files are allowed."
+msgstr ""
+"عذرا، فقط JPG، JPEG، PNG، docx، pptx، xlsx، ملفات pdf والرمز البريدي مسموح "
+"بها."
+
+#: inc/custom-functions.php:735 inc/utilities.php:784 inc/utilities.php:1786
+#: inc/utilities.php:1937
+msgid "Max allowd attachment size is "
+msgstr "الحد الأقصى المسموح به حجم المرفق هو "
+
+#: inc/custom-functions.php:757 inc/utilities.php:835 inc/utilities.php:1839
+#: inc/utilities.php:1972
+msgid "Attachments uploaded"
+msgstr "المرفقات التي تم تحميلها"
+
+#: inc/custom-functions.php:785 inc/utilities.php:865 inc/utilities.php:2001
+msgid "Attachment deleted"
+msgstr "تم حذف المرفق"
+
+#: inc/custom-functions.php:791 inc/utilities.php:871 inc/utilities.php:2007
+msgid "Error!!! attachment is not deleted"
+msgstr "الخطا!!! لم يتم حذف المرفق"
+
+#: inc/custom-functions.php:824
+msgid "second"
+msgstr "ثانية"
+
+#: inc/custom-functions.php:825
+msgid "minute"
+msgstr "دقيقة"
+
+#: inc/custom-functions.php:826
+msgid "hour"
+msgstr "ساعة"
+
+#: inc/custom-functions.php:827
+msgid "day"
+msgstr "يوم"
+
+#: inc/custom-functions.php:828
+msgid "month"
+msgstr "شهر"
+
+#: inc/custom-functions.php:829
+msgid "year"
+msgstr "سنة"
+
+#: inc/custom-functions.php:842
+msgid " ago"
+msgstr "منذ"
+
+#: inc/custom-functions.php:846
+msgid "s ago"
+msgstr "s منذ"
+
+#: inc/custom-functions.php:893
+msgid "Generating Attachments to Download. Please wait..."
+msgstr "إنشاء مرفقات للتنزيل. الرجاء الانتظار..."
+
+#: inc/custom-functions.php:898
+msgid "Error!!! attachment is not available"
+msgstr "الخطا!!! المرفق غير متوفر"
+
+#: inc/custom-functions.php:930
+msgid "Please select project status first"
+msgstr "الرجاء تحديد حالة المشروع أولاً"
+
+#: inc/custom-functions.php:978
+msgid "can not mark as complete!!! Please contact admin"
+msgstr "لا يمكن وضع علامة كاملة!!! يرجى الاتصال بالمسؤول"
+
+#: inc/custom-functions.php:1025 inc/custom-functions.php:1688
+msgid "Marked as completed"
+msgstr "وضع علامة كمكتملة"
+
+#: inc/custom-functions.php:1030
+msgid "Error!!! project log not updated"
+msgstr "الخطا!!! لم يتم تحديث سجل المشروع"
+
+#: inc/custom-functions.php:1038
+msgid "Error!!! Project completion not updated."
+msgstr "الخطا!!! لم يتم تحديث إكمال المشروع."
+
+#: inc/custom-functions.php:1058 inc/custom-functions.php:1126
+msgid "can not mark as canceled!!! Please contact admin"
+msgstr "لا يمكن وضع علامة كما تم إلغاؤها!!! يرجى الاتصال بالمسؤول"
+
+#: inc/custom-functions.php:1079 inc/custom-functions.php:1136
+msgid "Project canceled"
+msgstr "تم إلغاء المشروع"
+
+#: inc/custom-functions.php:1085
+msgid "Project Status Error."
+msgstr "خطأ حالة المشروع."
+
+#: inc/custom-functions.php:1091 inc/custom-functions.php:1492
+#: inc/utilities.php:2333 inc/utilities.php:2349 inc/utilities.php:2493
+msgid "Error!!! please contact Admin"
+msgstr "الخطا!!! يرجى الاتصال بالمسؤول"
+
+#: inc/custom-functions.php:1142 inc/custom-functions.php:1254
+msgid "Project ID error"
+msgstr "خطأ معرف المشروع"
+
+#: inc/custom-functions.php:1171 inc/custom-functions.php:1837
+msgid " review"
+msgstr " استعراض"
+
+#: inc/custom-functions.php:1174 inc/custom-functions.php:1795
+#: inc/custom-functions.php:1840
+msgid " reviews"
+msgstr " مراجعات"
+
+#: inc/custom-functions.php:1220 inc/custom-functions.php:1799
+#: inc/custom-functions.php:1885
+msgid "No Reviews"
+msgstr "لا يوجد تعليقات"
+
+#: inc/custom-functions.php:1241
+msgid "Already in your saved projects"
+msgstr "بالفعل في المشاريع المحفوظة"
+
+#: inc/custom-functions.php:1248
+msgid "Added to your saved projects"
+msgstr "تمت إضافة إلى المشاريع المحفوظة"
+
+#: inc/custom-functions.php:1272
+msgid "Removed from saved projects"
+msgstr "تمت إزالته من المشاريع المحفوظة"
+
+#: inc/custom-functions.php:1277 inc/custom-functions.php:1335
+#: inc/custom-functions.php:2151 inc/custom-functions.php:2207
+#: inc/utilities.php:1692
+msgid "There is some problem, please try again later"
+msgstr "هناك بعض المشاكل، يرجى إعادة المحاولة لاحقاً."
+
+#: inc/custom-functions.php:1298
+msgid "Already in your saved services"
+msgstr "بالفعل في الخدمات المحفوظة"
+
+#: inc/custom-functions.php:1305
+msgid "Added to your saved services"
+msgstr "إضافة إلى الخدمات المحفوظة"
+
+#: inc/custom-functions.php:1311
+msgid "Service ID error"
+msgstr "خطأ معرف الخدمة"
+
+#: inc/custom-functions.php:1330
+msgid "Removed from saved services"
+msgstr "تمت إزالته من الخدمات المحفوظة"
+
+#: inc/custom-functions.php:1358
+msgid "This service has been expired"
+msgstr "انتهت صلاحية هذه الخدمة"
+
+#: inc/custom-functions.php:1411
+msgid "Please recharge your wallet to purchase this service"
+msgstr "يرجى إعادة شحن محفظتك لشراء هذه الخدمة"
+
+#: inc/custom-functions.php:1464
+msgid "Can not update service logs, please contact admin"
+msgstr "لا يمكن تحديث سجلات الخدمة، يرجى الاتصال المشرف"
+
+#: inc/custom-functions.php:1479
+msgid "Service purchased successfully"
+msgstr "تم شراء الخدمة بنجاح"
+
+#: inc/custom-functions.php:1485
+msgid "Error!!! could not purchase service."
+msgstr "الخطا!!! تعذر شراء الخدمة."
+
+#: inc/custom-functions.php:1498
+msgid "You can not purchase your own service"
+msgstr "لا يمكنك شراء الخدمة الخاصة بك"
+
+#: inc/custom-functions.php:1693
+msgid "Error in saving service logs"
+msgstr "خطأ في حفظ سجلات الخدمة"
+
+#: inc/custom-functions.php:1701
+msgid "Error in saving service review"
+msgstr "خطأ في حفظ مراجعة الخدمة"
+
+#: inc/custom-functions.php:1708 inc/custom-functions.php:1760
+msgid "Error in updating service status"
+msgstr "خطأ في تحديث حالة الخدمة"
+
+#: inc/custom-functions.php:1715 inc/custom-functions.php:1766
+#: inc/utilities.php:324 inc/utilities.php:593
+msgid "You are not allowed to do that"
+msgstr "لا يسمح لك أن تفعل ذلك"
+
+#: inc/custom-functions.php:1755
+msgid "Marked as canceled"
+msgstr "تم وضع علامة ملغية"
+
+#: inc/custom-functions.php:1925
+msgid " Orders in queue"
+msgstr " الطلبات في قائمة الانتظار"
+
+#: inc/custom-functions.php:1929
+msgid " Order in queue"
+msgstr " ترتيب في قائمة الانتظار"
+
+#: inc/custom-functions.php:2006
+msgid "For "
+msgstr "إلى "
+
+#: inc/custom-functions.php:2006
+msgid " hours total will be  "
+msgstr " سيكون مجموع الساعات  "
+
+#: inc/custom-functions.php:2070
+msgid "Duration: "
+msgstr "المدة: "
+
+#: inc/custom-functions.php:2074
+msgid "Level: "
+msgstr "مستوى:"
+
+#: inc/custom-functions.php:2078
+msgid "Location: "
+msgstr "الموقع:"
+
+#: inc/custom-functions.php:2086
+msgid "View Detail"
+msgstr "مشاهدة التفاصيل"
+
+#: inc/custom-functions.php:2114 inc/custom-functions.php:2170
+msgid "You are already following"
+msgstr "أنت تتابع"
+
+#: inc/custom-functions.php:2121 inc/custom-functions.php:2177
+msgid "Added to your following list"
+msgstr "تمت إضافتها إلى القائمة التالية"
+
+#: inc/custom-functions.php:2127 inc/custom-functions.php:2183
+msgid "ID error"
+msgstr "خطأ معرف"
+
+#: inc/custom-functions.php:2146 inc/custom-functions.php:2202
+msgid "Removed from following list"
+msgstr "تمت إزالته من القائمة التالية"
+
+#: inc/custom-functions.php:2295
+msgid "Settings saved"
+msgstr "تم حفظ الإعدادات"
+
+#: inc/custom-statuses.php:6 inc/custom-statuses.php:58
+msgid "In Review"
+msgstr "الرؤیات"
+
+#: inc/custom-statuses.php:12
+#, php-format
+msgid "In Review <span class=\"count\">(%s)</span>"
+msgid_plural "In Review <span class=\"count\">(%s)</span>"
+msgstr[0] "في المراجعة <span class=\"count\">( %s )</span>"
+msgstr[1] "في المراجعة <span class=\"count\">( %s )</span>"
+msgstr[2] "في المراجعة <span class=\"count\">( %s )</span>"
+msgstr[3] "في المراجعة <span class=\"count\">( %s )</span>"
+msgstr[4] "في المراجعة <span class=\"count\">( %s )</span>"
+msgstr[5] "في المراجعة <span class=\"count\">( %s )</span>"
+
+#: inc/custom-statuses.php:16 inc/custom-statuses.php:22
+#: inc/custom-statuses.php:66 inc/custom-statuses.php:133
+msgid "Ongoing"
+msgstr "جارية الان"
+
+#: inc/custom-statuses.php:22 inc/custom-statuses.php:32
+#: inc/custom-statuses.php:41
+#, php-format
+msgid "<span class=\"count\">(%s)</span>"
+msgid_plural "<span class=\"count\">(%s)</span>"
+msgstr[0] "الكل <span class=\"count\">(%s)</span>"
+msgstr[1] "الكل <span class=\"count\">(%s)</span>"
+msgstr[2] "الكل <span class=\"count\">(%s)</span>"
+msgstr[3] "الكل <span class=\"count\">(%s)</span>"
+msgstr[4] "الكل <span class=\"count\">(%s)</span>"
+msgstr[5] "الكل <span class=\"count\">(%s)</span>"
+
+#: inc/custom-statuses.php:26 inc/custom-statuses.php:32
+#: inc/custom-statuses.php:73 inc/custom-statuses.php:158
+msgid "Completed"
+msgstr "مكتمل"
+
+#: inc/custom-statuses.php:35 inc/custom-statuses.php:41
+#: inc/custom-statuses.php:80 inc/custom-statuses.php:181
+msgid "Canceled"
+msgstr "ملغى"
+
+#: inc/custom-statuses.php:104 inc/custom-statuses.php:108
+msgid "In Review."
+msgstr "للمراجعة"
+
+#: inc/custom-statuses.php:128
+msgid "Ongoing."
+msgstr "الجاريه."
+
+#: inc/custom-statuses.php:153
+msgid "Completed."
+msgstr "مكتمل"
+
+#: inc/custom-statuses.php:176
+msgid "Canceled."
+msgstr "الغاء "
+
+#: inc/disputes.php:17
+msgid "Select select project first"
+msgstr "حدد تحديد المشروع أولاً"
+
+#: inc/disputes.php:17
+msgid "Select project"
+msgstr "عنوان المشروع"
+
+#: inc/disputes.php:137
+msgid "Dispute not created"
+msgstr "النزاع لم يتم إنشاؤه"
+
+#: inc/disputes.php:149
+msgid "Dispute Created"
+msgstr "النزاع الذي تم إنشاؤه"
+
+#: inc/disputes.php:156
+msgid "Dispute already created"
+msgstr "النزاع الذي تم إنشاؤه بالفعل"
+
+#: inc/disputes.php:163
+msgid "fields can not be empty"
+msgstr "لا يمكن أن تكون الحقول فارغة"
+
+#: inc/payouts.php:28 inc/payouts.php:43 inc/payouts.php:60
+msgid "Payout detail updated"
+msgstr "تم تحديث تفاصيل المدفوعات"
+
+#: inc/payouts.php:65
+msgid "Payment method detail error"
+msgstr "خطأ في تفاصيل طريقة الدفع"
+
+#: inc/payouts.php:142
+msgid "After "
+msgstr "بعد "
+
+#: inc/utilities.php:6
+msgid "Please login first"
+msgstr "الرجاء تسجيل الدخول أولا"
+
+#: inc/utilities.php:106
+msgid "Registration successfull. Redirecting...."
+msgstr "التسجيل ناجح. اعاده توجيه...."
+
+#: inc/utilities.php:111
+msgid "Email already exist, please try other one."
+msgstr "الايميل مسجل مسبقاً، يرجى استخدام ايميل آخر."
+
+#: inc/utilities.php:196
+msgid "Your account is not verified yet."
+msgstr "لم يتم التحقق من حسابك بعد."
+
+#: inc/utilities.php:205
+msgid "Login successful. Redirecting...."
+msgstr "تسجيل الدخول بنجاح. اعاده توجيه...."
+
+#: inc/utilities.php:211
+msgid "Invalid email or password."
+msgstr "الايميل أو كلمة السر خاطئة"
+
+#: inc/utilities.php:260
+msgid "Please type your e-mail address."
+msgstr "يرجى كتابة عنوان بريدك الإلكتروني."
+
+#: inc/utilities.php:265
+msgid "Please enter a valid e-mail address."
+msgstr "الرجاء إدخال عنوان بريد إلكتروني صالح."
+
+#: inc/utilities.php:269
+msgid "This email address does not exist on website."
+msgstr "هذا البريد الإلكتروني غير موجود على الموقع."
+
+#: inc/utilities.php:284
+msgid "Check your email for the confirmation link."
+msgstr "التحقق من بريدك الإلكتروني للحصول على رابط التأكيد."
+
+#: inc/utilities.php:314
+msgid "Please choose a password with at least 3-12 characters."
+msgstr "الرجاء اختيار كلمة مرور بأحرف 3-12 على الأقل."
+
+#: inc/utilities.php:319
+msgid ""
+"Your password has been changed. You can now log in with your new password."
+msgstr ""
+"تم تغيير كلمة المرور. يمكنك الآن تسجيل الدخول باستخدام كلمة المرور الجديدة."
+
+#: inc/utilities.php:330
+msgid "User id does not exist. Please contact admin."
+msgstr "معرف المستخدم غير موجود. يرجى الاتصال بالمسؤول."
+
+#: inc/utilities.php:396 inc/utilities.php:1290 inc/utilities.php:2757
+msgid "Sorry, only JPG, JPEG, PNG files are allowed."
+msgstr "عذرا، فقط JPG، JPEG، ملفات بابوا نيو غينيا مسموح بها."
+
+#: inc/utilities.php:403 inc/utilities.php:2764
+msgid "Max allowd image size is "
+msgstr "الحد الأقصى لحجم الصورة المسموح به"
+
+#: inc/utilities.php:434 inc/utilities.php:2791
+msgid "Image changed Successfully"
+msgstr "تم تغيير الصورة بنجاح"
+
+#: inc/utilities.php:457
+msgid "Image Removed"
+msgstr "تمت إزالة الصورة"
+
+#: inc/utilities.php:461
+msgid "Something went wrong!!!"
+msgstr "حدث خطأ ما!"
+
+#: inc/utilities.php:500
+msgid "Data is not saved"
+msgstr "لم يتم حفظ البيانات"
+
+#: inc/utilities.php:587 inc/utilities.php:1598
+msgid "Profile updated"
+msgstr "تم تحديث ملف التعريف."
+
+#: inc/utilities.php:619
+msgid "All fields are required."
+msgstr "جميع الحقول مطلوبة"
+
+#: inc/utilities.php:624
+msgid "Sorry, you can not set the same password again"
+msgstr "عذرا، لا يمكنك تعيين كلمة المرور نفسها مرة أخرى"
+
+#: inc/utilities.php:629
+msgid "New password Mismatched"
+msgstr "كلمة المرور الجديدة غير متطابقة"
+
+#: inc/utilities.php:637
+msgid "Password changed successfully."
+msgstr "تم تغيير الرقم السري بنجاح."
+
+#: inc/utilities.php:641
+msgid "Wrong current password"
+msgstr "كلمة المرور الحالية غير صحيحة"
+
+#: inc/utilities.php:662
+msgid "Admin can not delete his account."
+msgstr "لا يمكن للمسؤول حذف حسابه."
+
+#: inc/utilities.php:689
+msgid "Account deleted successfully"
+msgstr "تم حذف الحساب بنجاح"
+
+#: inc/utilities.php:758
+msgid ""
+"Sorry, only JPG, JPEG, PNG, docx, pptx, xlsx, SVG and pdf files are allowed."
+msgstr "عذرا، يسمح فقط JPG، JPEG، PNG، docx، pptx، xlsx، SVG وملفات PDF."
+
+#: inc/utilities.php:773 inc/utilities.php:1775
+msgid "Attachment upload limit reached"
+msgstr "تم الوصول إلى حد تحميل المرفقات"
+
+#: inc/utilities.php:809 inc/utilities.php:1811
+msgid "File Uploaded"
+msgstr "ملف تم تحميله"
+
+#: inc/utilities.php:832 inc/utilities.php:1836
+msgid "file size:"
+msgstr "تحميل بحجم ملف اقصي"
+
+#: inc/utilities.php:832 inc/utilities.php:1836
+msgid " Kb"
+msgstr " كيلو بايت"
+
+#: inc/utilities.php:943
+msgid "Error!!! Please contact admin"
+msgstr "الخطا!!! يرجى الاتصال بالمسؤول"
+
+#: inc/utilities.php:1158
+msgid "Project posted successfully"
+msgstr "تم ترحيل المشروع بنجاح"
+
+#: inc/utilities.php:1296
+msgid "Max allowd image size is 300KB"
+msgstr "حجم الصورة الأقصى المسموح به هو  300KB"
+
+#: inc/utilities.php:1321
+msgid "Image uploaded"
+msgstr "تم رفع الصورة"
+
+#: inc/utilities.php:1364
+msgid "Profile not saved. Please contact admin"
+msgstr "لم يتم حفظ ملف التعريف. يرجى الاتصال بالمسؤول"
+
+#: inc/utilities.php:1652
+msgid "Addon not saved. Please contact admin"
+msgstr "لم يتم حفظ Addon. يرجى الاتصال بالمسؤول"
+
+#: inc/utilities.php:1668
+msgid "Addon Created"
+msgstr "إنشاء Addon"
+
+#: inc/utilities.php:1687
+msgid "Addon removed successfully"
+msgstr "إزالة Addon بنجاح"
+
+#: inc/utilities.php:1760
+msgid "Sorry, only JPG, JPEG, and PNG files are allowed."
+msgstr "عذراً، فقط الملفات من نوع  JPG، JPEG، PNG, GIF هي المسموح بها."
+
+#: inc/utilities.php:1911
+msgid "Sorry, only JPG, JPEG, PNG, files are allowed."
+msgstr "عذرا، فقط JPG، JPEG، بابوا نيو غينيا، ويسمح الملفات."
+
+#: inc/utilities.php:1931
+msgid "Attachments uploaded limit reached"
+msgstr "تم الوصول إلى الحد الذي تم تحميله من المرفقات"
+
+#: inc/utilities.php:1945
+msgid "Sorry, this type of image/file are not allowed."
+msgstr "عذراً، لا يُسمح بهذا النوع من الصور/الملفات."
+
+#: inc/utilities.php:1963
+#, fuzzy
+msgid " file size:"
+msgstr "تحميل بحجم ملف اقصي"
+
+#: inc/utilities.php:2070
+#, fuzzy
+msgid "Data did not save. Please contact admin"
+msgstr "لم يتم حفظ البيانات. يرجى الاتصال بالمسؤول"
+
+#: inc/utilities.php:2295
+#, fuzzy
+msgid "New service has been created"
+msgstr "تم إنشاء خدمة جديدة"
+
+#: inc/utilities.php:2299
+#, fuzzy
+msgid "Service updated"
+msgstr "تم تحديث الخدمة"
+
+#: inc/utilities.php:2328
+#, fuzzy
+msgid "Service removed"
+msgstr "تمت إزالة الخدمة"
+
+#: inc/utilities.php:2339
+#, fuzzy
+msgid "Service Activated"
+msgstr "تم تنشيط الخدمة"
+
+#: inc/utilities.php:2343
+#, fuzzy
+msgid "Service Canceled"
+msgstr "تم إلغاء الخدمة"
+
+#: inc/utilities.php:2372
+#, fuzzy
+msgid "Project Already Expired"
+msgstr "المشروع منتهي الصلاحية بالفعل"
+
+#: inc/utilities.php:2386 inc/utilities.php:2513
+#, fuzzy
+msgid "Please purchase package to send proposal"
+msgstr "يرجى شراء حزمة لإرسال اقتراح"
+
+#: inc/utilities.php:2392
+#, fuzzy
+msgid "Project is expired"
+msgstr "انتهت مدة صلاحية المشروع"
+
+#: inc/utilities.php:2442
+#, fuzzy
+msgid "Please load balance in your wallet"
+msgstr "يرجى تحميل الرصيد في محفظتك"
+
+#: inc/utilities.php:2487
+#, fuzzy
+msgid "Proposal sent successfully"
+msgstr "تم إرسال العرض بنجاح"
+
+#: inc/utilities.php:2499
+#, fuzzy
+msgid "You have already sent a proposal."
+msgstr "لقد أرسلت بالفعل عرضًا."
+
+#: inc/utilities.php:2507
+#, fuzzy
+msgid "You can not send a proposal to your project"
+msgstr "لا يمكنك إرسال اقتراح إلى مشروعك"
+
+#: inc/utilities.php:2520
+#, fuzzy
+msgid "Please login first to send a proposal"
+msgstr "يرجى تسجيل الدخول أولاً لإرسال اقتراح"
+
+#: inc/utilities.php:2617
+#, fuzzy
+msgid "Verification document did not sent"
+msgstr "لم يتم إرسال مستند التحقق"
+
+#: inc/utilities.php:2642
+#, fuzzy
+msgid "Verification detail sent"
+msgstr "تم إرسال تفاصيل التحقق"
+
+#: inc/utilities.php:2678
+#, fuzzy
+msgid "verification detail sent"
+msgstr "تم إرسال تفاصيل التحقق"
+
+#: inc/utilities.php:2683
+#, fuzzy
+msgid "Verification document did not revoke"
+msgstr "لم يتم إبطال مستند التحقق"
+
+#: inc/utilities.php:2811
+#, fuzzy
+msgid "You have already reported"
+msgstr "لقد قمت بالفعل بـبلِغة"
+
+#: inc/utilities.php:2835
+#, fuzzy
+msgid "Error while reporting. Please contact Admin"
+msgstr "خطأ أثناء إعداد التقارير. يرجى الاتصال بالمسؤول"
+
+#: inc/utilities.php:2861
+#, fuzzy
+msgid "Reported successfully"
+msgstr "تم الإبلاغ عنها بنجاح."
+
+#: inc/utilities.php:2869
+#, fuzzy
+msgid "Please login to report"
+msgstr "موضوع البريد الكتروني تقرير الادراج"
+
+#: inc/woo-employer-packages.php:75
+#, fuzzy
+msgid "Add Package Detail"
+msgstr "إضافة تفاصيل الحزمة"
+
+#: inc/woo-employer-packages.php:90
+#, fuzzy
+msgid "Number of Simple Project Allowed"
+msgstr "عدد المشاريع البسيطة المسموح بها"
+
+#: inc/woo-employer-packages.php:97 inc/woo-employer-packages.php:120
+#: plugin-files/cpt/addons.php:94 plugin-files/cpt/services.php:632
+#, fuzzy
+msgid "Integer value only"
+msgstr "قيمة عدد صحيح فقط"
+
+#: inc/woo-employer-packages.php:101
+#, fuzzy
+msgid "Simple Project Expiry"
+msgstr "انتهاء صلاحية المشروع البسيط"
+
+#: inc/woo-employer-packages.php:108 inc/woo-employer-packages.php:131
+#, fuzzy
+msgid "In days only"
+msgstr "في أيام فقط"
+
+#: inc/woo-employer-packages.php:113
+#, fuzzy
+msgid "Number of Featured Projects Allowed"
+msgstr "عدد المشاريع المميزة المسموح بها"
+
+#: inc/woo-employer-packages.php:124
+#, fuzzy
+msgid "Featured Projects Expiry"
+msgstr "انتهاء المشاريع المميزة: "
+
+#: inc/woo-employer-packages.php:135
+#, fuzzy
+msgid "Expiry date for package"
+msgstr "تاريخ انتهاء صلاحية الحزمة"
+
+#: inc/woo-employer-packages.php:142
+#, fuzzy
+msgid "Integer value only in days only"
+msgstr "قيمة عدد صحيح فقط في الأيام فقط"
+
+#: inc/woo-employer-packages.php:148 inc/woo-freelancer-packages.php:148
+#: plugin-files/exertio-widgets/exertio-widgets.php:2399
+#: plugin-files/exertio-widgets/exertio-widgets.php:2401
+#, fuzzy
+msgid "Profile Featured"
+msgstr "ملف التعريف المميز"
+
+#: inc/woo-employer-packages.php:155 inc/woo-freelancer-packages.php:155
+msgid "Select option"
+msgstr "‫الرجاء الاختيار"
+
+#: inc/woo-employer-packages.php:156 inc/woo-freelancer-packages.php:156
+msgid "YES"
+msgstr "نعم"
+
+#: inc/woo-employer-packages.php:157 inc/woo-freelancer-packages.php:157
+msgid "NO"
+msgstr "لا"
+
+#: inc/woo-employer-packages.php:159
+#, fuzzy
+msgid "This option will allow employers to be featured on website"
+msgstr "هذا الخيار سوف يسمح لأرباب العمل أن تكون واردة على الموقع"
+
+#: inc/woo-employer-packages.php:288 inc/woo-freelancer-packages.php:288
+#: inc/woo-functions.php:131
+#, fuzzy
+msgid "Redirecting to cart page"
+msgstr "إعادة التوجيه إلى صفحة السلة"
+
+#: inc/woo-employer-packages.php:294 inc/woo-freelancer-packages.php:294
+#: inc/woo-functions.php:138
+#, fuzzy
+msgid "WooCommerce plugin is not active"
+msgstr "WooCommerce البرنامج المساعد غير نشط"
+
+#: inc/woo-freelancer-packages.php:68
+#, fuzzy
+msgid "Freelancer Package Detail"
+msgstr "تفاصيل حزمة لحسابهم الخاص"
+
+#: inc/woo-freelancer-packages.php:82
+#, fuzzy
+msgid "Number of Projects Credits"
+msgstr "عدد الاعتمادات المشاريع"
+
+#: inc/woo-freelancer-packages.php:89
+#, fuzzy
+msgid ""
+"Project credits means on how many propsals a freelancer is allowed to send. "
+"Give -1 for unlimited"
+msgstr ""
+"الاعتمادات المشروع يعني على عدد الدعائم يسمح لحسابهم الخاص لإرسال. إعطاء -1 "
+"لـ غير محدود"
+
+#: inc/woo-freelancer-packages.php:93
+#, fuzzy
+msgid "Number of Services Allowed"
+msgstr "عدد الخدمات المسموح بها"
+
+#: inc/woo-freelancer-packages.php:100
+#, fuzzy
+msgid "Integer value only. Give -1 for unlimited services"
+msgstr "قيمة عدد صحيح فقط. إعطاء -1 للخدمات غير المحدودة"
+
+#: inc/woo-freelancer-packages.php:104
+#, fuzzy
+msgid "Service Expiry"
+msgstr "انتهاء الخدمة: "
+
+#: inc/woo-freelancer-packages.php:111 inc/woo-freelancer-packages.php:133
+#, fuzzy
+msgid "In days only. Give -1 value if you want it to never expire"
+msgstr "في أيام فقط. إعطاء قيمة -1 إذا كنت تريد أن تنتهي أبداً"
+
+#: inc/woo-freelancer-packages.php:115
+#, fuzzy
+msgid "Number of Featured Services Allowed"
+msgstr "عدد الخدمات المميزة المسموح بها"
+
+#: inc/woo-freelancer-packages.php:122
+#, fuzzy
+msgid "Integer value only. Give -1 for unlimited featured services"
+msgstr "قيمة عدد صحيح فقط. Give -1 للخدمات المميزة غير المحدودة"
+
+#: inc/woo-freelancer-packages.php:126 plugin-files/cpt/freelancers.php:1156
+#, fuzzy
+msgid "Featured Services Expiry"
+msgstr "انتهاء الخدمات المميزة: "
+
+#: inc/woo-freelancer-packages.php:137
+#, fuzzy
+msgid "Expiry Date for Package"
+msgstr "تاريخ انتهاء صلاحية الحزمة"
+
+#: inc/woo-freelancer-packages.php:144
+#, fuzzy
+msgid ""
+"Integer value in days only. Give -1 value if you want it to never expire"
+msgstr "قيمة عدد صحيح في الأيام فقط. إعطاء قيمة -1 إذا كنت تريد أن تنتهي أبداً"
+
+#: inc/woo-freelancer-packages.php:159
+#, fuzzy
+msgid "This option will allow Freelancers to be featured on your website."
+msgstr ""
+"هذا الخيار سوف يسمح للمترجمين المستقلين أن تكون واردة على موقع الويب الخاص "
+"بك."
+
+#: inc/woo-functions.php:94
+#, fuzzy
+msgid "Select amount to deposit"
+msgstr "تحديد المبلغ للإيداع"
+
+#: plugin-files/cpt/addons.php:7 plugin-files/cpt/addons.php:8
+#: plugin-files/cpt/addons.php:9 plugin-files/cpt/addons.php:10
+msgid "Addons"
+msgstr "الإضافات"
+
+#: plugin-files/cpt/addons.php:11 plugin-files/cpt/addons.php:12
+#, fuzzy
+msgid "Add New Addon"
+msgstr "إضافة جديد أدون"
+
+#: plugin-files/cpt/addons.php:13
+#, fuzzy
+msgid "New Addons"
+msgstr "جديد أدونز"
+
+#: plugin-files/cpt/addons.php:14
+#, fuzzy
+msgid "Edit Addons"
+msgstr "تحرير أدونس"
+
+#: plugin-files/cpt/addons.php:15
+msgid "View Addons"
+msgstr "عرض الإضافات"
+
+#: plugin-files/cpt/addons.php:16
+#, fuzzy
+msgid "All Addons"
+msgstr "جميع أدونز"
+
+#: plugin-files/cpt/addons.php:17
+#, fuzzy
+msgid "Search Addons"
+msgstr "البحث في أدونز"
+
+#: plugin-files/cpt/addons.php:18
+#, fuzzy
+msgid "No Addon Found."
+msgstr "لم يتم العثور على (أدون)"
+
+#: plugin-files/cpt/addons.php:38 plugin-files/cpt/disputes.php:43
+#: plugin-files/cpt/project.php:55 plugin-files/cpt/services.php:45
+msgid "Price"
+msgstr "السعر"
+
+#: plugin-files/cpt/addons.php:39 plugin-files/cpt/company.php:45
+#: plugin-files/cpt/disputes.php:44 plugin-files/cpt/freelancers.php:44
+#: plugin-files/cpt/payouts.php:44 plugin-files/cpt/project.php:58
+#: plugin-files/cpt/services.php:46
+msgid "Author"
+msgstr "الكاتب"
+
+#: plugin-files/cpt/addons.php:40 plugin-files/cpt/disputes.php:45
+#: plugin-files/cpt/payouts.php:45 plugin-files/cpt/project.php:59
+#: plugin-files/cpt/report.php:76 plugin-files/cpt/services.php:47
+msgid "Date"
+msgstr "التاريخ"
+
+#: plugin-files/cpt/addons.php:72
+#, fuzzy
+msgid "Add Addons Detail"
+msgstr "إضافة تفاصيل أدونز"
+
+#: plugin-files/cpt/addons.php:87 plugin-files/cpt/addons.php:93
+#, fuzzy
+msgid "Addons Price"
+msgstr "سعر أدونز"
+
+#: plugin-files/cpt/addons.php:100
+#, fuzzy
+msgid "Assign Addons"
+msgstr "تعيين أدونز"
+
+#: plugin-files/cpt/addons.php:119
+#, fuzzy
+msgid ""
+"If you select a user from this list it will assign this addons to the "
+"selected user."
+msgstr ""
+"إذا قمت بتحديد مستخدم من هذه القائمة فإنه سيتم تعيين هذا الملحقات إلى "
+"المستخدم المحدد."
+
+#: plugin-files/cpt/company.php:7 plugin-files/cpt/company.php:8
+#: plugin-files/cpt/company.php:9 plugin-files/cpt/company.php:10
+msgid "Employer"
+msgstr "صاحب العمل"
+
+#: plugin-files/cpt/company.php:11 plugin-files/cpt/company.php:12
+msgid "Add New Employer"
+msgstr "إضافة صاحب عمل جديد"
+
+#: plugin-files/cpt/company.php:13
+msgid "New Employer"
+msgstr "صاحب عمل جديد"
+
+#: plugin-files/cpt/company.php:14
+msgid "Edit Employer"
+msgstr "تحرير صاحب العمل"
+
+#: plugin-files/cpt/company.php:15
+msgid "View Employer"
+msgstr "عرض صاحب العمل"
+
+#: plugin-files/cpt/company.php:16
+msgid "All Employers"
+msgstr "جميع أصحاب العمل"
+
+#: plugin-files/cpt/company.php:17
+msgid "Search Employer"
+msgstr "بحث"
+
+#: plugin-files/cpt/company.php:18
+#, fuzzy
+msgid "No Employer Found."
+msgstr "صاحب العمل"
+
+#: plugin-files/cpt/company.php:66 plugin-files/cpt/company.php:78
+msgid "Departments"
+msgstr "الأقسام"
+
+#: plugin-files/cpt/company.php:67
+#, fuzzy
+msgid "Search Department"
+msgstr "قسم البحث"
+
+#: plugin-files/cpt/company.php:68
+#, fuzzy
+msgid "Popular Departments"
+msgstr "الأقسام الشعبية"
+
+#: plugin-files/cpt/company.php:69
+msgid "All Departments"
+msgstr "كل الأقسام"
+
+#: plugin-files/cpt/company.php:70
+msgid "Edit Department"
+msgstr "تحرير  العيادة"
+
+#: plugin-files/cpt/company.php:71
+msgid "Update Department"
+msgstr "تحديث القسم"
+
+#: plugin-files/cpt/company.php:72
+msgid "Add New Department"
+msgstr "اضف عيادة جديدة"
+
+#: plugin-files/cpt/company.php:73
+#, fuzzy
+msgid "New Department Name"
+msgstr "اسم القسم الجديد"
+
+#: plugin-files/cpt/company.php:74
+#, fuzzy
+msgid "Separate Departments with commas"
+msgstr "فصل الأقسام بفواصل"
+
+#: plugin-files/cpt/company.php:75
+#, fuzzy
+msgid "Add or remove Department"
+msgstr "إضافة أو إزالة القسم"
+
+#: plugin-files/cpt/company.php:76
+#, fuzzy
+msgid "Choose from the most used Departments"
+msgstr "اختر من الأقسام الأكثر استخداماً"
+
+#: plugin-files/cpt/company.php:77
+#, fuzzy
+msgid "No Department found."
+msgstr "لم يتم العثور على قسم."
+
+#: plugin-files/cpt/company.php:93 plugin-files/cpt/company.php:105
+#: plugin-files/cpt/freelancers.php:90 plugin-files/cpt/freelancers.php:102
+msgid "No. of Employees"
+msgstr "عدد العاملين"
+
+#: plugin-files/cpt/company.php:94 plugin-files/cpt/freelancers.php:91
+#, fuzzy
+msgid "Search No. of Employees"
+msgstr "البحث رقم من الموظفين"
+
+#: plugin-files/cpt/company.php:95 plugin-files/cpt/freelancers.php:92
+#, fuzzy
+msgid "Popular No. of Employees"
+msgstr "رقم شعبية من الموظفين"
+
+#: plugin-files/cpt/company.php:96 plugin-files/cpt/freelancers.php:93
+#, fuzzy
+msgid "All No. of Employees"
+msgstr "كل رقم من الموظفين"
+
+#: plugin-files/cpt/company.php:97 plugin-files/cpt/freelancers.php:94
+#, fuzzy
+msgid "Edit No. of Employees"
+msgstr "تحرير رقم. من الموظفين"
+
+#: plugin-files/cpt/company.php:98 plugin-files/cpt/freelancers.php:95
+#, fuzzy
+msgid "Update No. of Employees"
+msgstr "رقم التحديث من الموظفين"
+
+#: plugin-files/cpt/company.php:99 plugin-files/cpt/freelancers.php:96
+#, fuzzy
+msgid "Add New No. of Employee"
+msgstr "إضافة رقم جديد. من الموظف"
+
+#: plugin-files/cpt/company.php:100 plugin-files/cpt/freelancers.php:97
+#, fuzzy
+msgid "New No. of Employee Name"
+msgstr "رقم جديد اسم الموظف"
+
+#: plugin-files/cpt/company.php:101 plugin-files/cpt/freelancers.php:98
+#, fuzzy
+msgid "Separate No. of Employees with commas"
+msgstr "منفصلة لا. من الموظفين بفواصل"
+
+#: plugin-files/cpt/company.php:102 plugin-files/cpt/freelancers.php:99
+#, fuzzy
+msgid "Add or remove No. of Employees"
+msgstr "إضافة أو إزالة لا. من الموظفين"
+
+#: plugin-files/cpt/company.php:103 plugin-files/cpt/freelancers.php:100
+#, fuzzy
+msgid "Choose from the most used No. of Employees"
+msgstr "اختر من أكثرها استخداماً لا. من الموظفين"
+
+#: plugin-files/cpt/company.php:104 plugin-files/cpt/freelancers.php:101
+#, fuzzy
+msgid "No No. of Employee found."
+msgstr "لا لا. من الموظف وجدت."
+
+#: plugin-files/cpt/company.php:118 plugin-files/cpt/company.php:130
+#: plugin-files/cpt/freelancers.php:115 plugin-files/cpt/freelancers.php:127
+#: plugin-files/cpt/project.php:330 plugin-files/cpt/project.php:342
+#: plugin-files/cpt/services.php:170 plugin-files/cpt/services.php:182
+msgid "Locations"
+msgstr "المواقع"
+
+#: plugin-files/cpt/company.php:119 plugin-files/cpt/freelancers.php:116
+#: plugin-files/cpt/project.php:331 plugin-files/cpt/services.php:171
+msgid "Search Locations"
+msgstr "البحث في المواقع"
+
+#: plugin-files/cpt/company.php:120 plugin-files/cpt/freelancers.php:117
+#: plugin-files/cpt/project.php:332 plugin-files/cpt/services.php:172
+msgid "Popular Locations"
+msgstr "الاماكن الأكثر شعبية"
+
+#: plugin-files/cpt/company.php:121 plugin-files/cpt/freelancers.php:118
+#: plugin-files/cpt/project.php:333 plugin-files/cpt/services.php:173
+msgid "All Locations"
+msgstr "جميع المواقع"
+
+#: plugin-files/cpt/company.php:122 plugin-files/cpt/freelancers.php:119
+#: plugin-files/cpt/project.php:334 plugin-files/cpt/services.php:174
+msgid "Edit Location"
+msgstr "تعديل العنوان"
+
+#: plugin-files/cpt/company.php:123 plugin-files/cpt/freelancers.php:120
+#: plugin-files/cpt/project.php:335 plugin-files/cpt/services.php:175
+msgid "Update Location"
+msgstr "تحديث الموقع"
+
+#: plugin-files/cpt/company.php:124 plugin-files/cpt/freelancers.php:121
+#: plugin-files/cpt/project.php:336 plugin-files/cpt/services.php:176
+msgid "Add New Location"
+msgstr "إضافة مكان جديد"
+
+#: plugin-files/cpt/company.php:125 plugin-files/cpt/freelancers.php:122
+#: plugin-files/cpt/project.php:337 plugin-files/cpt/services.php:177
+#, fuzzy
+msgid "New Locations Name"
+msgstr "اسم المواقع الجديدة"
+
+#: plugin-files/cpt/company.php:126 plugin-files/cpt/freelancers.php:123
+#: plugin-files/cpt/project.php:338 plugin-files/cpt/services.php:178
+msgid "Separate Locations with commas"
+msgstr "افصل المواقع بفواصل"
+
+#: plugin-files/cpt/company.php:127 plugin-files/cpt/freelancers.php:124
+#: plugin-files/cpt/project.php:339 plugin-files/cpt/services.php:179
+msgid "Add or remove Locations"
+msgstr "إضافة المواقع أو إزالتها"
+
+#: plugin-files/cpt/company.php:128 plugin-files/cpt/freelancers.php:125
+#: plugin-files/cpt/project.php:340 plugin-files/cpt/services.php:180
+#, fuzzy
+msgid "Choose from the most used Locations"
+msgstr "اختر من المواقع الأكثر استخداماً"
+
+#: plugin-files/cpt/company.php:129 plugin-files/cpt/freelancers.php:126
+#: plugin-files/cpt/project.php:341 plugin-files/cpt/services.php:181
+msgid "No Location found."
+msgstr "لم يتم العثور على أي موقع."
+
+#: plugin-files/cpt/company.php:181 plugin-files/cpt/company.php:208
+#: plugin-files/cpt/freelancers.php:254 plugin-files/cpt/freelancers.php:281
+#: plugin-files/cpt/project.php:390 plugin-files/cpt/project.php:417
+#: plugin-files/cpt/project.php:536 plugin-files/cpt/project.php:563
+#: plugin-files/cpt/services.php:391 plugin-files/cpt/services.php:418
+msgid "Image"
+msgstr "صوره"
+
+#: plugin-files/cpt/company.php:185 plugin-files/cpt/company.php:219
+#: plugin-files/cpt/freelancers.php:258 plugin-files/cpt/freelancers.php:292
+#: plugin-files/cpt/project.php:394 plugin-files/cpt/project.php:428
+#: plugin-files/cpt/project.php:540 plugin-files/cpt/project.php:574
+#: plugin-files/cpt/services.php:395 plugin-files/cpt/services.php:429
+msgid "Add Image"
+msgstr "إضافة صورة"
+
+#: plugin-files/cpt/company.php:186 plugin-files/cpt/company.php:220
+#: plugin-files/cpt/freelancers.php:259 plugin-files/cpt/freelancers.php:293
+#: plugin-files/cpt/project.php:395 plugin-files/cpt/project.php:429
+#: plugin-files/cpt/project.php:541 plugin-files/cpt/project.php:575
+#: plugin-files/cpt/services.php:396 plugin-files/cpt/services.php:430
+msgid "Remove Image"
+msgstr "احذف صورة"
+
+#: plugin-files/cpt/company.php:247 plugin-files/cpt/freelancers.php:320
+#: plugin-files/cpt/project.php:456 plugin-files/cpt/project.php:602
+#: plugin-files/cpt/services.php:309 plugin-files/cpt/services.php:458
+msgid "Insert"
+msgstr "إدراج"
+
+#: plugin-files/cpt/company.php:311
+#, fuzzy
+msgid "Add Employer Detail"
+msgstr "إضافة تفاصيل صاحب العمل"
+
+#: plugin-files/cpt/company.php:328
+msgid "Department"
+msgstr "القسم"
+
+#: plugin-files/cpt/company.php:337
+msgid "Select Department"
+msgstr "اختر قسم"
+
+#: plugin-files/cpt/company.php:351 plugin-files/cpt/company.php:418
+#: plugin-files/cpt/freelancers.php:474 plugin-files/cpt/freelancers.php:504
+#: plugin-files/cpt/project.php:791 plugin-files/cpt/project.php:819
+#: plugin-files/cpt/project.php:887 plugin-files/cpt/project.php:982
+#: plugin-files/cpt/project.php:1012 plugin-files/cpt/project.php:1042
+#: plugin-files/cpt/services.php:559 plugin-files/cpt/services.php:588
+#, fuzzy
+msgid "No, values available. Please consider adding values first"
+msgstr "لا، القيم متوفرة. الرجاء النظر في إضافة قيم أولاً"
+
+#: plugin-files/cpt/company.php:360 plugin-files/cpt/freelancers.php:417
+msgid "Tagline"
+msgstr "(الشعار) الخط"
+
+#: plugin-files/cpt/company.php:366 plugin-files/cpt/freelancers.php:423
+#, fuzzy
+msgid " Tagline"
+msgstr "(الشعار) الخط"
+
+#: plugin-files/cpt/company.php:367
+#, fuzzy
+msgid "Employer Tagline will be here"
+msgstr "صاحب العمل Tagline سيكون هنا"
+
+#: plugin-files/cpt/company.php:372 plugin-files/cpt/freelancers.php:429
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#: plugin-files/cpt/company.php:378 plugin-files/cpt/freelancers.php:435
+#, fuzzy
+msgid " Display Name"
+msgstr "اسم العرض"
+
+#: plugin-files/cpt/company.php:379 plugin-files/cpt/freelancers.php:436
+#, fuzzy
+msgid "This will be visible on website"
+msgstr "هذا وسوف تكون مرئية على الموقع"
+
+#: plugin-files/cpt/company.php:384 plugin-files/cpt/freelancers.php:441
+#: plugin-files/cpt/verification.php:69
+msgid "Contact Number"
+msgstr "رقم الاتصال"
+
+#: plugin-files/cpt/company.php:390 plugin-files/cpt/freelancers.php:447
+msgid "Phone number"
+msgstr "رقم الهاتف"
+
+#: plugin-files/cpt/company.php:395
+#, fuzzy
+msgid "No of Employees"
+msgstr "عدد العاملين"
+
+#: plugin-files/cpt/company.php:403
+#, fuzzy
+msgid "Select number of Employees"
+msgstr "الرجاء تحديد عدد الموظفين"
+
+#: plugin-files/cpt/company.php:421
+#, fuzzy
+msgid "Mention how many employees does this employer have"
+msgstr "أذكر كم عدد الموظفين لا هذا صاحب العمل لديه"
+
+#: plugin-files/cpt/company.php:426 plugin-files/cpt/freelancers.php:539
+#: plugin-files/cpt/project.php:1051 plugin-files/cpt/services.php:709
+msgid "Location"
+msgstr "الموقع"
+
+#: plugin-files/cpt/company.php:441 plugin-files/cpt/freelancers.php:533
+#: plugin-files/cpt/freelancers.php:550 plugin-files/cpt/freelancers.php:695
+#: plugin-files/cpt/project.php:918 plugin-files/cpt/project.php:950
+#: plugin-files/cpt/project.php:1062 plugin-files/cpt/services.php:618
+#: plugin-files/cpt/services.php:661 plugin-files/cpt/services.php:719
+#, fuzzy
+msgid "No values available. Please consider adding values first"
+msgstr "لا توجد قيم متوفرة. الرجاء النظر في إضافة قيم أولاً"
+
+#: plugin-files/cpt/company.php:448 plugin-files/cpt/freelancers.php:557
+msgid "Profile Picture"
+msgstr "صورة المستخدم الإفتراضية"
+
+#: plugin-files/cpt/company.php:461 plugin-files/cpt/company.php:486
+#: plugin-files/cpt/freelancers.php:570 plugin-files/cpt/freelancers.php:595
+#: plugin-files/cpt/project.php:1087 plugin-files/cpt/project.php:1091
+#: plugin-files/cpt/services.php:745 plugin-files/cpt/services.php:749
+msgid "attachment"
+msgstr "مرفق"
+
+#: plugin-files/cpt/company.php:469 plugin-files/cpt/freelancers.php:578
+#, fuzzy
+msgid "Select Profile Image"
+msgstr "تحديد صورة الملف الشخصي"
+
+#: plugin-files/cpt/company.php:471 plugin-files/cpt/freelancers.php:580
+#, fuzzy
+msgid "Select profile picture to show publicly."
+msgstr "حدد صورة ملف التعريف لعرضها بشكل عام."
+
+#: plugin-files/cpt/company.php:477 plugin-files/cpt/freelancers.php:586
+msgid "Banner Image"
+msgstr "صورة الإعلان"
+
+#: plugin-files/cpt/company.php:491 plugin-files/cpt/freelancers.php:600
+#, fuzzy
+msgid "Select Banner Image"
+msgstr "تحديد صورة الشعار"
+
+#: plugin-files/cpt/company.php:493 plugin-files/cpt/freelancers.php:602
+#, fuzzy
+msgid "Select banner image to show on public profile."
+msgstr "حدد صورة الشعار لإظهارها في ملف التعريف العام."
+
+#: plugin-files/cpt/company.php:499 plugin-files/cpt/company.php:505
+#: plugin-files/cpt/freelancers.php:608 plugin-files/cpt/freelancers.php:614
+#: plugin-files/cpt/verification.php:89
+msgid "Address"
+msgstr "العنوان"
+
+#: plugin-files/cpt/company.php:510 plugin-files/cpt/freelancers.php:619
+msgid "Latitude"
+msgstr "خط العرض"
+
+#: plugin-files/cpt/company.php:516 plugin-files/cpt/freelancers.php:625
+#, fuzzy
+msgid "Provide Latitude"
+msgstr "توفير خط العرض"
+
+#: plugin-files/cpt/company.php:521 plugin-files/cpt/freelancers.php:630
+msgid "Longitude"
+msgstr "خط الطول"
+
+#: plugin-files/cpt/company.php:527 plugin-files/cpt/freelancers.php:636
+#, fuzzy
+msgid "Provide Longitude"
+msgstr "توفير خط الطول"
+
+#: plugin-files/cpt/company.php:531
+#, fuzzy
+msgid "Mark Employer Verified"
+msgstr "تم التحقق من صاحب العمل مارك"
+
+#: plugin-files/cpt/company.php:538 plugin-files/cpt/freelancers.php:860
+msgid "Not verified"
+msgstr "غير موثق"
+
+#: plugin-files/cpt/company.php:544
+#, fuzzy
+msgid "Mark Employer Featured"
+msgstr "علامة صاحب العمل المميز"
+
+#: plugin-files/cpt/company.php:551 plugin-files/cpt/freelancers.php:847
+#: plugin-files/cpt/project.php:1116 plugin-files/cpt/services.php:787
+msgid "Simple"
+msgstr "بسيط"
+
+#: plugin-files/cpt/company.php:552 plugin-files/cpt/freelancers.php:848
+#: plugin-files/cpt/project.php:1117 plugin-files/cpt/services.php:788
+msgid "Featured"
+msgstr "مميز"
+
+#: plugin-files/cpt/company.php:685 plugin-files/cpt/freelancers.php:1108
+msgid "Package Detail"
+msgstr "تفاصيل الباقه"
+
+#: plugin-files/cpt/company.php:701
+#, fuzzy
+msgid "Simple Projects"
+msgstr "مشاريع بسيطة"
+
+#: plugin-files/cpt/company.php:705
+#, fuzzy
+msgid " Allowed simple projects"
+msgstr " يسمح المشاريع البسيطة"
+
+#: plugin-files/cpt/company.php:706 plugin-files/cpt/company.php:722
+#: plugin-files/cpt/freelancers.php:1129 plugin-files/cpt/freelancers.php:1137
+#: plugin-files/cpt/freelancers.php:1153
+#, fuzzy
+msgid "Integers only. -1 for unlimited"
+msgstr "الأعداد الصحيحة فقط. -1 لـ غير محدود"
+
+#: plugin-files/cpt/company.php:709 plugin-files/cpt/freelancers.php:1140
+#, fuzzy
+msgid "Simple Projects Expiry"
+msgstr "انتهاء صلاحية المشاريع البسيطة"
+
+#: plugin-files/cpt/company.php:713
+#, fuzzy
+msgid " Simple project expiry"
+msgstr " انتهاء صلاحية المشروع البسيط"
+
+#: plugin-files/cpt/company.php:714 plugin-files/cpt/freelancers.php:1145
+#, fuzzy
+msgid "Integers only in days. -1 for never Expire"
+msgstr "الأعداد الصحيحة في الأيام فقط. -1 لـ لا تنتهي أبداً"
+
+#: plugin-files/cpt/company.php:717 plugin-files/cpt/freelancers.php:1148
+msgid "Featured Projects"
+msgstr "المشاريع المميزة"
+
+#: plugin-files/cpt/company.php:721
+#, fuzzy
+msgid "Allowed Featured projects"
+msgstr "المشاريع المميزة المسموح بها"
+
+#: plugin-files/cpt/company.php:725
+#, fuzzy
+msgid "Featured Project Expiry"
+msgstr "انتهاء صلاحية المشروع المميز"
+
+#: plugin-files/cpt/company.php:729
+#, fuzzy
+msgid " Featured Project Expiry"
+msgstr "افتراضي مميزة المشروع انتهاء الصلاحية في الأيام"
+
+#: plugin-files/cpt/company.php:730 plugin-files/cpt/company.php:738
+#: plugin-files/cpt/freelancers.php:1161 plugin-files/cpt/freelancers.php:1169
+#, fuzzy
+msgid "Integers only in days. -1 for never expire"
+msgstr "الأعداد الصحيحة في الأيام فقط. -1 لـ لا تنتهي صلاحيته أبداً"
+
+#: plugin-files/cpt/company.php:733 plugin-files/cpt/freelancers.php:1164
+msgid "Package Expiry"
+msgstr "انتهاء صلاحية الباقة"
+
+#: plugin-files/cpt/company.php:737 plugin-files/cpt/freelancers.php:1168
+#, fuzzy
+msgid " Package expiry"
+msgstr "انتهاء صلاحية الباقة"
+
+#: plugin-files/cpt/company.php:746 plugin-files/cpt/freelancers.php:1177
+#: plugin-files/exertio-widgets/exertio-widgets.php:552
+#: plugin-files/exertio-widgets/exertio-widgets.php:2268
+msgid "Never Expire"
+msgstr "لا تنتهى أبداً"
+
+#: plugin-files/cpt/company.php:753 plugin-files/cpt/freelancers.php:1185
+msgid "Package Expiry: "
+msgstr "انتهاء صلاحية الباقة"
+
+#: plugin-files/cpt/disputes.php:7 plugin-files/cpt/disputes.php:8
+#: plugin-files/cpt/disputes.php:9 plugin-files/cpt/disputes.php:10
+msgid "Disputes"
+msgstr "المنازعات"
+
+#: plugin-files/cpt/disputes.php:11 plugin-files/cpt/disputes.php:12
+#, fuzzy
+msgid "Add New Dispute"
+msgstr "إضافة نزاع جديد"
+
+#: plugin-files/cpt/disputes.php:13
+#, fuzzy
+msgid "New Disputes"
+msgstr "نزاعات جديدة"
+
+#: plugin-files/cpt/disputes.php:14
+#, fuzzy
+msgid "Edit Disputes"
+msgstr "تحرير النزاعات"
+
+#: plugin-files/cpt/disputes.php:15
+#, fuzzy
+msgid "View Disputes"
+msgstr "عرض النزاعات"
+
+#: plugin-files/cpt/disputes.php:16
+#, fuzzy
+msgid "All Disputes"
+msgstr "جميع النزاعات"
+
+#: plugin-files/cpt/disputes.php:17
+#, fuzzy
+msgid "Search Disputes"
+msgstr "نزاعات البحث"
+
+#: plugin-files/cpt/disputes.php:18
+#, fuzzy
+msgid "No Dispute Found."
+msgstr "معذرة!!! لم يتم العثور على نزاع"
+
+#: plugin-files/cpt/disputes.php:92
+#, fuzzy
+msgid "Add Disputes Detail"
+msgstr "إضافة تفاصيل النزاعات"
+
+#: plugin-files/cpt/disputes.php:107
+#, fuzzy
+msgid "Project Price"
+msgstr "سعر المشروع"
+
+#: plugin-files/cpt/disputes.php:127 plugin-files/cpt/project.php:10
+#: plugin-files/cpt/project.php:11 plugin-files/cpt/project.php:12
+msgid "Project"
+msgstr "العنوان الفرعي للمشروع"
+
+#: plugin-files/cpt/disputes.php:133
+#, fuzzy
+msgid "Dispute Status"
+msgstr "حالة النزاع"
+
+#: plugin-files/cpt/disputes.php:147
+#, fuzzy
+msgid "Dispute Conversation"
+msgstr "محادثة النزاع"
+
+#: plugin-files/cpt/disputes.php:224
+msgid "No messgae found"
+msgstr "لم يتم العثور على messgae"
+
+#: plugin-files/cpt/disputes.php:234
+#, fuzzy
+msgid "Admin Response"
+msgstr " استجابة المسؤول"
+
+#: plugin-files/cpt/disputes.php:241
+#, fuzzy
+msgid "This will be visible to both users on their dispute detail page"
+msgstr "سيكون هذا مرئيًا لكل من المستخدمين على صفحة تفاصيل النزاع الخاصة بهم"
+
+#: plugin-files/cpt/disputes.php:245
+#, fuzzy
+msgid "Mark Dispute as resolved"
+msgstr "وضع علامة على النزاع كما تم حله"
+
+#: plugin-files/cpt/disputes.php:258
+#, fuzzy
+msgid "Check this to mark it resolved"
+msgstr "التحقق من هذا لوضع علامة على أنه تم حل"
+
+#: plugin-files/cpt/freelancers.php:8 plugin-files/cpt/freelancers.php:9
+#: plugin-files/cpt/freelancers.php:10 plugin-files/cpt/freelancers.php:11
+msgid "Freelancer"
+msgstr "مستقل"
+
+#: plugin-files/cpt/freelancers.php:12 plugin-files/cpt/freelancers.php:13
+#, fuzzy
+msgid "Add New Freelancer"
+msgstr "إضافة موظف مستقل جديد"
+
+#: plugin-files/cpt/freelancers.php:14
+#, fuzzy
+msgid "New Freelancer"
+msgstr "جديد لحسابهم الخاص"
+
+#: plugin-files/cpt/freelancers.php:15
+#, fuzzy
+msgid "Edit Freelancer"
+msgstr "تحرير لحسابهم الخاص"
+
+#: plugin-files/cpt/freelancers.php:16
+#, fuzzy
+msgid "View Freelancer"
+msgstr "عرض لحسابهم الخاص"
+
+#: plugin-files/cpt/freelancers.php:17
+#, fuzzy
+msgid "All Freelancers"
+msgstr "جميع العاملين لحسابهم الخاص"
+
+#: plugin-files/cpt/freelancers.php:18
+msgid "Search Freelancer"
+msgstr "ابحث عن المستقل"
+
+#: plugin-files/cpt/freelancers.php:19
+#, fuzzy
+msgid "No Freelancer Found."
+msgstr "لم يتم العثور على أي من العاملين لحسابهم الخاص."
+
+#: plugin-files/cpt/freelancers.php:64 plugin-files/cpt/freelancers.php:76
+#: plugin-files/cpt/freelancers.php:645 plugin-files/cpt/project.php:279
+#: plugin-files/cpt/project.php:291 plugin-files/cpt/project.php:991
+msgid "Skills"
+msgstr "مهارات"
+
+#: plugin-files/cpt/freelancers.php:65 plugin-files/cpt/project.php:280
+msgid "Search Skills"
+msgstr "البحث في المهارات"
+
+#: plugin-files/cpt/freelancers.php:66 plugin-files/cpt/project.php:281
+msgid "Popular Skills"
+msgstr "المهارات الشائعة"
+
+#: plugin-files/cpt/freelancers.php:67 plugin-files/cpt/project.php:282
+msgid "All Skills"
+msgstr "كل المهارات"
+
+#: plugin-files/cpt/freelancers.php:68 plugin-files/cpt/project.php:283
+msgid "Edit Skill"
+msgstr "تعديل المهارة"
+
+#: plugin-files/cpt/freelancers.php:69 plugin-files/cpt/project.php:284
+msgid "Update Skill"
+msgstr "تحديث المهارة"
+
+#: plugin-files/cpt/freelancers.php:70 plugin-files/cpt/project.php:285
+msgid "Add New Skill"
+msgstr "اضافه مهارة جديدة"
+
+#: plugin-files/cpt/freelancers.php:71 plugin-files/cpt/project.php:286
+msgid "New Skill Name"
+msgstr "اسم المهارة الجديدة"
+
+#: plugin-files/cpt/freelancers.php:72 plugin-files/cpt/project.php:287
+#, fuzzy
+msgid "Separate Skills with commas"
+msgstr "فصل المهارات بفواصل"
+
+#: plugin-files/cpt/freelancers.php:73 plugin-files/cpt/project.php:288
+#, fuzzy
+msgid "Add or remove Skills"
+msgstr "إضافة أو إزالة المهارات"
+
+#: plugin-files/cpt/freelancers.php:74 plugin-files/cpt/project.php:289
+#, fuzzy
+msgid "Choose from the most used Skills"
+msgstr "اختر من بين المهارات الأكثر استخداماً"
+
+#: plugin-files/cpt/freelancers.php:75
+#, fuzzy
+msgid "No Skills found."
+msgstr "لم يتم العثور على مهارات."
+
+#: plugin-files/cpt/freelancers.php:139 plugin-files/cpt/freelancers.php:151
+#: plugin-files/cpt/freelancers.php:511 plugin-files/cpt/project.php:305
+#: plugin-files/cpt/project.php:317 plugin-files/cpt/project.php:1021
+msgid "Languages"
+msgstr "اللغات"
+
+#: plugin-files/cpt/freelancers.php:140 plugin-files/cpt/project.php:306
+msgid "Search Languages"
+msgstr "لغات البحث"
+
+#: plugin-files/cpt/freelancers.php:141 plugin-files/cpt/project.php:307
+#, fuzzy
+msgid "Popular Languages"
+msgstr "اللغات الشائعة"
+
+#: plugin-files/cpt/freelancers.php:142 plugin-files/cpt/project.php:308
+msgid "All Languages"
+msgstr "كل اللغات"
+
+#: plugin-files/cpt/freelancers.php:143 plugin-files/cpt/project.php:309
+msgid "Edit Language"
+msgstr "تحرير اللغة"
+
+#: plugin-files/cpt/freelancers.php:144 plugin-files/cpt/project.php:310
+msgid "Update Language"
+msgstr "تحديث اللغة"
+
+#: plugin-files/cpt/freelancers.php:145 plugin-files/cpt/project.php:311
+msgid "Add New Language"
+msgstr "إضافة لغة جديدة"
+
+#: plugin-files/cpt/freelancers.php:146 plugin-files/cpt/project.php:312
+msgid "New Language Name"
+msgstr "اسم اللغة"
+
+#: plugin-files/cpt/freelancers.php:147 plugin-files/cpt/project.php:313
+#, fuzzy
+msgid "Separate Languages with commas"
+msgstr "فصل اللغات بفواصل"
+
+#: plugin-files/cpt/freelancers.php:148 plugin-files/cpt/project.php:314
+#, fuzzy
+msgid "Add or remove Languages"
+msgstr "إضافة لغات أو إزالتها"
+
+#: plugin-files/cpt/freelancers.php:149 plugin-files/cpt/project.php:315
+#, fuzzy
+msgid "Choose from the most used Languages"
+msgstr "اختر من اللغات الأكثر استخداماً"
+
+#: plugin-files/cpt/freelancers.php:150 plugin-files/cpt/project.php:316
+#, fuzzy
+msgid "No Language found."
+msgstr "لم يتم العثور على لغة."
+
+#: plugin-files/cpt/freelancers.php:164 plugin-files/cpt/freelancers.php:176
+#: plugin-files/cpt/freelancers.php:451 plugin-files/cpt/project.php:148
+#: plugin-files/cpt/project.php:160 plugin-files/cpt/project.php:894
+msgid "Freelancer Type"
+msgstr "نوع العامل المستقل"
+
+#: plugin-files/cpt/freelancers.php:165 plugin-files/cpt/project.php:149
+#, fuzzy
+msgid "Search Freelancer Type"
+msgstr "نوع البحث المستقل"
+
+#: plugin-files/cpt/freelancers.php:166 plugin-files/cpt/project.php:150
+#, fuzzy
+msgid "Popular Freelancer Type"
+msgstr "شعبية لحسابهم الخاص نوع"
+
+#: plugin-files/cpt/freelancers.php:167 plugin-files/cpt/project.php:151
+#, fuzzy
+msgid "All Freelancer Type"
+msgstr "كل نوع حر"
+
+#: plugin-files/cpt/freelancers.php:168 plugin-files/cpt/project.php:152
+#, fuzzy
+msgid "Edit Freelancer Type"
+msgstr "تحرير نوع حر"
+
+#: plugin-files/cpt/freelancers.php:169 plugin-files/cpt/project.php:153
+#, fuzzy
+msgid "Update Freelancer Type"
+msgstr "تحديث نوع المستقل"
+
+#: plugin-files/cpt/freelancers.php:170 plugin-files/cpt/project.php:154
+#, fuzzy
+msgid "Add New Freelancer Type"
+msgstr "إضافة نوع مستقل جديد"
+
+#: plugin-files/cpt/freelancers.php:171 plugin-files/cpt/project.php:155
+#, fuzzy
+msgid "New Freelancer Type Name"
+msgstr "اسم نوع مستقل جديد"
+
+#: plugin-files/cpt/freelancers.php:172 plugin-files/cpt/project.php:156
+#, fuzzy
+msgid "Separate Freelancer Type with commas"
+msgstr "فصل الكتابة لحسابهم الخاص بفواصل"
+
+#: plugin-files/cpt/freelancers.php:173 plugin-files/cpt/project.php:157
+#, fuzzy
+msgid "Add or remove Freelancer Type"
+msgstr "إضافة أو إزالة نوع Freelancer"
+
+#: plugin-files/cpt/freelancers.php:174 plugin-files/cpt/project.php:158
+#, fuzzy
+msgid "Choose from the most used Freelancer Type"
+msgstr "اختر من النوع المستقل الأكثر استخدامًا"
+
+#: plugin-files/cpt/freelancers.php:175 plugin-files/cpt/project.php:159
+#, fuzzy
+msgid "No Freelancer Type found."
+msgstr "لم يتم العثور على نوع مستقل."
+
+#: plugin-files/cpt/freelancers.php:188 plugin-files/cpt/freelancers.php:200
+#: plugin-files/cpt/freelancers.php:482 plugin-files/cpt/project.php:173
+#: plugin-files/cpt/project.php:185 plugin-files/cpt/project.php:926
+#: plugin-files/cpt/services.php:143 plugin-files/cpt/services.php:155
+#: plugin-files/cpt/services.php:637
+msgid "English Level"
+msgstr "مستوى اللغة الإنجليزية"
+
+#: plugin-files/cpt/freelancers.php:189 plugin-files/cpt/project.php:174
+#: plugin-files/cpt/services.php:144
+#, fuzzy
+msgid "Search English Level"
+msgstr "البحث في مستوى اللغة الإنجليزية"
+
+#: plugin-files/cpt/freelancers.php:190 plugin-files/cpt/project.php:175
+#: plugin-files/cpt/services.php:145
+#, fuzzy
+msgid "Popular English Level"
+msgstr "مستوى اللغة الإنجليزية الشعبي"
+
+#: plugin-files/cpt/freelancers.php:191 plugin-files/cpt/project.php:176
+#: plugin-files/cpt/services.php:146
+#, fuzzy
+msgid "All English Levels"
+msgstr "جميع مستويات اللغة الإنجليزية"
+
+#: plugin-files/cpt/freelancers.php:192 plugin-files/cpt/project.php:177
+#: plugin-files/cpt/services.php:147
+#, fuzzy
+msgid "Edit English Level"
+msgstr "تحرير مستوى اللغة الإنجليزية"
+
+#: plugin-files/cpt/freelancers.php:193 plugin-files/cpt/project.php:178
+#: plugin-files/cpt/services.php:148
+#, fuzzy
+msgid "Update English Level"
+msgstr "تحديث مستوى اللغة الإنجليزية"
+
+#: plugin-files/cpt/freelancers.php:194 plugin-files/cpt/project.php:179
+#: plugin-files/cpt/services.php:149
+#, fuzzy
+msgid "Add New English Level"
+msgstr "إضافة مستوى جديد للغة الإنجليزية"
+
+#: plugin-files/cpt/freelancers.php:195 plugin-files/cpt/project.php:180
+#: plugin-files/cpt/services.php:150
+#, fuzzy
+msgid "New English Level Name"
+msgstr "اسم مستوى اللغة الإنجليزية الجديد"
+
+#: plugin-files/cpt/freelancers.php:196 plugin-files/cpt/project.php:181
+#: plugin-files/cpt/services.php:151
+#, fuzzy
+msgid "Separate English Level with commas"
+msgstr "فصل مستوى اللغة الإنجليزية بفواصل"
+
+#: plugin-files/cpt/freelancers.php:197 plugin-files/cpt/project.php:182
+#: plugin-files/cpt/services.php:152
+#, fuzzy
+msgid "Add or remove English Level"
+msgstr "إضافة مستوى اللغة الإنجليزية أو إزالته"
+
+#: plugin-files/cpt/freelancers.php:198 plugin-files/cpt/project.php:183
+#: plugin-files/cpt/services.php:153
+#, fuzzy
+msgid "Choose from the most used English Levels"
+msgstr "اختر من مستويات اللغة الإنجليزية الأكثر استخداماً"
+
+#: plugin-files/cpt/freelancers.php:199 plugin-files/cpt/project.php:184
+#: plugin-files/cpt/services.php:154
+#, fuzzy
+msgid "No English Level found."
+msgstr "لم يتم العثور على مستوى اللغة الإنجليزية."
+
+#: plugin-files/cpt/freelancers.php:386
+#, fuzzy
+msgid "Add Freelancer Detail"
+msgstr "إضافة تفاصيل عن العمل الحر"
+
+#: plugin-files/cpt/freelancers.php:404
+msgid "Gender"
+msgstr "الجنس"
+
+#: plugin-files/cpt/freelancers.php:411
+msgid "Male"
+msgstr "ذكر"
+
+#: plugin-files/cpt/freelancers.php:412
+msgid "Female"
+msgstr "أنثى"
+
+#: plugin-files/cpt/freelancers.php:424
+#, fuzzy
+msgid "Freelancer Tagline will be here"
+msgstr "المستقل Tagline سيكون هنا"
+
+#: plugin-files/cpt/freelancers.php:460 plugin-files/cpt/project.php:903
+msgid "Select Freelancer Type"
+msgstr "حدد نوع المستقل"
+
+#: plugin-files/cpt/freelancers.php:490 plugin-files/cpt/project.php:935
+#: plugin-files/cpt/services.php:646
+msgid "Select English Level"
+msgstr "حدد مستوى اللغة الإنجليزية"
+
+#: plugin-files/cpt/freelancers.php:519
+msgid "Select Language"
+msgstr "اختيار اللغة"
+
+#: plugin-files/cpt/freelancers.php:641
+#, fuzzy
+msgid "Skills and Awads"
+msgstr "المهارات والعواد"
+
+#: plugin-files/cpt/freelancers.php:712 plugin-files/cpt/freelancers.php:750
+#: plugin-files/cpt/freelancers.php:780 plugin-files/cpt/freelancers.php:807
+#: plugin-files/cpt/services.php:702
+msgid "Add More"
+msgstr "اضف المزيد"
+
+#: plugin-files/cpt/freelancers.php:717
+msgid "Awards and Certificates"
+msgstr "الجوائز والشهادات:"
+
+#: plugin-files/cpt/freelancers.php:739 plugin-files/cpt/freelancers.php:769
+msgid "Select image"
+msgstr "اختر صورة"
+
+#: plugin-files/cpt/freelancers.php:756 plugin-files/cpt/project.php:9
+msgid "Projects"
+msgstr "صور لمشاريعك"
+
+#: plugin-files/cpt/freelancers.php:786
+msgid "Experience"
+msgstr "الخبرات"
+
+#: plugin-files/cpt/freelancers.php:798 plugin-files/cpt/freelancers.php:826
+msgid "Start Date Title"
+msgstr "عنوان تاريخ البدء"
+
+#: plugin-files/cpt/freelancers.php:814
+msgid "Education"
+msgstr "آخر نشاط"
+
+#: plugin-files/cpt/freelancers.php:826
+msgid "Institude Name"
+msgstr "اسم عدم الكفاءة"
+
+#: plugin-files/cpt/freelancers.php:835
+#, fuzzy
+msgid "Add More Education"
+msgstr "إضافة المزيد من التعليم"
+
+#: plugin-files/cpt/freelancers.php:840 plugin-files/cpt/project.php:1109
+#: plugin-files/cpt/services.php:780
+#, fuzzy
+msgid "Mark Service Featured"
+msgstr "تميز خدمة مميزة"
+
+#: plugin-files/cpt/freelancers.php:853
+#, fuzzy
+msgid "Mark Freelancer Verified"
+msgstr "تم التحقق من مارك مستقل"
+
+#: plugin-files/cpt/freelancers.php:1124
+#, fuzzy
+msgid "Projects Credits"
+msgstr "الاعتمادات المشاريع"
+
+#: plugin-files/cpt/freelancers.php:1128
+#, fuzzy
+msgid " Projects credits"
+msgstr " اعتمادات المشاريع"
+
+#: plugin-files/cpt/freelancers.php:1132
+#, fuzzy
+msgid "Simple Services"
+msgstr "خدمات بسيطة"
+
+#: plugin-files/cpt/freelancers.php:1136
+#, fuzzy
+msgid " Simple Services"
+msgstr " خدمات بسيطة"
+
+#: plugin-files/cpt/freelancers.php:1144
+#, fuzzy
+msgid " Simple service expiry"
+msgstr " انتهاء خدمة بسيطة"
+
+#: plugin-files/cpt/freelancers.php:1152
+#, fuzzy
+msgid "Allowed Featured services"
+msgstr "الخدمات المميزة المسموح بها"
+
+#: plugin-files/cpt/freelancers.php:1160
+#, fuzzy
+msgid " Featured Services Expiry"
+msgstr "انتهاء الخدمات المميزة: "
+
+#: plugin-files/cpt/payouts.php:7 plugin-files/cpt/payouts.php:8
+#: plugin-files/cpt/payouts.php:9 plugin-files/cpt/payouts.php:10
+msgid "Payouts"
+msgstr "الدفعات"
+
+#: plugin-files/cpt/payouts.php:11 plugin-files/cpt/payouts.php:12
+#, fuzzy
+msgid "Add New Payout"
+msgstr "إضافة عائد جديد"
+
+#: plugin-files/cpt/payouts.php:13
+#, fuzzy
+msgid "New Payouts"
+msgstr "دفعات جديدة"
+
+#: plugin-files/cpt/payouts.php:14
+#, fuzzy
+msgid "Edit Payouts"
+msgstr "تحرير العوائد"
+
+#: plugin-files/cpt/payouts.php:15
+#, fuzzy
+msgid "View Payouts"
+msgstr "عرض العوائد"
+
+#: plugin-files/cpt/payouts.php:16
+#, fuzzy
+msgid "All Payouts"
+msgstr "جميع المدفوعات"
+
+#: plugin-files/cpt/payouts.php:17
+#, fuzzy
+msgid "Search Payouts"
+msgstr "البحث في العوائد"
+
+#: plugin-files/cpt/payouts.php:18
+#, fuzzy
+msgid "No Payout Found."
+msgstr "لم يتم العثور على أي تعويضات."
+
+#: plugin-files/cpt/payouts.php:42
+msgid "Amount"
+msgstr "الكمية"
+
+#: plugin-files/cpt/payouts.php:43 plugin-files/cpt/payouts.php:115
+#, fuzzy
+msgid "Payout Status"
+msgstr "حالة المدفوعات"
+
+#: plugin-files/cpt/payouts.php:81
+#, fuzzy
+msgid "Add payouts Detail"
+msgstr "إضافة تفاصيل العوائد"
+
+#: plugin-files/cpt/payouts.php:89
+#, fuzzy
+msgid "User Payout Methods"
+msgstr "طرق دفع تعويضات المستخدم"
+
+#: plugin-files/cpt/payouts.php:105
+msgid "Payout Amount"
+msgstr "مبلغ المدفوعات"
+
+#: plugin-files/cpt/payouts.php:123
+msgid "Payout Method"
+msgstr "طريقة الدّفع"
+
+#: plugin-files/cpt/payouts.php:131
+#, fuzzy
+msgid "Mark Payout as processed"
+msgstr "وضع علامة على المدفوعات كمعالجة"
+
+#: plugin-files/cpt/payouts.php:144
+#, fuzzy
+msgid "Check this to mark it processed"
+msgstr "تحقق من هذا لوضع علامة على أنه تمت معالجته"
+
+#: plugin-files/cpt/payouts.php:148
+#, fuzzy
+msgid "Private Note for this customer"
+msgstr "ملاحظة خاصة لهذا العميل"
+
+#: plugin-files/cpt/payouts.php:155
+#, fuzzy
+msgid "This will be visible to admin only, against this user"
+msgstr "هذا سيكون مرئياً للمسؤول فقط، ضد هذا المستخدم"
+
+#: plugin-files/cpt/payouts.php:174
+#, fuzzy
+msgid "preferred Payout Method:"
+msgstr "طريقة الدفع المفضلة:"
+
+#: plugin-files/cpt/payouts.php:178
+#, fuzzy
+msgid "User Profile:"
+msgstr "ملف تعريفي للمستخدم"
+
+#: plugin-files/cpt/payouts.php:179
+msgid "View Profile"
+msgstr "عرض الصفحة الشخصية"
+
+#: plugin-files/cpt/payouts.php:185
+msgid "PayPal"
+msgstr "باي بال"
+
+#: plugin-files/cpt/payouts.php:185 plugin-files/cpt/payouts.php:251
+#, fuzzy
+msgid " ( preferred )"
+msgstr " ( المفضل )"
+
+#: plugin-files/cpt/payouts.php:189
+#, fuzzy
+msgid "Paypal Email:"
+msgstr "PayPal البريد الإلكتروني:"
+
+#: plugin-files/cpt/payouts.php:206
+msgid "Bank Transfer"
+msgstr "تحويل بنكي"
+
+#: plugin-files/cpt/payouts.php:206
+#, fuzzy
+msgid " (preferred)"
+msgstr " (المفضلة)"
+
+#: plugin-files/cpt/payouts.php:223
+msgid "Bank Name:"
+msgstr "أسم البنك:"
+
+#: plugin-files/cpt/payouts.php:227
+msgid "Account Number:"
+msgstr "رقم الحساب:"
+
+#: plugin-files/cpt/payouts.php:231 plugin-files/cpt/payouts.php:266
+#, fuzzy
+msgid "Account Name:"
+msgstr "اسم حساب Payoneer"
+
+#: plugin-files/cpt/payouts.php:235
+#, fuzzy
+msgid "Routing Number:"
+msgstr "رقم توجيه البنك"
+
+#: plugin-files/cpt/payouts.php:239
+#, fuzzy
+msgid "IBAN:"
+msgstr "ايبان:"
+
+#: plugin-files/cpt/payouts.php:243
+#, fuzzy
+msgid "SWIFT:"
+msgstr "سويفت:"
+
+#: plugin-files/cpt/payouts.php:251
+msgid "Payoneer"
+msgstr "Payoneer"
+
+#: plugin-files/cpt/payouts.php:270
+#, fuzzy
+msgid "Payoneer Email:"
+msgstr "بريد بايونير الكتروني"
+
+#: plugin-files/cpt/payouts.php:274
+msgid "Country:"
+msgstr "الدولة : "
+
+#: plugin-files/cpt/project.php:13 plugin-files/cpt/project.php:14
+msgid "Add New Project"
+msgstr "إضافة مشروع جديد"
+
+#: plugin-files/cpt/project.php:15
+msgid "New Project"
+msgstr "مشروع جديد"
+
+#: plugin-files/cpt/project.php:16
+msgid "Edit Project"
+msgstr "تعديل المشروع"
+
+#: plugin-files/cpt/project.php:17
+msgid "View Project"
+msgstr "عرض المشروع"
+
+#: plugin-files/cpt/project.php:18
+msgid "All Projects"
+msgstr "كل المشاريع"
+
+#: plugin-files/cpt/project.php:19
+msgid "Search Projects"
+msgstr "البحث في المشاريع"
+
+#: plugin-files/cpt/project.php:20
+#, fuzzy
+msgid "No Project Found."
+msgstr "لم يتم العثور على مشروع."
+
+#: plugin-files/cpt/project.php:54 plugin-files/cpt/services.php:44
+msgid "Status"
+msgstr "الحالة"
+
+#: plugin-files/cpt/project.php:56
+#, fuzzy
+msgid "Admin Share"
+msgstr "مشاركة المسؤول"
+
+#: plugin-files/cpt/project.php:57
+#, fuzzy
+msgid "Freelancer Share"
+msgstr "مشاركة لحسابهم الخاص"
+
+#: plugin-files/cpt/project.php:115 plugin-files/cpt/project.php:780
+msgid "Project Categories"
+msgstr "فئات المشروع"
+
+#: plugin-files/cpt/project.php:123 plugin-files/cpt/project.php:135
+#: plugin-files/cpt/project.php:864
+msgid "Project Duration"
+msgstr "مدة المشروع"
+
+#: plugin-files/cpt/project.php:124
+#, fuzzy
+msgid "Search Project Duration"
+msgstr "البحث عن مدة المشروع"
+
+#: plugin-files/cpt/project.php:125
+#, fuzzy
+msgid "Popular Project Duration"
+msgstr "مدة المشروع الشائعة"
+
+#: plugin-files/cpt/project.php:126
+#, fuzzy
+msgid "All Project Duration"
+msgstr "كافة مدة المشروع"
+
+#: plugin-files/cpt/project.php:127
+#, fuzzy
+msgid "Edit Project Duration"
+msgstr "تحرير مدة المشروع"
+
+#: plugin-files/cpt/project.php:128
+#, fuzzy
+msgid "Update Project Duration"
+msgstr "تحديث مدة المشروع"
+
+#: plugin-files/cpt/project.php:129
+#, fuzzy
+msgid "Add New Project Duration"
+msgstr "إضافة مدة مشروع جديد"
+
+#: plugin-files/cpt/project.php:130
+#, fuzzy
+msgid "New Project Duration Name"
+msgstr "اسم مدة المشروع الجديد"
+
+#: plugin-files/cpt/project.php:131
+#, fuzzy
+msgid "Separate Project Duration with commas"
+msgstr "فصل مدة المشروع بفواصل"
+
+#: plugin-files/cpt/project.php:132
+#, fuzzy
+msgid "Add or remove Project Duration"
+msgstr "إضافة مدة المشروع أو إزالتها"
+
+#: plugin-files/cpt/project.php:133
+#, fuzzy
+msgid "Choose from the most used Project Duration"
+msgstr "اختر من مدة المشروع الأكثر استخداماً"
+
+#: plugin-files/cpt/project.php:134
+#, fuzzy
+msgid "No Project Duration found."
+msgstr "لم يتم العثور على \"مدة المشروع\"."
+
+#: plugin-files/cpt/project.php:199 plugin-files/cpt/project.php:211
+#, fuzzy
+msgid "Project Level"
+msgstr "مستوى المشروع"
+
+#: plugin-files/cpt/project.php:200
+#, fuzzy
+msgid "Search Project Level"
+msgstr "البحث عن مستوى المشروع"
+
+#: plugin-files/cpt/project.php:201
+#, fuzzy
+msgid "Popular Project Level"
+msgstr "مستوى المشروع الشعبي"
+
+#: plugin-files/cpt/project.php:202
+#, fuzzy
+msgid "All Project Level"
+msgstr "كافة مستوى المشروع"
+
+#: plugin-files/cpt/project.php:203
+#, fuzzy
+msgid "Edit Project Level"
+msgstr "تحرير مستوى المشروع"
+
+#: plugin-files/cpt/project.php:204
+#, fuzzy
+msgid "Update Project Level"
+msgstr "تحديث مستوى المشروع"
+
+#: plugin-files/cpt/project.php:205
+#, fuzzy
+msgid "Add New Project Level"
+msgstr "إضافة مستوى مشروع جديد"
+
+#: plugin-files/cpt/project.php:206
+#, fuzzy
+msgid "New Project Level Name"
+msgstr "اسم مستوى المشروع الجديد"
+
+#: plugin-files/cpt/project.php:207
+#, fuzzy
+msgid "Separate Project Levels with commas"
+msgstr "فصل مستويات المشروع بفواصل"
+
+#: plugin-files/cpt/project.php:208
+#, fuzzy
+msgid "Add or remove Project Level"
+msgstr "إضافة مستوى المشروع أو إزالته"
+
+#: plugin-files/cpt/project.php:209
+#, fuzzy
+msgid "Choose from the most used Project Levels"
+msgstr "اختر من بين مستويات المشروع الأكثر استخداماً"
+
+#: plugin-files/cpt/project.php:210
+#, fuzzy
+msgid "No Project Level found."
+msgstr "لم يتم العثور على مستوى المشروع."
+
+#: plugin-files/cpt/project.php:224 plugin-files/cpt/project.php:236
+msgid "Labels"
+msgstr "العلامات"
+
+#: plugin-files/cpt/project.php:225
+msgid "Search Labels"
+msgstr "البحث عن تسميات"
+
+#: plugin-files/cpt/project.php:226
+msgid "Popular Labels"
+msgstr "تسميات شعبية"
+
+#: plugin-files/cpt/project.php:227
+msgid "All Labels"
+msgstr "العناوين"
+
+#: plugin-files/cpt/project.php:228
+msgid "Edit Label"
+msgstr "تحرير التسمية"
+
+#: plugin-files/cpt/project.php:229
+msgid "Update Label"
+msgstr "تحديث التسمية"
+
+#: plugin-files/cpt/project.php:230
+msgid "Add New Label"
+msgstr "إضافة ملصق"
+
+#: plugin-files/cpt/project.php:231
+msgid "New Label Name"
+msgstr "اسم التسمية الجديدة"
+
+#: plugin-files/cpt/project.php:232
+#, fuzzy
+msgid "Separate Labels with commas"
+msgstr "فصل التسميات بفواصل"
+
+#: plugin-files/cpt/project.php:233
+#, fuzzy
+msgid "Add or remove Labels"
+msgstr "إضافة تسميات أو إزالتها"
+
+#: plugin-files/cpt/project.php:234
+#, fuzzy
+msgid "Choose from the most used Labels"
+msgstr "اختر من التصنيفات الأكثر استخدامًا"
+
+#: plugin-files/cpt/project.php:235
+#, fuzzy
+msgid "No Label found."
+msgstr "لم يتم العثور على تسمية."
+
+#: plugin-files/cpt/project.php:252
+msgid "Name"
+msgstr "الاسم"
+
+#: plugin-files/cpt/project.php:255
+msgid "Slug"
+msgstr "سبيكة"
+
+#: plugin-files/cpt/project.php:256
+msgid "Posts"
+msgstr "المشاركات"
+
+#: plugin-files/cpt/project.php:290
+#, fuzzy
+msgid "No Skill found."
+msgstr "لم يتم العثور على مهارة."
+
+#: plugin-files/cpt/project.php:656 plugin-files/cpt/project.php:675
+msgid "Label Color"
+msgstr "لون التسميه"
+
+#: plugin-files/cpt/project.php:658 plugin-files/cpt/project.php:678
+#, fuzzy
+msgid "Provide color of your label"
+msgstr "توفير لون التسمية"
+
+#: plugin-files/cpt/project.php:763
+#, fuzzy
+msgid "Add Project Detail"
+msgstr "إضافة تفاصيل المشروع"
+
+#: plugin-files/cpt/project.php:797
+#, fuzzy
+msgid "Project Level "
+msgstr "مستوى المشروع"
+
+#: plugin-files/cpt/project.php:805
+msgid "Select Level"
+msgstr "انتقِ المستوىAlternate action at startup of game"
+
+#: plugin-files/cpt/project.php:822
+#, fuzzy
+msgid "Select project level "
+msgstr "حدد مستوى المشروع"
+
+#: plugin-files/cpt/project.php:836
+msgid "Project Type"
+msgstr "نوع المشروع"
+
+#: plugin-files/cpt/project.php:839
+#, fuzzy
+msgid "Select Project Type"
+msgstr "حدد نوع المشروع"
+
+#: plugin-files/cpt/project.php:841
+msgid "Fixed"
+msgstr "ثابت"
+
+#: plugin-files/cpt/project.php:846
+msgid "Cost"
+msgstr "الكلفة"
+
+#: plugin-files/cpt/project.php:852
+msgid "Per Hour Price"
+msgstr "لكل سعر في الساعة"
+
+#: plugin-files/cpt/project.php:858
+msgid "Estimated Hours"
+msgstr "الساعات المقدرة"
+
+#: plugin-files/cpt/project.php:872
+msgid "Select Project Duration"
+msgstr "عنوان المشروع"
+
+#: plugin-files/cpt/project.php:890
+#, fuzzy
+msgid "Mention expected project duration"
+msgstr "ذكر مدة المشروع المتوقعة"
+
+#: plugin-files/cpt/project.php:921
+#, fuzzy
+msgid "What type of freelancer do you require"
+msgstr "ما هو نوع من لحسابهم الخاص هل تحتاج"
+
+#: plugin-files/cpt/project.php:953
+#, fuzzy
+msgid "How much grip should the applicant have on the English language."
+msgstr "كم من قبضة يجب أن يكون مقدم الطلب على اللغة الإنجليزية."
+
+#: plugin-files/cpt/project.php:960
+#, fuzzy
+msgid "Project Label"
+msgstr "تسمية المشروع"
+
+#: plugin-files/cpt/project.php:986
+#, fuzzy
+msgid "Leave it empty if you do not want to show"
+msgstr "اتركه فارغاً إذا كنت لا تريد إظهار"
+
+#: plugin-files/cpt/project.php:1068 plugin-files/cpt/services.php:726
+msgid "Attachments"
+msgstr "المرفقات"
+
+#: plugin-files/cpt/project.php:1104 plugin-files/cpt/services.php:762
+#, fuzzy
+msgid ""
+"If you are selected multiple images or want to add more images you must need "
+"to press Ctrl button on your keyboard."
+msgstr ""
+"إذا تم تحديد عدة صور أو تريد إضافة المزيد من الصور يجب عليك الضغط على زر "
+"Ctrl على لوحة المفاتيح."
+
+#: plugin-files/cpt/project.php:1122
+#, fuzzy
+msgid "Assign Project"
+msgstr "تعيين مشروع"
+
+#: plugin-files/cpt/project.php:1141
+#, fuzzy
+msgid ""
+"If you select a user from this list it will assign this project to the "
+"selected user."
+msgstr ""
+"إذا قمت بتحديد مستخدم من هذه القائمة فإنه سيتم تعيين هذا المشروع إلى "
+"المستخدم المحدد."
+
+#: plugin-files/cpt/report.php:7 plugin-files/cpt/report.php:8
+#: plugin-files/cpt/report.php:9 plugin-files/cpt/report.php:10
+msgid "Report"
+msgstr "تقرير"
+
+#: plugin-files/cpt/report.php:11 plugin-files/cpt/report.php:12
+msgid "Add New Report"
+msgstr "أضافة تقرير جديد"
+
+#: plugin-files/cpt/report.php:13
+msgid "New Report"
+msgstr " بلاغ جديد"
+
+#: plugin-files/cpt/report.php:14
+msgid "Edit Report"
+msgstr "تعديل البلاغ"
+
+#: plugin-files/cpt/report.php:15
+msgid "View Report"
+msgstr "عرض التقرير"
+
+#: plugin-files/cpt/report.php:16
+#, fuzzy
+msgid "All Report"
+msgstr "كل التقرير"
+
+#: plugin-files/cpt/report.php:17
+#, fuzzy
+msgid "Search Report"
+msgstr "تقرير البحث"
+
+#: plugin-files/cpt/report.php:18
+#, fuzzy
+msgid "No Report Found."
+msgstr "لم يتم العثور على أي تقرير."
+
+#: plugin-files/cpt/report.php:44 plugin-files/cpt/report.php:56
+#, fuzzy
+msgid "Report Category"
+msgstr "فئة التقرير"
+
+#: plugin-files/cpt/report.php:45
+#, fuzzy
+msgid "Search Report Category"
+msgstr "فئة تقرير البحث"
+
+#: plugin-files/cpt/report.php:46
+#, fuzzy
+msgid "Popular Reports Category"
+msgstr "فئة التقارير الشائعة"
+
+#: plugin-files/cpt/report.php:47
+#, fuzzy
+msgid "All Report Categories"
+msgstr "كافة فئات التقارير"
+
+#: plugin-files/cpt/report.php:48
+#, fuzzy
+msgid "Edit Report Category"
+msgstr "تحرير فئة التقرير"
+
+#: plugin-files/cpt/report.php:49
+#, fuzzy
+msgid "Update Report Category"
+msgstr "تحديث فئة التقرير"
+
+#: plugin-files/cpt/report.php:50
+#, fuzzy
+msgid "Add New Report Category"
+msgstr "إضافة فئة تقرير جديد"
+
+#: plugin-files/cpt/report.php:51
+#, fuzzy
+msgid "New Report Category Name"
+msgstr "اسم فئة التقرير الجديد"
+
+#: plugin-files/cpt/report.php:52
+#, fuzzy
+msgid "Separate Reports Category with commas"
+msgstr "فصل فئة التقارير بفواصل"
+
+#: plugin-files/cpt/report.php:53
+#, fuzzy
+msgid "Add or remove Report Category"
+msgstr "إضافة فئة التقرير أو إزالتها"
+
+#: plugin-files/cpt/report.php:54
+#, fuzzy
+msgid "Choose from the most used Report Category"
+msgstr "اختر من فئة التقرير الأكثر استخدامًا"
+
+#: plugin-files/cpt/report.php:55
+#, fuzzy
+msgid "No Report Category found."
+msgstr "لم يتم العثور على فئة تقرير."
+
+#: plugin-files/cpt/report.php:72 plugin-files/cpt/report.php:177
+#, fuzzy
+msgid "Reported by"
+msgstr "تم الإبلاغ عن الإعلان"
+
+#: plugin-files/cpt/report.php:73
+#, fuzzy
+msgid "No of Reports"
+msgstr "لا من التقارير"
+
+#: plugin-files/cpt/report.php:74
+msgid "Post Type"
+msgstr "نوع المنشور"
+
+#: plugin-files/cpt/report.php:75
+msgid "View Post"
+msgstr "عرض الاعلان"
+
+#: plugin-files/cpt/report.php:135
+msgid "Report Detail"
+msgstr "تفاصيل التقرير "
+
+#: plugin-files/cpt/report.php:149
+msgid "Category"
+msgstr "التصنيف"
+
+#: plugin-files/cpt/report.php:162
+#, fuzzy
+msgid "Number of Reports"
+msgstr "عدد التقارير"
+
+#: plugin-files/cpt/services.php:7 plugin-files/cpt/services.php:8
+#: plugin-files/cpt/services.php:9 plugin-files/cpt/services.php:10
+msgid "Services"
+msgstr "خدمات"
+
+#: plugin-files/cpt/services.php:11 plugin-files/cpt/services.php:12
+msgid "Add New Service"
+msgstr "إضافة خدمة جديدة"
+
+#: plugin-files/cpt/services.php:13
+#, fuzzy
+msgid "New Services"
+msgstr "خدمات جديدة"
+
+#: plugin-files/cpt/services.php:14
+#, fuzzy
+msgid "Edit Services"
+msgstr "تحرير الخدمات"
+
+#: plugin-files/cpt/services.php:15
+#, fuzzy
+msgid "View Services"
+msgstr "عرض الخدمات"
+
+#: plugin-files/cpt/services.php:16
+msgid "All Services"
+msgstr "كل الخدمات"
+
+#: plugin-files/cpt/services.php:17
+msgid "Search Services"
+msgstr "البحث-الخدمات"
+
+#: plugin-files/cpt/services.php:18
+#, fuzzy
+msgid "No Service Found."
+msgstr "لم يتم العثور علي اي خدمه."
+
+#: plugin-files/cpt/services.php:83
+msgid "Service Categories"
+msgstr "التخصصات الاستشارية"
+
+#: plugin-files/cpt/services.php:93 plugin-files/cpt/services.php:105
+msgid "Delivery Time"
+msgstr "وقت التوصيل"
+
+#: plugin-files/cpt/services.php:94
+#, fuzzy
+msgid "Search Delivery Time"
+msgstr "وقت التسليم البحث"
+
+#: plugin-files/cpt/services.php:95
+#, fuzzy
+msgid "Popular Delivery Times"
+msgstr "أوقات التسليم الشعبية"
+
+#: plugin-files/cpt/services.php:96
+#, fuzzy
+msgid "All Delivery Times"
+msgstr "جميع أوقات التسليم"
+
+#: plugin-files/cpt/services.php:97
+#, fuzzy
+msgid "Edit Delivery Time"
+msgstr "تحرير وقت التسليم"
+
+#: plugin-files/cpt/services.php:98
+#, fuzzy
+msgid "Update Delivery Time"
+msgstr "تحديث وقت التسليم"
+
+#: plugin-files/cpt/services.php:99
+#, fuzzy
+msgid "Add New Delivery Time"
+msgstr "إضافة وقت التسليم الجديد"
+
+#: plugin-files/cpt/services.php:100
+#, fuzzy
+msgid "New Delivery Time Name"
+msgstr "اسم وقت التسليم الجديد"
+
+#: plugin-files/cpt/services.php:101
+#, fuzzy
+msgid "Separate Delivery Times with commas"
+msgstr "فصل أوقات التسليم بفواصل"
+
+#: plugin-files/cpt/services.php:102
+#, fuzzy
+msgid "Add or remove Delivery Time"
+msgstr "إضافة وقت التسليم أو إزالته"
+
+#: plugin-files/cpt/services.php:103
+#, fuzzy
+msgid "Choose from the most used Delivery Times"
+msgstr "اختر من أوقات التسليم الأكثر استخدامًا"
+
+#: plugin-files/cpt/services.php:104
+#, fuzzy
+msgid "No Delivery Time found."
+msgstr "لم يتم العثور على وقت التسليم."
+
+#: plugin-files/cpt/services.php:118 plugin-files/cpt/services.php:130
+msgid "Response Time"
+msgstr "وقت الاستجابة"
+
+#: plugin-files/cpt/services.php:119
+#, fuzzy
+msgid "Search Response Time"
+msgstr "وقت الاستجابة للبحث"
+
+#: plugin-files/cpt/services.php:120
+#, fuzzy
+msgid "Popular Response Times"
+msgstr "أوقات الاستجابة الشعبية"
+
+#: plugin-files/cpt/services.php:121
+#, fuzzy
+msgid "All Response Times"
+msgstr "كل أوقات الاستجابة"
+
+#: plugin-files/cpt/services.php:122
+#, fuzzy
+msgid "Edit Response Time"
+msgstr "تحرير وقت الاستجابة"
+
+#: plugin-files/cpt/services.php:123
+#, fuzzy
+msgid "Update Response Time"
+msgstr "تحديث وقت الاستجابة"
+
+#: plugin-files/cpt/services.php:124
+#, fuzzy
+msgid "Add New Response Time"
+msgstr "إضافة وقت استجابة جديد"
+
+#: plugin-files/cpt/services.php:125
+#, fuzzy
+msgid "New Response Time Name"
+msgstr "اسم وقت الاستجابة الجديد"
+
+#: plugin-files/cpt/services.php:126
+#, fuzzy
+msgid "Separate Response Times with commas"
+msgstr "فصل أوقات الاستجابة بفواصل"
+
+#: plugin-files/cpt/services.php:127
+#, fuzzy
+msgid "Add or remove Response Time"
+msgstr "إضافة وقت الاستجابة أو إزالته"
+
+#: plugin-files/cpt/services.php:128
+#, fuzzy
+msgid "Choose from the most used Response Times"
+msgstr "اختر من أوقات الاستجابة الأكثر استخدامًا"
+
+#: plugin-files/cpt/services.php:129
+#, fuzzy
+msgid "No Response Time found."
+msgstr "لم يتم العثور على وقت الاستجابة."
+
+#: plugin-files/cpt/services.php:237 plugin-files/cpt/services.php:264
+msgid "Icon"
+msgstr "أيقونة"
+
+#: plugin-files/cpt/services.php:241 plugin-files/cpt/services.php:275
+msgid "Add Icon"
+msgstr "إضافة أيقونة"
+
+#: plugin-files/cpt/services.php:242 plugin-files/cpt/services.php:276
+msgid "Remove Icon"
+msgstr "إزالة الايقونة"
+
+#: plugin-files/cpt/services.php:523
+#, fuzzy
+msgid "Add Service Detail"
+msgstr "إضافة تفاصيل الخدمة"
+
+#: plugin-files/cpt/services.php:534
+#, fuzzy
+msgid "Service Addons"
+msgstr "خدمة أدونز"
+
+#: plugin-files/cpt/services.php:548
+msgid "Service Category"
+msgstr "فئة الخدمات"
+
+#: plugin-files/cpt/services.php:567
+msgid "Response Time "
+msgstr "وقت الاستجابة "
+
+#: plugin-files/cpt/services.php:575
+#, fuzzy
+msgid "Select Response Time"
+msgstr "الرجاء تحديد وقت الاستجابة"
+
+#: plugin-files/cpt/services.php:591
+#, fuzzy
+msgid "Select user response time "
+msgstr "تحديد وقت استجابة المستخدم "
+
+#: plugin-files/cpt/services.php:595
+msgid "Delivery Time "
+msgstr "وقت التسليم "
+
+#: plugin-files/cpt/services.php:604
+#, fuzzy
+msgid "Service Delivery Time"
+msgstr "وقت تسليم الخدمة"
+
+#: plugin-files/cpt/services.php:625 plugin-files/cpt/services.php:631
+msgid "Service Price"
+msgstr "الخدمة"
+
+#: plugin-files/cpt/services.php:668
+msgid "Video URLs"
+msgstr "رابط الفيديو"
+
+#: plugin-files/cpt/services.php:704
+msgid "Please provide YouTube video URLs Only."
+msgstr "يرجى توفير عناوين URL للفيديو على YouTube فقط."
+
+#: plugin-files/cpt/services.php:767
+#, fuzzy
+msgid "Want to show attachments"
+msgstr "تريد إظهار المرفقات"
+
+#: plugin-files/cpt/services.php:774
+msgid "Yes"
+msgstr "نعم"
+
+#: plugin-files/cpt/services.php:775
+msgid "No"
+msgstr "لا"
+
+#: plugin-files/cpt/services.php:793
+#, fuzzy
+msgid "Assign Service"
+msgstr "تعيين الخدمة"
+
+#: plugin-files/cpt/services.php:812
+#, fuzzy
+msgid ""
+"If you select a user from this list it will assign this service to the "
+"selected user."
+msgstr ""
+"إذا قمت بتحديد مستخدم من هذه القائمة فإنه سيتم تعيين هذه الخدمة إلى المستخدم "
+"المحدد."
+
+#: plugin-files/cpt/verification.php:7 plugin-files/cpt/verification.php:8
+#: plugin-files/cpt/verification.php:9 plugin-files/cpt/verification.php:10
+msgid "Verification"
+msgstr "التحقق"
+
+#: plugin-files/cpt/verification.php:11 plugin-files/cpt/verification.php:12
+#, fuzzy
+msgid "Add New Verification"
+msgstr "إضافة التحقق الجديد"
+
+#: plugin-files/cpt/verification.php:13
+#, fuzzy
+msgid "New Verification"
+msgstr "التحقق الجديد"
+
+#: plugin-files/cpt/verification.php:14
+#, fuzzy
+msgid "Edit Verification"
+msgstr "تحرير التحقق"
+
+#: plugin-files/cpt/verification.php:15
+#, fuzzy
+msgid "View Verification"
+msgstr "عرض التحقق"
+
+#: plugin-files/cpt/verification.php:16
+#, fuzzy
+msgid "All Verification"
+msgstr "كل التحقق"
+
+#: plugin-files/cpt/verification.php:17
+#, fuzzy
+msgid "Search Verification"
+msgstr "التحقق من البحث"
+
+#: plugin-files/cpt/verification.php:18
+#, fuzzy
+msgid "No Verification Found."
+msgstr "لم يتم العثور على تحقق."
+
+#: plugin-files/cpt/verification.php:54
+#, fuzzy
+msgid "Verification Detail"
+msgstr "تفاصيل التحقق"
+
+#: plugin-files/cpt/verification.php:79
+#, fuzzy
+msgid "CNIC / Passport / NIN  or SSN"
+msgstr "CNIC / جواز السفر / NIN / SSN"
+
+#: plugin-files/cpt/verification.php:99
+msgid "Document"
+msgstr "مستند"
+
+#: plugin-files/cpt/verification.php:112
+#, fuzzy
+msgid "Freelancer Profile Link"
+msgstr "ارتباط ملف تعريف لحسابهم الخاص"
+
+#: plugin-files/cpt/verification.php:123
+#, fuzzy
+msgid "Employer Profile Link"
+msgstr "ارتباط ملف تعريف صاحب العمل"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:276
+#: plugin-files/exertio-widgets/exertio-widgets.php:301
+#: plugin-files/exertio-widgets/exertio-widgets.php:1159
+#: plugin-files/exertio-widgets/exertio-widgets.php:1178
+msgid " Listings"
+msgstr " قوائم"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:503
+#: plugin-files/exertio-widgets/exertio-widgets.php:507
+#: plugin-files/exertio-widgets/exertio-widgets.php:2219
+#: plugin-files/exertio-widgets/exertio-widgets.php:2223
+#, fuzzy
+msgid " Project Allowed"
+msgstr "المشروع المسموح به: "
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:505
+#: plugin-files/exertio-widgets/exertio-widgets.php:2221
+#, fuzzy
+msgid "Unlimited Project Allowed"
+msgstr "غير محدود المشروع المسموح به"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:513
+#: plugin-files/exertio-widgets/exertio-widgets.php:517
+#: plugin-files/exertio-widgets/exertio-widgets.php:646
+#: plugin-files/exertio-widgets/exertio-widgets.php:650
+#: plugin-files/exertio-widgets/exertio-widgets.php:664
+#: plugin-files/exertio-widgets/exertio-widgets.php:668
+#: plugin-files/exertio-widgets/exertio-widgets.php:2229
+#: plugin-files/exertio-widgets/exertio-widgets.php:2233
+#: plugin-files/exertio-widgets/exertio-widgets.php:2363
+#: plugin-files/exertio-widgets/exertio-widgets.php:2367
+#: plugin-files/exertio-widgets/exertio-widgets.php:2381
+#: plugin-files/exertio-widgets/exertio-widgets.php:2385
+#, fuzzy
+msgid " Days visibility"
+msgstr " رؤية الأيام"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:515
+#: plugin-files/exertio-widgets/exertio-widgets.php:2231
+#, fuzzy
+msgid "Lifetime visibility"
+msgstr "مدى الحياة الرؤية"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:523
+#: plugin-files/exertio-widgets/exertio-widgets.php:527
+#: plugin-files/exertio-widgets/exertio-widgets.php:2239
+#: plugin-files/exertio-widgets/exertio-widgets.php:2243
+#, fuzzy
+msgid " Featured Projects"
+msgstr "المشاريع المميزة: "
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:525
+#: plugin-files/exertio-widgets/exertio-widgets.php:2241
+#, fuzzy
+msgid "Unlimited Featured Project"
+msgstr "مشروع مميز غير محدود"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:533
+#: plugin-files/exertio-widgets/exertio-widgets.php:537
+#: plugin-files/exertio-widgets/exertio-widgets.php:2249
+#: plugin-files/exertio-widgets/exertio-widgets.php:2253
+#, fuzzy
+msgid " Days Featured"
+msgstr " أيام مميزة"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:535
+#: plugin-files/exertio-widgets/exertio-widgets.php:2251
+#, fuzzy
+msgid "Lifetime Featured"
+msgstr "مدى الحياة المميز"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:543
+#: plugin-files/exertio-widgets/exertio-widgets.php:2259
+#, fuzzy
+msgid "Profile featured"
+msgstr "ملف التعريف المميز"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:545
+#: plugin-files/exertio-widgets/exertio-widgets.php:2261
+#, fuzzy
+msgid "Featured Profile"
+msgstr "ملف التعريف المميز"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:550
+#: plugin-files/exertio-widgets/exertio-widgets.php:554
+#: plugin-files/exertio-widgets/exertio-widgets.php:673
+#: plugin-files/exertio-widgets/exertio-widgets.php:677
+#: plugin-files/exertio-widgets/exertio-widgets.php:2266
+#: plugin-files/exertio-widgets/exertio-widgets.php:2270
+#: plugin-files/exertio-widgets/exertio-widgets.php:2390
+#: plugin-files/exertio-widgets/exertio-widgets.php:2394
+#, fuzzy
+msgid " Days Package Expiry"
+msgstr " انتهاء صلاحية حزمة الأيام"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:584
+#: plugin-files/exertio-widgets/exertio-widgets.php:708
+#: plugin-files/exertio-widgets/exertio-widgets.php:2311
+#: plugin-files/exertio-widgets/exertio-widgets.php:2434
+#, fuzzy
+msgid " Purchase Now"
+msgstr "اشتري الآن"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:628
+#: plugin-files/exertio-widgets/exertio-widgets.php:632
+#: plugin-files/exertio-widgets/exertio-widgets.php:2345
+#: plugin-files/exertio-widgets/exertio-widgets.php:2349
+#, fuzzy
+msgid " Project Credits"
+msgstr "الاعتمادات المشروع: "
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:630
+#: plugin-files/exertio-widgets/exertio-widgets.php:2347
+#, fuzzy
+msgid "Unlimited Project Credits"
+msgstr "اعتمادات غير محدودة للمشروع"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:637
+#: plugin-files/exertio-widgets/exertio-widgets.php:641
+#: plugin-files/exertio-widgets/exertio-widgets.php:2354
+#: plugin-files/exertio-widgets/exertio-widgets.php:2358
+#, fuzzy
+msgid " Allowed Services"
+msgstr " الخدمات المسموح بها"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:639
+#: plugin-files/exertio-widgets/exertio-widgets.php:2356
+#, fuzzy
+msgid " Unlimited Services"
+msgstr " خدمات غير محدودة"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:648
+#: plugin-files/exertio-widgets/exertio-widgets.php:666
+#: plugin-files/exertio-widgets/exertio-widgets.php:2365
+#: plugin-files/exertio-widgets/exertio-widgets.php:2383
+#, fuzzy
+msgid "Services Never Expire"
+msgstr "الخدمات لا تنتهي أبداً"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:655
+#: plugin-files/exertio-widgets/exertio-widgets.php:2372
+#, fuzzy
+msgid " Featured Services"
+msgstr "الخدمات المميزة: "
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:657
+#: plugin-files/exertio-widgets/exertio-widgets.php:2374
+#, fuzzy
+msgid "Unlimited Featured Services"
+msgstr "خدمات مميزة غير محدودة"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:659
+#: plugin-files/exertio-widgets/exertio-widgets.php:2376
+#, fuzzy
+msgid " N/A"
+msgstr "غير مطابق"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:675
+#: plugin-files/exertio-widgets/exertio-widgets.php:2392
+#, fuzzy
+msgid "Package Never Expire"
+msgstr "الحزمة لا تنتهي صلاحيتها أبداً"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:683
+#: plugin-files/exertio-widgets/exertio-widgets.php:685
+#, fuzzy
+msgid " Profile Featured: "
+msgstr " ملف التعريف المميز: "
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:883
+msgid "Read More"
+msgstr "المزيد"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:969
+msgid "View More"
+msgstr "مشاهدة المزيد"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:1598
+msgid " hourly"
+msgstr " الساعه"
+
+#: plugin-files/exertio-widgets/exertio-widgets.php:1627
+msgid " View Profile"
+msgstr "مشاهدة الملف"
+
+#: plugin-files/widgets/employers-widgets.php:13
+#, fuzzy
+msgid "Exertio Employer - Filter By Keyword"
+msgstr "صاحب العمل exertio - تصفية حسب الكلمة الرئيسية"
+
+#: plugin-files/widgets/employers-widgets.php:16
+#, fuzzy
+msgid "Employer Search by keyword widget"
+msgstr "بحث صاحب العمل بواسطة عنصر واجهة استخدام الكلمة الرئيسية"
+
+#: plugin-files/widgets/employers-widgets.php:43
+#, fuzzy
+msgid "Keyword or employer name"
+msgstr "الكلمة الرئيسية أو اسم صاحب العمل"
+
+#: plugin-files/widgets/employers-widgets.php:60
+#: plugin-files/widgets/employers-widgets.php:158
+#: plugin-files/widgets/employers-widgets.php:257
+#: plugin-files/widgets/employers-widgets.php:356
+#: plugin-files/widgets/freelancers-widgets.php:60
+#: plugin-files/widgets/freelancers-widgets.php:158
+#: plugin-files/widgets/freelancers-widgets.php:257
+#: plugin-files/widgets/freelancers-widgets.php:356
+#: plugin-files/widgets/freelancers-widgets.php:454
+#: plugin-files/widgets/freelancers-widgets.php:552
+#: plugin-files/widgets/freelancers-widgets.php:662
+#: plugin-files/widgets/projects-widgets.php:60
+#: plugin-files/widgets/projects-widgets.php:158
+#: plugin-files/widgets/projects-widgets.php:259
+#: plugin-files/widgets/projects-widgets.php:373
+#: plugin-files/widgets/projects-widgets.php:506
+#: plugin-files/widgets/projects-widgets.php:606
+#: plugin-files/widgets/projects-widgets.php:706
+#: plugin-files/widgets/projects-widgets.php:804
+#: plugin-files/widgets/projects-widgets.php:902
+#: plugin-files/widgets/projects-widgets.php:1000
+#: plugin-files/widgets/projects-widgets.php:1107
+#: plugin-files/widgets/services-widgets.php:60
+#: plugin-files/widgets/services-widgets.php:161
+#: plugin-files/widgets/services-widgets.php:261
+#: plugin-files/widgets/services-widgets.php:360
+#: plugin-files/widgets/services-widgets.php:459
+#: plugin-files/widgets/services-widgets.php:558
+#: plugin-files/widgets/services-widgets.php:668
+msgid "New title"
+msgstr "عنوان جديد"
+
+#: plugin-files/widgets/employers-widgets.php:68
+#: plugin-files/widgets/freelancers-widgets.php:68
+#: plugin-files/widgets/projects-widgets.php:68
+#: plugin-files/widgets/services-widgets.php:68
+msgid "Title:"
+msgstr "العنوان:"
+
+#: plugin-files/widgets/employers-widgets.php:74
+#: plugin-files/widgets/employers-widgets.php:172
+#: plugin-files/widgets/employers-widgets.php:271
+#: plugin-files/widgets/employers-widgets.php:370
+#: plugin-files/widgets/freelancers-widgets.php:74
+#: plugin-files/widgets/freelancers-widgets.php:172
+#: plugin-files/widgets/freelancers-widgets.php:271
+#: plugin-files/widgets/freelancers-widgets.php:370
+#: plugin-files/widgets/freelancers-widgets.php:468
+#: plugin-files/widgets/freelancers-widgets.php:566
+#: plugin-files/widgets/freelancers-widgets.php:704
+#: plugin-files/widgets/projects-widgets.php:74
+#: plugin-files/widgets/projects-widgets.php:172
+#: plugin-files/widgets/projects-widgets.php:273
+#: plugin-files/widgets/projects-widgets.php:417
+#: plugin-files/widgets/projects-widgets.php:520
+#: plugin-files/widgets/projects-widgets.php:620
+#: plugin-files/widgets/projects-widgets.php:720
+#: plugin-files/widgets/projects-widgets.php:818
+#: plugin-files/widgets/projects-widgets.php:916
+#: plugin-files/widgets/projects-widgets.php:1014
+#: plugin-files/widgets/projects-widgets.php:1121
+#: plugin-files/widgets/services-widgets.php:74
+#: plugin-files/widgets/services-widgets.php:175
+#: plugin-files/widgets/services-widgets.php:275
+#: plugin-files/widgets/services-widgets.php:374
+#: plugin-files/widgets/services-widgets.php:473
+#: plugin-files/widgets/services-widgets.php:572
+#: plugin-files/widgets/services-widgets.php:712
+#, fuzzy
+msgid "Widget state open or closed"
+msgstr "حالة القطعة مفتوحة أو مغلقة"
+
+#: plugin-files/widgets/employers-widgets.php:77
+#: plugin-files/widgets/employers-widgets.php:175
+#: plugin-files/widgets/employers-widgets.php:274
+#: plugin-files/widgets/employers-widgets.php:373
+#: plugin-files/widgets/freelancers-widgets.php:77
+#: plugin-files/widgets/freelancers-widgets.php:175
+#: plugin-files/widgets/freelancers-widgets.php:274
+#: plugin-files/widgets/freelancers-widgets.php:373
+#: plugin-files/widgets/freelancers-widgets.php:471
+#: plugin-files/widgets/freelancers-widgets.php:569
+#: plugin-files/widgets/freelancers-widgets.php:708
+#: plugin-files/widgets/projects-widgets.php:77
+#: plugin-files/widgets/projects-widgets.php:175
+#: plugin-files/widgets/projects-widgets.php:276
+#: plugin-files/widgets/projects-widgets.php:420
+#: plugin-files/widgets/projects-widgets.php:523
+#: plugin-files/widgets/projects-widgets.php:623
+#: plugin-files/widgets/projects-widgets.php:723
+#: plugin-files/widgets/projects-widgets.php:821
+#: plugin-files/widgets/projects-widgets.php:919
+#: plugin-files/widgets/projects-widgets.php:1017
+#: plugin-files/widgets/projects-widgets.php:1124
+#: plugin-files/widgets/services-widgets.php:77
+#: plugin-files/widgets/services-widgets.php:178
+#: plugin-files/widgets/services-widgets.php:278
+#: plugin-files/widgets/services-widgets.php:377
+#: plugin-files/widgets/services-widgets.php:476
+#: plugin-files/widgets/services-widgets.php:575
+#: plugin-files/widgets/services-widgets.php:715
+msgid "Close"
+msgstr "إغلاق"
+
+#: plugin-files/widgets/employers-widgets.php:78
+#: plugin-files/widgets/employers-widgets.php:176
+#: plugin-files/widgets/employers-widgets.php:275
+#: plugin-files/widgets/employers-widgets.php:374
+#: plugin-files/widgets/freelancers-widgets.php:78
+#: plugin-files/widgets/freelancers-widgets.php:176
+#: plugin-files/widgets/freelancers-widgets.php:275
+#: plugin-files/widgets/freelancers-widgets.php:374
+#: plugin-files/widgets/freelancers-widgets.php:472
+#: plugin-files/widgets/freelancers-widgets.php:570
+#: plugin-files/widgets/freelancers-widgets.php:709
+#: plugin-files/widgets/projects-widgets.php:78
+#: plugin-files/widgets/projects-widgets.php:176
+#: plugin-files/widgets/projects-widgets.php:277
+#: plugin-files/widgets/projects-widgets.php:421
+#: plugin-files/widgets/projects-widgets.php:524
+#: plugin-files/widgets/projects-widgets.php:624
+#: plugin-files/widgets/projects-widgets.php:724
+#: plugin-files/widgets/projects-widgets.php:822
+#: plugin-files/widgets/projects-widgets.php:920
+#: plugin-files/widgets/projects-widgets.php:1018
+#: plugin-files/widgets/projects-widgets.php:1125
+#: plugin-files/widgets/services-widgets.php:78
+#: plugin-files/widgets/services-widgets.php:179
+#: plugin-files/widgets/services-widgets.php:279
+#: plugin-files/widgets/services-widgets.php:378
+#: plugin-files/widgets/services-widgets.php:477
+#: plugin-files/widgets/services-widgets.php:576
+#: plugin-files/widgets/services-widgets.php:716
+msgid "Open"
+msgstr "فتح"
+
+#: plugin-files/widgets/employers-widgets.php:114
+#, fuzzy
+msgid "Exertio Employer - Filter By Category"
+msgstr "صاحب العمل من قبل ليوبيو - تصفية حسب الفئة"
+
+#: plugin-files/widgets/employers-widgets.php:117
+#, fuzzy
+msgid "Employer Search by department"
+msgstr "البحث عن صاحب العمل حسب القسم"
+
+#: plugin-files/widgets/employers-widgets.php:166
+#: plugin-files/widgets/employers-widgets.php:265
+#: plugin-files/widgets/employers-widgets.php:364
+#: plugin-files/widgets/freelancers-widgets.php:166
+#: plugin-files/widgets/freelancers-widgets.php:265
+#: plugin-files/widgets/freelancers-widgets.php:364
+#: plugin-files/widgets/freelancers-widgets.php:462
+#: plugin-files/widgets/freelancers-widgets.php:560
+#: plugin-files/widgets/freelancers-widgets.php:686
+#: plugin-files/widgets/projects-widgets.php:166
+#: plugin-files/widgets/projects-widgets.php:267
+#: plugin-files/widgets/projects-widgets.php:399
+#: plugin-files/widgets/projects-widgets.php:514
+#: plugin-files/widgets/projects-widgets.php:614
+#: plugin-files/widgets/projects-widgets.php:714
+#: plugin-files/widgets/projects-widgets.php:812
+#: plugin-files/widgets/projects-widgets.php:910
+#: plugin-files/widgets/projects-widgets.php:1008
+#: plugin-files/widgets/projects-widgets.php:1115
+#: plugin-files/widgets/services-widgets.php:169
+#: plugin-files/widgets/services-widgets.php:269
+#: plugin-files/widgets/services-widgets.php:368
+#: plugin-files/widgets/services-widgets.php:467
+#: plugin-files/widgets/services-widgets.php:566
+#: plugin-files/widgets/services-widgets.php:694
+msgid "Title"
+msgstr "العنوان"
+
+#: plugin-files/widgets/employers-widgets.php:213
+#, fuzzy
+msgid "Exertio Employer - Filter By No of Employees"
+msgstr "صاحب العمل من قبل - تصفية من قبل لا من الموظفين"
+
+#: plugin-files/widgets/employers-widgets.php:216
+#, fuzzy
+msgid "Employer Search by Number of Emplyees"
+msgstr "البحث صاحب العمل حسب عدد من Emplyees"
+
+#: plugin-files/widgets/employers-widgets.php:312
+#, fuzzy
+msgid "Exertio Employer - Filter By Location"
+msgstr "صاحب عمل مُلَجَم - تصفية حسب الموقع"
+
+#: plugin-files/widgets/employers-widgets.php:315
+#, fuzzy
+msgid "Employer Search by Location"
+msgstr "البحث عن صاحب العمل حسب الموقع"
+
+#: plugin-files/widgets/freelancers-widgets.php:13
+#, fuzzy
+msgid "Exertio Freelancer - Filter By Keyword"
+msgstr "Exertio Freelancer - تصفية حسب الكلمات الرئيسية"
+
+#: plugin-files/widgets/freelancers-widgets.php:16
+#, fuzzy
+msgid "Freelancer Search by keyword widget"
+msgstr "البحث المستقل بواسطة عنصر واجهة استخدام الكلمة الرئيسية"
+
+#: plugin-files/widgets/freelancers-widgets.php:43
+#, fuzzy
+msgid "Keyword or freelnacer name"
+msgstr "الكلمة الرئيسية أو اسم freelnacer"
+
+#: plugin-files/widgets/freelancers-widgets.php:114
+#, fuzzy
+msgid "Exertio Freelancer - Filter By Freelancer Type"
+msgstr "Exertio Freelancer - تصفية حسب نوع المستقل"
+
+#: plugin-files/widgets/freelancers-widgets.php:117
+#, fuzzy
+msgid "Freelancer Search by Freelancer type"
+msgstr "البحث لحسابهم الخاص حسب نوع المستقل"
+
+#: plugin-files/widgets/freelancers-widgets.php:213
+#, fuzzy
+msgid "Exertio Freelancer - Filter By English Level"
+msgstr "Exertio Freelancer - تصفية حسب المستوى الإنجليزي"
+
+#: plugin-files/widgets/freelancers-widgets.php:216
+#, fuzzy
+msgid "Freelancer Search by English Level"
+msgstr "البحث المستقل حسب المستوى الإنجليزي"
+
+#: plugin-files/widgets/freelancers-widgets.php:312
+#, fuzzy
+msgid "Exertio Freelancer - Filter By Freelancer Language"
+msgstr "Exertio Freelancer - تصفية حسب اللغة لحسابهم الخاص"
+
+#: plugin-files/widgets/freelancers-widgets.php:315
+#, fuzzy
+msgid "Freelancer Search by Freelancer Language"
+msgstr "البحث لحسابهم الخاص من قبل اللغة لحسابهم الخاص"
+
+#: plugin-files/widgets/freelancers-widgets.php:410
+#, fuzzy
+msgid "Exertio Freelancer - Filter By Freelancer Location"
+msgstr "Exertio Freelancer - تصفية حسب موقع Freelancer"
+
+#: plugin-files/widgets/freelancers-widgets.php:413
+#, fuzzy
+msgid "Freelancer Search by Freelancer Location"
+msgstr "البحث لحسابهم الخاص من قبل موقع لحسابهم الخاص"
+
+#: plugin-files/widgets/freelancers-widgets.php:508
+#, fuzzy
+msgid "Exertio Freelancer - Filter By Skills"
+msgstr "Exertio Freelancer - تصفية حسب المهارات"
+
+#: plugin-files/widgets/freelancers-widgets.php:511
+#, fuzzy
+msgid "Freelancer Search by Freelancer Skills"
+msgstr "البحث لحسابهم الخاص من قبل مهارات لحسابهم الخاص"
+
+#: plugin-files/widgets/freelancers-widgets.php:606
+#, fuzzy
+msgid "Exertio Freelancer - Filter By Price Rate"
+msgstr "Exertio Freelancer - تصفية حسب سعر"
+
+#: plugin-files/widgets/freelancers-widgets.php:609
+#, fuzzy
+msgid "Freelancer Search by Price Rate"
+msgstr "البحث عن لحسابهم الخاص حسب سعر"
+
+#: plugin-files/widgets/freelancers-widgets.php:670
+#: plugin-files/widgets/projects-widgets.php:382
+#: plugin-files/widgets/services-widgets.php:677
+msgid "0"
+msgstr "0"
+
+#: plugin-files/widgets/freelancers-widgets.php:679
+#: plugin-files/widgets/projects-widgets.php:391
+#: plugin-files/widgets/services-widgets.php:686
+msgid "100"
+msgstr "100"
+
+#: plugin-files/widgets/freelancers-widgets.php:692
+#: plugin-files/widgets/projects-widgets.php:405
+#: plugin-files/widgets/services-widgets.php:700
+msgid "Minimum Range"
+msgstr "نطاق الحد الأدنى"
+
+#: plugin-files/widgets/freelancers-widgets.php:698
+#: plugin-files/widgets/projects-widgets.php:411
+#: plugin-files/widgets/services-widgets.php:706
+#, fuzzy
+msgid "Maximum Range"
+msgstr "أقصى نطاق"
+
+#: plugin-files/widgets/projects-widgets.php:13
+#, fuzzy
+msgid "Exertio Projects - Filter By Keyword"
+msgstr "مشاريع exertio - تصفية حسب الكلمة"
+
+#: plugin-files/widgets/projects-widgets.php:16
+#, fuzzy
+msgid "Prokject Search by keyword widget"
+msgstr "بحث Prokject بواسطة عنصر واجهة استخدام الكلمة الرئيسية"
+
+#: plugin-files/widgets/projects-widgets.php:43
+#: plugin-files/widgets/services-widgets.php:43
+msgid "What are you looking for"
+msgstr "اكتب كلمة البحث"
+
+#: plugin-files/widgets/projects-widgets.php:114
+#, fuzzy
+msgid "Exertio Projects - Filter By Category"
+msgstr "مشاريع Exertio - تصفية حسب الفئة"
+
+#: plugin-files/widgets/projects-widgets.php:117
+#, fuzzy
+msgid "Projects Search by category"
+msgstr "البحث عن المشاريع حسب الفئة"
+
+#: plugin-files/widgets/projects-widgets.php:215
+#, fuzzy
+msgid "Exertio Projects - Filter By Freelancer Type"
+msgstr "مشاريع exertio - تصفية حسب نوع المستقل"
+
+#: plugin-files/widgets/projects-widgets.php:218
+#, fuzzy
+msgid "Projects Search by freelancer type"
+msgstr "البحث في المشاريع حسب نوع العامل المستقل"
+
+#: plugin-files/widgets/projects-widgets.php:317
+#, fuzzy
+msgid "Exertio Projects - Filter By Price"
+msgstr "مشاريع exertio - تصفية حسب السعر"
+
+#: plugin-files/widgets/projects-widgets.php:320
+#, fuzzy
+msgid "Projects Search by Price"
+msgstr "البحث عن المشاريع حسب السعر"
+
+#: plugin-files/widgets/projects-widgets.php:462
+#, fuzzy
+msgid "Exertio Projects - Filter By Duration"
+msgstr "مشاريع exertio - تصفية حسب المدة"
+
+#: plugin-files/widgets/projects-widgets.php:465
+#, fuzzy
+msgid "Projects Search by Duration"
+msgstr "البحث عن المشاريع حسب المدة"
+
+#: plugin-files/widgets/projects-widgets.php:562
+#, fuzzy
+msgid "Exertio Projects - Filter By Level"
+msgstr "مشاريع exertio - تصفية حسب المستوى"
+
+#: plugin-files/widgets/projects-widgets.php:565
+#, fuzzy
+msgid "Projects Search by Level"
+msgstr "البحث عن المشاريع حسب المستوى"
+
+#: plugin-files/widgets/projects-widgets.php:662
+#, fuzzy
+msgid "Exertio Projects - Filter By English Level"
+msgstr "مشاريع exertio - تصفية حسب المستوى الإنجليزي"
+
+#: plugin-files/widgets/projects-widgets.php:665
+#, fuzzy
+msgid "Projects Search by English Level"
+msgstr "البحث عن المشاريع حسب المستوى الإنجليزي"
+
+#: plugin-files/widgets/projects-widgets.php:760
+#, fuzzy
+msgid "Exertio Projects - Filter By Location"
+msgstr "مشاريع exertio - تصفية حسب الموقع"
+
+#: plugin-files/widgets/projects-widgets.php:763
+#, fuzzy
+msgid "Projects Search by Location"
+msgstr "البحث عن المشاريع حسب الموقع"
+
+#: plugin-files/widgets/projects-widgets.php:858
+#, fuzzy
+msgid "Exertio Projects - Filter By Skills"
+msgstr "مشاريع exertio - تصفية حسب المهارات"
+
+#: plugin-files/widgets/projects-widgets.php:861
+#, fuzzy
+msgid "Projects Search by Skills"
+msgstr "البحث عن المشاريع حسب المهارات"
+
+#: plugin-files/widgets/projects-widgets.php:956
+#, fuzzy
+msgid "Exertio Projects - Filter By Languages"
+msgstr "مشاريع exertio - تصفية حسب اللغات"
+
+#: plugin-files/widgets/projects-widgets.php:959
+#, fuzzy
+msgid "Projects Search by Languages"
+msgstr "مشاريع البحث حسب اللغات"
+
+#: plugin-files/widgets/projects-widgets.php:1055
+#, fuzzy
+msgid "Exertio Projects - Filter By Price Type"
+msgstr "مشاريع exertio - تصفية حسب نوع السعر"
+
+#: plugin-files/widgets/projects-widgets.php:1058
+#, fuzzy
+msgid "Projects Search by Price Type"
+msgstr "البحث عن المشاريع حسب نوع السعر"
+
+#: plugin-files/widgets/projects-widgets.php:1089
+msgid "Select price type"
+msgstr "حدد نوع السعر"
+
+#: plugin-files/widgets/projects-widgets.php:1090
+msgid "Fixed Price"
+msgstr "السعر الثابت"
+
+#: plugin-files/widgets/projects-widgets.php:1091
+msgid "Hourly Price"
+msgstr "سعر الساعة"
+
+#: plugin-files/widgets/services-widgets.php:13
+#, fuzzy
+msgid "Exertio Services - Filter By Keyword"
+msgstr "خدمات exertio - تصفية حسب الكلمات الرئيسية"
+
+#: plugin-files/widgets/services-widgets.php:16
+#, fuzzy
+msgid "Services Search by keyword widget"
+msgstr "البحث في الخدمات بواسطة عنصر واجهة استخدام الكلمة الرئيسية"
+
+#: plugin-files/widgets/services-widgets.php:117
+#, fuzzy
+msgid "Exertio Services - Filter By Category"
+msgstr "خدمات Exertio - تصفية حسب الفئة"
+
+#: plugin-files/widgets/services-widgets.php:120
+#, fuzzy
+msgid "Services Search by category"
+msgstr "البحث عن الخدمات حسب الفئة"
+
+#: plugin-files/widgets/services-widgets.php:217
+#, fuzzy
+msgid "Exertio Services - Filter By English Level"
+msgstr "خدمات exertio - تصفية حسب المستوى الإنجليزي"
+
+#: plugin-files/widgets/services-widgets.php:220
+#, fuzzy
+msgid "Services Search by English Level"
+msgstr "البحث عن الخدمات حسب المستوى الإنجليزي"
+
+#: plugin-files/widgets/services-widgets.php:316
+#, fuzzy
+msgid "Exertio Services - Filter By Response Time"
+msgstr "خدمات exertio - تصفية حسب وقت الاستجابة"
+
+#: plugin-files/widgets/services-widgets.php:319
+#, fuzzy
+msgid "Services Search by Response time"
+msgstr "البحث عن الخدمات حسب وقت الاستجابة"
+
+#: plugin-files/widgets/services-widgets.php:415
+#, fuzzy
+msgid "Exertio Services - Filter By Delivery Time"
+msgstr "خدمات exertio - تصفية حسب وقت التسليم"
+
+#: plugin-files/widgets/services-widgets.php:418
+#, fuzzy
+msgid "Services Search by Delivery time"
+msgstr "البحث في الخدمات حسب وقت التسليم"
+
+#: plugin-files/widgets/services-widgets.php:514
+#, fuzzy
+msgid "Exertio Services - Filter By Location"
+msgstr "خدمات exertio - تصفية حسب الموقع"
+
+#: plugin-files/widgets/services-widgets.php:517
+#, fuzzy
+msgid "Services Search by Location"
+msgstr "البحث عن الخدمات حسب الموقع"
+
+#: plugin-files/widgets/services-widgets.php:612
+#, fuzzy
+msgid "Exertio Services - Filter By Price"
+msgstr "خدمات exertio - تصفية حسب السعر"
+
+#: plugin-files/widgets/services-widgets.php:615
+#, fuzzy
+msgid "Services Search by Price"
+msgstr "البحث عن الخدمات حسب السعر"
+
+#: redux-extensions/extensions-init.php:77
+msgid ""
+"Best if used on new WordPress install & this theme requires PHP version 7.0+"
+msgstr ""
+"أفضل إذا ما استخدمت علي تثبيت وورد الجديدة وهذا الموضوع يتطلب PHP الإصدار "
+"7.0 +"
+
+#: redux-extensions/extensions-init.php:78
+msgid "Images are for demo purpose only."
+msgstr "الصور للعرض التوضيحي فقط."
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:236
+msgid "Demo Already Imported"
+msgstr "سبق وتم إستيراد بينات الديمو"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:260
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:262
+msgid "Demo Importer"
+msgstr "استراد النسخة التجربية"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:267
+msgid "Works best to import on a new install of WordPress"
+msgstr "يعمل بشكل أفضل للاستيراد على تثبيت جديد من وردبريس"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:330
+msgid "Main Page"
+msgstr "العنوان الرئيسي"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:338
+msgid "Home 1"
+msgstr "الصفحة الرئيسية */"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:345
+msgid "Home 2"
+msgstr "الصفحة الرئيسية-البحث الحديث 2"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:352
+msgid "Home 3"
+msgstr "الصفحة الرئيسية 3"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:359
+#, fuzzy
+msgid "Home 4"
+msgstr "الصفحة الرئيسية 4"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:366
+msgid "How it Works"
+msgstr "كيفية العمل"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:372
+#, fuzzy
+msgid "Browse Jobs"
+msgstr "تصفح الوظائف"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:379
+msgid "Project Search"
+msgstr "البحث في المشروع"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:386
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:400
+msgid "Project Detail"
+msgstr "تفاصيل المشروع"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:393
+msgid "Services Search"
+msgstr "البحث عن الخدمات"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:407
+#, fuzzy
+msgid "Employers Packages"
+msgstr "حزم أصحاب العمل"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:414
+#, fuzzy
+msgid "Freelancers Packages"
+msgstr "حزم لحسابهم الخاص"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:421
+msgid "Pages"
+msgstr "الصفحات"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:428
+msgid "About Us"
+msgstr "معلومات عنا"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:435
+msgid "Blog"
+msgstr "المدونة"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:442
+msgid "Blog Detail"
+msgstr "تفاصيل المدونة"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:449
+msgid "Privacy Policy"
+msgstr "سياسة الخصوصية"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:456
+msgid "404 Page"
+msgstr "صفحة 404"
+
+#: redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:463
+msgid "Contact Us"
+msgstr "اتصل بنا"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/parsers.php:42
+#: redux-extensions/extensions/wbc_importer/inc/importer/parsers.php:72
+#: redux-extensions/extensions/wbc_importer/inc/importer/parsers.php:80
+msgid "There was an error when reading this WXR file"
+msgstr "لا توجد أخطاء أثناء قراءة ملف WXR"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/parsers.php:43
+msgid ""
+"Details are shown above. The importer will now try again with a different "
+"parser..."
+msgstr "التفاصيل ظاهره بالأعلى. المستورد سوف يحاول مره أخرى الآن بقارئ مختلف"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/parsers.php:84
+#: redux-extensions/extensions/wbc_importer/inc/importer/parsers.php:89
+#: redux-extensions/extensions/wbc_importer/inc/importer/parsers.php:279
+#: redux-extensions/extensions/wbc_importer/inc/importer/parsers.php:468
+msgid ""
+"This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr "لا يبدو أن هذا الملف من النوع WXR, أو أن رقم الإصدار مفقود/غيرصالح"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/radium-importer.php:256
+msgid "Theme options Import file could not be found. Please try again."
+msgstr ""
+"الملف المستورد والمتعلق بخيارات التصميم لا يمكن العثور عليه. الرجاء المحاولة "
+"مرة آخرى."
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/radium-importer.php:331
+msgid "Widget Import file could not be found. Please try again."
+msgstr "لا يمكن العثور على قطعة الاستيراد. الرجاء المحاولة مرة آخرى."
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/radium-importer.php:405
+msgid "Sidebar does not exist in theme (using Inactive)"
+msgstr "الشريط الجانبي غير موجود في المظهر (باستخدام غير نشط)"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/radium-importer.php:427
+msgid "Site does not support widget"
+msgstr "الموقع لا يدعم الودجات"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/radium-importer.php:450
+msgid "Widget already exists"
+msgstr "البريد الكتروني موجود بالفعل."
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/radium-importer.php:499
+#: redux-extensions/extensions/wbc_importer/wbc_importer/field_wbc_importer.php:116
+msgid "Imported"
+msgstr "تم الاستيراد"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/radium-importer.php:502
+msgid "Imported to Inactive"
+msgstr "إعلانات غير نشطة"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/radium-importer.php:509
+msgid "No Title"
+msgstr "بلا عنوان"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:134
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:143
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:194
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:198
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:207
+msgid "Sorry, there has been an error."
+msgstr "تم تحديث تقييمك"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:135
+msgid "The file does not exist, please try again."
+msgstr "الملف غير موجود، يرجى المحاولة مرة أخرى."
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:178
+msgid "All done."
+msgstr "الكل"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:178
+msgid "Have fun!"
+msgstr "حقائق ممتعة"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:179
+msgid "Remember to update the passwords and roles of imported users."
+msgstr "تذكر تحديث كلمات السر وأدوار المستخدمين المستوردة."
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:199
+#, php-format
+msgid ""
+"The export file could not be found at <code>%s</code>. It is likely that "
+"this was caused by a permissions problem."
+msgstr ""
+"ملف التصدير غير موجود في <code>%s</code>. يبدو أن هذه المشكله هي مشكلة "
+"صلاحيات"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:215
+#, php-format
+msgid ""
+"This WXR file (version %s) may not be supported by this version of the "
+"importer. Please consider updating."
+msgstr ""
+"ملف WXR هذا (الإصدار %s) يمكن أن يكون غير مدعوم بواسطة هذا الإصدار من "
+"المستورد. فضلا قم بالتحديث"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:240
+#, php-format
+msgid ""
+"Failed to import author %s. Their posts will be attributed to the current "
+"user."
+msgstr "فشل في استيراد %s.. سيتم تحويل المقالات للمستخدم الحالي."
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:266
+msgid "Assign Authors"
+msgstr "تعيين المؤلف"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:267
+msgid ""
+"To make it easier for you to edit and save the imported content, you may "
+"want to reassign the author of the imported item to an existing user of this "
+"site. For example, you may want to import all the entries as <code>admin</"
+"code>s entries."
+msgstr ""
+"لجعل لجعل العمل اسهل بالنسبة لك لتحرير وحفظ المحتوى الذي تم استيراده، قد "
+"ترغب في إعادة تعيين مالك المحتوى الذي يتم استيراده إلى مستخدم موجود في هذا "
+"الموقع. على سبيل المثال، قد ترغب في استيراد جميع المدخلات كمدخلات <code> "
+"المشرف </code>"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:269
+#, php-format
+msgid ""
+"If a new user is created by WordPress, a new password will be randomly "
+"generated and the new user&#8217;s role will be set as %s. Manually changing "
+"the new user&#8217;s details will be necessary."
+msgstr ""
+"إذا تم إنشاء مستخدم جديد بواسطة ووردبريس، كلمة مرور جديدة سيتم إنشائها "
+"عشوائيا وسيتم تعيين المستخدم الجديد ك&#8217;s. التغيير اليدوي %s.لتفاصيل "
+"المستخدم الجديد &#8217;s سيكون ضروريا."
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:279
+msgid "Import Attachments"
+msgstr "استيراد المرفقات"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:282
+msgid "Download and import file attachments"
+msgstr "تحميل و استيراد الملفات المرفقه"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:286
+msgid "Submit"
+msgstr "إرسال"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:299
+msgid "Import author:"
+msgstr "استيراد المؤلف:"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:310
+msgid "or create new user with login name:"
+msgstr "أو إنشاء مستخدم جديد مع اسم الدخول:"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:313
+msgid "as a new user:"
+msgstr "كمستخدم جديد:"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:321
+msgid "assign posts to an existing user:"
+msgstr "تعيين مشاركات لمستخدم حالي:"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:323
+msgid "or assign posts to an existing user:"
+msgstr "او تعيين مشاركات لمستخدم حالي:"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:324
+msgid "- Select -"
+msgstr "- تحديد -"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:374
+#, php-format
+msgid ""
+"Failed to create new user for %s. Their posts will be attributed to the "
+"current user."
+msgstr "فشل إنشاء مستخدم جديد ل %s يمكن أن تعزى مناصبهم للمستخدم الحالي."
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:425
+#, php-format
+msgid "Failed to import category %s"
+msgstr "فشل في استيراد التصنيف %s"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:465
+#, php-format
+msgid "Failed to import post tag %s"
+msgstr "فشل في استيراد سمات المقال %s"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:511
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:652
+#, php-format
+msgid "Failed to import %s %s"
+msgstr "فشل تثبيت %1$s."
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:537
+#, php-format
+msgid "Failed to import &#8220;%s&#8221;: Invalid post type %s"
+msgstr "فشل في إستيراد &#8220;%s&#8221;: نوع محتوى خاطئ %s"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:559
+#, php-format
+msgid "%s &#8220;%s&#8221; already exists."
+msgstr "%s &#8220;%s&#8221; موجود بالفعل."
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:618
+#, php-format
+msgid "Failed to import %s &#8220;%s&#8221;"
+msgstr "فشل في استيراد %s &#8220;%s&#8221;"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:783
+msgid "Menu item skipped due to missing menu slug"
+msgstr "عنصر القائمة تخطي بسبب سبيكة القائمة المفقودة"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:790
+#, php-format
+msgid "Menu item skipped due to invalid menu slug: %s"
+msgstr "عنصر القائمة تخطي بسبب سبيكة القائمة ؟؟؟ صالحة: %s"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:853
+msgid "Fetching attachments is not enabled"
+msgstr "تمكين"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:866
+msgid "Invalid file type"
+msgstr "النوع"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:910
+msgid "Remote server did not respond"
+msgstr "الخادم لم يستجب"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:916
+#, php-format
+msgid "Remote server returned error response %1$d %2$s"
+msgstr "السيرفر قام بالرد كخطأ كالتالي:  %1$d %2$s"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:923
+msgid "Remote file is incorrect size"
+msgstr "حجم الملف غير صحيح"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:928
+msgid "Zero size file downloaded"
+msgstr "حجم الملفات المحمله صفر"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:934
+#, php-format
+msgid "Remote file is too large, limit is %s"
+msgstr "الملف كبير جدا, أقصى حجم هو  %s"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:1032
+msgid "Import WordPress"
+msgstr "ورد"
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:1039
+#, php-format
+msgid ""
+"A new version of this importer is available. Please update to version %s to "
+"ensure compatibility with newer export files."
+msgstr ""
+"نسخة جديدة متاحة من هذا المستورد Genius Icon. يرجى تحديث الإصدار إلى %s "
+"لضمان التوافق مع ملفات التصدير الجديدة."
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:1054
+msgid ""
+"Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import "
+"the posts, pages, comments, custom fields, categories, and tags into this "
+"site."
+msgstr ""
+"مرحبا! تحميل الخاص بك WordPress تمديد RSS ملف (WXR) وسنقوم باستيراد المقال، "
+"صفحة، التعليقات، حقول مخصصة، والفئات، والعلامات في هذا الموقع."
+
+#: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:1055
+msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
+msgstr "اختار a WXR (.xml) ليتم رفعه ثم اضغط رفع واستيراد."
+
+#: redux-extensions/extensions/wbc_importer/wbc_importer/field_wbc_importer.php:93
+#: redux-extensions/extensions/wbc_importer/wbc_importer/field_wbc_importer.php:114
+msgid "Import Demo"
+msgstr "عرض الغرض"
+
+#: redux-extensions/extensions/wbc_importer/wbc_importer/field_wbc_importer.php:97
+msgid "Demo Imported"
+msgstr "تم إستيراد الديمو"
+
+#: redux-extensions/extensions/wbc_importer/wbc_importer/field_wbc_importer.php:114
+#: redux-extensions/extensions/wbc_importer/wbc_importer/field_wbc_importer.php:117
+msgid "Please Wait..."
+msgstr "يرجى الانتظار ..."
+
+#: redux-extensions/extensions/wbc_importer/wbc_importer/field_wbc_importer.php:118
+msgid "Re-Import"
+msgstr "إعادة الاستيراد"
+
+#: redux-extensions/extensions/wbc_importer/wbc_importer/field_wbc_importer.php:127
+msgid "No Demo Data Provided"
+msgstr "لم يتم تقديم أية بيانات تجريبية"
+
+#. Plugin Name of the plugin/theme
+msgid "Exertio Framework"
+msgstr "إطار عمل لـ\"ليميو\""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://themeforest.net/user/scriptsbundle/"
+msgstr "https://themeforest.net/user/scriptsbundle/"
+
+#. Description of the plugin/theme
+#, fuzzy
+msgid ""
+"Exertio framework is essential for the proper Exertio WordPress Theme "
+"funcationality."
+msgstr ""
+"إطار Exertio ضروري لـ الترحام المناسب من أجل برنامج Exertio WordPress Theme."
+
+#. Author of the plugin/theme
+msgid "Scripts Bundle"
+msgstr "حزمه مخطوطات"

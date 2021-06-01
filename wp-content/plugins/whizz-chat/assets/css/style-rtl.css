@@ -1,0 +1,116 @@
+
+.whizzChat_head {
+    left:50px;
+    right:auto;	
+}
+.chatbox-holder {
+    left:0;
+    right:auto;	
+}
+.whizz-chat-list .chat-body ul li .thumbnail {
+    float:right;	
+}
+.whizz-chat-list .chat-body ul li .content {
+    margin-left:0;
+    margin-right:10px;	
+}
+.attachment-panel {
+    text-align: right;
+}
+.chat-input-holder .emojionearea-editor:not(.inline) {
+    padding: 15px 15px 15px 80px;
+    text-align: right;	
+}
+.chat-input-holder .emojionearea .emojionearea-button {
+    right:auto;
+    left:12%;	
+}
+.chat-input-holder .message-send {
+    left:0;
+    right:auto;	
+    transform: rotate(180deg);
+}
+.whizzchatbot-tooltip {
+    margin-right:0;
+    margin-left:30px;	
+}
+.whizzchatbot-tooltip::before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    left: auto;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-bottom: 13px solid transparent;
+    border-right: 15px solid #FFF;
+    border-top: 13px solid transparent;
+    border-left: none;
+}
+.chatbox-icons .fa.fa-close {
+    padding-right:15px;	
+}
+.whizzchat-status {
+    margin: 0 0 0 5px;
+}
+.message-box p span.name {
+    margin-right:0;
+    margin-left:10px;	
+}
+.whizzChat-pophover .popover__content {
+    left:20%;
+    right:auto;	
+}
+.settings-popup ul li a, .settings-popup ul li a:link, .settings-popup ul li a:visited {
+    text-align: right;
+}
+.settings-popup::after, .settings-popup::before {
+    right:15px;
+}
+.whizz-chat-bot .chatbox-top .whizzchat-bot-img {
+    float:right;
+    margin-left: 15px;
+    margin-right: 0;	
+}
+.whizz-chat-bot .chatbox-top .chat-group-name {
+    padding: 20px 0;
+}
+button.botui-actions-buttons-button:not(:last-child) {
+    margin-right: 0;
+    margin-left:10px;
+}
+.rtl .botui-message-content.human {
+    float: left;
+}
+.whizzChat-pophover .whizz-chat-list .chat-body ul li a {
+    float:right;
+    margin-right: 0;
+}
+.whizzChat-pophover .whizz-chat-list .chat-body ul li .content {
+    text-align:right;	
+}
+.individual-chat-box .initate-chat .form-group i {
+    left:auto;
+    right:15px;	
+}
+.rtl .chatbox-top {
+    padding-left: 0px;
+	padding-right: 20px;
+}
+.rtl .whizz-chat-list .chat-body .whizz-search .whizz-search-loader {
+    left: 20px;
+    right:auto;
+}
+.rtl .chatbox-top .settings-popup{
+	left: 0;
+	right: auto;
+}
+
+.rtl .chatbox-top .settings-popup::after, .rtl .chatbox-top .settings-popup::before {
+    left: 65px;
+}
+.rtl .chatbox-top .settings-popup::after, .rtl .chatbox-top .settings-popup::before {
+    right: auto;
+}
+
+

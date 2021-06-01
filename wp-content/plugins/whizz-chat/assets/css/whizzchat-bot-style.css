@@ -1,0 +1,158 @@
+.botui-app-container {
+    height: auto;
+    width: 700px;
+    overflow-y: auto;
+}
+.botui-message-content.text {
+    background-color: #e8f9f8;
+    color: #4a4a4a;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+}
+.botui-message-content.loading {
+    background-color: #fff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    color: #4a4a4a;
+    border-radius: 4px;
+}
+.botui-actions-buttons {
+    text-align: center;
+}
+button.botui-actions-buttons-button {
+    outline: none !important;
+	font-size: 14px;
+	border-radius: 4px;
+	background-color: #5a46ff !important;
+	text-transform: none;
+}
+button.botui-actions-buttons-button:hover {
+	text-decoration: none !important;	
+}
+.botui-message-content.human {
+    background-color: #5a46ff;
+    color: #fff;
+}
+/*Whizz Chat CSS for ChatBot*/
+.botui-app-container {
+    height: auto;
+    width: auto;
+    overflow-y: auto;
+}
+.whizz-chat-bot .botui-message-content.whizz-bot-loading {
+	background-color:#e8f9f8;
+	box-shadow:none;	
+}
+.chatbox.whizz-chat-bot {
+	width:350px;	
+}
+
+.whizz-chat-bot .chatbox-top .whizzchat-bot-img {
+	float:left;
+	width:60px;
+	margin-right: 10px;
+	padding:10px;
+}
+.whizz-chat-bot .chatbox-top .whizzchat-bot-img img {
+	width:60px;	
+}
+.whizz-chat-bot .chatbox-top .chat-group-name .whizzChat-ad-title {
+	font-size:15px;
+	margin-top: 8px;
+    display: inline-block;
+}
+.whizz-chat-bot  .whizzChat-author-meta {
+	display:block;	
+}
+.whizzchat-bot-footer {
+	background-color:#f5f5f5;
+	padding:15px;
+	text-align:center;	
+}
+.whizzchat-bot-footer p {
+	margin:0;
+	font-size: 12px;	
+}
+.whizzchat-bot-footer p a {
+	color:#5a46ff !important;	
+}
+.chatbox.whizz-chat-bot.chatbox-min {
+    margin-bottom: -120%;
+}
+.whizzchat-short-quick {
+	position: absolute;
+	right: 35px;
+	bottom: 55px;
+}
+.whizzchat-short-quick a {
+	color:#777;
+	font-size:10px;
+}
+@media (min-width: 1024px) and (max-width: 1600px)
+{
+	.chatbox.whizz-chat-bot {
+		width: 300px;
+		height: 380px;	
+	}
+	.whizz-chat-bot .chatbox-top .chat-group-name .whizzChat-ad-title {
+		font-size:14px !important;	
+	}
+	.botui-message-content.text {
+		font-size: 12px;
+	}
+	button.botui-actions-buttons-button {
+		font-size: 12px;	
+	}
+	.chatbox.whizz-chat-bot.chatbox-min {
+		margin-bottom: -100%;
+	}
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .whizzChat-chatbox-images {
+        width:200px;	
+    }
+    .whizzChat-chatbox-images a {
+        min-width:90px;	
+    }
+	.whizzchatbot-tooltip {
+		width: 65%;	
+	}
+	.chatbox.whizz-chat-bot {
+		width: 280px;
+	}
+	.whizz-chat-bot .chatbox-top .chat-group-name .whizzChat-ad-title {
+		font-size:14px !important;	
+	}
+	.botui-message-content.text {
+		font-size: 12px;
+	}
+	button.botui-actions-buttons-button {
+		font-size: 12px;	
+	}
+	.chatbox.whizz-chat-bot.chatbox-min {
+		margin-bottom: -100%;
+	}
+}
+@media (min-width: 320px) and (max-width: 767px) {
+	.whizzchatbot-tooltip {
+		width: 65%;	
+	}
+	.chatbox.whizz-chat-bot {
+		width: 300px;
+		position: absolute;
+		right: 0;
+	}
+	.whizz-chat-bot .chatbox-top .chat-group-name .whizzChat-ad-title {
+		font-size:14px !important;	
+	}
+	.botui-message-content.text {
+		font-size: 10px;
+	}
+	button.botui-actions-buttons-button {
+		font-size: 10px;	
+	}
+	.chatbox.whizz-chat-bot.chatbox-min {
+		margin-bottom: -100%;
+	}
+}
