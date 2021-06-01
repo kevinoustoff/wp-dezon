@@ -1,0 +1,59 @@
+.whizz-chat-body .initate-chat-admin {
+    left: 20px;
+	right:auto;
+}
+.whizz-chat-body .emojionearea .emojionearea-editor {
+	padding-right:20px;
+	padding-left:50px;	
+	text-align:right;
+}
+.whizz-chat-body .emojionearea .emojionearea-button {
+	right:auto;
+	left:12px;	
+}
+.whizz-chat-body .attachment-panel-admin .fa-map-marker {
+    margin-right: 20px;
+}
+.emojionearea .emojionearea-picker.emojionearea-picker-position-top {
+    right: auto;
+	left:-14px;
+}
+.ml-4 {
+	margin-right:1.5rem !important;
+	margin-left:0;	
+}
+.list-group-item-action .badge {
+    left: 20px;
+	right:auto;
+}
+[class*="col-"] {
+    float: right;
+}
+.messages-box {
+	border-right:none;
+	border-left:1px solid #f5f5f5;	
+}
+.whizz-chat-body .whizz-chat-logo {
+    border-left: 1px solid #f5f5f5;
+	border-right: none;
+}
+.ml-3, .mx-3 {
+    margin-right: 1rem ;
+	margin-left: 0 !important;
+}
+.message-box-holder .bg-light {
+	float:right;	
+}
+.ml-auto, .mx-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+.message-box-holder .bg-primary {
+    float: left;
+}
+.message-box-holder.ml-auto .text-muted {
+	text-align:left;	
+}
+.admin-chatbox-icons .settings-popup ul li a, .settings-popup ul li a:link, .settings-popup ul li a:visited {
+    text-align: right;
+}

@@ -1,0 +1,27 @@
+2021-05-24T15:59:53+00:00 CRITICAL Uncaught Error: Call to undefined function fl_framework_get_options() in /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/payouts.php:138
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): exertio_add_schedule(Array)
+#1 /var/www/html/wordpress/wp-includes/plugin.php(212): WP_Hook->apply_filters(Array, Array)
+#2 /var/www/html/wordpress/wp-includes/cron.php(1064): apply_filters('cron_schedules', Array)
+#3 /var/www/html/wordpress/wp-includes/cron.php(986): wp_get_schedules()
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): _wp_cron('')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-settings.php(582): do_action('wp_loaded')
+#8 /var/www/html/wordpress/wp-config.php(90): require_once('/var/www/html/w...')
+#9 /var/www/html/wordpress/wp-load.php(37): require_once('/var/www/html/w...')
+#10 /var/www/html dans /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/payouts.php à la ligne 138
+
+2021-05-24T16:09:50+00:00 CRITICAL Uncaught Error: Using $this when not in object context in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-routes.php:23
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): {closure}(Object(WP_REST_Server))
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(521): do_action('rest_api_init', Object(WP_REST_Server))
+#4 /var/www/html/wordpress/wp-includes/rest-api.php(347): rest_get_server()
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#6 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#7 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#8 /var/www/html/wordpress/wp-includes/class-wp.php(388): do_action_ref_array('parse_request', Array)
+#9 /var/www/html/wordpress/wp-includes/ dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-routes.php à la ligne 23
+

@@ -1,0 +1,98 @@
+.rtl .whizz-dash-chat-body .chat-header .dropdown .dropdown-menu{
+	left: 100px !important;
+	right: auto !important;
+}
+
+.rtl .message .message-content {
+    margin-right: 1.25rem;
+	margin-left: 0px;
+}
+.rtl .message.self .message-content {
+    margin-left: 1.25rem;
+	margin-right: 0px;
+}
+
+.rtl .chat-content .message-box-holder-dash{
+	text-align: right!important;
+}
+
+.rtl .chat-content .message-box-holder-dash.self{
+	text-align: left !important;
+}
+
+.rtl .contacts-list .contacts-content .contacts-texts p {
+    margin-left: auto;
+	margin-right: 15px;
+}
+
+.rtl .chat-info {
+    border-right: 1px solid #e5e9f2;
+}
+.rtl .whizz-sidebar .sidebar-header .nav .nav-item .dropdown .dropdown-menu{
+	min-width: 12rem;
+}
+.rtl .whizz-sidebar .sidebar-header .nav .nav-item .dropdown .dropdown-menu svg {
+    float: right;
+}
+.rtl .emojionearea .emojionearea-button {
+    left: 3px;
+	right: auto;
+}
+.rtl .emojionearea .emojionearea-picker.emojionearea-picker-position-top {
+    left: -14px;
+	right: auto;
+}
+.rtl .emojionearea .emojionearea-picker .emojionearea-search {
+	width: 100% !important;
+}
+.rtl .emojionearea .emojionearea-picker .emojionearea-search > input {
+float: right;
+margin-right: 15px;	
+}
+.rtl .sidebar-header .sidebar-sub-header .input-group-append.dashb-search-loader {
+    left: 20px;
+	right: auto;
+}
+.rtl .whizz-main .chats .media .media-body h6{
+	margin-right: 15px !important;
+}
+.rtl .contacts-list .contacts-content .contacts-info .chat-name {
+    margin-right: 15px;
+}
+.rtl .chat-footer .form-row .col-auto .btn.btn-primary i {
+ transform: rotate(180deg);
+}
+.rtl .chat-footer .input-group-prepend .dropdown .dropdown-menu {
+    right: 0px;
+	left: auto;
+}
+.rtl .chat-footer .input-group-prepend .dropdown .dropdown-menu .dropdown-item  svg {
+    float: right;
+	margin-left: 0.75rem !important;
+	margin-right: 0px !important;
+}
+.rtl .chat-footer .input-group-prepend .dropdown .dropdown-menu .dropdown-item  span {
+    float: right;
+}
+.rtl .emojionearea .emojionearea-picker.emojionearea-picker-position-top .emojionearea-wrapper::after {
+    left: 20px;
+	right: auto;
+}
+.rtl .chat-messages-dashb .whizzChat-span-loading {
+    right: 54%;
+}
+.rtl .chat-footer .typing-box-admin {
+    right: 70px;
+	left: auto;
+}
+
+.rtl .chat-footer .emojionearea .emojionearea-editor{
+	direction: rtl;
+}
+.rtl .main-layout .navigation.navbar .nav{
+	padding-right: 0px;
+	margin-right: 0px;
+}
+.rtl  .chat-header .btn svg {
+    transform: rotate(180deg);
+}
