@@ -11,21 +11,21 @@ if(is_user_logged_in())
 				<img src="<?php echo get_template_directory_uri(); ?>/images/icons/dollar.png" alt="<?php echo esc_attr(get_post_meta($alt_id, '_wp_attachment_image_alt', TRUE)); ?>" class="img-fluid">
 			</div>
 			<div class="deposit-header-text">
-				<h3> <?php echo esc_html__('Deposit funds ','exertio_theme'); ?></h3>
-				<p><?php echo esc_html__('Add funds to your wallet ','exertio_theme'); ?></p>
+				<h3> <?php echo esc_html__('Fonds de dépôt ','exertio_theme'); ?></h3>
+				<p><?php echo esc_html__('Recharger en toute sécurité votre portefeuille virtuel','exertio_theme'); ?></p>
 			</div>
 		</div>
 		<div class="deposit-body">
 			<form id="deposit-funds-form">
 			<div class="form-row">
 				<div class="form-group col-md-12">
-				  <label> <?php echo esc_html__('Amount','exertio_theme'); ?></label>
+				  <label> <?php echo esc_html__('Montant','exertio_theme'); ?></label>
 				  <?php echo fl_get_products(); ?>
 				</div>
 				<div class="form-group col-md-12">
-					<label> <?php echo esc_html__('Your email','exertio_theme'); ?></label>
+					<label> <?php echo esc_html__('Votre email','exertio_theme'); ?></label>
 				  <input type="text" class="form-control" name="funds_amount" disabled placeholder="<?php echo esc_attr($email); ?>">
-				  <p><?php echo esc_html__(' You can not edit this field','exertio_theme'); ?></p>
+				  <p><?php echo esc_html__(' Vous ne pouvez pas modifier ce champ','exertio_theme'); ?></p>
 				</div>
 			</div>
 			</form>
@@ -33,7 +33,7 @@ if(is_user_logged_in())
 		<div class="deposit-footer">
 			<button type="button" id="deposit-funds-btn" class="btn-loading">
 				<i class="fa fa-lock"></i>
-				<?php echo esc_html__(' Secure Deposit','exertio_theme'); ?>
+				<?php echo esc_html__(' Recharger','exertio_theme'); ?>
 				<div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
 			</button>
 			<input type="hidden" id="fl_deposit_funds_nonce" value="<?php echo wp_create_nonce('fl_deposit_funds_secure'); ?>"  />

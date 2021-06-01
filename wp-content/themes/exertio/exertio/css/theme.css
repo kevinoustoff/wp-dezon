@@ -760,7 +760,7 @@ background: #259d00;
 }
 .fr-menu .sb-menu ul li > a {
 	font-size: 14px;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 }
 .fr-menu .sb-menu ul li.fr-list {
 	position:relative;
@@ -1243,7 +1243,7 @@ color: #777;
 	font-size: 14px;
 	font-weight: 500;
 	color: #212121;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 }
 .fr-latest-jobs .fr-jobs-content .fr-jobs-bar ul li a i {
 	margin-right: 12px;
@@ -1880,7 +1880,7 @@ color: #777;
 	margin: 0 auto;
 	margin-bottom:10px;
 	word-break: break-word;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 }
 .fr-list-product .fr-list-content {
 	position: relative;
@@ -2049,7 +2049,7 @@ font-size: 14px;
 	font-size: 26px;
 	margin-bottom: 8px;
 	color: #fff;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 }
 .fr-list-side-bar .fr-right-bannner {
 	background: url("../images/1f.jpg");
@@ -2348,7 +2348,7 @@ font-size: 14px;
 .fr-project-details .fr-project-content .fr-project-list h2 {
 	margin: 0;
 	color: #242424;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 }
 .fr-project-content .fr-project-meta {
 	position:relative;
@@ -3017,7 +3017,7 @@ font-size: 14px;
 }
 .fr-project-ad-content .button-bid .bid-text-checkbox a {
 	color:#242424;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 	text-decoration: underline;	
 }
 .fr-project-ad-content .button-bid .has-feedback .smk-error-msg {
@@ -4791,7 +4791,7 @@ color: #777;
 	font-size: 30px;
 	color: #242424;
 	margin-bottom:0;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 }
 .fr-m-products {
 	position:relative;
@@ -5269,6 +5269,7 @@ color: #777;
 .fr-seller-contents ul li span {
 	font-size: 14px;
 	color:#777;
+	padding-top: 3px;
 }
 .fr-frquntly-qa {
 	background-color: #fff;
@@ -6013,7 +6014,7 @@ color: #777;
 	font-size: 14px;
 	margin-left: 10px;
 	color:#6d7c90;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 }
 .fr-latest-style ul li:last-child {
 	margin-right: 0;
@@ -8908,7 +8909,7 @@ color: #777;
 .blog-sidebar .widget .widget-heading h3 {
     color: #20292f;
     margin-bottom: 0;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
     position: relative;
     font-size: 18px;
 	padding-bottom:20px;
@@ -9396,7 +9397,7 @@ blockquote::after {
 .blog-sidebar .card-title {
     font-size: 1.25rem;
     font-weight: 500;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
     line-height: 35px;
     color: #fff
 }
@@ -9490,7 +9491,7 @@ p.has-drop-cap:first-letter {
     border-radius: 0;
     color: #fff;
     position: relative;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
     -webkit-transition: all 150ms ease-out;
     -moz-transition: all 150ms ease-out;
     -o-transition: all 150ms ease-out;
@@ -9552,7 +9553,7 @@ p.has-drop-cap:first-letter {
 .post-excerpt .wp-block-latest-posts.wp-block-latest-posts__list li a {
     font-weight: 500;
     font-size: 18px;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
     color: #20292f
 }
 .post-excerpt .wp-block-search__input {
@@ -10502,7 +10503,7 @@ iframe {
 	padding: 0 20px;
 	color: #fff;
 	font-weight: 500;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 }
 .fr-menu-trans.sticky .fr-m-right {
 	line-height: 70px;
@@ -10537,7 +10538,7 @@ iframe {
 	color: #fe696a;
 }
 .fr-menu-trans .fr-m-right a {
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 	font-weight: 500;
 }
 .fr-menu-trans .fr-m-right .info-menu {
@@ -11001,7 +11002,7 @@ padding: 8px;
 	font-size: 18px;
 	font-weight: 700;
 	margin-bottom: 15px;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 }
 .fr-footer2-icons ul li a {
 	color: #fff;
@@ -12480,7 +12481,7 @@ font-weight: 400;
 .extra-features ul li span {
 	display: inline-block;
 	vertical-align: middle;
-	text-transform: capitalize;
+	/*/*text-transform: capitalize;*/*/
 }
 .extra-features ul li span small {
 	display: block;
@@ -12809,7 +12810,7 @@ margin-bottom: 0;
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover {
     color:#fff;
      font-weight: normal;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
 }
 .woocommerce .exertio-shop nav.woocommerce-pagination  {
 	float:right;	
@@ -12859,12 +12860,12 @@ margin-bottom: 0;
 .woocommerce .exertio-shop-detail div.product .woocommerce-tabs .panel h2{
     margin-bottom: 20px;
     font-size: 23px;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
 }
 .woocommerce .exertio-shop-detail .related.products h2 {
     margin-bottom: 30px;
     font-size: 23px;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
 }
 .woocommerce .exertio-shop-detail div.product .product_title {
     font-size: 26px;
@@ -13247,7 +13248,7 @@ ins, mark {
     font-size: 18px;
 	line-height: 1.5;
 	margin-bottom: 0;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 }
 .testimonial-section-fancy .details h4 + span {
     font-size: 16px;
@@ -13356,7 +13357,7 @@ ins, mark {
     font-size: 40px;
     margin: 0 0 20px;
     color: #fff;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
     line-height: 1.5;
 }
 .call-actionz p {

@@ -1,5 +1,4 @@
 <?php
-include 'rest-api-function.php';
 if (!function_exists('fl_authenticate_check')) {
 
     function fl_authenticate_check() {
@@ -72,10 +71,10 @@ if (!function_exists('get_icon_for_attachment_type')) {
 	}
 }
 
-/* function login()*/
 
-add_action( 'wp_ajax_sign_up', 'sign_up');
-add_action( 'wp_ajax_nopriv_sign_up', 'sign_up');
+
+add_action( 'wp_ajax_sign_up', 'sign_up' );
+add_action( 'wp_ajax_nopriv_sign_up', 'sign_up' );
 if (! function_exists ( 'sign_up' )) {
 	function sign_up() {
 		/*DEMO DISABLED*/

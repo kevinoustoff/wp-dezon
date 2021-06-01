@@ -24,9 +24,9 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
               <div class="d-flex justify-content-between flex-wrap">
                 <div class="d-flex align-items-end flex-wrap">
                   <div class="mr-md-3 mr-xl-5">
-                    <h2><?php echo esc_html__('Edit Profile','exertio_theme'); ?></h2>
+                    <h2><?php echo esc_html__('Modifier le profil','exertio_theme'); ?></h2>
                     <div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
-						<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Dashboard', 'exertio_theme' ); ?>&nbsp;</p>
+						<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 						<?php echo exertio_dashboard_extention_return(); ?>
 					  </div>
                   </div>
@@ -42,7 +42,7 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
                     <div class="profile-cardmeta">
                     	<span class="profile-name mb-2"><?php echo exertio_get_username('freelancer',$pid, 'badge', 'right'); ?> </span>
                         <span class="p-email mb-2"> @<?php echo esc_html($post->post_title); ?></span>
-                        <a href="<?php  echo esc_url(get_permalink($pid)); ?>" class=""><?php echo esc_html__('View Profile','exertio_theme'); ?></a>
+                        <a href="<?php  echo esc_url(get_permalink($pid)); ?>" class=""><?php echo esc_html__('Voir le profil','exertio_theme'); ?></a>
                     </div>
                     <div class="cardmeta-footer">
                     	<ul class="profile-details">
@@ -77,7 +77,7 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
                 </div>
               </div>
               <div class="card-widget mb-4">
-                   <h4 class="card-title"><?php echo esc_html__('Change Password','exertio_theme'); ?></h4>
+                   <h4 class="card-title"><?php echo esc_html__('Modifier le mot de passe','exertio_theme'); ?></h4>
                   <div class="card">
                     
                     <div class="card-body">
@@ -86,19 +86,19 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
                           <div class="form-row">
                             <div class="form-group col-md-12">
                               <label><?php echo esc_html__('Old Password','exertio_theme'); ?></label>
-                              <input type="password" class="form-control" name="old_password" autocomplete="off" required data-smk-msg="<?php echo esc_html__('Please provide current password','exertio_theme'); ?>">
+                              <input type="password" class="form-control" name="old_password" autocomplete="off" required data-smk-msg="<?php echo esc_html__('Veuillez saisir le mot de passe actuel','exertio_theme'); ?>">
                             </div>
                             <div class="form-group col-md-12">
-                              <label><?php echo esc_html__('New Password','exertio_theme'); ?></label>
-                              <input type="password" class="form-control" name="new_password" autocomplete="off" required data-smk-msg="<?php echo esc_html__('Enter new password. Minimum 6 characters','exertio_theme'); ?>">
+                              <label><?php echo esc_html__('Nouveau mot de passe','exertio_theme'); ?></label>
+                              <input type="password" class="form-control" name="new_password" autocomplete="off" required data-smk-msg="<?php echo esc_html__('Saisir un nouveau mot de passe. Minimum 6 caractères','exertio_theme'); ?>">
                             </div>
                             <div class="form-group col-md-12">
-                              <label><?php echo esc_html__('Confirm Password','exertio_theme'); ?></label>
-                              <input type="password" class="form-control" name="confirm_password" autocomplete="off" required data-smk-msg="<?php echo esc_html__('confirm password required','exertio_theme'); ?>">
+                              <label><?php echo esc_html__('Retapez le nouveau mot de passe','exertio_theme'); ?></label>
+                              <input type="password" class="form-control" name="confirm_password" autocomplete="off" required data-smk-msg="<?php echo esc_html__('Confirmation du mot de passe requise','exertio_theme'); ?>">
                             </div>
                             <div class="col-md-12">
                                 <button type="button" class="btn btn-theme" id="change_password_btn" data-post-id="<?php echo esc_attr($pid) ?>">
-                                    <?php echo esc_html__('Change Password','exertio_theme'); ?>
+                                    <?php echo esc_html__('Modifier ','exertio_theme'); ?>
                                 </button>
                                 <input type="hidden" id="change_psw_nonce" value="<?php echo wp_create_nonce('fl_change_psw_secure'); ?>"  />
                             </div>
@@ -112,7 +112,7 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 				{
 			  ?>
                   <div class="card-widget">
-                       <h4 class="card-title"><?php echo esc_html__('Delete Account','exertio_theme'); ?></h4>
+                       <h4 class="card-title"><?php echo esc_html__('Supprimer le compte','exertio_theme'); ?></h4>
                       <div class="card">
                         
                         <div class="card-body">
@@ -128,7 +128,7 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
                             </p>
                             <div>
                                 <button type="button" class="btn btn-theme-secondary" id="delete_account" data-user-id="<?php echo esc_attr($current_user_id) ?>">
-                                    <?php echo esc_html__('Delete My Account','exertio_theme'); ?>
+                                    <?php echo esc_html__('Supprimer','exertio_theme'); ?>
                                 </button>
                                 <input type="hidden" id="delete_pro_nonce" value="<?php echo wp_create_nonce('fl_delete_pro_secure'); ?>"  />
                             </div>
@@ -162,28 +162,28 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
             <form id="freelancer_form">
                 <div class="card mb-4">
                     <div class="card-body">
-                      <h4 class="card-title"><?php echo esc_html__('Profile Basics','exertio_theme'); ?></h4>
+                      <h4 class="card-title"><?php echo esc_html__('Informations de base','exertio_theme'); ?></h4>
                       
                       <div class="form-row">
                         <div class="form-group col-md-6">
-                          <label><?php echo esc_html__('Username','exertio_theme'); ?></label>
+                          <label><?php echo esc_html__('Identifiant','exertio_theme'); ?></label>
                           <input type="text" class="form-control" name="fl_username" value="<?php echo esc_attr($post->post_title); ?>">
-							<p> <?php echo esc_html__('Be carefull while changing your username.','exertio_theme'); ?></p>
+							<p> <?php echo esc_html__('Soyez prudent lorsque vous changez votre identifiant','exertio_theme'); ?></p>
                         </div>
                         <div class="form-group col-md-6">
-                          <label><?php echo esc_html__('Email Address','exertio_theme'); ?></label>
+                          <label><?php echo esc_html__('Email','exertio_theme'); ?></label>
                           <input type="email" class="form-control" name="fl_email" disabled value="<?php echo esc_attr($user_info->user_email); ?>">
                         </div>
                         
                         <div class="form-group col-md-6">
-                          <label><?php echo esc_html__('Dispaly Name','exertio_theme'); ?></label>
-                          <input type="text" class="form-control" name="freelancer_dispaly_name" value="<?php echo esc_attr(get_post_meta( $pid, '_freelancer_dispaly_name' , true )); ?>" <?php if($exertio_theme_options['fl_dispaly_name'] == 1){ ?>required data-smk-msg="<?php echo esc_html__('Please provide display name','exertio_theme'); }?>">
-                          <p> <?php echo esc_html__('It will display on public profile','exertio_theme'); ?></p>
+                          <label><?php echo esc_html__('Nom','exertio_theme'); ?></label>
+                          <input type="text" class="form-control" name="freelancer_dispaly_name" value="<?php echo esc_attr(get_post_meta( $pid, '_freelancer_dispaly_name' , true )); ?>" <?php if($exertio_theme_options['fl_dispaly_name'] == 1){ ?>required data-smk-msg="<?php echo esc_html__('Veuillez saisir le nom à afficher','exertio_theme'); }?>">
+                          <p> <?php echo esc_html__('Ce sera affiché publiquement sur votre profil','exertio_theme'); ?></p>
                         </div>
                         <div class="form-group col-md-6">
-                          <label><?php echo esc_html__('Tagline','exertio_theme'); ?></label>
-                          <input type="text" class="form-control" name="freelancer_tagline" value="<?php echo esc_attr(get_post_meta( $pid, '_freelancer_tagline' , true )); ?>" <?php if($exertio_theme_options['fl_tagline'] == 1){ ?>required data-smk-msg="<?php echo esc_html__('Please provide tagline','exertio_theme'); }?>">
-                          <p> <?php echo esc_html__('It will display on public profile','exertio_theme'); ?></p>
+                          <label><?php echo esc_html__('Vos principales qualités','exertio_theme'); ?></label>
+                          <input type="text" class="form-control" name="freelancer_tagline" value="<?php echo esc_attr(get_post_meta( $pid, '_freelancer_tagline' , true )); ?>" <?php if($exertio_theme_options['fl_tagline'] == 1){ ?>required data-smk-msg="<?php echo esc_html__('Veuillez saisir vos points forts','exertio_theme'); }?>">
+                          <p> <?php echo esc_html__('Ce sera affiché publiquement sur votre profil','exertio_theme'); ?></p>
                         </div>
                         <?php
 							if($exertio_theme_options['fl_hourly_rate'] == 3)
@@ -194,8 +194,8 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 							{
 						?>
                         <div class="form-group col-md-6">
-                          <label><?php echo esc_html__('Hourly Rate','exertio_theme'); ?></label>
-                          <input type="text" class="form-control" name="freelancer_hourly_rate" value="<?php echo esc_attr(get_post_meta( $pid, '_freelancer_hourly_rate' , true )); ?>" <?php if($exertio_theme_options['fl_hourly_rate'] == 1){ ?>required data-smk-type="number" data-smk-msg="<?php echo esc_html__('Please provide your hourly price','exertio_theme'); }?>">
+                          <label><?php echo esc_html__('Tarif horaire','exertio_theme'); ?></label>
+                          <input type="text" class="form-control" name="freelancer_hourly_rate" value="<?php echo esc_attr(get_post_meta( $pid, '_freelancer_hourly_rate' , true )); ?>" <?php if($exertio_theme_options['fl_hourly_rate'] == 1){ ?>required data-smk-type="number" data-smk-msg="<?php echo esc_html__('Veuillez saisir le tarif par heure','exertio_theme'); }?>">
                           <p> <?php echo esc_html__('Provide your hourly rate without currency symbol','exertio_theme'); ?></p>
                         </div>
                         
@@ -209,8 +209,8 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 							{
 								?>
 								<div class="form-group col-md-6">
-								  <label><?php echo esc_html__('Contact Number','exertio_theme'); ?></label>
-								  <input type="number" class="form-control" name="freelancer_contact_number" value="<?php echo esc_attr(get_post_meta( $pid, '_freelancer_contact_number' , true )); ?>" <?php if($exertio_theme_options['fl_contact_number'] == 1){ ?>required data-smk-msg="<?php echo esc_html__('Please provide contact number','exertio_theme'); }?>">
+								  <label><?php echo esc_html__('Téléphone','exertio_theme'); ?></label>
+								  <input type="number" class="form-control" name="freelancer_contact_number" value="<?php echo esc_attr(get_post_meta( $pid, '_freelancer_contact_number' , true )); ?>" <?php if($exertio_theme_options['fl_contact_number'] == 1){ ?>required data-smk-msg="<?php echo esc_html__('Veuillez saisir le numéro de téléphone','exertio_theme'); }?>">
 								</div>
 								<?php
 							}
@@ -224,11 +224,11 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 								$gender = get_post_meta( $pid, '_freelancer_gender' , true )
 								?>
 								<div class="form-group col-md-6">
-								  <label><?php echo esc_html__('Gender','exertio_theme'); ?></label>
+								  <label><?php echo esc_html__('Sexe','exertio_theme'); ?></label>
 									<select name="freelancer_gender"  class="form-control general_select" <?php if($exertio_theme_options['fl_gender'] == 1){ ?>required data-smk-msg="<?php echo esc_html__('Please select gender','exertio_theme'); }?>">
-										<option value="0" <?php if($gender  == "0") { echo "selected=selected"; } ?>><?php echo __( "Male", 'exertio_theme' ); ?> </option>
-										<option value="1" <?php if($gender  == "1") { echo "selected=selected"; } ?>><?php echo __( "Female", 'exertio_theme' ); ?> </option>
-										<option value="2" <?php if($gender  == "2") { echo "selected=selected"; } ?>><?php echo __( "Other", 'exertio_theme' ); ?> </option>
+										<option value="0" <?php if($gender  == "0") { echo "selected=selected"; } ?>><?php echo __( "Masculin", 'exertio_theme' ); ?> </option>
+										<option value="1" <?php if($gender  == "1") { echo "selected=selected"; } ?>><?php echo __( "Feminin", 'exertio_theme' ); ?> </option>
+										<option value="2" <?php if($gender  == "2") { echo "selected=selected"; } ?>><?php echo __( "Autres", 'exertio_theme' ); ?> </option>
 									</select>
 								</div>
 								<?php
@@ -242,19 +242,19 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 								$fl_type = '';
 								if($exertio_theme_options['fl_type'] == 1)
 								{
-									$fl_type = 'required data-smk-msg="'.esc_html__('Please select type','exertio_theme').'"';	
+									$fl_type = 'required data-smk-msg="'.esc_html__('Veuillez sélectionner le type','exertio_theme').'"';	
 								}
 						
 						?>
                         <div class="form-group col-md-6">
-                          <label for="inputCity"><?php echo esc_html__('Type','exertio_theme'); ?></label>
+                          <label for="inputCity"><?php echo esc_html__('Type de prestataire','exertio_theme'); ?></label>
                           <?php
                           $freelance_taxonomies = exertio_get_terms('freelance-type');
                             if ( !empty($freelance_taxonomies) )
                             {
                                 $freelance_type = get_post_meta($pid, '_freelance_type', true);
                                 $freelance = '<select name="freelance_type" class="form-control general_select"'.$fl_type.'>';
-                                $freelance .= '<option value=""> '. __( "Select Freelancer Type", "exertio_theme" ) .'</option>';
+                                $freelance .= '<option value=""> '. __( "Sélectionner", "exertio_theme" ) .'</option>';
                                 foreach( $freelance_taxonomies as $freelance_taxonomy ) {
                                     if($freelance_taxonomy->term_id == $freelance_type){ $selected = 'selected ="selected"';}else{$selected = ''; }
                                     if( $freelance_taxonomy->parent == 0 ) {
@@ -317,19 +317,19 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 								$fl_language = '';
 								if($exertio_theme_options['fl_language'] == 1)
 								{
-									$fl_language = 'required data-smk-msg="'.esc_html__('Please select language','exertio_theme').'"';	
+									$fl_language = 'required data-smk-msg="'.esc_html__('Veuillez sélectionner les langues','exertio_theme').'"';	
 								}
 						
 						?>
                         <div class="form-group col-md-6">
-                          <label>Language</label>
+                          <label>Langues du prestataire</label>
                           <?php
                             $languages_taxonomies = exertio_get_terms('freelancer-languages'); 
                             if ( !empty($languages_taxonomies) )
                             {
                                 $freelancer_language = get_post_meta($pid, '_freelancer_language', true);
                                 $location = '<select name="freelancer_language" class="form-control general_select" '.$fl_language.'>';
-                                $location .= '<option value=""> '. __( "Select Language", "exertio_theme" ) .'</option>';
+                                $location .= '<option value=""> '. __( "Selectionner la langue", "exertio_theme" ) .'</option>';
                                 foreach( $languages_taxonomies as $languages_taxonomy ) 
                                 {
                                     if($languages_taxonomy->term_id == $freelancer_language){ $selected = 'selected ="selected"';}else{$selected = ''; }
@@ -356,12 +356,12 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 								$fl_location = '';
 								if($exertio_theme_options['fl_location'] == 1)
 								{
-									$fl_location = 'required data-smk-msg="'.esc_html__('Please select location','exertio_theme').'"';	                                  
+									$fl_location = 'required data-smk-msg="'.esc_html__('Veuillez renseigner la localisation','exertio_theme').'"';	
 								}
 						
 						?>
                         <div class="form-group col-md-6">
-                          <label> <?php echo esc_html__('Location','exertio_theme'); ?></label>
+                          <label> <?php echo esc_html__('Localisation','exertio_theme'); ?></label>
                           <?php
                           $location_taxonomies = exertio_get_terms('freelancer-locations');
                             if ( !empty($location_taxonomies) )
@@ -376,7 +376,7 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
                    </div>
                    <div class="form-row">
                         <div class="form-group col-md-6">
-                          <label><?php echo esc_html__('Profile Picture','exertio_theme'); ?></label>
+                          <label><?php echo esc_html__('Photo de profil','exertio_theme'); ?></label>
                                 <span class="profile-img-container">
                                 <?php 
                                     if(!empty($pro_img_id))
@@ -389,12 +389,12 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
                                 ?>
                                 </span>
                             <div class="upload-btn-wrapper">
-                                <button class="btn btn-theme-secondary mt-2 mt-xl-0"><?php echo esc_html__('Upload New Picture','exertio_theme'); ?></button>
+                                <button class="btn btn-theme-secondary mt-2 mt-xl-0"><?php echo esc_html__('Mettre une image','exertio_theme'); ?></button>
                                 <input type="file" id="emp_profile_pic" name="emp_profile_pic" accept = "image/*" data-post-id="<?php echo esc_attr($pid) ?>" data-post-meta ="_profile_pic_freelancer_id" />
                             </div>
                         </div>
                         <div class="form-group col-md-6">
-                          <label><?php echo esc_html__('Cover Picture','exertio_theme'); ?></label>
+                          <label><?php echo esc_html__('Photo de couverture','exertio_theme'); ?></label>
                             
                                 <span class="banner-img-container">
                                     <?php 
@@ -410,7 +410,7 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
                                     ?>
                                 </span>
                                 <div class="upload-btn-wrapper">
-                                    <button class="btn btn-theme-secondary mt-2 mt-xl-0" ><?php echo esc_html__('Upload New Cover','exertio_theme'); ?></button>
+                                    <button class="btn btn-theme-secondary mt-2 mt-xl-0" ><?php echo esc_html__('Mettre une photo de couverture','exertio_theme'); ?></button>
                                     <input type="file" id="emp_cover_image" name="banner_img" accept = "image/*" data-post-id="<?php echo esc_attr($pid) ?>" data-post-meta ="_freelancer_banner_id" />
                                 </div>
                         </div>
@@ -421,7 +421,7 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
                 </div>
                 <div class="card mb-4">
                     <div class="card-body">
-                      <h4 class="card-title"><?php echo esc_html__('Prfile Details','exertio_theme'); ?></h4>
+                      <h4 class="card-title"><?php echo esc_html__('Détails du profil','exertio_theme'); ?></h4>
                         <div class="form-row">
                             <div class="form-group col-md-12">
                                 <label><?php echo esc_html__('Description','exertio_theme'); ?></label>
@@ -570,8 +570,8 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
                                     })(jQuery);
                                 </script>
                             <div class="form-group col-md-12">
-                              <label><?php echo esc_html__('Address','exertio_theme'); ?></label>
-                              <input type="text" class="form-control" name="fl_address" id="searchMapInput" value="<?php echo get_post_meta($pid, '_freelancer_address', true); ?>" <?php if($exertio_theme_options['fl_address'] == 1){ ?>required data-smk-msg="<?php echo esc_html__('Please select address','exertio_theme'); }?>">
+                              <label><?php echo esc_html__('Adresse','exertio_theme'); ?></label>
+                              <input type="text" class="form-control" name="fl_address" id="searchMapInput" value="<?php echo get_post_meta($pid, '_freelancer_address', true); ?>" <?php if($exertio_theme_options['fl_address'] == 1){ ?>required data-smk-msg="<?php echo esc_html__('Veuillez renseigner l\'adresse','exertio_theme'); }?>">
                               <i class=" mdi mdi-target" id="abc"></i>
                             </div>
                             <div class="form-group col-md-12">
@@ -597,8 +597,8 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 					?>
 						<div class="card mb-4">
 							<div class="card-body">
-								<h4 class="card-title"><?php echo esc_html__('Skills','exertio_theme'); ?></h4>
-								<a href="javascript:void(0);" class="add_new_skills btn btn-theme-secondary btn-to-top btn-sm" data-taxonomy-name="freelancer-skills"><i class="fal fa-plus"></i> <?php echo __( "Add More Skills", 'exertio_theme' ); ?> </a>
+								<h4 class="card-title"><?php echo esc_html__('Compétences','exertio_theme'); ?></h4>
+								<a href="javascript:void(0);" class="add_new_skills btn btn-theme-secondary btn-to-top btn-sm" data-taxonomy-name="freelancer-skills"><i class="fal fa-plus"></i> <?php echo __( "Ajouter", 'exertio_theme' ); ?> </a>
 										<div class="skills_wrapper sortable" id="sortable">
 								<?php
 									$skills_json =  json_decode(stripslashes(get_post_meta($pid, '_freelancer_skills', true)), true);
@@ -617,7 +617,7 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 												}
 											}
 											$skill_html .= '</select></div>';
-											$skill_html .= '<div class="form-group col-md-6"><input type="number" name="skills_percent[]" placeholder="'.__( "Skills percentage", 'exertio_theme' ).'" value="'.$skills_json[$i]['percent'].'" class="form-control"></div></div><a href="javascript:void(0);" class="remove_button"><i class="fas fa-times-circle"></i></a></div>';
+											$skill_html .= '<div class="form-group col-md-6"><input type="number" name="skills_percent[]" placeholder="'.__( "Pourcentage de la compétence", 'exertio_theme' ).'" value="'.$skills_json[$i]['percent'].'" class="form-control"></div></div><a href="javascript:void(0);" class="remove_button"><i class="fas fa-times-circle"></i></a></div>';
 											
 										}
 										echo wp_return_echo($skill_html);
@@ -638,8 +638,8 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 				?>
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h4 class="card-title"><?php echo esc_html__('Awards / Certificates','exertio_theme'); ?></h4>
-                        <a href="javascript:void(0);" class="add_new_award btn btn-theme-secondary btn-to-top btn-sm" data-post-id="<?php echo esc_attr($pid); ?>"><i class="fal fa-plus"></i> <?php echo __( "Add More", 'exertio_theme' ); ?> </a>
+                        <h4 class="card-title"><?php echo esc_html__('Récompenses ou prix gagnés','exertio_theme'); ?></h4>
+                        <a href="javascript:void(0);" class="add_new_award btn btn-theme-secondary btn-to-top btn-sm" data-post-id="<?php echo esc_attr($pid); ?>"><i class="fal fa-plus"></i> <?php echo __( "Ajouter", 'exertio_theme' ); ?> </a>
                         <div class="award_wrapper sortable" id="sortable">
 							<?php
 								$award_jsons =  json_decode(stripslashes(get_post_meta($pid, '_freelancer_awards', true)), true);
@@ -657,7 +657,7 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 											$image_tags = '<div class="award_banner_gallery_'.$count.' sort_imgs"><a href="'.esc_url($award_img_url).'" target="_blank"><img src="'.esc_url($award_img_url).'" class="img-fluid" ></a></div>';
 										}
 										
-										$award_html .= '<div class="ui-state-default" id="award_'.$count.'"><i class="far fa-arrows"></i><div class="form-row"><div class="form-group col-md-5"><input type="text" name="award_name[]"  value="'.$award_json['award_name'].'"  placeholder="'.esc_html__('Award Name','exertio_theme').'" class="form-control"></div><div class="form-group col-md-5"><input type="text" class="datetimepicker form-control" name="award_date[]" value="'.$award_json['award_date'].'" placeholder="'.esc_html__('Award Date','exertio_theme').'" autocomplete="off"></div><div class="form-group col-md-2"><button type="button" class="btn btn-theme award_img_btn">'.esc_html__('Image','exertio_theme').'</button><input type="file" id="img_upload_id_'.$count.'" name="img_upload_id_'.$count.'" accept = "image/*" class="award_img_btn"  data-no-off-file-id="award_img_id_'.$count.'" data-post-id="'.$pid.'" data-active_id="'.$count.'"/></div></div><div class="form-row"><div class="form-group col-md-12"><input type="hidden" class="award_img_id_'.$count.'" name="award_img_id[]"  value="'.$award_json['award_img'].'">'.$image_tags.'</div></div><a href="javascript:void(0);" class="remove_button"><i class="fas fa-times-circle"></i></a></div>';
+										$award_html .= '<div class="ui-state-default" id="award_'.$count.'"><i class="far fa-arrows"></i><div class="form-row"><div class="form-group col-md-5"><input type="text" name="award_name[]"  value="'.$award_json['award_name'].'"  placeholder="'.esc_html__('Nom de la récompense','exertio_theme').'" class="form-control"></div><div class="form-group col-md-5"><input type="text" class="datetimepicker form-control" name="award_date[]" value="'.$award_json['award_date'].'" placeholder="'.esc_html__('Date d\'obtention','exertio_theme').'" autocomplete="off"></div><div class="form-group col-md-2"><button type="button" class="btn btn-theme award_img_btn">'.esc_html__('Justificatif','exertio_theme').'</button><input type="file" id="img_upload_id_'.$count.'" name="img_upload_id_'.$count.'" accept = "image/*" class="award_img_btn"  data-no-off-file-id="award_img_id_'.$count.'" data-post-id="'.$pid.'" data-active_id="'.$count.'"/></div></div><div class="form-row"><div class="form-group col-md-12"><input type="hidden" class="award_img_id_'.$count.'" name="award_img_id[]"  value="'.$award_json['award_img'].'">'.$image_tags.'</div></div><a href="javascript:void(0);" class="remove_button"><i class="fas fa-times-circle"></i></a></div>';
 										$count++;
 									}
 									echo wp_return_echo($award_html);
@@ -673,8 +673,8 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 				?>
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h4 class="card-title"><?php echo esc_html__('Projects','exertio_theme'); ?></h4>
-                        <a href="javascript:void(0);" class="add_new_project btn btn-theme-secondary btn-to-top btn-sm" data-post-id="<?php echo esc_attr($pid); ?>"><i class="fal fa-plus"></i> <?php echo __( "Add New Project", 'exertio_theme' ); ?> </a>
+                        <h4 class="card-title"><?php echo esc_html__('Projets réalisés','exertio_theme'); ?></h4>
+                        <a href="javascript:void(0);" class="add_new_project btn btn-theme-secondary btn-to-top btn-sm" data-post-id="<?php echo esc_attr($pid); ?>"><i class="fal fa-plus"></i> <?php echo __( "Ajouter", 'exertio_theme' ); ?> </a>
                         <div class="project_wrapper sortable" id="sortable">
 							<?php
 								$project_jsons =  json_decode(stripslashes(get_post_meta($pid, '_freelancer_projects', true)), true);
@@ -686,7 +686,7 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 									{
 										$project_img_url = wp_get_attachment_url( $project_json['project_img'] );
 
-										$project_html .= '<div class="ui-state-default" id="project_'.$count.'"><i class="far fa-arrows"></i><div class="form-row"><div class="form-group col-md-5"><input type="text" name="project_name[]" value="'.$project_json['project_name'].'" placeholder="'.esc_html__('Project Name','exertio_theme').'" class="form-control"></div><div class="form-group col-md-5"><input type="text" class="form-control" name="project_url[]" value="'.$project_json['project_url'].'" placeholder="'.esc_html__('Project URL','exertio_theme').'" autocomplete="off"></div><div class="form-group col-md-2"><button type="button" class="btn btn-theme project_img_btn">'.esc_html__('Image','exertio_theme').'</button><input type="file" id="project_img_upload_id_'.$count.'" name="project_img_upload_id_'.$count.'" accept = "image/*" class="project_img_btn"  data-project-no-off-file-id="project_img_id_'.$count.'" data-post-id="'.$pid.'" data-project-active-id="'.$count.'"/></div></div><div class="form-row"><div class="form-group col-md-12"><input type="hidden" class="project_img_id_'.$count.'" name="project_img_id[]" value="'.$project_json['project_img'].'"><div class="project_banner_gallery_'.$count.' sort_imgs"><a href="'.esc_url($project_img_url).'" target="_blank"><img src="'.esc_url($project_img_url).'" class="img-fluid" ></a></div></div></div><a href="javascript:void(0);" class="remove_button"><i class="fas fa-times-circle"></i></a></div>';
+										$project_html .= '<div class="ui-state-default" id="project_'.$count.'"><i class="far fa-arrows"></i><div class="form-row"><div class="form-group col-md-5"><input type="text" name="project_name[]" value="'.$project_json['project_name'].'" placeholder="'.esc_html__('Nom du projet','exertio_theme').'" class="form-control"></div><div class="form-group col-md-5"><input type="text" class="form-control" name="project_url[]" value="'.$project_json['project_url'].'" placeholder="'.esc_html__('Lien du projet','exertio_theme').'" autocomplete="off"></div><div class="form-group col-md-2"><button type="button" class="btn btn-theme project_img_btn">'.esc_html__('Justificatif','exertio_theme').'</button><input type="file" id="project_img_upload_id_'.$count.'" name="project_img_upload_id_'.$count.'" accept = "image/*" class="project_img_btn"  data-project-no-off-file-id="project_img_id_'.$count.'" data-post-id="'.$pid.'" data-project-active-id="'.$count.'"/></div></div><div class="form-row"><div class="form-group col-md-12"><input type="hidden" class="project_img_id_'.$count.'" name="project_img_id[]" value="'.$project_json['project_img'].'"><div class="project_banner_gallery_'.$count.' sort_imgs"><a href="'.esc_url($project_img_url).'" target="_blank"><img src="'.esc_url($project_img_url).'" class="img-fluid" ></a></div></div></div><a href="javascript:void(0);" class="remove_button"><i class="fas fa-times-circle"></i></a></div>';
 										$count++;
 									}
 									echo wp_return_echo($project_html);
@@ -702,8 +702,8 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 				?>
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h4 class="card-title"><?php echo esc_html__('Experience','exertio_theme'); ?></h4>
-                        <a href="javascript:void(0);" class="add_new_expe btn btn-theme-secondary btn-to-top btn-sm" data-post-id="<?php echo esc_attr($pid); ?>"><i class="fal fa-plus"></i> <?php echo __( "Add New Experience", 'exertio_theme' ); ?> </a>
+                        <h4 class="card-title"><?php echo esc_html__('Expériences','exertio_theme'); ?></h4>
+                        <a href="javascript:void(0);" class="add_new_expe btn btn-theme-secondary btn-to-top btn-sm" data-post-id="<?php echo esc_attr($pid); ?>"><i class="fal fa-plus"></i> <?php echo __( "Ajouter", 'exertio_theme' ); ?> </a>
                         <div class="expe_wrapper sortable" id="sortable">
 							<?php
 							$expe_jsons =  json_decode(stripslashes(get_post_meta($pid, '_freelancer_experience', true)), true);
@@ -713,7 +713,7 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 								$expe_html= '';
 								foreach($expe_jsons as $expe_json)
 								{
-									$expe_html .= '<div class="ui-state-default" id="expe_'.$count.'"><i class="far fa-arrows"></i><span class="count">'.$count.'</span>	<div class="form-row"><div class="form-group col-md-6"><label>'.__( "Experience Title", 'exertio_theme' ).'</label><input type="text" name="expe_name[]" class="form-control" value="'.$expe_json['expe_name'].'" ></div><div class="form-group col-md-6"><label>'.__( "Company Name", 'exertio_theme' ).'</label> <input type="text" class="form-control" name="expe_company_name[]" value="'.$expe_json['expe_company_name'].'"></div></div><div class="form-row"> <div class="form-group col-md-6"> <label>'.__( "Start Date Title", 'exertio_theme' ).'</label><input type="text" name="expe_start_date[]" class="expe_start_date_'.$count.' form-control" value="'.$expe_json['expe_start_date'].'" autocomplete="off"></div> <div class="form-group col-md-6"><label>'.__( "End Date", 'exertio_theme' ).'</label> <input type="text" name="expe_end_date[]" class="expe_end_date_'.$count.' form-control" value="'.$expe_json['expe_end_date'].'" autocomplete="off"><p>'.esc_html__('Leave it empty to set it current experience','exertio_theme').'</p></div></div><div class="form-row"><div class="form-group col-md-12"><label>'.__( "Description", 'exertio_theme' ).'</label><textarea name="expe_details[]" class="form-control">'.$expe_json['expe_details'].'</textarea> </div></div> <a href="javascript:void(0);" class="remove_button"><i class="fas fa-times-circle"></i></a></div>';
+									$expe_html .= '<div class="ui-state-default" id="expe_'.$count.'"><i class="far fa-arrows"></i><span class="count">'.$count.'</span>	<div class="form-row"><div class="form-group col-md-6"><label>'.__( "Poste occupé", 'exertio_theme' ).'</label><input type="text" name="expe_name[]" class="form-control" value="'.$expe_json['expe_name'].'" ></div><div class="form-group col-md-6"><label>'.__( "Nom de l'entreprise", 'exertio_theme' ).'</label> <input type="text" class="form-control" name="expe_company_name[]" value="'.$expe_json['expe_company_name'].'"></div></div><div class="form-row"> <div class="form-group col-md-6"> <label>'.__( "Date de début", 'exertio_theme' ).'</label><input type="text" name="expe_start_date[]" class="expe_start_date_'.$count.' form-control" value="'.$expe_json['expe_start_date'].'" autocomplete="off"></div> <div class="form-group col-md-6"><label>'.__( "Date de fin", 'exertio_theme' ).'</label> <input type="text" name="expe_end_date[]" class="expe_end_date_'.$count.' form-control" value="'.$expe_json['expe_end_date'].'" autocomplete="off"><p>'.esc_html__('Laisser le champ vide pour définir l\'expérience actuelle','exertio_theme').'</p></div></div><div class="form-row"><div class="form-group col-md-12"><label>'.__( "Description", 'exertio_theme' ).'</label><textarea name="expe_details[]" class="form-control">'.$expe_json['expe_details'].'</textarea> </div></div> <a href="javascript:void(0);" class="remove_button"><i class="fas fa-times-circle"></i></a></div>';
 
 									$count++;
 								}
@@ -731,7 +731,7 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
                 <div class="card mb-4">
                     <div class="card-body">
                         <h4 class="card-title"><?php echo esc_html__('Education','exertio_theme'); ?></h4>
-                        <a href="javascript:void(0);" class="add_new_edu btn btn-theme-secondary btn-to-top btn-sm" data-post-id="<?php echo esc_attr($pid); ?>"><i class="fal fa-plus"></i> <?php echo __( "Add New Education", 'exertio_theme' ); ?> </a>
+                        <a href="javascript:void(0);" class="add_new_edu btn btn-theme-secondary btn-to-top btn-sm" data-post-id="<?php echo esc_attr($pid); ?>"><i class="fal fa-plus"></i> <?php echo __( "Ajouter", 'exertio_theme' ); ?> </a>
                         <div class="edu_wrapper sortable" id="sortable">
                     	<?php
 							$edu_jsons = json_decode( stripslashes( get_post_meta($pid, '_freelancer_education', true)), true );
@@ -741,7 +741,7 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 								$edu_html = '';
 								foreach($edu_jsons as $edu_json)
 								{									
-									$edu_html .= '<div class="ui-state-default" id="edu_'.$count.'"><i class="far fa-arrows"></i><span class="count">'.$count.'</span>	<div class="form-row"><div class="form-group col-md-6"><label>'.__( "Degree Title", 'exertio_theme' ).'</label><input type="text" name="edu_name[]" class="form-control" value="'.$edu_json['edu_name'].'" ></div><div class="form-group col-md-6"><label>'.__( "Institude Name", 'exertio_theme' ).'</label> <input type="text" class="form-control" name="edu_inst_name[]" value="'.$edu_json['edu_inst_name'].'"></div></div><div class="form-row"> <div class="form-group col-md-6"> <label>'.__( "Start Date", 'exertio_theme' ).'</label><input type="text" name="edu_start_date[]" value="'.$edu_json['edu_start_date'].'" class="edu_start_date_'.$count.' form-control" autocomplete="off"></div> <div class="form-group col-md-6"><label>'.__( "End Date", 'exertio_theme' ).'</label> <input type="text" name="edu_end_date[]" class="edu_end_date_'.$count.' form-control" value="'.$edu_json['edu_end_date'].'" autocomplete="off" ><p>'.__( "Leave it empty to set it continue", 'exertio_theme' ).'</p></div></div><div class="form-row"><div class="form-group col-md-12"><label>'.__( "Description", 'exertio_theme' ).'</label><textarea name="edu_details[]" class="form-control">'.$edu_json['edu_details'].'</textarea> </div></div> <a href="javascript:void(0);" class="remove_button"><i class="fas fa-times-circle"></i></a></div>';
+									$edu_html .= '<div class="ui-state-default" id="edu_'.$count.'"><i class="far fa-arrows"></i><span class="count">'.$count.'</span>	<div class="form-row"><div class="form-group col-md-6"><label>'.__( "Titre du diplôme", 'exertio_theme' ).'</label><input type="text" name="edu_name[]" class="form-control" value="'.$edu_json['edu_name'].'" ></div><div class="form-group col-md-6"><label>'.__( "Nom de l'établissement", 'exertio_theme' ).'</label> <input type="text" class="form-control" name="edu_inst_name[]" value="'.$edu_json['edu_inst_name'].'"></div></div><div class="form-row"> <div class="form-group col-md-6"> <label>'.__( "Date du début", 'exertio_theme' ).'</label><input type="text" name="edu_start_date[]" value="'.$edu_json['edu_start_date'].'" class="edu_start_date_'.$count.' form-control" autocomplete="off"></div> <div class="form-group col-md-6"><label>'.__( "Date de fin", 'exertio_theme' ).'</label> <input type="text" name="edu_end_date[]" class="edu_end_date_'.$count.' form-control" value="'.$edu_json['edu_end_date'].'" autocomplete="off" ><p>'.__( "Laisser le champ vide pour continuer", 'exertio_theme' ).'</p></div></div><div class="form-row"><div class="form-group col-md-12"><label>'.__( "Description", 'exertio_theme' ).'</label><textarea name="edu_details[]" class="form-control">'.$edu_json['edu_details'].'</textarea> </div></div> <a href="javascript:void(0);" class="remove_button"><i class="fas fa-times-circle"></i></a></div>';
 									$count++;
 								}
 								echo wp_return_echo($edu_html);
@@ -758,7 +758,7 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
                         <div class="form-row">
                             <div class="form-group col-md-12">
                                 <button type="button" class="btn btn-theme  btn-loading" id="fl_profile_btn" data-post-id="<?php echo esc_attr($pid) ?>">
-                                        <?php echo esc_html__('Save Profile','exertio_theme'); ?>
+                                        <?php echo esc_html__('Enregistrer','exertio_theme'); ?>
                                         <input type="hidden" id="save_pro_nonce" value="<?php echo wp_create_nonce('fl_save_pro_secure'); ?>"  />
                                         <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
                                 </button>

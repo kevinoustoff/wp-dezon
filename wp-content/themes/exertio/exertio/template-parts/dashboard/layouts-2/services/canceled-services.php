@@ -32,9 +32,9 @@ $start_from = ($pageno-1) * $limit;
               <div class="d-flex justify-content-between flex-wrap">
                 <div class="d-flex align-items-end flex-wrap">
                   <div class="mr-md-3 mr-xl-5">
-                    <h2><?php echo esc_html__('Canceled Services','exertio_theme');?></h2>
+                    <h2><?php echo esc_html__('Services rejetés','exertio_theme');?></h2>
                     <div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
-						<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Dashboard', 'exertio_theme' ); ?>&nbsp;</p>
+						<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 						<?php echo exertio_dashboard_extention_return(); ?>
 					</div>
                   </div>
@@ -50,7 +50,7 @@ $start_from = ($pageno-1) * $limit;
                       <div class="pro-box heading-row">
                         <div class="pro-coulmn pro-title">
                         </div>
-                        <div class="pro-coulmn"><?php echo esc_html__( 'Ordered by', 'exertio_theme' ) ?> </div>
+                        <div class="pro-coulmn"><?php echo esc_html__( 'Afficher par', 'exertio_theme' ) ?> </div>
                         <div class="pro-coulmn"><?php echo esc_html__( 'Action', 'exertio_theme' ) ?> </div>
                       </div>
                         <?php
@@ -100,10 +100,10 @@ $start_from = ($pageno-1) * $limit;
                                                 echo get_profile_img($buyer_id , 'employer');
                                             ?>
                                             <span class="buyer_name"> <?php echo exertio_get_username('employer',$buyer_id, 'badge', 'right' ); ?></span>
-                                            <span class="service_start_date"> <?php echo esc_html__( 'Started on ', 'exertio_theme' ).' '.esc_html(date("F jS, Y", strtotime($results->timestamp))); ?></span>
+                                            <span class="service_start_date"> <?php echo esc_html__( 'Commencé ce ', 'exertio_theme' ).' '.esc_html(date("F jS, Y", strtotime($results->timestamp))); ?></span>
                                         </div>
                                         <div class="pro-coulmn">
-                                        	<a href="?ext=canceled-service-detail&sid=<?php echo esc_html($ongoing_sid); ?>" class="btn btn-theme-secondary"><?php echo esc_html__( 'View Detail', 'exertio_theme' ); ?></a>
+                                        	<a href="?ext=canceled-service-detail&sid=<?php echo esc_html($ongoing_sid); ?>" class="btn btn-theme-secondary"><?php echo esc_html__( 'Voir le détail', 'exertio_theme' ); ?></a>
                                         </div>
                                       </div>
                                     <?php
@@ -114,7 +114,7 @@ $start_from = ($pageno-1) * $limit;
                             {
                                 ?>
                                 <div class="nothing-found">
-                                    <h3><?php echo esc_html__( 'Sorry!!! No Record Found', 'exertio_theme' ) ?></h3>
+                                    <h3><?php echo esc_html__( 'Désolé!! Aucun service trouvé', 'exertio_theme' ) ?></h3>
                                     <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo esc_html__( 'Nothing found icon', 'exertio_theme' ) ?> ">
                                 </div>
                                 <?php	

@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "Project-Id-Version: Exertio Framework\n"
 "POT-Creation-Date: 2021-03-12 13:16+0500\n"
-"PO-Revision-Date: 2021-04-28 13:03+0000\n"
+"PO-Revision-Date: 2021-05-29 15:38+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "Report-Msgid-Bugs-To: \n"
 "Language: fr_FR\n"
-"X-Loco-Version: 2.5.2; wp-5.7.1"
+"X-Loco-Version: 2.5.2; wp-5.7.2"
 
 #: functions.php:34 plugin-files/cpt/project.php:1102
 #: plugin-files/cpt/services.php:760
@@ -148,12 +148,12 @@ msgstr ""
 #: inc/custom-functions.php:206 inc/custom-functions.php:270
 #: inc/custom-functions.php:338 inc/custom-functions.php:393
 msgid "First"
-msgstr ""
+msgstr "Début"
 
 #: inc/custom-functions.php:228 inc/custom-functions.php:292
 #: inc/custom-functions.php:360 inc/custom-functions.php:415
 msgid "Last"
-msgstr ""
+msgstr "Fin"
 
 #: inc/custom-functions.php:442 inc/custom-functions.php:476
 msgid "Expired "
@@ -161,7 +161,7 @@ msgstr ""
 
 #: inc/custom-functions.php:446 inc/custom-functions.php:480
 msgid " Days left"
-msgstr ""
+msgstr "Jours restants"
 
 #: inc/custom-functions.php:450 inc/custom-functions.php:484
 msgid "Closing Today "
@@ -312,17 +312,17 @@ msgstr ""
 
 #: inc/custom-functions.php:1171 inc/custom-functions.php:1837
 msgid " review"
-msgstr ""
+msgstr "avis"
 
 #: inc/custom-functions.php:1174 inc/custom-functions.php:1795
 #: inc/custom-functions.php:1840
 msgid " reviews"
-msgstr ""
+msgstr "avis"
 
 #: inc/custom-functions.php:1220 inc/custom-functions.php:1799
 #: inc/custom-functions.php:1885
 msgid "No Reviews"
-msgstr ""
+msgstr "Aucun avis pour le moment"
 
 #: inc/custom-functions.php:1241
 msgid "Already in your saved projects"
@@ -348,7 +348,7 @@ msgstr ""
 
 #: inc/custom-functions.php:1305
 msgid "Added to your saved services"
-msgstr ""
+msgstr "Ajouté à la liste des services sauvegardés"
 
 #: inc/custom-functions.php:1311
 msgid "Service ID error"
@@ -405,15 +405,15 @@ msgstr ""
 
 #: inc/custom-functions.php:1925
 msgid " Orders in queue"
-msgstr ""
+msgstr "Commandes"
 
 #: inc/custom-functions.php:1929
 msgid " Order in queue"
-msgstr ""
+msgstr "Commande"
 
 #: inc/custom-functions.php:2006
 msgid "For "
-msgstr ""
+msgstr "Pour"
 
 #: inc/custom-functions.php:2006
 msgid " hours total will be  "
@@ -644,7 +644,7 @@ msgstr ""
 
 #: inc/utilities.php:662
 msgid "Admin can not delete his account."
-msgstr ""
+msgstr "L'admin ne peut pas supprimer ce compte"
 
 #: inc/utilities.php:689
 msgid "Account deleted successfully"
@@ -661,7 +661,7 @@ msgstr ""
 
 #: inc/utilities.php:809 inc/utilities.php:1811
 msgid "File Uploaded"
-msgstr ""
+msgstr "Fichier chargé avec succès"
 
 #: inc/utilities.php:832 inc/utilities.php:1836
 msgid "file size:"
@@ -693,11 +693,11 @@ msgstr ""
 
 #: inc/utilities.php:1652
 msgid "Addon not saved. Please contact admin"
-msgstr ""
+msgstr "Offre supp. non sauvegardée. Veuillez contacter l'équipe de Dezon"
 
 #: inc/utilities.php:1668
 msgid "Addon Created"
-msgstr ""
+msgstr "Offre supp. crée avec succès"
 
 #: inc/utilities.php:1687
 msgid "Addon removed successfully"
@@ -765,7 +765,7 @@ msgstr ""
 
 #: inc/utilities.php:2487
 msgid "Proposal sent successfully"
-msgstr ""
+msgstr "Proposition envoyé avec succès"
 
 #: inc/utilities.php:2499
 msgid "You have already sent a proposal."
@@ -805,7 +805,7 @@ msgstr ""
 
 #: inc/utilities.php:2861
 msgid "Reported successfully"
-msgstr ""
+msgstr "Signalé avec succès"
 
 #: inc/utilities.php:2869
 msgid "Please login to report"
@@ -873,7 +873,7 @@ msgstr ""
 #: inc/woo-employer-packages.php:288 inc/woo-freelancer-packages.php:288
 #: inc/woo-functions.php:131
 msgid "Redirecting to cart page"
-msgstr ""
+msgstr "Redirection vers la page pour effectuer le paiement"
 
 #: inc/woo-employer-packages.php:294 inc/woo-freelancer-packages.php:294
 #: inc/woo-functions.php:138
@@ -937,12 +937,12 @@ msgstr ""
 
 #: inc/woo-functions.php:94
 msgid "Select amount to deposit"
-msgstr ""
+msgstr "Sélectionner un montant"
 
 #: plugin-files/cpt/addons.php:7 plugin-files/cpt/addons.php:8
 #: plugin-files/cpt/addons.php:9 plugin-files/cpt/addons.php:10
 msgid "Addons"
-msgstr ""
+msgstr "Offres supplémentaires"
 
 #: plugin-files/cpt/addons.php:11 plugin-files/cpt/addons.php:12
 msgid "Add New Addon"
@@ -962,7 +962,7 @@ msgstr ""
 
 #: plugin-files/cpt/addons.php:16
 msgid "All Addons"
-msgstr ""
+msgstr "Toutes les offres supplémentaires"
 
 #: plugin-files/cpt/addons.php:17
 msgid "Search Addons"
@@ -996,7 +996,7 @@ msgstr ""
 
 #: plugin-files/cpt/addons.php:87 plugin-files/cpt/addons.php:93
 msgid "Addons Price"
-msgstr ""
+msgstr "Prix"
 
 #: plugin-files/cpt/addons.php:100
 msgid "Assign Addons"
@@ -1344,7 +1344,7 @@ msgstr ""
 #: plugin-files/cpt/freelancers.php:608 plugin-files/cpt/freelancers.php:614
 #: plugin-files/cpt/verification.php:89
 msgid "Address"
-msgstr ""
+msgstr "Adresse"
 
 #: plugin-files/cpt/company.php:510 plugin-files/cpt/freelancers.php:619
 msgid "Latitude"
@@ -1382,7 +1382,7 @@ msgstr ""
 #: plugin-files/cpt/company.php:552 plugin-files/cpt/freelancers.php:848
 #: plugin-files/cpt/project.php:1117 plugin-files/cpt/services.php:788
 msgid "Featured"
-msgstr ""
+msgstr "Sponsorisé"
 
 #: plugin-files/cpt/company.php:685 plugin-files/cpt/freelancers.php:1108
 msgid "Package Detail"
@@ -1394,7 +1394,7 @@ msgstr ""
 
 #: plugin-files/cpt/company.php:705
 msgid " Allowed simple projects"
-msgstr ""
+msgstr "Micro projets autorisés"
 
 #: plugin-files/cpt/company.php:706 plugin-files/cpt/company.php:722
 #: plugin-files/cpt/freelancers.php:1129 plugin-files/cpt/freelancers.php:1137
@@ -1424,11 +1424,11 @@ msgstr ""
 
 #: plugin-files/cpt/company.php:725
 msgid "Featured Project Expiry"
-msgstr ""
+msgstr "Expiration du projet mis en évidence"
 
 #: plugin-files/cpt/company.php:729
 msgid " Featured Project Expiry"
-msgstr ""
+msgstr "Expiration du projet sponsorisé"
 
 #: plugin-files/cpt/company.php:730 plugin-files/cpt/company.php:738
 #: plugin-files/cpt/freelancers.php:1161 plugin-files/cpt/freelancers.php:1169
@@ -1441,7 +1441,7 @@ msgstr ""
 
 #: plugin-files/cpt/company.php:737 plugin-files/cpt/freelancers.php:1168
 msgid " Package expiry"
-msgstr ""
+msgstr "Expiration du pack"
 
 #: plugin-files/cpt/company.php:746 plugin-files/cpt/freelancers.php:1177
 #: plugin-files/exertio-widgets/exertio-widgets.php:552
@@ -1476,7 +1476,7 @@ msgstr ""
 
 #: plugin-files/cpt/disputes.php:16
 msgid "All Disputes"
-msgstr ""
+msgstr "Tous les litiges"
 
 #: plugin-files/cpt/disputes.php:17
 msgid "Search Disputes"
@@ -1513,7 +1513,7 @@ msgstr ""
 
 #: plugin-files/cpt/disputes.php:234
 msgid "Admin Response"
-msgstr ""
+msgstr "Réponse de l'admin"
 
 #: plugin-files/cpt/disputes.php:241
 msgid "This will be visible to both users on their dispute detail page"
@@ -1530,7 +1530,7 @@ msgstr ""
 #: plugin-files/cpt/freelancers.php:8 plugin-files/cpt/freelancers.php:9
 #: plugin-files/cpt/freelancers.php:10 plugin-files/cpt/freelancers.php:11
 msgid "Freelancer"
-msgstr ""
+msgstr "prestataire"
 
 #: plugin-files/cpt/freelancers.php:12 plugin-files/cpt/freelancers.php:13
 msgid "Add New Freelancer"
@@ -1883,7 +1883,7 @@ msgstr ""
 
 #: plugin-files/cpt/freelancers.php:1160
 msgid " Featured Services Expiry"
-msgstr ""
+msgstr "Expiration des services mis en évidence"
 
 #: plugin-files/cpt/payouts.php:7 plugin-files/cpt/payouts.php:8
 #: plugin-files/cpt/payouts.php:9 plugin-files/cpt/payouts.php:10
@@ -2265,7 +2265,7 @@ msgstr ""
 
 #: plugin-files/cpt/project.php:841
 msgid "Fixed"
-msgstr ""
+msgstr "Fixe"
 
 #: plugin-files/cpt/project.php:846
 msgid "Cost"
@@ -2326,7 +2326,7 @@ msgstr ""
 #: plugin-files/cpt/report.php:7 plugin-files/cpt/report.php:8
 #: plugin-files/cpt/report.php:9 plugin-files/cpt/report.php:10
 msgid "Report"
-msgstr ""
+msgstr "Signaler"
 
 #: plugin-files/cpt/report.php:11 plugin-files/cpt/report.php:12
 msgid "Add New Report"
@@ -2358,7 +2358,7 @@ msgstr ""
 
 #: plugin-files/cpt/report.php:44 plugin-files/cpt/report.php:56
 msgid "Report Category"
-msgstr ""
+msgstr "Signaler la catégorie"
 
 #: plugin-files/cpt/report.php:45
 msgid "Search Report Category"
@@ -2406,7 +2406,7 @@ msgstr ""
 
 #: plugin-files/cpt/report.php:72 plugin-files/cpt/report.php:177
 msgid "Reported by"
-msgstr ""
+msgstr "Signaler par"
 
 #: plugin-files/cpt/report.php:73
 msgid "No of Reports"
@@ -2708,7 +2708,7 @@ msgstr ""
 #: plugin-files/exertio-widgets/exertio-widgets.php:2219
 #: plugin-files/exertio-widgets/exertio-widgets.php:2223
 msgid " Project Allowed"
-msgstr ""
+msgstr "Projet autorisé"
 
 #: plugin-files/exertio-widgets/exertio-widgets.php:505
 #: plugin-files/exertio-widgets/exertio-widgets.php:2221
@@ -2728,7 +2728,7 @@ msgstr ""
 #: plugin-files/exertio-widgets/exertio-widgets.php:2381
 #: plugin-files/exertio-widgets/exertio-widgets.php:2385
 msgid " Days visibility"
-msgstr ""
+msgstr "Jours de visibilité"
 
 #: plugin-files/exertio-widgets/exertio-widgets.php:515
 #: plugin-files/exertio-widgets/exertio-widgets.php:2231
@@ -2740,7 +2740,7 @@ msgstr ""
 #: plugin-files/exertio-widgets/exertio-widgets.php:2239
 #: plugin-files/exertio-widgets/exertio-widgets.php:2243
 msgid " Featured Projects"
-msgstr ""
+msgstr "Projets mis en évidence"
 
 #: plugin-files/exertio-widgets/exertio-widgets.php:525
 #: plugin-files/exertio-widgets/exertio-widgets.php:2241
@@ -2752,7 +2752,7 @@ msgstr ""
 #: plugin-files/exertio-widgets/exertio-widgets.php:2249
 #: plugin-files/exertio-widgets/exertio-widgets.php:2253
 msgid " Days Featured"
-msgstr ""
+msgstr "Jours sponsorisés"
 
 #: plugin-files/exertio-widgets/exertio-widgets.php:535
 #: plugin-files/exertio-widgets/exertio-widgets.php:2251
@@ -2767,7 +2767,7 @@ msgstr ""
 #: plugin-files/exertio-widgets/exertio-widgets.php:545
 #: plugin-files/exertio-widgets/exertio-widgets.php:2261
 msgid "Featured Profile"
-msgstr ""
+msgstr "Profil mis en évidence"
 
 #: plugin-files/exertio-widgets/exertio-widgets.php:550
 #: plugin-files/exertio-widgets/exertio-widgets.php:554
@@ -2778,14 +2778,14 @@ msgstr ""
 #: plugin-files/exertio-widgets/exertio-widgets.php:2390
 #: plugin-files/exertio-widgets/exertio-widgets.php:2394
 msgid " Days Package Expiry"
-msgstr ""
+msgstr "Jours d'expiration du pack"
 
 #: plugin-files/exertio-widgets/exertio-widgets.php:584
 #: plugin-files/exertio-widgets/exertio-widgets.php:708
 #: plugin-files/exertio-widgets/exertio-widgets.php:2311
 #: plugin-files/exertio-widgets/exertio-widgets.php:2434
 msgid " Purchase Now"
-msgstr ""
+msgstr "Acheter maintenant"
 
 #: plugin-files/exertio-widgets/exertio-widgets.php:628
 #: plugin-files/exertio-widgets/exertio-widgets.php:632
@@ -2804,7 +2804,7 @@ msgstr ""
 #: plugin-files/exertio-widgets/exertio-widgets.php:2354
 #: plugin-files/exertio-widgets/exertio-widgets.php:2358
 msgid " Allowed Services"
-msgstr ""
+msgstr "Services autorisés"
 
 #: plugin-files/exertio-widgets/exertio-widgets.php:639
 #: plugin-files/exertio-widgets/exertio-widgets.php:2356
@@ -2821,7 +2821,7 @@ msgstr ""
 #: plugin-files/exertio-widgets/exertio-widgets.php:655
 #: plugin-files/exertio-widgets/exertio-widgets.php:2372
 msgid " Featured Services"
-msgstr ""
+msgstr "Services mis en évidence"
 
 #: plugin-files/exertio-widgets/exertio-widgets.php:657
 #: plugin-files/exertio-widgets/exertio-widgets.php:2374
@@ -2841,11 +2841,11 @@ msgstr ""
 #: plugin-files/exertio-widgets/exertio-widgets.php:683
 #: plugin-files/exertio-widgets/exertio-widgets.php:685
 msgid " Profile Featured: "
-msgstr ""
+msgstr "Profil mis en évidence"
 
 #: plugin-files/exertio-widgets/exertio-widgets.php:883
 msgid "Read More"
-msgstr ""
+msgstr "Lire plus"
 
 #: plugin-files/exertio-widgets/exertio-widgets.php:969
 msgid "View More"
@@ -3241,7 +3241,7 @@ msgstr ""
 
 #: plugin-files/widgets/projects-widgets.php:1090
 msgid "Fixed Price"
-msgstr ""
+msgstr "Prix fixe"
 
 #: plugin-files/widgets/projects-widgets.php:1091
 msgid "Hourly Price"
@@ -3554,7 +3554,7 @@ msgstr ""
 
 #: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:324
 msgid "- Select -"
-msgstr ""
+msgstr "Selectionner"
 
 #: redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:374
 #, php-format

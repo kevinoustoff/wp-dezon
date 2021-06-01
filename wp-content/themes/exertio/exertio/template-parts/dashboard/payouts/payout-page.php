@@ -34,9 +34,9 @@ if ( get_query_var( 'paged' ) ) {
       <div class="d-flex justify-content-between flex-wrap">
         <div class="d-flex align-items-end flex-wrap">
           <div class="mr-md-3 mr-xl-5">
-            <h2><?php echo esc_html__('Payout Settings','exertio_theme'); ?></h2>
+            <h2><?php echo esc_html__('Options de paiement','exertio_theme'); ?></h2>
             <div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
-				<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Dashboard', 'exertio_theme' ); ?>&nbsp;</p>
+				<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 				<?php echo exertio_dashboard_extention_return(); ?>
 			</div>
           </div>
@@ -48,9 +48,9 @@ if ( get_query_var( 'paged' ) ) {
         <div class="col-xl-4 col-lg-12 col-md-12 grid-margin stretch-card">
 			<div class="card mb-4">
                 <div class="card-body">
-                    <h4 class="card-title"><?php echo esc_html__('Payout options','exertio_theme'); ?></h4>
+                    <h4 class="card-title"><?php echo esc_html__('Options de paiement','exertio_theme'); ?></h4>
 					<div class="form-group inline-options">
-						<label><?php echo esc_html__('Enable Payout','exertio_theme'); ?></label>
+						<label><?php echo esc_html__('Activer','exertio_theme'); ?></label>
 						<div class="pretty p-switch p-fill">
 							<input type="checkbox" name="enable_payout" />
 							<div class="state p-info"><label></label> </div>
@@ -60,21 +60,21 @@ if ( get_query_var( 'paged' ) ) {
               </div>
               <div class="card mb-4">
                 <div class="card-body">
-                    <h4 class="card-title"><?php echo esc_html__('Payout Methods','exertio_theme'); ?></h4>
+                    <h4 class="card-title"><?php echo esc_html__('Méthodes de paiement','exertio_theme'); ?></h4>
 						<div class="form-group">
                         	<?php
 							$default_payout ='';
 							$default_payout = get_user_meta($current_user_id,'_default_payout_method', true);
 							?>
-                        	<label><?php echo esc_html__('Select default payout menthod','exertio_theme'); ?></label>
+                        	<label><?php echo esc_html__('Choisir la méthode de paiement par défaut','exertio_theme'); ?></label>
                         	<select name="default_payout" class="form-control general_select" id="default_payout">
                             	<option value="paypal" <?php if($default_payout == 'paypal'){echo 'selected=selected'; } ?> ><?php echo esc_html__('PayPal','exertio_theme'); ?></option>
-                                <option value="bank" <?php if($default_payout == 'bank'){echo 'selected=selected'; } ?>><?php echo esc_html__('Bank Transfer','exertio_theme'); ?></option>
+                                <option value="bank" <?php if($default_payout == 'bank'){echo 'selected=selected'; } ?>><?php echo esc_html__('Virement bancaire','exertio_theme'); ?></option>
                                 <option value="payoneer" <?php if($default_payout == 'payoneer'){echo 'selected=selected'; } ?>><?php echo esc_html__('Payoneer','exertio_theme'); ?></option>
                             </select>
                         </div>
                       <div class="payment_box">
-                      	<h4 class="card-title"><?php echo esc_html__('Payout details','exertio_theme'); ?></h4>
+                      	<h4 class="card-title"><?php echo esc_html__('Détails du paiement','exertio_theme'); ?></h4>
                         <ul class="nav bg-light nav-pills rounded nav-fill mb-3" role="tablist">
                         	<?php
 							if(fl_framework_get_options('paypal_switch') == 1)
@@ -86,7 +86,7 @@ if ( get_query_var( 'paged' ) ) {
 							if(fl_framework_get_options('bank_transfer_switch') == 1)
 							{
 								?>
-								<li class="nav-item"> <a class="nav-link <?php if($default_payout == 'bank'){echo 'active'; } ?>" data-toggle="pill" href="#nav-tab-bank"> <i class="fa fa-university"></i> <?php echo esc_html__('Bank Transfer','exertio_theme'); ?></a></li>
+								<li class="nav-item"> <a class="nav-link <?php if($default_payout == 'bank'){echo 'active'; } ?>" data-toggle="pill" href="#nav-tab-bank"> <i class="fa fa-university"></i> <?php echo esc_html__('Virement bancaire','exertio_theme'); ?></a></li>
 								<?php
 							}
 							if(fl_framework_get_options('payoneer_switch') == 1)
@@ -117,10 +117,10 @@ if ( get_query_var( 'paged' ) ) {
                                         ?>
                                         <form id="paypal_pm_form">
                                           <div class="form-group">
-                                            <label for="paypal"><?php echo esc_html__('PayPal Account Email','exertio_theme'); ?></label>
-                                            <input type="email" class="form-control" name="paypal_email" required="" value="<?php echo esc_attr($paypal_email); ?>" data-smk-msg="<?php echo esc_html__('This field is required','exertio_theme'); ?>">
+                                            <label for="paypal"><?php echo esc_html__('Email du compte PayPal','exertio_theme'); ?></label>
+                                            <input type="email" class="form-control" name="paypal_email" required="" value="<?php echo esc_attr($paypal_email); ?>" data-smk-msg="<?php echo esc_html__('Ce champ est requis','exertio_theme'); ?>">
                                           </div>
-                                          <button class="btn btn-theme btn-loading" id="paypal_pm_btn" type="button" data-peyment-method="paypal"><?php echo esc_html__('Save Detail','exertio_theme'); ?><div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button>
+                                          <button class="btn btn-theme btn-loading" id="paypal_pm_btn" type="button" data-peyment-method="paypal"><?php echo esc_html__('Enregistrer','exertio_theme'); ?><div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button>
                                         </form>
                                   </div>
                                 <?php
@@ -129,7 +129,7 @@ if ( get_query_var( 'paged' ) ) {
 							{
 								?>
 								<div class="tab-pane fade <?php if($default_payout == 'bank'){echo 'active show'; } ?>" id="nav-tab-bank">
-									<p> <?php echo esc_html__('Bank accaunt details','exertio_theme'); ?></p>
+									<p> <?php echo esc_html__('Informations bancaires','exertio_theme'); ?></p>
                                     <?php
                                     $decoded_bank = $bank_name = $bank_acc_number = $bank_acc_name = $bank_routing_no = $bank_iban = $bank_swift = '';
                                     $decoded_bank = json_decode(get_user_meta($current_user_id,'_bank_account_details', true));
@@ -148,26 +148,26 @@ if ( get_query_var( 'paged' ) ) {
 									?>
 									<form id="bank_pm_form">
                                       <div class="form-group">
-                                        <label for="bank_name"><?php echo esc_html__('Bank Name','exertio_theme'); ?></label>
+                                        <label for="bank_name"><?php echo esc_html__('Nom de la banque','exertio_theme'); ?></label>
                                         <input type="text" class="form-control" name="bank_name" value="<?php echo esc_attr($bank_name); ?>">
                                       </div>
                                       <div class="form-group">
-                                        <label for="bank_account_number"><?php echo esc_html__('Bank Account Number','exertio_theme'); ?></label>
+                                        <label for="bank_account_number"><?php echo esc_html__('N° de compte bancaire','exertio_theme'); ?></label>
                                         <input type="text" class="form-control" name="bank_account_number" value="<?php echo esc_attr($bank_acc_number); ?>">
                                       </div>
                                       <div class="form-group">
-                                        <label for="bank_name"><?php echo esc_html__('Bank Account Holder Name','exertio_theme'); ?></label>
+                                        <label for="bank_name"><?php echo esc_html__('Nom du titulaire du compte ','exertio_theme'); ?></label>
                                         <input type="text" class="form-control" name="bank_account_name" value="<?php echo esc_attr($bank_acc_name); ?>">
                                       </div>
                                       <div class="form-group">
-                                        <label for="bank_account_number"><?php echo esc_html__('Bank Routing Number','exertio_theme'); ?></label>
+                                        <label for="bank_account_number"><?php echo esc_html__('Numéro d\'acheminement bancaire','exertio_theme'); ?></label>
                                         <input type="text" class="form-control" name="bank_routing_number" value="<?php echo esc_attr($bank_routing_no); ?>">
                                       </div>
                                       
                                       <div class="row">
                                         <div class="col-sm-7">
                                           <div class="form-group">
-                                            <label><?php echo esc_html__('Bank IBAN','exertio_theme'); ?></label>
+                                            <label><?php echo esc_html__('IBAN','exertio_theme'); ?></label>
                                             <div class="input-group">
                                               <input type="text" class="form-control" name="bank_iban_number" value="<?php echo esc_attr($bank_iban); ?>">
                                             </div>
@@ -180,7 +180,7 @@ if ( get_query_var( 'paged' ) ) {
                                           </div>
                                         </div>
                                       </div>
-                                      <button class="btn btn-theme btn-loading" id="bank_pm_btn" type="button" data-peyment-method="bank"><?php echo esc_html__('Save Detail','exertio_theme'); ?><div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button>
+                                      <button class="btn btn-theme btn-loading" id="bank_pm_btn" type="button" data-peyment-method="bank"><?php echo esc_html__('Enregistrer','exertio_theme'); ?><div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button>
                                     </form>
 								  </div>
 								<?php
@@ -205,18 +205,18 @@ if ( get_query_var( 'paged' ) ) {
 									?>
 									<form id="payoneer_pm_form">
 									  <div class="form-group">
-										<label for="payoneer_acc_name"><?php echo esc_html__('Payoneer Account Name','exertio_theme'); ?></label>
-										<input type="text" class="form-control" name="payoneer_acc_name" required="" value="<?php echo esc_attr($payoneer_acc_name); ?>"  data-smk-msg="<?php echo esc_html__('This field is required','exertio_theme'); ?>">
+										<label for="payoneer_acc_name"><?php echo esc_html__('Nom du compte Payoneer','exertio_theme'); ?></label>
+										<input type="text" class="form-control" name="payoneer_acc_name" required="" value="<?php echo esc_attr($payoneer_acc_name); ?>"  data-smk-msg="<?php echo esc_html__('Ce champ est requis','exertio_theme'); ?>">
 									  </div>
 									  <div class="form-group">
-										<label for="cardNumber"><?php echo esc_html__('Payoneer Email','exertio_theme'); ?></label>
-										<input type="email" class="form-control" name="payoneer_email" required="" value="<?php echo esc_attr($payoneer_email); ?>"  data-smk-msg="<?php echo esc_html__('This field is required','exertio_theme'); ?>">
+										<label for="cardNumber"><?php echo esc_html__('Email du coimpte Payoneer','exertio_theme'); ?></label>
+										<input type="email" class="form-control" name="payoneer_email" required="" value="<?php echo esc_attr($payoneer_email); ?>"  data-smk-msg="<?php echo esc_html__('Ce champ est requis','exertio_theme'); ?>">
 										</div>
 									  <div class="form-group">
-										<label for="cardNumber"><?php echo esc_html__('Country','exertio_theme'); ?></label>
-										<input type="text" class="form-control" name="payoneer_country" required="" value="<?php echo esc_attr($payoneer_acc_country); ?>"  data-smk-msg="<?php echo esc_html__('This field is required','exertio_theme'); ?>">
+										<label for="cardNumber"><?php echo esc_html__('Pays','exertio_theme'); ?></label>
+										<input type="text" class="form-control" name="payoneer_country" required="" value="<?php echo esc_attr($payoneer_acc_country); ?>"  data-smk-msg="<?php echo esc_html__('Ce champ est requis','exertio_theme'); ?>">
 										</div>
-									  <button class="btn btn-theme btn-loading" id="payoneer_pm_btn" type="button" data-peyment-method="payoneer"><?php echo esc_html__('Save Detail','exertio_theme'); ?><div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button>
+									  <button class="btn btn-theme btn-loading" id="payoneer_pm_btn" type="button" data-peyment-method="payoneer"><?php echo esc_html__('Enregistrer','exertio_theme'); ?><div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button>
 									</form>
 								</div>
 								<?php
@@ -240,10 +240,10 @@ if ( get_query_var( 'paged' ) ) {
                 <div class="card-body">
                 <div class="pro-section">
               <div class="pro-box heading-row">
-                <div class="pro-coulmn pro-title"><?php echo esc_html__( 'Payout Amount', 'exertio_theme' );	 ?> </div>
+                <div class="pro-coulmn pro-title"><?php echo esc_html__( 'Montant du paiement', 'exertio_theme' );	 ?> </div>
                 <div class="pro-coulmn"><?php echo esc_html__( 'Date', 'exertio_theme' );	 ?> </div>
-                <div class="pro-coulmn"><?php echo esc_html__( 'Payment Method', 'exertio_theme' ) ?> </div>
-                <div class="pro-coulmn"><?php echo esc_html__( 'Status', 'exertio_theme' ) ?> </div>
+                <div class="pro-coulmn"><?php echo esc_html__( 'Méthode de paiement', 'exertio_theme' ) ?> </div>
+                <div class="pro-coulmn"><?php echo esc_html__( 'Etat', 'exertio_theme' ) ?> </div>
               </div>
 				<?php
 					if ( $the_query->have_posts() )
@@ -299,7 +299,7 @@ if ( get_query_var( 'paged' ) ) {
 						?>
                         <div class="nothing-found">
                             <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo get_post_meta($alt_id, '_wp_attachment_image_alt', TRUE); ?>">
-                            <h3><?php echo esc_html__( 'Sorry!!! No Record Found', 'exertio_theme' ) ?></h3>
+                            <h3><?php echo esc_html__( 'Désolé!! Aucun paiement effectué pour le moment', 'exertio_theme' ) ?></h3>
                         </div>
                         <?php	
 					}

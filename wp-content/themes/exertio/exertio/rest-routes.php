@@ -1,4 +1,5 @@
 <?php
+include "rest-api-function.php";
 add_action( 'rest_api_init', function () {
 	register_rest_route( 'monplugin/v1', '/demo', array(
 	  'methods' => 'GET',
@@ -20,7 +21,7 @@ add_action( 'rest_api_init', function () {
 	));
 	register_rest_route('api','/profile',array(
 		'methods' => 'GET',
-		'callback' => 'profile'
+		'callback' =>  'profile',
 	));
   } );
 

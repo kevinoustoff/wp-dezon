@@ -1,43 +1,27 @@
-2021-05-24T04:50:37+00:00 CRITICAL Uncaught Error: Call to undefined function dump() in /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/rest-api-function.php:75
+2021-05-24T15:59:53+00:00 CRITICAL Uncaught Error: Call to undefined function fl_framework_get_options() in /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/payouts.php:138
 Stack trace:
-#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): api_register(Object(WP_REST_Request))
-#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/register', Array, NULL)
-#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
-#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/register')
-#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): exertio_add_schedule(Array)
+#1 /var/www/html/wordpress/wp-includes/plugin.php(212): WP_Hook->apply_filters(Array, Array)
+#2 /var/www/html/wordpress/wp-includes/cron.php(1064): apply_filters('cron_schedules', Array)
+#3 /var/www/html/wordpress/wp-includes/cron.php(986): wp_get_schedules()
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): _wp_cron('')
 #5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
-#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
-#7 /var/www/html/wordpress/wp-includes/class-wp.php(388): do_action_ref_arr dans /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/rest-api-function.php à la ligne 75
+#6 /var/www/html/wordpress/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-settings.php(582): do_action('wp_loaded')
+#8 /var/www/html/wordpress/wp-config.php(90): require_once('/var/www/html/w...')
+#9 /var/www/html/wordpress/wp-load.php(37): require_once('/var/www/html/w...')
+#10 /var/www/html dans /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/payouts.php à la ligne 138
 
-2021-05-24T04:52:12+00:00 CRITICAL Uncaught Error: Call to undefined function dump() in /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/rest-api-function.php:75
+2021-05-24T16:09:50+00:00 CRITICAL Uncaught Error: Using $this when not in object context in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-routes.php:23
 Stack trace:
-#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): api_register(Object(WP_REST_Request))
-#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/register', Array, NULL)
-#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
-#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/register')
-#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
-#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
-#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
-#7 /var/www/html/wordpress/wp-includes/class-wp.php(388): do_action_ref_arr dans /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/rest-api-function.php à la ligne 75
-
-2021-05-24T04:57:20+00:00 CRITICAL Uncaught Error: Call to a member function get_error_message() on integer in /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/rest-api-function.php:75
-Stack trace:
-#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): api_register(Object(WP_REST_Request))
-#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/register', Array, NULL)
-#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
-#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/register')
-#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
-#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
-#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
-#7 /var/www/html/wordpress/wp-includes/class-wp.php( dans /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/rest-api-function.php à la ligne 75
-
-2021-05-24T08:59:56+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function get_post_meta(), 0 passed in /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/rest-api-function.php on line 110 and at least 1 expected in /var/www/html/wordpress/wp-includes/post.php:2225
-Stack trace:
-#0 /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/rest-api-function.php(110): get_post_meta()
-#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): profile(Object(WP_REST_Request))
-#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/profile', Array, NULL)
-#3 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
-#4 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/profile')
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): {closure}(Object(WP_REST_Server))
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(521): do_action('rest_api_init', Object(WP_REST_Server))
+#4 /var/www/html/wordpress/wp-includes/rest-api.php(347): rest_get_server()
 #5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
-#6 /var/www/html/wordpress/wp- dans /var/www/html/wordpress/wp-includes/post.php à la ligne 2225
+#6 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#7 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#8 /var/www/html/wordpress/wp-includes/class-wp.php(388): do_action_ref_array('parse_request', Array)
+#9 /var/www/html/wordpress/wp-includes/ dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-routes.php à la ligne 23
 

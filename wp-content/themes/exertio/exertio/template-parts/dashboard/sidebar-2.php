@@ -102,9 +102,9 @@ $alt_id ='';
         </a>
         <div class="collapse <?php if($page_name == 'ongoing-project' || $page_name == 'completed-projects' || $page_name == 'completed-project-detail' || $page_name == 'canceled-project') { echo 'show';} ?>" id="projects">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item <?php if($page_name == 'ongoing-project') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=ongoing-project"><?php echo esc_html__( ' Ongoing Projects', 'exertio_theme' ); ?> </a></li>
-            <li class="nav-item <?php if($page_name == 'completed-projects') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=completed-projects"><?php echo esc_html__( 'Completed Projects', 'exertio_theme' ); ?> </a></li>
-            <li class="nav-item <?php if($page_name == 'canceled-projects') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=canceled-projects"><?php echo esc_html__( 'canceled Projects', 'exertio_theme' ); ?> </a></li>
+            <li class="nav-item <?php if($page_name == 'ongoing-project') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=ongoing-project"><?php echo esc_html__( ' Projets en cours', 'exertio_theme' ); ?> </a></li>
+            <li class="nav-item <?php if($page_name == 'completed-projects') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=completed-projects"><?php echo esc_html__( 'Projets finalisés', 'exertio_theme' ); ?> </a></li>
+            <li class="nav-item <?php if($page_name == 'canceled-projects') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=canceled-projects"><?php echo esc_html__( 'Projets rejetés', 'exertio_theme' ); ?> </a></li>
           </ul>
         </div>
       </li>
@@ -129,7 +129,7 @@ $alt_id ='';
       <li class="nav-item <?php if($page_name == 'saved-projects') { echo 'active';} ?>">
         <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=saved-projects">
           <i class="far fa-bookmark menu-icon"></i>
-          <span class="menu-title"><?php echo esc_html__( 'Projets enregistrés', 'exertio_theme' ); ?></span>
+          <span class="menu-title"><?php echo esc_html__( 'Projets sauvegardés', 'exertio_theme' ); ?></span>
         </a>
       </li>
       

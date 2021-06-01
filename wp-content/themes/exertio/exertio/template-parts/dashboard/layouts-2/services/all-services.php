@@ -57,9 +57,9 @@ if ( is_user_logged_in() ) {
       <div class="d-flex justify-content-between flex-wrap">
         <div class="d-flex align-items-end flex-wrap">
           <div class="mr-md-3 mr-xl-5">
-            <h2><?php echo esc_html__('Active Services','exertio_theme'); ?></h2>
+            <h2><?php echo esc_html__('Services validés','exertio_theme'); ?></h2>
             <div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
-              <p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Dashboard', 'exertio_theme' ); ?>&nbsp;</p>
+              <p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
               <?php echo exertio_dashboard_extention_return(); ?> </div>
           </div>
         </div>
@@ -73,9 +73,9 @@ if ( is_user_logged_in() ) {
           <div class="pro-section">
             <div class="pro-box heading-row">
               <div class="pro-coulmn pro-title"> </div>
-              <div class="pro-coulmn"><?php echo esc_html__( 'Category', 'exertio_theme' ) ?> </div>
-              <div class="pro-coulmn"><?php echo esc_html__( 'Cost / Delivery', 'exertio_theme' ) ?> </div>
-              <div class="pro-coulmn"><?php echo esc_html__( 'Addons', 'exertio_theme' ) ?> </div>
+              <div class="pro-coulmn"><?php echo esc_html__( 'Catégorie', 'exertio_theme' ) ?> </div>
+              <div class="pro-coulmn"><?php echo esc_html__( 'Prix / Délai de livraison', 'exertio_theme' ) ?> </div>
+              <div class="pro-coulmn"><?php echo esc_html__( 'Options supp.', 'exertio_theme' ) ?> </div>
             </div>
             <?php
             if ( $the_query->have_posts() ) {
@@ -90,7 +90,7 @@ if ( is_user_logged_in() ) {
                 $featured_service = get_post_meta( $sid, '_service_is_featured', true );
                 if ( isset( $featured_service ) && $featured_service == 1 ) {
                   ?>
-                <div class="features-star"><?php echo esc_html__( 'Featured', 'exertio_theme' ) ?></div>
+                <div class="features-star"><?php echo esc_html__( 'Sponsorisé', 'exertio_theme' ) ?></div>
                 <?php
                 }
                 ?>
@@ -106,7 +106,7 @@ if ( is_user_logged_in() ) {
 					}
 				  ?>
 					
-					</span> </span> <span class="pro-btns"> <a href="<?php echo esc_attr(get_permalink($exertio_theme_options['user_dashboard_page']));?>?ext=add-services&sid=<?php echo esc_html($sid); ?>" class="btn btn-inverse-primary btn-sm"> <i class="fal fa-edit"></i> <?php echo esc_html__( 'Edit', 'exertio_theme' ); ?></a> <a href="javascript:void(0)" class="btn btn-inverse-warning btn-sm cancel_service" data-pid="<?php echo esc_attr($sid); ?>" data-status="cancel"> <i class="fal fa-times-octagon"></i> <?php echo esc_html__( 'Cancel', 'exertio_theme' ); ?></a> <a href="javascript:void(0)" class="btn btn-inverse-danger btn-sm cancel_service" data-pid="<?php echo esc_attr($sid); ?>" data-status="remove"> <i class="fal fa-times-octagon"></i> <?php echo esc_html__( 'Remove', 'exertio_theme' ); ?></a> </span> </div>
+					</span> </span> <span class="pro-btns"> <a href="<?php echo esc_attr(get_permalink($exertio_theme_options['user_dashboard_page']));?>?ext=add-services&sid=<?php echo esc_html($sid); ?>" class="btn btn-inverse-primary btn-sm"> <i class="fal fa-edit"></i> <?php echo esc_html__( 'Modifier', 'exertio_theme' ); ?></a> <a href="javascript:void(0)" class="btn btn-inverse-warning btn-sm cancel_service" data-pid="<?php echo esc_attr($sid); ?>" data-status="cancel"> <i class="fal fa-times-octagon"></i> <?php echo esc_html__( 'Annuler', 'exertio_theme' ); ?></a> <a href="javascript:void(0)" class="btn btn-inverse-danger btn-sm cancel_service" data-pid="<?php echo esc_attr($sid); ?>" data-status="remove"> <i class="fal fa-times-octagon"></i> <?php echo esc_html__( 'Supprimer', 'exertio_theme' ); ?></a> </span> </div>
               <div class="pro-coulmn">
                 <?php
                 $category = get_term( get_post_meta( $sid, '_service_category', true ) );
@@ -154,7 +154,7 @@ if ( is_user_logged_in() ) {
             else {
               ?>
             <div class="nothing-found">
-              <h3><?php echo esc_html__( 'Sorry!!! No Record Found', 'exertio_theme' ) ?></h3>
+              <h3><?php echo esc_html__( 'Désolé!! Aucun service ajouté pour le moment', 'exertio_theme' ) ?></h3>
               <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo esc_html__( 'Nothing found icon', 'exertio_theme' ) ?> "> </div>
             <?php
             }

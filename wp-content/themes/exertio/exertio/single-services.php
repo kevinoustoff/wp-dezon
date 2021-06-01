@@ -16,10 +16,10 @@ $alt_id = '';
         <div class="fr-service-container">
           <ul>
             <li class="links"> <a href="#description" class="scroll"><?php echo esc_html__('Description','exertio_theme'); ?></a> </li>
-            <li class="links"> <a href="#seller" class="scroll"><?php echo esc_html__('Détail du prestataire','exertio_theme'); ?></a> </li>
+            <li class="links"> <a href="#seller" class="scroll"><?php echo esc_html__('Concernant le prestataire','exertio_theme'); ?></a> </li>
             <li class="links"> <a href="#reviews" class="scroll"><?php echo esc_html__('Avis','exertio_theme'); ?></a> </li>
-            <li class="links"> <a href="#faqs" class="scroll"><?php echo esc_html__('FAQ,s','exertio_theme'); ?></a> </li>
-            <li class="links"> <a href="#related" class="scroll"><?php echo esc_html__('Services associés','exertio_theme'); ?></a> </li>
+            <li class="links"> <a href="#faqs" class="scroll"><?php echo esc_html__('FAQ','exertio_theme'); ?></a> </li>
+            <li class="links"> <a href="#related" class="scroll"><?php echo esc_html__('Options supplémentaires','exertio_theme'); ?></a> </li>
             <li class="links">
               <div class="fr-m-products-2">
                 <ul>
@@ -80,7 +80,7 @@ if ( $exertio_theme_options[ 'action_bar' ] == 1 ) {
           ?>
         <div class="alert alert-warning fade show" role="alert">
           <div class="alert-icon"><i class="fal fa-exclamation-triangle"></i></div>
-          <div class="alert-text"><?php echo esc_html__('Pending for admin Approval.','exertio_theme'); ?></div>
+          <div class="alert-text"><?php echo esc_html__('En attente de validation par l\'équipe de Dezon.','exertio_theme'); ?></div>
           <div class="alert-close">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true"><i class="fal fa-times"></i></span> </button>
           </div>
@@ -95,7 +95,7 @@ if ( $exertio_theme_options[ 'action_bar' ] == 1 ) {
             $featured_service = get_post_meta( $sid, '_service_is_featured', true );
             if ( isset( $featured_service ) && $featured_service == 1 ) {
               ?>
-            <span><?php echo esc_html__( 'Featured', 'exertio_theme' ); ?></span>
+            <span><?php echo esc_html__( 'Sponsorisé', 'exertio_theme' ); ?></span>
             <?php
             }
             ?>
@@ -119,7 +119,7 @@ if ( $exertio_theme_options[ 'action_bar' ] == 1 ) {
         </div>
         <div class="extra-features">
           <ul>
-            <li> <img src="<?php echo get_template_directory_uri()?>/images/icons/delivery-truck.png" alt="<?php echo get_post_meta($alt_id, '_wp_attachment_image_alt', TRUE); ?>"> <span> <small> <?php echo esc_html__('Delievry Time','exertio_theme'); ?></small>
+            <li> <img src="<?php echo get_template_directory_uri()?>/images/icons/delivery-truck.png" alt="<?php echo get_post_meta($alt_id, '_wp_attachment_image_alt', TRUE); ?>"> <span> <small> <?php echo esc_html__('Délai de livraison','exertio_theme'); ?></small>
               <?php
               $delivery_time = get_term( get_post_meta( $sid, '_delivery_time', true ) );
               if ( !empty( $delivery_time ) && !is_wp_error( $delivery_time ) ) {
@@ -127,7 +127,7 @@ if ( $exertio_theme_options[ 'action_bar' ] == 1 ) {
               }
               ?>
               </span> </li>
-            <li> <img src="<?php echo get_template_directory_uri()?>/images/icons/fast-time.png" alt="<?php echo get_post_meta($alt_id, '_wp_attachment_image_alt', TRUE); ?>"> <span> <small> <?php echo esc_html__('Response Time','exertio_theme'); ?></small>
+            <li> <img src="<?php echo get_template_directory_uri()?>/images/icons/fast-time.png" alt="<?php echo get_post_meta($alt_id, '_wp_attachment_image_alt', TRUE); ?>"> <span> <small> <?php echo esc_html__('Temps de réponse','exertio_theme'); ?></small>
               <?php
               $response_time = get_term( get_post_meta( $sid, '_response_time', true ) );
               if ( !empty( $response_time ) && !is_wp_error( $response_time ) ) {
@@ -135,7 +135,7 @@ if ( $exertio_theme_options[ 'action_bar' ] == 1 ) {
               }
               ?>
               </span> </li>
-            <li> <img src="<?php echo get_template_directory_uri()?>/images/icons/global.png" alt="<?php echo get_post_meta($alt_id, '_wp_attachment_image_alt', TRUE); ?>"> <span> <small> <?php echo esc_html__('English Level','exertio_theme'); ?></small>
+            <li> <img src="<?php echo get_template_directory_uri()?>/images/icons/global.png" alt="<?php echo get_post_meta($alt_id, '_wp_attachment_image_alt', TRUE); ?>"> <span> <small> <?php echo esc_html__('Niveau','exertio_theme'); ?></small>
               <?php
               $service_eng_level = get_term( get_post_meta( $sid, '_service_eng_level', true ) );
               if ( !empty( $service_eng_level ) && !is_wp_error( $service_eng_level ) ) {
@@ -239,7 +239,7 @@ if ( $exertio_theme_options[ 'action_bar' ] == 1 ) {
         <div class="fr-seller-servives-2" id="seller">
           <div class="fr-seller-servives">
             <div class="heading-contents">
-              <h3><?php echo esc_html__('A propos du prestataire','exertio_theme'); ?></h3>
+              <h3><?php echo esc_html__('Concernant le prestataire','exertio_theme'); ?></h3>
             </div>
             <div class="fr-seller-servives-meta"> <a href="<?php  echo esc_url(get_permalink($fid)); ?>">
               <div class="fr-seller-profile"> <?php echo get_profile_img($fid, 'freelancer'); ?> </div>

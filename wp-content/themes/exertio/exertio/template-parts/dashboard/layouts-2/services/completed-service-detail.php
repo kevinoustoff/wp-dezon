@@ -29,9 +29,9 @@ if( is_user_logged_in() )
                   <div class="d-flex justify-content-between flex-wrap">
                     <div class="d-flex align-items-end flex-wrap">
                       <div class="mr-md-3 mr-xl-5">
-                        <h2><?php echo esc_html__('Completed Service Detail','exertio_theme');?></h2>
+                        <h2><?php echo esc_html__('Détail du service finalisé','exertio_theme');?></h2>
 						<div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
-							<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Dashboard', 'exertio_theme' ); ?>&nbsp;</p>
+							<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 							<?php echo exertio_dashboard_extention_return(); ?>
 						</div>
                       </div>
@@ -87,13 +87,13 @@ if( is_user_logged_in() )
 												echo get_profile_img($buyer_id , 'employer');
 											?>
 											<span class="buyer_name"> <?php echo exertio_get_username('employer',$buyer_id, 'badge', 'right' ); ?></span>
-											<span class="service_start_date"> <?php echo esc_html__( 'Started on ', 'exertio_theme' ).' '.esc_html(date("F jS, Y", strtotime($result[0]['timestamp']))); ?></span>
+											<span class="service_start_date"> <?php echo esc_html__( 'Commencé ce ', 'exertio_theme' ).' '.esc_html(date("F jS, Y", strtotime($result[0]['timestamp']))); ?></span>
 										</div>
 										<div class="pro-coulmn completed-status">
 											<i class="fas fa-check-circle"></i>
 											<div>
-												<span class=""> <?php echo esc_html__( 'Completed ', 'exertio_theme' ); ?> </span>
-												<small> <?php echo esc_html__( 'on ', 'exertio_theme' ).date_i18n( get_option( 'date_format' ), strtotime( $result[0]['status_date'] ) ); ?> </small>
+												<span class=""> <?php echo esc_html__( 'Finalisé ', 'exertio_theme' ); ?> </span>
+												<small> <?php echo esc_html__( 'ce ', 'exertio_theme' ).date_i18n( get_option( 'date_format' ), strtotime( $result[0]['status_date'] ) ); ?> </small>
 											</div>
 										</div>
 									</div>
@@ -103,7 +103,7 @@ if( is_user_logged_in() )
                                 {
                                     ?>
                                     <div class="nothing-found">
-                                        <h3><?php echo esc_html__( 'Sorry!!! No Record Found', 'exertio_theme' ) ?></h3>
+                                        <h3><?php echo esc_html__( 'Désolé!! Aucun enregistrement trouvé', 'exertio_theme' ) ?></h3>
                                         <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo esc_html__( 'Nothing found icon', 'exertio_theme' ) ?> ">
                                     </div>
                                     <?php	
@@ -140,7 +140,7 @@ if( is_user_logged_in() )
                                                             ?>
                                                             <div class="history_attch_dwld btn-loading" id="download-files" data-id="<?php echo esc_attr($message->attachment_ids); ?>">
                                                                 <i class="fal fa-arrow-to-bottom"></i>
-                                                                <?php echo esc_html__( 'Attachments', 'exertio_theme' ); ?>
+                                                                <?php echo esc_html__( 'Pièces jointes', 'exertio_theme' ); ?>
                                                                 <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
                                                             </div>
                                                             <?php
@@ -171,7 +171,7 @@ if( is_user_logged_in() )
                                                             ?>
                                                             <div class="history_attch_dwld btn-loading" id="download-files" data-id="<?php echo esc_attr($message->attachment_ids); ?>">
                                                                 <i class="fal fa-arrow-to-bottom"></i>
-                                                                <?php echo esc_html__( 'Attachments', 'exertio_theme' ); ?>
+                                                                <?php echo esc_html__( 'Pièces jointes', 'exertio_theme' ); ?>
                                                                 <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
                                                             </div>
                                                             <?php
@@ -186,7 +186,7 @@ if( is_user_logged_in() )
                                     else
                                     {
                                         ?>
-                                        <p class="text-center"><?php echo esc_html__( 'No history found', 'exertio_theme' ); ?></p>
+                                        <p class="text-center"><?php echo esc_html__( 'Aucun historique de discussion trouvé', 'exertio_theme' ); ?></p>
                                         <?php	
                                     }
                                     ?>

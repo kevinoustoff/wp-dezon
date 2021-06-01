@@ -43,9 +43,9 @@ if ( get_query_var( 'paged' ) ) {
       <div class="d-flex justify-content-between flex-wrap">
         <div class="d-flex align-items-end flex-wrap">
           <div class="mr-md-3 mr-xl-5">
-            <h2><?php echo esc_html__('Followed Freelancers','exertio_theme').esc_html(' ('. $total_count.')');?></h2>
+            <h2><?php echo esc_html__('Prestataires suivis','exertio_theme').esc_html(' ('. $total_count.')');?></h2>
             <div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
-				<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Dashboard', 'exertio_theme' ); ?>&nbsp;</p>
+				<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 				<?php echo exertio_dashboard_extention_return(); ?>
 			</div>
           </div>
@@ -76,7 +76,7 @@ if ( get_query_var( 'paged' ) ) {
                 <?php echo get_profile_img($pid, 'freelancer'); ?>
                 <h4 class="pro-name"> <a href="<?php  echo esc_url(get_permalink()); ?>"><?php echo exertio_get_username('freelancer',$pid, 'badge', 'right');?></a> </h4>
                 <span class="pro-meta-box"> <span class="pro-meta"> <a href="<?php  echo esc_url(get_permalink()); ?>"><?php echo esc_html(get_post_meta( $pid, '_freelancer_tagline' , true )); ?></a> </span> </span> </div>
-              <div class="pro-coulmn"><a href="javascript:void(0)" class="btn btn-danger delete_followed_freelancer  btn-loading" data-post-id="<?php echo esc_html($pid); ?>"> <?php echo esc_html__( 'Remove ', 'exertio_theme' ); ?><div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div> </a></div>
+              <div class="pro-coulmn"><a href="javascript:void(0)" class="btn btn-danger delete_followed_freelancer  btn-loading" data-post-id="<?php echo esc_html($pid); ?>"> <?php echo esc_html__( 'Supprimer ', 'exertio_theme' ); ?><div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div> </a></div>
             </div>
             <?php
 						}
@@ -88,7 +88,7 @@ if ( get_query_var( 'paged' ) ) {
 					{
 						?>
             <div class="nothing-found">
-              <h3><?php echo esc_html__( 'Sorry!!! No Record Found', 'exertio_theme' ) ?></h3>
+              <h3><?php echo esc_html__( 'Désolé!! Aucun enregistrement trouvé', 'exertio_theme' ) ?></h3>
               <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo get_post_meta($alt_id, '_wp_attachment_image_alt', TRUE); ?>"> </div>
             <?php	
 					}

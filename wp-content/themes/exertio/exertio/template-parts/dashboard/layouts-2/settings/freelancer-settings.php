@@ -15,9 +15,9 @@ $alt_id = '';
 			  <div class="d-flex justify-content-between flex-wrap">
 				<div class="d-flex align-items-end flex-wrap">
 				  <div class="mr-md-3 mr-xl-5">
-					<h2><?php echo esc_html__('Freelancer Settings','exertio_theme'); ?></h2>
+					<h2><?php echo esc_html__('Réglages','exertio_theme'); ?></h2>
 					<div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
-						<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Dashboard', 'exertio_theme' ); ?>&nbsp;</p>
+						<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 						<?php echo exertio_dashboard_extention_return(); ?>
 					</div>
 				  </div>
@@ -33,7 +33,7 @@ $alt_id = '';
 								<div class="row">
 									<div class="col-3">
 										<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-											<a class="nav-link active" id="v-pills-payout-tab" data-toggle="pill" href="#v-pills-payout" role="tab" aria-controls="v-pills-home" aria-selected="true"><?php echo esc_html__('Payout Setting', 'exertio_theme' ); ?></a>
+											<a class="nav-link active" id="v-pills-payout-tab" data-toggle="pill" href="#v-pills-payout" role="tab" aria-controls="v-pills-home" aria-selected="true"><?php echo esc_html__('Réglages pour les paiements', 'exertio_theme' ); ?></a>
 										</div>
 									</div>
 									<div class="col-9">
@@ -51,8 +51,8 @@ $alt_id = '';
 													}
 	 												?>
 													<div class="heading-side">
-														<label class="heading"><?php echo esc_html__('Enable Payout','exertio_theme'); ?></label>
-														<p><?php echo esc_html__('Turn this option ON if you want to enable auto payout. ', 'exertio_theme' ); ?></p>
+														<label class="heading"><?php echo esc_html__('Activer','exertio_theme'); ?></label>
+														<p><?php echo esc_html__('Activez cette option si vous souhaitez activer le paiement automatique. ', 'exertio_theme' ); ?></p>
 													</div>
 													<div class="pretty p-switch p-fill">
 														<input type="checkbox" name="enable_payout" <?php echo esc_attr($payout_checked); ?>/>
@@ -62,7 +62,7 @@ $alt_id = '';
 											</div>
 										</div>
 										<div class="submit-button">
-											<button type="button" id="freelancer_setting_btn" class="btn btn-theme  btn-loading"> <?php echo esc_html__('Save Settings', 'exertio_theme' ); ?>
+											<button type="button" id="freelancer_setting_btn" class="btn btn-theme  btn-loading"> <?php echo esc_html__('Enregistrer', 'exertio_theme' ); ?>
 											<span class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </span>
 											</button>
 										</div>

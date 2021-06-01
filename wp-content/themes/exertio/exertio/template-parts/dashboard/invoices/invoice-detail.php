@@ -23,7 +23,7 @@ $emp_address = get_post_meta( $emp_id, '_employer_address', true );
 $product_name_text = '';
 if(isset($product_type) && $product_type == 'wallet')
 {
-	$product_name_text = esc_html__( 'Wallet Amount', 'exertio_theme' );
+	$product_name_text = esc_html__( 'Montant du portefeuille', 'exertio_theme' );
 }
 else if(isset($product_type) && $product_type == 'employer-packages')
 {
@@ -41,7 +41,7 @@ if($current_user_id == $user_id)
 			  <div class="mr-md-3 mr-xl-5">
 				<h2><?php echo esc_html__('Invoices Detail','exertio_theme'); ?></h2>
 				<div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
-				  <p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Dashboard', 'exertio_theme' ); ?>&nbsp;</p>
+				  <p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 				  <?php echo exertio_dashboard_extention_return(); ?> </div>
 			  </div>
 			</div>
@@ -80,7 +80,7 @@ if($current_user_id == $user_id)
 					  </div>
 					  <div class="col-lg-6 col-xl-6 col-xs-12 col-md-6 col-sm-6">
 						<div class="order-invoice-to">
-						  <h3 class="order-invoice-to-name"><?php echo esc_html__( 'Invoice', 'exertio_theme' ) ?></h3>
+						  <h3 class="order-invoice-to-name"><?php echo esc_html__( 'Facture', 'exertio_theme' ) ?></h3>
 						  <?php
 						  if ( $emp_address != '' ) {
 							?>
@@ -107,8 +107,8 @@ if($current_user_id == $user_id)
 							$badge_color = 'btn-inverse-danger';
 						  }
 						  ?>
-						  <p><b><?php echo esc_html__( 'Invoice', 'exertio_theme' ) ?> #<?php echo esc_html($oder_id); ?></b> </p>
-						  <p class="order-invoice-status"> <b><?php echo esc_html__( 'Status:', 'exertio_theme' ) ?></b> <span class="paid <?php echo esc_html($badge_color); ?>"> <?php echo esc_html($order_status); ?></span></p>
+						  <p><b><?php echo esc_html__( 'Facture N°', 'exertio_theme' ) ?> <?php echo esc_html($oder_id); ?></b> </p>
+						  <p class="order-invoice-status"> <b><?php echo esc_html__( 'Etat:', 'exertio_theme' ) ?></b> <span class="paid <?php echo esc_html($badge_color); ?>"> <?php echo esc_html($order_status); ?></span></p>
 						</div>
 					  </div>
 					</div>
@@ -120,8 +120,8 @@ if($current_user_id == $user_id)
 						  <thead>
 							<tr>
 							  <th>#</th>
-							  <th><?php echo esc_html__( 'Product', 'exertio_theme' ) ?></th>
-							  <th> <?php echo esc_html__( 'Amount', 'exertio_theme' ) ?></th>
+							  <th><?php echo esc_html__( 'Article', 'exertio_theme' ) ?></th>
+							  <th> <?php echo esc_html__( 'Montant', 'exertio_theme' ) ?></th>
 							</tr>
 						  </thead>
 						  <tbody>
@@ -156,7 +156,7 @@ if($current_user_id == $user_id)
 				  </div>
 				</div>
 			  </div>
-			  <div class="col-md-12"> <a href="javascript:void(0)" class="btn btn-theme pull-right " onclick="printDiv('printableArea')"><?php echo esc_html__( 'Print Invoice', 'exertio_theme' ) ?></a> </div>
+			  <div class="col-md-12"> <a href="javascript:void(0)" class="btn btn-theme pull-right " onclick="printDiv('printableArea')"><?php echo esc_html__( 'Imprimer la facture', 'exertio_theme' ) ?></a> </div>
 			</div>
 		  </div>
 		</div>

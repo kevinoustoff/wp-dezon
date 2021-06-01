@@ -28,11 +28,11 @@ if (!class_exists('exertio_get_services'))
 			$saved_service = get_user_meta(get_current_user_id(), '_service_fav_id_'.$service_id, true);
 
 			$active_saved ='';
-			$save_text = esc_html__('Enregistrer le service','exertio_theme');
+			$save_text = esc_html__('Sauvegarder le service','exertio_theme');
 			if(isset($saved_service) && $saved_service != '')
 			{
 				$active_saved = 'active';
-				$save_text = esc_html__('Déjà enregistré','exertio_theme');	
+				$save_text = esc_html__('Déjà sauvegardé','exertio_theme');	
 			}
 			$limit = $title = '';
 			$limit = fl_framework_get_options('sevices_search_title_limit_grid');
@@ -62,7 +62,7 @@ if (!class_exists('exertio_get_services'))
 							<a href="'.esc_url(get_the_permalink($service_id)).'" title="'.get_the_title($service_id).'">
 								<div class="fr-style-5">'.$title.'</div>
 							</a>
-							<p>'.esc_html__('Starting From','exertio_theme').'<span class="style-6">'.fl_price_separator(get_post_meta($service_id, '_service_price', true), 'html').'</span></p>
+							<p>'.esc_html__('A partir de ','exertio_theme').'<span class="style-6">'.fl_price_separator(get_post_meta($service_id, '_service_price', true), 'html').'</span></p>
 							<div class="fr-top-grid"> <a href="'.esc_url(get_permalink($fid)).'">'.get_profile_img($fid, "freelancer").'</a></div>
 						  </div>
 						  <div class="fr-top-grid-bar">
@@ -97,11 +97,11 @@ if (!class_exists('exertio_get_services'))
 
 			$saved_service = get_user_meta(get_current_user_id(), '_service_fav_id_'.$service_id, true);
 			$active_saved ='';
-			$save_text = esc_html__('Enregistrer le service','exertio_theme');
+			$save_text = esc_html__('Sauvegarder le service','exertio_theme');
 			if(isset($saved_service) && $saved_service != '')
 			{
 				$active_saved = 'active';
-				$save_text = esc_html__('Déjà enregistré','exertio_theme');	
+				$save_text = esc_html__('Déjà sauvegardé','exertio_theme');	
 			}
 			$limit = $title = '';
 			$limit = fl_framework_get_options('sevices_search_title_limit_grid');
@@ -140,7 +140,7 @@ if (!class_exists('exertio_get_services'))
 								  
 							  </div>
 							  <div class="fr-latest-bottom">
-							  <p>Starting From<span>'.fl_price_separator(get_post_meta($service_id, '_service_price', true), 'html').'</span></p>
+							  <p>'.esc_html__('A partir de ','exertio_theme').'<span>'.fl_price_separator(get_post_meta($service_id, '_service_price', true), 'html').'</span></p>
 							  <a href="javascript:void(0)" class="save_service  protip '.$active_saved.'" data-pt-position="top" data-pt-scheme="black"  data-pt-title="'.$save_text.'" data-post-id="'.esc_attr($service_id).'"><i class="fa fa-heart"></i></a>
 							  </div>
 						  </div>
@@ -157,11 +157,11 @@ if (!class_exists('exertio_get_services'))
 			
 			$saved_service = get_user_meta(get_current_user_id(), '_service_fav_id_'.$service_id, true);
 			$active_saved ='';
-			$save_text = esc_html__('Enregistrer le service','exertio_theme');
+			$save_text = esc_html__('Sauvegarder le service','exertio_theme');
 			if(isset($saved_service) && $saved_service != '')
 			{
 				$active_saved = 'active';
-				$save_text = esc_html__('Déjà enregistré','exertio_theme');	
+				$save_text = esc_html__('Déjà sauvegardé','exertio_theme');	
 			}
 			?>
             <div class="col-xl-12 col-xs-12 col-lg-12 col-sm-12 col-md-12  grid-item">
@@ -273,10 +273,7 @@ if (!class_exists('exertio_get_services'))
                             <li>
                             	<?php echo esc_html__('A partir de ','exertio_theme'); ?><span class="style-6"><?php echo fl_price_separator(get_post_meta($service_id, '_service_price', true), 'html'); ?></span>
                             </li>
-                            <!--<li>
-                            	<a href="<?php echo esc_url(get_the_permalink()); ?>" class="btn btn-theme"><?php echo esc_html__( 'Voir les détails', 'exertio_theme' ); ?></a>
-                                <p><?php echo exertio_queued_services($service_id); ?></p>
-                            </li>-->
+                           
                         </ul>
                     </div>
                 </div>

@@ -53,7 +53,7 @@ $order_array = [];
 			$product_name_text = '';
 			if(isset($product_type) && $product_type == 'wallet')
 			{
-				$product_name_text = esc_html__( 'Wallet Amount', 'exertio_theme' );
+				$product_name_text = esc_html__( 'Montant du portefeuille', 'exertio_theme' );
 			}
 			else if(isset($product_type) && $product_type == 'employer-packages' || $product_type == 'freelancer-packages')
 			{
@@ -78,7 +78,7 @@ $order_array = [];
                   <div class="mr-md-3 mr-xl-5">
                     <h2><?php echo esc_html__('Deposit and Invoices','exertio_theme'); ?></h2>
 					<div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
-						<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Dashboard', 'exertio_theme' ); ?>&nbsp;</p>
+						<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 						<?php echo exertio_dashboard_extention_return(); ?>
 					</div>
                   </div>
@@ -95,10 +95,10 @@ $order_array = [];
                     <div class="card-body">
                       <div class="pro-section">
                           <div class="pro-box heading-row">
-                            <div class="pro-coulmn no-flex-grow"><?php echo esc_html__( 'Invoice ID', 'exertio_theme' ) ?> </div>
-                            <div class="pro-coulmn"><?php echo esc_html__( 'Amount', 'exertio_theme' ) ?> </div>
-                            <div class="pro-coulmn"><?php echo esc_html__( 'Payment Status', 'exertio_theme' ) ?> </div>
-                            <div class="pro-coulmn"><?php echo esc_html__( 'Detail', 'exertio_theme' ) ?> </div>
+                            <div class="pro-coulmn no-flex-grow"><?php echo esc_html__( 'Facture N°', 'exertio_theme' ) ?> </div>
+                            <div class="pro-coulmn"><?php echo esc_html__( 'Montant', 'exertio_theme' ) ?> </div>
+                            <div class="pro-coulmn"><?php echo esc_html__( 'Etat du paiement', 'exertio_theme' ) ?> </div>
+                            <div class="pro-coulmn"><?php echo esc_html__( 'Description', 'exertio_theme' ) ?> </div>
                           </div>
                             <?php
                                 if ( !empty($order_array) )
@@ -130,7 +130,7 @@ $order_array = [];
                                             	<?php echo esc_html($array['status']); ?>
                                                 </span>
                                             </div>
-                                            <div class="pro-coulmn"><a href="<?php get_template_part('');?>?ext=invoice-detail&invoice-id=<?php echo esc_html($array['ID']); ?>" class="btn btn-secondary"><?php echo esc_html__( 'View Invoice', 'exertio_theme' ); ?></a></div>
+                                            <div class="pro-coulmn"><a href="<?php get_template_part('');?>?ext=invoice-detail&invoice-id=<?php echo esc_html($array['ID']); ?>" class="btn btn-secondary"><?php echo esc_html__( 'Voir la facture', 'exertio_theme' ); ?></a></div>
                                           </div>
                                       
                                         <?php
@@ -141,7 +141,7 @@ $order_array = [];
                                 {
                                     ?>
                                     <div class="nothing-found">
-                                        <h3><?php echo esc_html__( 'Sorry!!! No Invoice Found', 'exertio_theme' ) ?></h3>
+                                        <h3><?php echo esc_html__( 'Désolé!! Aucune facture trouvée', 'exertio_theme' ) ?></h3>
                                         <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo get_post_meta($alt_id, '_wp_attachment_image_alt', TRUE); ?>">
                                     </div>
                                     <?php	

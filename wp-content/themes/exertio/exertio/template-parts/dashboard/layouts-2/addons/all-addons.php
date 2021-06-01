@@ -68,7 +68,7 @@ if ( get_query_var( 'paged' ) ) {
           <div class="mr-md-3 mr-xl-5">
             <h2><?php echo esc_html__('My Addons','exertio_theme').esc_html(' ('. $total_count.')');?></h2>
             <div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
-				<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Dashboard', 'exertio_theme' ); ?>&nbsp;</p>
+				<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 				<?php echo exertio_dashboard_extention_return(); ?>
 			</div>
           </div>
@@ -84,8 +84,8 @@ if ( get_query_var( 'paged' ) ) {
               <div class="pro-box heading-row">
                 <div class="pro-coulmn pro-title">
                 </div>
-                <div class="pro-coulmn"><?php echo esc_html__( 'Date Created', 'exertio_theme' ) ?> </div>
-                <div class="pro-coulmn"><?php echo esc_html__( 'Price', 'exertio_theme' ) ?> </div>
+                <div class="pro-coulmn"><?php echo esc_html__( 'Date de création', 'exertio_theme' ) ?> </div>
+                <div class="pro-coulmn"><?php echo esc_html__( 'Prix', 'exertio_theme' ) ?> </div>
               </div>
 				<?php
 					if ( $the_query->have_posts() )
@@ -104,19 +104,19 @@ if ( get_query_var( 'paged' ) ) {
 									</h4>
 									<span class="pro-meta-box">
 										<span class="pro-meta">
-											<i class="fal fa-clock"></i> <?php /*echo	esc_html(get_the_content());*/ echo	esc_html(substr(get_the_content(),0,40)).'.....'; ?>
+											<i class="fal fa-clock"></i> <?php echo	esc_html(substr(get_the_content(),0,40)).'.....'; ?>
 										</span>
 									</span>
 									<span class="pro-btns">
-										<a href="<?php echo esc_attr(get_permalink($exertio_theme_options['user_dashboard_page']));?>?ext=create-addon&aid=<?php echo esc_html($pid); ?>" class="btn btn-inverse-primary btn-sm"> <i class="fal fa-edit"></i> <?php echo esc_html__( 'Edit', 'exertio_theme' ); ?></a>
-										<a href="javascript:void(0)" class="btn btn-inverse-danger btn-sm remove_addon" data-pid="<?php echo esc_attr($pid); ?>"> <i class="fal fa-times-octagon"></i> <?php echo esc_html__( 'Remove', 'exertio_theme' ); ?></a>
+										<a href="<?php echo esc_attr(get_permalink($exertio_theme_options['user_dashboard_page']));?>?ext=create-addon&aid=<?php echo esc_html($pid); ?>" class="btn btn-inverse-primary btn-sm"> <i class="fal fa-edit"></i> <?php echo esc_html__( 'Modifier', 'exertio_theme' ); ?></a>
+										<a href="javascript:void(0)" class="btn btn-inverse-danger btn-sm remove_addon" data-pid="<?php echo esc_attr($pid); ?>"> <i class="fal fa-times-octagon"></i> <?php echo esc_html__( 'Supprimer', 'exertio_theme' ); ?></a>
 									</span>
 								</div>
 								<div class="pro-coulmn">
 									<i class="fal fa-clock"></i> <?php echo	esc_html($posted_date); ?>
 								</div>
 								<div class="pro-coulmn">
-                                	<?php echo esc_html($exertio_theme_options['fl_currency']).' '.esc_html(get_post_meta( $pid, '_addon_price', true )); ?>
+                                	<?php echo esc_html(get_post_meta( $pid, '_addon_price', true )).' '.esc_html($exertio_theme_options['fl_currency']); ?>
 								</div>
 							  </div>
 						  
@@ -129,8 +129,8 @@ if ( get_query_var( 'paged' ) ) {
 					{
 						?>
                         <div class="nothing-found">
-                            <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo esc_html__( 'No Addons found', 'exertio_theme' ) ?> ">
-                            <h3><?php echo esc_html__( 'Sorry!!! No Addons Found', 'exertio_theme' ) ?></h3>
+                            <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo esc_html__( 'Aucune offre trouvé', 'exertio_theme' ) ?> ">
+                            <h3><?php echo esc_html__( 'Désolé!! Aucune offre supplémentaire trouvée pour le moment', 'exertio_theme' ) ?></h3>
                         </div>
                         <?php	
 					}

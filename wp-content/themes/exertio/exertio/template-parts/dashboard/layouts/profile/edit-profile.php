@@ -27,9 +27,9 @@ $employer_departments = get_post_meta($pid, '_employer_department', true);
               <div class="d-flex justify-content-between flex-wrap">
                 <div class="d-flex align-items-end flex-wrap">
                   <div class="mr-md-3 mr-xl-5">
-                    <h2><?php echo esc_html__('Edit Profile','exertio_theme'); ?></h2>
+                    <h2><?php echo esc_html__('Modifier le profil','exertio_theme'); ?></h2>
                     <div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
-						<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Dashboard', 'exertio_theme' ); ?>&nbsp;</p>
+						<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 						<?php echo exertio_dashboard_extention_return(); ?>
 					  </div>
                   </div>
@@ -45,7 +45,7 @@ $employer_departments = get_post_meta($pid, '_employer_department', true);
                     <div class="profile-cardmeta">
                     	<span class="profile-name mb-2"> <?php echo exertio_get_username('employer',$pid ); ?></span>
                         <span class="p-email mb-2"> @<?php echo esc_html($post->post_title); ?></span>
-                        <a href="<?php  echo esc_url(get_permalink($pid)); ?>" class=""><?php echo esc_html__('View Profile','exertio_theme'); ?></a>
+                        <a href="<?php  echo esc_url(get_permalink($pid)); ?>" class=""><?php echo esc_html__('Voir le profil','exertio_theme'); ?></a>
                     </div>
                     <div class="cardmeta-footer">
                     	<ul class="profile-details">
@@ -55,25 +55,6 @@ $employer_departments = get_post_meta($pid, '_employer_department', true);
                                     <span><?php echo esc_html($user_info->user_email); ?></span>
                                 </div>
                             </li>
-                             <?php  if(isset($exertio_theme_options['employer_department']) && $exertio_theme_options['employer_department'] == 3){ } else{?>
-                            <li>
-                                <i class="fal fa-briefcase"></i>
-                                <div class="profile-meta">
-                                <?php
-								if($employer_departments != '')
-								{ 
-									$departments = get_term( $employer_departments );
-									if(!empty($departments) && ! is_wp_error($departments))
-									{
-									?>
-										<span><?php echo esc_html($departments->name); ?></span>
-									<?php
-									}
-								}
-                                ?>
-                                </div>
-                            </li>
-                            <?php }?>
                             <li>
                                 <i class="fal fa-signature"></i>
                                 <div class="profile-meta">
@@ -103,7 +84,7 @@ $employer_departments = get_post_meta($pid, '_employer_department', true);
                 </div>
               </div>
               <div class="card-widget mb-4">
-                   <h4 class="card-title"><?php echo esc_html__('Change Password','exertio_theme'); ?></h4>
+                   <h4 class="card-title"><?php echo esc_html__('Modifier le mot de passe','exertio_theme'); ?></h4>
                   <div class="card">
                     
                     <div class="card-body">
@@ -111,20 +92,20 @@ $employer_departments = get_post_meta($pid, '_employer_department', true);
                       <form id="change_pass_form">
                           <div class="form-row">
                             <div class="form-group col-md-12">
-                              <label><?php echo esc_html__('Old Password','exertio_theme'); ?></label>
-                              <input type="password" class="form-control" name="old_password" autocomplete="off" required data-smk-msg="<?php echo esc_html__('Please provide current password','exertio_theme'); ?>">
+                              <label><?php echo esc_html__('Ancien mot de passe','exertio_theme'); ?></label>
+                              <input type="password" class="form-control" name="old_password" autocomplete="off" required data-smk-msg="<?php echo esc_html__('Veuillez renseigner le mot de passe actuel.','exertio_theme'); ?>">
                             </div>
                             <div class="form-group col-md-12">
-                              <label><?php echo esc_html__('New Password','exertio_theme'); ?></label>
-                              <input type="password" class="form-control" name="new_password" autocomplete="off" required data-smk-msg="<?php echo esc_html__('Enter new password. Minimum 6 characters','exertio_theme'); ?>">
+                              <label><?php echo esc_html__('Nouveau mot de passe','exertio_theme'); ?></label>
+                              <input type="password" class="form-control" name="new_password" autocomplete="off" required data-smk-msg="<?php echo esc_html__('Saisissez un nouveau mot de passe.Minimum 6 caractères.','exertio_theme'); ?>">
                             </div>
                             <div class="form-group col-md-12">
-                              <label><?php echo esc_html__('Confirm Password','exertio_theme'); ?></label>
-                              <input type="password" class="form-control" name="confirm_password" autocomplete="off" required data-smk-msg="<?php echo esc_html__('confirm password required','exertio_theme'); ?>">
+                              <label><?php echo esc_html__('Confirmer le nouveau mot de passe','exertio_theme'); ?></label>
+                              <input type="password" class="form-control" name="confirm_password" autocomplete="off" required data-smk-msg="<?php echo esc_html__('Confirmation du mot de passe requise','exertio_theme'); ?>">
                             </div>
                             <div class="col-md-12">
                                 <button type="button" class="btn btn-theme" id="change_password_btn" data-post-id="<?php echo esc_attr($pid) ?>">
-                                    <?php echo esc_html__('Change Password','exertio_theme'); ?>
+                                    <?php echo esc_html__('Modifier','exertio_theme'); ?>
                                 </button>
                                 <input type="hidden" id="change_psw_nonce" value="<?php echo wp_create_nonce('fl_change_psw_secure'); ?>"  />
                             </div>
@@ -138,7 +119,7 @@ $employer_departments = get_post_meta($pid, '_employer_department', true);
 				{
 			  ?>
                   <div class="card-widget">
-                       <h4 class="card-title"><?php echo esc_html__('Delete Account','exertio_theme'); ?></h4>
+                       <h4 class="card-title"><?php echo esc_html__('Supprimer le compte','exertio_theme'); ?></h4>
                       <div class="card">
                         
                         <div class="card-body">
@@ -154,7 +135,7 @@ $employer_departments = get_post_meta($pid, '_employer_department', true);
                             </p>
                             <div>
                                 <button type="button" class="btn btn-black" id="delete_account" data-user-id="<?php echo esc_attr($current_user_id) ?>">
-                                    <?php echo esc_html__('Delete My Account','exertio_theme'); ?>
+                                    <?php echo esc_html__('Supprimer','exertio_theme'); ?>
                                 </button>
                                 <input type="hidden" id="delete_pro_nonce" value="<?php echo wp_create_nonce('fl_delete_pro_secure'); ?>"  />
                             </div>
@@ -187,32 +168,32 @@ $employer_departments = get_post_meta($pid, '_employer_department', true);
 					?>
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title"><?php echo esc_html__('Profile details','exertio_theme'); ?></h4>
+                  <h4 class="card-title"><?php echo esc_html__('Détails du profil','exertio_theme'); ?></h4>
                   
                   <form id="employer_form">
                   <div class="form-row">
                     <div class="form-group col-md-6">
-                      <label><?php echo esc_html__('Username','exertio_theme'); ?></label>
-                      <input type="text" class="form-control" name="emp_name" value="<?php echo esc_attr($post->post_title); ?>" required data-smk-msg="<?php echo esc_html__('Please provide username','exertio_theme'); ?>">
-						<p> <?php echo esc_html__('Be carefull while changing your username.','exertio_theme'); ?></p>
+                      <label><?php echo esc_html__('Identifiant','exertio_theme'); ?></label>
+                      <input type="text" class="form-control" name="emp_name" value="<?php echo esc_attr($post->post_title); ?>" required data-smk-msg="<?php echo esc_html__('Veuillez saisir un identifiant','exertio_theme'); ?>">
+						<p> <?php echo esc_html__('Soyez prudent lorsque vous changez votre identifiant','exertio_theme'); ?></p>
                     </div>
                     <div class="form-group col-md-6">
-                      <label><?php echo esc_html__('Email Address','exertio_theme'); ?></label>
+                      <label><?php echo esc_html__('Email','exertio_theme'); ?></label>
                       <input type="email" class="form-control" name="emp_email" disabled value="<?php echo esc_attr($user_info->user_email); ?>">
-                      <p> <?php echo esc_html__('You can not change your email address.','exertio_theme'); ?></p>
+                      <p> <?php echo esc_html__('Vous ne pouvez pas changer votre email.','exertio_theme'); ?></p>
                     </div>
                   </div>
                   <div class="form-row">
                     
                     <div class="form-group col-md-6">
-                      <label><?php echo esc_html__('Dispaly Name','exertio_theme'); ?></label>
-                      <input type="text" class="form-control" name="emp_display_name" value="<?php echo esc_attr(get_post_meta( $pid, '_employer_dispaly_name' , true )); ?>" <?php if($exertio_theme_options['employer_dispaly_name'] == 1){ ?>required data-smk-msg="<?php echo esc_html__('Please provide display name','exertio_theme'); }?>">
-                      <p> <?php echo esc_html__('It will display on public profile','exertio_theme'); ?></p>
+                      <label><?php echo esc_html__('Nom','exertio_theme'); ?></label>
+                      <input type="text" class="form-control" name="emp_display_name" value="<?php echo esc_attr(get_post_meta( $pid, '_employer_dispaly_name' , true )); ?>" <?php if($exertio_theme_options['employer_dispaly_name'] == 1){ ?>required data-smk-msg="<?php echo esc_html__('Veuillez fournir le nom à afficher','exertio_theme'); }?>">
+                      <p> <?php echo esc_html__('Il sera affiché publiquement sur votre profil','exertio_theme'); ?></p>
                     </div>
                     <div class="form-group col-md-6">
-                      <label><?php echo esc_html__('Tagline','exertio_theme'); ?></label>
-                      <input type="text" class="form-control" name="emp_tagline" value="<?php echo esc_attr(get_post_meta( $pid, '_employer_tagline' , true )); ?>"  <?php if($exertio_theme_options['employer_tagline'] == 1){ ?>required data-smk-msg="<?php echo esc_html__('Please provide tagline','exertio_theme'); }?>">
-                      <p> <?php echo esc_html__('It will display on public profile','exertio_theme'); ?></p>
+                      <label><?php echo esc_html__('Vos principales qualités','exertio_theme'); ?></label>
+                      <input type="text" class="form-control" name="emp_tagline" value="<?php echo esc_attr(get_post_meta( $pid, '_employer_tagline' , true )); ?>"  <?php if($exertio_theme_options['employer_tagline'] == 1){ ?>required data-smk-msg="<?php echo esc_html__('Veuillez saisir ','exertio_theme'); }?>">
+                      <p> <?php echo esc_html__('Il sera affiché publiquement sur votre profil','exertio_theme'); ?></p>
                     </div>
                   </div>
                   <div class="form-row">
@@ -226,8 +207,8 @@ $employer_departments = get_post_meta($pid, '_employer_department', true);
 						{
 						?>
                             <div class="form-group col-md-6">
-                              <label><?php echo esc_html__('Contact Number','exertio_theme'); ?></label>
-                              <input type="number" class="form-control" name="emp_contact" value="<?php echo esc_attr(get_post_meta( $pid, '_employer_contact_number' , true )); ?>" <?php if($exertio_theme_options['employer_contact_no'] == 1){ ?>required data-smk-msg="<?php echo esc_html__('Please provide contact number','exertio_theme'); }?>">
+                              <label><?php echo esc_html__('Téléphone','exertio_theme'); ?></label>
+                              <input type="number" class="form-control" name="emp_contact" value="<?php echo esc_attr(get_post_meta( $pid, '_employer_contact_number' , true )); ?>" <?php if($exertio_theme_options['employer_contact_no'] == 1){ ?>required data-smk-msg="<?php echo esc_html__('Veuillez fournir votre numéro de téléphone','exertio_theme'); }?>">
                             </div>
 						<?php
                     	} 
@@ -311,11 +292,11 @@ $employer_departments = get_post_meta($pid, '_employer_department', true);
 							$custom_location_check = '';
 							if($exertio_theme_options['employer_custom_locationt'] == 1)
 							{
-								$custom_location_check = 'required data-smk-msg="'.esc_html__('Please select location','exertio_theme').'"';	
+								$custom_location_check = 'required data-smk-msg="'.esc_html__('Sélectionner votre localisation','exertio_theme').'"';	
 							}
 						?>
                             <div class="form-group col-md-6">
-                              <label><?php echo esc_html__('Location','exertio_theme'); ?></label>
+                              <label><?php echo esc_html__('Localisation','exertio_theme'); ?></label>
                               <?php
                               $location_taxonomies = exertio_get_terms('employer-locations');
                                 if ( !empty($location_taxonomies) )
@@ -336,7 +317,7 @@ $employer_departments = get_post_meta($pid, '_employer_department', true);
                 </div>
                 <div class="form-row">
                 <div class="form-group col-md-6">
-                <label><?php echo esc_html__('Profile Picture','exertio_theme'); ?></label>
+                <label><?php echo esc_html__('Photo de profil','exertio_theme'); ?></label>
                 <span class="profile-img-container">
                 <?php 
                 if(!empty($pro_img_id))
@@ -349,12 +330,12 @@ $employer_departments = get_post_meta($pid, '_employer_department', true);
                 ?>
                 </span>
                 <div class="upload-btn-wrapper">
-                <button class="btn btn-theme-secondary mt-2 mt-xl-0"><?php echo esc_html__('Upload New Picture','exertio_theme'); ?></button>
+                <button class="btn btn-theme-secondary mt-2 mt-xl-0"><?php echo esc_html__('Mettre une photo','exertio_theme'); ?></button>
                 <input type="file" id="emp_profile_pic" name="emp_profile_pic" accept = "image/*" data-post-id="<?php echo esc_attr($pid) ?>" data-post-meta ="_profile_pic_attachment_id"/>
                 </div>
                 </div>
                 <div class="form-group col-md-6">
-                <label><?php echo esc_html__('Cover Picture','exertio_theme'); ?></label>
+                <label><?php echo esc_html__('Photo de couverture','exertio_theme'); ?></label>
                 <div class="upload-btn-wrapper">
                 <span class="banner-img-container">
                 <?php 
@@ -371,7 +352,7 @@ $employer_departments = get_post_meta($pid, '_employer_department', true);
                 ?>
                 </span>
                 <div class="upload-btn-wrapper">
-                <button class="btn btn-theme-secondary mt-2 mt-xl-0" ><?php echo esc_html__('Upload New Cover','exertio_theme'); ?></button>
+                <button class="btn btn-theme-secondary mt-2 mt-xl-0" ><?php echo esc_html__('Mettre une photo de couverture','exertio_theme'); ?></button>
                 <input type="file" id="emp_cover_image" name="banner_img" accept = "image/*" data-post-id="<?php echo esc_attr($pid) ?>" data-post-meta ="_employer_banner_id" />
                 </div>
                 </div>
@@ -521,8 +502,8 @@ $employer_departments = get_post_meta($pid, '_employer_department', true);
                         </script>
                         <div class="form-row">
                         <div class="form-group col-md-12">
-                          <label><?php echo esc_html__('Address','exertio_theme'); ?></label>
-                          <input type="text" class="form-control" name="emp_address" id="searchMapInput" value="<?php echo get_post_meta($pid, '_employer_address', true); ?>" <?php if($exertio_theme_options['employer_map'] == 1){ ?>required data-smk-msg="<?php echo esc_html__('Please select address','exertio_theme'); }?>">
+                          <label><?php echo esc_html__('Adresse','exertio_theme'); ?></label>
+                          <input type="text" class="form-control" name="emp_address" id="searchMapInput" value="<?php echo get_post_meta($pid, '_employer_address', true); ?>" <?php if($exertio_theme_options['employer_map'] == 1){ ?>required data-smk-msg="<?php echo esc_html__('Veuillez renseigner une adresse','exertio_theme'); }?>">
                           <i class=" mdi mdi-target" id="abc"></i>
                         </div>
                         <div class="form-group col-md-12">
@@ -548,35 +529,28 @@ $employer_departments = get_post_meta($pid, '_employer_department', true);
 					?>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                              <label><?php echo esc_html__('Facebook profile URL','exertio_theme'); ?></label>
+                              <label><?php echo esc_html__('Facebook','exertio_theme'); ?></label>
                               <input type="url" class="form-control" name="facebook_url" value="<?php echo get_post_meta($pid, '_employer_facebook_url', true); ?>">
                             </div>
                             <div class="form-group col-md-6">
-                              <label><?php echo esc_html__('Twitter profile URL','exertio_theme'); ?></label>
+                              <label><?php echo esc_html__('Twitter','exertio_theme'); ?></label>
                               <input type="url" class="form-control" name="twitter_url" value="<?php echo get_post_meta($pid, '_employer_twitter_url', true); ?>">
                             </div>
                             <div class="form-group col-md-6">
-                              <label><?php echo esc_html__('LinkedIn profile URL','exertio_theme'); ?></label>
+                              <label><?php echo esc_html__('LinkedIn','exertio_theme'); ?></label>
                               <input type="url" class="form-control" name="linkedin_url" value="<?php echo get_post_meta($pid, '_employer_linkedin_url', true); ?>">
                             </div>
                             <div class="form-group col-md-6">
-                              <label><?php echo esc_html__('Instagram profile URL','exertio_theme'); ?></label>
+                              <label><?php echo esc_html__('Instagram','exertio_theme'); ?></label>
                               <input type="url" class="form-control" name="instagram_url" value="<?php echo get_post_meta($pid, '_employer_instagram_url', true); ?>">
                             </div>
-                            <div class="form-group col-md-6">
-                              <label><?php echo esc_html__('Dribble profile URL','exertio_theme'); ?></label>
-                              <input type="url" class="form-control" name="dribble_url" value="<?php echo get_post_meta($pid, '_employer_dribble_url', true); ?>">
-                            </div>
-                            <div class="form-group col-md-6">
-                              <label><?php echo esc_html__('Behance profile URL','exertio_theme'); ?></label>
-                              <input type="url" class="form-control" name="behance_url" value="<?php echo get_post_meta($pid, '_employer_behance_url', true); ?>">
-                            </div>
+                           
                         </div>
                     <?php
                     }
                     ?>
                     <button type="button" class="btn btn-theme btn-loading" id="employer_profile_btn" data-post-id="<?php echo esc_attr($pid) ?>">
-                        	<?php echo esc_html__('Save Profile','exertio_theme'); ?>
+                        	<?php echo esc_html__('Enregistrer','exertio_theme'); ?>
                             <input type="hidden" id="save_pro_nonce" value="<?php echo wp_create_nonce('fl_save_pro_secure'); ?>"  />
                             <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
                     </button>

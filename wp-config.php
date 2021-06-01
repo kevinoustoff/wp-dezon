@@ -26,7 +26,7 @@ define( 'DB_NAME', 'dezon' );
 define( 'DB_USER', 'root' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'root' );
+define( 'DB_PASSWORD', 'root2021' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
@@ -77,11 +77,7 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-/* define('WP_ALLOW_REPAIR', true); */
 define( 'WP_DEBUG', true );
-/* define( 'WP_HOME', 'localhost/wordpress' );
-define( 'WP_SITEURL', 'localhost/wordpress' );  */
-
 
 /* That's all, stop editing! Happy publishing. */
 

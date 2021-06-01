@@ -82,7 +82,7 @@ if($post == '')
               <div class="d-flex justify-content-between flex-wrap">
                 <div class="d-flex align-items-end flex-wrap">
                   <div class="mr-md-3 mr-xl-5">
-                    <h2><?php echo esc_html__('Add New Service ','exertio_theme'); ?></h2>
+                    <h2><?php echo esc_html__('Ajouter un service ','exertio_theme'); ?></h2>
                     <div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
 						<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 						<?php echo exertio_dashboard_extention_return(); ?>
@@ -153,118 +153,45 @@ if($post == '')
 								</div>
 								<?php
 							}
-							if(fl_framework_get_options('services_english_level') == 3)
-							{
-								
-							}
-							else
-							{
-								$eng_level_check = '';
-								if(fl_framework_get_options('services_english_level') == 1)
-								{
-									$eng_level_check = 'required data-smk-msg="'.esc_html__('Please select english level','exertio_theme').'"';	
-								}
-								?>
-								<div class="form-group col-md-6">
-								  <label><?php echo esc_html__('English Level','exertio_theme'); ?></label>
-								  <?php
-								  $english_taxonomies = exertio_get_terms('services-english-level');
-									if ( !empty($english_taxonomies) )
-									{
-										$english_level = get_post_meta($sid, '_service_eng_level', true);
-										$english = '<select name="english_level" class="form-control general_select" '.$eng_level_check.'>';
-										$english .= '<option value=""> '. __( "English Level", "exertio_theme" ) .'</option>';
-										foreach( $english_taxonomies as $english_taxonomy ) {
-											if($english_taxonomy->term_id == $english_level){ $selected = 'selected ="selected"';}else{$selected = ''; }
-											if( $english_taxonomy->parent == 0 ) {
-												 $english .= '<option value="'. esc_attr( $english_taxonomy->term_id ) .'" '.$selected.'>
-														'. esc_html( $english_taxonomy->name ) .'</option>';
-											}
-										}
-										$english.='</select>';
-										echo wp_return_echo($english);
-									}
-								?>
-								</div>
-                            <?php
-							}
 							?>
-                      </div>
-                    <div class="form-row">
-                    	<?php
-						if(fl_framework_get_options('services_response_time') == 3)
-						{
-							
-						}
-						else
-						{
-							$response_time_check = '';
-							if(fl_framework_get_options('services_response_time') == 1)
-							{
-								$response_time_check = 'required data-smk-msg="'.esc_html__('Please select response time','exertio_theme').'"';	
-							}
-							?>
-							<div class="form-group col-md-6">
-							  <label><?php echo esc_html__('Temps de réponse','exertio_theme'); ?></label>
-							  <?php
-							  $response_taxonomies = exertio_get_terms('response-time');
-								if ( !empty($response_taxonomies) )
-								{
-									$response_time = get_post_meta($sid, '_response_time', true);
-									$response = '<select name="response_time" class="form-control general_select" '.$response_time_check.'>';
-									$response .= '<option value=""> '. __( "Temps de réponse ", "exertio_theme" ) .'</option>';
-									foreach( $response_taxonomies as $response_taxonomy ) {
-										if($response_taxonomy->term_id == $response_time){ $selected = 'selected ="selected"';}else{$selected = ''; }
-										if( $response_taxonomy->parent == 0 ) {
 
-											 $response .= '<option value="'. esc_attr( $response_taxonomy->term_id ) .'" '.$selected.'>
-													'. esc_html( $response_taxonomy->name ) .'</option>';
-										}
-									}
-									$response.='</select>';
-									echo wp_return_echo($response);
-								}
-							?>
-							<p><?php echo esc_html__('Quel sera le temps de réponse aux demandes des clients?','exertio_theme'); ?></p>
-							</div>
 							<?php
-						}
-						if(fl_framework_get_options('services_delivery_time') == 3)
-						{
-							
-						}
-						else
-						{
-							$delivery_time_check = '';
-							if(fl_framework_get_options('services_delivery_time') == 1)
-							{
-								$delivery_time_check = 'required data-smk-msg="'.esc_html__('Veuillez sélectionner le délai de livraison','exertio_theme').'"';	
-							}
-							?>
-							<div class="form-group col-md-6">
-							  <label><?php echo esc_html__('Délai de livraison','exertio_theme'); ?></label>
-							  <?php
-							  $delivery_taxonomies = exertio_get_terms('delivery-time');
-								if ( !empty($delivery_taxonomies) )
+								if(fl_framework_get_options('services_delivery_time') == 3)
 								{
-									$delivery_time = get_post_meta($sid, '_delivery_time', true);
-									$delivery = '<select name="delivery_time" class="form-control general_select" '.$delivery_time_check.'>';
-									$delivery .= '<option value=""> '. __( "Délai de livraison", "exertio_theme" ) .'</option>';
-									foreach( $delivery_taxonomies as $delivery_taxonomy ) {
-										if($delivery_taxonomy->term_id == $delivery_time){ $selected = 'selected ="selected"';}else{$selected = ''; }
-										if( $delivery_taxonomy->parent == 0 ) {
-											 $delivery .= '<option value="'. esc_attr( $delivery_taxonomy->term_id ) .'" '.$selected.'>
-													'. esc_html( $delivery_taxonomy->name ) .'</option>';
-										}
-									}
-									$delivery.='</select>';
-									echo wp_return_echo($delivery);
+									
 								}
-							?>
-							</div>
-							<?php
-						}
-						?>
+								else
+								{
+									$delivery_time_check = '';
+									if(fl_framework_get_options('services_delivery_time') == 1)
+									{
+										$delivery_time_check = 'required data-smk-msg="'.esc_html__('Veuillez sélectionner le délai de livraison','exertio_theme').'"';	
+									}
+									?>
+									<div class="form-group col-md-6">
+									  <label><?php echo esc_html__('Délai de livraison','exertio_theme'); ?></label>
+									  <?php
+									  $delivery_taxonomies = exertio_get_terms('delivery-time');
+										if ( !empty($delivery_taxonomies) )
+										{
+											$delivery_time = get_post_meta($sid, '_delivery_time', true);
+											$delivery = '<select name="delivery_time" class="form-control general_select" '.$delivery_time_check.'>';
+											$delivery .= '<option value=""> '. __( "Délai de livraison", "exertio_theme" ) .'</option>';
+											foreach( $delivery_taxonomies as $delivery_taxonomy ) {
+												if($delivery_taxonomy->term_id == $delivery_time){ $selected = 'selected ="selected"';}else{$selected = ''; }
+												if( $delivery_taxonomy->parent == 0 ) {
+													 $delivery .= '<option value="'. esc_attr( $delivery_taxonomy->term_id ) .'" '.$selected.'>
+															'. esc_html( $delivery_taxonomy->name ) .'</option>';
+												}
+											}
+											$delivery.='</select>';
+											echo wp_return_echo($delivery);
+										}
+									?>
+									</div>
+									<?php
+								}
+								?>
                       </div>
                       <div class="form-row">
                       	<?php
@@ -293,6 +220,47 @@ if($post == '')
 							<?php
 						}
 						?>
+						<?php
+							
+
+							if(fl_framework_get_options('services_english_level') == 3)
+							{
+								
+							}
+							else
+							{
+
+							
+								$eng_level_check = '';
+								if(fl_framework_get_options('services_english_level') == 1)
+								{
+									$eng_level_check = 'required data-smk-msg="'.esc_html__('Veuillez choisir le niveau de compétence','exertio_theme').'"';	
+								}
+								?>
+								<div class="form-group col-md-6">
+								  <label><?php echo esc_html__('Niveau de compétence','exertio_theme'); ?></label>
+								  <?php
+								  $english_taxonomies = exertio_get_terms('services-english-level');
+									if ( !empty($english_taxonomies) )
+									{
+										$english_level = get_post_meta($sid, '_service_eng_level', true);
+										$english = '<select name="english_level" class="form-control general_select" '.$eng_level_check.'>';
+										$english .= '<option value=""> '. __( "Sélectionner le niveau", "exertio_theme" ) .'</option>';
+										foreach( $english_taxonomies as $english_taxonomy ) {
+											if($english_taxonomy->term_id == $english_level){ $selected = 'selected ="selected"';}else{$selected = ''; }
+											if( $english_taxonomy->parent == 0 ) {
+												 $english .= '<option value="'. esc_attr( $english_taxonomy->term_id ) .'" '.$selected.'>
+														'. esc_html( $english_taxonomy->name ) .'</option>';
+											}
+										}
+										$english.='</select>';
+										echo wp_return_echo($english);
+									}
+								?>
+								</div>
+                            <?php
+							}
+							?>
                       </div>
                     
                     </div>
@@ -341,7 +309,7 @@ if($post == '')
 										?>
 									</div>
 									<a href="javascript:void(0);" class="add_youtube_more btn btn-theme" title="Add field">
-										<?php echo __( "Ajouter plus", 'exertio_theme' ); ?>
+										<?php echo __( "Ajouter", 'exertio_theme' ); ?>
 									</a>
 									<p><?php echo __( "Veuillez fournir uniquement les URL des vidéos YouTube.", "exertio_theme" ); ?></p>
 								</div>
@@ -630,7 +598,7 @@ if($post == '')
                             <div class="col-md-12">
                             	<div class="submit-button-box">
                                     <button type="button" class="btn btn-theme btn-loading" id="fl_services_btn" data-post-id="<?php echo esc_attr($sid) ?>">
-                                            <?php echo esc_html__('Publish Service','exertio_theme'); ?>
+                                            <?php echo esc_html__('Publier','exertio_theme'); ?>
                                             <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
                                             <input type="hidden" id="save_service_nonce" value="<?php echo wp_create_nonce('fl_save_service_secure'); ?>"  />
                                     </button>
@@ -643,13 +611,13 @@ if($post == '')
             <div class="col-xl-4 col-lg-12 col-md-12 grid-margin stretch-card">
                 <div class="card mb-4">
                         <div class="card-body side-addons">
-                            <h4 class="card-title"><?php echo esc_html__('Services Addons','exertio_theme'); ?></h4>
+                            <h4 class="card-title"><?php echo esc_html__('Options supplémentaires','exertio_theme'); ?></h4>
                             <div class="form-row">
                                 <div class="col-md-12">
                                     <?php
 									if(isset($addons) && empty($addons))
 									{
-										echo '<p>'.esc_html__('No Addon Available','exertio_theme').'</p>';
+										echo '<p>'.esc_html__('Aucune option disponible pour le moment','exertio_theme').'</p>';
 									}
                                     $slected_id = json_decode(get_post_meta( $sid, '_services_addon', true ));
                                     foreach ( $addons as $addon ) {
@@ -673,7 +641,7 @@ if($post == '')
                                             </div>
                                             <div class="addon-meta">
                                                 <label class="addon-heading"><?php echo esc_html(get_the_title($addon_id)); ?></label>
-                                                <span class="addon-price"> <span><?php echo esc_html__('Addon Price ','exertio_theme'); ?></span> <?php echo fl_price_separator(get_post_meta( $addon_id, '_addon_price', true )); ?></span>
+                                                <span class="addon-price"> <span><?php echo esc_html__('Prix ','exertio_theme'); ?></span> <?php echo fl_price_separator(get_post_meta( $addon_id, '_addon_price', true )); ?></span>
                                                 <p><?php echo esc_html($addon->post_content); ?></p>
                                             </div>
                                         </div>
@@ -692,7 +660,7 @@ if($post == '')
 					?>
 						<div class="card mb-4">
 							<div class="card-body side-faqs">
-								<h4 class="card-title"><?php echo esc_html__('Add FAQs','exertio_theme'); ?></h4>
+								<h4 class="card-title"><?php echo esc_html__('Ajouter des FAQ','exertio_theme'); ?></h4>
 								<div class="form-row">
 									<div class="col-md-12">
 										<div class="faqs-wrapper sortable">
@@ -707,7 +675,7 @@ if($post == '')
 													{
 														?>
 														<div class="faqs-box">
-															<h4><?php echo esc_html__('FAQ No','exertio_theme'); ?></h4>
+															<h4><?php echo esc_html__('FAQ N°','exertio_theme'); ?></h4>
 															<ul><li><i class="fal fa-arrows"></i></li><li class="faq_more_remove"><i class="fal fa-times-circle"></i></li></ul>
 															<div class="faqs-box-meta">
 																<div class="form-group">
@@ -724,9 +692,9 @@ if($post == '')
 												?>
                                         </div>
                                         <a href="javascript:void(0);" class="add_faq_more btn btn-theme" title="Add field">
-											<?php echo __( "Add More", 'exertio_theme' ); ?>
+											<?php echo __( "Ajouter", 'exertio_theme' ); ?>
                                         </a>
-                                        <p><?php echo __( "You can rearrange and add multiple FAQ's", "exertio_theme" ); ?></p>
+                                        <p><?php echo __( "Vous pouvez réorganiser et ajouter plusieurs FAQ", "exertio_theme" ); ?></p>
 									</div>
 								</div>
 							</div>
