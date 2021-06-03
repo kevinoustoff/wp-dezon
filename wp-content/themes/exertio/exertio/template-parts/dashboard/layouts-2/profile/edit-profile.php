@@ -376,7 +376,7 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
                    </div>
                    <div class="form-row">
                         <div class="form-group col-md-6">
-                          <label><?php echo esc_html__('Photo de profil','exertio_theme'); ?></label>
+                          <label><?php echo esc_html__('Photo de profil', 'exertio_theme'); ?></label>
                                 <span class="profile-img-container">
                                 <?php 
                                     if(!empty($pro_img_id))

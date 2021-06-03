@@ -133,7 +133,25 @@
         $userGeneral["freelancer-language"] = get_post_meta($pid, '_freelancer_language', true);
         $userGeneral["freelancer-skills"] =  json_decode(stripslashes(get_post_meta($pid, '_freelancer_skills', true)), true);
         $skills_taxonomies = exertio_get_terms('freelancer-skills');
+        //$userGeneral["freelancer-locations"] =  get_hierarchical_terms('freelancer-locations', '_freelancer_location', $pid );
+        $location_id =  get_post_meta($pid, '_freelancer_location' , true );
+        $taxonomies = exertio_get_terms("freelancer-locations");
+        $hierarchy = _get_term_hierarchy("freelancer-locations");
+        
+        foreach($taxonomies as $term)
+        {
+            /* if($term->parent)
+			{
+				continue;
+            } */
+            
+            if($term->term_id == intval($location_id))
+            { 
+              $userGeneral["freelancer-locations"] = $term->name;
+            }
+            
 
+        }
         /* foreach($i=0;$i<count($user))
         {
 
