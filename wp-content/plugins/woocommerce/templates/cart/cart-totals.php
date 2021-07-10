@@ -22,13 +22,13 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
-	<h2><?php esc_html_e( 'Cart totals', 'woocommerce' ); ?></h2>
+	<h2><?php esc_html_e( 'Total', 'woocommerce' ); ?></h2>
 
 	<table cellspacing="0" class="shop_table shop_table_responsive">
 
 		<tr class="cart-subtotal">
-			<th><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></th>
-			<td data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
+			<th><?php esc_html_e( 'Sous-total', 'woocommerce' ); ?></th>
+			<td data-title="<?php esc_attr_e( 'Sous-total', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
@@ -49,7 +49,7 @@ defined( 'ABSPATH' ) || exit;
 		<?php elseif ( WC()->cart->needs_shipping() && 'yes' === get_option( 'woocommerce_enable_shipping_calc' ) ) : ?>
 
 			<tr class="shipping">
-				<th><?php esc_html_e( 'Shipping', 'woocommerce' ); ?></th>
+				<th><?php esc_html_e( 'Expédition', 'woocommerce' ); ?></th>
 				<td data-title="<?php esc_attr_e( 'Shipping', 'woocommerce' ); ?>"><?php woocommerce_shipping_calculator(); ?></td>
 			</tr>
 
@@ -69,7 +69,7 @@ defined( 'ABSPATH' ) || exit;
 
 			if ( WC()->customer->is_customer_outside_base() && ! WC()->customer->has_calculated_shipping() ) {
 				/* translators: %s location. */
-				$estimated_text = sprintf( ' <small>' . esc_html__( '(estimated for %s)', 'woocommerce' ) . '</small>', WC()->countries->estimated_for_prefix( $taxable_address[0] ) . WC()->countries->countries[ $taxable_address[0] ] );
+				$estimated_text = sprintf( ' <small>' . esc_html__( '(estimé pour %s)', 'woocommerce' ) . '</small>', WC()->countries->estimated_for_prefix( $taxable_address[0] ) . WC()->countries->countries[ $taxable_address[0] ] );
 			}
 
 			if ( 'itemized' === get_option( 'woocommerce_tax_total_display' ) ) {
