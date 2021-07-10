@@ -111,6 +111,8 @@
 
     function profile(WP_REST_Request $request)
     {
+        global $exertio_theme_options;
+
         $uid = $request->get_param('uid');
         $pid = get_user_meta( $uid, 'freelancer_id' , true );
 
@@ -127,6 +129,17 @@
         } else {
             $userGeneral["sexe"] = "Autres";
         }
+
+        //photo de profil
+        $pro_img_id = get_post_meta( $pid, '_profile_pic_freelancer_id', true );
+        $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
+        
+        if(wp_attachment_is_image($pro_img_id)){
+            $userGeneral['freelance-photo-profile'] = esc_url($pro_img[0]);
+        } else {
+            $userGeneral['freelance-photo-profile'] = esc_url($exertio_theme_options['freelancer_df_img']['url']);
+        } 
+
         
         $userGeneral["contact"] = get_post_meta($pid, '_freelancer_contact_number' , true );
         $userGeneral["freelance-type"] = get_post_meta($pid, '_freelance_type' , true );
