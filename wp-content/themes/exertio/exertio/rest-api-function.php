@@ -192,6 +192,85 @@
 
     }
 
+    function lastServices($params) {
+        /* $exertio_serv = new Exertio_Services();
+
+        $settings = Exertio_Services::parametersToJson(); */
+        global $exertio_theme_options;
+        $services_grid_style = $params[ 'services_grid_style' ];
+        $services_type = $params[ 'services_type' ];
+        $services_count = $params[ 'services_count' ];
+        $services_slider_grids = $params[ 'services_slider_grids' ];
+        $services_grids_cols = $params[ 'services_grids_cols' ];
+
+        $featured = '';
+			if ( $services_type == 'featured' ) {
+			$featured = array(
+			  'key' => '_service_is_featured',
+			  'value' => '1',
+			  'compare' => '=',
+			);
+			} else if ( $services_type == 'simple' ) {
+			$featured = array(
+			  'key' => '_service_is_featured',
+			  'value' => '0',
+			  'compare' => '=',
+			);
+        }
+
+        $args = array(
+			'post_type' => 'services',
+			'post_status' => 'publish',
+			'posts_per_page' => $services_count,
+			'orderby' => 'date',
+			'order' => 'ASC',
+			'meta_query' => array(
+			  array(
+				'key' => '_service_status',
+				'value' => 'active',
+				'compare' => '=',
+			  ),
+			  $featured,
+			),
+            );
+            
+        $results = new WP_Query( $args );
+        $services = [];
+
+        if($results->have_posts()){
+            while($results->have_posts()){
+                $results->the_post();
+                $service_id = get_the_ID();
+                $author_id = get_post_field( 'post_author', $service_id );
+                $posted_date = get_the_date(get_option( 'date_format' ), $service_id );
+                $fid = get_user_meta( $author_id, 'freelancer_id' , true );
+                $serv['image'] = exertio_get_service_image_url($service_id);
+                $serv['title'] = get_the_title($service_id);
+                $serv['rating'] = get_service_rating($service_id);
+                $serv['queued'] = exertio_queued_services($service_id);
+                $serv['price']  = get_post_meta($service_id, '_service_price', true);
+                $serv['freelancer-name'] = exertio_get_username('freelancer', $fid);
+                
+                $pro_img_id = get_post_meta( $fid, '_profile_pic_freelancer_id', true );
+                $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
+                
+                if(wp_attachment_is_image($pro_img_id)){
+                    $serv['freelance-photo-profile'] = esc_url($pro_img[0]);
+                } else {
+                    $serv['freelance-photo-profile'] = esc_url($exertio_theme_options['freelancer_df_img']['url']);
+                }
+                
+                array_push($services,$serv);
+            }
+
+        }
+
+        return $services;
+
+
+
+    }
+
 
 
 ?>

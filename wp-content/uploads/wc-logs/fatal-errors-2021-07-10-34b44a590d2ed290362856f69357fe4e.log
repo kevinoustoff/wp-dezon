@@ -1,0 +1,11 @@
+2021-07-10T13:05:42+00:00 CRITICAL Uncaught Error: Class 'Exertio_Services' not found in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php:196
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): lastServices(Object(WP_REST_Request))
+#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/services/l...', Array, NULL)
+#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/services/l...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/class-wp.php(388): do_action_re dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 196
+

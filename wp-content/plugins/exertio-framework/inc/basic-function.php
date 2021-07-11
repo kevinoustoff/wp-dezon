@@ -128,6 +128,33 @@ if ( ! function_exists( 'exertio_get_service_post_image' ) )
 			}
 	}
 }
+		function exertio_get_service_image_url($id){
+			global $exertio_theme_options;
+		$alt_id= '';
+		$services_img_id ='';
+			$services_img_id = get_post_meta( $id, '_service_attachment_ids', true ); 
+			
+			if(wp_attachment_is_image($services_img_id))
+			{
+				if(isset($services_img_id) && $services_img_id != '')
+				{
+					$atatchment_arr = explode( ',', $services_img_id );
+					foreach ($atatchment_arr as $value)
+					{
+						$full_link = wp_get_attachment_url($value);
+						$img_atts = wp_get_attachment_image_src($value, 'service_grid_img');
+						/* $image = '<img src="'.esc_url($img_atts[0]).'" alt="'.esc_attr(get_post_meta($value, '_wp_attachment_image_alt', TRUE)).'" class="img-fluid">'; */
+						$image = esc_url($img_atts[0]);
+						break;
+					}
+				}
+				return $image;
+			}
+			else
+			{
+				return esc_url($exertio_theme_options['services_default_img']['url']);
+			}
+		}
 
 
 if ( ! function_exists( 'exertio_no_result_found' ) ) 

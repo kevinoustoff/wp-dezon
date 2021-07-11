@@ -23,6 +23,10 @@ add_action( 'rest_api_init', function () {
 		'methods' => 'GET',
 		'callback' =>  'profile',
 	));
+	register_rest_route('api','/services/last',array(
+		'methods' => 'GET',
+		'callback' =>  'lastServices',
+	));
   } );
 
 function my_awesome_func( $data ) {

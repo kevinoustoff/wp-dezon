@@ -261,6 +261,12 @@ class Exertio_Services extends Widget_Base {
 		
 			
 	}
+
+		public static function parametersToJson(){
+			$settings = $this->get_settings_for_display();
+
+			return $settings;
+		}
 	
 		protected function render() {
 		$settings = $this->get_settings_for_display();
