@@ -1,0 +1,91 @@
+2021-07-19T17:59:12+00:00 CRITICAL Uncaught Error: Call to undefined function fl_framework_get_options() in /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/payouts.php:138
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): exertio_add_schedule(Array)
+#1 /var/www/html/wordpress/wp-includes/plugin.php(212): WP_Hook->apply_filters(Array, Array)
+#2 /var/www/html/wordpress/wp-includes/cron.php(1064): apply_filters('cron_schedules', Array)
+#3 /var/www/html/wordpress/wp-includes/cron.php(248): wp_get_schedules()
+#4 /var/www/html/wordpress/wp-content/plugins/complianz-gdpr/cron/cron.php(16): wp_schedule_event(1626717552, 'cmplz_weekly', 'cmplz_every_wee...')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): cmplz_schedule_cron('')
+#6 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#7 /var/www/html/wordpress/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#8 /var/www/html/wordpress/wp-settings.php(423): do_action('plugins_loaded')
+#9 /var/www/h dans /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/payouts.php à la ligne 138
+
+2021-07-19T17:59:12+00:00 CRITICAL Uncaught Error: Call to undefined function fl_framework_get_options() in /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/payouts.php:138
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): exertio_add_schedule(Array)
+#1 /var/www/html/wordpress/wp-includes/plugin.php(212): WP_Hook->apply_filters(Array, Array)
+#2 /var/www/html/wordpress/wp-includes/cron.php(1064): apply_filters('cron_schedules', Array)
+#3 /var/www/html/wordpress/wp-includes/cron.php(248): wp_get_schedules()
+#4 /var/www/html/wordpress/wp-content/plugins/complianz-gdpr/cron/cron.php(16): wp_schedule_event(1626717552, 'cmplz_weekly', 'cmplz_every_wee...')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): cmplz_schedule_cron('')
+#6 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#7 /var/www/html/wordpress/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#8 /var/www/html/wordpress/wp-settings.php(423): do_action('plugins_loaded')
+#9 /var/www/h dans /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/payouts.php à la ligne 138
+
+2021-07-19T17:59:13+00:00 CRITICAL Uncaught Error: Call to undefined function fl_framework_get_options() in /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/payouts.php:138
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): exertio_add_schedule(Array)
+#1 /var/www/html/wordpress/wp-includes/plugin.php(212): WP_Hook->apply_filters(Array, Array)
+#2 /var/www/html/wordpress/wp-includes/cron.php(1064): apply_filters('cron_schedules', Array)
+#3 /var/www/html/wordpress/wp-includes/cron.php(248): wp_get_schedules()
+#4 /var/www/html/wordpress/wp-content/plugins/complianz-gdpr/cron/cron.php(16): wp_schedule_event(1626717553, 'cmplz_weekly', 'cmplz_every_wee...')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): cmplz_schedule_cron('')
+#6 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#7 /var/www/html/wordpress/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#8 /var/www/html/wordpress/wp-settings.php(423): do_action('plugins_loaded')
+#9 /var/www/h dans /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/payouts.php à la ligne 138
+
+2021-07-19T17:59:22+00:00 CRITICAL Uncaught Error: Call to undefined function fl_framework_get_options() in /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/payouts.php:138
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): exertio_add_schedule(Array)
+#1 /var/www/html/wordpress/wp-includes/plugin.php(212): WP_Hook->apply_filters(Array, Array)
+#2 /var/www/html/wordpress/wp-includes/cron.php(1064): apply_filters('cron_schedules', Array)
+#3 /var/www/html/wordpress/wp-includes/cron.php(248): wp_get_schedules()
+#4 /var/www/html/wordpress/wp-content/plugins/complianz-gdpr/cron/cron.php(16): wp_schedule_event(1626717562, 'cmplz_weekly', 'cmplz_every_wee...')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): cmplz_schedule_cron('')
+#6 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#7 /var/www/html/wordpress/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#8 /var/www/html/wordpress/wp-settings.php(423): do_action('plugins_loaded')
+#9 /var/www/h dans /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/payouts.php à la ligne 138
+
+2021-07-19T17:59:22+00:00 CRITICAL Uncaught Error: Call to undefined function fl_framework_get_options() in /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/payouts.php:138
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): exertio_add_schedule(Array)
+#1 /var/www/html/wordpress/wp-includes/plugin.php(212): WP_Hook->apply_filters(Array, Array)
+#2 /var/www/html/wordpress/wp-includes/cron.php(1064): apply_filters('cron_schedules', Array)
+#3 /var/www/html/wordpress/wp-includes/cron.php(248): wp_get_schedules()
+#4 /var/www/html/wordpress/wp-content/plugins/complianz-gdpr/cron/cron.php(16): wp_schedule_event(1626717562, 'cmplz_weekly', 'cmplz_every_wee...')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): cmplz_schedule_cron('')
+#6 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#7 /var/www/html/wordpress/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#8 /var/www/html/wordpress/wp-settings.php(423): do_action('plugins_loaded')
+#9 /var/www/h dans /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/payouts.php à la ligne 138
+
+2021-07-19T17:59:22+00:00 CRITICAL Uncaught Error: Call to undefined function fl_framework_get_options() in /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/payouts.php:138
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): exertio_add_schedule(Array)
+#1 /var/www/html/wordpress/wp-includes/plugin.php(212): WP_Hook->apply_filters(Array, Array)
+#2 /var/www/html/wordpress/wp-includes/cron.php(1064): apply_filters('cron_schedules', Array)
+#3 /var/www/html/wordpress/wp-includes/cron.php(248): wp_get_schedules()
+#4 /var/www/html/wordpress/wp-content/plugins/complianz-gdpr/cron/cron.php(16): wp_schedule_event(1626717562, 'cmplz_weekly', 'cmplz_every_wee...')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): cmplz_schedule_cron('')
+#6 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#7 /var/www/html/wordpress/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#8 /var/www/html/wordpress/wp-settings.php(423): do_action('plugins_loaded')
+#9 /var/www/h dans /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/payouts.php à la ligne 138
+
+2021-07-19T17:59:22+00:00 CRITICAL Uncaught Error: Call to undefined function fl_framework_get_options() in /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/payouts.php:138
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): exertio_add_schedule(Array)
+#1 /var/www/html/wordpress/wp-includes/plugin.php(212): WP_Hook->apply_filters(Array, Array)
+#2 /var/www/html/wordpress/wp-includes/cron.php(1064): apply_filters('cron_schedules', Array)
+#3 /var/www/html/wordpress/wp-includes/cron.php(248): wp_get_schedules()
+#4 /var/www/html/wordpress/wp-content/plugins/complianz-gdpr/cron/cron.php(16): wp_schedule_event(1626717562, 'cmplz_weekly', 'cmplz_every_wee...')
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): cmplz_schedule_cron('')
+#6 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#7 /var/www/html/wordpress/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#8 /var/www/html/wordpress/wp-settings.php(423): do_action('plugins_loaded')
+#9 /var/www/h dans /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/payouts.php à la ligne 138
+
