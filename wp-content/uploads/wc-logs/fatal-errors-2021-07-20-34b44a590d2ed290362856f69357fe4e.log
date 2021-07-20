@@ -1,0 +1,72 @@
+2021-07-20T08:36:00+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_User as array in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php:33
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): api_login(Object(WP_REST_Request))
+#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/login', Array, NULL)
+#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/login')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/class-wp.php(388): do_action_ref_array('par dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 33
+
+2021-07-20T08:38:14+00:00 CRITICAL Uncaught Error: Call to undefined function dump() in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php:26
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): api_login(Object(WP_REST_Request))
+#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/login', Array, NULL)
+#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/login')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/class-wp.php(388): do_action_ref_array('parse_reques dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 26
+
+2021-07-20T08:46:36+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_User as array in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php:33
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): api_login(Object(WP_REST_Request))
+#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/login', Array, NULL)
+#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/login')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/class-wp.php(388): do_action_ref_array('par dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 33
+
+2021-07-20T09:07:19+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php:29
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): api_login(Object(WP_REST_Request))
+#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/login', Array, NULL)
+#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/login')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/class-wp.php(388): do_action_ref_array('pa dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 29
+
+2021-07-20T09:08:43+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php:28
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): api_login(Object(WP_REST_Request))
+#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/login', Array, NULL)
+#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/login')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/class-wp.php(388): do_action_ref_array('pa dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 28
+
+2021-07-20T09:10:23+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php:35
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): api_login(Object(WP_REST_Request))
+#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/login', Array, NULL)
+#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/login')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/class-wp.php(388): do_action_ref_array('pa dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 35
+
+2021-07-20T15:58:47+00:00 CRITICAL syntax error, unexpected 'public' (T_PUBLIC), expecting end of file dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 302
+
+2021-07-20T15:58:47+00:00 CRITICAL syntax error, unexpected 'public' (T_PUBLIC), expecting end of file dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 302
+
+2021-07-20T18:40:15+00:00 CRITICAL syntax error, unexpected 'unset' (T_UNSET) dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 357
+

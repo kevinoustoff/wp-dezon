@@ -22,9 +22,23 @@
             }
             else
 			{
+                
 				/* $res = fl_auto_login($username, $params['fl_password'], $remember ); */ 
-				
-					
+                $user = (array) $user;
+                 /* wp_die($user['data']->ID); */
+                 
+                $pid = get_user_meta( $user['data']->ID, 'freelancer_id' , true );
+
+				$pro_img_id = get_post_meta($pid, '_profile_pic_freelancer_id', true );
+                $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
+                
+                if(wp_attachment_is_image($pro_img_id)){
+                    $user['freelance-photo-profile'] = esc_url($pro_img[0]);
+                    /* wp_die(esc_url($pro_img[0])); */
+                } else {
+                    $user['freelance-photo-profile'] = esc_url($exertio_theme_options['freelancer_df_img']['url']);
+                    /* wp_die(esc_url($exertio_theme_options['freelancer_df_img']['url'])); */
+                }  
 					/* echo "1|". __( 'Login successful. Redirecting....', 'exertio_framework' )."|".$page; */
                 return new WP_REST_Response(
                     array(
@@ -80,6 +94,20 @@
             /* echo $uid->get_error_message();
             die();    */
             $user_info = get_userdata($uid);
+            $user_info = (array) $user;
+            $pid = get_user_meta( $user_info['data']->ID, 'freelancer_id' , true );
+
+            $pro_img_id = get_post_meta($pid, '_profile_pic_freelancer_id', true );
+            $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
+            
+            if(wp_attachment_is_image($pro_img_id)){
+                $user_info['freelance-photo-profile'] = esc_url($pro_img[0]);
+                /* wp_die(esc_url($pro_img[0])); */
+            } else {
+                $user_info['freelance-photo-profile'] = esc_url($exertio_theme_options['freelancer_df_img']['url']);
+                /* wp_die(esc_url($exertio_theme_options['freelancer_df_img']['url'])); */
+            }  
+            
             exertion_on_registration_funtion($uid);
 			if ( function_exists( 'exertio_generate_code_registeration' ) )
 			{
@@ -270,6 +298,107 @@
 
 
     }
+
+    function getSexes(){
+        $sexes = [];
+
+        $sexes[0]["id"] ="0";
+        $sexes[0]["libelle"] ="Masculin";
+
+        $sexes[1]["id"] ="1";
+        $sexes[1]["libelle"] ="Feminin";
+
+        $sexes[2]["id"] ="2";
+        $sexes[2]["libelle"] ="Autres";
+
+        return new WP_REST_Response(
+           $sexes
+        );
+
+    }
+
+    function getEnglishLevel() {
+        $english_level_taxonomies = exertio_get_terms('freelancer-english-level');
+        $index =0;
+        $levels = [];
+        foreach($english_level_taxonomies as $level){
+            $levels[$index]['term_id'] = $level->term_id;
+            $levels[$index]['name'] = $level->name;
+
+            $index++;
+        }
+        return new WP_REST_Response(
+            $levels
+         );
+    }
+
+    function getLocations(){
+        $location_taxonomies = exertio_get_terms('freelancer-locations');
+        $indexPays = 0;
+        $locations = [];
+        foreach($location_taxonomies as $location)
+        {
+            $indexVilles = 0;
+            if($location->parent ==0){
+                $locations[$indexPays]['id'] = $location->term_id;
+            $locations[$indexPays]['name'] = $location->name;
+
+            $villes = [];
+
+            foreach($location_taxonomies as $loc){
+                if($loc->parent == $location->term_id)
+                {
+                    $villes[$indexVilles]['id'] = $loc->term_id;
+                    $villes[$indexVilles]['name'] = $loc->name;
+                }
+                $indexVilles++;
+
+
+            }
+            $locations[$indexPays]['villes'] = array_values($villes);
+            $indexPays++;
+            }
+            
+        }
+        return new WP_REST_Response(
+            $locations
+         );
+
+    }
+
+    function getTypePrestataire(){
+        $freelance_taxonomies = exertio_get_terms('freelance-type');
+
+        $typePrestataires = [];
+        $index = 0;
+        foreach($freelance_taxonomies as $typePrest){
+
+            $typePrestataires[$index]['id'] = $typePrest->term_id;
+            $typePrestataires[$index]['name'] = $typePrest->name; 
+            $index++;
+        }
+        return new WP_REST_Response(
+            $typePrestataires
+         );
+    }
+
+    function getLanguesPrestataires(){
+        $languages_taxonomies = exertio_get_terms('freelancer-languages');
+        $index = 0;
+        $langs = [];
+        foreach($languages_taxonomies as $lang){
+            $langs[$index]['id'] = $lang->term_id;
+            $langs[$index]['name'] = $lang->name;
+
+            $index++;
+        }
+        return new WP_REST_Response(
+            $langs
+         );
+
+    }
+
+
 
 
 

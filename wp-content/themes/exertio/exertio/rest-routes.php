@@ -27,6 +27,32 @@ add_action( 'rest_api_init', function () {
 		'methods' => 'GET',
 		'callback' =>  'lastServices',
 	));
+	register_rest_route('api','/services/last',array(
+		'methods' => 'GET',
+		'callback' =>  'lastServices',
+	));
+	register_rest_route('api','/sexes',array(
+		'methods' => 'GET',
+		'callback' =>  'getSexes',
+	));
+	register_rest_route('api','/english-levels',array(
+		'methods' => 'GET',
+		'callback' =>  'getEnglishLevel',
+	));
+
+	register_rest_route('api','/locations',array(
+		'methods' => 'GET',
+		'callback' =>  'getLocations',
+	));
+
+	register_rest_route('api','/types-prestataires',array(
+		'methods' => 'GET',
+		'callback' =>  'getTypePrestataire',
+	));
+	register_rest_route('api','/langues-prestataires',array(
+		'methods' => 'GET',
+		'callback' =>  'getLanguesPrestataires',
+	));
   } );
 
 function my_awesome_func( $data ) {
