@@ -6,6 +6,7 @@
     //authentification
     function api_login( WP_REST_Request $request)
     {
+        global $exertio_theme_options;
         /* var_dump($request->get_param('email'));
         die(); */
         $username = $request->get_param('email');
@@ -60,6 +61,7 @@
 
     function api_register(WP_REST_Request $request)
     {
+        global $exertio_theme_options;
         /* $email = sanitize_text_field($request->get_param('email'));
         parse_str($request->get_param('email'), $email); 
         $email = sanitize_text_field($email); */
@@ -94,7 +96,7 @@
             /* echo $uid->get_error_message();
             die();    */
             $user_info = get_userdata($uid);
-            $user_info = (array) $user;
+            $user_info = (array) $user_info;
             $pid = get_user_meta( $user_info['data']->ID, 'freelancer_id' , true );
 
             $pro_img_id = get_post_meta($pid, '_profile_pic_freelancer_id', true );
