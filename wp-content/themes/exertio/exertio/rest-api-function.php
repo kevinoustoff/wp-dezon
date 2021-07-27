@@ -1,4 +1,8 @@
 <?php
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+    
+    
     function hello()
     {
         return new WP_ERROR(401,'hello','hello');
@@ -297,8 +301,6 @@
 
         return $services;
 
-
-
     }
 
     function getSexes(){
@@ -399,6 +401,126 @@
          );
 
     }
+
+    function forgetPwd(WP_REST_Request $request)
+    {
+/*         wp_die('coucou');
+ */        /* exertio_demo_disable('json'); */
+		
+/* 		check_ajax_referer( 'fl_forget_pwd_secure', 'security' );
+ */		$params = array();
+		parse_str($_POST['forget_pwd_data'], $params);
+       
+		$email = trim(sanitize_email($request->get_param('email')));
+		if(empty($email))
+		{
+			/* $return = array('message' => esc_html__( 'Please type your e-mail address.', 'exertio_framework' ));
+            wp_send_json_error($return); */
+            return new WP_REST_Response(array(
+                
+                'response' => 'Veuillez saisir votre adresse e-mail',
+                
+            ));
+            
+		}
+		else if ( !is_email( $email ) )
+		{
+			/* $return = array('message' => esc_html__( 'Please enter a valid e-mail address.', 'exertio_framework' ));
+            wp_send_json_error($return); */
+            return new WP_REST_Response(array(
+                
+                'response' => 'Veuillez saisir votre adresse e-mail valide',
+                
+            ));
+            	
+		}
+		else if(!email_exists($email)) {
+			/* $return = array('message' => esc_html__( 'This email address does not exist on website.', 'exertio_framework' ));
+            wp_send_json_error($return); */	
+            return new WP_REST_Response(array(
+                
+                'response' => 'l\'e-mail que vous avez saisi est inexistant',
+                
+            ));
+            
+		}
+		else
+		{
+			$user = get_user_by('email', $email);
+			$user_email = $user->user_login;
+			$reset_key = get_password_reset_key($user);
+			$signinlink = get_the_permalink(fl_framework_get_options('login_page'));
+			update_user_meta( $user->ID, '_reset_password_key', $reset_key );
+			
+			$reset_link = esc_url($signinlink.'?action=rp&key='.$reset_key.'&login='.rawurlencode($user_email));
+			
+
+            fl_forgotpass_email($user->ID,$reset_link);
+            
+			/* $return = array('message' => esc_html__( 'Check your email for the confirmation link.', 'exertio_framework' ));
+            wp_send_json_success($return); */
+            
+            return new WP_REST_Response(array(
+                
+                'response' => 'Verifiez votre e-mail pour le lien de confirmation',
+                
+            ));
+		/* 	die(); */
+		}
+
+    }
+
+    function changePassword(WP_REST_Request $request){
+        
+/* 		check_ajax_referer( 'fl_change_psw_secure', 'security' );
+ */        global $exertio_theme_options;
+        
+        $params = array();
+        
+        $current_pass = $request->get_param('old_password');
+        
+        $new_pass = sanitize_text_field($request->get_param('new_password'));
+        $con_new_pass = sanitize_text_field($request->get_param('confirm_password'));
+        
+        
+        if($current_pass =="" || $new_pass=="" || $con_new_pass==""){
+            return new WP_ERROR(401,'Tous les champs sont obligatoires','no');
+        } 
+        if($new_pass == $current_pass){
+            return new WP_ERROR(401,'Désolé l\'ancien et le nouveau mot de passe sont identiques','no');
+        }
+       
+        if( $new_pass != $con_new_pass )
+		{
+            
+            return new WP_ERROR(401,'Désolé les champs du nouveau mot de passe doivent etre identiques','no');
+        }
+        
+        $user =  get_user_by('ID',$request->get_param('user_id'));
+        
+        if($user && wp_check_password($current_pass, $user->data->user_pass)){
+            wp_set_password($new_pass,$user->ID);
+            return new WP_REST_Response(array(
+                'status' => 200,
+                'response' => 'message',
+                'body_response' => 'Mot de passe changé avec succès'
+            ));
+        }
+        else{
+            return new WP_ERROR(401,'l\'ancien mot de passe que vous saisi est incorrect','no');
+
+        }
+
+
+
+
+        
+
+    }
+
+
+
+
 
 
 

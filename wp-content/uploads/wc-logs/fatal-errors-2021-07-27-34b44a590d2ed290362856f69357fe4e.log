@@ -1,0 +1,126 @@
+2021-07-27T09:17:23+00:00 CRITICAL require(): Failed opening required 'PHPMailer-master/src/Exception.php' (include_path='.:/usr/share/php') dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 4
+
+2021-07-27T09:18:30+00:00 CRITICAL require(): Failed opening required 'PHPMailer-master/src/Exception.php' (include_path='.:/usr/share/php') dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 4
+
+2021-07-27T09:18:55+00:00 CRITICAL require(): Failed opening required 'PHPMailer-master/src/Exception.php' (include_path='.:/usr/share/php') dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 4
+
+2021-07-27T09:59:58+00:00 CRITICAL Uncaught Error: Call to undefined method WP_REST_Request::param() in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php:498
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): changePassword(Object(WP_REST_Request))
+#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/recover-pa...', Array, NULL)
+#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/recover-pa...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/class-wp.php(3 dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 498
+
+2021-07-27T10:03:50+00:00 CRITICAL Uncaught Error: Call to undefined method WP_REST_Request::param() in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php:498
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): changePassword(Object(WP_REST_Request))
+#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/recover-pa...', Array, NULL)
+#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/recover-pa...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/class-wp.php(3 dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 498
+
+2021-07-27T10:07:30+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 500
+
+2021-07-27T10:07:30+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 500
+
+2021-07-27T10:07:32+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 500
+
+2021-07-27T10:07:43+00:00 CRITICAL Uncaught Error: Call to undefined method WP_REST_Request::param() in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php:498
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): changePassword(Object(WP_REST_Request))
+#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/recover-pa...', Array, NULL)
+#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/recover-pa...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/class-wp.php(3 dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 498
+
+2021-07-27T10:08:16+00:00 CRITICAL Uncaught Error: Call to undefined method WP_REST_Request::param() in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php:498
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): changePassword(Object(WP_REST_Request))
+#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/recover-pa...', Array, NULL)
+#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/recover-pa...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/class-wp.php(3 dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 498
+
+2021-07-27T10:08:44+00:00 CRITICAL syntax error, unexpected '!' dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 493
+
+2021-07-27T10:08:46+00:00 CRITICAL syntax error, unexpected '!' dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 493
+
+2021-07-27T10:09:31+00:00 CRITICAL Uncaught Error: Call to undefined method WP_REST_Request::param() in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php:496
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): changePassword(Object(WP_REST_Request))
+#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/recover-pa...', Array, NULL)
+#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/recover-pa...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/class-wp.php(3 dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 496
+
+2021-07-27T10:09:55+00:00 CRITICAL Uncaught Error: Call to undefined method WP_REST_Request::param() in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php:496
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): changePassword(Object(WP_REST_Request))
+#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/recover-pa...', Array, NULL)
+#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/recover-pa...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/class-wp.php(3 dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 496
+
+2021-07-27T10:11:43+00:00 CRITICAL Uncaught Error: Call to undefined method WP_REST_Request::param() in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php:498
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): changePassword(Object(WP_REST_Request))
+#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/recover-pa...', Array, NULL)
+#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/recover-pa...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/class-wp.php(3 dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 498
+
+2021-07-27T10:12:22+00:00 CRITICAL Uncaught Error: Call to undefined method WP_REST_Request::param() in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php:499
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): changePassword(Object(WP_REST_Request))
+#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/recover-pa...', Array, NULL)
+#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/recover-pa...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/class-wp.php(3 dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 499
+
+2021-07-27T10:15:28+00:00 CRITICAL Uncaught Error: Call to undefined method WP_User::get_user_by() in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php:499
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): changePassword(Object(WP_REST_Request))
+#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/recover-pa...', Array, NULL)
+#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/recover-pa...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/class-wp.php(388 dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 499
+
+2021-07-27T10:17:47+00:00 CRITICAL Uncaught Error: Call to undefined method WP_REST_Request::param() in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php:500
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): changePassword(Object(WP_REST_Request))
+#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/recover-pa...', Array, NULL)
+#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/recover-pa...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/class-wp.php(3 dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-function.php à la ligne 500
+

@@ -53,6 +53,14 @@ add_action( 'rest_api_init', function () {
 		'methods' => 'GET',
 		'callback' =>  'getLanguesPrestataires',
 	));
+	register_rest_route('api','/forgot-password',array(
+		'methods' => 'POST',
+		'callback' =>  'forgetPwd',
+	));
+	register_rest_route('api','/recover-password',array(
+		'methods' => 'POST',
+		'callback' =>  'changePassword',
+	));
   } );
 
 function my_awesome_func( $data ) {
