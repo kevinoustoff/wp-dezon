@@ -421,7 +421,42 @@ if ( ! function_exists( 'custom_pagination_invoices' ) )
     }
 }
 
+if(!function_exists( 'project_expiry_calculation3' )){
+		function project_expiry_calculation3($pid){
+			$expiry = get_post_meta($pid, '_simple_projects_expiry_date', true); 
+		if(isset($expiry) && $expiry == -1 )
+		{
+			return 'Sans expiration';
+		}
+		else
+		{
+			$today = date('d-m-Y');
 
+			$now = time();
+
+			$expiry_date = strtotime($expiry);
+			$datediff = $expiry_date - $now;
+
+			$remaining_days = round($datediff / (60 * 60 * 24));
+
+			if(strtotime($today) > strtotime($expiry))
+			{
+				return 'Expiré';		
+			}
+			else if($remaining_days != -0 && $remaining_days > 0)
+			{
+				return $remaining_days.' jours restants';
+			}
+			else
+			{
+				return 'Expire aujourd\'hui';
+			}
+		}
+		
+
+		}
+
+}
 
 if ( ! function_exists( 'project_expiry_calculation2' ) )
 {

@@ -472,8 +472,7 @@
 
     function changePassword(WP_REST_Request $request){
         
-/* 		check_ajax_referer( 'fl_change_psw_secure', 'security' );
- */        global $exertio_theme_options;
+        global $exertio_theme_options;
         
         $params = array();
         
@@ -516,6 +515,118 @@
 
         
 
+    }
+    /* 
+        Fonction pour récupérer la liste des projets
+    */
+    function getListeProjets()
+    {
+        $projects_count = $projects_type = $project_grid_style = $col = $projects_list_cols = '';
+
+        $featured = '';
+			if ( $projects_type == 'featured' ) {
+			  $featured = array(
+				'key' => '_project_is_featured',
+				'value' => '1',
+				'compare' => '=',
+			  );
+			} else if ( $projects_type == 'simple' ) {
+			  $featured = array(
+				'key' => '_project_is_featured',
+				'value' => '0',
+				'compare' => '=',
+			  );
+			}
+			$args = array(
+			  'post_type' => 'projects',
+			  'post_status' => 'publish',
+			  'posts_per_page' => $projects_count,
+			  'orderby' => 'date',
+			  'order' => 'DESC',
+			  'meta_query' => array(
+				$featured,
+			  ),
+			);
+            $results = new WP_Query( $args );
+
+            $customResults = [];
+            $index = 0;
+
+            foreach($results->posts as $post){
+                $author_id = get_post_field( 'post_author', $post->ID );
+                $employer_id = get_user_meta( $author_id, 'employer_id' , true );
+                
+                $type = get_post_meta($post->ID, '_project_type', true);
+                if($type == 'fixed')
+                {
+                    $customResults[$index]['estimated_hours'] = null;
+                    $customResults[$index]['hourly_price'] = null;
+                    $customResults[$index]['cost'] = fl_price_separator(get_post_meta($post->ID, '_project_cost', true));
+                }
+                else if($type == 'hourly')
+                {
+                    $customResults[$index]['cost'] = null;
+                    $customResults[$index]['hourly_price'] = fl_price_separator(get_post_meta($post->ID, '_project_cost', true));
+                    $hourly_price = fl_price_separator(get_post_meta($post->ID, '_project_cost', true));
+                    $estimated_hours = get_post_meta($post->ID, '_estimated_hours', true);
+                    $customResults[$index]['estimated_hours'] = $estimated_hours;
+                
+                }
+                $customResults[$index]['id'] = $post->ID;
+                $customResults[$index]['employer_name'] = get_post_meta( $employer_id, '_employer_dispaly_name' , true );
+                $customResults[$index]['duration']= get_term_names('project-duration', '_project_duration', $post->ID );
+                $customResults[$index]['level'] = get_term_names('project-level', '_project_level', $post->ID );
+                $customResults[$index]['freelancer_type'] = get_term_names('freelancer-type', '_project_freelancer_type', $post->ID );
+                /* $customResults[$index]['saved_skills'] */
+                $skills = wp_get_post_terms($post->ID, 'skills', array( 'fields' => 'all' ));
+                $customResults[$index]['project_expiry'] = project_expiry_calculation3($post->ID);
+                $customResults[$index]['description'] = $post->post_content;
+                /* $customResults[$index]['bid_results'] = get_project_bids($post->ID); */
+                $j= 0;
+
+                foreach($skills as $skill){
+                    $customResults[$index]['saved_skills'][$j]['name'] = $skill->name;
+                    $customResults[$index]['saved_skills'][$j]['term_id'] = $skill->term_id;
+                    $customResults[$index]['saved_skills'][$j]['term_taxonomy_id'] = $skill->term_taxonomy_id;
+                    $customResults[$index]['saved_skills'][$j]['taxonomy'] = $skill->taxonomy;  
+                }
+                if (is_countable($results) && count($results) > 0)
+                {
+                    $results = count(get_project_bids($project_id));
+                }
+                else
+                {
+                    $results = 0;
+                }
+                $customResults[$index]['offres'] = $results;
+                /* $customResults[$index]['description'] = exertio_get_excerpt(25,$post->ID); */
+                
+                $project_location = get_term( get_post_meta($post->ID, '_project_location', true));
+                if(!empty($project_location) && ! is_wp_error($project_location))
+				{
+                    $location_remote = get_post_meta($post->ID, '_project_location_remote', true);
+                    if(isset($location_remote) && $location_remote == 1)
+                    {
+                        $customResults[$index]['location'] = 'remote';
+                    }
+                    else
+                    {
+                        $customResults[$index]['location'] = $project_location->name;
+                    }
+
+                }
+                else{
+                    $customResults[$index]['location'] = null;
+                }
+
+                $index++;
+            }
+            
+            return new WP_REST_Response(array(
+                
+                'response' => $customResults,
+                
+            ));
     }
 
 
