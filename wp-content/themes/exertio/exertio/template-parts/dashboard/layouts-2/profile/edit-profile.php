@@ -85,7 +85,7 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
                       <form id="change_pass_form">
                           <div class="form-row">
                             <div class="form-group col-md-12">
-                              <label><?php echo esc_html__('Old Password','exertio_theme'); ?></label>
+                              <label><?php echo esc_html__('Ancien mot de passe','exertio_theme'); ?></label>
                               <input type="password" class="form-control" name="old_password" autocomplete="off" required data-smk-msg="<?php echo esc_html__('Veuillez saisir le mot de passe actuel','exertio_theme'); ?>">
                             </div>
                             <div class="form-group col-md-12">
@@ -270,44 +270,7 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
                         </div>
                         <?php
 							}
-							if($exertio_theme_options['fl_english_level'] == 3)
-							{
-								
-							}
-							else
-							{
-								$fl_eng_level = '';
-								if($exertio_theme_options['fl_english_level'] == 1)
-								{
-									$fl_eng_level = 'required data-smk-msg="'.esc_html__('Please select english level','exertio_theme').'"';	
-								}
-						
-						?>
-                        <div class="form-group col-md-6">
-                          <label><?php echo esc_html__('English Level','exertio_theme'); ?></label>
-                          <?php
-                          $english_level_taxonomies = exertio_get_terms('freelancer-english-level');
-                            if ( !empty($english_level_taxonomies) )
-                            {
-                                $english_level = get_post_meta($pid, '_freelancer_english_level', true);
-                                $english = '<select name="english_level" class="form-control general_select" '.$fl_eng_level.'>';
-                                $english .= '<option value=""> '. __( "Select English Level", "exertio_theme" ) .'</option>';
-                                foreach( $english_level_taxonomies as $english_level_taxonomy ) {
-                                    if($english_level_taxonomy->term_id == $english_level){ $selected = 'selected ="selected"';}else{$selected = ''; }
-                                    if( $english_level_taxonomy->parent == 0 ) {
-                                         $english .= '<option value="'. esc_attr( $english_level_taxonomy->term_id ) .'" '.$selected.'>
-                                                '. esc_html( $english_level_taxonomy->name ) .'</option>';
-                                        $english.='</option>';
-                                    }
-                                }
-                                $english.='</select>';
-                                echo wp_return_echo($english);
-                            }
-                        ?>
-                        </div>
-                        
-                        <?php
-							}
+							
 							if($exertio_theme_options['fl_language'] == 3)
 							{
 								
@@ -317,12 +280,12 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 								$fl_language = '';
 								if($exertio_theme_options['fl_language'] == 1)
 								{
-									$fl_language = 'required data-smk-msg="'.esc_html__('Veuillez sélectionner les langues','exertio_theme').'"';	
+									$fl_language = 'required data-smk-msg="'.esc_html__('Veuillez sélectionner la langue','exertio_theme').'"';	
 								}
 						
 						?>
                         <div class="form-group col-md-6">
-                          <label>Langues du prestataire</label>
+                          <label>Langue du prestataire</label>
                           <?php
                             $languages_taxonomies = exertio_get_terms('freelancer-languages'); 
                             if ( !empty($languages_taxonomies) )
@@ -347,6 +310,44 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
                         </div>
                         <?php
 							}
+              if($exertio_theme_options['fl_english_level'] == 3)
+              {
+                
+              }
+              else
+              {
+                $fl_eng_level = '';
+                if($exertio_theme_options['fl_english_level'] == 1)
+                {
+                  $fl_eng_level = 'required data-smk-msg="'.esc_html__('Veuillez choisir votre niveau de langue','exertio_theme').'"';  
+                }
+            
+            ?>
+                        <div class="form-group col-md-6">
+                          <label><?php echo esc_html__('Niveau de langue','exertio_theme'); ?></label>
+                          <?php
+                          $english_level_taxonomies = exertio_get_terms('freelancer-english-level');
+                            if ( !empty($english_level_taxonomies) )
+                            {
+                                $english_level = get_post_meta($pid, '_freelancer_english_level', true);
+                                $english = '<select name="english_level" class="form-control general_select" '.$fl_eng_level.'>';
+                                $english .= '<option value=""> '. __( "Sélectionner le niveau de langue", "exertio_theme" ) .'</option>';
+                                foreach( $english_level_taxonomies as $english_level_taxonomy ) {
+                                    if($english_level_taxonomy->term_id == $english_level){ $selected = 'selected ="selected"';}else{$selected = ''; }
+                                    if( $english_level_taxonomy->parent == 0 ) {
+                                         $english .= '<option value="'. esc_attr( $english_level_taxonomy->term_id ) .'" '.$selected.'>
+                                                '. esc_html( $english_level_taxonomy->name ) .'</option>';
+                                        $english.='</option>';
+                                    }
+                                }
+                                $english.='</select>';
+                                echo wp_return_echo($english);
+                            }
+                        ?>
+                        </div>
+                        
+                        <?php
+              }
 							if($exertio_theme_options['fl_location'] == 3)
 							{
 								
