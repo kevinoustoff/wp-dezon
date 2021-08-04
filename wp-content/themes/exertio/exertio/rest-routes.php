@@ -61,6 +61,10 @@ add_action( 'rest_api_init', function () {
 		'methods' => 'POST',
 		'callback' =>  'changePassword',
 	));
+	register_rest_route('api','/projets',array(
+		'methods' => 'GET',
+		'callback' =>  'getListeProjets',
+	));
   } );
 
 function my_awesome_func( $data ) {

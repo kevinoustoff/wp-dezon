@@ -91,7 +91,7 @@ if (!class_exists('exertio_get_projects'))
 								if($skill_hide != '')
 								{
 									?>
-                                    <li class="show-skills"><a href="javascript:void(0)"><i class="fas fa-ellipsis-h"></i></a></li>
+									<li class="show-skills"><a href="javascript:void(0)"><i class="fas fa-ellipsis-h"></i></a></li>
 									<?php
 								}
 							?>
@@ -162,7 +162,7 @@ if (!class_exists('exertio_get_projects'))
 							}
 						?>
                         <li> <a href="javascript:void(0);" class="mark_fav protip <?php echo esc_attr($saved_project); ?>" data-post-id="<?php echo esc_attr($project_id); ?>" data-pt-position="top" data-pt-scheme="black" data-pt-title="<?php echo esc_attr($save_text); ?>"><i class="fa fa-heart active"></i></a> </li>
-                        <li><a href="<?php echo esc_url(get_the_permalink()); ?>" class="btn btn-theme"><?php echo esc_html__( ' Faire une offre', 'exertio_theme' ); ?></a></li>
+                        <li><a href="<?php echo esc_url(get_the_permalink()); ?>" class="btn btn-theme"><?php echo esc_html__( ' ', 'exertio_theme' ); ?></a></li>
                       </ul>
                     </div>
                   </div>
