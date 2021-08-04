@@ -589,6 +589,7 @@
                     $customResults[$index]['saved_skills'][$j]['term_id'] = $skill->term_id;
                     $customResults[$index]['saved_skills'][$j]['term_taxonomy_id'] = $skill->term_taxonomy_id;
                     $customResults[$index]['saved_skills'][$j]['taxonomy'] = $skill->taxonomy;  
+                    $j++;
                 }
                 if (is_countable($results) && count($results) > 0)
                 {
