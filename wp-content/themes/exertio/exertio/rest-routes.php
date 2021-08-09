@@ -65,6 +65,26 @@ add_action( 'rest_api_init', function () {
 		'methods' => 'GET',
 		'callback' =>  'getListeProjets',
 	));
+	register_rest_route('api','/projets/search',array(
+		'methods' => 'GET',
+		'callback' =>  'filtersProjects',
+	));
+	register_rest_route('api','/delais-livraisons-services',array(
+		'methods' => 'GET',
+		'callback' =>  'listeDelaiLivraisons',
+	));
+	register_rest_route('api','/list-english-levels',array(
+		'methods' => 'GET',
+		'callback' =>  'listeEnglishLevels',
+	));
+	register_rest_route('api','/list-services-locations',array(
+		'methods' => 'GET',
+		'callback' =>  'listeServicesLocations',
+	));
+	register_rest_route('api','/services/search',array(
+		'methods' => 'GET',
+		'callback' =>  'searchServicesApiVersion',
+	));
   } );
 
 function my_awesome_func( $data ) {

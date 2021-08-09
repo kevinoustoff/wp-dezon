@@ -577,6 +577,7 @@
                 $customResults[$index]['duration']= get_term_names('project-duration', '_project_duration', $post->ID );
                 $customResults[$index]['level'] = get_term_names('project-level', '_project_level', $post->ID );
                 $customResults[$index]['freelancer_type'] = get_term_names('freelancer-type', '_project_freelancer_type', $post->ID );
+                $customResults[$index]['title'] = $post->post_title;
                 /* $customResults[$index]['saved_skills'] */
                 $skills = wp_get_post_terms($post->ID, 'skills', array( 'fields' => 'all' ));
                 $customResults[$index]['project_expiry'] = project_expiry_calculation3($post->ID);
@@ -630,6 +631,8 @@
             ));
     }
 
+    include 'rest-api-projects.php';
+    include 'rest-api-services.php';
 
 
 

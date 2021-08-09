@@ -61,7 +61,9 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 	}
 
 	$category = '';
+	
 	if (isset($_GET['category']) && $_GET['category'] != "") {
+	
 		$category = array(
 			array(
 				'taxonomy' => 'project-categories',

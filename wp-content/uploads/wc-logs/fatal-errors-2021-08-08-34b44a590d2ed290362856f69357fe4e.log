@@ -1,0 +1,10 @@
+2021-08-08T02:32:59+00:00 CRITICAL Cannot redeclare searchServices() (previously declared in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-projects.php:340) dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-services.php à la ligne 3
+
+2021-08-08T02:52:11+00:00 CRITICAL syntax error, unexpected 'return' (T_RETURN) dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-services.php à la ligne 125
+
+2021-08-08T02:52:11+00:00 CRITICAL syntax error, unexpected 'return' (T_RETURN) dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-services.php à la ligne 125
+
+2021-08-08T02:52:43+00:00 CRITICAL syntax error, unexpected 'return' (T_RETURN) dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-services.php à la ligne 125
+
+2021-08-08T02:52:43+00:00 CRITICAL syntax error, unexpected 'return' (T_RETURN) dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-services.php à la ligne 125
+
