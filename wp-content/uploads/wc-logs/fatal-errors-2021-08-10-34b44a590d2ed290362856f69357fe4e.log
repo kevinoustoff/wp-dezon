@@ -1,0 +1,23 @@
+2021-08-10T05:08:49+00:00 CRITICAL Object of class WP_Post could not be converted to string dans /var/www/html/wordpress/wp-includes/functions.php à la ligne 3618
+
+2021-08-10T05:10:39+00:00 CRITICAL Object of class WP_Post could not be converted to string dans /var/www/html/wordpress/wp-includes/functions.php à la ligne 3618
+
+2021-08-10T05:12:14+00:00 CRITICAL Object of class WP_Post could not be converted to string dans /var/www/html/wordpress/wp-includes/functions.php à la ligne 3618
+
+2021-08-10T05:13:02+00:00 CRITICAL Object of class WP_Post could not be converted to string dans /var/www/html/wordpress/wp-includes/functions.php à la ligne 3618
+
+2021-08-10T05:36:32+00:00 CRITICAL Uncaught Error: Call to undefined function get_project() in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-projects.php:346
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): getSingleProject(Object(WP_REST_Request))
+#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/projet', Array, NULL)
+#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/projet')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/class-wp.php(388): do_action_ref_ar dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-projects.php à la ligne 346
+
+2021-08-10T05:41:07+00:00 CRITICAL syntax error, unexpected '}', expecting ';' dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-projects.php à la ligne 420
+
+2021-08-10T05:41:35+00:00 CRITICAL syntax error, unexpected '}', expecting ';' dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-projects.php à la ligne 417
+
