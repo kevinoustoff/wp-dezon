@@ -89,6 +89,10 @@ add_action( 'rest_api_init', function () {
 		'methods' => 'GET',
 		'callback' =>  'getSingleProject',
 	));
+	register_rest_route('api','/service',array(
+		'methods' => 'GET',
+		'callback' =>  'getServiceDetail',
+	));
   } );
 
 function my_awesome_func( $data ) {

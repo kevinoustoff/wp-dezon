@@ -234,6 +234,7 @@ if ( $exertio_theme_options[ 'action_bar' ] == 1 ) {
         <div class="main-box-services" id="description">
           <div class="fr-product-des-box heading-contents vector-bg">
             <h3><?php echo esc_html__('Description ','exertio_theme'); ?></h3>
+            
             <?php echo wp_kses($post->post_content, exertio_allowed_html_tags()); ?> </div>
         </div>
         <div class="fr-seller-servives-2" id="seller">
