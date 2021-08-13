@@ -246,7 +246,9 @@ function filtersProjects(){
             }
             else{
                 $customProject['location'] = null;
-            }
+			}
+			
+			array_push($customResults,$customProject);
 
             $index++;
         }
