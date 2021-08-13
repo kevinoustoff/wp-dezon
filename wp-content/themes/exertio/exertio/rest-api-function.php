@@ -284,7 +284,7 @@
                 $serv['queued'] = exertio_queued_services($service_id);
                 $serv['price']  = get_post_meta($service_id, '_service_price', true);
                 $serv['freelancer-name'] = exertio_get_username('freelancer', $fid);
-                
+                $serv['id'] = $service_id;
                 $pro_img_id = get_post_meta( $fid, '_profile_pic_freelancer_id', true );
                 $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
                 
