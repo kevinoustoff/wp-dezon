@@ -260,86 +260,16 @@ function filtersProjects(){
 
     }
 
-    function listeDelaiLivraisons(){
-
-        $taxonomies  = get_terms( array(
-			'taxonomy' => 'delivery-time',
-			'hide_empty' => true,
-			'orderby'      => 'name',
-			'parent' => 0
-        ));
-
-        $index = 0;
-        $tax = [];
-
-        foreach($taxonomies as $taxonomie){
-            $tax[$index]['name'] = $taxonomie->name;
-            $tax[$index]['term_id'] = $taxonomie->term_id;
-
-
-            $index++;
-        }
-        
-        return new WP_REST_RESPONSE(
-            $tax
-        );
-
-    }
-
-    function listeEnglishLevels(){
-
-        $taxonomies  = get_terms( array(
-			'taxonomy' => 'services-english-level',
-			'hide_empty' => true,
-			'orderby'      => 'name',
-			'parent' => 0
-        ));
-
-        $index = 0;
-        $tax = [];
-
-        foreach($taxonomies as $taxonomie){
-            $tax[$index]['name'] = $taxonomie->name;
-            $tax[$index]['term_id'] = $taxonomie->term_id;
-
-
-            $index++;
-        }
-        
-        return new WP_REST_RESPONSE(
-            $tax
-        );
-
-    }
-    function listeServicesLocations(){
-
-        $taxonomies  = get_terms( array(
-			'taxonomy' => 'services-locations',
-			'hide_empty' => true,
-			'orderby'      => 'name',
-			'parent' => 0
-        ));
-
-        $index = 0;
-        $tax = [];
-
-        foreach($taxonomies as $taxonomie){
-            $tax[$index]['name'] = $taxonomie->name;
-            $tax[$index]['term_id'] = $taxonomie->term_id;
-
-
-            $index++;
-        }
-        
-        return new WP_REST_RESPONSE(
-            $tax
-        );
-
-    }
+    
 
     function searchServices(){
         
 	}
+
+	function searchFiltersProjects(){
+		/* $locations = */ 
+	}
+
 	
 	function getSingleProject(WP_REST_Request $request){
 		global $exertio_theme_options;

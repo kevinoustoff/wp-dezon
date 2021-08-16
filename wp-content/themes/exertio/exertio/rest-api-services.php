@@ -206,12 +206,124 @@
 		
 	}
 
+	function listeDelaiLivraisons(){
+
+        $taxonomies  = get_terms( array(
+			'taxonomy' => 'delivery-time',
+			'hide_empty' => true,
+			'orderby'      => 'name',
+			'parent' => 0
+        ));
+
+        $index = 0;
+        $tax = [];
+
+        foreach($taxonomies as $taxonomie){
+            $tax[$index]['name'] = $taxonomie->name;
+            $tax[$index]['term_id'] = $taxonomie->term_id;
 
 
+            $index++;
+        }
+        
+        return $tax;
+        
+
+    }
+
+    function listeEnglishLevels(){
+
+        $taxonomies  = get_terms( array(
+			'taxonomy' => 'services-english-level',
+			'hide_empty' => true,
+			'orderby'      => 'name',
+			'parent' => 0
+        ));
+
+        $index = 0;
+        $tax = [];
+
+        foreach($taxonomies as $taxonomie){
+            $tax[$index]['name'] = $taxonomie->name;
+            $tax[$index]['term_id'] = $taxonomie->term_id;
 
 
+            $index++;
+        }
+        
+        return $tax;
+        
+
+    }
+    function listeServicesLocations(){
+
+        $taxonomies  = get_terms( array(
+			'taxonomy' => 'services-locations',
+			'hide_empty' => true,
+			'orderby'      => 'name',
+			'parent' => 0
+        ));
+
+        $index = 0;
+        $tax = [];
+
+        foreach($taxonomies as $taxonomie){
+            $tax[$index]['name'] = $taxonomie->name;
+            $tax[$index]['term_id'] = $taxonomie->term_id;
 
 
+            $index++;
+        }
+        
+        return $tax;
+        
+
+	}
+	
+	function getServiceCategories(){
+		$hide_empty = false;
+		/* 'service-categories','categories' */
+
+		$taxonomies = get_terms( array(
+			'taxonomy' => 'service-categories',
+			'hide_empty' => $hide_empty,
+			'orderby'      => 'name',
+			'parent' => 0
+		) );	
+
+
+		$index = 0;
+        $tax = [];
+
+        foreach($taxonomies as $taxonomie){
+            $tax[$index]['name'] = $taxonomie->name;
+            $tax[$index]['term_id'] = $taxonomie->term_id;
+
+
+            $index++;
+        }
+        
+        return $tax;
+		
+
+	}
+
+	function getServicesSearchFilters(){
+
+		$locations = listeServicesLocations();
+		$livraison = listeDelaiLivraisons();
+		$englishLevels = listeEnglishLevels();
+		$servicesCategories = getServiceCategories();
+		
+		$filters = [];
+
+		$filters["locations"] = listeServicesLocations();
+		$filters["livraison"] = listeDelaiLivraisons();
+		$filters["englishLevels"] = listeEnglishLevels();
+		$filters["servicesCategories"] = getServiceCategories();
+		
+		return new WP_REST_RESPONSE($filters);
+	}
 
 
 

@@ -93,6 +93,10 @@ add_action( 'rest_api_init', function () {
 		'methods' => 'GET',
 		'callback' =>  'getServiceDetail',
 	));
+	register_rest_route('api','/services/search/filters',array(
+		'methods' => 'GET',
+		'callback' =>  'getServicesSearchFilters',
+	));
   } );
 
 function my_awesome_func( $data ) {
