@@ -319,7 +319,7 @@
 
 		$filters["locations"] = listeServicesLocations();
 		$filters["livraison"] = listeDelaiLivraisons();
-		$filters["englishLevels"] = listeEnglishLevels();
+		$filters["english-level"] = listeEnglishLevels();
 		$filters["servicesCategories"] = getServiceCategories();
 		
 		return new WP_REST_RESPONSE($filters);
