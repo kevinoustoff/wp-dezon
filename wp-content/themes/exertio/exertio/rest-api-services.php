@@ -307,6 +307,34 @@
 		
 
 	}
+	function getFilters($filter_name)
+	{
+		$hide_empty = false;
+		/* 'service-categories','categories' */
+
+		$taxonomies = get_terms( array(
+			'taxonomy' => $filter_name,
+			'hide_empty' => $hide_empty,
+			'orderby'      => 'name',
+			'parent' => 0
+		) );	
+
+
+		$index = 0;
+        $tax = [];
+
+        foreach($taxonomies as $taxonomie){
+			/* print_r($taxonomie); */
+			$tax[$index]['name'] = $taxonomie->name;
+            $tax[$index]['term_id'] = $taxonomie->term_id;
+
+
+            $index++;
+        }
+        
+        return $tax;
+
+	}
 
 	function getServicesSearchFilters(){
 
@@ -321,6 +349,10 @@
 		$filters["livraison"] = listeDelaiLivraisons();
 		$filters["english-level"] = listeEnglishLevels();
 		$filters["servicesCategories"] = getServiceCategories();
+
+		$filters["projects"]["categories"] = getFilters("project-categories");
+		$filters["projects"]["languages"] = getFilters("languages");
+		$filters["projects"]["locations"] = getFilters("locations");
 		
 		return new WP_REST_RESPONSE($filters);
 	}
