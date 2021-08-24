@@ -633,6 +633,7 @@
 
     include 'rest-api-projects.php';
     include 'rest-api-services.php';
+    include 'rest-api-freelancers.php';
 
 
 

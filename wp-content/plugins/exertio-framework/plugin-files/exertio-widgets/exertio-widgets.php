@@ -1563,7 +1563,8 @@ if ( in_array( 'exertio-elementor/exertio-elementor.php', apply_filters( 'active
 			  $skill_count = 1;
 			  $skill_hide = '';
 			  foreach ( $saved_skills as $skills ) {
-				$skillsObject = get_term_by( 'id', $skills[ 'skill' ], 'freelancer-skills' );
+				
+					$skillsObject = get_term_by( 'id', $skills[ 'skill' ], 'freelancer-skills' );
 				 if(!empty($skillsObject) && ! is_wp_error($skillsObject))
 				 {
 					$skillsTermName = $skillsObject->name;
@@ -2776,6 +2777,7 @@ if ( in_array( 'exertio-elementor/exertio-elementor.php', apply_filters( 'active
 			  'compare' => '=',
 			);
 			}
+			
 			$args = array(
 			'author__not_in' => array( 1 ),
 			'post_type' => 'freelancer',
@@ -2803,15 +2805,18 @@ if ( in_array( 'exertio-elementor/exertio-elementor.php', apply_filters( 'active
 					  <?php
 						if ( $results->have_posts() )
 						{
+
 							$layout_type = new exertio_get_freelancers_class();
 							while ($results->have_posts())
 							{
 								$results->the_post();
 								$freelancer_id = get_the_ID();
 								$function = "exertio_freelancer_$grid_style";
+								
 								$fetch_output = $layout_type->$function($freelancer_id,$col);
 								//echo ' '.$fetch_output;
 							}
+							
 						}
 						wp_reset_postdata()
 					  ?>

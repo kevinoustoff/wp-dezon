@@ -1,0 +1,8 @@
+2021-08-24T05:03:16+00:00 CRITICAL syntax error, unexpected ')' dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-freelancers.php à la ligne 42
+
+2021-08-24T05:03:16+00:00 CRITICAL syntax error, unexpected ')' dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-freelancers.php à la ligne 42
+
+2021-08-24T14:41:00+00:00 CRITICAL syntax error, unexpected 'if' (T_IF), expecting variable (T_VARIABLE) or '{' or '$' dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-freelancers.php à la ligne 67
+
+2021-08-24T14:41:02+00:00 CRITICAL syntax error, unexpected 'if' (T_IF), expecting variable (T_VARIABLE) or '{' or '$' dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-freelancers.php à la ligne 67
+
