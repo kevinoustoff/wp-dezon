@@ -193,6 +193,7 @@ if($post == '')
 								}
 								?>
                       </div>
+                     
                       <div class="form-row">
                       	<?php
 						if(fl_framework_get_options('services_location') == 3)
@@ -261,6 +262,49 @@ if($post == '')
                             <?php
 							}
 							?>
+                      </div>
+
+                       <div class="form-row">
+                    	<?php
+						if(fl_framework_get_options('services_response_time') == 3)
+						{
+							
+						}
+						else
+						{
+							$response_time_check = '';
+							if(fl_framework_get_options('services_response_time') == 1)
+							{
+								$response_time_check = 'required data-smk-msg="'.esc_attr__('Veuillez nous en dire plus sur votre disponibilité','exertio_theme').'"';	
+							}
+							?>
+							<div class="form-group col-md-6">
+							  <label><?php echo esc_html__('Disponibilité ','exertio_theme'); ?></label>
+							  <?php
+							  $response_taxonomies = exertio_get_terms('response-time');
+								if ( !empty($response_taxonomies) )
+								{
+									$response_time = get_post_meta($sid, '_response_time', true);
+									$response = '<select name="response_time" class="form-control general_select" '.$response_time_check.'>';
+									$response .= '<option value=""> '. __( "Disponibilité ", "exertio_theme" ) .'</option>';
+									foreach( $response_taxonomies as $response_taxonomy ) {
+										if($response_taxonomy->term_id == $response_time){ $selected = 'selected ="selected"';}else{$selected = ''; }
+										if( $response_taxonomy->parent == 0 ) {
+
+											 $response .= '<option value="'. esc_attr( $response_taxonomy->term_id ) .'" '.$selected.'>
+													'. esc_html( $response_taxonomy->name ) .'</option>';
+										}
+									}
+									$response.='</select>';
+									echo wp_return_echo($response);
+								}
+							?>
+							<p><?php echo esc_html__('Votre disponibilité déterminera la vitesse d\'exécution du service.','exertio_theme'); ?></p>
+							</div>
+							<?php
+						}
+						
+						?>
                       </div>
                     
                     </div>

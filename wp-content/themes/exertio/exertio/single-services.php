@@ -127,7 +127,7 @@ if ( $exertio_theme_options[ 'action_bar' ] == 1 ) {
               }
               ?>
               </span> </li>
-            <li> <img src="<?php echo get_template_directory_uri()?>/images/icons/fast-time.png" alt="<?php echo get_post_meta($alt_id, '_wp_attachment_image_alt', TRUE); ?>"> <span> <small> <?php echo esc_html__('Temps de réponse','exertio_theme'); ?></small>
+            <li> <img src="<?php echo get_template_directory_uri()?>/images/icons/fast-time.png" alt="<?php echo get_post_meta($alt_id, '_wp_attachment_image_alt', TRUE); ?>"> <span> <small> <?php echo esc_html__('Disponibilité','exertio_theme'); ?></small>
               <?php
               $response_time = get_term( get_post_meta( $sid, '_response_time', true ) );
               if ( !empty( $response_time ) && !is_wp_error( $response_time ) ) {
