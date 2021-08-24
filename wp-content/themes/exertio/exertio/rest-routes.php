@@ -97,6 +97,10 @@ add_action( 'rest_api_init', function () {
 		'methods' => 'GET',
 		'callback' =>  'getServicesSearchFilters',
 	));
+	register_rest_route('api','/freelancers/top',array(
+		'methods' => 'GET',
+		'callback' =>  'freelancersTop',
+	));
   } );
 
 function my_awesome_func( $data ) {

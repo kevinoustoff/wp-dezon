@@ -1,0 +1,27 @@
+2021-08-23T10:00:43+00:00 CRITICAL Cannot redeclare getServicesSearchFilters() (previously declared in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-services.php:341) dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-services.php à la ligne 341
+
+2021-08-23T10:00:43+00:00 CRITICAL Cannot redeclare getServicesSearchFilters() (previously declared in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-services.php:341) dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-services.php à la ligne 341
+
+2021-08-23T10:01:07+00:00 CRITICAL Uncaught Error: Call to undefined function WP_REST_Response() in /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-freelancers.php:39
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1139): freelancersTop(Object(WP_REST_Request))
+#1 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/freelancer...', Array, NULL)
+#2 /var/www/html/wordpress/wp-includes/rest-api/class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /var/www/html/wordpress/wp-includes/rest-api.php(354): WP_REST_Server->serve_request('/api/freelancer...')
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 /var/www/html/wordpress/wp-includes/plugin.php(551): WP_Hook->do_action(Array)
+#7 /var/www/html/wordpress/wp-includes/class-wp.php(388 dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-freelancers.php à la ligne 39
+
+2021-08-23T13:14:46+00:00 CRITICAL syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$' dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-freelancers.php à la ligne 42
+
+2021-08-23T13:14:46+00:00 CRITICAL syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$' dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-freelancers.php à la ligne 42
+
+2021-08-23T15:34:23+00:00 CRITICAL syntax error, unexpected ')', expecting variable (T_VARIABLE) or '{' or '$' dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-freelancers.php à la ligne 42
+
+2021-08-23T15:34:23+00:00 CRITICAL syntax error, unexpected ')', expecting variable (T_VARIABLE) or '{' or '$' dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-freelancers.php à la ligne 42
+
+2021-08-23T15:37:21+00:00 CRITICAL syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting variable (T_VARIABLE) or '{' or '$' dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-freelancers.php à la ligne 42
+
+2021-08-23T15:37:21+00:00 CRITICAL syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting variable (T_VARIABLE) or '{' or '$' dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/rest-api-freelancers.php à la ligne 42
+
