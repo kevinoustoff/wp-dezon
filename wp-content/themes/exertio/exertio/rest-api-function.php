@@ -449,13 +449,14 @@
 			$user = get_user_by('email', $email);
 			$user_email = $user->user_login;
 			$reset_key = get_password_reset_key($user);
+            $mobile_reset_key = RecoverKeyToUse($user->ID);
 			$signinlink = get_the_permalink(fl_framework_get_options('login_page'));
-			update_user_meta( $user->ID, '_reset_password_key', $reset_key );
+			update_user_meta( $user->ID, '_reset_password_key', $mobile_reset_key );
 			
 			$reset_link = esc_url($signinlink.'?action=rp&key='.$reset_key.'&login='.rawurlencode($user_email));
 			
 
-            fl_forgotpass_email($user->ID,$reset_link);
+            mobile_forgotpass_email($user->ID,$reset_link,$mobile_reset_key);
             
 			/* $return = array('message' => esc_html__( 'Check your email for the confirmation link.', 'exertio_framework' ));
             wp_send_json_success($return); */
@@ -467,6 +468,34 @@
             ));
 		/* 	die(); */
 		}
+
+    }
+
+    
+
+    function RecoverKeyToUse($id){
+
+        $key = make_random_custom_string(4).$id;
+
+        return $key;
+    }
+
+    
+
+    function make_random_custom_string($n)
+	{
+
+		$alphabet = "123456789abcdefghijklmnopqrstuvwxyz";
+		$s = "";
+		for ($i = 0; $i != $n; ++$i)
+			$s .= $alphabet[mt_rand(0, strlen($alphabet) - 1)];
+
+		$s = strtoupper($s);
+
+		return $s;
+	}
+
+    function sendMail(){
 
     }
 

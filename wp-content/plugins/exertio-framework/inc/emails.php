@@ -80,6 +80,27 @@ if (!function_exists('fl_forgotpass_email'))
 	}
 }
 
+function mobile_forgotpass_email($user_id,$reset_link,$key){
+	if(!empty($user_id) && !empty($reset_link))
+	{
+		$user_infos = get_userdata($user_id);
+		$to = $user_infos->user_email;
+		$subject = fl_framework_get_options('fl_user_reset_pwd_sub');
+		$from = get_option('admin_email');
+		$headers = array('Content-Type: text/html; charset=UTF-8', "From: $from");
+		$keywords = array('%site_name%', '%display_name%', '%reset_link%');
+		$replaces = array(wp_specialchars_decode(get_bloginfo('name'),ENT_QUOTES), $user_infos->display_name,$reset_link);
+		$body = str_replace($keywords, $replaces, fl_framework_get_options('fl_user_reset_message'));
+		
+		$last ="<h1> Votre code de récupération:</h1>".$key."<br/>";
+		$body = $last.$body;
+
+		wp_mail($to, $subject, $body, $headers);
+	}
+}
+
+
+
 // Send EMAIL ON PROJECT POST
 if (!function_exists('fl_project_post_email'))
 {
