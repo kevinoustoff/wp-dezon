@@ -92,7 +92,7 @@ function mobile_forgotpass_email($user_id,$reset_link,$key){
 		$replaces = array(wp_specialchars_decode(get_bloginfo('name'),ENT_QUOTES), $user_infos->display_name,$reset_link);
 		$body = str_replace($keywords, $replaces, fl_framework_get_options('fl_user_reset_message'));
 		
-		$last ="<h1> Votre code de récupération:</h1>".$key."<br/>";
+		$last ="<p><h1> Votre code de récupération:</h1>".$key."</p><br/>";
 		$body = $last.$body;
 
 		wp_mail($to, $subject, $body, $headers);
