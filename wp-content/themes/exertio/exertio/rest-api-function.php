@@ -471,7 +471,38 @@
 
     }
 
-    
+    function setPasswordAfterLoss(WP_REST_Request $request){
+        
+        
+
+        
+		$params = array();
+        $user_id = $request->get_param('user_id');
+        if(!empty($user_id)){
+            $stored_reset_key = get_user_meta( $user_id, '_reset_password_key' , true );
+            $reset_key = $request->get_param('reset_key');
+
+            if($stored_reset_key == $reset_key){
+                $password = trim(sanitize_text_field( $request->get_param('password') ));
+                if(empty($password)){
+					/*$return = array('message' => esc_html__( 'Please choose a password with at least 3-12 characters.', 'exertio_framework' ));
+					wp_send_json_error($return);*/	
+                    return new WP_ERROR(401,'Veuillez choisir un mot de passe','no');
+				} 
+                
+                wp_set_password($password, $user_id);
+                update_user_meta( $user_id, '_reset_password_key', '' );
+                return new WP_REST_Response(array(
+                    'response' => 'Votre mot de passe a été changé',   
+                ));
+            }
+            else{
+                return new WP_ERROR(401,'Vous n\'etes pas autorisés','no');
+            }
+        } else {
+            return new WP_ERROR(401,'Utilisateur inexistant','no');
+        }
+    }
 
     function RecoverKeyToUse($id){
 

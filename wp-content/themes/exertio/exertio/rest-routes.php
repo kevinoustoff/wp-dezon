@@ -57,6 +57,10 @@ add_action( 'rest_api_init', function () {
 		'methods' => 'POST',
 		'callback' =>  'forgetPwd',
 	));
+	register_rest_route('api','/forgot-password/set-new',array(
+		'methods' => 'POST',
+		'callback' =>  'setPasswordAfterLoss',
+	));
 	register_rest_route('api','/recover-password',array(
 		'methods' => 'POST',
 		'callback' =>  'changePassword',
