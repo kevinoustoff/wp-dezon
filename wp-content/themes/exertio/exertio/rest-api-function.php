@@ -462,7 +462,7 @@
             wp_send_json_success($return); */
             
             return new WP_REST_Response(array(
-                
+                'user_id' => $user->ID,
                 'response' => 'Verifiez votre e-mail pour le lien de confirmation',
                 
             ));
@@ -493,6 +493,7 @@
                 wp_set_password($password, $user_id);
                 update_user_meta( $user_id, '_reset_password_key', '' );
                 return new WP_REST_Response(array(
+                    
                     'response' => 'Votre mot de passe a été changé',   
                 ));
             }
