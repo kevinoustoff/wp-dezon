@@ -36,7 +36,7 @@
 				{
 					$author_id = get_post_field( 'post_author', $post->ID );
 					$fid = get_user_meta( $author_id, 'freelancer_id' , true );
-					$freelancer['id'] = $fid;					
+					$freelancer['id'] = intval($post->post_author) ;					
 					$freelancer['freelancer-name'] = exertio_get_username('freelancer', $fid);
 					$freelancer['tagline'] = get_post_meta( $post->ID, '_freelancer_tagline' , true );
 				  $freelancer['description'] = strip_tags($post->post_content); 
