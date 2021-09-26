@@ -1,0 +1,43 @@
+2021-09-25T08:13:53+00:00 CRITICAL Uncaught Error: Call to a member function get_results() on null in C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php:514
+Stack trace:
+#0 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(1139): savedProjects(Object(WP_REST_Request))
+#1 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/projets/sa...', Array, NULL)
+#2 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api.php(354): WP_REST_Server->serve_request('/api/projets/sa...')
+#4 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 C:\xampp\htdocs\wp-dezon\wp-includes\plugin.php(551): WP_Hook->do_action(Array)
+#7 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp.php(388): do_action_ref_array('parse_request', Array)
+#8 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp.php(750): WP->parse_request('')
+#9 C:\xampp\htdocs\wp-dezon\wp-includes\functions.php(1291): WP->main('')
+#10 C:\xampp\htdocs\wp-dezon\wp-blog-header.php(16): wp()
+#11 C:\xampp\htdocs\wp-dezon\index.php(17): require('C:\\xampp\\htdocs...')
+#12 {main}
+  thrown dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 514
+
+2021-09-25T08:30:00+00:00 CRITICAL syntax error, unexpected token "}", expecting variable or "{" or "$" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 574
+
+2021-09-25T08:30:00+00:00 CRITICAL syntax error, unexpected token "}", expecting variable or "{" or "$" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 574
+
+2021-09-25T08:35:25+00:00 CRITICAL syntax error, unexpected token "}" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 574
+
+2021-09-25T08:35:27+00:00 CRITICAL syntax error, unexpected token "}" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 574
+
+2021-09-25T09:15:57+00:00 CRITICAL syntax error, unexpected token ";", expecting "(" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-freelancers.php à la ligne 112
+
+2021-09-25T09:15:59+00:00 CRITICAL syntax error, unexpected token ";", expecting "(" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-freelancers.php à la ligne 112
+
+2021-09-25T13:02:45+00:00 CRITICAL syntax error, unexpected token "}" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-freelancers.php à la ligne 112
+
+2021-09-25T13:02:51+00:00 CRITICAL syntax error, unexpected token "}" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-freelancers.php à la ligne 112
+
+2021-09-25T13:27:44+00:00 CRITICAL syntax error, unexpected token "}" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-freelancers.php à la ligne 114
+
+2021-09-25T13:27:59+00:00 CRITICAL syntax error, unexpected token "}" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-freelancers.php à la ligne 114
+
+2021-09-25T13:32:50+00:00 CRITICAL syntax error, unexpected token "}" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-freelancers.php à la ligne 116
+
+2021-09-25T13:32:51+00:00 CRITICAL syntax error, unexpected token "}" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-freelancers.php à la ligne 116
+
+2021-09-25T13:32:53+00:00 CRITICAL syntax error, unexpected token "}" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-freelancers.php à la ligne 116
+

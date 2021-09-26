@@ -105,6 +105,20 @@
 
     }
 
+	function idVerificationProccess(WP_REST_Request $request){
+
+		$files = $request->get_file_params();
+         
+		require_once( ABSPATH . 'wp-admin/includes/image.php' );
+    	require_once( ABSPATH . 'wp-admin/includes/file.php' );
+    	require_once( ABSPATH . 'wp-admin/includes/media.php' );
+		
+		if(count($files)){
+
+		}
+
+	}
+
 
 
 ?>

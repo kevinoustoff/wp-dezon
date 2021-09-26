@@ -226,6 +226,191 @@
 
     }
 
+    function updateProfile(WP_REST_REQUEST $request){
+        global $exertio_theme_options;
+        $uid = $request->get_param('uid');
+        $words = explode(',', $exertio_theme_options['bad_words_filter']);
+        $desc = fl_badwords_filter($words, $params['fl_desc'], $replace);
+        $new_slug = preg_replace('/\s+/', '', $request->get_param('username'));
+        global $exertio_theme_options;
+        $pid = get_user_meta( $uid, 'freelancer_id' , true );
+        $post = get_post($pid);
+
+        $post->post_title = sanitize_text_field($request->get_param('username'));
+        $post->post_name = sanitize_text_field($new_slug);
+        $post->post_content = wp_kses($desc, exertio_allowed_html_tags());
+        
+        $result = wp_update_post($post, true);
+
+        if (is_wp_error($result))
+        {
+            $return = array('message' => esc_html__( 'Profile not saved. Please contact admin', 'exertio_framework' ));
+            wp_send_json_error($return);
+        }
+        if($request->get_param('freelancer_tagline') !== null)
+		{
+			update_post_meta( $post->ID, '_freelancer_tagline', $request->get_param('freelancer_tagline'));
+		}
+        if($request->get_param("freelancer_display_name") !== null){
+            update_post_meta( $post->ID, '_freelancer_dispaly_name', $request->get_param("freelancer_display_name"));
+
+        }
+
+        if($request->get_param("freelancer_contact_number") !==null){
+            update_post_meta( $post->ID, '_freelancer_contact_number', sanitize_text_field($request->get_param("freelancer_contact_number")));
+        }
+
+        if($request->get_param("freelancer_gender") != null){
+            update_post_meta( $post->id, '_freelancer_gender', sanitize_text_field($request->get_param('freelancer_gender')));
+
+        }
+
+        if($request->get_param('freelance_type') !==null)
+		{
+			$company_employees_terms = array((int)$request->get_param('freelance_type')); 
+
+			update_post_meta( $post->ID, '_freelance_type', sanitize_text_field($request->get_param('freelance_type')));
+			wp_set_post_terms( $post->ID, $company_employees_terms, 'freelance-type', false );
+		}
+        if($request->get_param('english_level') !==null)
+		{
+			$english_level = array((int)$request->get_param('english_level')); 
+			update_post_meta( $post->ID, '_freelancer_english_level', sanitize_text_field($request->get_param('english_level')));
+			wp_set_post_terms( $post->ID, $english_level, 'freelancer-english-level', false );
+		}
+
+        if($request->get_param('freelancer_language') !==null)
+		{
+			$freelancer_language = array((int)$request->get_param('freelancer_language')); 
+
+			update_post_meta( $post->ID, '_freelancer_language', sanitize_text_field($request->get_param('freelancer_language')));
+			wp_set_post_terms( $post->ID, $freelancer_language, 'freelancer-languages', false );
+		}
+
+        if($request->get_param('freelancer_location') !==null)
+		{
+			update_post_meta( $post->ID, '_freelancer_location', sanitize_text_field($request->get_param('freelancer_location')));
+			set_hierarchical_terms('freelancer-locations', $request->get_param('freelancer_location'), $post->ID);
+		}
+
+        if($request->get_param('profile_attachment_ids') !==null)
+		{
+			update_post_meta( $post->ID, '_profile_pic_freelancer_id', sanitize_text_field($request->get_param('profile_attachment_ids')));
+		}
+
+        if($request->get_param('banner_img_id') !== null)
+		{
+			update_post_meta( $post->ID, '_freelancer_banner_id', sanitize_text_field($request->get_param('banner_img_id')));
+		}
+
+        if($request->get_param('freelancer_address') !== null)
+		{
+			update_post_meta( $post->ID, '_freelancer_address', sanitize_text_field($request->get_param('freelancer_address')));
+		}
+
+        if($request->get_param('latitude')  !== null)
+		{
+			update_post_meta( $post->ID, '_freelancer_latitude', sanitize_text_field($request->get_param('latitude')));
+		}
+		
+		if($request->get_param('longitude') !== null)
+		{
+			update_post_meta( $post->ID, '_freelancer_longitude', sanitize_text_field($request->get_param('longitude')));
+		}
+
+        if($exertio_theme_options['fl_skills'] == 2)
+		{
+            if($request->get_param('freelancer_skills') !== null)
+            {
+                $skills = $request->get_param('freelancer_skills');
+                $percents = $request->get_param('freelancers_skills_percent');
+                $integerIDs = array_map('intval', $request->get_param('freelancer_skills'));
+				$integerIDs = array_unique($integerIDs);
+                $talents = [];
+                for($i=0; $i< count($skills); $i++){
+                    $talents[] = array(
+                        "skill" => sanitize_text_field($skills[$i]['id']),
+                        "percent" => sanitize_text_field($percents[$i])
+
+                    );
+                }
+                $encoded_skills = wp_json_encode($talents, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES );
+                wp_set_post_terms($post->ID,$integerIDs, 'freelancer-skills', false);
+                update_post_meta($post->ID, '_freelancer_skills', $encoded_skills);
+
+            }  else if ($request->get_param('freelancer_skills') == ''){
+                wp_set_post_terms( $post->ID, '', 'freelancer-skills', false );
+				update_post_meta( $post->ID, '_freelancer_skills', '' );
+            }
+
+            if($exertio_theme_options['fl_awards'] == 2){
+                if($request->get_param('awards') !==null){
+                    $awards = $request->get_param("awards");
+
+                    for($i=0;$i<count($awards);$i++){
+                        
+                        $prix [] = array(
+                            "award_name" => sanitize_text_field($awards[$i]["name"]),
+                            "award_date" => sanitize_text_field($awards[$i]["date"]),
+                            "award_img" => sanitize_text_field($awards[$i]["img_id"]),
+                           );
+                    }
+                    $encoded_awards =  wp_json_encode($prix, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+                    update_post_meta( $post->ID, '_freelancer_awards', $encoded_awards );
+
+
+                } else {
+                    update_post_meta( $post->ID, '_freelancer_awards', '' );
+                }
+            }
+
+            if($exertio_theme_options['fl_projects'] == 2){
+                if($request->get_param('projects') !==null){
+
+                    $projets = $request->get_param('projects');
+
+                    for($i=0;$i<count($awards);$i++){
+
+                        $projects [] = array(
+                            "project_name" => sanitize_text_field($projets[$i]["name"]),
+                            "project_url" => sanitize_text_field($projets[$i]["url"]),
+                            "project_img" => sanitize_text_field($projets[$i]["img_id"]),
+
+                        );
+
+                    }
+                    $encoded_projects =  wp_json_encode($projects, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+                    update_post_meta( $post->ID, '_freelancer_projects', $encoded_projects );
+
+
+
+                }
+            } else {
+                update_post_meta($post->ID, '_freelancer_projects','');
+            }
+        }
+
+        
+
+
+
+        
+
+
+
+
+
+
+
+        
+        
+        
+
+
+
+
+    }
+
     function lastServices($params) {
         /* $exertio_serv = new Exertio_Services();
 

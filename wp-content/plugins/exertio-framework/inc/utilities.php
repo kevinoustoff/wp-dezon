@@ -1454,6 +1454,7 @@ if ( ! function_exists( 'fl_profile_save' ) )
 				for($i=0; $i<count($skill_name); $i++)
 				{
 					$skill_id = sanitize_text_field($skill_name[$i]);
+					
 					$percent = sanitize_text_field($skill_percent[$i]);
 					$skills[] = array(
 						"skill" => $skill_id,
@@ -2770,7 +2771,7 @@ if ( ! function_exists( 'verification_doc' ) )
 		/*img upload */
 		$attachment_idss = array_filter( $attachment_ids  );
 		$attachment_idss =  implode( ',', $attachment_idss );  
-	
+	 
 	
 		$arr = array();
 		$arr['attachment_idss'] = $attachment_idss;

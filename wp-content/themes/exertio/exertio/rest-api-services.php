@@ -163,9 +163,39 @@
 		$service = get_post($id);
 		$post_author = $service->post_author;
 		$fid = get_user_meta( $post_author, 'freelancer_id', true );
+		$services_addons_ids = json_decode( get_post_meta($service->ID, '_services_addon', true));
+		$customAddons = [];
+		if( $services_addons_ids !== null && $services_addons_ids != ''){
+			$args = array(
+				'post__in' => $services_addons_ids,
+				'post_type' => 'addons',
+				'meta_query' => array(
+				  array(
+					'key' => '_addon_status',
+					'value' => 'active',
+					'compare' => '=',
+				  ),
+				),
+				'post_status' => 'publish'
+			  );
 
+			  $addons = get_posts( $args );
+			  
+			  foreach( $addons as $addon){
+				  $myAddon["title"] = get_the_title($addon->ID);
+				  $myAddon["price"] = get_post_meta( $addon->ID, '_addon_price', true );
+				  $myAddon["content"] = $addon->post_content;
+				  $myAddon["id"] = $addon->ID;
+
+				  array_push($customAddons, $myAddon);
+
+			  }
+			  
+			  //print_r($addons);
+
+		}
 		$delivery_time = get_term( get_post_meta( $service->ID, '_delivery_time', true ) );
-
+		$customService["addonsServices"] = $customAddons;
 		$customService["delivery-time"] = null;
 		/* print_r($service); */
 		if(!empty( $delivery_time ) && !is_wp_error( $delivery_time )){
@@ -192,7 +222,7 @@
 		$customService['freelancer-id'] = $fid;
 		$customService['id'] = $service->ID;
 		$customService['freelancer-rates-stars'] = get_freelancer_rating( $fid, 'stars', 'service' );;
-
+		
 		$pro_img_id = get_post_meta( $fid, '_profile_pic_freelancer_id', true );
 		$pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 		
@@ -355,6 +385,80 @@
 		$filters["projects"]["locations"] = getFilters("locations");
 		
 		return new WP_REST_RESPONSE($filters);
+	}
+
+	function getMyServices(WP_REST_REQUEST $request){
+		
+		global $exertio_theme_options;
+		if ( get_query_var( 'paged' ) ) {
+			$paged = get_query_var( 'paged' );
+		  } else if ( get_query_var( 'page' ) ) {
+			/*This will occur if on front page.*/
+			$paged = get_query_var( 'page' );
+		  } else {
+			$paged = 1;
+		  }
+
+		if($request->get_param("user_id") !== null){
+			$the_query = new WP_Query(
+				array(
+				  'author__in' => array( $request->get_param("user_id") ),
+				  'post_type' => 'services',
+				  'meta_query' => array(
+					array(
+					  'key' => '_service_status',
+					  'value' => 'active',
+					  'compare' => '=',
+					),
+				  ),
+				  'paged' => $paged,
+				  'post_status' => 'publish'
+				)
+			  );
+
+			  $total_count = $the_query->found_posts;
+			  $customResults = [];
+
+			  foreach($the_query->posts as $service){
+				$service_id = $service->ID;
+                $author_id = get_post_field( 'post_author', $service_id );
+                $posted_date = get_the_date(get_option( 'date_format' ), $service_id );
+                $fid = get_user_meta( $author_id, 'freelancer_id' , true );
+                $serv['id'] = $service->ID;
+                $serv['image'] = exertio_get_service_image_url($service_id);
+                $serv['title'] = get_the_title($service_id);
+                $serv['rating'] = get_service_rating($service_id);
+                $serv['queued'] = exertio_queued_services($service_id);
+                $serv['price']  = get_post_meta($service_id, '_service_price', true);
+                $serv['freelancer-name'] = exertio_get_username('freelancer', $fid);
+                $serv['date_post'] = get_the_date( get_option( 'date_format' ), $service_id );
+                $pro_img_id = get_post_meta( $fid, '_profile_pic_freelancer_id', true );
+                $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
+                
+                if(wp_attachment_is_image($pro_img_id)){
+                    $serv['freelance-photo-profile'] = esc_url($pro_img[0]);
+                } else {
+                    $serv['freelance-photo-profile'] = esc_url($exertio_theme_options['freelancer_df_img']['url']);
+                }
+                
+                array_push($customResults,$serv);
+
+
+			  }
+
+			  return new WP_REST_RESPONSE(
+				$customResults
+			);
+			  
+
+
+		}
+
+
+
+
+		
+
 	}
 
 

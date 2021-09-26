@@ -69,6 +69,21 @@ add_action( 'rest_api_init', function () {
 		'methods' => 'GET',
 		'callback' =>  'getListeProjets',
 	));
+	register_rest_route('api','/projets/mine',array(
+		'methods' => 'GET',
+		'callback' =>  'myProjects',
+	));
+
+	register_rest_route('api','/projets/saved',array(
+		'methods' => 'GET',
+		'callback' =>  'savedProjects',
+	));
+	register_rest_route('api','/projets/save',array(
+		'methods' => 'POST',
+		'callback' =>  'saveSingleProject',
+	));
+	
+
 	register_rest_route('api','/projets/search',array(
 		'methods' => 'GET',
 		'callback' =>  'filtersProjects',
@@ -85,7 +100,7 @@ add_action( 'rest_api_init', function () {
 		'methods' => 'GET',
 		'callback' =>  'listeServicesLocations',
 	));
-	register_rest_route('api','/services/search',array(
+	register_rest_route('api','/services /search',array(
 		'methods' => 'GET',
 		'callback' =>  'searchServicesApiVersion',
 	));
@@ -104,6 +119,14 @@ add_action( 'rest_api_init', function () {
 	register_rest_route('api','/freelancers/top',array(
 		'methods' => 'GET',
 		'callback' =>  'freelancersTop',
+	));
+	register_rest_route('api','/services/mine',array(
+		'methods' => 'GET',
+		'callback' =>  'getMyServices',
+	));
+	register_rest_route('api','/identification/verification',array(
+		'methods' => 'POST',
+		'callback' =>  'idVerificationProccess',
 	));
   } );
 

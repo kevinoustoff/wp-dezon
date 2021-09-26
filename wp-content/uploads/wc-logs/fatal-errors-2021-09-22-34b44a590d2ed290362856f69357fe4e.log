@@ -1,0 +1,26 @@
+2021-09-22T10:53:32+00:00 CRITICAL Cannot use isset() on the result of an expression (you can use "null !== expression" instead) dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php à la ligne 250
+
+2021-09-22T10:55:38+00:00 CRITICAL Cannot use isset() on the result of an expression (you can use "null !== expression" instead) dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php à la ligne 254
+
+2021-09-22T11:02:10+00:00 CRITICAL Cannot use isset() on the result of an expression (you can use "null !== expression" instead) dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php à la ligne 323
+
+2021-09-22T11:07:27+00:00 CRITICAL syntax error, unexpected token ")", expecting ";" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php à la ligne 325
+
+2021-09-22T11:07:27+00:00 CRITICAL syntax error, unexpected token ")", expecting ";" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php à la ligne 325
+
+2021-09-22T12:27:16+00:00 CRITICAL syntax error, unexpected token ")" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php à la ligne 347
+
+2021-09-22T12:28:46+00:00 CRITICAL syntax error, unexpected token ")" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php à la ligne 347
+
+2021-09-22T12:28:50+00:00 CRITICAL syntax error, unexpected token ")" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php à la ligne 347
+
+2021-09-22T12:38:19+00:00 CRITICAL syntax error, unexpected token ")" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php à la ligne 346
+
+2021-09-22T16:01:19+00:00 CRITICAL syntax error, unexpected token "}", expecting variable or "{" or "$" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-services.php à la ligne 364
+
+2021-09-22T16:01:19+00:00 CRITICAL syntax error, unexpected token "}", expecting variable or "{" or "$" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-services.php à la ligne 364
+
+2021-09-22T16:03:30+00:00 CRITICAL syntax error, unexpected token "}", expecting variable or "{" or "$" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-services.php à la ligne 364
+
+2021-09-22T16:09:32+00:00 CRITICAL syntax error, unexpected token ")" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-services.php à la ligne 372
+
