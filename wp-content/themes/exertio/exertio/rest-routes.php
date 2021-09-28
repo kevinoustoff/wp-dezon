@@ -100,7 +100,7 @@ add_action( 'rest_api_init', function () {
 		'methods' => 'GET',
 		'callback' =>  'listeServicesLocations',
 	));
-	register_rest_route('api','/services /search',array(
+	register_rest_route('api','/services/search',array(
 		'methods' => 'GET',
 		'callback' =>  'searchServicesApiVersion',
 	));
@@ -127,6 +127,14 @@ add_action( 'rest_api_init', function () {
 	register_rest_route('api','/identification/verification',array(
 		'methods' => 'POST',
 		'callback' =>  'idVerificationProccess',
+	));
+	register_rest_route('api','/identification/verification/revoke',array(
+		'methods' => 'GET',
+		'callback' =>  'revoke_verification',
+	));
+	register_rest_route('api','/identification/verification/status',array(
+		'methods' => 'GET',
+		'callback' =>  'checkIfUserHasBeenRevoked',
 	));
   } );
 

@@ -409,6 +409,7 @@ if ( ! function_exists( 'freelance_emp_profile_pic' ) )
 					  
 					  if($imgcount>=$condition_img){ break; } 
 					 $attach_id = media_handle_upload( $file, $pid );
+					 
 					  $attachment_ids[] = $attach_id; 
 					
 					  $image_link = wp_get_attachment_image_src( $attach_id, 'thumbnail' );
@@ -2622,7 +2623,6 @@ if ( ! function_exists( 'fl_verification_save' ) )
 		if(isset($params['contact_number']))
 		{
 			update_post_meta( $result, '_verification_contact', sanitize_text_field($params['contact_number']));
-			
 		}
 		if(isset($params['verification_number']))
 		{
@@ -2651,6 +2651,7 @@ if ( ! function_exists( 'fl_revoke_verification' ) )
 { 
 	function fl_revoke_verification() 
 	{
+		global $exertio_theme_options;
 		/*DEMO DISABLED*/
 		exertio_demo_disable('json');
 		$uid = get_current_user_id();
@@ -2728,6 +2729,7 @@ if ( ! function_exists( 'verification_doc' ) )
 			{            
 				if ($files['name'][$key]) 
 				{ 
+					
 					$file = array( 
 					 'name' => $files['name'][$key],
 					 'type' => $files['type'][$key], 

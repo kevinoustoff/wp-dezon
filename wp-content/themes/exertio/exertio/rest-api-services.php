@@ -219,10 +219,10 @@
 		$customService['rating'] = get_service_rating($service->ID);
 		$customService['queued'] = exertio_queued_services($service->ID);
 		$customService['freelancer-name'] = exertio_get_username('freelancer', $fid);
-		$customService['freelancer-id'] = $fid;
+		$customService['freelancer-id'] = intval($fid);
 		$customService['id'] = $service->ID;
 		$customService['freelancer-rates-stars'] = get_freelancer_rating( $fid, 'stars', 'service' );;
-		
+		$customService['user_id'] = intval($post_author); 
 		$pro_img_id = get_post_meta( $fid, '_profile_pic_freelancer_id', true );
 		$pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 		
