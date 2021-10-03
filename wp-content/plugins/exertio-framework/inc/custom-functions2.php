@@ -1203,10 +1203,10 @@ if ( ! function_exists( 'get_rating' ) )
 				if($results)
 				{
 					$count_reviews = count($results);
-					$reviews_text = esc_html__( ' avis', 'exertio_framework' );
+					$reviews_text = esc_html__( ' review', 'exertio_framework' );
 					if($count_reviews > 1)
 					{
-						$reviews_text = esc_html__( ' avis', 'exertio_framework' );
+						$reviews_text = esc_html__( ' reviews', 'exertio_framework' );
 					}
 					foreach($results as $result)
 					{
@@ -1252,7 +1252,7 @@ if ( ! function_exists( 'get_rating' ) )
 				else
 				{
 					$stars_html ='<i class="fas fa-star colored"></i>';
-					return $stars_html.' '.esc_html__( 'Aucun avis', 'exertio_framework' );	
+					return $stars_html.' '.esc_html__( 'No Reviews', 'exertio_framework' );	
 				}
 			}
 		}
@@ -1733,21 +1733,21 @@ if ( ! function_exists( 'fl_service_rating' ) )
 						}
 						else
 						{
-							$return = array('message' => esc_html__('Erreur lors de la sauvegarde de l\'avis','exertio_framework'));
+							$return = array('message' => esc_html__('Error in saving service review','exertio_framework'));
 							wp_send_json_error($return);
 						}
 						
 					}
 					else
 					{
-						$return = array('message' => esc_html__('Erreur lors de la mise à jour de l\'état du service','exertio_framework'));
+						$return = array('message' => esc_html__('Error in updating service status','exertio_framework'));
 						wp_send_json_error($return);
 					}
 					
 				}
 				else
 				{
-					$return = array('message' => esc_html__('Vous n\'êtes pas autorisé à effectuer cette action','exertio_framework'));
+					$return = array('message' => esc_html__('You are not allowed to do that','exertio_framework'));
 					wp_send_json_error($return);
 				}
 			}
@@ -1787,18 +1787,18 @@ if ( ! function_exists( 'fl_service_rating' ) )
 							fl_service_canceled_employer_email($current_user_id,$ongoing_sid);
 						}
 						
-						$return = array('message' => esc_html__( 'Marqué comme annulé', 'exertio_framework' ), 'page' => $redirect_page);
+						$return = array('message' => esc_html__( 'Marked as canceled', 'exertio_framework' ), 'page' => $redirect_page);
 						wp_send_json_success($return);	
 					}
 					else
 					{
-						$return = array('message' => esc_html__('Erreur lors de la mise à jour de l\'état du service','exertio_framework'));
+						$return = array('message' => esc_html__('Error in updating service status','exertio_framework'));
 						wp_send_json_error($return);	
 					}
 				}
 				else
 				{
-					$return = array('message' => esc_html__('Vous n\'êtes pas autorisé à effectuer cette action','exertio_framework'));
+					$return = array('message' => esc_html__('You are not allowed to do that','exertio_framework'));
 					wp_send_json_error($return);
 				}
 			}
@@ -1831,7 +1831,7 @@ if ( ! function_exists( 'get_service_rating' ) )
 			}
 			else
 			{
-				return esc_html__( 'Aucun avis', 'exertio_framework' );	
+				return esc_html__( 'No Reviews', 'exertio_framework' );	
 			}
 		}
 	}
@@ -1917,7 +1917,7 @@ if ( ! function_exists( 'get_freelancer_rating' ) )
 			}
 			else
 			{
-				return esc_html__( 'Aucun avis', 'exertio_framework' );	
+				return esc_html__( 'No Reviews', 'exertio_framework' );	
 			}
 		}
 	}
@@ -1957,11 +1957,11 @@ if ( ! function_exists( 'exertio_queued_services' ) )
 			$result = count($wpdb->get_results($query));
 			if($result > 1)
 			{
-				return $result.esc_html__(' Commandes validées','exertio_theme');	
+				return $result.esc_html__(' Orders in queue','exertio_theme');	
 			}
 			else
 			{
-				return $result.esc_html__(' Commande validée','exertio_theme');
+				return $result.esc_html__(' Order in queue','exertio_theme');
 			}
 			
 			
@@ -2118,7 +2118,7 @@ if ( ! function_exists( 'fl_get_paged_projects' ) )
                     <div class="fr-right-bid">
                       <ul>
                         <li> <a href="javascript:void(0)" class="mark_fav '.esc_html($saved).'" data-post-id="'.esc_attr($pid).'"><i class="fa fa-heart active"></i></a> </li>
-                        <li><a href="'.esc_url(get_permalink()).'" class="btn btn-theme">'.esc_html__('Voir le détail','exertio_theme').'</a></li>
+                        <li><a href="'.esc_url(get_permalink()).'" class="btn btn-theme">'.esc_html__('View Detail','exertio_theme').'</a></li>
                       </ul>
                     </div>
                   </div>
@@ -2146,14 +2146,14 @@ if ( ! function_exists( 'fl_follow_employer' ) ) {
 
 			if( get_user_meta( get_current_user_id(), '_emp_follow_id_'.$emp_id, true ) == $emp_id )
 			{
-				$return = array('message' => esc_html__( 'Vous suivez déjà', 'exertio_framework' ));
+				$return = array('message' => esc_html__( 'You are already following', 'exertio_framework' ));
 				wp_send_json_error($return);
 			}
 			else
 			{
 				update_user_meta( get_current_user_id(), '_emp_follow_id_' . $emp_id, $emp_id );
 				
-				$return = array('message' => esc_html__( 'Ajouté à votre liste', 'exertio_framework' ));
+				$return = array('message' => esc_html__( 'Added to your following list', 'exertio_framework' ));
 				wp_send_json_success($return);
 			}
 		}
@@ -2178,12 +2178,12 @@ if ( ! function_exists( 'fl_delete_followed_employer' ) )
 		$pid		=	$_POST['post_id'];
 		if ( delete_user_meta(get_current_user_id(), '_emp_follow_id_'.$pid) )
 		{
-			$return = array('message' => esc_html__( 'Supprimé de votre liste', 'exertio_framework' ));
+			$return = array('message' => esc_html__( 'Removed from following list', 'exertio_framework' ));
 			wp_send_json_success($return);
 		}
 		else
 		{
-			$return = array('message' => esc_html__( 'Il y a un problème, veuillez réessayer plus tard', 'exertio_framework' ));
+			$return = array('message' => esc_html__( 'There is some problem, please try again later', 'exertio_framework' ));
 			wp_send_json_error($return);
 		}
 	}
@@ -2202,14 +2202,14 @@ if ( ! function_exists( 'fl_follow_freelancer' ) ) {
 		{
 			if( get_user_meta( get_current_user_id(), '_fl_follow_id_'.$fid, true ) == $fid )
 			{
-				$return = array('message' => esc_html__( 'Vous suivez déjà', 'exertio_framework' ));
+				$return = array('message' => esc_html__( 'You are already following', 'exertio_framework' ));
 				wp_send_json_error($return);
 			}
 			else
 			{
 				update_user_meta( get_current_user_id(), '_fl_follow_id_' . $fid, $fid );
 				
-				$return = array('message' => esc_html__( 'Ajouté à votre liste', 'exertio_framework' ));
+				$return = array('message' => esc_html__( 'Added to your following list', 'exertio_framework' ));
 				wp_send_json_success($return);
 			}
 		}
@@ -2234,12 +2234,12 @@ if ( ! function_exists( 'fl_delete_followed_freelancer' ) )
 		$pid		=	$_POST['post_id'];
 		if ( delete_user_meta(get_current_user_id(), '_fl_follow_id_'.$pid) )
 		{
-			$return = array('message' => esc_html__( 'Supprimé de votre liste', 'exertio_framework' ));
+			$return = array('message' => esc_html__( 'Removed from following list', 'exertio_framework' ));
 			wp_send_json_success($return);
 		}
 		else
 		{
-			$return = array('message' => esc_html__( 'Il y a un problème, veuillez réessayer plus tard', 'exertio_framework' ));
+			$return = array('message' => esc_html__( 'There is some problem, please try again later', 'exertio_framework' ));
 			wp_send_json_error($return);
 		}
 	}
@@ -2327,7 +2327,7 @@ if ( ! function_exists( 'exertio_save_freelancer_settings' ) )
 		$encoded_settings =  json_encode($settings, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 		update_user_meta( $current_user_id, '_freelancer_settings', $encoded_settings );
 
-		$return = array('message' => esc_html__( 'Réglages sauvegardés', 'exertio_framework' ));
+		$return = array('message' => esc_html__( 'Settings saved', 'exertio_framework' ));
 		wp_send_json_success($return);
 
 	}

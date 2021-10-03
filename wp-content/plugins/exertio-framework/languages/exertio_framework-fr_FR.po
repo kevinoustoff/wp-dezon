@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "Project-Id-Version: Exertio Framework\n"
 "POT-Creation-Date: 2021-03-12 13:16+0500\n"
-"PO-Revision-Date: 2021-06-08 11:40+0000\n"
+"PO-Revision-Date: 2021-10-01 11:22+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
@@ -405,11 +405,11 @@ msgstr ""
 
 #: inc/custom-functions.php:1925
 msgid " Orders in queue"
-msgstr "Commandes"
+msgstr "Commandes reçues"
 
 #: inc/custom-functions.php:1929
 msgid " Order in queue"
-msgstr "Commande"
+msgstr "Commande reçue"
 
 #: inc/custom-functions.php:2006
 msgid "For "
