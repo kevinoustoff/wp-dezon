@@ -164,6 +164,17 @@
             $userGeneral["sexe"] = "Autres";
         }
 
+        $verification_exist = get_user_meta($uid,'_identity_verification_Sent', true);
+		
+		if($verification_exist !== null && $verification_exist == 1  ){
+            $userGeneral['verification-request-sent'] = true; 
+		
+		} else {
+			$userGeneral['verification-request-sent'] = false;
+
+		}
+        $userGeneral['is_verified'] = userVerificationStatus($uid);
+
         //photo de profil
         $pro_img_id = get_post_meta( $pid, '_profile_pic_freelancer_id', true );
         $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
@@ -469,6 +480,7 @@
                 $serv['queued'] = exertio_queued_services($service_id);
                 $serv['price']  = get_post_meta($service_id, '_service_price', true);
                 $serv['freelancer-name'] = exertio_get_username('freelancer', $fid);
+                $serv['freelancer_is_verified'] = userVerificationStatus($author_id);
                 $serv['id'] = $service_id;
                 $pro_img_id = get_post_meta( $fid, '_profile_pic_freelancer_id', true );
                 $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );

@@ -96,10 +96,11 @@
 			{
 				$freelancer['freelance-photo-profile'] = esc_url($profile_img_url);
 			}
+			$freelancer['is_verified'] = userVerificationStatus($author_id);
 			$freelancer['reviews'] = "0 reviews";
 					array_push($customToReturn,$freelancer);
 
-				}
+			}
 				
 				return new WP_REST_Response($customToReturn); 
 

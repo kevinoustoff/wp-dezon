@@ -1,5 +1,5 @@
 <?php 
-    function searchServicesApiVersion(){
+    function searchServicesApiVersion() {
     global $exertio_theme_options;
     $title ='';
     $paged = 1;
@@ -129,13 +129,14 @@
                 $posted_date = get_the_date(get_option( 'date_format' ), $service_id );
                 $fid = get_user_meta( $author_id, 'freelancer_id' , true );
                 $serv['id'] = $service->ID;
+				$serv['author_id'] = intval($author_id);
                 $serv['image'] = exertio_get_service_image_url($service_id);
                 $serv['title'] = get_the_title($service_id);
                 $serv['rating'] = get_service_rating($service_id);
                 $serv['queued'] = exertio_queued_services($service_id);
                 $serv['price']  = get_post_meta($service_id, '_service_price', true);
                 $serv['freelancer-name'] = exertio_get_username('freelancer', $fid);
-                
+				$serv['freelancer_is_verified'] = userVerificationStatus($author_id);
                 $pro_img_id = get_post_meta( $fid, '_profile_pic_freelancer_id', true );
                 $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
                 
@@ -195,6 +196,7 @@
 
 		}
 		$delivery_time = get_term( get_post_meta( $service->ID, '_delivery_time', true ) );
+		$customService['freelancer_is_verified'] = userVerificationStatus($post_author);
 		$customService["addonsServices"] = $customAddons;
 		$customService["delivery-time"] = null;
 		/* print_r($service); */
@@ -220,9 +222,11 @@
 		$customService['queued'] = exertio_queued_services($service->ID);
 		$customService['freelancer-name'] = exertio_get_username('freelancer', $fid);
 		$customService['freelancer-id'] = intval($fid);
+		$customService['freelancer-location'] = get_term_names( 'freelancer-locations', '_freelancer_location', $fid, '', ',' );
+		$customService['freelancer-member-since'] = date_i18n( get_option( 'date_format' ), strtotime( get_the_date('dS M Y', $fid)));
 		$customService['id'] = $service->ID;
 		$customService['freelancer-rates-stars'] = get_freelancer_rating( $fid, 'stars', 'service' );;
-		$customService['user_id'] = intval($post_author); 
+		$customService['author_id'] = intval($post_author); 
 		$pro_img_id = get_post_meta( $fid, '_profile_pic_freelancer_id', true );
 		$pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 		

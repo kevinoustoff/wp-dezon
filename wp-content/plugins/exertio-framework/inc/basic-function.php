@@ -7,6 +7,21 @@ if ( ! function_exists( 'exertio_get_excerpt' ) )
         return $excerpt;
     }
 }
+
+function userVerificationStatus($user_id){
+	$emp_id = get_user_meta( $user_id, 'employer_id' , true );
+	$fre_id = get_user_meta( $user_id, 'freelancer_id' , true );
+
+	$verified_badge_employer = get_post_meta( $emp_id, '_is_employer_verified' , true );
+	$verified_badge_freelancer = get_post_meta( $fre_id, '_is_freelancer_verified' , true );
+
+	if($verified_badge_employer === 1 || $verified_badge_freelancer === 1){
+		return true;
+	} else {
+		return false;
+	}
+}
+
 if ( ! function_exists( 'exertio_get_username' ) ) 
 {
 	function exertio_get_username( $user_type, $user_id = '', $show_badge = '', $badge_position = 'left')

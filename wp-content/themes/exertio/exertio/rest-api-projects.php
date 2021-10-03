@@ -182,7 +182,7 @@ function filtersProjects(){
         foreach($results->posts as $post){
             $author_id = get_post_field( 'post_author', $post->ID );
             $employer_id = get_user_meta( $author_id, 'employer_id' , true );
-            
+			$customProject['employer_is_verified'] = userVerificationStatus($author_id);
             $type = get_post_meta($post->ID, '_project_type', true);
             if($type == 'fixed')
             {
@@ -211,7 +211,7 @@ function filtersProjects(){
             $customProject['description'] = $post->post_content;
             /* $customProject['bid_results'] = get_project_bids($post->ID); */
             $j= 0;
-
+			$customProject['author_id'] = intval($author_id);
             foreach($skills as $skill){
                 $customProject['saved_skills'][$j]['name'] = $skill->name;
                 $customProject['saved_skills'][$j]['term_id'] = $skill->term_id;
@@ -277,6 +277,7 @@ function filtersProjects(){
 		$id = $request->get_param('id');
 		$project = get_post($id); 
 		$author_id = get_post_field( 'post_author', $project->ID );
+		 
         $employer_id = get_user_meta( $author_id, 'employer_id' , true );
 		$customProject = [];
 		$customProject["id"] = $project->id;
@@ -298,9 +299,39 @@ function filtersProjects(){
             
 			}
 			
+			$proj_author = get_userdata($project->post_author);
 			$customProject['id'] = $project->ID;
             $customProject['employer_name'] = get_post_meta( $employer_id, '_employer_dispaly_name' , true );
-            $customProject['duration']= get_term_names('project-duration', '_project_duration', $project->ID );
+			$customProject['employer_member_since'] =  esc_html__('','exertio_theme').date_i18n( get_option( 'date_format' ), strtotime( $proj_author->user_registered ) );
+            $meta_query = '';
+			$the_query = fl_get_projects('',$project->post_author, $meta_query, 'completed');
+			$cp_count = $the_query->found_posts;
+			$customProject['employer_projects_completed'] = $cp_count;
+			if($cp_count !==null && $cp_count > 0){
+				$customProject['employer_projects_completed_checked'] = true;
+			} else {
+				$customProject['employer_projects_completed_checked'] = false;
+			}
+			$is_payment = get_user_meta( $project->post_author, 'is_payment_verified' , true );
+
+			if($is_payment !== null && $is_payment == 1){
+				$customProject['employer_payment_verified'] = "actif";
+				$customProject['employer_payment_verified_checked'] = true;
+			} else{
+				$customProject['employer_payment_verified'] = "";
+				$customProject['employer_payment_verified_checked'] = false;
+			}
+
+			$is_email = get_user_meta( $project->post_author, 'is_email_verified' , true );
+			if($is_email !== null && $is_email== 1 ){
+				$customProject['employer_email_verified'] = 'actif';
+				$customProject['employer_email_verified_checked'] = true;
+			} else {
+				$customProject['employer_email_verified'] = '';
+				$customProject['employer_email_verified_checked'] = false;
+			}
+			$customProject['employer_is_verified'] = userVerificationStatus($project->post_author);
+			$customProject['duration']= get_term_names('project-duration', '_project_duration', $project->ID );
             $customProject['level'] = get_term_names('project-level', '_project_level', $project->ID );
             $customProject['freelancer_type'] = get_term_names('freelancer-type', '_project_freelancer_type', $project->ID );
             $customProject['title'] = $project->post_title;
@@ -329,7 +360,7 @@ function filtersProjects(){
             }
             $customProject['offres'] = $results;
             /* $customProject['description'] = exertio_get_excerpt(25,$project->ID); */
-            
+            $customProject['author_id'] = intval($author_id);
             $project_location = get_term( get_post_meta($project->ID, '_project_location', true));
             if(!empty($project_location) && ! is_wp_error($project_location))
             {
@@ -418,7 +449,7 @@ function filtersProjects(){
 			$author_id = get_post_field( 'post_author', $project->ID );
 			$employer_id = get_user_meta( $author_id, 'employer_id' , true );
 			$type = get_post_meta($project->ID, '_project_type', true);
-			
+			$customProject['author_id'] = intval($author_id);
 			if($type == 'fixed')
             {
                 $customProject['estimated_hours'] = null;
@@ -534,7 +565,7 @@ function filtersProjects(){
 			foreach($the_query->posts as $project){
 				$myProj["id"] = $project->ID;
 				$myProj["title"] = get_the_title($project->ID);
-
+				
 				$myProj["level"] = get_term( get_post_meta($project->ID, '_project_level', true));
 				$category = get_term( get_post_meta($project->ID, '_project_category', true));
 
@@ -542,7 +573,8 @@ function filtersProjects(){
 				{
 					$myProj["category"] = $category->name;
 				}
-
+				$author_id = get_post_field( 'post_author', $project->ID );
+				$myProj['author_id'] = intval($author_id); 
 				$myProj["date"] = get_the_date(get_option( 'date_format' ), $project->ID );
 				$type = get_post_meta($project->ID, '_project_type', true);
 				if($type == 'fixed')
