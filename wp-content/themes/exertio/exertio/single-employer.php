@@ -52,22 +52,37 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 			  </div>
 			  <div class="col-xl-4 col-lg-5 col-md-5 col-sm-5 align-self-center">
 				<div class="fr-expert-content">
-					<?php
 
-						if( get_user_meta( get_current_user_id(), '_emp_follow_id_'.$emp_id, true ) == $emp_id )
-						{
-							?>
-							<a href="javascript:void(0)" class="btn btn-theme following"><?php echo esc_html__('Following','exertio_theme'); ?></a>
-							<?php
-						}
-						else
-						{
-							?>
-							<a href="javascript:void(0)" class="btn btn-theme-secondary follow-employer" data-emp-id="<?php echo esc_attr($emp_id); ?>"><?php echo esc_html__('Click to Follow','exertio_theme'); ?></a>
-							<?php
 
-						}
-					?>
+							<?php
+								if(is_user_logged_in())
+								{
+									if( fl_framework_get_options('whizzchat_service_detail_option') == true)
+									{
+										if(in_array('whizz-chat/whizz-chat.php', apply_filters('active_plugins', get_option('active_plugins'))))
+										{
+											$classes = '';
+											if(is_user_logged_in())
+											{
+												$classes = 'class="chat_toggler btn btn-theme-secondary" data-user_id="'.esc_attr($post_author).'" data-page_id="'.esc_attr($sid).'"';
+											}
+											else
+											{
+												$classes = 'class="not_loggedin_chat_toggler btn btn-theme-primary"';
+											}
+										?>
+											<div class="whizzchat-button">
+												<a href="javascript:void(0)" <?php echo wp_return_echo($classes); ?> >
+													<span>
+														<?php echo esc_html__('Contacter','exertio_theme'); ?>
+													</span>
+												</a>
+											</div>
+										<?php
+										}
+									}
+								}
+								?>
 					</div>
 			  </div>
 			</div>
@@ -93,12 +108,15 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 						<span>
 							<?php  echo exertio_get_posts_count($post_author, 'projects', $limit, array('publish', 'ongoing'), ''); ?>
 						</span>
-					  <p> <?php echo esc_html__('Projects','exertio_theme'); ?></p>
+					  <p> <?php echo esc_html__('Projets publiés','exertio_theme'); ?></p>
 					</div>
 				  </li>
-				  <li class="fr-style-3">
-					<div class="fr-c-more-details"> <span><?php echo get_employer_followers($emp_id); ?></span>
-					  <p><?php echo esc_html__('Followers','exertio_theme'); ?></p>
+				  <li>
+					<div class="fr-c-more-details">
+						<span>
+							<?php  echo exertio_get_posts_count($post_author, 'projects', $limit, array('publish', 'completed'), ''); ?>
+						</span>
+					  <p> <?php echo esc_html__('Projets finalisés','exertio_theme'); ?></p>
 					</div>
 				  </li>
 				</ul>
@@ -110,12 +128,12 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 					{
 						?>
 						<li>
-						<div class="fr-c-full-details"> <span><?php echo esc_html__('Contact Number','exertio_theme'); ?></span>
+						<div class="fr-c-full-details"> <span><?php echo esc_html__('Téléphone','exertio_theme'); ?></span>
 						  <p><?php echo esc_html(get_post_meta( $emp_id, '_employer_contact_number' , true )); ?></p>
 						</div>
 						</li>
 						<li>
-						<div class="fr-c-full-details"> <span><?php echo esc_html__('Email Address','exertio_theme'); ?></span>
+						<div class="fr-c-full-details"> <span><?php echo esc_html__('Email','exertio_theme'); ?></span>
 						  <p><?php echo esc_html($user_info->user_email); ?></p>
 						</div>
 						</li>
@@ -127,13 +145,13 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 						{
 							?>
 							<li>
-							<div class="fr-c-full-details"> <span><?php echo esc_html__('Contact Number','exertio_theme'); ?></span>
-							  <p><?php echo esc_html__('Login to view....','exertio_theme'); ?></p>
+							<div class="fr-c-full-details"> <span><?php echo esc_html__('Téléphone','exertio_theme'); ?></span>
+							  <p><?php echo esc_html__('Veuillez vous connecter pour voir les détails....','exertio_theme'); ?></p>
 							</div>
 							</li>
 							<li>
-							<div class="fr-c-full-details"> <span><?php echo esc_html__('Email Address','exertio_theme'); ?></span>
-							  <p><?php echo esc_html__('Login to view...','exertio_theme'); ?></p>
+							<div class="fr-c-full-details"> <span><?php echo esc_html__('Email','exertio_theme'); ?></span>
+							  <p><?php echo esc_html__('Veuillez vous connecter pour voir les détails...','exertio_theme'); ?></p>
 							</div>
 							</li>
 							<?php
@@ -142,12 +160,12 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 						{
 							?>
 							<li>
-							<div class="fr-c-full-details"> <span><?php echo esc_html__('Contact Number','exertio_theme'); ?></span>
+							<div class="fr-c-full-details"> <span><?php echo esc_html__('Téléphone','exertio_theme'); ?></span>
 							  <p><?php echo esc_html(get_post_meta( $emp_id, '_employer_contact_number' , true )); ?></p>
 							</div>
 							</li>
 							<li>
-							<div class="fr-c-full-details"> <span><?php echo esc_html__('Email Address','exertio_theme'); ?></span>
+							<div class="fr-c-full-details"> <span><?php echo esc_html__('Email','exertio_theme'); ?></span>
 							  <p><?php echo esc_html($user_info->user_email); ?></p>
 							</div>
 							</li>
@@ -157,43 +175,7 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 
 				?>
 				  <li>
-					<div class="fr-c-full-details"> <span><?php echo esc_html__('Department','exertio_theme'); ?></span>
-					  <p>
-						<?php
-							//$employer_departments = get_post_meta($emp_id, '_employer_department', true);
-							$employer_departments = get_term_names('departments', '_employer_department', $emp_id, '', ',' );
-							if($employer_departments != '')
-							{
-								echo esc_html($employer_departments);
-							}
-							else
-							{
-								echo esc_html__('N/A','exertio_theme');
-							}
-						?>
-					  </p>
-					</div>
-				  </li>
-				  <li>
-					<div class="fr-c-full-details"> <span><?php echo esc_html__('Number of Employees','exertio_theme'); ?></span>
-					  <p>
-						<?php
-
-							$employees =  get_term_names('employees-number', '_employer_employees', $emp_id, '', ',' );
-							if($employees != '')
-							{
-								echo esc_html($employees);
-							}
-							else
-							{
-								echo esc_html__('N/A','exertio_theme');
-							}
-						?>
-					  </p>
-					</div>
-				  </li>
-				  <li>
-					<div class="fr-c-full-details"> <span><?php echo esc_html__('Member Since','exertio_theme'); ?></span>
+					<div class="fr-c-full-details"> <span><?php echo esc_html__('Membre depuis ','exertio_theme'); ?></span>
 					  <p><?php echo date_i18n( get_option( 'date_format' ), strtotime( get_the_date('dS M Y') ) ); ?></p>
 					</div>
 				  </li>
@@ -279,7 +261,7 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 				}
 			  ?>
 			</div>
-			 <p class="report-button text-center"> <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#report-modal"><i class="fal fa-exclamation-triangle"></i><?php echo esc_html__('Report Employer','exertio_theme'); ?></a></p>
+			 <p class="report-button text-center"> <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#report-modal"><i class="fal fa-exclamation-triangle"></i><?php echo esc_html__('Signaler un client','exertio_theme'); ?></a></p>
 			<div class="fr-lance-banner">
 			 <?php
 				if(isset($exertio_theme_options['employer_ad_1']))
@@ -291,7 +273,7 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 		  </div>
 		  <div class="col-lg-8 col-xl-8 col-md-12 col-xs-12 col-sm-12">
 			<div class="fr-product-des-box heading-contents custom-class">
-			  <h3><?php echo esc_html__('About Us','exertio_theme'); ?></h3>
+			  <h3><?php echo esc_html__('A propos','exertio_theme'); ?></h3>
 			  <?php echo wp_kses($post->post_content, exertio_allowed_html_tags()); ?>
 			</div>
 			<?php
@@ -329,25 +311,8 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 											{ 
 												echo fl_price_separator(get_post_meta($pid, '_project_cost', true));
 											}
-											else if($project_type == 'hourly')
-											{
-												echo fl_price_separator(get_post_meta($pid, '_project_cost', true));
-											}
 										?>
 									   </div>
-									  <?php
-										if($project_type == 'hourly')
-										{
-											$price = get_post_meta($pid, '_project_cost', true);
-											$hours = get_post_meta($pid, '_estimated_hours', true);
-
-											echo '<p class="price_type protip" data-pt-title="'.__('For ','exertio_theme').$hours.__(' hours total will be  ','exertio_theme'). fl_price_separator($hours*$price).'" data-pt-position="top" data-pt-scheme="black">'.esc_html($project_type).' <i class="fal fa-question-circle"></i></p>';
-										}
-										else if($project_type == 'fixed')
-										{
-											echo '<p class="price_type ">'.esc_html($project_type).'</p>';
-										}
-									?>
 								  </div>
 								  <div class="fr-right-details2">
 									<a href="<?php echo esc_url(get_permalink()); ?>">
@@ -393,7 +358,7 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 								<div class="fr-right-list">
 								  <ul>
 									<li>
-									  <p class="heading"><?php echo esc_html__('Duration: ','exertio_theme'); ?></p>
+									  <p class="heading"><?php echo esc_html__('Durée: ','exertio_theme'); ?></p>
 									  <span>
 										<?php
 											$project_duration = get_term( get_post_meta($pid, '_project_duration', true));
@@ -405,7 +370,7 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 									  </span>
 									</li>
 									<li>
-									  <p class="heading"><?php echo esc_html__('Level: ','exertio_theme'); ?></p>
+									  <p class="heading"><?php echo esc_html__('Type de prestation: ','exertio_theme'); ?></p>
 									  <span>
 										<?php
 											$project_level = get_term( get_post_meta($pid, '_project_level', true));
@@ -417,17 +382,17 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 									  </span>
 									</li>
 									<li>
-									  <p class="heading"><?php echo esc_html__('Location: ','exertio_theme'); ?></p>
+									  <p class="heading"><?php echo esc_html__('Localisation: ','exertio_theme'); ?></p>
 									  <span>
 											<?php
 												$location_remote = get_post_meta($pid, '_project_location_remote', true);
 												if(isset($location_remote) && $location_remote == 1)
 												{
-													echo esc_html__('Remote','exertio_theme');
+													echo esc_html__('distant','exertio_theme');
 												}
 												else
 												{
-													echo get_term_names('locations', '_project_location', $pid,'', ',' );
+													echo get_term_names('emplacement', '_project_location', $pid,'', ',' );
 												}
 											?>  
 									  </span>
@@ -446,7 +411,7 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 										}
 									?>
 									<li> <a href="javascript:void(0)" class="mark_fav <?php echo esc_html($saved); ?>" data-post-id= "<?php echo esc_attr($pid);?>"><i class="fa fa-heart active"></i></a> </li>
-									<li><a href="<?php echo esc_url(get_permalink()); ?>" class="btn btn-theme"><?php echo esc_html__('View Detail','exertio_theme'); ?></a></li>
+									<li><a href="<?php echo esc_url(get_permalink()); ?>" class="btn btn-theme"><?php echo esc_html__('Voir le détail','exertio_theme'); ?></a></li>
 								  </ul>
 								</div>
 							  </div>

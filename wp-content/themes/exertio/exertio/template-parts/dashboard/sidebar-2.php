@@ -57,27 +57,6 @@ $alt_id ='';
           </ul>
         </div>
       </li>
-      <li class="nav-item <?php if($page_name == 'create-addon' || $page_name == 'addons') { echo 'active';} ?>">
-        <a class="nav-link" data-toggle="collapse" href="#addons" aria-expanded="false" aria-controls="addons">
-          <i class="fas fa-layer-group menu-icon"></i>
-          <span class="menu-title"><?php echo esc_html__( 'Mes Options supp.', 'exertio_theme' ); ?></span>
-          <i class="menu-arrow"></i>
-        </a>
-        <div class="collapse <?php if($page_name == 'create-addon' || $page_name == 'addons' || $page_name == 'pending-addons' ) { echo 'show';} ?>" id="addons">
-          <ul class="nav flex-column sub-menu">
-            <li class="nav-item <?php if($page_name == 'create-addon') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=create-addon"><?php echo esc_html__( ' Créer une option supp.', 'exertio_theme' ); ?> </a></li>
-            <li class="nav-item <?php if($page_name == 'addons') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=addons"> <?php echo esc_html__( ' Mes options supp.', 'exertio_theme' ); ?></a></li>
-            <?php
-				if(isset($exertio_theme_options['addons_approval']) &&  $exertio_theme_options['addons_approval'] == 0 || isset($exertio_theme_options['addons_update_approval']) &&  $exertio_theme_options['addons_update_approval'] == 0)
-				{
-			?>
-				<li class="nav-item <?php if($page_name == 'pending-addons') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=pending-addons"> <?php echo esc_html__( ' Options supp. en cours', 'exertio_theme' ); ?></a></li>
-            <?php
-				}
-			?>
-          </ul>
-        </div>
-      </li>
       <li class="nav-item <?php if($page_name == 'add-services' || $page_name == 'all-services' || $page_name == 'pending-services' || $page_name == 'ongoing-services' || $page_name == 'canceled-services') { echo 'active';} ?>">
         <a class="nav-link" data-toggle="collapse" href="#services" aria-expanded="false" aria-controls="services">
           <i class="fas fa-user-cog menu-icon"></i> <span class="menu-title"><?php echo esc_html__( 'Mes services', 'exertio_theme' ); ?></span>
@@ -129,7 +108,7 @@ $alt_id ='';
       <li class="nav-item <?php if($page_name == 'saved-projects') { echo 'active';} ?>">
         <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=saved-projects">
           <i class="far fa-bookmark menu-icon"></i>
-          <span class="menu-title"><?php echo esc_html__( 'Projets sauvegardés', 'exertio_theme' ); ?></span>
+          <span class="menu-title"><?php echo esc_html__( 'Enregistrés', 'exertio_theme' ); ?></span>
         </a>
       </li>
       
@@ -142,7 +121,7 @@ $alt_id ='';
       <li class="nav-item <?php if($page_name == 'invoices') { echo 'active';} ?>">
         <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=invoices">
           <i class="fas fa-receipt menu-icon"></i>
-          <span class="menu-title"><?php echo esc_html__( 'Dépôt de fonds et factures', 'exertio_theme' ); ?> </span>
+          <span class="menu-title"><?php echo esc_html__( 'Portefeuille', 'exertio_theme' ); ?> </span>
         </a>
       </li>
       <li class="nav-item <?php if($page_name == 'disputes') { echo 'active';} ?>">
