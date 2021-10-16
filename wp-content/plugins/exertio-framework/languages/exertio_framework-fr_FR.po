@@ -555,39 +555,39 @@ msgstr ""
 
 #: inc/utilities.php:196
 msgid "Your account is not verified yet."
-msgstr ""
+msgstr "Votre compte n'est pas encore vérifié."
 
 #: inc/utilities.php:205
 msgid "Login successful. Redirecting...."
-msgstr ""
+msgstr "Vous êtes connectés maintenant. Vous allez être redirigé vers votre tableau de bord."
 
 #: inc/utilities.php:211
 msgid "Invalid email or password."
-msgstr ""
+msgstr "Email ou mot de passe non valide."
 
 #: inc/utilities.php:260
 msgid "Please type your e-mail address."
-msgstr ""
+msgstr "Veuillez saisir votre adresse email."
 
 #: inc/utilities.php:265
 msgid "Please enter a valid e-mail address."
-msgstr "Veuillez saisir une adresse mail valide"
+msgstr "Veuillez saisir une adresse mail valide."
 
 #: inc/utilities.php:269
 msgid "This email address does not exist on website."
-msgstr ""
+msgstr "Cet email n'est pas inscrit sur ce site."
 
 #: inc/utilities.php:284
 msgid "Check your email for the confirmation link."
-msgstr ""
+msgstr "Veuillez vérifier le lien de confirmation dans votre mail."
 
 #: inc/utilities.php:314
 msgid "Please choose a password with at least 3-12 characters."
-msgstr ""
+msgstr "Veuillez saisir un mot de passe avec au moins 3-12 caractères."
 
 #: inc/utilities.php:319
 msgid ""
-"Your password has been changed. You can now log in with your new password."
+"Votre mot de passe a été changé. Vous pouvez maintenant vous connecter avec votre nouveau mot de passe."
 msgstr ""
 
 #: inc/utilities.php:330
@@ -599,48 +599,48 @@ msgid "Sorry, only JPG, JPEG, PNG files are allowed."
 msgstr ""
 
 #: inc/utilities.php:403 inc/utilities.php:2764
-msgid "Max allowd image size is "
-msgstr ""
+msgid "Max allowed image size is "
+msgstr "La taille maximale autorisée pour les images est "
 
 #: inc/utilities.php:434 inc/utilities.php:2791
 msgid "Image changed Successfully"
-msgstr ""
+msgstr "Image modifiée avec succès"
 
 #: inc/utilities.php:457
 msgid "Image Removed"
-msgstr ""
+msgstr "Image supprimée"
 
 #: inc/utilities.php:461
 msgid "Something went wrong!!!"
-msgstr ""
+msgstr "Le site a rencontré un problème!! Veuillez réessayer ultérieurement"
 
 #: inc/utilities.php:500
 msgid "Data is not saved"
-msgstr ""
+msgstr "La sauvegarde n'a pas été effectuée avec succès."
 
 #: inc/utilities.php:587 inc/utilities.php:1598
 msgid "Profile updated"
-msgstr ""
+msgstr "Profil mis à jour"
 
 #: inc/utilities.php:619
 msgid "All fields are required."
-msgstr ""
+msgstr "Tous les champs sont requis."
 
 #: inc/utilities.php:624
 msgid "Sorry, you can not set the same password again"
-msgstr ""
+msgstr "Désolé, vous ne pouvez pas utiliser le même mot de passe une nouvelle fois."
 
 #: inc/utilities.php:629
 msgid "New password Mismatched"
-msgstr ""
+msgstr "Le nouveau mot de passe n'est pas conforme"
 
 #: inc/utilities.php:637
 msgid "Password changed successfully."
-msgstr ""
+msgstr "Mot de passe changé avec succès."
 
 #: inc/utilities.php:641
 msgid "Wrong current password"
-msgstr ""
+msgstr "Mauvais mot de passe"
 
 #: inc/utilities.php:662
 msgid "Admin can not delete his account."
@@ -648,7 +648,7 @@ msgstr "L'admin ne peut pas supprimer ce compte"
 
 #: inc/utilities.php:689
 msgid "Account deleted successfully"
-msgstr ""
+msgstr "Compte supprimé avec succès"
 
 #: inc/utilities.php:758
 msgid ""
@@ -669,27 +669,27 @@ msgstr ""
 
 #: inc/utilities.php:832 inc/utilities.php:1836
 msgid " Kb"
-msgstr ""
+msgstr "ko"
 
 #: inc/utilities.php:943
 msgid "Error!!! Please contact admin"
-msgstr ""
+msgstr "Erreur!! Veuillez contacter l'équipe de Dezon"
 
 #: inc/utilities.php:1158
 msgid "Project posted successfully"
-msgstr ""
+msgstr "Projet publié avec succès"
 
 #: inc/utilities.php:1296
-msgid "Max allowd image size is 300KB"
-msgstr ""
+msgid "Max allowed image size is 300KB"
+msgstr "La taille maximale autorisée est de 300Ko"
 
 #: inc/utilities.php:1321
 msgid "Image uploaded"
-msgstr ""
+msgstr "Image envoyée avec succès"
 
 #: inc/utilities.php:1364
 msgid "Profile not saved. Please contact admin"
-msgstr ""
+msgstr "Le profil n'est pas sauvegardé. Veuillez contacter l'équipe de Dezon"
 
 #: inc/utilities.php:1652
 msgid "Addon not saved. Please contact admin"
@@ -733,51 +733,51 @@ msgstr ""
 
 #: inc/utilities.php:2299
 msgid "Service updated"
-msgstr ""
+msgstr "Service mis à jour"
 
 #: inc/utilities.php:2328
 msgid "Service removed"
-msgstr ""
+msgstr "Service supprimé"
 
 #: inc/utilities.php:2339
 msgid "Service Activated"
-msgstr ""
+msgstr "Service activé"
 
 #: inc/utilities.php:2343
 msgid "Service Canceled"
-msgstr ""
+msgstr "Service annulé"
 
 #: inc/utilities.php:2372
 msgid "Project Already Expired"
-msgstr ""
+msgstr "Projet déjà expiré"
 
 #: inc/utilities.php:2386 inc/utilities.php:2513
 msgid "Please purchase package to send proposal"
-msgstr ""
+msgstr "Veuillez acheter un pack afin de postuler à une offre"
 
 #: inc/utilities.php:2392
 msgid "Project is expired"
-msgstr ""
+msgstr "Le projet est expiré"
 
 #: inc/utilities.php:2442
 msgid "Please load balance in your wallet"
-msgstr ""
+msgstr "Veuillez recharger votre portefeuille virtuel"
 
 #: inc/utilities.php:2487
 msgid "Proposal sent successfully"
-msgstr "Proposition envoyé avec succès"
+msgstr "Proposition envoyée avec succès"
 
 #: inc/utilities.php:2499
 msgid "You have already sent a proposal."
-msgstr ""
+msgstr "Vous avez déjà postulé à cette offre."
 
 #: inc/utilities.php:2507
 msgid "You can not send a proposal to your project"
-msgstr ""
+msgstr "Vous ne pouvez pas faire une offre à votre propre projet."
 
 #: inc/utilities.php:2520
 msgid "Please login first to send a proposal"
-msgstr ""
+msgstr "Veuillez vous connecter avant de faire une offre."
 
 #: inc/utilities.php:2617
 msgid "Verification document did not sent"

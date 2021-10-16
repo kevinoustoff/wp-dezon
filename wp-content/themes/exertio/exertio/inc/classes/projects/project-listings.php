@@ -136,7 +136,7 @@ if (!class_exists('exertio_get_projects'))
 											$location_remote = get_post_meta($project_id, '_project_location_remote', true);
 											if(isset($location_remote) && $location_remote == 1)
 											{
-												echo esc_html__('Remote','exertio_theme');
+												echo esc_html__('A distance','exertio_theme');
 											}
 											else
 											{
@@ -154,15 +154,15 @@ if (!class_exists('exertio_get_projects'))
                       <ul>
                       	<?php
 							$saved_project = '';
-							$save_text = esc_html__( 'Sauvegarder le projet', 'exertio_theme' );
+							$save_text = esc_html__( 'Enregistrer le projet', 'exertio_theme' );
 							if( get_user_meta( get_current_user_id(), '_pro_fav_id_'.$project_id, true ) == $project_id )
 							{
 								$saved_project = 'active';
-								$save_text = esc_html__( 'Déjà sauvegardé', 'exertio_theme' );
+								$save_text = esc_html__( 'Déjà enregistré', 'exertio_theme' );
 							}
 						?>
                         <li> <a href="javascript:void(0);" class="mark_fav protip <?php echo esc_attr($saved_project); ?>" data-post-id="<?php echo esc_attr($project_id); ?>" data-pt-position="top" data-pt-scheme="black" data-pt-title="<?php echo esc_attr($save_text); ?>"><i class="fa fa-heart active"></i></a> </li>
-                        <li><a href="<?php echo esc_url(get_the_permalink()); ?>" class="btn btn-theme"><?php echo esc_html__( ' ', 'exertio_theme' ); ?></a></li>
+                        <li><a href="<?php echo esc_url(get_the_permalink()); ?>" class="btn btn-theme"><?php echo esc_html__( ' Voir le projet', 'exertio_theme' ); ?></a></li>
                       </ul>
                     </div>
                   </div>
@@ -551,7 +551,7 @@ if (!class_exists('exertio_get_projects'))
 						?>
 						<span><a href="javascript:void(0)" class="mark_fav protip <?php echo esc_attr($fav); ?>"  data-post-id="<?php echo esc_attr($project_id); ?>" data-pt-position="top" data-pt-scheme="black" data-pt-title="<?php echo esc_attr($fav_text); ?>"><i class="fa fa-heart"></i></a></span>
 					  
-				  <a href="<?php echo esc_url(get_the_permalink()); ?>" class="btn btn-theme"><?php echo esc_html__( 'Voir le détail', 'exertio_theme' ); ?></a>          
+				  <a href="<?php echo esc_url(get_the_permalink()); ?>" class="btn btn-theme"><?php echo esc_html__( 'Voir le projet', 'exertio_theme' ); ?></a>          
 				  </div>		
 					<?php
 						$featured_projects = get_post_meta($project_id, '_project_is_featured', true);

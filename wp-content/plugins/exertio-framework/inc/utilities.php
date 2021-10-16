@@ -103,12 +103,12 @@ if (! function_exists ( 'sign_up' )) {
 			$page = get_the_permalink($exertio_theme_options['user_dashboard_page']);
 			fl_auto_login($params['fl_email'], $params['fl_password'], $remember ); 
 			setcookie('active_profile', 'employer', time() + (86400 * 365), "/");
-			echo '1|' . __("Registration successfull. Redirecting....", 'exertio_framework')."|".$page;
+			echo '1|' . __("Inscription effectuée avec succès. Redirection en cours ...", 'exertio_framework')."|".$page;
 			die;
 		}
 		else
 		{
-			echo '0|' .__( 'Email already exist, please try other one.', 'exertio_framework' );
+			echo '0|' .__( 'Cet email est déjà inscrit sur le site. Essayer avec un autre.', 'exertio_framework' );
 			die;
 		}
 	}
@@ -193,7 +193,7 @@ if (! function_exists ( 'fl_sign_in' )) {
 		{
 			if( count((array) $user->roles ) == 0 )
 			{
-				echo '0|'. __( 'Your account is not verified yet.', 'exertio_framework' );
+				echo '0|'. __( 'Votre compte n\'est pas encore vérifié.', 'exertio_framework' );
 				die();
 			}
 			else
@@ -208,7 +208,7 @@ if (! function_exists ( 'fl_sign_in' )) {
 		}
 		else
 		{
-			echo '0|'.__( 'Invalid email or password.', 'exertio_framework' );
+			echo '0|'.__( 'Email ou mot de passe invalide.', 'exertio_framework' );
 		}
 		die();
 	}
@@ -257,16 +257,16 @@ if (!function_exists ( 'fl_forget_pwd' ))
 		$email = trim(sanitize_email($params['fl_forget_email']));
 		if(empty($email))
 		{
-			$return = array('message' => esc_html__( 'Please type your e-mail address.', 'exertio_framework' ));
+			$return = array('message' => esc_html__( 'Veuillez saisir votre email.', 'exertio_framework' ));
 			wp_send_json_error($return);
 		}
 		else if ( !is_email( $email ) )
 		{
-			$return = array('message' => esc_html__( 'Please enter a valid e-mail address.', 'exertio_framework' ));
+			$return = array('message' => esc_html__( 'Veuillez saisir un email valide.', 'exertio_framework' ));
 			wp_send_json_error($return);	
 		}
 		else if(!email_exists($email)) {
-			$return = array('message' => esc_html__( 'This email address does not exist on website.', 'exertio_framework' ));
+			$return = array('message' => esc_html__( 'Cet email n\'existe pas sur ce site.', 'exertio_framework' ));
 			wp_send_json_error($return);	
 		}
 		else
@@ -281,7 +281,7 @@ if (!function_exists ( 'fl_forget_pwd' ))
 			
 
 			fl_forgotpass_email($user->ID,$reset_link);
-			$return = array('message' => esc_html__( 'Check your email for the confirmation link.', 'exertio_framework' ));
+			$return = array('message' => esc_html__( 'Vérifier le lien de confirmation dans votre mail.', 'exertio_framework' ));
 			wp_send_json_success($return);
 			die();
 		}
@@ -311,23 +311,23 @@ if (!function_exists ( 'fl_forgot_pass_new' ))
 			{
 				$password = trim(sanitize_text_field( $params['password'] ));
 				if(empty($password)){
-					$return = array('message' => esc_html__( 'Please choose a password with at least 3-12 characters.', 'exertio_framework' ));
+					$return = array('message' => esc_html__( 'Veuillez choisir un mot de passe avec au moins 3-12 caractères.', 'exertio_framework' ));
 					wp_send_json_error($return);	
 				}
 				wp_set_password($password, $user_id);
 				update_user_meta( $user_id, '_reset_password_key', '' );
-				$return = array('message' => esc_html__( 'Your password has been changed. You can now log in with your new password.', 'exertio_framework' ));
+				$return = array('message' => esc_html__( 'Votre mot de passe a été changé. Vous pouvez maintenant vous connecter avec votre nouveau mot de passe.', 'exertio_framework' ));
 				wp_send_json_success($return);
 			}
 			else
 			{
-				$return = array('message' => esc_html__( 'You are not allowed to do that', 'exertio_framework' ));
+				$return = array('message' => esc_html__( 'Vous n\'êtes pas autorisé à faire cette action.', 'exertio_framework' ));
 				wp_send_json_error($return);
 			}
 		}
 		else
 		{
-			$return = array('message' => esc_html__( 'User id does not exist. Please contact admin.', 'exertio_framework' ));
+			$return = array('message' => esc_html__( 'L\'identifiant de l\'utilisateur n\'existe pas. Veuillez contacter l\'équipe de Dezon.', 'exertio_framework' ));
 			wp_send_json_error($return);
 		}
 	}

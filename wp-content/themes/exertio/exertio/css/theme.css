@@ -4542,6 +4542,8 @@ fr-hero-m-deails {
 .fr-c-details .fr-c-followers ul li {
 	float: left;
 	text-align: center;
+	padding-left: 15px;
+	padding-right: 20px;
 }
 .fr-c-details .fr-c-followers::before {
 	content: "";

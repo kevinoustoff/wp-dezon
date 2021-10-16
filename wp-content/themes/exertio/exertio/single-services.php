@@ -447,7 +447,15 @@ if ( $exertio_theme_options[ 'action_bar' ] == 1 ) {
 							$classes = 'class="not_loggedin_chat_toggler"';
 						}
 					?>
-						
+						<div class="whizzchat-button">
+              <a href="javascript:void(0)" <?php echo wp_return_echo($classes); ?>>
+                <span>
+                  <img src="<?php echo get_template_directory_uri()?>/images/chat-color-icon.svg" alt="<?php echo get_post_meta($alt_id, '_wp_attachment_image_alt', TRUE); ?>">
+                  <?php echo esc_html__('Chat with Seller','exertio_theme'); ?>
+                </span>
+                <i class="fas fa-angle-right"></i>
+              </a>
+              </div>
 					<?php
 					}
 				}

@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2021-04-15T08:58:00+00:00\n"
-"PO-Revision-Date: 2021-06-04 21:30+0000\n"
+"PO-Revision-Date: 2021-10-15 17:55+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: woocommerce\n"
 "Language: en_US\n"
@@ -13120,7 +13120,7 @@ msgstr ""
 #: packages/woocommerce-blocks/build/checkout-frontend.js:14
 #: packages/woocommerce-blocks/build/checkout.js:1
 msgid "Apply"
-msgstr ""
+msgstr "Appliquer"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-order-actions.php:66
 msgid "Move to Trash"
@@ -13537,7 +13537,7 @@ msgstr ""
 #: includes/admin/meta-boxes/views/html-order-items.php:277
 #: templates/cart/cart.php:143 templates/checkout/form-coupon.php:38
 msgid "Apply coupon"
-msgstr ""
+msgstr "Appliquer un coupon"
 
 #: includes/admin/meta-boxes/views/html-order-items.php:280
 msgid "To edit this order change the status back to \"Pending\""
@@ -35059,7 +35059,7 @@ msgstr ""
 
 #: templates/cart/cart.php:148
 msgid "Update cart"
-msgstr ""
+msgstr "Mettre à jour"
 
 #: templates/cart/cross-sells.php:24
 msgid "You may be interested in&hellip;"
@@ -35071,7 +35071,7 @@ msgstr ""
 
 #: templates/cart/proceed-to-checkout-button.php:26
 msgid "Proceed to checkout"
-msgstr ""
+msgstr "Valider la commande"
 
 #: templates/cart/shipping-calculator.php:24
 msgid "Calculate shipping"
@@ -35104,7 +35104,7 @@ msgstr ""
 
 #: templates/checkout/form-checkout.php:54
 msgid "Your order"
-msgstr ""
+msgstr "Votre commande"
 
 #: templates/checkout/form-coupon.php:26
 msgid "Have a coupon?"
@@ -39361,7 +39361,7 @@ msgstr ""
 #: packages/woocommerce-admin/dist/components/index.js:2
 #: packages/woocommerce-blocks/build/vendors.js:6
 msgid "Remove %s"
-msgstr ""
+msgstr "Supprimer"
 
 #: packages/woocommerce-admin/dist/components/index.js:2
 #: packages/woocommerce-blocks/build/vendors.js:6
@@ -40808,7 +40808,7 @@ msgstr ""
 #: packages/woocommerce-blocks/build/checkout-frontend.js:14
 #: packages/woocommerce-blocks/build/checkout.js:1
 msgid "Remove coupon \"%s\""
-msgstr ""
+msgstr "Supprimer le coupon \"%s\""
 
 #: packages/woocommerce-blocks/assets/js/base/components/cart-checkout/totals/discount/index.js:87
 #: packages/woocommerce-blocks/build/cart-frontend.js:14
@@ -40883,7 +40883,7 @@ msgstr ""
 #: packages/woocommerce-blocks/build/checkout-frontend.js:6
 #: packages/woocommerce-blocks/build/checkout.js:1
 msgid "Remove \"%s\""
-msgstr ""
+msgstr "Supprimer \"%s\""
 
 #: packages/woocommerce-blocks/assets/js/base/components/country-input/country-input.js:26
 #: packages/woocommerce-blocks/build/cart-frontend.js:14
@@ -40904,7 +40904,7 @@ msgstr ""
 #: packages/woocommerce-blocks/build/attribute-filter-frontend.js:14
 #: packages/woocommerce-blocks/build/attribute-filter.js:1
 msgid "Remove %s filter"
-msgstr ""
+msgstr "Supprimer le filtre %s "
 
 #. translators: %s attribute value used in the filter. For example: yellow, green, small, large.
 #: packages/woocommerce-blocks/assets/js/base/components/dropdown-selector/selected-value.js:26
@@ -41356,7 +41356,7 @@ msgstr ""
 #: packages/woocommerce-blocks/build/attribute-filter-frontend.js:14
 #: packages/woocommerce-blocks/build/attribute-filter.js:1
 msgid "%s filter removed."
-msgstr ""
+msgstr "%s filtre supprimé."
 
 #: packages/woocommerce-blocks/assets/js/blocks/attribute-filter/edit.js:78
 #: packages/woocommerce-blocks/assets/js/blocks/product-categories/block.js:95
@@ -43348,7 +43348,7 @@ msgstr ""
 #: packages/woocommerce-blocks/build/checkout-frontend.js:14
 #: packages/woocommerce-blocks/build/checkout.js:1
 msgid "Coupon code \"%s\" has been removed from your cart."
-msgstr ""
+msgstr "Le coupon \"%s\" a été supprimé de votre commande"
 
 #: packages/woocommerce-blocks/build/cart-frontend.js:14
 #: packages/woocommerce-blocks/build/cart.js:1
@@ -43363,7 +43363,7 @@ msgstr ""
 #: packages/woocommerce-blocks/build/cart-frontend.js:14
 #: packages/woocommerce-blocks/build/cart.js:1
 msgid "Remove item"
-msgstr ""
+msgstr "Supprimé cette article"
 
 #: packages/woocommerce-blocks/build/cart-frontend.js:14
 #: packages/woocommerce-blocks/build/cart.js:1

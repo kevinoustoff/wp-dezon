@@ -426,7 +426,7 @@ if(!function_exists( 'project_expiry_calculation3' )){
 			$expiry = get_post_meta($pid, '_simple_projects_expiry_date', true); 
 		if(isset($expiry) && $expiry == -1 )
 		{
-			return 'Sans expiration';
+			return 'Pas d\'expiration';
 		}
 		else
 		{
@@ -474,15 +474,15 @@ if ( ! function_exists( 'project_expiry_calculation2' ) )
 		//echo $remaining_days;
 		if($today > $expiry)
 		{
-			return '<p class="expired">'.__('Expired ','exertio_theme').'</p>';		
+			return '<p class="expired">'.__('Expiré ','exertio_theme').'</p>';		
 		}
 		else if($remaining_days != -0)
 		{
-			return '<p>'.$remaining_days. __(' Days left','exertio_theme').'</p>';
+			return '<p>'.$remaining_days. __(' jours restants','exertio_theme').'</p>';
 		}
 		else
 		{
-			return '<p>'.__('Closing Today ','exertio_theme').'</p>';
+			return '<p>'.__('Clôturé aujourd\'hui ','exertio_theme').'</p>';
 		}
 	}
 }
@@ -493,7 +493,7 @@ if ( ! function_exists( 'project_expiry_calculation' ) )
 		$expiry = get_post_meta($pid, '_simple_projects_expiry_date', true); 
 		if(isset($expiry) && $expiry == -1 )
 		{
-			return '<p>'.__('Never Expire ','exertio_theme').'</p>';
+			return '<p>'.__('N\'expire pas ','exertio_theme').'</p>';
 		}
 		else
 		{
@@ -508,15 +508,15 @@ if ( ! function_exists( 'project_expiry_calculation' ) )
 
 			if(strtotime($today) > strtotime($expiry))
 			{
-				return '<p class="expired">'.__('Expired ','exertio_theme').'</p>';		
+				return '<p class="expired">'.__('Expiré ','exertio_theme').'</p>';		
 			}
 			else if($remaining_days != -0 && $remaining_days > 0)
 			{
-				return '<p>'.$remaining_days. __(' Days left','exertio_theme').'</p>';
+				return '<p>'.$remaining_days. __(' jours restants','exertio_theme').'</p>';
 			}
 			else
 			{
-				return '<p>'.__('Closing Today ','exertio_theme').'</p>';
+				return '<p>'.__('Clôturé aujourd\'hui ','exertio_theme').'</p>';
 			}
 		}
 	}
@@ -817,7 +817,7 @@ if ( ! function_exists( 'delete_gen_atatchment' ) )
 			$array3 = array_diff($array2, $array1);
 			wp_delete_attachment($attachment_id);
 			$new_data = implode(',', $array3);
-			$return = array('message' => esc_html__( 'Attachment deleted', 'exertio_framework' ), 'ids'=>$new_data);
+			$return = array('message' => esc_html__( 'Fichier supprimé', 'exertio_framework' ), 'ids'=>$new_data);
 			wp_send_json_success($return);
 			
 		}
