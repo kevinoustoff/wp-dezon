@@ -408,14 +408,6 @@
 				array(
 				  'author__in' => array( $request->get_param("user_id") ),
 				  'post_type' => 'services',
-				  'meta_key'  => '_service_is_featured',
-				  'meta_query' => array(
-					array(
-					  'key' => '_service_status',
-					  'value' => 'active',
-					  'compare' => '=',
-					),
-				  ),
 				  'paged' => $paged,
 				  'post_status' => 'publish'
 				)
