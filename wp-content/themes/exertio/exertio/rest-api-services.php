@@ -408,6 +408,7 @@
 				array(
 				  'author__in' => array( $request->get_param("user_id") ),
 				  'post_type' => 'services',
+				  'meta_key'  => '_service_is_featured',
 				  'meta_query' => array(
 					array(
 					  'key' => '_service_status',
@@ -419,7 +420,7 @@
 				  'post_status' => 'publish'
 				)
 			  );
-
+			  
 			  $total_count = $the_query->found_posts;
 			  $customResults = [];
 

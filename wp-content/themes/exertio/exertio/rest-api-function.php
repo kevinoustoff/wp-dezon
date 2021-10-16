@@ -45,7 +45,16 @@
                     /* wp_die(esc_url($exertio_theme_options['freelancer_df_img']['url'])); */
                 }  
 					/* echo "1|". __( 'Login successful. Redirecting....', 'exertio_framework' )."|".$page; */
-                return new WP_REST_Response(
+                    $verification_exist = get_user_meta($user['data']->ID,'_identity_verification_Sent', true);
+		
+                    if($verification_exist !== null && $verification_exist == 1  ){
+                        $user['verification-request-sent'] = true; 
+                    
+                    } else {
+                        $user['verification-request-sent'] = false;
+            
+                    }
+                    return new WP_REST_Response(
                     array(
                         'status' => 200,
                         'response' => 'message',
@@ -123,6 +132,15 @@
 			$username = sanitize_text_field($params["email"]);
             $password = $params["password"];
 
+            $verification_exist = get_user_meta($uid,'_identity_verification_Sent', true);
+		
+		if($verification_exist !== null && $verification_exist == 1  ){
+            $user_info['verification-request-sent'] = true; 
+		
+		} else {
+			$user_info['verification-request-sent'] = false;
+
+		}
             
 			fl_auto_login($params['fl_email'], $params['fl_password'], $remember ); 
 			setcookie('active_profile', 'employer', time() + (86400 * 365), "/");

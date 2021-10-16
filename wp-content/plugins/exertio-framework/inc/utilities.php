@@ -2417,6 +2417,7 @@ if ( ! function_exists( 'fl_place_bid' ) )
 
 							$is_top = $is_sealed = $is_featured = 0;
 							$top_bid_charges = $sealed_bid_charges = $featured_bid_charges = '';
+							//this party of code should be deleted
 							if(isset($params['top_bid']) || isset($params['sealed_bid']) || isset($params['featured_bid']))
 							{
 								$wallet_amount = get_user_meta( $current_user_id, '_fl_wallet_amount', true );
