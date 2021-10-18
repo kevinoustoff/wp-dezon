@@ -451,11 +451,43 @@
 
 		}
 
-
-
+		
 
 		
 
+	}
+
+	function saveSingleService(WP_REST_Request $request){
+		$user_id = $request->get_param("user_id");
+		$service_id = $request->get_param("service_id");
+	
+		if($service_id !==null || $service_id !=='' || $user_id !==null || $user_id !== '' )
+		{
+			if(get_user_meta( $user_id, '_service_fav_id_'.$service_id, true ) == $service_id)
+			{
+				$return = array('message' => esc_html__( 'Ce service est déjà enregistré', 'exertio_framework' ));
+				wp_send_json_error($return);
+			}
+			else{
+				update_user_meta( $user_id, '_service_fav_id_' . $service_id, $service_id );
+				
+				$return = array('message' => esc_html__( 'Service enregistré avec succès', 'exertio_framework' ));
+				wp_send_json_success($return);
+
+			}
+
+		}
+		else {
+			$return = array('message' => esc_html__( 'erreur d\'ID de service', 'exertio_framework' ));
+			wp_send_json_error($return);
+		}
+
+		die();
+	}
+
+	function savedServices(WP_REST_Request $request)
+	{
+		
 	}
 
 

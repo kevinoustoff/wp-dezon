@@ -124,6 +124,11 @@ add_action( 'rest_api_init', function () {
 		'methods' => 'GET',
 		'callback' =>  'getMyServices',
 	));
+	register_rest_route('api','/services/save',array(
+		'methods' => 'POST',
+		'callback' =>  'saveSingleService',
+	));
+
 	register_rest_route('api','/identification/verification',array(
 		'methods' => 'POST',
 		'callback' =>  'idVerificationProccess',
