@@ -128,6 +128,10 @@ add_action( 'rest_api_init', function () {
 		'methods' => 'POST',
 		'callback' =>  'saveSingleService',
 	));
+	register_rest_route('api','/services/saved',array(
+		'methods' => 'GET',
+		'callback' =>  'savedServices',
+	));
 
 	register_rest_route('api','/identification/verification',array(
 		'methods' => 'POST',
