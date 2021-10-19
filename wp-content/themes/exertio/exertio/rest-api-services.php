@@ -475,7 +475,6 @@
 				wp_send_json_success($return);
 
 			}
-
 		}
 		else {
 			$return = array('message' => esc_html__( 'erreur d\'ID de service', 'exertio_framework' ));
@@ -487,7 +486,76 @@
 
 	function savedServices(WP_REST_Request $request)
 	{
-		
+		global $exertio_theme_options;
+
+		if ( get_query_var( 'paged' ) ) {
+			$paged = get_query_var( 'paged' );
+		} else if ( get_query_var( 'page' ) ) {
+			$paged = get_query_var( 'page' );
+		} else {
+			$paged = 1;
+		}
+
+		$user_id = $request->get_param("user_id");
+
+		if($user_id !== null){
+			global $wpdb;
+			$rows = $wpdb->get_results( "SELECT meta_value FROM $wpdb->usermeta WHERE user_id = '$user_id' AND meta_key LIKE '_service_fav_id_%'" );
+			$pids	=	array(0);
+
+			foreach($rows as $row){
+				$pids[]	=	$row->meta_value;
+			}
+
+			$args	=	array(
+				'post_type' => 'services',
+				'post__in' => $pids,
+				'post_status' => 'publish',
+				'paged' => $paged,
+				'order'=> 'DESC',
+				'orderby' => 'date'
+			);
+
+            $the_query = new WP_Query($args);
+			$customResults = [];
+
+			foreach($the_query->posts as $service){
+				$service_id = $service->ID;
+                $author_id = get_post_field( 'post_author', $service_id );
+                $posted_date = get_the_date(get_option( 'date_format' ), $service_id );
+                $fid = get_user_meta( $author_id, 'freelancer_id' , true );
+                $serv['id'] = $service->ID;
+                $serv['image'] = exertio_get_service_image_url($service_id);
+                $serv['title'] = get_the_title($service_id);
+                $serv['rating'] = get_service_rating($service_id);
+                $serv['queued'] = exertio_queued_services($service_id);
+                $serv['price']  = get_post_meta($service_id, '_service_price', true);
+                $serv['freelancer-name'] = exertio_get_username('freelancer', $fid);
+                $serv['date_post'] = get_the_date( get_option( 'date_format' ), $service_id );
+                $pro_img_id = get_post_meta( $fid, '_profile_pic_freelancer_id', true );
+                $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
+                
+                if(wp_attachment_is_image($pro_img_id)){
+                    $serv['freelance-photo-profile'] = esc_url($pro_img[0]);
+                } else {
+                    $serv['freelance-photo-profile'] = esc_url($exertio_theme_options['freelancer_df_img']['url']);
+                }
+                
+                array_push($customResults,$serv);
+
+			}
+
+			return new WP_REST_RESPONSE(
+				$customResults
+			);
+
+		}
+		else{
+			return new WP_ERROR(401,'Veuillez vous connecter','no');
+		}
+
+
+
 	}
 
 
