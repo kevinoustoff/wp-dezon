@@ -38,9 +38,9 @@ $start_from = ($pageno-1) * $limit;
 					  <div class="d-flex justify-content-between flex-wrap">
 						<div class="d-flex align-items-end flex-wrap">
 						  <div class="mr-md-3 mr-xl-5">
-							<h2><?php echo esc_html__('Project Details','exertio_theme');?></h2>
+							<h2><?php echo esc_html__('Détails du projet','exertio_theme');?></h2>
 							<div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
-								<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Dashboard', 'exertio_theme' ); ?>&nbsp;</p>
+								<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 								<?php echo exertio_dashboard_extention_return(); ?>
 							</div>
 						  </div>
@@ -89,23 +89,23 @@ $start_from = ($pageno-1) * $limit;
 									$type =get_post_meta($post->ID, '_project_type', true);
 									if($type == 'fixed')
 									{
-										echo esc_html(fl_price_separator(get_post_meta($post->ID, '_project_cost', true))).'/'.esc_html__( 'Fixed ', 'exertio_theme' );
+										echo esc_html(fl_price_separator(get_post_meta($post->ID, '_project_cost', true)));
 									}
 									else if($type == 'hourly')
 									{
-										echo esc_html(fl_price_separator(get_post_meta($post->ID, '_project_cost', true))).' / '.esc_html__( 'Hourly ', 'exertio_theme' );
-										echo '<small class="estimated-hours">'.esc_html__( 'Estimated Hours ', 'exertio_theme' ).get_post_meta($post->ID, '_estimated_hours', true).'</small>';
+										echo esc_html(fl_price_separator(get_post_meta($post->ID, '_project_cost', true))).' / '.esc_html__( 'par heure ', 'exertio_theme' );
+										echo '<small class="estimated-hours">'.esc_html__( 'Heures estimées ', 'exertio_theme' ).get_post_meta($post->ID, '_estimated_hours', true).'</small>';
 									}
 								 ?>
 							  </div>
 								<div class="pro-coulmn">
 								<form>                
 									<select class="form-control general_select_2 prject_status">
-										<option value=""><?php echo esc_html__( 'Project status', 'exertio_theme' ); ?></option>
-										<option value="complete"><?php echo esc_html__( 'Complete', 'exertio_theme' ); ?></option>
-										<option value="cancel"><?php echo esc_html__( 'Cancel', 'exertio_theme' ); ?></option>
+										<option value=""><?php echo esc_html__( 'Statut du projet', 'exertio_theme' ); ?></option>
+										<option value="complete"><?php echo esc_html__( 'Terminé', 'exertio_theme' ); ?></option>
+										<option value="cancel"><?php echo esc_html__( 'Annulé', 'exertio_theme' ); ?></option>
 									</select>
-									<button type="button" class="btn btn-theme btn-loading" id="project_status" data-pid="<?php echo esc_attr($post->ID); ?>";><?php echo esc_html__( 'Update', 'exertio_theme' ); ?><div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button>
+									<button type="button" class="btn btn-theme btn-loading" id="project_status" data-pid="<?php echo esc_attr($post->ID); ?>";><?php echo esc_html__( 'Modifier', 'exertio_theme' ); ?><div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button>
 								</form>
 								</div>
 							</div>
@@ -125,7 +125,7 @@ $start_from = ($pageno-1) * $limit;
 				
 							?>
 							<div class="fr-project-box">
-							  <h3><?php echo esc_html__( 'Hired Freelancer', 'exertio_theme' ); ?></h3>
+							  <h3><?php echo esc_html__( 'Jobeur embauché', 'exertio_theme' ); ?></h3>
 							</div>
 							<div class="project-proposal-box">
 							  <?php
@@ -153,7 +153,7 @@ $start_from = ($pageno-1) * $limit;
 											  <div class="h-style2"><?php echo exertio_get_username('freelancer', $fl_id, 'badge', 'right'); ?></div>
 											  </a>
 											  <ul>
-												<li> <i class="fal fa-clock"></i> <span><?php echo esc_html__( 'Assigned on: ', 'exertio_theme' ).date_i18n( get_option( 'date_format' ), strtotime( $awarded_results->timestamp ) ); ?></span> </li>
+												<li> <i class="fal fa-clock"></i> <span><?php echo esc_html__( 'Attribué à: ', 'exertio_theme' ).date_i18n( get_option( 'date_format' ), strtotime( $awarded_results->timestamp ) ); ?></span> </li>
 												<li> <span> <?php echo get_rating($fl_id, ''); ?></span> </li>
 											  </ul>
 											</div>
@@ -163,11 +163,11 @@ $start_from = ($pageno-1) * $limit;
 												  <?php
 														if($type == 'fixed')
 														{
-															echo wp_sprintf(__('in %s days', 'exertio_theme'), $awarded_results->day_to_complete);
+															echo wp_sprintf(__('en %s jours', 'exertio_theme'), $awarded_results->day_to_complete);
 														}
 														else if($type == 'hourly')
 														{
-															echo wp_sprintf(__('Estimated hours %s', 'exertio_theme'), $awarded_results->day_to_complete);
+															echo wp_sprintf(__('Heures estimées %s', 'exertio_theme'), $awarded_results->day_to_complete);
 														}
 													
 													?>
@@ -177,7 +177,7 @@ $start_from = ($pageno-1) * $limit;
 										  </div>
 										</div>
 										<div class="fr-project-assets">
-										  <h5><?php echo esc_html__( 'Cover Letter', 'exertio_theme' ); ?></h5>
+										  <h5><?php echo esc_html__( 'Offre du prestataire', 'exertio_theme' ); ?></h5>
 										  <p>
 											<?php ?>
 											<?php echo esc_html($awarded_results->cover_letter); ?></p>
@@ -191,7 +191,7 @@ $start_from = ($pageno-1) * $limit;
 						  </div>
                           <!--PROJECT HISTORY-->
 						  <div class="project-history">
-								<h3><?php echo esc_html__( 'Project History', 'exertio_theme' ); ?></h3>
+								<h3><?php echo esc_html__( 'Historique du projet', 'exertio_theme' ); ?></h3>
 								<div class="history-body">
 									<div class="history-chat-body">
 										<?php
@@ -221,7 +221,7 @@ $start_from = ($pageno-1) * $limit;
 																<!--<a class="history_attch_dwld btn btn-black" href="javascript:void(0)" id="download-files" > Download</a>-->
 																<div class="history_attch_dwld btn-loading" id="download-files" data-id="<?php echo esc_attr($message->attachment_ids); ?>">
 																	<i class="fal fa-arrow-to-bottom"></i>
-																	<?php echo esc_html__( 'Attachments', 'exertio_theme' ); ?>
+																	<?php echo esc_html__( 'Fichiers', 'exertio_theme' ); ?>
 																	<div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
 																</div>
 																<?php
@@ -252,7 +252,7 @@ $start_from = ($pageno-1) * $limit;
 																?>
 																<div class="history_attch_dwld btn-loading" id="download-files" data-id="<?php echo esc_attr($message->attachment_ids); ?>">
 																	<i class="fal fa-arrow-to-bottom"></i>
-																	<?php echo esc_html__( 'Attachments', 'exertio_theme' ); ?>
+																	<?php echo esc_html__( 'Fichiers', 'exertio_theme' ); ?>
 																	<div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
 																</div>
 																<?php
@@ -267,7 +267,7 @@ $start_from = ($pageno-1) * $limit;
 										else
 										{
 											?>
-											<p class="text-center"><?php echo esc_html__( 'No history found', 'exertio_theme' ); ?></p>
+											<p class="text-center"><?php echo esc_html__( 'Aucun historique pour le moment', 'exertio_theme' ); ?></p>
 											<?php	
 										}
 										?>
@@ -275,18 +275,18 @@ $start_from = ($pageno-1) * $limit;
 								</div>
 						  </div>
 						  <div class="history-msg-form">
-							<h3><?php echo esc_html__( 'Send Message', 'exertio_theme' ); ?></h3>
+							<h3><?php echo esc_html__( 'Envoyer', 'exertio_theme' ); ?></h3>
 							<div class="history-text">
 								<form id="send_himstory_msg">
 									<div class="form-row">
 										<div class="form-group col-md-12">
-											<textarea name="history_msg_text" id="" class="form-control" required data-smk-msg="<?php echo esc_html__('Please provide message to send','exertio_theme'); ?>"></textarea>
+											<textarea name="history_msg_text" id="" class="form-control" required data-smk-msg="<?php echo esc_html__('Veuillez renseigner le message à envoyer','exertio_theme'); ?>"></textarea>
 										</div>
 									</div>
 									<div class="form-row">
 										<div class="form-group col-md-12">
 											<div class="upload-btn-wrapper">
-												<button class="btn btn-theme-secondary mt-2 mt-xl-0" type="button"><?php echo esc_html__('Select Attachments','exertio_theme'); ?></button>
+												<button class="btn btn-theme-secondary mt-2 mt-xl-0" type="button"><?php echo esc_html__('Selectionner des fichiers','exertio_theme'); ?></button>
 												<input type="file" id="gen_attachment_uploader" multiple name="project_attachments[]" accept = "image/pdf/doc/docx/ppt/pptx*" data-post-id="<?php echo esc_attr($project_id) ?>"/>
 												<input type="hidden" name="attachment_ids" value="" id="history_attachments_ids">
 											</div>
@@ -299,7 +299,7 @@ $start_from = ($pageno-1) * $limit;
 									<div class="form-row">
 										<div class="form-group col-md-12">
 											<button type="button" class="btn btn-theme float-right btn-loading" id="history_msg_btn" data-post-id="<?php echo esc_attr($project_id) ?>" data-fl-id="<?php echo esc_attr($fl_id) ?>" data-msg-author="<?php echo esc_attr($msg_author) ?>">
-												<?php echo esc_html__('Send Message','exertio_theme'); ?>
+												<?php echo esc_html__('Envoyer','exertio_theme'); ?>
 												<div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
 											</button>
 										</div>
@@ -318,7 +318,7 @@ $start_from = ($pageno-1) * $limit;
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                      	<small><?php echo esc_html__('Provide Feedback to ','exertio_theme'); ?></small>
+                      	<small><?php echo esc_html__('Laisser un commentaire ','exertio_theme'); ?></small>
                         <h4 class="modal-title" id="review-modal"><?php echo exertio_get_username('freelancer',$fl_id, 'badge', 'right'); ?></h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true"><i class="fal fa-times"></i></span>
@@ -332,30 +332,30 @@ $start_from = ($pageno-1) * $limit;
                                     <p><?php if(isset($exertio_theme_options['first_title'])){ echo esc_html($exertio_theme_options['first_title']); } ?></p>
                                     <div class="review stars-1"></div>
                                     <div class="form-group">
-                                    <input type="text" id="stars-1" name="stars_1" value=""  required data-smk-msg="<?php echo esc_html__('This is required','exertio_theme'); ?>">
+                                    <input type="text" id="stars-1" name="stars_1" value=""  required data-smk-msg="<?php echo esc_html__('Ce champ est requis','exertio_theme'); ?>">
                                     </div>
                                   </li>
                                   <li>
                                     <p><?php if(isset($exertio_theme_options['second_title'])){ echo esc_html($exertio_theme_options['second_title']); } ?></p>
                                     <div class="review stars-2"></div>
                                     <div class="form-group">
-                                    <input type="text" id="stars-2" name="stars_2"  required data-smk-msg="<?php echo esc_html__('This is required','exertio_theme'); ?>">
+                                    <input type="text" id="stars-2" name="stars_2"  required data-smk-msg="<?php echo esc_html__('Ce champ est requis','exertio_theme'); ?>">
                                     </div>
                                   </li>
                                   <li>
                                     <p><?php if(isset($exertio_theme_options['third_title'])){ echo esc_html($exertio_theme_options['third_title']); } ?></p>
                                     <div class="review stars-3"></div>
                                     <div class="form-group">
-                                    <input type="text" id="stars-3" name="stars_3"  required data-smk-msg="<?php echo esc_html__('This is required','exertio_theme'); ?>">
+                                    <input type="text" id="stars-3" name="stars_3"  required data-smk-msg="<?php echo esc_html__('Ce champ est requis','exertio_theme'); ?>">
                                     </div>
                                   </li>
                                 </ul>
                             </div>
                             <div class="form-group">
-                                <label> <?php echo esc_html__('Feedback','exertio_theme'); ?> </label>
+                                <label> <?php echo esc_html__('Commentaire','exertio_theme'); ?> </label>
                                 <textarea class="form-control" name="feedback_text" rows="5" cols="10" required data-smk-msg="<?php echo esc_html__('Please provide feedback','exertio_theme'); ?>"></textarea>
                             </div>
-                            <div class="form-group"> <button type="button" id="rating-btn" class="btn btn-theme btn-loading" data-pid="<?php echo esc_attr($project_id) ?>" data-status= "complete"><?php echo esc_html__('Complete & Submit','exertio_theme'); ?> <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button> </div>
+                            <div class="form-group"> <button type="button" id="rating-btn" class="btn btn-theme btn-loading" data-pid="<?php echo esc_attr($project_id) ?>" data-status= "complete"><?php echo esc_html__('Envoyer','exertio_theme'); ?> <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button> </div>
                         </form>
                       </div>
                     </div>
@@ -366,8 +366,8 @@ $start_from = ($pageno-1) * $limit;
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                      	<small><?php echo esc_html__('Provide Reason to ','exertio_theme'); ?></small>
-                        <h4 class="modal-title" id="review-modal-cancel"><?php echo esc_html__('Cancel Project','exertio_theme'); ?></h4>
+                      	<small><?php echo esc_html__('Raisons d\'annulation du projet ','exertio_theme'); ?></small>
+                        <h4 class="modal-title" id="review-modal-cancel"><?php echo esc_html__('Annuler le projet','exertio_theme'); ?></h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true"><i class="fal fa-times"></i></span>
                         </button>
@@ -375,11 +375,11 @@ $start_from = ($pageno-1) * $limit;
                       <div class="modal-body">
                         <form id="review-modal-cancel">
                             <div class="form-group">
-                                <label> <?php echo esc_html__('Feedback ','exertio_theme'); ?> </label>
-                                <textarea class="form-control" name="feedback_text" rows="5" cols="10" required data-smk-msg="<?php echo esc_html__('Please provide reason','exertio_theme'); ?>"></textarea>
-                                <p> <?php echo esc_html__('Provide information on why you are canceling this project.','exertio_theme'); ?></p>
+                                <label> <?php echo esc_html__('Commentaire ','exertio_theme'); ?> </label>
+                                <textarea class="form-control" name="feedback_text" rows="5" cols="10" required data-smk-msg="<?php echo esc_html__('Veuillez mentionner la raison','exertio_theme'); ?>"></textarea>
+                                <p> <?php echo esc_html__('Fournissez des informations sur les raisons pour lesquelles vous annulez ce projet.','exertio_theme'); ?></p>
                             </div>
-                            <div class="form-group"> <button type="button" id="cancel-btn" class="btn btn-theme btn-loading" data-pid="<?php echo esc_attr($project_id) ?>" data-status= "cancel"><?php echo esc_html__('Cancel this project','exertio_theme'); ?> <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button> </div>
+                            <div class="form-group"> <button type="button" id="cancel-btn" class="btn btn-theme btn-loading" data-pid="<?php echo esc_attr($project_id) ?>" data-status= "cancel"><?php echo esc_html__('Annuler le projet','exertio_theme'); ?> <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button> </div>
                         </form>
                       </div>
                     </div>

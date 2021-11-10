@@ -12,7 +12,8 @@ if(!empty($expe_jsons))
 		{
 			?>
 			<div class="heading-contents">
-			  <h3><?php echo esc_html($exertio_theme_options['detail_exp_title']); ?></h3>
+			  <h3><?php //echo esc_html($exertio_theme_options['detail_exp_title']);
+			  echo esc_html('Expériences'); ?></h3>
 			</div>
 			<?php
 		}

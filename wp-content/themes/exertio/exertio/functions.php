@@ -458,3 +458,14 @@ function exertio_delete_user_data($user_id) {
         wp_delete_post($user_post->ID, true);
     }
 }
+/* code pour modifier le nom de l'expéditeur des mails*/
+add_filter('wp_mail_from', 'new_mail_from');
+add_filter('wp_mail_from_name', 'new_mail_from_name');
+function new_mail_from($old)  
+{  
+    return 'no-reply@dezon.app';
+}
+function new_mail_from_name($old)  
+{  
+    return 'Dezon';
+}

@@ -36,9 +36,9 @@ $fl_id = get_user_meta( $current_user_id, 'freelancer_id' , true );
       <div class="d-flex justify-content-between flex-wrap">
         <div class="d-flex align-items-end flex-wrap">
           <div class="mr-md-3 mr-xl-5">
-            <h2><?php echo esc_html__('Completed Projects','exertio_theme');?></h2>
+            <h2><?php echo esc_html__('Projets terminés','exertio_theme');?></h2>
             <div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
-				<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Dashboard', 'exertio_theme' ); ?>&nbsp;</p>
+				<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 				<?php echo exertio_dashboard_extention_return(); ?>
 			</div>
           </div>
@@ -53,10 +53,11 @@ $fl_id = get_user_meta( $current_user_id, 'freelancer_id' , true );
           <div class="pro-section">
               <div class="pro-box heading-row">
                 <div class="pro-coulmn pro-title">
+                	<?php echo esc_html__( 'Titre', 'exertio_theme' ) ?>
                 </div>
-                <div class="pro-coulmn"><?php echo esc_html__( 'Assigned on', 'exertio_theme' ) ?> </div>
-                <div class="pro-coulmn"><?php echo esc_html__( 'Type/Cost', 'exertio_theme' ) ?> </div>
-                <div class="pro-coulmn"><?php echo esc_html__( 'Detail', 'exertio_theme' ) ?> </div>
+                <div class="pro-coulmn"><?php echo esc_html__( 'Attribué le', 'exertio_theme' ) ?> </div>
+                <div class="pro-coulmn"><?php echo esc_html__( 'Type/Prix', 'exertio_theme' ) ?> </div>
+                <div class="pro-coulmn"><?php echo esc_html__( 'Détails', 'exertio_theme' ) ?> </div>
               </div>
 				<?php
 					if ( $the_query->have_posts() )
@@ -96,7 +97,7 @@ $fl_id = get_user_meta( $current_user_id, 'freelancer_id' , true );
 										$assign_date = get_post_meta($pid, '_project_assigned_date', true);
 										if($assign_date)
 										{
-											echo esc_html(date('F d, Y',strtotime($assign_date)));
+											echo esc_html(date('d/m/Y',strtotime($assign_date)));
 										}
 									 ?>
 								</div>
@@ -105,12 +106,12 @@ $fl_id = get_user_meta( $current_user_id, 'freelancer_id' , true );
 										$type = get_post_meta($pid, '_project_type', true);
 										if($type == 'fixed')
 										{
-											echo esc_html(fl_price_separator(get_post_meta($pid, '_project_cost', true))).'/'.esc_html__( 'Fixed ', 'exertio_theme' );
+											echo esc_html(fl_price_separator(get_post_meta($pid, '_project_cost', true))).'/'.esc_html__( 'Budget fixe ', 'exertio_theme' );
 										}
 										else if($type == 'hourly')
 										{
-											echo esc_html(fl_price_separator(get_post_meta($pid, '_project_cost', true))).' '.esc_html__( 'Hourly ', 'exertio_theme' );
-											echo '<small class="estimated-hours">'.esc_html__( 'Estimated Hours ', 'exertio_theme' ).get_post_meta($pid, '_estimated_hours', true).'</small>';
+											echo esc_html(fl_price_separator(get_post_meta($pid, '_project_cost', true))).' '.esc_html__( 'Par heure ', 'exertio_theme' );
+											echo '<small class="estimated-hours">'.esc_html__( 'Heures estimées ', 'exertio_theme' ).get_post_meta($pid, '_estimated_hours', true).'</small>';
 										}
 									 ?>
 								</div>
@@ -119,7 +120,7 @@ $fl_id = get_user_meta( $current_user_id, 'freelancer_id' , true );
 									if( fl_framework_get_options('turn_project_messaging') == true)
 									{
 										?>
-									<a href="<?php get_template_part( 'project-propsals' );?>?ext=completed-project-detail&project-id=<?php echo esc_html($pid); ?>" class="btn btn-theme-secondary"> <?php echo esc_html__( 'View Detail', 'exertio_theme' ); ?> </a>
+									<a href="<?php get_template_part( 'project-propsals' );?>?ext=completed-project-detail&project-id=<?php echo esc_html($pid); ?>" class="btn btn-theme-secondary"> <?php echo esc_html__( 'Voir le détail', 'exertio_theme' ); ?> </a>
 										<?php
 									}
 									else
@@ -129,7 +130,7 @@ $fl_id = get_user_meta( $current_user_id, 'freelancer_id' , true );
 											<i class="fas fa-check-circle"></i>
 											<div>
 												<span class="">
-													<?php echo esc_html__( 'Completed ', 'exertio_theme' ); ?>
+													<?php echo esc_html__( 'Terminé ', 'exertio_theme' ); ?>
 												</span>
 												<small>
 													on <?php  echo date_i18n( get_option( 'date_format' ), strtotime( get_post_meta($pid, '_project_completed_date', true) ) ); ?>
@@ -152,7 +153,7 @@ $fl_id = get_user_meta( $current_user_id, 'freelancer_id' , true );
 					{
 						?>
                         <div class="nothing-found">
-                            <h3><?php echo esc_html__( 'Sorry!!! No Record Found', 'exertio_theme' ) ?></h3>
+                            <h3><?php echo esc_html__( 'Désolé!!! Aucun projet trouvé', 'exertio_theme' ) ?></h3>
                             <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo get_post_meta($alt_id, '_wp_attachment_image_alt', TRUE); ?>">
                         </div>
                         <?php	

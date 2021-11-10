@@ -1,4 +1,0 @@
-2021-10-07T18:05:13+00:00 CRITICAL require(): Failed opening required '/var/www/html/wordpress/wp-content/themes/exertio/exertio/inc/classes/projects/project-listings.php' (include_path='.:/usr/share/php') dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/inc/classes/index.php à la ligne 3
-
-2021-10-07T18:05:13+00:00 CRITICAL require(): Failed opening required '/var/www/html/wordpress/wp-content/themes/exertio/exertio/inc/classes/projects/project-listings.php' (include_path='.:/usr/share/php') dans /var/www/html/wordpress/wp-content/themes/exertio/exertio/inc/classes/index.php à la ligne 3
-

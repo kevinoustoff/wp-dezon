@@ -25,7 +25,7 @@ if ( get_query_var( 'paged' ) ) {
               <div class="d-flex justify-content-between flex-wrap">
                 <div class="d-flex align-items-end flex-wrap">
                   <div class="mr-md-3 mr-xl-5">
-                    <h2><?php echo esc_html__('Demandes validées','exertio_theme').esc_html(' ('. $total_count.')');?></h2>
+                    <h2><?php echo esc_html__('Projets terminés','exertio_theme').esc_html(' ('. $total_count.')');?></h2>
 					<div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
 						<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 						<?php echo exertio_dashboard_extention_return(); ?>
@@ -42,11 +42,11 @@ if ( get_query_var( 'paged' ) ) {
                   <div class="pro-section">
                       <div class="pro-box heading-row">
                         <div class="pro-coulmn pro-title">
-                            <?php echo esc_html__( 'Titre du projet', 'exertio_theme' ); ?> 
+                            <?php echo esc_html__( 'Titre', 'exertio_theme' ); ?> 
                         </div>
                         <div class="pro-coulmn"><?php echo esc_html__( 'Catégorie', 'exertio_theme' ); ?> </div>
                         <div class="pro-coulmn"><?php echo esc_html__( 'Prix', 'exertio_theme' ); ?> </div>
-                        <div class="pro-coulmn"><?php echo esc_html__( 'Propositions', 'exertio_theme' ); ?> </div>
+                        <div class="pro-coulmn"><?php echo esc_html__( 'Offres', 'exertio_theme' ); ?> </div>
                       </div>
                         <?php
                             if ( $the_query->have_posts() )
@@ -93,11 +93,11 @@ if ( get_query_var( 'paged' ) ) {
                                                 $type = get_post_meta($pid, '_project_type', true);
                                                 if($type == 'fixed')
                                                 {
-                                                    echo esc_html(fl_price_separator(get_post_meta($pid, '_project_cost', true))).'/'.esc_html__( 'Fixe ', 'exertio_theme' );
+                                                    echo esc_html(fl_price_separator(get_post_meta($pid, '_project_cost', true)));
                                                 }
                                                 else if($type == 'hourly')
                                                 {
-                                                    echo esc_html(fl_price_separator(get_post_meta($pid, '_project_cost', true))).' '.esc_html__( 'Hourly ', 'exertio_theme' );
+                                                    echo esc_html(fl_price_separator(get_post_meta($pid, '_project_cost', true))).' '.esc_html__( 'par heure ', 'exertio_theme' );
                                                     echo '<small class="estimated-hours">'.esc_html__( 'Heures estimées ', 'exertio_theme' ).get_post_meta($pid, '_estimated_hours', true).'</small>';
                                                 }
                                              ?>
@@ -111,8 +111,8 @@ if ( get_query_var( 'paged' ) ) {
                             {
                                 ?>
                                 <div class="nothing-found">
-                                    <h3><?php echo esc_html__( 'Désolé!! Aucun enregistrement trouvé', 'exertio_theme' ) ?></h3>
-                                    <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo esc_html__( 'Nothing found icon', 'exertio_theme' ) ?> ">
+                                    <h3><?php echo esc_html__( 'Désolé!! Aucun projet trouvé', 'exertio_theme' ) ?></h3>
+                                    <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo esc_html__( 'Aucune icone trouvée', 'exertio_theme' ) ?> ">
                                 </div>
                                 <?php	
                             }

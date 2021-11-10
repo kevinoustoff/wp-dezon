@@ -44,9 +44,9 @@ $start_from = ($pageno-1) * $limit;
 					  <div class="d-flex justify-content-between flex-wrap">
 						<div class="d-flex align-items-end flex-wrap">
 						  <div class="mr-md-3 mr-xl-5">
-							<h2><?php echo esc_html__('Project Details','exertio_theme'); ?></h2>
+							<h2><?php echo esc_html__('Détails du projet','exertio_theme'); ?></h2>
 							<div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
-								<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Dashboard', 'exertio_theme' ); ?>&nbsp;</p>
+								<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 								<?php echo exertio_dashboard_extention_return(); ?>
 							</div>
 						  </div>
@@ -94,12 +94,12 @@ $start_from = ($pageno-1) * $limit;
 									$type =get_post_meta($post->ID, '_project_type', true);
 									if($type == 'fixed')
 									{
-										echo esc_html(fl_price_separator(get_post_meta($post->ID, '_project_cost', true))).'/'.esc_html__( 'Fixed ', 'exertio_theme' );
+										echo esc_html(fl_price_separator(get_post_meta($post->ID, '_project_cost', true))).'/'.esc_html__( 'Budget fixe ', 'exertio_theme' );
 									}
 									else if($type == 'hourly')
 									{
-										echo esc_html(fl_price_separator(get_post_meta($post->ID, '_project_cost', true))).' / '.esc_html__( 'Hourly ', 'exertio_theme' );
-										echo '<small class="estimated-hours">'.esc_html__( 'Estimated Hours ', 'exertio_theme' ).get_post_meta($post->ID, '_estimated_hours', true).'</small>';
+										echo esc_html(fl_price_separator(get_post_meta($post->ID, '_project_cost', true))).' / '.esc_html__( 'Par heure ', 'exertio_theme' );
+										echo '<small class="estimated-hours">'.esc_html__( 'Heures estimées ', 'exertio_theme' ).get_post_meta($post->ID, '_estimated_hours', true).'</small>';
 									}
 								 ?>
 							  </div>
@@ -112,7 +112,7 @@ $start_from = ($pageno-1) * $limit;
 											 <a href="<?php echo get_the_permalink($employer_id) ?>"><?php echo exertio_get_username('employer',$employer_id, 'badge', 'right' ); ?></a>
 										</span>
 										<small>
-											<?php  echo esc_html__( 'Assigned on: ', 'exertio_theme' ).date_i18n( get_option( 'date_format' ), strtotime( get_post_meta( $employer_id, '_project_assigned_date' , true ) ) ); ?>
+											<?php  echo esc_html__( 'Attribué le: ', 'exertio_theme' ).date_i18n( get_option( 'date_format' ), strtotime( get_post_meta( $employer_id, '_project_assigned_date' , true ) ) ); ?>
 										</small>
 									</div>
 								</div>
@@ -120,7 +120,7 @@ $start_from = ($pageno-1) * $limit;
 						  </div>
 						  <!--PROJECT HISTORY-->
 						  <div class="project-history">
-								<h3><?php echo esc_html__( 'Project History', 'exertio_theme' ); ?></h3>
+								<h3><?php echo esc_html__( 'Historique du projet', 'exertio_theme' ); ?></h3>
 								<div class="history-body">
 									<div class="history-chat-body">
 										<?php
@@ -176,7 +176,7 @@ $start_from = ($pageno-1) * $limit;
 															<!--<a class="history_attch_dwld btn btn-black" href="javascript:void(0)" id="download-files" > Download</a>-->
 															<div class="history_attch_dwld btn-loading" id="download-files" data-id="<?php echo esc_attr($message->attachment_ids); ?>">
 																<i class="fal fa-arrow-to-bottom"></i>
-																<?php echo esc_html__( 'Attachments', 'exertio_theme' ); ?>
+																<?php echo esc_html__( 'Fichiers', 'exertio_theme' ); ?>
 																<div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
 															</div>
 															<?php
@@ -190,7 +190,7 @@ $start_from = ($pageno-1) * $limit;
 										else
 										{
 											?>
-											<p class="text-center"><?php echo esc_html__( 'No history found', 'exertio_theme' ); ?></p>
+											<p class="text-center"><?php echo esc_html__( 'Aucun historique trouvé', 'exertio_theme' ); ?></p>
 											<?php	
 										}
 										?>
@@ -198,7 +198,7 @@ $start_from = ($pageno-1) * $limit;
 								</div>
 						  </div>
 						  <div class="history-msg-form">
-							<h3><?php echo esc_html__( 'Send Message', 'exertio_theme' ); ?></h3>
+							<h3><?php echo esc_html__( 'Contacter le client', 'exertio_theme' ); ?></h3>
 							<div class="history-text">
 								<form id="send_himstory_msg">
 									<div class="form-row">
@@ -209,8 +209,8 @@ $start_from = ($pageno-1) * $limit;
 									<div class="form-row">
 										<div class="form-group col-md-12">
 											<div class="upload-btn-wrapper">
-												<button class="btn btn-theme-secondary mt-2 mt-xl-0" type="button"><?php echo esc_html__('Select Attachments','exertio_theme'); ?></button>
-												<input type="file" id="gen_attachment_uploader" multiple name="project_attachments[]" accept = "image/pdf/doc/docx/ppt/pptx*" data-post-id="<?php echo esc_attr($project_id) ?>" title=" <?php echo esc_html__('No file selected','exertio_theme'); ?>"/>
+												<button class="btn btn-theme-secondary mt-2 mt-xl-0" type="button"><?php echo esc_html__('Selectionner des fichiers','exertio_theme'); ?></button>
+												<input type="file" id="gen_attachment_uploader" multiple name="project_attachments[]" accept = "image/pdf/doc/docx/ppt/pptx*" data-post-id="<?php echo esc_attr($project_id) ?>" title=" <?php echo esc_html__('Aucun fichier sélectionné','exertio_theme'); ?>"/>
 												<input type="hidden" name="attachment_ids" value="" id="history_attachments_ids">
 											</div>
 										</div>
@@ -222,7 +222,7 @@ $start_from = ($pageno-1) * $limit;
 									<div class="form-row">
 										<div class="form-group col-md-12">
 											<button type="button" class="btn btn-theme float-right btn-loading" id="history_msg_btn" data-post-id="<?php echo esc_attr($project_id) ?>" data-fl-id="<?php echo esc_attr($fl_id) ?>" data-msg-author="<?php echo esc_attr($msg_author) ?>">
-												<?php echo esc_html__('Send Message','exertio_theme'); ?>
+												<?php echo esc_html__('Envoyer','exertio_theme'); ?>
 												<div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
 											</button>
 										</div>

@@ -24,34 +24,42 @@ if(isset($actionbBar) && $actionbBar == 1)
 	if(!is_page_template( 'page-register.php' ) && !is_page_template( 'page-login.php' ))
 	{
 	?>
+		<?php 
+			  		if( !is_user_logged_in() )
+            {
+			  	 ?>
 		<section class="fr-bg-style2">
 		  <div class="container">
 			<div class="row">
 			  <div class="col-xl-12 col-xs-12 col-sm-12 col-md-12">
+			  
 				<div class="fr-bg-style">
 				  <div class="row">
-					<div class="<?php echo esc_attr($action_cols); ?>">
-					  <div class="fr-gt-content">
-						<h3><?php echo esc_html(fl_framework_get_options('action_heading_text')); ?></h3>
-						<p><?php echo esc_html(fl_framework_get_options('action_content')); ?></p>
-					  </div>
-					</div>
-					<?php
-					if($action_btn != '')
-					{
-					?>
-					<div class="col-xl-4 col-lg-4 align-self-center">
-					  <div class="fr-gt-btn"> <a href="<?php echo get_the_permalink(fl_framework_get_options('action_btn_link')); ?>" class="btn btn-theme"><?php echo esc_html(fl_framework_get_options('action_btn_text')); ?></a> </div>
-					</div>
-					<?php
-					}
-					?>
+						<div class="<?php echo esc_attr($action_cols); ?>">
+						  <div class="fr-gt-content">
+							<h3><?php echo esc_html(fl_framework_get_options('action_heading_text')); ?></h3>
+							<p><?php echo esc_html(fl_framework_get_options('action_content')); ?></p>
+						  </div>
+						</div>
+						<?php
+						if($action_btn != '')
+						{
+						?>
+						<div class="col-xl-4 col-lg-4 align-self-center">
+						  <div class="fr-gt-btn"> <a href="<?php echo get_the_permalink(fl_framework_get_options('action_btn_link')); ?>" class="btn btn-theme"><?php echo esc_html(fl_framework_get_options('action_btn_text')); ?></a> </div>
+						</div>
+						<?php
+						}
+						?>
 				  </div>
-				</div>
-			  </div>
+	  		</div>
 			</div>
 		  </div>
 		</section>
+			</div>
+					<?php 
+						} 
+					?>
 	<?php
 	}
 }

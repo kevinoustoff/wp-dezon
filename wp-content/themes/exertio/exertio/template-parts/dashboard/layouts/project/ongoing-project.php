@@ -50,10 +50,11 @@ if ( get_query_var( 'paged' ) ) {
           <div class="pro-section">
               <div class="pro-box heading-row">
                 <div class="pro-coulmn pro-title">
+                	<?php echo esc_html__( 'Titre', 'exertio_theme' ) ?>
                 </div>
                 <div class="pro-coulmn"><?php echo esc_html__( 'Catégorie', 'exertio_theme' ) ?> </div>
                 <div class="pro-coulmn"><?php echo esc_html__( 'Prix', 'exertio_theme' ) ?> </div>
-                <div class="pro-coulmn"><?php echo esc_html__( 'Propositions', 'exertio_theme' ) ?> </div>
+                <div class="pro-coulmn"><?php echo esc_html__( 'Offres', 'exertio_theme' ) ?> </div>
               </div>
 				<?php
 					if ( $the_query->have_posts() )
@@ -112,7 +113,7 @@ if ( get_query_var( 'paged' ) ) {
 										$type = get_post_meta($pid, '_project_type', true);
 										if($type == 'fixed')
 										{
-											echo esc_html(fl_price_separator(get_post_meta($pid, '_project_cost', true))).'/'.esc_html__( 'Fixe ', 'exertio_theme' );
+											echo esc_html(fl_price_separator(get_post_meta($pid, '_project_cost', true)));
 										}
 										else if($type == 'hourly')
 										{
@@ -121,7 +122,7 @@ if ( get_query_var( 'paged' ) ) {
 										}
 									 ?>
 								</div>
-								<div class="pro-coulmn"><a href="<?php get_template_part( 'project-propsals' );?>?ext=ongoing-project-proposals&project-id=<?php echo esc_html($pid); ?>" class="btn btn-theme-secondary"> <?php echo esc_html__( 'Propositions ', 'exertio_theme' ).' ('.$count_bids.')'; ?> </a></div>
+								<div class="pro-coulmn"><a href="<?php get_template_part( 'project-propsals' );?>?ext=ongoing-project-proposals&project-id=<?php echo esc_html($pid); ?>" class="btn btn-theme-secondary"> <?php echo $count_bids.' '. esc_html__( 'Offre(s) ', 'exertio_theme' ); ?> </a></div>
 							  </div>
 						  
 							<?php
@@ -134,7 +135,7 @@ if ( get_query_var( 'paged' ) ) {
 					{
 						?>
                         <div class="nothing-found">
-                            <h3><?php echo esc_html__( 'Désolé!! aucun enregistrement trouvé', 'exertio_theme' ) ?></h3>
+                            <h3><?php echo esc_html__( 'Désolé!! aucun projet trouvé', 'exertio_theme' ) ?></h3>
                             <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo get_post_meta($alt_id, '_wp_attachment_image_alt', TRUE); ?>">
                         </div>
                         <?php	

@@ -32,7 +32,7 @@ $start_from = ($pageno-1) * $limit;
               <div class="d-flex justify-content-between flex-wrap">
                 <div class="d-flex align-items-end flex-wrap">
                   <div class="mr-md-3 mr-xl-5">
-                    <h2><?php echo esc_html__('Services finalisés','exertio_theme');?></h2>
+                    <h2><?php echo esc_html__('Jobs finalisés','exertio_theme');?></h2>
                     <div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
 						<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 						<?php echo exertio_dashboard_extention_return(); ?>
@@ -49,8 +49,9 @@ $start_from = ($pageno-1) * $limit;
                   <div class="pro-section">
                       <div class="pro-box heading-row">
                         <div class="pro-coulmn pro-title">
+                        	<?php echo esc_html__( 'Titre', 'exertio_theme' ) ?>
                         </div>
-                        <div class="pro-coulmn"><?php echo esc_html__( 'Afficher par', 'exertio_theme' ) ?> </div>
+                        <div class="pro-coulmn"><?php echo esc_html__( 'Client', 'exertio_theme' ) ?> </div>
                         <div class="pro-coulmn"><?php echo esc_html__( 'Action', 'exertio_theme' ) ?> </div>
                       </div>
                         <?php
@@ -99,7 +100,7 @@ $start_from = ($pageno-1) * $limit;
                                                 echo get_profile_img($buyer_id , 'employer');
                                             ?>
                                             <span class="buyer_name"> <?php echo exertio_get_username('employer',$buyer_id, 'badge', 'right' ); ?></span>
-                                            <span class="service_start_date"> <?php echo esc_html__( 'Commencé ce ', 'exertio_theme' ).' '.esc_html(date("F jS, Y", strtotime($results->timestamp))); ?></span>
+                                            <span class="service_start_date"> <?php echo esc_html__( 'Commencé le ', 'exertio_theme' ).' '.esc_html(date("d/m/Y", strtotime($results->timestamp))); ?></span>
                                         </div>
 										<?php
 										if( fl_framework_get_options('turn_services_messaging') == true)
@@ -117,7 +118,7 @@ $start_from = ($pageno-1) * $limit;
 												<i class="fas fa-check-circle"></i>
 												<div>
 													<span class=""> <?php echo esc_html__( 'Finalisé ', 'exertio_theme' ); ?> </span>
-													<small> <?php echo esc_html__( 'ce ', 'exertio_theme' ).date_i18n( get_option( 'date_format' ), strtotime( $results->status_date ) ); ?> </small>
+													<small> <?php echo esc_html__( 'le ', 'exertio_theme' ).date_i18n( get_option( 'date_format' ), strtotime( $results->status_date ) ); ?> </small>
 												</div>
 											</div>
 											<?php
@@ -132,7 +133,7 @@ $start_from = ($pageno-1) * $limit;
                             {
                                 ?>
                                 <div class="nothing-found">
-                                    <h3><?php echo esc_html__( 'Désolé!! Aucun service finalisé pour le moment', 'exertio_theme' ) ?></h3>
+                                    <h3><?php echo esc_html__( 'Désolé!! Aucun job finalisé pour le moment', 'exertio_theme' ) ?></h3>
                                     <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo esc_html__( 'Nothing found icon', 'exertio_theme' ) ?> ">
                                 </div>
                                 <?php	

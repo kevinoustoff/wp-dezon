@@ -42,7 +42,7 @@
 								<svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37c.996.608 2.296.07 2.572-1.065z" stroke="#626262" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0z" stroke="#626262" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
 							</span>
 							<p>
-								<span class="title"><?php echo esc_html__('Services proposés', 'exertio_theme' ); ?></span>
+								<span class="title"><?php echo esc_html__('Jobs publiés', 'exertio_theme' ); ?></span>
 								<span class="number"><?php echo esc_html($active_services); ?></span>
 							</p>
 						</div>
@@ -56,7 +56,7 @@
 								<svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 15 15"><g fill="none"><path d="M4 7.5L7 10l4-5m-3.5 9.5a7 7 0 1 1 0-14a7 7 0 0 1 0 14z" stroke="#626262"/></g></svg>
 							</span>
 							<p>
-								<span class="title"><?php echo esc_html__(' Services finalisés', 'exertio_theme' ); ?></span>
+								<span class="title"><?php echo esc_html__(' Jobs terminés', 'exertio_theme' ); ?></span>
 								<span class="number"><?php echo esc_html($completed_services); ?></span>
 							</p>
 						</div>
@@ -70,7 +70,7 @@
 								<svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M13 2.03v2.02c4.39.54 7.5 4.53 6.96 8.92c-.46 3.64-3.32 6.53-6.96 6.96v2c5.5-.55 9.5-5.43 8.95-10.93c-.45-4.75-4.22-8.5-8.95-8.97m-2 .03c-1.95.19-3.81.94-5.33 2.2L7.1 5.74c1.12-.9 2.47-1.48 3.9-1.68v-2M4.26 5.67A9.885 9.885 0 0 0 2.05 11h2c.19-1.42.75-2.77 1.64-3.9L4.26 5.67M2.06 13c.2 1.96.97 3.81 2.21 5.33l1.42-1.43A8.002 8.002 0 0 1 4.06 13h-2m5.04 5.37l-1.43 1.37A9.994 9.994 0 0 0 11 22v-2a8.002 8.002 0 0 1-3.9-1.63M12.5 7v5.25l4.5 2.67l-.75 1.23L11 13V7h1.5z" fill="#626262"/></svg>
 							</span>
 							<p>
-								<span class="title"><?php echo esc_html__('Services en attente', 'exertio_theme' ); ?></span>
+								<span class="title"><?php echo esc_html__('Jobs en attente', 'exertio_theme' ); ?></span>
 								<span class="number"><?php echo esc_html($ongoing_services); ?></span>
 							</p>
 						</div>
@@ -104,12 +104,9 @@
 		  </div>
 			<div class="card grid-margin all-proposals">
 				<div class="card-body">
-				  <h4 class="card-title"> <?php echo esc_html__('Services récemment achetés', 'exertio_theme' ); ?></h4>
+				  <h4 class="card-title"> <?php echo esc_html__('Jobs récemment commandés', 'exertio_theme' ); ?></h4>
 				  <div class="pro-section">
-					  <div class="pro-box heading-row">
-						<div class="pro-coulmn pro-title"><?php echo esc_html__( 'Détail du service', 'exertio_theme' ); ?></div>
-						<div class="pro-coulmn"><?php echo esc_html__( 'Prix', 'exertio_theme' ); ?> </div>
-					</div>
+					 
 						<?php
 							global $wpdb;
 							$table = EXERTIO_PURCHASED_SERVICES_TBL;
@@ -137,10 +134,10 @@
 
 									$proposals_html .= '<div class="pro-box">
 										<div class="pro-coulmn pro-title">
-											<span class="img"><a href="'.esc_url(get_permalink($buyer_id)).'">'.$employer_img.'</a></span> <span class="name"><a href="'.esc_url(get_permalink($buyer_id)).'">'.$employer_name.'</a></span>'.esc_html__( 'has purchased ', 'exertio_theme' ).'<span class="project_name"><a href="'.esc_url(get_permalink($service_id)).'">'.$service_name.'</a></span>
+											<span class="img"><a href="'.esc_url(get_permalink($buyer_id)).'">'.$employer_img.'</a></span> <span class="name"><a href="'.esc_url(get_permalink($buyer_id)).'">'.$employer_name.'</a></span>'.esc_html__( 'a commandé ', 'exertio_theme' ).'<span class="project_name"><a href="'.esc_url(get_permalink($service_id)).'">'.$service_name.'</a></span>
 											<p>'.esc_html(date_i18n( get_option( "date_format" ), strtotime( $posted_date ))).'</p>
 										</div>';
-									$proposals_html .= '<div class="pro-coulmn">'.fl_price_separator($service_cost).'</div></div>';
+									$proposals_html .= '<div class="">'.fl_price_separator($service_cost).'</div></div>';
 								}
 								echo wp_return_echo($proposals_html);
 							}
@@ -162,7 +159,7 @@
 		<div class="col-xl-4 col-lg-12 col-md-12 stretch-card">
 			<div class="card grid-margin most-viewed-widget">
 				<div class="card-body">
-					<h4 class="card-title"><?php echo esc_html__('Les services les plus vus', 'exertio_theme' ); ?></h4>
+					<h4 class="card-title"><?php echo esc_html__('Les jobs les plus vus', 'exertio_theme' ); ?></h4>
 					<div class="listing-widgets">
 						<ul>
 							<?php
@@ -217,8 +214,8 @@
 			</div>
 			<div class="card grid-margin  current-package-widget">
 				<div class="card-body">
-				  <h4 class="card-title"><?php echo esc_html__('Pack actuel', 'exertio_theme' ); ?></h4>
-					<p class="view-more-btn"> <a href="<?php echo esc_url(get_the_permalink(fl_framework_get_options('freelancer_package_page'))); ?>" target="_blank"> <?php echo esc_html__(' Voir les packs ', 'exertio_theme' ); ?></a></p>
+				  <h4 class="card-title"><?php echo esc_html__('Abonnement actuel', 'exertio_theme' ); ?></h4>
+					<p class="view-more-btn"> <a class="btn btn-primary" href="<?php echo esc_url(get_the_permalink(fl_framework_get_options('freelancer_package_page'))); ?>" target="_blank"> <?php echo esc_html__(' Voir les abonnements ', 'exertio_theme' ); ?></a></p>
 					<?php
 						$project_credits = get_post_meta( $freelancer_id, '_project_credits', true );
 						$project_credits_text = isset( $project_credits) && $project_credits == -1 ? esc_html__(' Illimité ', 'exertio_theme' ) : $project_credits;
@@ -240,7 +237,7 @@
 						$package_expiry_text = isset( $package_expiry) && $package_expiry == -1 ? esc_html__(' N\'expire jamais ', 'exertio_theme' ) : $package_expiry;
 
 						$freelancer_is_featured = get_post_meta( $freelancer_id, '_freelancer_is_featured', true );
-						$freelacner_featured_text = isset( $freelancer_is_featured) && $freelancer_is_featured > 0 ? 'Yes' : 'No';
+						$freelacner_featured_text = isset( $freelancer_is_featured) && $freelancer_is_featured > 0 ? 'Oui' : 'Non';
 
 					if(isset($simple_services) && $simple_services != '' && $freelancer_package_expiry_date != '')
 					{
@@ -250,24 +247,24 @@
 						{
 						?>
 							<ul>
-								<li><i class="far fa-check-square"></i> <?php echo '<span>'.esc_html__('Crédits du projet: ', 'exertio_theme' ).'</span>'.esc_html($project_credits_text)?> </li>
-								<li><i class="far fa-check-square"></i> <?php echo '<span>'.esc_html__('Services autorisés: ', 'exertio_theme' ).'</span>'.esc_html($simple_services_text)?> </li>
-								<li><i class="far fa-check-square"></i> <?php echo '<span>'.esc_html__('Expiration du service: ', 'exertio_theme' ).'</span>'.esc_html($simple_services_expiry_text); ?> </li>
-								<li><i class="far fa-check-square"></i> <?php echo '<span>'.esc_html__('Services en vedette: ', 'exertio_theme' ).'</span>'.esc_html($featured_services_text);?> </li>
-								<li><i class="far fa-check-square"></i> <?php echo '<span>'.esc_html__('Expiration des services en vedette: ', 'exertio_theme' ).'</span>'.esc_html($featured_services_expiry_text); ?> </li>
-								<li><i class="far fa-check-square"></i> <?php echo '<span>'.esc_html__('Profil en vedette: ', 'exertio_theme' ).'</span>'.esc_html($freelacner_featured_text); ?> </li>
-								<li><i class="far fa-check-square"></i> <?php echo '<span>'.esc_html__('Expiration du pack: ', 'exertio_theme' ).'</span>'.esc_html($package_expiry_text ) ?> </li>
+								<li><i class="far fa-check-square"></i> <?php echo '<span>'.esc_html__('Nombre d\'offre: ', 'exertio_theme' ).'</span>'.esc_html($project_credits_text)?> </li>
+								<li><i class="far fa-check-square"></i> <?php echo '<span>'.esc_html__('Jobs autorisés: ', 'exertio_theme' ).'</span>'.esc_html($simple_services_text)?> </li>
+								<li><i class="far fa-check-square"></i> <?php echo '<span>'.esc_html__('Expiration d\'un job : ', 'exertio_theme' ).'</span>'.esc_html($simple_services_expiry_text); ?> </li>
+								<li><i class="far fa-check-square"></i> <?php echo '<span>'.esc_html__('Jobs sponsorisés: ', 'exertio_theme' ).'</span>'.esc_html($featured_services_text);?> </li>
+								<li><i class="far fa-check-square"></i> <?php echo '<span>'.esc_html__('Expiration des jobs sponsorisés: ', 'exertio_theme' ).'</span>'.esc_html($featured_services_expiry_text); ?> </li>
+								<li><i class="far fa-check-square"></i> <?php echo '<span>'.esc_html__('Profil sponsorisé: ', 'exertio_theme' ).'</span>'.esc_html($freelacner_featured_text); ?> </li>
+								<li><i class="far fa-check-square"></i> <?php echo '<span>'.esc_html__('Expiration de l\'abonnement: ', 'exertio_theme' ).'</span>'.esc_html($package_expiry_text ) ?> </li>
 							</ul>
 						<?php
 						}
 						else
 						{
-							echo '<p>'.esc_html__(' Votre pack actuel est expiré', 'exertio_theme' ).'</p>';
+							echo '<p>'.esc_html__(' Votre abonnement actuel est expiré', 'exertio_theme' ).'</p>';
 						}
 					}
 					else
 					{
-						echo '<p>'.esc_html__(' Aucun pack souscrits récemment', 'exertio_theme' ).'</p>';
+						echo '<p>'.esc_html__(' Aucun abonnement souscrit récemment', 'exertio_theme' ).'</p>';
 					}
 					?>
 			  </div>

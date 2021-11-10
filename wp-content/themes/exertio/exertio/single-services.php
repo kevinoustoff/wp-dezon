@@ -18,6 +18,7 @@ $alt_id = '';
             <li class="links"> <a href="#description" class="scroll"><?php echo esc_html__('Description','exertio_theme'); ?></a> </li>
             <li class="links"> <a href="#seller" class="scroll"><?php echo esc_html__('Concernant le prestataire','exertio_theme'); ?></a> </li>
             <li class="links"> <a href="#reviews" class="scroll"><?php echo esc_html__('Avis','exertio_theme'); ?></a> </li>
+            <li class="links"> <a href="#related" class="scroll"><?php echo esc_html__('Services associés','exertio_theme'); ?></a> </li>
             <li class="links">
               <div class="fr-m-products-2">
                 <ul>
@@ -447,15 +448,6 @@ if ( $exertio_theme_options[ 'action_bar' ] == 1 ) {
 							$classes = 'class="not_loggedin_chat_toggler"';
 						}
 					?>
-						<div class="whizzchat-button">
-              <a href="javascript:void(0)" <?php echo wp_return_echo($classes); ?>>
-                <span>
-                  <img src="<?php echo get_template_directory_uri()?>/images/chat-color-icon.svg" alt="<?php echo get_post_meta($alt_id, '_wp_attachment_image_alt', TRUE); ?>">
-                  <?php echo esc_html__('Chat with Seller','exertio_theme'); ?>
-                </span>
-                <i class="fas fa-angle-right"></i>
-              </a>
-              </div>
 					<?php
 					}
 				}
@@ -534,7 +526,7 @@ if ( $exertio_theme_options[ 'action_bar' ] == 1 ) {
 						  }
 						  }
 						  ?>
-						  <button class="btn btn-theme" type="button" id="buy_service" data-sid="<?php echo esc_attr($sid) ?>" > <?php echo esc_html__('Acheter maintenant','exertio_theme'); ?><small> (<span><?php echo fl_price_separator(get_post_meta($sid, '_service_price', true), 'html'); ?></span>)</small></button>
+						  <button class="btn btn-theme" type="button" id="buy_service" data-sid="<?php echo esc_attr($sid) ?>" > <?php echo esc_html__('Payer','exertio_theme'); ?><small> (<span><?php echo fl_price_separator(get_post_meta($sid, '_service_price', true), 'html'); ?></span>)</small></button>
 						</form>
 					  </div>
 			<?php

@@ -856,12 +856,12 @@ if ( ! function_exists( 'time_ago_function' ) )
 	{
 		$timestamp = strtotime($timestamp);
         $strTime = array(
-            __('second', 'exertio_framework'),
+            __('seconde', 'exertio_framework'),
             __('minute', 'exertio_framework'),
-            __('hour', 'exertio_framework'),
-            __('day', 'exertio_framework'),
-            __('month', 'exertio_framework'),
-            __('year', 'exertio_framework')
+            __('heure', 'exertio_framework'),
+            __('jour', 'exertio_framework'),
+            __('mois', 'exertio_framework'),
+            __('année', 'exertio_framework')
         );
         $length = array("60", "60", "24", "30", "12", "10");
 
@@ -874,11 +874,11 @@ if ( ! function_exists( 'time_ago_function' ) )
             $diff = round($diff);
 			if($diff == 1)
 			{
-				return $diff . " " . $strTime[$i] . __(' ago', 'exertio_framework');
+				return __(' Il y a ', 'exertio_framework').$diff . " " . $strTime[$i] ;
 			}
 			else
 			{
-				return $diff . " " . $strTime[$i] . __('s ago', 'exertio_framework');
+				return  __('Il y a ', 'exertio_framework'). $diff . " " . $strTime[$i];
 			}
         }	
 	}
@@ -925,12 +925,12 @@ if ( ! function_exists( 'history_msg_atatchment_download' ) )
 			$zip->addFromString(basename( $file_url ), $filedata);
 			}
 			$zip->close();
-			$return = array('message' => esc_html__( 'Generating Attachments to Download. Please wait...', 'exertio_framework' ), 'attachments'=>$gen_download_link);
+			$return = array('message' => esc_html__( 'Génération des fichiers à télécharger. Veuillez attendre un moment...', 'exertio_framework' ), 'attachments'=>$gen_download_link);
 			wp_send_json_success($return);
 		}
 		else
 		{
-			$return = array('message' => esc_html__( 'Error!!! attachment is not available', 'exertio_framework' ));
+			$return = array('message' => esc_html__( 'Erreur!!! le fichier n\'est pas disponible', 'exertio_framework' ));
 			wp_send_json_error($return);	
 		}
 			
@@ -962,7 +962,7 @@ if ( ! function_exists( 'fl_project_status_rating' ) )
 		{
 			if($status == '' || $pid == '')
 			{
-				$return = array('message' => esc_html__('Please select project status first','exertio_framework'));
+				$return = array('message' => esc_html__('Veuillez d\'abord sélectionner le statut du projet','exertio_framework'));
 				wp_send_json_error($return);
 			}
 			else if($status == 'complete')
@@ -1010,7 +1010,7 @@ if ( ! function_exists( 'fl_project_status_rating' ) )
 					
 					if (is_wp_error($result))
 					{
-						$return = array('message' => esc_html__( 'can not mark as complete!!! Please contact admin', 'exertio_framework' ));
+						$return = array('message' => esc_html__( 'ne peut pas marquer comme terminé !!! Veuillez contacter l\'équipe de Dezon', 'exertio_framework' ));
 						wp_send_json_error($return);
 					}
 					else
@@ -1057,12 +1057,12 @@ if ( ! function_exists( 'fl_project_status_rating' ) )
 								{
 									fl_project_completed_employer_email($post_author,$pid);
 								}
-								$return = array('message' => esc_html__( 'Marked as completed', 'exertio_framework' ), 'page' => $redirect_page);
+								$return = array('message' => esc_html__( 'Marqué comme terminé', 'exertio_framework' ), 'page' => $redirect_page);
 								wp_send_json_success($return);
 							}
 							else
 							{
-								$return = array('message' => esc_html__( 'Error!!! project log not updated', 'exertio_framework' ));
+								$return = array('message' => esc_html__( 'Erreur!!! journal du projet non mis à jour', 'exertio_framework' ));
 								wp_send_json_error($return);	
 							}
 						}
@@ -1070,7 +1070,7 @@ if ( ! function_exists( 'fl_project_status_rating' ) )
 				}
 				else
 				{
-					$return = array('message' => esc_html__( 'Error!!! Project completion not updated.', 'exertio_framework' ));
+					$return = array('message' => esc_html__( 'Erreur!!! Evolution du projet non mis à jour.', 'exertio_framework' ));
 					wp_send_json_error($return);	
 				}
 			}
@@ -1090,7 +1090,7 @@ if ( ! function_exists( 'fl_project_status_rating' ) )
 					
 					if (is_wp_error($result))
 					{
-						$return = array('message' => esc_html__( 'can not mark as canceled!!! Please contact admin', 'exertio_framework' ));
+						$return = array('message' => esc_html__( 'ne peut pas marquer comme refusé !!! Veuillez contacter l\'équipe de Dezon', 'exertio_framework' ));
 						wp_send_json_error($return);
 					}
 					else
@@ -1111,19 +1111,19 @@ if ( ! function_exists( 'fl_project_status_rating' ) )
 						
 						$redirect_page = get_the_permalink($exertio_theme_options['user_dashboard_page']).'?ext=canceled-projects';
 		
-						$return = array('message' => esc_html__( 'Project canceled', 'exertio_framework' ), 'page' => $redirect_page);
+						$return = array('message' => esc_html__( 'Projet refusé', 'exertio_framework' ), 'page' => $redirect_page);
 						wp_send_json_success($return);
 					}
 			}
 			else
 			{
-				$return = array('message' => esc_html__( 'Project Status Error.', 'exertio_framework' ));
+				$return = array('message' => esc_html__( 'Erreur d\'état du projet', 'exertio_framework' ));
 				wp_send_json_error($return);	
 			}
 		}
 		else
 		{
-			$return = array('message' => esc_html__( 'Error!!! please contact Admin', 'exertio_framework' ));
+			$return = array('message' => esc_html__( 'Erreur!!! veuillez contacter l\'équipe de Dezon', 'exertio_framework' ));
 			wp_send_json_error($return);	
 		}
 	}
@@ -1158,7 +1158,7 @@ if ( ! function_exists( 'fl_simple_cancel_project' ) ) {
 			
 			if (is_wp_error($result))
 			{
-				$return = array('message' => esc_html__( 'can not mark as canceled!!! Please contact admin', 'exertio_framework' ));
+				$return = array('message' => esc_html__( 'ne peut pas marquer comme refusé !!! Veuillez contacter l\'équipe de Dezon', 'exertio_framework' ));
 				wp_send_json_error($return);
 			}
 			else
@@ -1168,13 +1168,13 @@ if ( ! function_exists( 'fl_simple_cancel_project' ) ) {
 				
 				$redirect_page = get_the_permalink($exertio_theme_options['user_dashboard_page']).'?ext=canceled-projects';
 
-				$return = array('message' => esc_html__( 'Project canceled', 'exertio_framework' ), 'page' => $redirect_page);
+				$return = array('message' => esc_html__( 'Projet refusé', 'exertio_framework' ), 'page' => $redirect_page);
 				wp_send_json_success($return);
 			}
 		}
 		else
 		{
-			$return = array('message' => esc_html__( 'Project ID error', 'exertio_framework' ));
+			$return = array('message' => esc_html__( 'Erreur de l\'ID du projet', 'exertio_framework' ));
 			wp_send_json_error($return);	
 		}
 	
@@ -1273,20 +1273,20 @@ if ( ! function_exists( 'fl_mark_fav_project' ) ) {
 		{
 			if( get_user_meta( get_current_user_id(), '_pro_fav_id_'.$pid, true ) == $pid )
 			{
-				$return = array('message' => esc_html__( 'Already in your saved projects', 'exertio_framework' ));
+				$return = array('message' => esc_html__( 'Déjà dans les projets enregistrés', 'exertio_framework' ));
 				wp_send_json_error($return);
 			}
 			else
 			{
 				update_user_meta( get_current_user_id(), '_pro_fav_id_' . $pid, $pid );
 				
-				$return = array('message' => esc_html__( 'Added to your saved projects', 'exertio_framework' ));
+				$return = array('message' => esc_html__( 'Ajouté aux projets enregistrés', 'exertio_framework' ));
 				wp_send_json_success($return);
 			}
 		}
 		else
 		{
-			$return = array('message' => esc_html__( 'Project ID error', 'exertio_framework' ));
+			$return = array('message' => esc_html__( 'Erreur de l\'ID du projet', 'exertio_framework' ));
 			wp_send_json_error($return);	
 		}
 
@@ -1304,12 +1304,12 @@ if ( ! function_exists( 'fl_delete_fav_project' ) )
 		$pid		=	$_POST['post_id'];
 		if ( delete_user_meta(get_current_user_id(), '_pro_fav_id_'.$pid) )
 		{
-			$return = array('message' => esc_html__( 'Removed from saved projects', 'exertio_framework' ));
+			$return = array('message' => esc_html__( 'Supprimer des projets enregistrés', 'exertio_framework' ));
 			wp_send_json_success($return);
 		}
 		else
 		{
-			$return = array('message' => esc_html__( 'There is some problem, please try again later', 'exertio_framework' ));
+			$return = array('message' => esc_html__( 'Il y a un problème, veuillez réessayer plus tard', 'exertio_framework' ));
 			wp_send_json_error($return);
 		}
 	}
@@ -1330,20 +1330,20 @@ if ( ! function_exists( 'fl_mark_fav_services' ) ) {
 
 			if( get_user_meta( get_current_user_id(), '_service_fav_id_'.$pid, true ) == $pid )
 			{
-				$return = array('message' => esc_html__( 'Already in your saved services', 'exertio_framework' ));
+				$return = array('message' => esc_html__( 'Déjà dans les jobs enregistrés', 'exertio_framework' ));
 				wp_send_json_error($return);
 			}
 			else
 			{
 				update_user_meta( get_current_user_id(), '_service_fav_id_' . $pid, $pid );
 				
-				$return = array('message' => esc_html__( 'Added to your saved services', 'exertio_framework' ));
+				$return = array('message' => esc_html__( 'Ajouté aux jobs enregistrés', 'exertio_framework' ));
 				wp_send_json_success($return);
 			}
 		}
 		else
 		{
-			$return = array('message' => esc_html__( 'Service ID error', 'exertio_framework' ));
+			$return = array('message' => esc_html__( 'Erreur de l\'ID du job', 'exertio_framework' ));
 			wp_send_json_error($return);	
 		}
 	
@@ -1362,12 +1362,12 @@ if ( ! function_exists( 'fl_delete_saved_services' ) )
 		$pid		=	$_POST['post_id'];
 		if ( delete_user_meta(get_current_user_id(), '_service_fav_id_'.$pid) )
 		{
-			$return = array('message' => esc_html__( 'Removed from saved services', 'exertio_framework' ));
+			$return = array('message' => esc_html__( 'Supprimer des jobs enregistrés', 'exertio_framework' ));
 			wp_send_json_success($return);
 		}
 		else
 		{
-			$return = array('message' => esc_html__( 'There is some problem, please try again later', 'exertio_framework' ));
+			$return = array('message' => esc_html__( 'Il y a un problème, veuillez réessayer plus tard', 'exertio_framework' ));
 			wp_send_json_error($return);
 		}
 	}
@@ -1390,7 +1390,7 @@ if ( ! function_exists( 'fl_purchase_services' ) )
 
 		if(isset($service_status) && $service_status == 'expired')
 		{
-			$return = array('message' => esc_html__( 'This service has been expired', 'exertio_framework' ));
+			$return = array('message' => esc_html__( 'Ce job est expiré', 'exertio_framework' ));
 			wp_send_json_error($return);
 		}
 		parse_str($_POST['purchase_data'], $params);

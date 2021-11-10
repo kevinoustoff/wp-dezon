@@ -36,7 +36,7 @@ if(is_page_template( 'page-profile.php' ))
                   </div>
                   <div class="fr-list-details">
                     <ul>
-                      <li><a href="<?php echo home_url( '/' ); ?>"><?php echo esc_html__('Home', 'exertio_theme' ); ?></a></li>
+                      <li><a href="<?php echo home_url( '/' ); ?>"><?php echo esc_html__('Accueil', 'exertio_theme' ); ?></a></li>
                       <li><a href="javascript:void(0);"><?php echo exertio_breadcrumb(); ?></a></li>
                     </ul>
                   </div>

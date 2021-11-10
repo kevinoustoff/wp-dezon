@@ -26,7 +26,7 @@ defined( 'ABSPATH' ) || exit; ?>
         if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
             <div class="return-to-shop retutn-shopz">
                 <a class="button wc-backward btn btn-theme" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
-                    <?php esc_html_e( 'Return to shop', 'exertio_theme' ); ?>
+                    <?php esc_html_e( 'Continuer les achats', 'exertio_theme' ); ?>
                 </a>
             </div>
         <?php endif; ?>

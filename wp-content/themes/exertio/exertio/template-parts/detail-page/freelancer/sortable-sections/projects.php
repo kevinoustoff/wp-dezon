@@ -12,7 +12,8 @@ if(!empty($project_jsons))
 		{
 			?>
 			<div class="heading-contents">
-			  <h3><?php echo esc_html($exertio_theme_options['detail_projects_title']); ?></h3>
+			  <h3><?php //echo esc_html($exertio_theme_options['detail_projects_title']); 
+			  echo esc_html('Projets récents');?></h3>
 			</div>
 			<?php
 		}
@@ -25,9 +26,11 @@ if(!empty($project_jsons))
 					$project_img_url = wp_get_attachment_url( $project_json['project_img'] );
 					//$img_thumb = wp_get_attachment_image_src($project_json['project_img'], 'thumbnail');
 		?><li>
+				<?php if(!empty($project_img_url)){ ?>
 					<div  class="fancy-model">
 						<a data-fancybox="portfolio" href="<?php echo esc_url($project_img_url); ?>" data-caption="<span class='project-title'><?php echo esc_html($project_json['project_name']); ?></span> <span><?php echo esc_url($project_json['project_url']); ?></span>" data-wheel="false"> <img class="img-fluid" src="<?php echo esc_url($project_img_url); ?>" alt="<?php esc_attr(get_post_meta($project_json['project_img'], '_wp_attachment_image_alt', TRUE)); ?>"></a>
 					</div>
+				<?php } ?>
 					<div class="figcaption">
 						<h6><a href="<?php echo esc_url($project_json['project_url']); ?>" target="_blank">	<?php echo esc_html($project_json['project_name']); ?></a></h6>
 					</div>

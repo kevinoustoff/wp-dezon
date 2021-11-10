@@ -603,6 +603,7 @@ if ( in_array( 'exertio-elementor/exertio-elementor.php', apply_filters( 'active
 		}
 		else if ( $package_type == 'freelancers' )
 		{
+		  	//print_r($freelancers_packages_list); exit;
 		  foreach ( $freelancers_packages_list as $freelancers_packages_lists )
 		  {
 
@@ -684,7 +685,26 @@ if ( in_array( 'exertio-elementor/exertio-elementor.php', apply_filters( 'active
 				} else {
 				  $freelacner_featured_text = '<i class="fa fa-times"></i>' . __( ' Profile Featured: ', 'exertio_framework' ) ;
 				}
+				/*commission script*/
+				switch ($products_id) {
+					case '637':
+						$commission = 20;
+						break;
+					case '638':
+						$commission = 10;
+						break;
+					case '640':
+						$commission = 5;
+						break;
+					case '2003':
+						$commission = 1;
+						break;
+					default:
+						$commission = 20;
+						break;
+				}
 
+				/*fin script*/
 
 				$color = $featured_tag = $featured_class = '';
 				/*FOR FEATURED TAG*/
@@ -719,7 +739,7 @@ if ( in_array( 'exertio-elementor/exertio-elementor.php', apply_filters( 'active
 												  <li>' . $featured_services_expiry . '</li>
 												  <li>' . $package_expiry . '</li>
 												  <li>' . $freelacner_featured_text . '</li>
-												  
+												  <li><i class="fa fa-money" aria-hidden="true"></i>'.$commission.'% de commission</li>
 												</ul>
 											  </div>
 											</div>

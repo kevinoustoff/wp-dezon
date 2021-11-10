@@ -14,7 +14,10 @@ if($reviews != '')
 		{
 			?>
 			<div class="heading-contents">
-			  <h3><?php echo esc_html($exertio_theme_options['detail_seller_reviews_title']); ?></h3>
+			  <h3><?php //echo esc_html($exertio_theme_options['detail_seller_reviews_title']); 
+			echo esc_html('Commentaires du jobeur'); ?>
+				
+			</h3>
 			</div>
 			<?php
 		}

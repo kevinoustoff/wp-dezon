@@ -14,7 +14,8 @@ if($reviews != '')
 		{
 			?>
 			<div class="heading-contents">
-			  <h3><?php echo esc_html($exertio_theme_options['detail_freelancer_reviews_title']); ?></h3>
+			  <h3><?php //echo esc_html($exertio_theme_options['detail_freelancer_reviews_title']); 
+			  echo esc_html('Ce que pensent les clients de ce jobeur'); ?></h3>
 			</div>
 			<?php
 		}

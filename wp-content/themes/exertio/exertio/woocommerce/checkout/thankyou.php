@@ -30,12 +30,12 @@ defined( 'ABSPATH' ) || exit;
 
                         <?php if ( $order->has_status( 'failed' ) ) : ?>
 
-                            <p class="woocommerce-notice woocommerce-notice--error woocommerce-thankyou-order-failed"><?php esc_html_e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again.', 'exertio_theme' ); ?></p>
+                            <p class="woocommerce-notice woocommerce-notice--error woocommerce-thankyou-order-failed"><?php esc_html_e( 'Malheureusement, votre commande ne peut pas être traitée car la banque/le commerçant d\'origine a refusé votre transaction. Veuillez réessayer votre achat.', 'exertio_theme' ); ?></p>
 
                             <p class="woocommerce-notice woocommerce-notice--error woocommerce-thankyou-order-failed-actions">
-                                <a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" class="button pay"><?php esc_html_e( 'Pay', 'exertio_theme' ); ?></a>
+                                <a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" class="button pay"><?php esc_html_e( 'Payer', 'exertio_theme' ); ?></a>
                                 <?php if ( is_user_logged_in() ) : ?>
-                                    <a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>" class="button pay"><?php esc_html_e( 'My account', 'exertio_theme' ); ?></a>
+                                    <a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>" class="button pay"><?php esc_html_e( 'Mon compte', 'exertio_theme' ); ?></a>
                                 <?php endif; ?>
                             </p>
 
@@ -43,7 +43,7 @@ defined( 'ABSPATH' ) || exit;
                     
                     
 
-                            <p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Thank you. Your order has been received.', 'exertio_theme' ), $order ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+                            <p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Merci. Votre commande a été reçue.', 'exertio_theme' ), $order ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
                     
                     <div class="row">
             <div class="col-md-3 col-xs-12 col-lg-3 col-sm-12 col-12">
@@ -52,7 +52,7 @@ defined( 'ABSPATH' ) || exit;
                         <i class="far fa-paper-plane"></i>
                     </div>
                     <div>
-                        <h5><?php esc_html_e( 'Order number:', 'exertio_theme' ); ?></h5>
+                        <h5><?php esc_html_e( 'Numéro de la commande:', 'exertio_theme' ); ?></h5>
                         <h2><?php echo esc_html($order->get_order_number()); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></h2>
                     </div>
                 </div>
@@ -88,7 +88,7 @@ defined( 'ABSPATH' ) || exit;
                         <i class="fas fa-coins"></i>
                     </div>
                     <div>
-                        <h5><?php esc_html_e( 'Payment method:', 'exertio_theme' ); ?></h5>
+                        <h5><?php esc_html_e( 'Moyen de paiement:', 'exertio_theme' ); ?></h5>
                         <h2><?php echo wp_kses_post( $order->get_payment_method_title() ); ?></h2>
                     </div>
                 </div>
@@ -101,7 +101,7 @@ defined( 'ABSPATH' ) || exit;
 
                     <?php else : ?>
 
-                        <p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Thank you. Your order has been received.', 'exertio_theme' ), null ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+                        <p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Merci. Votre commande a été reçue.', 'exertio_theme' ), null ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 
                     <?php endif; ?>
 

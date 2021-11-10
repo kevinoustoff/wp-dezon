@@ -34,7 +34,7 @@ if ( get_query_var( 'paged' ) ) {
       <div class="d-flex justify-content-between flex-wrap">
         <div class="d-flex align-items-end flex-wrap">
           <div class="mr-md-3 mr-xl-5">
-            <h2><?php echo esc_html__('Options de paiement','exertio_theme'); ?></h2>
+            <h2><?php echo esc_html__('Mes paiements','exertio_theme'); ?></h2>
             <div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
 				<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 				<?php echo exertio_dashboard_extention_return(); ?>
@@ -66,7 +66,7 @@ if ( get_query_var( 'paged' ) ) {
 							$default_payout ='';
 							$default_payout = get_user_meta($current_user_id,'_default_payout_method', true);
 							?>
-                        	<label><?php echo esc_html__('Choisir la méthode de paiement par défaut','exertio_theme'); ?></label>
+                        	<label><?php echo esc_html__('Choisir le moyen de paiement par défaut','exertio_theme'); ?></label>
                         	<select name="default_payout" class="form-control general_select" id="default_payout">
                             	<option value="paypal" <?php if($default_payout == 'paypal'){echo 'selected=selected'; } ?> ><?php echo esc_html__('PayPal','exertio_theme'); ?></option>
                                 <option value="bank" <?php if($default_payout == 'bank'){echo 'selected=selected'; } ?>><?php echo esc_html__('Virement bancaire','exertio_theme'); ?></option>
@@ -240,10 +240,10 @@ if ( get_query_var( 'paged' ) ) {
                 <div class="card-body">
                 <div class="pro-section">
               <div class="pro-box heading-row">
-                <div class="pro-coulmn pro-title"><?php echo esc_html__( 'Montant du paiement', 'exertio_theme' );	 ?> </div>
+                <div class="pro-coulmn pro-title"><?php echo esc_html__( 'Montant', 'exertio_theme' );	 ?> </div>
                 <div class="pro-coulmn"><?php echo esc_html__( 'Date', 'exertio_theme' );	 ?> </div>
-                <div class="pro-coulmn"><?php echo esc_html__( 'Méthode de paiement', 'exertio_theme' ) ?> </div>
-                <div class="pro-coulmn"><?php echo esc_html__( 'Etat', 'exertio_theme' ) ?> </div>
+                <div class="pro-coulmn"><?php echo esc_html__( 'Méthode', 'exertio_theme' ) ?> </div>
+                <div class="pro-coulmn"><?php echo esc_html__( 'Statut', 'exertio_theme' ) ?> </div>
               </div>
 				<?php
 					if ( $the_query->have_posts() )
@@ -277,11 +277,11 @@ if ( get_query_var( 'paged' ) ) {
 										$payout_status = get_post_meta($pid,'_payout_status',true);
 										if($payout_status == 'pending')
 										{
-											echo '<span class="badge btn btn-inverse-warning">'.esc_html($payout_status).'</span>';
+											echo '<span class="badge btn btn-inverse-warning">'.esc_html('en cours').'</span>';
 										}
 										else if($payout_status == 'processed')
 										{
-											echo '<span class="badge btn btn-inverse-success">'.esc_html($payout_status).'</span>';
+											echo '<span class="badge btn btn-inverse-success">'.esc_html('traité').'</span>';
 										}
 									?>
                                 	

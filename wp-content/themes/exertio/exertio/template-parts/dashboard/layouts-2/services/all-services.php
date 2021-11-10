@@ -57,7 +57,7 @@ if ( is_user_logged_in() ) {
       <div class="d-flex justify-content-between flex-wrap">
         <div class="d-flex align-items-end flex-wrap">
           <div class="mr-md-3 mr-xl-5">
-            <h2><?php echo esc_html__('Services validés','exertio_theme'); ?></h2>
+            <h2><?php echo esc_html__('Mes jobs','exertio_theme'); ?></h2>
             <div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
               <p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
               <?php echo exertio_dashboard_extention_return(); ?> </div>
@@ -72,7 +72,7 @@ if ( is_user_logged_in() ) {
         <div class="card-body">
           <div class="pro-section">
             <div class="pro-box heading-row">
-              <div class="pro-coulmn pro-title"> </div>
+              <div class="pro-coulmn pro-title"><?php echo esc_html__( 'Titre', 'exertio_theme' ) ?>  </div>
               <div class="pro-coulmn"><?php echo esc_html__( 'Catégorie', 'exertio_theme' ) ?> </div>
               <div class="pro-coulmn"><?php echo esc_html__( 'Prix / Délai de livraison', 'exertio_theme' ) ?> </div>
               <div class="pro-coulmn"><?php echo esc_html__( 'Options supp.', 'exertio_theme' ) ?> </div>
@@ -154,8 +154,8 @@ if ( is_user_logged_in() ) {
             else {
               ?>
             <div class="nothing-found">
-              <h3><?php echo esc_html__( 'Désolé!! Aucun service ajouté pour le moment', 'exertio_theme' ) ?></h3>
-              <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo esc_html__( 'Nothing found icon', 'exertio_theme' ) ?> "> </div>
+              <h3><?php echo esc_html__( 'Désolé!! Aucun job ajouté pour le moment', 'exertio_theme' ) ?></h3>
+              <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo esc_html__( 'Aucune icone trouvée', 'exertio_theme' ) ?> "> </div>
             <?php
             }
             ?>
