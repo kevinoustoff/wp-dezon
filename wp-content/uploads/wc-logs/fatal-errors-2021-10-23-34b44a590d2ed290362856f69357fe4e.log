@@ -1,0 +1,32 @@
+2021-10-23T11:35:02+00:00 CRITICAL syntax error, unexpected token "-", expecting "(" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 631
+
+2021-10-23T11:35:02+00:00 CRITICAL syntax error, unexpected token "-", expecting "(" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 631
+
+2021-10-23T12:50:48+00:00 CRITICAL Cannot redeclare createProjectData() (previously declared in C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php:523) dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 635
+
+2021-10-23T12:50:48+00:00 CRITICAL Cannot redeclare createProjectData() (previously declared in C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php:523) dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 635
+
+2021-10-23T14:51:06+00:00 CRITICAL Cannot redeclare createProjectData() (previously declared in C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php:605) dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 635
+
+2021-10-23T14:52:16+00:00 CRITICAL Uncaught Error: Object of class WP_Term could not be converted to string in C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php:564
+Stack trace:
+#0 C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php(609): getProjectDurations()
+#1 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(1139): createProjectDataFunc(Object(WP_REST_Request))
+#2 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/projets/cr...', Array, NULL)
+#3 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api.php(354): WP_REST_Server->serve_request('/api/projets/cr...')
+#5 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#6 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#7 C:\xampp\htdocs\wp-dezon\wp-includes\plugin.php(551): WP_Hook->do_action(Array)
+#8 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp.php(388): do_action_ref_array('parse_request', Array)
+#9 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp.php(750): WP->parse_request('')
+#10 C:\xampp\htdocs\wp-dezon\wp-includes\functions.php(1291): WP->main('')
+#11 C:\xampp\htdocs\wp-dezon\wp-blog-header.php(16): wp()
+#12 C:\xampp\htdocs\wp-dezon\index.php(17): require('C:\\xampp\\htdocs...')
+#13 {main}
+  thrown dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php à la ligne 564
+
+2021-10-23T22:20:33+00:00 CRITICAL syntax error, unexpected single-quoted string "freelancer-type", expecting ")" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php à la ligne 678
+
+2021-10-23T22:20:33+00:00 CRITICAL syntax error, unexpected single-quoted string "freelancer-type", expecting ")" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php à la ligne 678
+

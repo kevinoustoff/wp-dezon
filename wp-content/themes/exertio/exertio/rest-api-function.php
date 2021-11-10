@@ -535,6 +535,90 @@
         );
 
     }
+    function getSkills(){
+        $skills_taxonomies = exertio_get_terms('skills');
+
+        $index =0;
+        $skills = [];
+        foreach($skills_taxonomies as $skill_taxonomy){
+            if($skill_taxonomy->parent == 0){
+                $skills[$index]['term_id'] = $skill_taxonomy->term_id;
+                $skills[$index]['name'] = $skill_taxonomy->name;
+
+                $index++;
+            }
+            
+        }
+        
+         return $skills;
+    }
+
+    function getProjectDurations(){
+        $duration_taxonomies = exertio_get_terms('project-duration');
+        $durations = [];
+        $index = 0;
+        foreach($duration_taxonomies as $duration){
+
+            if($duration->parent == 0){
+                $durations[$index]['term_id'] = $duration->term_id;
+                $durations[$index]['name'] = $duration->name;
+
+                $index++;
+            }
+            
+        }
+        return $durations;
+    }
+
+    function getPaymentType(){
+        $payments = [];
+
+        $payments[0]["name"] = "hourly";
+        $payments[0]["name_fr"] = "Par heure";
+        $payments[0]["term_id"] = 1;
+
+        $payments[0]["name"] = "fixed";
+        $payments[0]["name_fr"] = "Fixe";
+        $payments[0]["term_id"] = 1;
+
+        return $payments;
+    }
+    function getProjectCategories(){
+        $category_taxonomies = exertio_get_terms('project-categories');
+        $categories = [];
+        $index = 0;
+        foreach($category_taxonomies as $category){
+
+            if($category->parent == 0){
+                $categories[$index]['term_id'] = $category->term_id;
+                $categories[$index]['name'] = $category->name;
+
+                $index++;
+            }
+            
+        }
+        return $categories;
+    
+    }
+    function createProjectDataFunc(){
+
+		
+
+        $data["locations"] = getLocations();
+        $data["types-freelancers"] = getTypePrestataire();
+        $data["skills-freelancers"] = getSkills();
+        $data["languages-freelancers"] =  getLanguesPrestataires();
+        $data["durations"] =  getProjectDurations();
+        $data["payments"] =  getPaymentType();
+        $data["categories"] = getProjectCategories();
+
+
+        return $data;
+
+
+	}
+
+
 
     function getEnglishLevel() {
         $english_level_taxonomies = exertio_get_terms('freelancer-english-level');
@@ -546,9 +630,9 @@
 
             $index++;
         }
-        return new WP_REST_Response(
-            $levels
-         );
+    
+        $levels;
+         
     }
 
     function getLocations(){
@@ -579,14 +663,19 @@
             }
             
         }
-        return new WP_REST_Response(
-            $locations
-         );
+        return $locations;
+    
 
     }
 
     function getTypePrestataire(){
-        $freelance_taxonomies = exertio_get_terms('freelance-type');
+        $freelance_taxonomies = get_terms(array(
+            'taxonomy' => 'freelancer-type',
+            'orderby'      => 'name',
+			'parent' => 0,
+            'hide_empty' => false
+            
+        ));
 
         $typePrestataires = [];
         $index = 0;
@@ -596,9 +685,9 @@
             $typePrestataires[$index]['name'] = $typePrest->name; 
             $index++;
         }
-        return new WP_REST_Response(
-            $typePrestataires
-         );
+        
+        return $typePrestataires;
+         
     }
 
     function getLanguesPrestataires(){
@@ -611,9 +700,8 @@
 
             $index++;
         }
-        return new WP_REST_Response(
-            $langs
-         );
+        
+        return $langs;
 
     }
 

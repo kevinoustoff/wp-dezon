@@ -628,6 +628,36 @@ function filtersProjects(){
 		die();
 	}
 
+	function createProject(WP_REST_Request $request){
+		$user_id = $request->get_param('user_id');
+		$employer_id = get_user_meta( $user_id, 'employer_id' , true );
+		
+		$my_post = array(
+			'post_title' => $request->get_param('project_name'),
+			'post_status' => 'pending',
+			'post_author' => $user_id,
+			'post_type' => 'projects',
+			'post_content' => $request->get_param('project_description')
+		);
+		$pid = wp_insert_post($my_post);
+
+		if(isset($params['project_level']))
+		{
+			$project_level_terms = array((int)$request->get_param('project_level')); 
+			update_post_meta( $pid, '_project_level', sanitize_text_field($params['project_level']));
+			wp_set_post_terms( $pid, $project_level_terms, 'project-level', false );
+		}
+
+	}
+
+	function createProjectData(WP_REST_Request $request){
+		
+	}
+
+
+
+
+
     
 
 
