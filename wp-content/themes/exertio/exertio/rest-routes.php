@@ -82,6 +82,11 @@ add_action( 'rest_api_init', function () {
 		'methods' => 'POST',
 		'callback' =>  'saveSingleProject',
 	));
+
+	register_rest_route('api','/projets/create/data',array(
+		'methods' => 'GET',
+		'callback' =>  'createProjectDataFunc',
+	));
 	
 
 	register_rest_route('api','/projets/search',array(
