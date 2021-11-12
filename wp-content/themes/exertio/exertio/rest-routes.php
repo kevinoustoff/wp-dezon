@@ -93,6 +93,10 @@ add_action( 'rest_api_init', function () {
 		'methods' => 'GET',
 		'callback' =>  'filtersProjects',
 	));
+	register_rest_route('api','/projets/create',array(
+		'methods' => 'POST',
+		'callback' =>  'createProject',
+	));
 	register_rest_route('api','/delais-livraisons-services',array(
 		'methods' => 'GET',
 		'callback' =>  'listeDelaiLivraisons',
@@ -150,6 +154,7 @@ add_action( 'rest_api_init', function () {
 		'methods' => 'GET',
 		'callback' =>  'checkIfUserHasBeenRevoked',
 	));
+	
   } );
 
 function my_awesome_func( $data ) {

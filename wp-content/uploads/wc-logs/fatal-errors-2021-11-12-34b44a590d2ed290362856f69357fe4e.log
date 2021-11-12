@@ -1,0 +1,146 @@
+2021-11-12T15:21:44+00:00 CRITICAL syntax error, unexpected token "(", expecting identifier or variable or "{" or "$" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 695
+
+2021-11-12T15:47:44+00:00 CRITICAL syntax error, unexpected token ")", expecting variable or "{" or "$" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 745
+
+2021-11-12T15:47:44+00:00 CRITICAL syntax error, unexpected token ")", expecting variable or "{" or "$" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 745
+
+2021-11-12T16:11:10+00:00 CRITICAL Unclosed '{' on line 631 does not match ')' dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 655
+
+2021-11-12T16:11:10+00:00 CRITICAL Unclosed '{' on line 631 does not match ')' dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 655
+
+2021-11-12T16:59:50+00:00 CRITICAL Uncaught TypeError: count(): Argument #1 ($var) must be of type Countable|array, null given in C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php:738
+Stack trace:
+#0 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(1139): createProject(Object(WP_REST_Request))
+#1 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/projets/cr...', Array, NULL)
+#2 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api.php(354): WP_REST_Server->serve_request('/api/projets/cr...')
+#4 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 C:\xampp\htdocs\wp-dezon\wp-includes\plugin.php(551): WP_Hook->do_action(Array)
+#7 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp.php(388): do_action_ref_array('parse_request', Array)
+#8 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp.php(750): WP->parse_request('')
+#9 C:\xampp\htdocs\wp-dezon\wp-includes\functions.php(1291): WP->main('')
+#10 C:\xampp\htdocs\wp-dezon\wp-blog-header.php(16): wp()
+#11 C:\xampp\htdocs\wp-dezon\index.php(17): require('C:\\xampp\\htdocs...')
+#12 {main}
+  thrown dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 738
+
+2021-11-12T17:01:02+00:00 CRITICAL Uncaught TypeError: count(): Argument #1 ($var) must be of type Countable|array, null given in C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php:738
+Stack trace:
+#0 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(1139): createProject(Object(WP_REST_Request))
+#1 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/projets/cr...', Array, NULL)
+#2 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api.php(354): WP_REST_Server->serve_request('/api/projets/cr...')
+#4 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 C:\xampp\htdocs\wp-dezon\wp-includes\plugin.php(551): WP_Hook->do_action(Array)
+#7 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp.php(388): do_action_ref_array('parse_request', Array)
+#8 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp.php(750): WP->parse_request('')
+#9 C:\xampp\htdocs\wp-dezon\wp-includes\functions.php(1291): WP->main('')
+#10 C:\xampp\htdocs\wp-dezon\wp-blog-header.php(16): wp()
+#11 C:\xampp\htdocs\wp-dezon\index.php(17): require('C:\\xampp\\htdocs...')
+#12 {main}
+  thrown dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 738
+
+2021-11-12T17:02:35+00:00 CRITICAL Uncaught TypeError: count(): Argument #1 ($var) must be of type Countable|array, null given in C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php:738
+Stack trace:
+#0 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(1139): createProject(Object(WP_REST_Request))
+#1 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/projets/cr...', Array, NULL)
+#2 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api.php(354): WP_REST_Server->serve_request('/api/projets/cr...')
+#4 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 C:\xampp\htdocs\wp-dezon\wp-includes\plugin.php(551): WP_Hook->do_action(Array)
+#7 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp.php(388): do_action_ref_array('parse_request', Array)
+#8 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp.php(750): WP->parse_request('')
+#9 C:\xampp\htdocs\wp-dezon\wp-includes\functions.php(1291): WP->main('')
+#10 C:\xampp\htdocs\wp-dezon\wp-blog-header.php(16): wp()
+#11 C:\xampp\htdocs\wp-dezon\index.php(17): require('C:\\xampp\\htdocs...')
+#12 {main}
+  thrown dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 738
+
+2021-11-12T17:04:19+00:00 CRITICAL Uncaught TypeError: count(): Argument #1 ($var) must be of type Countable|array, null given in C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php:738
+Stack trace:
+#0 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(1139): createProject(Object(WP_REST_Request))
+#1 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/projets/cr...', Array, NULL)
+#2 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api.php(354): WP_REST_Server->serve_request('/api/projets/cr...')
+#4 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 C:\xampp\htdocs\wp-dezon\wp-includes\plugin.php(551): WP_Hook->do_action(Array)
+#7 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp.php(388): do_action_ref_array('parse_request', Array)
+#8 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp.php(750): WP->parse_request('')
+#9 C:\xampp\htdocs\wp-dezon\wp-includes\functions.php(1291): WP->main('')
+#10 C:\xampp\htdocs\wp-dezon\wp-blog-header.php(16): wp()
+#11 C:\xampp\htdocs\wp-dezon\index.php(17): require('C:\\xampp\\htdocs...')
+#12 {main}
+  thrown dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 738
+
+2021-11-12T17:04:45+00:00 CRITICAL Uncaught TypeError: count(): Argument #1 ($var) must be of type Countable|array, null given in C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php:738
+Stack trace:
+#0 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(1139): createProject(Object(WP_REST_Request))
+#1 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(985): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/api/projets/cr...', Array, NULL)
+#2 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api\class-wp-rest-server.php(412): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 C:\xampp\htdocs\wp-dezon\wp-includes\rest-api.php(354): WP_REST_Server->serve_request('/api/projets/cr...')
+#4 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp-hook.php(292): rest_api_loaded(Object(WP))
+#5 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#6 C:\xampp\htdocs\wp-dezon\wp-includes\plugin.php(551): WP_Hook->do_action(Array)
+#7 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp.php(388): do_action_ref_array('parse_request', Array)
+#8 C:\xampp\htdocs\wp-dezon\wp-includes\class-wp.php(750): WP->parse_request('')
+#9 C:\xampp\htdocs\wp-dezon\wp-includes\functions.php(1291): WP->main('')
+#10 C:\xampp\htdocs\wp-dezon\wp-blog-header.php(16): wp()
+#11 C:\xampp\htdocs\wp-dezon\index.php(17): require('C:\\xampp\\htdocs...')
+#12 {main}
+  thrown dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 738
+
+2021-11-12T17:23:10+00:00 CRITICAL Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\template-parts\dashboard\layouts\project\create-project.php:509
+Stack trace:
+#0 C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\template-parts\dashboard\layouts\project\create-project.php(509): explode(',', Array)
+#1 C:\xampp\htdocs\wp-dezon\wp-includes\template.php(732): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\wp-dezon\wp-includes\template.php(676): load_template('C:\\xampp\\htdocs...', false, Array)
+#3 C:\xampp\htdocs\wp-dezon\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#4 C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\template-parts\dashboard\redirection.php(48): get_template_part('template-parts/...')
+#5 C:\xampp\htdocs\wp-dezon\wp-includes\template.php(732): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\wp-dezon\wp-includes\template.php(676): load_template('C:\\xampp\\htdocs...', false, Array)
+#7 C:\xampp\htdocs\wp-dezon\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#8 C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\page-profile.php(89): get_template_part('template-parts/...')
+#9 C:\xampp\htdocs\wp-dezon\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\wp-dezon\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\wp-dezon\index.php(17): require('C:\\xampp\\htdocs...')
+#12 {main}
+  thrown dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\template-parts\dashboard\layouts\project\create-project.php à la ligne 509
+
+2021-11-12T17:42:11+00:00 CRITICAL Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\single-projects.php:184
+Stack trace:
+#0 C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\single-projects.php(184): explode(',', Array)
+#1 C:\xampp\htdocs\wp-dezon\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\wp-dezon\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\wp-dezon\index.php(17): require('C:\\xampp\\htdocs...')
+#4 {main}
+  thrown dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\single-projects.php à la ligne 184
+
+2021-11-12T17:52:46+00:00 CRITICAL Uncaught TypeError: explode(): Argument #2 ($string) must be of type string, array given in C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\single-projects.php:184
+Stack trace:
+#0 C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\single-projects.php(184): explode(',', Array)
+#1 C:\xampp\htdocs\wp-dezon\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\wp-dezon\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\wp-dezon\index.php(17): require('C:\\xampp\\htdocs...')
+#4 {main}
+  thrown dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\single-projects.php à la ligne 184
+
+2021-11-12T18:21:55+00:00 CRITICAL syntax error, unexpected identifier "update_post_meta", expecting "(" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 782
+
+2021-11-12T18:21:55+00:00 CRITICAL syntax error, unexpected identifier "update_post_meta", expecting "(" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 782
+
+2021-11-12T18:28:29+00:00 CRITICAL syntax error, unexpected token ")" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 656
+
+2021-11-12T18:28:29+00:00 CRITICAL syntax error, unexpected token ")" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 656
+
+2021-11-12T18:45:27+00:00 CRITICAL syntax error, unexpected token "]" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php à la ligne 580
+
+2021-11-12T18:45:27+00:00 CRITICAL syntax error, unexpected token "]" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php à la ligne 580
+
+2021-11-12T18:45:28+00:00 CRITICAL syntax error, unexpected token "]" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php à la ligne 580
+
+2021-11-12T18:45:30+00:00 CRITICAL syntax error, unexpected token "]" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-function.php à la ligne 580
+

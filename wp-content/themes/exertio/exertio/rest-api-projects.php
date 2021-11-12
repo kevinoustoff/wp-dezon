@@ -629,25 +629,178 @@ function filtersProjects(){
 	}
 
 	function createProject(WP_REST_Request $request){
+		global $exertio_theme_options;
 		$user_id = $request->get_param('user_id');
 		$employer_id = get_user_meta( $user_id, 'employer_id' , true );
 		
 		$my_post = array(
 			'post_title' => $request->get_param('project_name'),
-			'post_status' => 'pending',
+			'post_status' => 'publish',
 			'post_author' => $user_id,
 			'post_type' => 'projects',
 			'post_content' => $request->get_param('project_description')
 		);
 		$pid = wp_insert_post($my_post);
-
-		if(isset($params['project_level']))
+		if($request->get_param('freelancer_type'))
+		{
+			$type_terms = array((int)$request->get_param('freelancer_type')); 
+			update_post_meta( $pid, '_project_freelancer_type', sanitize_text_field($request->get_param('freelancer_type')));
+			wp_set_post_terms( $pid, $type_terms, 'freelancer-type', false );
+		}
+		if($request->get_param('project_level')  )
 		{
 			$project_level_terms = array((int)$request->get_param('project_level')); 
-			update_post_meta( $pid, '_project_level', sanitize_text_field($params['project_level']));
+			update_post_meta( $pid, '_project_level', sanitize_text_field($request->get_param('project_level')));
 			wp_set_post_terms( $pid, $project_level_terms, 'project-level', false );
 		}
+		if($request->get_param('project_category') )
+		{
+			update_post_meta( $pid, '_project_category', sanitize_text_field($request->get_param('project_category')));
+			set_hierarchical_terms('project-categories', $request->get_param('project_category'), $pid);
+		}
+		if($request->get_param('project_duration'))
+		{
 
+			$duration_terms = array((int)$request->get_param('project_duration')); 
+			update_post_meta( $pid, '_project_duration', sanitize_text_field($request->get_param('project_duration')));
+			wp_set_post_terms( $pid, $duration_terms, 'project-duration', false );
+		}
+		if($request->get_param('project_address') )
+		{
+			update_post_meta( $pid, '_project_address', sanitize_text_field($request->get_param('project_address')));
+		}
+		if($request->get_param('project_type') )
+		{
+			update_post_meta( $pid, '_project_type', sanitize_text_field($request->get_param('project_type')));
+		}
+		if($request->get_param('project_type') == 'fixed')
+		{
+			if($request->get_param('project_cost'))
+			{
+				update_post_meta( $pid, '_project_cost', sanitize_text_field($request->get_param('project_cost')));
+
+			}
+		}
+		else if($request->get_param('project_type') == 'hourly')
+		{
+			if($request->get_param('project_cost_hourly') !==null && $request->get_param('estimated_hours'))
+			{
+				update_post_meta( $pid, '_project_cost', sanitize_text_field($request->get_param('project_cost_hourly')));
+				update_post_meta( $pid, '_estimated_hours', sanitize_text_field($request->get_param('estimated_hours')));
+			}
+		}
+		if($request->get_param('project_skills') !==null)
+		{
+			$skills_arr = [];
+			$skills_arr = json_decode($request->get_param("project_skills")) ;
+			$integerIDs = array_map('intval', (array)$skills_arr);
+			$integerIDs = array_unique($integerIDs);
+			wp_set_post_terms( $pid, $integerIDs, 'skills' );
+		}
+		if($request->get_param('project_languages'))
+		{
+			$languages_arr = [];
+			$languages_arr = json_decode($request->get_param("project_languages")) ;
+			$integerIDs = array_map('intval', (array)$languages_arr);
+			$integerIDs = array_unique($integerIDs);
+			wp_set_post_terms( $pid, $integerIDs, 'languages' );
+		}
+		if($request->get_param('project_location_remote') ===1)
+		{
+			update_post_meta( $pid, '_project_location_remote', 1);
+		}
+		else
+		{
+			update_post_meta( $pid, '_project_location_remote', 0);
+			if($request->get_param('project_location'))
+			{
+				update_post_meta( $pid, '_project_location', sanitize_text_field($request->get_param('project_location')));
+				set_hierarchical_terms('locations', $request->get_param('project_location'), $pid);
+			}
+		}
+		if($request->get_param('project_lat'))
+		{
+			update_post_meta( $pid, '_project_latitude', sanitize_text_field($request->get_param('project_lat')));
+		}
+		if($request->get_param('project_long'))
+		{
+			update_post_meta( $pid, '_project_longitude', sanitize_text_field($request->get_param('project_long')));
+		}
+		$files = $request->get_file_params();
+		update_user_meta( $request->get_param("user_id"), '_processing_post_id', '' );
+		update_post_meta( $pid, '_project_status', 'active');
+
+		require_once( ABSPATH . 'wp-admin/includes/image.php' );
+    	require_once( ABSPATH . 'wp-admin/includes/file.php' );
+    	require_once( ABSPATH . 'wp-admin/includes/media.php' );
+		
+		/*print_r($files);
+		die();*/
+		if(count($files)){
+
+		}
+		$attachment_ids = [];
+		foreach($files as $key =>$value){
+			if($value["name"] !== null){
+			    $file = array(
+					'name' => $value['name'],
+					'type' => $value['type'],
+					'tmp_name' => $value['tmp_name'],
+					'error' => $value['error'],
+					'size' => $value['size']
+				);
+				$_FILES = array ("emp_profile_picture" => $file);
+
+				$image_size = $exertio_theme_options['user_attachment_size']*2;
+
+				if($file['size']/1000 > $image_size){
+					return new WP_Error(
+						500,
+						'La taille maximale du fichier'.$image_size.' KB',
+						'no'
+					);
+
+				}
+				
+				update_post_meta( $pid, '_project_attachment_show', 'no');
+				foreach ($_FILES as $file => $array) 
+				{       
+					update_post_meta( $pid, '_project_attachment_show', 'yes');       
+					
+					/*if($imgcount>=$condition_img){ break; }*/ 
+					$attach_id = media_handle_upload( $file, $pid );
+					array_push($attachment_ids, $attach_id);
+				
+					$image_link = wp_get_attachment_image_src( $attach_id, 'thumbnail' );
+					
+				}
+				update_post_meta( $pid, '_project_is_featured', 0);
+
+				//$attach_id = media_handle_upload($file, )
+
+				foreach($attachment_ids as $attached_file_id){
+					update_post_meta( $pid, '_project_attachment_ids', $attached_file_id);
+
+				}
+				
+
+				
+
+
+			}
+			return new WP_REST_RESPONSE(
+				"addd"
+
+			);
+			//die();
+		}
+
+
+
+
+
+
+		
 	}
 
 	function createProjectData(WP_REST_Request $request){
