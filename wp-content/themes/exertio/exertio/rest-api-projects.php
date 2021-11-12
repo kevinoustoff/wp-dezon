@@ -789,7 +789,7 @@ function filtersProjects(){
 
 			}
 			return new WP_REST_RESPONSE(
-				"addd"
+				["message" => "success"]
 
 			);
 			//die();
