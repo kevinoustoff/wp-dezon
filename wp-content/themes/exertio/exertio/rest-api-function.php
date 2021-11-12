@@ -577,9 +577,9 @@
         $payments[0]["name_fr"] = "Par heure";
         $payments[0]["term_id"] = 1;
 
-        $payments[0]["name"] = "fixed";
-        $payments[0]["name_fr"] = "Fixe";
-        $payments[0]["term_id"] = 1;
+        $payments[1]["name"] = "fixed";
+        $payments[1]["name_fr"] = "Fixe";
+        $payments[1]["term_id"] = 2;
 
         return $payments;
     }

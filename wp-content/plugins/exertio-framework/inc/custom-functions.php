@@ -783,8 +783,8 @@ if ( ! function_exists( 'gen_atatchment_uploader' ) )
 				} 
 			}
 			
-			$attachment_idss = array_filter( $attachment_ids  );
-			$attachment_idss =  implode( ',', $attachment_idss );
+			$attachment_idss = array_filter( $attachment_ids );
+			$attachment_idss =  implode( ',', $attachment_idss);
 			   
 		} 
 		//if($exist_data_count < $condition_img)
