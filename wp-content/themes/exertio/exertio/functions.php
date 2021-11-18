@@ -469,3 +469,39 @@ function new_mail_from_name($old)
 {  
     return 'Dezon';
 }
+/*fin code mail*/
+ /**
+ Remove all possible fields
+ **/
+function wc_remove_checkout_fields( $fields ) {
+
+    // Billing fields
+    unset( $fields['billing']['billing_email'] );
+    //unset( $fields['billing']['billing_address_1'] );
+    unset( $fields['billing']['billing_address_2'] );
+    unset( $fields['billing']['billing_postcode'] );
+    unset( $fields['billing']['billing_state'] );
+
+    // Shipping fields
+    //unset( $fields['shipping']['shipping_address_1'] );
+    unset( $fields['shipping']['shipping_address_2'] );
+    unset( $fields['shipping']['shipping_postcode'] );
+
+    // Order fields
+    unset( $fields['order']['order_comments'] );
+
+    return $fields;
+}
+add_filter( 'woocommerce_checkout_fields', 'wc_remove_checkout_fields' );
+/*Change input field labels and placeholders*/
+add_filter('woocommerce_checkout_fields', 'custom_override_checkout_fields');
+function custom_override_checkout_fields($fields)
+ {
+ //unset($fields['billing']['billing_address_2']);
+ $fields['billing']['billing_country']['placeholder'] = 'Sélectionnez votre pays';
+ $fields['billing']['billing_country']['label'] = 'Pays';
+ $fields['billing']['billing_address_1']['placeholder'] = 'Saisir votre adresse ici';
+ $fields['billing']['billing_address_1']['label'] = 'Quartier';
+ return $fields;
+ }
+/*fin code labels placeholders*/

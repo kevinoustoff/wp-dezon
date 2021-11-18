@@ -108,16 +108,7 @@ $start_from = ($pageno-1) * $limit;
                                             <span class="service_start_date"> <?php echo esc_html__( 'Commencé ce ', 'exertio_theme' ).' '.esc_html(date("d/m/Y", strtotime($results->timestamp))); ?></span>
                                         </div>
                                         <div class="pro-coulmn">
-                      <?php
-												if( fl_framework_get_options('whizzchat_service_option') == true)
-												{
-													if(in_array('whizz-chat/whizz-chat.php', apply_filters('active_plugins', get_option('active_plugins'))))
-													{
-													?>
-														
 											<?php
-													}
-												}
 												if( fl_framework_get_options('turn_services_messaging') == true)
 												{
 													?>

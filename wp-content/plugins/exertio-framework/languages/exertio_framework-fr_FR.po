@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "Project-Id-Version: Exertio Framework\n"
 "POT-Creation-Date: 2021-03-12 13:16+0500\n"
-"PO-Revision-Date: 2021-11-09 15:42+0000\n"
+"PO-Revision-Date: 2021-11-11 09:28+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
@@ -109,11 +109,11 @@ msgstr "Expiration des services sponsorisés"
 
 #: inc/utilities.php:1963
 msgid " file size:"
-msgstr ""
+msgstr "taille du fichier:"
 
 #: plugin-files/exertio-widgets/exertio-widgets.php:1598
 msgid " hourly"
-msgstr ""
+msgstr "par heure"
 
 #: inc/custom-functions.php:2006
 msgid " hours total will be  "

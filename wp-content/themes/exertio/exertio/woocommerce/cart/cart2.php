@@ -144,6 +144,22 @@ do_action( 'woocommerce_before_cart' ); ?>
 					?>
 					<?php do_action( 'woocommerce_cart_contents' ); ?>
 					<div class="row">
+						<?php if ( wc_coupons_enabled() ) : ?>
+							<div class="col-md-6 mb-3">
+								<div class="<?php echo esc_attr($margin);?> input-group">
+									<input type="text" name="coupon_code" id="coupon_code" class="form-control" placeholder="<?php echo esc_attr__( 'Code coupon', 'exertio_theme' ); ?>">
+									<div class="input-group-append">
+										<button type="submit" class="btn btn-outline-secondary" name="apply_coupon"><?php echo esc_html__( 'Valider', 'exertio_theme' ); ?></button>
+									</div>
+									<?php do_action( 'woocommerce_cart_coupon' ); ?>
+								</div>
+							</div>
+						<?php endif; ?>
+						<div class="prop-up-cart col-md-6">
+							<button type="submit" class="btn btn-theme btn-block" name="update_cart" value="<?php echo esc_attr__( 'Modifier', 'exertio_theme' ); ?>">
+								<?php echo esc_html__( 'Modifier', 'exertio_theme' ); ?>
+							</button>
+						</div>
 						<?php do_action( 'woocommerce_cart_actions' ); ?>
 					</div>
 					<?php do_action( 'woocommerce_after_cart_contents' ); ?>

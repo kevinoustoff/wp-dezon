@@ -257,6 +257,7 @@ if(!isset($_GET['pid']))
 									}
 									?>
 								</div>
+								
 							<?php
 							}
 							if(fl_framework_get_options('project_level') == 3)
@@ -294,6 +295,7 @@ if(!isset($_GET['pid']))
 								}
 								?>
 							</div>
+							
 							<?php
 							}
 							if(fl_framework_get_options('project_english_level') == 3)
@@ -361,20 +363,27 @@ if(!isset($_GET['pid']))
 										}
 
 									?>
-									<span class="remote-location-box">
-										<div class="pretty p-icon p-thick p-curve">
-											<input type="checkbox" name="project_location_remote" id="project_location_remote" <?php echo wp_return_echo($remote_selected); ?>/>
-											<div class="state p-warning"><i class="icon fa fa-check"></i>
-												<label></label>
-											</div>
-										</div>
-										<p> <?php echo esc_html__('Sélectionnez ce champ pour une localisation distante','exertio_theme'); ?></p>
-									</span>
 								 </div>
 								<?php
 							}
 							?>
 						  </div>
+						  <div class="form-row">
+							  <div class="form-group col-md-6">
+								  <label><?php echo esc_html__(' Date début','exertio_theme'); ?></label>
+								  <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
+									    <input class="form-control" type="text" name="date_debut" readonly />
+									    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+									</div>
+								</div>
+								<div class="form-group col-md-6">
+								  <label><?php echo esc_html__(' Date fin','exertio_theme'); ?></label>
+								  <div id="datepicker2" class="input-group date" data-date-format="mm-dd-yyyy">
+									    <input class="form-control" type="text" name="date_fin" readonly />
+									    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+									</div>
+								</div>
+							</div>
 						  <?php
 							if(fl_framework_get_options('project_skills') == 3)
 							{
@@ -727,20 +736,7 @@ if(!isset($_GET['pid']))
 												<p><?php echo esc_html(fl_framework_get_options('mark_featured_desc'));  ?></p>
 												<?php
 											}
-											else
-											{
-												?>
-												<div class="alert alert-warning fade show" role="alert">
-													<div class="alert-icon"><i class="fal fa-exclamation-triangle"></i></div>
-													<div class="alert-text"><?php echo esc_html__('Achetez un abonnement pour gagner plus de visibilité auprès de nos prestataires.','exertio_theme'); ?></div>
-													<div class="alert-close">
-														<button type="button" class="btn btn-dark">
-															<?php echo esc_html__('Acheter','exertio_theme'); ?>
-														</button>
-													</div>
-												</div>
-												<?php
-											}
+											
 										}
 										else if($is_featured == 1)
 										{
