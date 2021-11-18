@@ -632,7 +632,7 @@ function filtersProjects(){
 		global $exertio_theme_options;
 		$user_id = $request->get_param('user_id');
 		$employer_id = get_user_meta( $user_id, 'employer_id' , true );
-		
+	
 		$my_post = array(
 			'post_title' => $request->get_param('project_name'),
 			'post_status' => 'publish',
@@ -669,20 +669,20 @@ function filtersProjects(){
 		{
 			update_post_meta( $pid, '_project_address', sanitize_text_field($request->get_param('project_address')));
 		}
-		if($request->get_param('project_type') )
+		
+
+		if($request->get_param('project_type') == "2" )
 		{
-			update_post_meta( $pid, '_project_type', sanitize_text_field($request->get_param('project_type')));
-		}
-		if($request->get_param('project_type') == 'fixed')
-		{
+			update_post_meta( $pid, '_project_type', "fixed");
 			if($request->get_param('project_cost'))
 			{
 				update_post_meta( $pid, '_project_cost', sanitize_text_field($request->get_param('project_cost')));
 
 			}
 		}
-		else if($request->get_param('project_type') == 'hourly')
+		else if($request->get_param('project_type') == "1")
 		{
+			update_post_meta( $pid, '_project_type', "hourly");
 			if($request->get_param('project_cost_hourly') !==null && $request->get_param('estimated_hours'))
 			{
 				update_post_meta( $pid, '_project_cost', sanitize_text_field($request->get_param('project_cost_hourly')));
