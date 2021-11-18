@@ -451,6 +451,10 @@
 
 		}
 
+		function getServicesCategories(){
+
+		}
+
 		
 
 		
@@ -552,9 +556,41 @@
 		}
 		else{
 			return new WP_ERROR(401,'Veuillez vous connecter','no');
+		} 
+
+
+
+	}
+
+	function createServiceData(WP_REST_Request $request){
+		$services_categories = get_service_taxonomies_terms("service-categories");
+		$services_delivery_time = get_service_taxonomies_terms("delivery-time");
+		$competences_levels = get_service_taxonomies_terms("services-english-level");
+		$services_locations = get_service_taxonomies_terms("services-locations");
+		$response_time = get_service_taxonomies_terms("response-time");
+
+		$data["categories"] = $services_categories;
+		$data["delais_livraisons"] = $services_delivery_time;
+		$data["competences_levels"] = $competences_levels;
+		$data["locations"] = $services_locations;
+		$data["disponibilites"] = $response_time;
+
+		 return new WP_REST_RESPONSE(
+			$data
+		);
+	}
+
+	function get_service_taxonomies_terms($the_term){
+		$term_results =exertio_get_terms($the_term);
+		
+		$final_term_array = [];
+		foreach($term_results as $result){
+			$customTermResult["term_id"] = $result->term_id;
+			$customTermResult["name"] = $result->name;
+			array_push($final_term_array,$customTermResult);
+		
 		}
-
-
+		return $final_term_array;
 
 	}
 
