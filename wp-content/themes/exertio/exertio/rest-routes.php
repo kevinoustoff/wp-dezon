@@ -145,6 +145,10 @@ add_action( 'rest_api_init', function () {
 		'methods' => 'GET',
 		'callback' =>  'createServiceData',
 	));
+	register_rest_route('api','/services/create',array(
+		'methods' => 'POST',
+		'callback' =>  'createService',
+	));
 
 	register_rest_route('api','/identification/verification',array(
 		'methods' => 'POST',

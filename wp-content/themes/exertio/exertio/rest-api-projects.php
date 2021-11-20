@@ -793,14 +793,14 @@ function filtersProjects(){
 
 
 			}
-			return new WP_REST_RESPONSE(
-				["message" => "success"]
-
-			);
+			
 			//die();
 		}
 
+		return new WP_REST_RESPONSE(
+			["message" => "success"]
 
+		);
 
 
 
