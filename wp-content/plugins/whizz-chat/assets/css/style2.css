@@ -1576,9 +1576,12 @@ label[for="click"] i.fas{
 }
 /*fin css*/
 /*responsive chat box*/
-@media screen and (max-width: 480px)
+@media screen and (max-width: 1280px)
 {
     
+}
+@media all and (max-device-width: 480px)
+{
    /* Rédigez vos propriétés CSS ici */
     label[for="click"] {
         position: fixed;
@@ -1594,15 +1597,14 @@ label[for="click"] i.fas{
         color: #fff;
         cursor: pointer;
     }
-    /*
     #click:checked ~ label[for="click"] i.fab {
 
-        opacity: 0;
+        /*opacity: 0;*/
+        display: none;
         pointer-events: none;
-       transform: translate(-50%, -50%) rotate(180deg);
+       /* transform: translate(-50%, -50%) rotate(180deg);*/
 
     }
-    */
     label[for="click"] i {
         position: absolute;
         top: 50%;
@@ -1610,16 +1612,16 @@ label[for="click"] i.fas{
         transform: translate(-50%, -50%);
         transition: all 0.4s ease;
     }
-    /*
     #click:checked ~ label[for="click"] i.fas {
-        opacity: 1; 
+       /* opacity: 1; */
+        display: block;
         pointer-events: auto;
-        transform: translate(-50%, -50%) rotate(180deg);
+        /* transform: translate(-50%, -50%) rotate(180deg);*/
     }
-    */
     #click:checked ~ .chatbox-holder {
-        display: none;
+        display: block;
         /*opacity: 1;*/
+        /*bottom: 85px;*/
         pointer-events: auto;
     }
     .chatbox-holder {

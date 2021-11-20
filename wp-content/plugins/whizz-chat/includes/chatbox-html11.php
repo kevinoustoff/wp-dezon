@@ -86,7 +86,12 @@ class Whizz_Chat_box_Html {
                                      <div class="chatbox-inner-holder"></div>
                              </div>';
         } else {
-            $html = '<div class="chatbox-holder">
+            $list_html_start ='<input type="checkbox" id="click">
+              <label for="click">
+              <i class="fab fa-facebook-messenger"></i>
+              <i class="fas fa-times"></i>
+              </label>';
+            $html = $list_html_start.'<div class="chatbox-holder">
                         <div class="chatbox-inner-holder">' . $chat_box_html . '</div>
                         ' . $list_render . '
                 </div>';
@@ -554,12 +559,8 @@ class Whizz_Chat_box_Html {
             $dashboard_style = 'href="' . get_permalink($dashboard_page) . '" target="__blank" ';
         }
 
-        $list_html_start ='<input type="checkbox" id="click">
-      <label for="click">
-      <i class="fab fa-facebook-messenger"></i>
-      <i class="fas fa-times"></i>
-      </label>';
-        $list_html = $list_html_start. '<div class="chatbox group-chat chatbox-list' . $hide_list_class . '" id="whizz-list-' . $user_id_ses . '">
+        
+        $list_html = '<div class="chatbox group-chat chatbox-list' . $hide_list_class . '" id="whizz-list-' . $user_id_ses . '">
             <div class="chatbox-top"' . $color_style . '>
               <div class="chat-group-name"> 
                     <div class="whizzChat-author-meta whizz-chat-text-nowrap">

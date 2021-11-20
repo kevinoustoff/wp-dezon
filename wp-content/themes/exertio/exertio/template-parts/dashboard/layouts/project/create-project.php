@@ -372,14 +372,14 @@ if(!isset($_GET['pid']))
 							  <div class="form-group col-md-6">
 								  <label><?php echo esc_html__(' Date début','exertio_theme'); ?></label>
 								  <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
-									    <input class="form-control" type="text" name="date_debut" readonly />
+									    <input class="form-control" type="text" name="project_date_debut" />
 									    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
 									</div>
 								</div>
 								<div class="form-group col-md-6">
 								  <label><?php echo esc_html__(' Date fin','exertio_theme'); ?></label>
 								  <div id="datepicker2" class="input-group date" data-date-format="mm-dd-yyyy">
-									    <input class="form-control" type="text" name="date_fin" readonly />
+									    <input class="form-control" type="text" name="project_date_fin" />
 									    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
 									</div>
 								</div>
