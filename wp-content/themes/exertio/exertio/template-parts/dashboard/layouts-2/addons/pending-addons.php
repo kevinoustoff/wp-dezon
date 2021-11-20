@@ -66,7 +66,7 @@ if ( get_query_var( 'paged' ) ) {
       <div class="d-flex justify-content-between flex-wrap">
         <div class="d-flex align-items-end flex-wrap">
           <div class="mr-md-3 mr-xl-5">
-            <h2><?php echo esc_html__('Pending Addons','exertio_theme').esc_html(' ('. $total_count.')');?></h2>
+            <h2><?php echo esc_html__('Options en cours','exertio_theme').esc_html(' ('. $total_count.')');?></h2>
             <div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
 				<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 				<?php echo exertio_dashboard_extention_return(); ?>
@@ -83,6 +83,7 @@ if ( get_query_var( 'paged' ) ) {
           <div class="pro-section">
               <div class="pro-box heading-row">
                 <div class="pro-coulmn pro-title">
+                	<?php echo esc_html__( 'Titre', 'exertio_theme' ) ?>
                 </div>
                 <div class="pro-coulmn"><?php echo esc_html__( 'Date de création', 'exertio_theme' ) ?> </div>
                 <div class="pro-coulmn"><?php echo esc_html__( 'Prix', 'exertio_theme' ) ?> </div>
@@ -129,8 +130,8 @@ if ( get_query_var( 'paged' ) ) {
 					{
 						?>
                         <div class="nothing-found">
-                            <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo esc_html__( 'Aucune offre trouvée', 'exertio_theme' ) ?> ">
-                            <h3><?php echo esc_html__( 'Désolé!! Aucune offre supplémentaire créee pour le moment', 'exertio_theme' ) ?></h3>
+                            <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo esc_html__( 'Aucune option trouvée', 'exertio_theme' ) ?> ">
+                            <h3><?php echo esc_html__( 'Désolé!! Aucune option supplémentaire créee pour le moment', 'exertio_theme' ) ?></h3>
                         </div>
                         <?php	
 					}

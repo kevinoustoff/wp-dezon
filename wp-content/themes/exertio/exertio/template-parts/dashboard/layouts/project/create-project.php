@@ -68,7 +68,7 @@ if(!isset($_GET['pid']))
 				  <div class="d-flex justify-content-between flex-wrap">
 					<div class="d-flex align-items-end flex-wrap">
 					  <div class="mr-md-3 mr-xl-5">
-						<h2><?php echo esc_html__('Demander un service','exertio_theme'); ?></h2>
+						<h2><?php echo esc_html__('Publier un projet','exertio_theme'); ?></h2>
 						<div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
 							<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 							<?php echo exertio_dashboard_extention_return(); ?>
@@ -86,7 +86,7 @@ if(!isset($_GET['pid']))
 							?>
 							<div class="alert alert-warning fade show" role="alert">
 								<div class="alert-icon"><i class="fal fa-exclamation-triangle"></i></div>
-								<div class="alert-text"><?php echo esc_html__('En attente d\'approbation par l\'admin.','exertio_theme'); ?></div>
+								<div class="alert-text"><?php echo esc_html__('En attente de la validation par l\'équipe de Dezon.','exertio_theme'); ?></div>
 								<div class="alert-close">
 									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 										<span aria-hidden="true"><i class="fal fa-times"></i></span>
@@ -257,6 +257,7 @@ if(!isset($_GET['pid']))
 									}
 									?>
 								</div>
+								
 							<?php
 							}
 							if(fl_framework_get_options('project_level') == 3)
@@ -294,6 +295,7 @@ if(!isset($_GET['pid']))
 								}
 								?>
 							</div>
+							
 							<?php
 							}
 							if(fl_framework_get_options('project_english_level') == 3)
@@ -361,20 +363,27 @@ if(!isset($_GET['pid']))
 										}
 
 									?>
-									<span class="remote-location-box">
-										<div class="pretty p-icon p-thick p-curve">
-											<input type="checkbox" name="project_location_remote" id="project_location_remote" <?php echo wp_return_echo($remote_selected); ?>/>
-											<div class="state p-warning"><i class="icon fa fa-check"></i>
-												<label></label>
-											</div>
-										</div>
-										<p> <?php echo esc_html__('Sélectionnez ce champ pour une localisation distante','exertio_theme'); ?></p>
-									</span>
 								 </div>
 								<?php
 							}
 							?>
 						  </div>
+						  <div class="form-row">
+							  <div class="form-group col-md-6">
+								  <label><?php echo esc_html__(' Date début','exertio_theme'); ?></label>
+								  <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
+									    <input class="form-control" type="text" name="date_debut" readonly />
+									    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+									</div>
+								</div>
+								<div class="form-group col-md-6">
+								  <label><?php echo esc_html__(' Date fin','exertio_theme'); ?></label>
+								  <div id="datepicker2" class="input-group date" data-date-format="mm-dd-yyyy">
+									    <input class="form-control" type="text" name="date_fin" readonly />
+									    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+									</div>
+								</div>
+							</div>
 						  <?php
 							if(fl_framework_get_options('project_skills') == 3)
 							{
@@ -525,7 +534,7 @@ if(!isset($_GET['pid']))
 									?>
 								</div>
 								<input type="hidden" class="project_attachment_ids" name="project_attachment_ids" value="<?php echo esc_attr($pro_img_id); ?>">
-								<p class="attachment_note"><?php echo esc_html__('Faites glisser et déposez pour réorganiser et appuyez sur le bouton Publier pour appliquer.','exertio_theme'); ?></p>
+								<p class="attachment_note"><?php echo esc_html__('Faites glisser et déposer pour réorganiser et appuyez sur le bouton "Publier" pour appliquer.','exertio_theme'); ?></p>
 							</div>
 	
 	
@@ -691,13 +700,13 @@ if(!isset($_GET['pid']))
 								</div>
 							  </div>
 							  <div class="form-row">
-								<div class="form-group col-md-6">
-								  <label><?php echo esc_html__('Latitude','exertio_theme'); ?></label>
-								  <input type="text" class="form-control" name="project_lat" id="loc_lat" value="<?php echo get_post_meta($pid, '_project_longitude', true); ?>">
-								</div>
-								<div class="form-group col-md-6">
-								  <label><?php echo esc_html__('Longitude','exertio_theme'); ?></label>
-								  <input type="text" class="form-control" name="project_long" id="loc_long" value="<?php echo get_post_meta($pid, '_project_latitude', true); ?>">
+							  	<div style="display:none">
+									<div class="form-group col-md-6">
+									  <input type="text" class="form-control" name="project_lat" id="loc_lat" value="<?php echo get_post_meta($pid, '_project_longitude', true); ?>">
+									</div>
+									<div class="form-group col-md-6">
+									  <input type="text" class="form-control" name="project_long" id="loc_long" value="<?php echo get_post_meta($pid, '_project_latitude', true); ?>">
+									</div>
 								</div>
 							  </div>
 							</div>
@@ -727,20 +736,7 @@ if(!isset($_GET['pid']))
 												<p><?php echo esc_html(fl_framework_get_options('mark_featured_desc'));  ?></p>
 												<?php
 											}
-											else
-											{
-												?>
-												<div class="alert alert-warning fade show" role="alert">
-													<div class="alert-icon"><i class="fal fa-exclamation-triangle"></i></div>
-													<div class="alert-text"><?php echo esc_html__('Achetez un pack pour gagner plus de visibilité auprès de nos prestataires.','exertio_theme'); ?></div>
-													<div class="alert-close">
-														<button type="button" class="btn btn-dark">
-															<?php echo esc_html__('Acheter','exertio_theme'); ?>
-														</button>
-													</div>
-												</div>
-												<?php
-											}
+											
 										}
 										else if($is_featured == 1)
 										{
@@ -795,8 +791,8 @@ if(!isset($_GET['pid']))
 					?>
 					<div class="card mb-4 tips package-info">
 						<div class="card-body">
-				  <h4 class="card-title"><?php echo esc_html__('Pack actuel', 'exertio_theme' ); ?></h4>
-					<p class="view-more-btn"> <a href="<?php echo get_the_permalink(fl_framework_get_options('emp_package_page')); ?>?ext=buy-package" target="_blank"> <?php echo esc_html__(' Voir les offres ', 'exertio_theme' ); ?></a></p>
+				  <h4 class="card-title"><?php echo esc_html__('Abonnement actuel', 'exertio_theme' ); ?></h4>
+					<p class="view-more-btn"> <a class="btn btn-primary" href="<?php echo get_the_permalink(fl_framework_get_options('emp_package_page')); ?>?ext=buy-package" target="_blank"> <?php echo esc_html__(' Voir les offres ', 'exertio_theme' ); ?></a></p>
 					<?php
 						$employer_id = get_user_meta( $current_user_id, 'employer_id' , true );
 
@@ -810,7 +806,7 @@ if(!isset($_GET['pid']))
 						$featured_projects_text = isset( $featured_projects) && $featured_projects == -1 ? esc_html__(' Illimité ', 'exertio_theme' ) : $featured_projects;
 
 						$featured_project_expiry = get_post_meta( $employer_id, '_featured_project_expiry', true);
-						$featured_project_expiry_text = isset( $featured_project_expiry) && $featured_project_expiry == -1 ? esc_html__(' Never Expire ', 'exertio_theme' ) : $featured_project_expiry.esc_html__(' Jours ', 'exertio_theme' );
+						$featured_project_expiry_text = isset( $featured_project_expiry) && $featured_project_expiry == -1 ? esc_html__(' N\'expire jamais ', 'exertio_theme' ) : $featured_project_expiry.esc_html__(' Jours ', 'exertio_theme' );
 
 						$employer_package_expiry = get_post_meta( $employer_id, '_employer_package_expiry', true);
 					
@@ -819,7 +815,7 @@ if(!isset($_GET['pid']))
 						$package_expiry_text = isset( $employer_package_expiry_date) && $employer_package_expiry_date == -1 ? esc_html__(' N\'expire jamais', 'exertio_theme' ) : date_i18n( get_option( 'date_format' ), strtotime($employer_package_expiry_date));
 					
 						$employer_is_featured = get_post_meta( $employer_id, '_employer_is_featured', true);
-						$employer_featured_text = isset( $employer_is_featured) && $employer_is_featured > 0 ? 'Yes' : 'No';
+						$employer_featured_text = isset( $employer_is_featured) && $employer_is_featured > 0 ? 'Oui' : 'Non';
 					if(isset($simple_project) && $simple_project != '')
 					{
 						$img_id = '';

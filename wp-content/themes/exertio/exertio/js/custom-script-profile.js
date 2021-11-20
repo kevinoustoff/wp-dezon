@@ -548,10 +548,18 @@ $("select").on("select2:select", function (evt) {
 			{
 				if ( true === response.success ) 
 				{
+					/*
 					toastr.success(response.data.message, '', {timeOut: 8000, "closeButton": true, "positionClass": "toast-top-right", "showMethod": "slideDown", "hideMethod":"slideUp"});
 					setTimeout(function(){
 					  window.location.replace(response.data.pid);
 					}, 1000);
+					*/
+
+					toastr.success(response.data.message, '', {timeOut: 8000, "closeButton": true, "positionClass": "toast-top-right", "showMethod": "slideDown", "hideMethod":"slideUp"});
+					setTimeout(function(){
+					  window.location.replace('https://dezon.app/index.php/dashboard/?ext=projects');
+					}, 1000);
+
 				}
 				else
 				{
@@ -1343,8 +1351,13 @@ $("select").on("select2:select", function (evt) {
 					this_value.find('div.bubbles').removeClass("view");
 
 					toastr.success(response.data.message, '', {timeOut: 8000, "closeButton": true, "positionClass": "toast-top-right", "showMethod": "slideDown", "hideMethod":"slideUp"});
+					/*
 					setTimeout(function(){
 					  window.location.replace(response.data.pid);
+					}, 1000);
+					*/
+					setTimeout(function(){
+					  window.location.replace('https://dezon.app/index.php/dashboard/?ext=all-services');
 					}, 1000);
 				}
 				else

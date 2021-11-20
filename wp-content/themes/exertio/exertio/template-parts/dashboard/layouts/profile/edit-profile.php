@@ -510,7 +510,7 @@ $employer_departments = get_post_meta($pid, '_employer_department', true);
                           <div id="google_canvas" style="width:100%; height:400px;"></div>
                         </div>
                         </div>
-                        <div class="form-row">
+                        <div class="form-row" style="display:none">
                         <div class="form-group col-md-6">
                           <label><?php echo esc_html__('Latitude','exertio_theme'); ?></label>
                           <input type="text" class="form-control" name="emp_lat" id="loc_lat" value="<?php echo get_post_meta($pid, '_employer_latitude', true); ?>">

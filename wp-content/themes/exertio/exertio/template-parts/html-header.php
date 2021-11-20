@@ -13,9 +13,9 @@ else
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
+	<meta name="google-site-verification" content="XDFhteyfvW0pAhKrrH2qb6OTTqi85rE9z4NhxPGK_bQ" />
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

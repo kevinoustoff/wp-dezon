@@ -111,7 +111,7 @@ function wordpress_custom_login_logo() {
 		echo '<style type="text/css">'.
              'h1 a { 
 				background-image:url('.$logo_url.') !important;
-				height:'.$wp_logo_height.' !important;
+				height:150px !important;
 				width:'.$wp_logo_width.' !important;
 				background-size:100% !important;
 				line-height:inherit !important;

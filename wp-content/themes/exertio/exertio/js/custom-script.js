@@ -361,7 +361,11 @@ $('#btn_project_bid').on('click', function() {
 				}
 				else
 				{
+					// toastr.error(response.data.message, '', {timeOut: 8000, "closeButton": true, "positionClass": "toast-top-right", "showMethod": "slideDown", "hideMethod":"slideUp"});
 					toastr.error(response.data.message, '', {timeOut: 8000, "closeButton": true, "positionClass": "toast-top-right", "showMethod": "slideDown", "hideMethod":"slideUp"});
+					setTimeout(function(){
+					  window.location.replace('https://dezon.app/index.php/offre-jobeurs/');
+					}, 1000);
 					$(".btn-loading .bubbles").removeClass("view");
 					$('#btn_project_bid').attr("disabled", false);	
 				}

@@ -79,7 +79,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 										<?php
 										// Backorder notification.
 										if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
-											echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<div class="product-badge in-stock backorder_notification">' . esc_html__( 'Available on backorder', 'exertio_theme' ) . '</div>', $product_id ) );
+											echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<div class="product-badge in-stock backorder_notification">' . esc_html__( 'Disponible en commande différée', 'exertio_theme' ) . '</div>', $product_id ) );
 										}
 										?>
 									</div>
@@ -90,7 +90,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 										<?php
 										if ( $_product->is_sold_individually() ) {
 											$product_quantity = '';
-											$product_quantity .= sprintf( '<label class="font-weight-medium d-none d-sm-block">%s</label>', esc_html_x( 'Quantity', 'front-end', 'exertio_theme' ) );
+											$product_quantity .= sprintf( '<label class="font-weight-medium d-none d-sm-block">%s</label>', esc_html_x( 'Quantité', 'front-end', 'exertio_theme' ) );
 											$product_quantity .= sprintf( '<div>1</div><input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
 										} else {
 											$product_quantity_input_id = uniqid( 'quantity_' );
@@ -99,7 +99,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 											$product_quantity .= '<div class="form-group mb-0">';
 											$product_quantity .= sprintf( '<label class="font-weight-medium d-none d-sm-block" for="%s">%s</label>',
 												esc_attr( $product_quantity_input_id ),
-												esc_html_x( 'Quantity', 'front-end', 'exertio_theme' )
+												esc_html_x( 'Quantité', 'front-end', 'exertio_theme' )
 											);
 											$product_quantity .= woocommerce_quantity_input(
 												array(
@@ -127,10 +127,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 											sprintf(
 												'<a href="%s" class="text-danger" aria-label="%s" data-product_id="%s" data-product_sku="%s"><i class="far fa-times-circle"></i> <span class="font-size-sm">%s</span></a>',
 												esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
-												esc_html__( 'Remove this item', 'exertio_theme' ),
+												esc_html__( 'Supprimer cette article', 'exertio_theme' ),
 												esc_attr( $product_id ),
 												esc_attr( $_product->get_sku() ),
-												esc_html__( 'Remove', 'exertio_theme' )
+												esc_html__( 'Supprimer', 'exertio_theme' )
 											),
 											$cart_item_key
 										);
@@ -144,22 +144,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 					?>
 					<?php do_action( 'woocommerce_cart_contents' ); ?>
 					<div class="row">
-						<?php if ( wc_coupons_enabled() ) : ?>
-							<div class="col-md-6 mb-3">
-								<div class="<?php echo esc_attr($margin);?> input-group">
-									<input type="text" name="coupon_code" id="coupon_code" class="form-control" placeholder="<?php echo esc_attr__( 'Coupon code', 'exertio_theme' ); ?>">
-									<div class="input-group-append">
-										<button type="submit" class="btn btn-outline-secondary" name="apply_coupon"><?php echo esc_html__( 'Apply coupon', 'exertio_theme' ); ?></button>
-									</div>
-									<?php do_action( 'woocommerce_cart_coupon' ); ?>
-								</div>
-							</div>
-						<?php endif; ?>
-						<div class="prop-up-cart col-md-6">
-							<button type="submit" class="btn btn-theme btn-block" name="update_cart" value="<?php echo esc_attr__( 'Update cart', 'exertio_theme' ); ?>">
-								<?php echo esc_html__( 'Update cart', 'exertio_theme' ); ?>
-							</button>
-						</div>
 						<?php do_action( 'woocommerce_cart_actions' ); ?>
 					</div>
 					<?php do_action( 'woocommerce_after_cart_contents' ); ?>

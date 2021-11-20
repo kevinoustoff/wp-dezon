@@ -82,7 +82,7 @@ if($post == '')
               <div class="d-flex justify-content-between flex-wrap">
                 <div class="d-flex align-items-end flex-wrap">
                   <div class="mr-md-3 mr-xl-5">
-                    <h2><?php echo esc_html__('Ajouter un service ','exertio_theme'); ?></h2>
+                    <h2><?php echo esc_html__('Publier un job ','exertio_theme'); ?></h2>
                     <div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
 						<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 						<?php echo exertio_dashboard_extention_return(); ?>
@@ -117,7 +117,7 @@ if($post == '')
                       
                       <div class="form-row">
                         <div class="form-group col-md-6">
-                          <label><?php echo esc_html__('Titre du service ','exertio_theme'); ?></label>
+                          <label><?php echo esc_html__('Titre du job ','exertio_theme'); ?></label>
                           <input type="text" class="form-control" name="services_title" value="<?php echo esc_attr($post->post_title); ?>" <?php if(fl_framework_get_options('service_title') == 1){ ?>required data-smk-msg="<?php echo esc_html__('Veuillez donner un titre assez clair','exertio_theme'); }?>">
                         </div>
                         <div class="form-group col-md-6">
@@ -299,7 +299,7 @@ if($post == '')
 									echo wp_return_echo($response);
 								}
 							?>
-							<p><?php echo esc_html__('Votre disponibilité déterminera la vitesse d\'exécution du service.','exertio_theme'); ?></p>
+							<p><?php echo esc_html__('Votre disponibilité déterminera la vitesse d\'exécution du job.','exertio_theme'); ?></p>
 							</div>
 							<?php
 						}
@@ -312,7 +312,7 @@ if($post == '')
                 
                 <div class="card mb-4">
                     <div class="card-body">
-                    	<h4 class="card-title"><?php echo esc_html__('Détail du service','exertio_theme'); ?></h4>
+                    	<h4 class="card-title"><?php echo esc_html__('Détail du job','exertio_theme'); ?></h4>
                         <div class="form-row">
                             <div class="form-group col-md-12">
                               <label><?php echo esc_html__('Description','exertio_theme'); ?></label>
@@ -321,48 +321,6 @@ if($post == '')
                         </div>
                     </div>
                 </div>
-                <?php
-				if($exertio_theme_options['service-youtube-links'])
-				{
-				?>
-					<div class="card mb-4">
-						<div class="card-body yt_card">
-							<h4 class="card-title"><?php echo esc_html__('Liens des vidéo Youtube','exertio_theme'); ?></h4>
-								<div class="form-row">
-								<div class="col-md-12">
-									<div class="youtube_field_wrapper sortable" id="sortable">
-										<?php
-										$service_youtube_urls ='';
-										$service_youtube_urls = get_post_meta($sid, '_service_youtube_urls', true);
-										if(!empty($service_youtube_urls))
-										{
-											$urls = json_decode($service_youtube_urls);
-											foreach($urls as $url)
-											{
-												?>
-													<div class="ui-state-default">
-														<i class="fal fa-arrows"></i>
-														<div class="form-row">
-															<input type="url" name="video_urls[]" value="<?php echo esc_url($url); ?>" class="form-control" />
-														</div>
-														<a href="javascript:void(0);" class="yt_url_remove"><i class="fal fa-times-circle"></i></a>
-													</div>
-												<?php
-											}
-										}
-										?>
-									</div>
-									<a href="javascript:void(0);" class="add_youtube_more btn btn-theme" title="Add field">
-										<?php echo __( "Ajouter", 'exertio_theme' ); ?>
-									</a>
-									<p><?php echo __( "Veuillez fournir uniquement les URL des vidéos YouTube.", "exertio_theme" ); ?></p>
-								</div>
-							</div>
-						   </div>
-					</div>
-				<?php
-				}
-				?>
                 <div class="card mb-4">
                   <?php  $pro_img_id = get_post_meta( $sid, '_service_attachment_ids', true );?>
                     <div class="card-body project-attachments">
@@ -621,7 +579,7 @@ if($post == '')
 										if($featured_services >0 || $featured_services == -1)
 										{
 											?>
-											<div class="pretty p-switch p-fill <?php echo esc_attr($feature_tooltip_class) ?>" <?php echo esc_attr($feature_tooltip); ?>  data-pt-position="top" data-pt-scheme="black" data-pt-title="<?php echo esc_html__('Already Featured','exertio_theme'); ?>">
+											<div class="pretty p-switch p-fill <?php echo esc_attr($feature_tooltip_class) ?>" <?php echo esc_attr($feature_tooltip); ?>  data-pt-position="top" data-pt-scheme="black" data-pt-title="<?php echo esc_html__('Déjà sponsorisé','exertio_theme'); ?>">
 												<input type="checkbox" name="featured_service" <?php echo esc_attr($featured_btn_disable.' '.$featured_btn_checked); ?> />
 												<div class="state p-info"><label></label> </div>
 											</div>

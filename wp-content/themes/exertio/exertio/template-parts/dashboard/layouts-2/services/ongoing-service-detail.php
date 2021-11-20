@@ -28,7 +28,7 @@ if( is_user_logged_in() )
                   <div class="d-flex justify-content-between flex-wrap">
                     <div class="d-flex align-items-end flex-wrap">
                       <div class="mr-md-3 mr-xl-5">
-                        <h2><?php echo esc_html__('Ongoing Service Detail','exertio_theme');?></h2>
+                        <h2><?php echo esc_html__('Détails du job en cours','exertio_theme');?></h2>
 						<div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
 							<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Dashboard', 'exertio_theme' ); ?>&nbsp;</p>
 							<?php echo exertio_dashboard_extention_return(); ?>
@@ -94,7 +94,7 @@ if( is_user_logged_in() )
 													if($addons_ids_decoded != '')
 													{
 														?>
-                                                        <small class="pro-meta addon-toggle">  <?php echo esc_html__('Addons details','exertio_theme');?></small>
+                                                        <small class="pro-meta addon-toggle" style="font-style: italic; color:#000">  <?php echo esc_html__('Voir les options supp','exertio_theme');?></small>
                                                         <?php
 													}
 													?>
@@ -103,7 +103,7 @@ if( is_user_logged_in() )
                                             <div class="pro-coulmn buyer-detail">
                                                 <?php  echo get_profile_img($buyer_id , 'employer'); ?>
                                                 <span class="buyer_name"><a href="<?php echo get_the_permalink($buyer_id); ?>"> <?php echo exertio_get_username('employer',$buyer_id, 'badge', 'left'); ?></a></span>
-                                                <span class="service_start_date"> <?php echo esc_html__( 'Purchased on ', 'exertio_theme' ).' '.esc_html(date("F jS, Y", strtotime($result[0]['timestamp']))); ?></span>
+                                                <span class="service_start_date"> <?php echo esc_html__( 'Payé le ', 'exertio_theme' ).' '.esc_html(date("d/m/Y", strtotime($result[0]['timestamp']))); ?></span>
                                             </div>
                                           </div>
                                          
@@ -137,8 +137,8 @@ if( is_user_logged_in() )
                                 {
                                     ?>
                                     <div class="nothing-found">
-                                        <h3><?php echo esc_html__( 'Sorry!!! No Record Found', 'exertio_theme' ) ?></h3>
-                                        <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo esc_html__( 'Nothing found icon', 'exertio_theme' ) ?> ">
+                                        <h3><?php echo esc_html__( 'Désolé!!! Aucun job trouvé', 'exertio_theme' ) ?></h3>
+                                        <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo esc_html__( 'Aucune icone trouvée', 'exertio_theme' ) ?> ">
                                     </div>
                                     <?php	
                                 }
@@ -175,7 +175,7 @@ if( is_user_logged_in() )
                                                             ?>
                                                             <div class="history_attch_dwld btn-loading" id="download-files" data-id="<?php echo esc_attr($message->attachment_ids); ?>">
                                                                 <i class="fal fa-arrow-to-bottom"></i>
-                                                                <?php echo esc_html__( 'Attachments', 'exertio_theme' ); ?>
+                                                                <?php echo esc_html__( 'Fichiers joints', 'exertio_theme' ); ?>
                                                                 <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
                                                             </div>
                                                             <?php
@@ -206,7 +206,7 @@ if( is_user_logged_in() )
                                                             ?>
                                                             <div class="history_attch_dwld btn-loading" id="download-files" data-id="<?php echo esc_attr($message->attachment_ids); ?>">
                                                                 <i class="fal fa-arrow-to-bottom"></i>
-                                                                <?php echo esc_html__( 'Attachments', 'exertio_theme' ); ?>
+                                                                <?php echo esc_html__( 'Fichier joint', 'exertio_theme' ); ?>
                                                                 <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
                                                             </div>
                                                             <?php
@@ -221,7 +221,7 @@ if( is_user_logged_in() )
                                     else
                                     {
                                         ?>
-                                        <p class="text-center"><?php echo esc_html__( 'No history found', 'exertio_theme' ); ?></p>
+                                        <p class="text-center"><?php echo esc_html__( 'Aucune conversation pour le moment', 'exertio_theme' ); ?></p>
                                         <?php	
                                     }
                                     ?>
@@ -229,18 +229,18 @@ if( is_user_logged_in() )
                             </div>
                       </div>
                       <div class="history-msg-form">
-                        <h3><?php echo esc_html__( 'Send Message', 'exertio_theme' ); ?></h3>
+                        <h3><?php echo esc_html__( 'Contacter le client', 'exertio_theme' ); ?></h3>
                         <div class="history-text">
                             <form id="send_service_msg">
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
-                                        <textarea name="history_msg_text" id="" class="form-control" required data-smk-msg="<?php echo esc_html__('Please provide message to send','exertio_theme'); ?>" placeholder="<?php echo esc_html__('Type your message here.....','exertio_theme'); ?>"></textarea>
+                                        <textarea name="history_msg_text" id="" class="form-control" required data-smk-msg="<?php echo esc_html__('Veuillez saisir le message à envoyer','exertio_theme'); ?>" placeholder="<?php echo esc_html__('Tapez votre message ici.....','exertio_theme'); ?>"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <div class="upload-btn-wrapper">
-                                            <button class="btn btn-theme-secondary mt-2 mt-xl-0" type="button"><?php echo esc_html__('Select Attachments','exertio_theme'); ?></button>
+                                            <button class="btn btn-theme-secondary mt-2 mt-xl-0" type="button"><?php echo esc_html__('Selectionner les fichiers','exertio_theme'); ?></button>
                                             <input type="file" id="gen_attachment_uploader" multiple name="project_attachments[]" accept = "image/pdf/doc/docx/ppt/pptx*" data-post-id="<?php echo esc_attr($get_sid) ?>"/>
                                             <input type="hidden" name="attachment_ids" value="" id="history_attachments_ids">
                                         </div>
@@ -253,7 +253,7 @@ if( is_user_logged_in() )
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <button type="button" class="btn btn-theme float-right btn-loading" id="service_history_msg_btn" data-post-id="<?php echo esc_attr($get_sid) ?>" data-sender-id="<?php echo esc_attr($seller_id_msg) ?>" data-receiver_id="<?php echo esc_attr($buyer_id_msg) ?>">
-                                            <?php echo esc_html__('Send Message','exertio_theme'); ?>
+                                            <?php echo esc_html__('Envoyer','exertio_theme'); ?>
                                             <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
                                         </button>
                                     </div>

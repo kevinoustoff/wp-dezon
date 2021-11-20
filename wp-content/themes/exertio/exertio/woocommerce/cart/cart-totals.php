@@ -24,10 +24,10 @@ if(is_rtl())
 ?>
 <div class="cart_totals <?php echo esc_attr( ( WC()->customer->has_calculated_shipping() ) ? 'calculated_shipping' : '' ); ?>">
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
-	<h3 class="pb-2"><?php esc_html_e( 'Cart totals', 'exertio_theme' ); ?></h3>
+	<h3 class="pb-2"><?php esc_html_e( 'Total', 'exertio_theme' ); ?></h3>
 	<div class="shop_table shop_table_responsive pb-1">
 		<div class="d-flex justify-content-between align-items-center font-size-md mb-2 pb-1 cart-subtotal">
-			<span class="mr-2"><?php esc_html_e( 'Subtotal', 'exertio_theme' ); ?>:</span>
+			<span class="mr-2"><?php esc_html_e( 'Sous-total', 'exertio_theme' ); ?>:</span>
 			<span class="<?php echo esc_attr($text_direction); ?>" data-title="<?php esc_attr_e( 'Subtotal', 'exertio_theme' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></span>
 		</div>
 
@@ -55,7 +55,7 @@ if(is_rtl())
 
 			if ( WC()->customer->is_customer_outside_base() && ! WC()->customer->has_calculated_shipping() ) :
 				/* translators: %s location. */
-				$estimated_text = sprintf( ' <small>' . esc_html__( '(estimated for %s)', 'exertio_theme' ) . '</small>', WC()->countries->estimated_for_prefix( $taxable_address[0] ) . WC()->countries->countries[ $taxable_address[0] ] );
+				$estimated_text = sprintf( ' <small>' . esc_html__( '(estimé pour %s)', 'exertio_theme' ) . '</small>', WC()->countries->estimated_for_prefix( $taxable_address[0] ) . WC()->countries->countries[ $taxable_address[0] ] );
 			endif;
 
 			if ( 'itemized' === get_option( 'woocommerce_tax_total_display' ) ) :
@@ -89,7 +89,7 @@ if(is_rtl())
 		<?php elseif ( WC()->cart->needs_shipping() && 'yes' === get_option( 'woocommerce_enable_shipping_calc' ) ) : ?>
 
 			<div class="shipping border-top pt-4 mt-4">
-				<h3 class="h6 mb-3 pb-1 "><?php esc_html_e( 'Shipping', 'exertio_theme' ); ?></h3>
+				<h3 class="h6 mb-3 pb-1 "><?php esc_html_e( 'Expédition', 'exertio_theme' ); ?></h3>
 				<div data-title="<?php esc_attr_e( 'Shipping', 'exertio_theme' ); ?>"><?php woocommerce_shipping_calculator(); ?></div>
 			</div>
 		<?php endif; ?>

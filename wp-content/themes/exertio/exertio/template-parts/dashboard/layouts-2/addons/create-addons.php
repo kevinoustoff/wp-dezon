@@ -49,7 +49,7 @@ if($post == '')
               <div class="d-flex justify-content-between flex-wrap">
                 <div class="d-flex align-items-end flex-wrap">
                   <div class="mr-md-3 mr-xl-5">
-                    <h2><?php echo esc_html__('Créer une offre supplémentaire ','exertio_theme'); ?></h2>
+                    <h2><?php echo esc_html__('Créer une option supplémentaire ','exertio_theme'); ?></h2>
                     <div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
 						<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 						<?php echo exertio_dashboard_extention_return(); ?>
@@ -64,17 +64,17 @@ if($post == '')
             <form id="addon_form">
                 <div class="card mb-4">
                     <div class="card-body">
-                      <h4 class="card-title"><?php echo esc_html__('Détails de l\'offre supplémentaire','exertio_theme'); ?></h4>
+                      <h4 class="card-title"><?php echo esc_html__('Détails de l\'option supplémentaire','exertio_theme'); ?></h4>
                       
                       <div class="form-row">
                         <div class="form-group col-md-6">
                           <label><?php echo esc_html__('Titre ','exertio_theme'); ?></label>
-                          <input type="text" class="form-control" name="addon_title" value="<?php echo esc_attr($post->post_title); ?>" required data-smk-msg="<?php echo esc_html__('Veuillez donner un titre à votre offre', 'exertio_theme' ); ?>">
+                          <input type="text" class="form-control" name="addon_title" value="<?php echo esc_attr($post->post_title); ?>" required data-smk-msg="<?php echo esc_html__('Veuillez donner un titre à votre option', 'exertio_theme' ); ?>">
                           <input type="hidden" id="is_update" name="is_update" value="<?php echo esc_attr($is_update); ?>" />
                         </div>
                         <div class="form-group col-md-6">
                           <label><?php echo esc_html__('Prix','exertio_theme').' ('.$exertio_theme_options['fl_currency'].')'; ?></label>
-                          <input type="text" class="form-control" name="addon_price" value="<?php echo esc_attr(get_post_meta( $aid, '_addon_price', true )); ?>" required data-smk-msg="<?php echo esc_html__('Veuillez fournir le prix de l\'offre sans le signe de devise', 'exertio_theme' ); ?>" data-smk-type="number">
+                          <input type="text" class="form-control" name="addon_price" value="<?php echo esc_attr(get_post_meta( $aid, '_addon_price', true )); ?>" required data-smk-msg="<?php echo esc_html__('Veuillez fournir le prix de l\'option sans le signe de devise', 'exertio_theme' ); ?>" data-smk-type="number">
                         </div>
                         
                         <div class="form-group col-md-12">

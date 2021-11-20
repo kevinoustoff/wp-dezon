@@ -76,7 +76,7 @@ $order_array = [];
               <div class="d-flex justify-content-between flex-wrap">
                 <div class="d-flex align-items-end flex-wrap">
                   <div class="mr-md-3 mr-xl-5">
-                    <h2><?php echo esc_html__('Deposit and Invoices','exertio_theme'); ?></h2>
+                    <h2><?php echo esc_html__('Portefeuille','exertio_theme'); ?></h2>
 					<div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
 						<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 						<?php echo exertio_dashboard_extention_return(); ?>
@@ -97,7 +97,7 @@ $order_array = [];
                           <div class="pro-box heading-row">
                             <div class="pro-coulmn no-flex-grow"><?php echo esc_html__( 'Facture N°', 'exertio_theme' ) ?> </div>
                             <div class="pro-coulmn"><?php echo esc_html__( 'Montant', 'exertio_theme' ) ?> </div>
-                            <div class="pro-coulmn"><?php echo esc_html__( 'Etat du paiement', 'exertio_theme' ) ?> </div>
+                            <div class="pro-coulmn"><?php echo esc_html__( 'Statut', 'exertio_theme' ) ?> </div>
                             <div class="pro-coulmn"><?php echo esc_html__( 'Description', 'exertio_theme' ) ?> </div>
                           </div>
                             <?php
@@ -127,10 +127,37 @@ $order_array = [];
 												else if($array['status'] == 'failed'){ $badge_color = 'btn-inverse-danger';}
 												?>
                                             	<span class="badge btn <?php echo esc_html($badge_color); ?>">
-                                            	<?php echo esc_html($array['status']); ?>
+                                            	<?php 
+                                              switch ($array['status']) {
+                                                case 'processing':
+                                                   echo esc_html('en traitement');
+                                                  break;
+                                                case 'pending':
+                                                   echo esc_html('en cours');
+                                                  break;
+                                                case 'on-hold':
+                                                   echo esc_html('en attente');
+                                                  break;
+                                                case 'cancelled':
+                                                   echo esc_html('annulé');
+                                                  break;
+                                                case 'refunded':
+                                                   echo esc_html('remboursé');
+                                                  break;
+                                                case 'failed':
+                                                   echo esc_html('echoué');
+                                                  break;
+                                                case 'completed':
+                                                   echo esc_html('terminé');
+                                                  break;
+                                                default:
+                                                  echo esc_html('en traitement');
+                                                  break;
+                                              }
+                                              ?>
                                                 </span>
                                             </div>
-                                            <div class="pro-coulmn"><a href="<?php get_template_part('');?>?ext=invoice-detail&invoice-id=<?php echo esc_html($array['ID']); ?>" class="btn btn-secondary"><?php echo esc_html__( 'Voir la facture', 'exertio_theme' ); ?></a></div>
+                                            <div class="pro-coulmn"><a href="<?php get_template_part('');?>?ext=invoice-detail&invoice-id=<?php echo esc_html($array['ID']); ?>" class="btn btn-secondary"><?php echo esc_html__( 'Détails', 'exertio_theme' ); ?></a></div>
                                           </div>
                                       
                                         <?php

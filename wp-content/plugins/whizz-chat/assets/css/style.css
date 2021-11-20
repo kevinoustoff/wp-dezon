@@ -30,6 +30,11 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, in
     height: 0;
     z-index: 999;
     font-family: 'Roboto', sans-serif;
+    /*ajout css  herve*/
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+    /*fin css*/
 }
 .chatbox-inner-holder
 {
@@ -1512,5 +1517,125 @@ i.fas.fa-tachometer-alt {
     font-size: 14px;
 }
 
+/*css pour le boutton chat en miniature*/
 
+#click{
+  display: none;
+}
+label[for="click"]{
+  position: fixed;
+  right: 30px;
+  bottom: 70px;
+  height: 55px;
+  width: 55px;
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+  text-align: center;
+  line-height: 55px;
+  border-radius: 50px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+label[for="click"] i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+}
+label[for="click"] i.fas{
+  opacity: 0;
+  pointer-events: none;
+}
 
+label[for="click"] i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+}
+label[for="click"] i.fas{
+  opacity: 0;
+  pointer-events: none;
+}
+#click:checked ~ label[for="click"] i.fas{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+#click:checked ~ label[for="click"] i.fab{
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+#click:checked ~ .chatbox-holder{
+  opacity: 1;
+  /*bottom: 85px;*/
+  pointer-events: auto;
+}
+/*fin css*/
+/*responsive chat box*/
+@media screen and (max-width: 1280px)
+{
+    
+}
+@media all and (max-device-width: 480px)
+{
+   /* Rédigez vos propriétés CSS ici */
+    label[for="click"] {
+        position: fixed;
+        right: 30px;
+        bottom: 70px;
+        height: 55px;
+        width: 55px;
+        background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+        text-align: center;
+        line-height: 55px;
+        border-radius: 50px;
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+    }
+    #click:checked ~ label[for="click"] i.fab {
+
+        /*opacity: 0;*/
+        display: none;
+        pointer-events: none;
+       /* transform: translate(-50%, -50%) rotate(180deg);*/
+
+    }
+    label[for="click"] i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.4s ease;
+    }
+    #click:checked ~ label[for="click"] i.fas {
+       /* opacity: 1; */
+        display: block;
+        pointer-events: auto;
+        /* transform: translate(-50%, -50%) rotate(180deg);*/
+    }
+    #click:checked ~ .chatbox-holder {
+        display: block;
+        /*opacity: 1;*/
+        /*bottom: 85px;*/
+        pointer-events: auto;
+    }
+    .chatbox-holder {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        /*align-items: flex-end;*/
+        height: 0;
+        z-index: 999;
+        font-family: 'Roboto', sans-serif;
+        opacity: 0;
+        pointer-events: none;
+        /* transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);*/
+    }
+}
+/*fin css chat box responsive*/

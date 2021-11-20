@@ -42,7 +42,7 @@ if ( $the_query->have_posts() )
                         {
                             ?>
                             <div class="heading-contents">
-                              <h3><?php echo esc_html($exertio_theme_options['freelancer_services_title']); ?></h3>
+                              <h3><?php echo esc_html($exertio_theme_options['freelancer_services_title']);  ?></h3>
                             </div>
                             <?php
                         }
@@ -70,11 +70,11 @@ if ( $the_query->have_posts() )
 											$saved_service = get_user_meta(get_current_user_id(), '_service_fav_id_'.$sid, true);
 
 											$active_saved ='';
-											$save_text = esc_html__('Sauvegardé le service','exertio_theme');
+											$save_text = esc_html__('Enregistrer le job','exertio_theme');
 											if(isset($saved_service) && $saved_service != '')
 											{
 												$active_saved = 'active';
-												$save_text = esc_html__('Déjà sauvegardé','exertio_theme');	
+												$save_text = esc_html__('Déjà enregistré','exertio_theme');	
 											}
 										?>
 										<div class="fr-top-rating"> <a href="javascript:void(0)" class="save_service protip <?php echo esc_attr($active_saved); ?>" data-fid="<?php echo esc_html($fl_id); ?>" data-pt-position="top" data-pt-scheme="black" data-pt-title="<?php echo esc_html($save_text); ?>" data-post-id="<?php echo esc_attr($sid); ?>"><i class="fa fa-heart"></i></a> </div>

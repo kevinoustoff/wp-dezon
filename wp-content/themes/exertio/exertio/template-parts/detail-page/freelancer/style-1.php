@@ -51,20 +51,19 @@ else
           <div class="fr-hero-short-list-2">
             <div class="fr-hero-hire-content">
             	<?php
-					$current_user_id = get_current_user_id();
-					$saved_freelancer = get_user_meta($current_user_id, '_fl_follow_id_'.$fl_id, true);
-					$active_saved ='';
-					$save_text = esc_html__('Suivre ce prestataire','exertio_theme');
-					if(isset($saved_freelancer) && $saved_freelancer != '')
-					{
-						$active_saved = 'active';
-						$save_text = esc_html__('Déjà suivi','exertio_theme');	
-					}
-				?>
-            	<a href="javascript:void(0)" class="follow-freelancer protip" data-fid="<?php echo esc_html($fl_id); ?>" data-pt-position="top" data-pt-scheme="black" data-pt-title="<?php echo esc_html($save_text); ?>">
-                	<i class="fa fa-heart <?php echo esc_attr($active_saved); ?>"></i>
-                </a>
-                <a href="#" class="btn btn-theme "><?php echo esc_html__('Embaucher','exertio_theme'); ?></a>
+      					/*
+                $current_user_id = get_current_user_id();
+      					$saved_freelancer = get_user_meta($current_user_id, '_fl_follow_id_'.$fl_id, true);
+      					$active_saved ='';
+      					$save_text = esc_html__('Suivre ce prestataire','exertio_theme');
+      					if(isset($saved_freelancer) && $saved_freelancer != '')
+      					{
+      						$active_saved = 'active';
+      						$save_text = esc_html__('Déjà suivi','exertio_theme');	
+      					}
+                */
+      				?>
+                <a href="#" class="btn btn-theme "><?php echo esc_html__('Contacter','exertio_theme'); ?></a>
             </div>
           </div>
         </div>
@@ -87,8 +86,8 @@ else
 					  ?>
                         <li> <span><small><?php echo exertio_get_posts_count('', 'projects', '', 'ongoing', $meta_query); ?></small> <?php echo esc_html__('Projets en cours','exertio_theme'); ?></span> </li>
                         <li> <span><small><?php echo exertio_get_posts_count('', 'projects', '', 'completed', $meta_query); ?></small> <?php echo esc_html__('Projets finalisés','exertio_theme'); ?></span> </li>
-                        <li> <span><small><?php echo exertio_get_services_count($fl_id,'ongoing'); ?></small> <?php echo esc_html__('Services en cours','exertio_theme'); ?></span> </li>
-                        <li> <span><small><?php echo exertio_get_services_count($fl_id,'completed'); ?></small> <?php echo esc_html__('Services finalisés','exertio_theme'); ?></span> </li>
+                        <li> <span><small><?php echo exertio_get_services_count($fl_id,'ongoing'); ?></small> <?php echo esc_html__('Jobs en cours','exertio_theme'); ?></span> </li>
+                        <li> <span><small><?php echo exertio_get_services_count($fl_id,'completed'); ?></small> <?php echo esc_html__('Jobs terminés','exertio_theme'); ?></span> </li>
                       </ul>
                     </div>
                 </div>

@@ -37,9 +37,9 @@ $start_from = ($pageno-1) * $limit;
 					  <div class="d-flex justify-content-between flex-wrap">
 						<div class="d-flex align-items-end flex-wrap">
 						  <div class="mr-md-3 mr-xl-5">
-							<h2><?php echo esc_html__('Completed Project Detail','exertio_theme'); ?></h2>
+							<h2><?php echo esc_html__('Détail du projet','exertio_theme'); ?></h2>
 							<div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
-								<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Dashboard', 'exertio_theme' ); ?>&nbsp;</p>
+								<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 								<?php echo exertio_dashboard_extention_return(); ?>
 							</div>
 						  </div>
@@ -86,12 +86,12 @@ $start_from = ($pageno-1) * $limit;
 									$type =get_post_meta($post->ID, '_project_type', true);
 									if($type == 'fixed')
 									{
-										echo esc_html(fl_price_separator(get_post_meta($post->ID, '_project_cost', true))).'/'.esc_html__( 'Fixed ', 'exertio_theme' );
+										echo esc_html(fl_price_separator(get_post_meta($post->ID, '_project_cost', true)));
 									}
 									else if($type == 'hourly')
 									{
-										echo esc_html(fl_price_separator(get_post_meta($post->ID, '_project_cost', true))).' / '.esc_html__( 'Hourly ', 'exertio_theme' );
-										echo '<small class="estimated-hours">'.esc_html__( 'Estimated Hours ', 'exertio_theme' ).get_post_meta($post->ID, '_estimated_hours', true).'</small>';
+										echo esc_html(fl_price_separator(get_post_meta($post->ID, '_project_cost', true))).' / '.esc_html__( 'par heure ', 'exertio_theme' );
+										echo '<small class="estimated-hours">'.esc_html__( 'Heures estimées ', 'exertio_theme' ).get_post_meta($post->ID, '_estimated_hours', true).'</small>';
 									}
 								 ?>
 							  </div>
@@ -99,10 +99,10 @@ $start_from = ($pageno-1) * $limit;
                                 	<i class="fas fa-check-circle"></i>
                                     <div>
                                         <span class="">
-											<?php echo esc_html__( 'Completed ', 'exertio_theme' ); ?>
+											<?php echo esc_html__( 'Terminé ', 'exertio_theme' ); ?>
                                         </span>
                                         <small>
-                                            <?php echo esc_html__( 'on ', 'exertio_theme' ).date_i18n( get_option( 'date_format' ), strtotime( get_post_meta($post->ID, '_project_completed_date', true) ) ); ?>
+                                            <?php echo esc_html__( 'le ', 'exertio_theme' ).date_i18n( get_option( 'date_format' ), strtotime( get_post_meta($post->ID, '_project_completed_date', true) ) ); ?>
                                         </small>
                                     </div>
 								</div>
@@ -123,7 +123,7 @@ $start_from = ($pageno-1) * $limit;
 				
 							?>
 							<div class="fr-project-box">
-							  <h3><?php echo esc_html__( 'Hired Freelancer', 'exertio_theme' ); ?></h3>
+							  <h3><?php echo esc_html__( 'Jobeur embauché', 'exertio_theme' ); ?></h3>
 							</div>
 							<div class="project-proposal-box">
 							  <?php
@@ -161,11 +161,11 @@ $start_from = ($pageno-1) * $limit;
 												  <?php
 														if($type == 'fixed')
 														{
-															echo wp_sprintf(__('in %s days', 'exertio_theme'), $awarded_results->day_to_complete);
+															echo wp_sprintf(__('en %s jours', 'exertio_theme'), $awarded_results->day_to_complete);
 														}
 														else if($type == 'hourly')
 														{
-															echo wp_sprintf(__('Estimated hours %s', 'exertio_theme'), $awarded_results->day_to_complete);
+															echo wp_sprintf(__('Heures estimées %s', 'exertio_theme'), $awarded_results->day_to_complete);
 														}
 													
 													?>
@@ -175,7 +175,7 @@ $start_from = ($pageno-1) * $limit;
 										  </div>
 										</div>
 										<div class="fr-project-assets">
-										  <h5><?php echo esc_html__( 'Cover Letter', 'exertio_theme' ); ?></h5>
+										  <h5><?php echo esc_html__( 'Offre du jobeur', 'exertio_theme' ); ?></h5>
 										  <p>
 											<?php ?>
 											<?php echo esc_html($awarded_results->cover_letter); ?></p>
@@ -193,7 +193,7 @@ $start_from = ($pageno-1) * $limit;
 							?>
 								<!--PROJECT HISTORY-->
 								<div class="project-history">
-																<h3><?php echo esc_html__( 'Project History', 'exertio_theme' ); ?></h3>
+																<h3><?php echo esc_html__( 'Historique du projet', 'exertio_theme' ); ?></h3>
 																<div class="history-body">
 																	<div class="history-chat-body">
 																		<?php
@@ -223,7 +223,7 @@ $start_from = ($pageno-1) * $limit;
 																								<!--<a class="history_attch_dwld btn btn-black" href="javascript:void(0)" id="download-files" > Download</a>-->
 																								<div class="history_attch_dwld btn-loading" id="download-files" data-id="<?php echo esc_attr($message->attachment_ids); ?>">
 																									<i class="fal fa-arrow-to-bottom"></i>
-																									<?php echo esc_html__( 'Attachments', 'exertio_theme' ); ?>
+																									<?php echo esc_html__( 'Fichiers', 'exertio_theme' ); ?>
 																									<div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
 																								</div>
 																								<?php
@@ -254,7 +254,7 @@ $start_from = ($pageno-1) * $limit;
 																								?>
 																								<div class="history_attch_dwld btn-loading" id="download-files" data-id="<?php echo esc_attr($message->attachment_ids); ?>">
 																									<i class="fal fa-arrow-to-bottom"></i>
-																									<?php echo esc_html__( 'Attachments', 'exertio_theme' ); ?>
+																									<?php echo esc_html__( 'Fichiers', 'exertio_theme' ); ?>
 																									<div class="bubbles bubbles-<?php echo esc_attr($message->attachment_ids); ?>"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
 																								</div>
 																								<?php
@@ -269,7 +269,7 @@ $start_from = ($pageno-1) * $limit;
 																		else
 																		{
 																			?>
-																			<p class="text-center"><?php echo esc_html__( 'No history found', 'exertio_theme' ); ?></p>
+																			<p class="text-center"><?php echo esc_html__( 'Aucune historique pour le moment', 'exertio_theme' ); ?></p>
 																			<?php	
 																		}
 																		?>

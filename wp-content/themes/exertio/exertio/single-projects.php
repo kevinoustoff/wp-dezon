@@ -364,7 +364,7 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 									<div class="fr-project-bidding">
 
 										<div class="fr-project-box">
-										  <h3><?php echo esc_html__( 'Canditatures pour ce projet', 'exertio_theme' ).' ('.$count_bids.')'; ?></h3>
+										  <h3><?php echo esc_html__( 'Les offres concernant ce projet', 'exertio_theme' ).' ('.$count_bids.')'; ?></h3>
 										</div>
 										<div class="project-proposal-box proposal-box-scrollable">
 										  <?php
@@ -697,7 +697,7 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 											</div>
 										  </div>
 										</div>
-										</div> <div><?php echo esc_html__('J\'ai lu les','exertio_theme'); ?><a href="<?php echo esc_url($exertio_theme_options['bid_tems_link']); ?>"><?php echo esc_html__('conditions générales','exertio_theme'); ?></a></div> </div>
+										</div> <div><?php echo esc_html__('J\'ai lu les ','exertio_theme'); ?><a href="<?php echo esc_url($exertio_theme_options['bid_tems_link']); ?>"><?php echo esc_html__('conditions générales','exertio_theme'); ?></a></div> </div>
 									  <button type="button" class="btn btn-theme btn-loading" id="btn_project_bid" data-post-id ='<?php echo esc_attr($pid); ?>'><?php echo esc_html__('Faire une offre','exertio_theme'); ?>
 									  <span class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </span>
 									  </button>
@@ -752,7 +752,7 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 									$price = get_post_meta($pid, '_project_cost', true);
 									$hours = get_post_meta($pid, '_estimated_hours', true);
 
-									echo '<small class="price_type protip" data-pt-title="'.__('Pour ','exertio_theme').$hours.__(' le montant total sera  ','exertio_theme'). fl_price_separator($hours*$price).'" data-pt-position="top" data-pt-scheme="black">'.esc_html__('Hourly','exertio_theme').' <i class="fal fa-question-circle"></i></small>';
+									echo '<small class="price_type protip" data-pt-title="'.__('Pour ','exertio_theme').$hours.__(' le montant total sera  ','exertio_theme'). fl_price_separator($hours*$price).'" data-pt-position="top" data-pt-scheme="black">'.esc_html__('Par heure','exertio_theme').' <i class="fal fa-question-circle"></i></small>';
 								}
 								else if($project_type == 'fixed')
 								{

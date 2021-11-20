@@ -39,7 +39,7 @@ if($current_user_id == $user_id)
 		  <div class="d-flex justify-content-between flex-wrap">
 			<div class="d-flex align-items-end flex-wrap">
 			  <div class="mr-md-3 mr-xl-5">
-				<h2><?php echo esc_html__('Invoices Detail','exertio_theme'); ?></h2>
+				<h2><?php echo esc_html__('Détails de la facture','exertio_theme'); ?></h2>
 				<div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
 				  <p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 				  <?php echo exertio_dashboard_extention_return(); ?> </div>
@@ -108,7 +108,36 @@ if($current_user_id == $user_id)
 						  }
 						  ?>
 						  <p><b><?php echo esc_html__( 'Facture N°', 'exertio_theme' ) ?> <?php echo esc_html($oder_id); ?></b> </p>
-						  <p class="order-invoice-status"> <b><?php echo esc_html__( 'Etat:', 'exertio_theme' ) ?></b> <span class="paid <?php echo esc_html($badge_color); ?>"> <?php echo esc_html($order_status); ?></span></p>
+						  <p class="order-invoice-status"> <b><?php echo esc_html__( 'Etat:', 'exertio_theme' ) ?></b> <span class="paid <?php echo esc_html($badge_color); ?>"> 
+						  	<?php 
+                              switch ($order_status) {
+                                case 'processing':
+                                   echo esc_html('en traitement');
+                                  break;
+                                case 'pending':
+                                   echo esc_html('en cours');
+                                  break;
+                                case 'on-hold':
+                                   echo esc_html('en attente');
+                                  break;
+                                case 'cancelled':
+                                   echo esc_html('annulé');
+                                  break;
+                                case 'refunded':
+                                   echo esc_html('remboursé');
+                                  break;
+                                case 'failed':
+                                   echo esc_html('echoué');
+                                  break;
+                                case 'completed':
+                                   echo esc_html('terminé');
+                                  break;
+                                default:
+                                  echo esc_html('en traitement');
+                                  break;
+                              }
+                              ?>
+						  	</span></p>
 						</div>
 					  </div>
 					</div>

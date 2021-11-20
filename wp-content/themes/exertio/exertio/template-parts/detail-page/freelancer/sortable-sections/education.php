@@ -12,7 +12,8 @@ if(!empty($edu_jsons))
 		{
 			?>
 			<div class="heading-contents">
-			  <h3><?php echo esc_html($exertio_theme_options['detail_edu_title']); ?></h3>
+			  <h3><?php // echo esc_html($exertio_theme_options['detail_edu_title']);
+			  echo esc_html("Formations"); ?></h3>
 			</div>
 			<?php
 		}

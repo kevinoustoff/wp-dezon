@@ -61,16 +61,16 @@ $alt_id ='';
       <li class="nav-item <?php if($page_name == 'create-project') { echo 'active';} ?>">
         <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
           <i class="fas fa-briefcase menu-icon"></i>
-          <span class="menu-title"><?php echo esc_html__( 'Projets', 'exertio_theme' ); ?></span>
+          <span class="menu-title"><?php echo esc_html__( 'Mes projets', 'exertio_theme' ); ?></span>
           <i class="menu-arrow"></i>
         </a>
         <div class="collapse <?php if($page_name == 'create-project' || $page_name == 'projects' || $page_name == 'ongoing-projects' || $page_name == 'completed-projects' || $page_name == 'canceled-projects' || $page_name == 'pending-projects' || $page_name == 'project-propsals' || $page_name == 'ongoing-project' || $page_name == 'ongoing-project-detail' || $page_name == 'ongoing-project-proposals') { echo 'show';} ?>" id="ui-basic">
           <ul class="nav flex-column sub-menu">
             <li class="nav-item <?php if($page_name == 'create-project') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=create-project"><?php echo esc_html__( 'Publier un projet', 'exertio_theme' ); ?></a></li>
-            <li class="nav-item <?php if($page_name == 'projects') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=projects"><?php echo esc_html__( 'Projets formulés', 'exertio_theme' ); ?></a></li>
+            <li class="nav-item <?php if($page_name == 'projects') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=projects"><?php echo esc_html__( 'Projets publiés', 'exertio_theme' ); ?></a></li>
             <li class="nav-item <?php if($page_name == 'pending-projects') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=pending-projects"><?php echo esc_html__( 'Projets en attente ', 'exertio_theme' ); ?></a></li>
             <li class="nav-item <?php if($page_name == 'ongoing-project') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=ongoing-project"><?php echo esc_html__( 'Projets en cours', 'exertio_theme' ); ?></a></li>
-            <li class="nav-item <?php if($page_name == 'completed-projects') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=completed-projects"><?php echo esc_html__( 'Projets finalisés', 'exertio_theme' ); ?></a></li>
+            <li class="nav-item <?php if($page_name == 'completed-projects') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=completed-projects"><?php echo esc_html__( 'Projets terminés', 'exertio_theme' ); ?></a></li>
             <li class="nav-item <?php if($page_name == 'canceled-projects') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=canceled-projects"><?php echo esc_html__( 'Projets rejetés', 'exertio_theme' ); ?></a></li>
           </ul>
         </div>
@@ -78,14 +78,14 @@ $alt_id ='';
       <li class="nav-item">
         <a class="nav-link" data-toggle="collapse" href="#services" aria-expanded="false" aria-controls="services">
           <i class="fas fa-user-cog menu-icon"></i>
-          <span class="menu-title"><?php echo esc_html__( 'Gérer les services', 'exertio_theme' ); ?></span>
+          <span class="menu-title"><?php echo esc_html__( 'Jobs acceptés', 'exertio_theme' ); ?></span>
           <i class="menu-arrow"></i>
         </a>
         <div class="collapse <?php if($page_name == 'ongoing-services' || $page_name == 'completed-services' || $page_name == 'completed-service-detail' || $page_name == 'canceled-services' || $page_name == 'canceled-service-detail') { echo 'show';}?>" id="services">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item <?php if($page_name == 'ongoing-services') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=ongoing-services"><?php echo esc_html__( 'Services en cours', 'exertio_theme' ); ?> </a></li>
-            <li class="nav-item <?php if($page_name == 'completed-services') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=completed-services"><?php echo esc_html__( 'Services finalisés', 'exertio_theme' ); ?> </a></li>
-            <li class="nav-item <?php if($page_name == 'canceled-services') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=canceled-services"><?php echo esc_html__( 'Services rejetés', 'exertio_theme' ); ?> </a></li>
+            <li class="nav-item <?php if($page_name == 'ongoing-services') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=ongoing-services"><?php echo esc_html__( 'Jobs en cours', 'exertio_theme' ); ?> </a></li>
+            <li class="nav-item <?php if($page_name == 'completed-services') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=completed-services"><?php echo esc_html__( 'Jobs terminés', 'exertio_theme' ); ?> </a></li>
+            <li class="nav-item <?php if($page_name == 'canceled-services') { echo 'active';} ?>"> <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=canceled-services"><?php echo esc_html__( 'Jobs rejetés', 'exertio_theme' ); ?> </a></li>
           </ul>
         </div>
       </li>
@@ -94,41 +94,18 @@ $alt_id ='';
 		{
 			global $whizzChat_options;
 			$dashboard_page = isset($whizzChat_options['whizzChat-dashboard-page']) && $whizzChat_options['whizzChat-dashboard-page'] != '' ? $whizzChat_options['whizzChat-dashboard-page'] : 'javascript:void(0)';
-			if ($dashboard_page != '')
-			{
-				?>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php echo esc_url(get_permalink($dashboard_page));?>" target="_blank">
-					  <i class="fas fa-comments menu-icon"></i>
-					  <span class="menu-title"><?php echo esc_html__( 'Messagerie', 'exertio_theme' ); ?></span>
-					</a>
-				</li>
-				<?php
-			}
 		}
 		?>
       <li class="nav-item <?php if($page_name == 'saved-services') { echo 'active';} ?>">
         <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=saved-services">
           <i class="far fa-bookmark menu-icon"></i>
-          <span class="menu-title"><?php echo esc_html__( 'Services enregistrés', 'exertio_theme' ); ?> </span>
-        </a>
-      </li>
-      <li class="nav-item <?php if($page_name == 'followed-freelancers') { echo 'active';} ?>">
-        <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=followed-freelancers">
-          <i class="fas fa-share menu-icon"></i>
-          <span class="menu-title"><?php echo esc_html__( 'Prestataires suivis', 'exertio_theme' ); ?> </span>
+          <span class="menu-title"><?php echo esc_html__( 'Jobs enregistrés', 'exertio_theme' ); ?> </span>
         </a>
       </li>
       <li class="nav-item <?php if($page_name == 'invoices') { echo 'active';} ?>">
         <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=invoices">
           <i class="fas fa-receipt menu-icon"></i>
-          <span class="menu-title"><?php echo esc_html__( 'Dépôt de fonds et factures', 'exertio_theme' ); ?> </span>
-        </a>
-      </li>
-      <li class="nav-item <?php if($page_name == 'disputes') { echo 'active';} ?>">
-        <a class="nav-link" href="<?php echo esc_url(get_the_permalink());?>?ext=disputes">
-          <i class="fas fa-shield-alt menu-icon"></i>
-          <span class="menu-title"><?php echo esc_html__( 'Litiges', 'exertio_theme' ); ?> </span>
+          <span class="menu-title"><?php echo esc_html__( 'Portefeuille', 'exertio_theme' ); ?> </span>
         </a>
       </li>
 	<li class="nav-item <?php if($page_name == 'identity-verification') { echo 'active';} ?>">

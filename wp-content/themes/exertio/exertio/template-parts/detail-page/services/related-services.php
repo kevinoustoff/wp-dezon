@@ -36,7 +36,7 @@ if(isset($is_related) && $is_related == 1)
 		<div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 col-xl-12">
 			<div class="related-posts"  id="related">
 				<div class="heading-contents">
-				  <h3>Services à la une</h3>
+				  <h3>Jobs sponsorisés</h3>
 				</div>
 				<div class="recomended-slider owl-carousel owl-theme">
 				<?php		

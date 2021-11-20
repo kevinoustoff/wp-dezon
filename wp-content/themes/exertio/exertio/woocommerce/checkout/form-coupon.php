@@ -23,21 +23,21 @@ if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 
 ?>
 <div class="woocommerce-form-coupon-toggle mt-3">
-	<?php wc_print_notice( apply_filters( 'woocommerce_checkout_coupon_message', esc_html__( 'Have a coupon?', 'exertio_theme' ) . ' <a href="#" class="showcoupon">' . esc_html__( 'Click here to enter your code', 'exertio_theme' ) . '</a>' ), 'notice' ); ?>
+	<?php wc_print_notice( apply_filters( 'woocommerce_checkout_coupon_message', esc_html__( 'Avez-vous un coupon?', 'exertio_theme' ) . ' <a href="#" class="showcoupon">' . esc_html__( 'Cliquez ici pour saisir le code', 'exertio_theme' ) . '</a>' ), 'notice' ); ?>
 </div>
 
 <form class="checkout_coupon woocommerce-form-coupon" method="post" style="display:none">
 
-	<p><?php esc_html_e( 'If you have a coupon code, please apply it below.', 'exertio_theme' ); ?></p>
+	<p><?php esc_html_e( 'Si vous aveze un code coupon, veuillez validez ça dans le champ suivant', 'exertio_theme' ); ?></p>
     <div class="row">
     <div class="col-xl-9 col-12">
 	<div class="form-group">
-		<input type="text" name="coupon_code" class="input-text form-control" placeholder="<?php esc_attr_e( 'Coupon code', 'exertio_theme' ); ?>" id="coupon_code" value="" />
+		<input type="text" name="coupon_code" class="input-text form-control" placeholder="<?php esc_attr_e( 'Code coupon', 'exertio_theme' ); ?>" id="coupon_code" value="" />
 	</div>
     </div>
     <div class="col-xl-3 col-12">
 	<div class="form-group prop-coupon-btn">
-		<button type="submit" class="btn btn-theme btn-block" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'exertio_theme' ); ?>"><?php esc_html_e( 'Apply coupon', 'exertio_theme' ); ?></button>
+		<button type="submit" class="btn btn-theme btn-block" name="apply_coupon" value="<?php esc_attr_e( 'Valider', 'exertio_theme' ); ?>"><?php esc_html_e( 'Valider', 'exertio_theme' ); ?></button>
 	</div>
     </div>
 </div>

@@ -578,13 +578,15 @@ $pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
                             <div class="form-group col-md-12">
                               <div id="google_canvas" style="width:100%; height:400px;"></div>
                             </div>
-                            <div class="form-group col-md-6">
-                              <label><?php echo esc_html__('Latitude','exertio_theme'); ?></label>
-                              <input type="text" class="form-control" name="fl_lat" id="loc_lat" value="<?php echo get_post_meta($pid, '_freelancer_latitude', true); ?>">
-                            </div>
-                            <div class="form-group col-md-6">
-                              <label><?php echo esc_html__('Longitude','exertio_theme'); ?></label>
-                              <input type="text" class="form-control" name="fl_long" id="loc_long" value="<?php echo get_post_meta($pid, '_freelancer_longitude', true); ?>">
+                            <div style="display:none;">
+                                <div class="form-group col-md-6">
+                                  <label><?php echo esc_html__('Latitude','exertio_theme'); ?></label>
+                                  <input type="text" class="form-control" name="fl_lat" id="loc_lat" value="<?php echo get_post_meta($pid, '_freelancer_latitude', true); ?>">
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label><?php echo esc_html__('Longitude','exertio_theme'); ?></label>
+                                  <input type="text" class="form-control" name="fl_long" id="loc_long" value="<?php echo get_post_meta($pid, '_freelancer_longitude', true); ?>">
+                                </div>
                             </div>
                             <?php
 								}

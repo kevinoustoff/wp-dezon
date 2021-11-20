@@ -22,7 +22,7 @@ if(is_user_logged_in())
 				  <label> <?php echo esc_html__('Montant','exertio_theme'); ?></label>
 				  <?php echo fl_get_products(); ?>
 				</div>
-				<div class="form-group col-md-12">
+				<div class="form-group col-md-12" style="display:none">
 					<label> <?php echo esc_html__('Votre email','exertio_theme'); ?></label>
 				  <input type="text" class="form-control" name="funds_amount" disabled placeholder="<?php echo esc_attr($email); ?>">
 				  <p><?php echo esc_html__(' Vous ne pouvez pas modifier ce champ','exertio_theme'); ?></p>

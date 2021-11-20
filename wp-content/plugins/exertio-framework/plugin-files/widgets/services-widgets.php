@@ -40,7 +40,7 @@ class exertio_services_keyword_widget extends WP_Widget
           <div id="search-widget" class="panel-collapse collapse <?php echo esc_attr($show); ?>" role="tabpanel" >
             <div class="panel-body">
               <div class="form-group">
-                <input type="text" class="form-control" name="title" placeholder="<?php echo __( 'What are you looking for', 'exertio_theme' ); ?>" value="<?php echo esc_attr($title_value); ?>">
+                <input type="text" class="form-control" name="title" placeholder="<?php echo __( 'Que recherchez-vous?', 'exertio_theme' ); ?>" value="<?php echo esc_attr($title_value); ?>">
               </div>
             </div>
           </div>

@@ -25,9 +25,9 @@ $get_sid = $_GET['sid'];
                       <div class="d-flex justify-content-between flex-wrap">
                         <div class="d-flex align-items-end flex-wrap">
                           <div class="mr-md-3 mr-xl-5">
-                            <h2><?php echo esc_html__('Ongoing Service Detail','exertio_theme');?></h2>
+                            <h2><?php echo esc_html__('Détail du job en cours','exertio_theme');?></h2>
 							<div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
-								<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Dashboard', 'exertio_theme' ); ?>&nbsp;</p>
+								<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 								<?php echo exertio_dashboard_extention_return(); ?>
 							</div>
                           </div>
@@ -89,16 +89,16 @@ $get_sid = $_GET['sid'];
                                                         echo get_profile_img($seller_id , 'freelancer');
                                                     ?>
                                                     <span class="buyer_name"><a href="<?php echo get_the_permalink($seller_id); ?>"><?php echo exertio_get_username('freelancer',$seller_id, 'badge', 'left')?></a></span>
-                                                    <span class="service_start_date"> <?php echo esc_html__( 'Purchased on ', 'exertio_theme' ).' '.esc_html(date("F jS, Y", strtotime($result[0]['timestamp']))); ?></span>
+                                                    <span class="service_start_date"> <?php echo esc_html__( 'payé le ', 'exertio_theme' ).' '.esc_html(date("d/m/Y", strtotime($result[0]['timestamp']))); ?></span>
                                                 </div>
                                                 <div class="pro-coulmn">
                                                     <form>                
                                                         <select class="form-control general_select_2 service_status">
-                                                            <option value=""><?php echo esc_html__( 'Select status', 'exertio_theme' ); ?></option>
-                                                            <option value="complete"><?php echo esc_html__( 'Complete', 'exertio_theme' ); ?></option>
-                                                            <option value="cancel"><?php echo esc_html__( 'Cancel', 'exertio_theme' ); ?></option>
+                                                            <option value=""><?php echo esc_html__( 'Choisir un statut', 'exertio_theme' ); ?></option>
+                                                            <option value="complete"><?php echo esc_html__( 'Terminé', 'exertio_theme' ); ?></option>
+                                                            <option value="cancel"><?php echo esc_html__( 'Annulé', 'exertio_theme' ); ?></option>
                                                         </select>
-                                                        <button type="button" class="btn btn-theme btn-loading" id="service_status"><?php echo esc_html__( 'Update', 'exertio_theme' ); ?><div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button>
+                                                        <button type="button" class="btn btn-theme btn-loading" id="service_status"><?php echo esc_html__( 'Modifier', 'exertio_theme' ); ?><div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button>
                                                     </form>
                                                 </div>
                                               </div>
@@ -108,8 +108,8 @@ $get_sid = $_GET['sid'];
                                     {
                                         ?>
                                         <div class="nothing-found">
-                                            <h3><?php echo esc_html__( 'Sorry!!! No Record Found', 'exertio_theme' ) ?></h3>
-                                            <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo esc_html__( 'Nothing found icon', 'exertio_theme' ) ?> ">
+                                            <h3><?php echo esc_html__( 'Désolé!!! Aucun job trouvé', 'exertio_theme' ) ?></h3>
+                                            <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo esc_html__( 'Aucune icone trouvée', 'exertio_theme' ) ?> ">
                                         </div>
                                         <?php	
                                     }
@@ -145,7 +145,7 @@ $get_sid = $_GET['sid'];
                                                                 ?>
                                                                 <div class="history_attch_dwld btn-loading" id="download-files" data-id="<?php echo esc_attr($message->attachment_ids); ?>">
                                                                     <i class="fal fa-arrow-to-bottom"></i>
-                                                                    <?php echo esc_html__( 'Attachments', 'exertio_theme' ); ?>
+                                                                    <?php echo esc_html__( 'Fichiers', 'exertio_theme' ); ?>
                                                                     <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
                                                                 </div>
                                                                 <?php
@@ -176,7 +176,7 @@ $get_sid = $_GET['sid'];
                                                                 ?>
                                                                 <div class="history_attch_dwld btn-loading" data-id="<?php echo esc_attr($message->attachment_ids); ?>">
                                                                     <i class="fal fa-arrow-to-bottom"></i>
-                                                                    <?php echo esc_html__( 'Attachments', 'exertio_theme' ); ?>
+                                                                    <?php echo esc_html__( 'Fichiers', 'exertio_theme' ); ?>
                                                                     <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
                                                                 </div>
                                                                 <?php
@@ -191,7 +191,7 @@ $get_sid = $_GET['sid'];
                                         else
                                         {
                                             ?>
-                                            <p class="text-center"><?php echo esc_html__( 'No history found', 'exertio_theme' ); ?></p>
+                                            <p class="text-center"><?php echo esc_html__( 'Aucun historique trouvé', 'exertio_theme' ); ?></p>
                                             <?php	
                                         }
                                         ?>
@@ -199,18 +199,18 @@ $get_sid = $_GET['sid'];
                                 </div>
                           </div>
                           <div class="history-msg-form">
-                            <h3><?php echo esc_html__( 'Send Message', 'exertio_theme' ); ?></h3>
+                            <h3><?php echo esc_html__( 'Envoyer un message', 'exertio_theme' ); ?></h3>
                             <div class="history-text">
                                 <form id="send_service_msg">
                                     <div class="form-row">
                                         <div class="form-group col-md-12">
-                                            <textarea name="history_msg_text" id="" class="form-control" required data-smk-msg="<?php echo esc_html__('Please provide message to send','exertio_theme'); ?>" placeholder="<?php echo esc_html__('Type your message here.....','exertio_theme'); ?>"></textarea>
+                                            <textarea name="history_msg_text" id="" class="form-control" required data-smk-msg="<?php echo esc_html__('Veuillez saisir le message à envoyer','exertio_theme'); ?>" placeholder="<?php echo esc_html__('Tapez votre message ici.....','exertio_theme'); ?>"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-12">
                                             <div class="upload-btn-wrapper">
-                                                <button class="btn btn-theme-secondary mt-2 mt-xl-0" type="button"><?php echo esc_html__('Select Attachments','exertio_theme'); ?></button>
+                                                <button class="btn btn-theme-secondary mt-2 mt-xl-0" type="button"><?php echo esc_html__('Selectionner des fichiers','exertio_theme'); ?></button>
                                                 <input type="file" id="gen_attachment_uploader" multiple name="project_attachments[]" accept = "image/pdf/doc/docx/ppt/pptx*" data-post-id="<?php echo esc_attr($get_sid) ?>"/>
                                                 <input type="hidden" name="attachment_ids" value="" id="history_attachments_ids">
                                             </div>
@@ -223,7 +223,7 @@ $get_sid = $_GET['sid'];
                                     <div class="form-row">
                                         <div class="form-group col-md-12">
                                             <button type="button" class="btn btn-theme float-right btn-loading" id="service_history_msg_btn" data-post-id="<?php echo esc_attr($get_sid) ?>" data-sender-id="<?php echo esc_attr($buyer_id_msg); ?>" data-receiver-id="<?php echo esc_attr($seller_id_msg); ?>">
-                                                <?php echo esc_html__('Send Message','exertio_theme'); ?>
+                                                <?php echo esc_html__('Envoyer','exertio_theme'); ?>
                                                 <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
                                             </button>
                                         </div>
@@ -241,7 +241,7 @@ $get_sid = $_GET['sid'];
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                      	<small><?php echo esc_html__('Provide Feedback to ','exertio_theme'); ?></small>
+                      	<small><?php echo esc_html__('Laisser un avis à ','exertio_theme'); ?></small>
                         <h4 class="modal-title" id="review-modal"><?php echo exertio_get_username('freelancer',$seller_id_msg, 'badge', 'right'); ?></h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true"><i class="fal fa-times"></i></span>
@@ -255,30 +255,30 @@ $get_sid = $_GET['sid'];
                                     <p><?php if(isset($exertio_theme_options['service_first_title'])){ echo esc_html($exertio_theme_options['service_first_title']); } ?></p>
                                     <div class="review stars-1"></div>
                                     <div class="form-group">
-                                    <input type="text" id="stars-1" name="stars_1" value=""  required data-smk-msg="<?php echo esc_html__('This is required','exertio_theme'); ?>">
+                                    <input type="text" id="stars-1" name="stars_1" value=""  required data-smk-msg="<?php echo esc_html__('Ce champ est requis','exertio_theme'); ?>">
                                     </div>
                                   </li>
                                   <li>
                                     <p><?php if(isset($exertio_theme_options['service_second_title'])){ echo esc_html($exertio_theme_options['service_second_title']); } ?></p>
                                     <div class="review stars-2"></div>
                                     <div class="form-group">
-                                    <input type="text" id="stars-2" name="stars_2"  required data-smk-msg="<?php echo esc_html__('This is required','exertio_theme'); ?>">
+                                    <input type="text" id="stars-2" name="stars_2"  required data-smk-msg="<?php echo esc_html__('Ce champ est requis','exertio_theme'); ?>">
                                     </div>
                                   </li>
                                   <li>
                                     <p><?php if(isset($exertio_theme_options['service_third_title'])){ echo esc_html($exertio_theme_options['service_third_title']); } ?></p>
                                     <div class="review stars-3"></div>
                                     <div class="form-group">
-                                    <input type="text" id="stars-3" name="stars_3"  required data-smk-msg="<?php echo esc_html__('This is required','exertio_theme'); ?>">
+                                    <input type="text" id="stars-3" name="stars_3"  required data-smk-msg="<?php echo esc_html__('Ce champ est requis','exertio_theme'); ?>">
                                     </div>
                                   </li>
                                 </ul>
                             </div>
                             <div class="form-group">
-                                <label> <?php echo esc_html__('Feedback ','exertio_theme'); ?> </label>
-                                <textarea class="form-control" name="feedback_text" rows="5" cols="10" required data-smk-msg="<?php echo esc_html__('Please provide feedback','exertio_theme'); ?>"></textarea>
+                                <label> <?php echo esc_html__('Avis ','exertio_theme'); ?> </label>
+                                <textarea class="form-control" name="feedback_text" rows="5" cols="10" required data-smk-msg="<?php echo esc_html__('Veuillez laisser un avis','exertio_theme'); ?>"></textarea>
                             </div>
-                            <div class="form-group"> <button type="button" id="service_rating_btn" class="btn btn-theme btn-loading" data-ongoing-sid="<?php echo esc_attr($ongoing_sid) ?>" data-status= "complete"><?php echo esc_html__('Complete & Submit','exertio_theme'); ?> <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button> </div>
+                            <div class="form-group"> <button type="button" id="service_rating_btn" class="btn btn-theme btn-loading" data-ongoing-sid="<?php echo esc_attr($ongoing_sid) ?>" data-status= "complete"><?php echo esc_html__('Envoyer','exertio_theme'); ?> <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button> </div>
                         </form>
                       </div>
                     </div>
@@ -289,8 +289,8 @@ $get_sid = $_GET['sid'];
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                      	<small><?php echo esc_html__('Provide Reason to ','exertio_theme'); ?></small>
-                        <h4 class="modal-title" id="review-modal-cancel"><?php echo esc_html__('Cancel Service','exertio_theme'); ?></h4>
+                      	<small><?php echo esc_html__('Raison pour l\'annulation du job ','exertio_theme'); ?></small>
+                        <h4 class="modal-title" id="review-modal-cancel"><?php echo esc_html__('Annuler le job','exertio_theme'); ?></h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true"><i class="fal fa-times"></i></span>
                         </button>
@@ -299,10 +299,10 @@ $get_sid = $_GET['sid'];
                         <form id="cancel-service-from">
                             <div class="form-group">
                                 <label> <?php echo esc_html__('Feedback ','exertio_theme'); ?> </label>
-                                <textarea class="form-control" name="feedback_text" rows="5" cols="10" required data-smk-msg="<?php echo esc_html__('Please provide reason','exertio_theme'); ?>"></textarea>
-                                <p> <?php echo esc_html__('Provide information on why you are canceling this service.','exertio_theme'); ?></p>
+                                <textarea class="form-control" name="feedback_text" rows="5" cols="10" required data-smk-msg="<?php echo esc_html__('Veuillez fournir une raison','exertio_theme'); ?>"></textarea>
+                                <p> <?php echo esc_html__('Fournissez une information expliquant la raison de l\'annulation du job.','exertio_theme'); ?></p>
                             </div>
-                            <div class="form-group"> <button type="button" id="cancel-service-btn" class="btn btn-theme btn-loading" data-ongoing-sid="<?php echo esc_attr($ongoing_sid) ?>" data-status= "cancel"><?php echo esc_html__('Cancel this service','exertio_theme'); ?> <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button> </div>
+                            <div class="form-group"> <button type="button" id="cancel-service-btn" class="btn btn-theme btn-loading" data-ongoing-sid="<?php echo esc_attr($ongoing_sid) ?>" data-status= "cancel"><?php echo esc_html__('Annuler ce job','exertio_theme'); ?> <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button> </div>
                         </form>
                       </div>
                     </div>

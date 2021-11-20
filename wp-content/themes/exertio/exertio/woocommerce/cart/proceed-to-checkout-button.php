@@ -22,5 +22,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="btn btn-theme btn-block alt wc-forward">
-	<i class="fas fa-shopping-cart"></i> &nbsp;<?php esc_html_e( 'Proceed to checkout', 'exertio_theme' ); ?>
+	<i class="fas fa-shopping-cart"></i> &nbsp;<?php esc_html_e( 'Commander', 'exertio_theme' ); ?>
 </a>

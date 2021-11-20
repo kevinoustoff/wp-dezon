@@ -86,7 +86,12 @@ class Whizz_Chat_box_Html {
                                      <div class="chatbox-inner-holder"></div>
                              </div>';
         } else {
-            $html = '<div class="chatbox-holder">
+            $list_html_start ='<input type="checkbox" id="click">
+              <label for="click">
+              <i class="fab fa-facebook-messenger"></i>
+              <i class="fas fa-times"></i>
+              </label>';
+            $html = $list_html_start.'<div class="chatbox-holder">
                         <div class="chatbox-inner-holder">' . $chat_box_html . '</div>
                         ' . $list_render . '
                 </div>';
@@ -121,7 +126,7 @@ class Whizz_Chat_box_Html {
     }
 
     public function whizzChat_individual_user_blocked_html($html = '', $user_data = array(), $box_content = array()) {
-        $html .= "<p class='whizzChat-block-user-p blocked-chat-p'>" . esc_html__('Chat Ended', 'whizz-chat') . "</p>";
+        $html .= "<p class='whizzChat-block-user-p blocked-chat-p'>" . esc_html__('Discussion terminée', 'whizz-chat') . "</p>";
 
         return $html;
     }
@@ -554,6 +559,7 @@ class Whizz_Chat_box_Html {
             $dashboard_style = 'href="' . get_permalink($dashboard_page) . '" target="__blank" ';
         }
 
+        
         $list_html = '<div class="chatbox group-chat chatbox-list' . $hide_list_class . '" id="whizz-list-' . $user_id_ses . '">
             <div class="chatbox-top"' . $color_style . '>
               <div class="chat-group-name"> 
@@ -659,8 +665,8 @@ class Whizz_Chat_box_Html {
     public function whizzChat_individual_chatbox_header_html_admin($chat_id, $post_id) {
         $random = rand(0, 9999);
         $current_user = whizzChat::session_id();
-        $is_blocked = esc_html__("Block", "whizz-chat");
-        $is_blocked1 = esc_html__("Unblock", "whizz-chat");
+        $is_blocked = esc_html__("Bloquer", "whizz-chat");
+        $is_blocked1 = esc_html__("Débloquer", "whizz-chat");
         $blocked = whizzChat_is_user_blocked($chat_id);
         if (isset($blocked['is_blocked']) && $blocked['is_blocked'] == true) {
             $is_blocked = esc_html__("Débloquer", "whizz-chat");
