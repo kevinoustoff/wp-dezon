@@ -574,10 +574,46 @@
 		$data["competences_levels"] = $competences_levels;
 		$data["locations"] = $services_locations;
 		$data["disponibilites"] = $response_time;
-
+		$data["addons_services"] = getServicesAddons($request->get_param("user_id"));
 		 return new WP_REST_RESPONSE(
 			$data
 		);
+	}
+
+	function getServicesAddons($user_id){
+		if ( get_query_var( 'paged' ) ) {
+			$paged = get_query_var( 'paged' );
+		} else if ( get_query_var( 'page' ) ) {
+			$paged = get_query_var( 'page' );
+		} else {
+			$paged = 1;
+		}
+		$args = array( 
+			'author__in' => array( $user_id ) ,
+			'post_type' =>'addons',
+			'meta_query' => array(
+				array(
+					'key' => '_addon_status',
+					'value' => 'active',
+					'compare' => '=',
+					),
+				),
+			'paged' => $paged,	
+			'post_status'     => 'publish'													
+			);
+
+		 $addons = get_posts($args);
+		 $customizedAddons = [];
+
+		 foreach($addons as $addonService){
+			$singleAddon["title"] = $addonService->post_title;
+			$singleAddon["content"] = $addonService->post_content;
+			$singleAddon["id"] = $addonService->ID;
+			$singleAddon["price"] = fl_price_separator(get_post_meta( $addonService->ID,'_addon_price', true ));
+			array_push($customizedAddons,$singleAddon);
+		}
+
+		return $customizedAddons;
 	}
 
 	function get_service_taxonomies_terms($the_term){
@@ -591,6 +627,151 @@
 		
 		}
 		return $final_term_array;
+
+	}
+
+	function createService(WP_REST_Request $request){
+		global $exertio_theme_options;
+		$user_id = $request->get_param('user_id');
+
+		$my_post = array(
+			
+			'post_title' => $request->get_param("service_title"),
+			'post_content' => $request->get_param("service_description"),
+			'post_type' => 'services',
+			'post_author' => $user_id,
+			'post_status'   => 'publish',
+		);
+		$sid = wp_insert_post($my_post);
+		if($request->get_param("service_price")){
+			update_post_meta( $sid, '_service_price', sanitize_text_field($request->get_param("service_price")));
+		}
+		// update_post_meta
+		if($request->get_param("response_time")){
+			$response_terms = array((int)$request->get_param("response_time"));
+			update_post_meta($sid,'_response_time', sanitize_text_field($request->get_param("response_time")));
+			wp_set_post_terms( $sid, $response_terms, 'response-time', false );
+		}
+		if($request->get_param('delivery_time'))
+		{
+			$delivery_terms = array((int)$request->get_param('delivery_time')); 
+			update_post_meta( $sid, '_delivery_time', sanitize_text_field($request->get_param('delivery_time')));
+			wp_set_post_terms( $sid, $delivery_terms, 'delivery-time', false );
+			
+		}
+		if($request->get_param('service_level'))
+		{
+			$service_english_level_term = array((int)$request->get_param('service_level')); 
+			update_post_meta( $sid, '_service_eng_level', sanitize_text_field($request->get_param('service_level')));
+			wp_set_post_terms( $sid, $service_english_level_term, 'services-english-level', false );
+		}
+		if($request->get_param('service_location'))
+		{
+			update_post_meta( $sid, '_service_location', sanitize_text_field($request->get_param('service_location')));
+			set_hierarchical_terms('services-locations', $request->get_param('service_location'),$sid);
+		}
+		if($request->get_param('service_category'))
+		{
+			update_post_meta($sid, '_service_category', sanitize_text_field($request->get_param('service_category')));
+			set_hierarchical_terms('service-categories', $request->get_param('service_category'), $sid);
+		}
+		if($request->get_param('service_address'))
+		{
+			update_post_meta( $sid, '_service_address', sanitize_text_field($request->get_param("service_address")));
+		}
+		if($request->get_param('service_latitude'))
+		{
+			update_post_meta( $sid, '_service_latitude', sanitize_text_field($request->get_param('services_latitude')));
+		}
+		if($request->get_param('service_longitude'))
+		{
+			update_post_meta( $sid, '_service_longitude', sanitize_text_field($request->get_param('services_longitude')));
+		}
+		if($request->get_param('addons_service'))
+		{
+			$services_addon =(array) json_decode($request->get_param('addons_service'));
+			
+			for($i=0; $i<count($services_addon); $i++)
+			{
+				$name = sanitize_text_field($services_addon[$i]);
+				$addon[] = $name;
+			}
+			$encoded_addon =  json_encode($addon);
+			update_post_meta( $sid, '_services_addon', $encoded_addon );
+		}
+		update_post_meta( $sid, '_service_status', 'active');
+		$files = $request->get_file_params();
+		require_once( ABSPATH . 'wp-admin/includes/image.php' );
+    	require_once( ABSPATH . 'wp-admin/includes/file.php' );
+    	require_once( ABSPATH . 'wp-admin/includes/media.php' );
+		if(count($files)>0){
+			update_post_meta( $sid, '_service_attachment_show', 'yes');
+		} else{
+			update_post_meta( $sid, '_service_attachment_show', 'no');
+		}
+		$status = get_post_meta($sid, '_service_status', true);
+		update_post_meta( $sid, '_service_is_featured', 0);
+		$attachment_ids = [];
+
+		foreach($files as $key =>$value){
+			if($value["name"] !== null){
+			    $file = array(
+					'name' => $value['name'],
+					'type' => $value['type'],
+					'tmp_name' => $value['tmp_name'],
+					'error' => $value['error'],
+					'size' => $value['size']
+				);
+				
+				$_FILES = array ("emp_profile_picture" => $file);
+
+				$image_size = $exertio_theme_options['user_attachment_size']*2;
+
+				if($file['size']/1000 > $image_size){
+					return new WP_Error(
+						500,
+						'La taille maximale du fichier'.$image_size.' KB',
+						'no'
+					);
+
+				}
+				
+				update_post_meta( $sid, '_service_attachment_show', 'no');
+				foreach ($_FILES as $file => $array) 
+				{       
+					update_post_meta( $sid, '_service_attachment_show', 'yes');       
+					
+					/*if($imgcount>=$condition_img){ break; }*/ 
+					$attach_id = media_handle_upload( $file, $sid );
+					array_push($attachment_ids, $attach_id);
+				
+					$image_link = wp_get_attachment_image_src( $attach_id, 'thumbnail' );
+					
+				}
+				// update_post_meta( $sid, '_project_is_featured', 0);
+
+				//$attach_id = media_handle_upload($file, )
+
+				foreach($attachment_ids as $attached_file_id){
+					update_post_meta( $sid, '_service_attachment_ids', $attached_file_id);
+				}
+				// $c_dATE = DATE("d-m-Y");
+				// $default_project_expiry = fl_framework_get_options('project_default_expiry');
+				// $simple_project_expiry_date = date('d-m-Y', strtotime($c_dATE. " + $default_project_expiry days"));
+				// update_post_meta($pid, '_simple_projects_expiry_date', $simple_project_expiry_date);
+				
+
+				
+
+
+			}
+			
+			//die();
+		}
+		return new WP_REST_RESPONSE(
+			["message" => "success"]
+		);
+
 
 	}
 
