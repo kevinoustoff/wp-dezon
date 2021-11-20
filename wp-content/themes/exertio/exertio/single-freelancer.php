@@ -53,15 +53,12 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 									case 'projects': get_template_part( 'template-parts/detail-page/freelancer/sortable-sections/projects', '' );
 									break;
 
-									/*
 									case 'experience': get_template_part( 'template-parts/detail-page/freelancer/sortable-sections/experience', '' );    
 									break; 
-									*/
-									/*
+									
 									case 'education': get_template_part( 'template-parts/detail-page/freelancer/sortable-sections/education', '' );    
 									break;
-									*/
-
+									
 									case 'ads_1': get_template_part( 'template-parts/detail-page/freelancer/sortable-sections/advertisement_1', '' );    
 									break;
 
@@ -83,10 +80,10 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 							foreach ( $layout_sidebar as $key => $value )
 							{
 								switch($key) {
-									/*
+									
 									case 'certifications': get_template_part( 'template-parts/detail-page/freelancer/sidebar/certifications', '' );
 									break;
-									*/
+									
 									case 'skills': get_template_part( 'template-parts/detail-page/freelancer/sidebar/skills', '' );
 									break;
 

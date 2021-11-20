@@ -6,6 +6,45 @@
 		lazyInit:true,
 		//minDate:'0',
 	});
+	//Ajout du script pour les dates du projet
+	jQuery.datetimepicker.setLocale('fr');
+	jQuery('#datetimepicker').datetimepicker({
+	   i18n:{
+		  fr:{
+		   months:[
+		    'Janvier','Février','Mars','Avril',
+		    'Mai','Jun','Juil','Août',
+		    'Septembre','Octobre','Novembre','Decembre',
+		   ],
+		   dayOfWeek:[
+		    "Dim.", "Lun", "Mar", "Mer", 
+		    "Jeu", "Ven", "Sam",
+		   ]
+		  }
+		 },
+	  startDate:'+2021/10/01',
+	  format:'d/m/Y H:i',
+	  lazyInit:true,
+	});
+	jQuery('#datetimepicker2').datetimepicker({
+		 i18n:{
+		  fr:{
+		   months:[
+		    'Janvier','Février','Mars','Avril',
+		    'Mai','Jun','Juil','Août',
+		    'Septembre','Octobre','Novembre','Decembre',
+		   ],
+		   dayOfWeek:[
+		    "Dim.", "Lun", "Mar", "Mer", 
+		    "Jeu", "Ven", "Sam",
+		   ]
+		  }
+		 },
+	  startDate:'+2021/10/01',
+	  format:'d/m/Y H:i',
+	  lazyInit:true,
+	});
+	//fin script date
 	$('.general_select').select2();
 	$('.general_select_2').select2({ minimumResultsForSearch: -1 });
 	$('.multi_select').select2({
