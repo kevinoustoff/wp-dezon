@@ -629,6 +629,7 @@ function filtersProjects(){
 	}
 
 	function createProject(WP_REST_Request $request){
+		
 		global $exertio_theme_options;
 		$user_id = $request->get_param('user_id');
 		$employer_id = get_user_meta( $user_id, 'employer_id' , true );
@@ -782,6 +783,10 @@ function filtersProjects(){
 					update_post_meta( $pid, '_project_attachment_ids', $attached_file_id);
 
 				}
+				$c_dATE = DATE("d-m-Y");
+				$default_project_expiry = fl_framework_get_options('project_default_expiry');
+				$simple_project_expiry_date = date('d-m-Y', strtotime($c_dATE. " + $default_project_expiry days"));
+				update_post_meta($pid, '_simple_projects_expiry_date', $simple_project_expiry_date);
 				
 
 				
