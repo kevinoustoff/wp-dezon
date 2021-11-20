@@ -591,7 +591,7 @@
 
             if($category->parent == 0){
                 $categories[$index]['term_id'] = $category->term_id;
-                $categories[$index]['name'] = $category->name;
+                $categories[$index]['name'] = htmlspecialchars_decode($category->name);
 
                 $index++;
             }
@@ -640,25 +640,13 @@
         $indexPays = 0;
         $locations = [];
         foreach($location_taxonomies as $location)
-        {
+        {   
             $indexVilles = 0;
             if($location->parent ==0){
                 $locations[$indexPays]['id'] = $location->term_id;
             $locations[$indexPays]['name'] = $location->name;
-
-            $villes = [];
-
-            foreach($location_taxonomies as $loc){
-                if($loc->parent == $location->term_id)
-                {
-                    $villes[$indexVilles]['id'] = $loc->term_id;
-                    $villes[$indexVilles]['name'] = $loc->name;
-                }
-                $indexVilles++;
-
-
-            }
-            $locations[$indexPays]['villes'] = array_values($villes);
+                $locations[$indexPays]['villes'] = [];
+            
             $indexPays++;
             }
             
