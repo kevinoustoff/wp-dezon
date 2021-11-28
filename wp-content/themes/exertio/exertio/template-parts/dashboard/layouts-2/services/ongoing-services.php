@@ -114,14 +114,21 @@ $start_from = ($pageno-1) * $limit;
 													if(in_array('whizz-chat/whizz-chat.php', apply_filters('active_plugins', get_option('active_plugins'))))
 													{
 													?>
-														
+													<div style="padding-bottom:10px">
+														<a href="javascript:void(0)" class="chat_toggler btn btn-theme" data-user_id="<?php echo esc_attr($buyer_user_id); ?>" data-page_id='<?php echo esc_attr($sid); ?>'>
+															<i class="far fa-comment-alt"></i>
+															<?php echo esc_html__( 'Contacter', 'exertio_theme' ); ?>
+														</a>
+													</div>
 											<?php
 													}
 												}
 												if( fl_framework_get_options('turn_services_messaging') == true)
 												{
 													?>
-													<a href="?ext=ongoing-service-detail&sid=<?php echo esc_html($ongoing_sid); ?>" class="btn btn-theme-secondary"><?php echo esc_html__( 'Voir le détail', 'exertio_theme' ); ?></a>
+													<div>
+														<a href="?ext=ongoing-service-detail&sid=<?php echo esc_html($ongoing_sid); ?>" class="btn btn-theme-secondary"><?php echo esc_html__( 'Voir le détail', 'exertio_theme' ); ?></a>
+													</div>
 													<?php
 												}
 											?>

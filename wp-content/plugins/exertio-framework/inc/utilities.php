@@ -952,6 +952,18 @@ if ( ! function_exists( 'fl_create_project' ) )
 			update_post_meta( $post_id, '_project_level', sanitize_text_field($params['project_level']));
 			wp_set_post_terms( $post_id, $project_level_terms, 'project-level', false );
 		}
+		/* herve script*/
+		if(isset($params['project_date_debut']))
+		{
+			update_post_meta( $post_id, '_project_date_debut', sanitize_text_field($params['project_date_debut']));
+			wp_set_post_terms( $post_id, $params['project_date_debut'], 'project-date-debut', false );
+		}
+		if(isset($params['project_date_fin']))
+		{
+			update_post_meta( $post_id, '_project_date_fin', sanitize_text_field($params['project_date_fin']));
+			wp_set_post_terms( $post_id, $params['project_date_fin'], 'project-date-fin', false );
+		}
+		/*fin script*/
 		if(isset($params['project_duration']))
 		{
 			$duration_terms = array((int)$params['project_duration']); 

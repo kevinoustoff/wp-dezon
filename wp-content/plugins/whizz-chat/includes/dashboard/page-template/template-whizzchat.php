@@ -70,6 +70,8 @@
                                 <ul class="contacts-list" id="chatContactTab" data-chat-list="">
                                     <?php
                                     $chat_lists = whizzChat_chat_list();
+
+
                                     $chat_list_html = apply_filters('whizzChat_dashboard_load_chatlist', $chat_lists);
                                     echo whizzChat_return($chat_list_html);
                                     ?>

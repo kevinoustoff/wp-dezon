@@ -152,7 +152,7 @@ $current_user_id = get_current_user_id();
 											<span class="img"><a href="'.esc_url(get_permalink($freelancer_id)).'">'.$freelancer_img.'</a></span> <span class="name"><a href="'.esc_url(get_permalink($freelancer_id)).'">'.$freelancer_name.'</a></span>'.esc_html__( ' a fait une offre sur ', 'exertio_theme' ).'<span class="project_name"><a href="'.esc_url(get_permalink($project_id)).'">'.$project_name.'</a></span>
 											<p>'.esc_html(date_i18n( get_option( "date_format" ), strtotime( $posted_date ))).'</p>
 										</div>';
-									$proposals_html .= '<div class="pro-coulmn">'.$project_cost.'</div></div>';
+									$proposals_html .= '<div class="">'.$project_cost.'</div></div>';
 								}
 								echo wp_return_echo($proposals_html);
 							}

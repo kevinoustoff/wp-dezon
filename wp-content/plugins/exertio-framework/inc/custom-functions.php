@@ -859,7 +859,7 @@ if ( ! function_exists( 'time_ago_function' ) )
             __('seconde', 'exertio_framework'),
             __('minute', 'exertio_framework'),
             __('heure', 'exertio_framework'),
-            __('jour', 'exertio_framework'),
+            __('jour(s)', 'exertio_framework'),
             __('mois', 'exertio_framework'),
             __('année', 'exertio_framework')
         );
@@ -1090,7 +1090,7 @@ if ( ! function_exists( 'fl_project_status_rating' ) )
 					
 					if (is_wp_error($result))
 					{
-						$return = array('message' => esc_html__( 'ne peut pas marquer comme refusé !!! Veuillez contacter l\'équipe de Dezon', 'exertio_framework' ));
+						$return = array('message' => esc_html__( 'ne peut pas marquer comme annulé !!! Veuillez contacter l\'équipe de Dezon', 'exertio_framework' ));
 						wp_send_json_error($return);
 					}
 					else
@@ -1111,7 +1111,7 @@ if ( ! function_exists( 'fl_project_status_rating' ) )
 						
 						$redirect_page = get_the_permalink($exertio_theme_options['user_dashboard_page']).'?ext=canceled-projects';
 		
-						$return = array('message' => esc_html__( 'Projet refusé', 'exertio_framework' ), 'page' => $redirect_page);
+						$return = array('message' => esc_html__( 'Projet annulé', 'exertio_framework' ), 'page' => $redirect_page);
 						wp_send_json_success($return);
 					}
 			}
@@ -1158,7 +1158,7 @@ if ( ! function_exists( 'fl_simple_cancel_project' ) ) {
 			
 			if (is_wp_error($result))
 			{
-				$return = array('message' => esc_html__( 'ne peut pas marquer comme refusé !!! Veuillez contacter l\'équipe de Dezon', 'exertio_framework' ));
+				$return = array('message' => esc_html__( 'ne peut pas marquer comme annulé !!! Veuillez contacter l\'équipe de Dezon', 'exertio_framework' ));
 				wp_send_json_error($return);
 			}
 			else
@@ -1168,7 +1168,7 @@ if ( ! function_exists( 'fl_simple_cancel_project' ) ) {
 				
 				$redirect_page = get_the_permalink($exertio_theme_options['user_dashboard_page']).'?ext=canceled-projects';
 
-				$return = array('message' => esc_html__( 'Projet refusé', 'exertio_framework' ), 'page' => $redirect_page);
+				$return = array('message' => esc_html__( 'Projet annulé', 'exertio_framework' ), 'page' => $redirect_page);
 				wp_send_json_success($return);
 			}
 		}

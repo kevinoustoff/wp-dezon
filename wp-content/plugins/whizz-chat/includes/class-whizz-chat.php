@@ -4,7 +4,6 @@
  */
 
 class whizzChat {
-
     public static function ip() {
         if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
             $ip = $_SERVER['HTTP_CLIENT_IP'];
@@ -18,9 +17,7 @@ class whizzChat {
         }
         return sanitize_text_field($ip);
     }
-
     public static function cookie_id() {
-
         $user_id = get_current_user_id();
         if ($user_id) {
             return $user_id;
@@ -32,7 +29,6 @@ class whizzChat {
             }
         }
     }
-
     public static function session_id() {
         global $whizzChat_options;
 
@@ -163,6 +159,7 @@ class whizzChat {
     public static function whizzchat_time_ago($timestamp) {
 
         $time_ago = strtotime($timestamp);
+
         $current_time = time(); //current_time();
 
         $time_difference = $current_time - $time_ago;

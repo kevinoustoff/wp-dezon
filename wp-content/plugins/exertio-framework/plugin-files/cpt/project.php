@@ -1171,6 +1171,7 @@ function fl_themes_custom_types() {
 			
 		}
 		
+		
 		if(isset($_POST['project_skills']))
 		{
 			$integerIDs = array_map('intval', $_POST['project_skills']);

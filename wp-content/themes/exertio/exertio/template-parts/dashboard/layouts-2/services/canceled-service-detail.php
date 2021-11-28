@@ -92,13 +92,13 @@ if( is_user_logged_in() )
                                                     echo get_profile_img($buyer_id , 'employer');
                                                 ?>
                                                 <span class="buyer_name"> <?php echo exertio_get_username('employer',$buyer_id, 'badge', 'right' ); ?></span>
-                                                <span class="service_start_date"> <?php echo esc_html__( 'Commencé ce ', 'exertio_theme' ).' '.esc_html(date("F jS, Y", strtotime($result[0]['timestamp']))); ?></span>
+                                                <span class="service_start_date"> <?php echo esc_html__( 'Commencé le ', 'exertio_theme' ).' '.esc_html(date("d/m/Y", strtotime($result[0]['timestamp']))); ?></span>
                                             </div>
-                                            <div class="pro-coulmn completed-status canceled">
+                                            <div class="pro-coulmn completed-status">
                                                     <i class="fas fa-times-circle"></i>
-                                                    <div>
+                                                    <div style="padding-left:10px">
                                                     	<span class=""> <?php echo esc_html__( 'Rejeté ', 'exertio_theme' ); ?> </span>
-                                                        <small> <?php echo esc_html__( 'ce ', 'exertio_theme' ).date_i18n( get_option( 'date_format' ), strtotime( $result[0]['status_date'] ) ); ?> </small> </div>
+                                                        <small> <?php echo esc_html__( 'le ', 'exertio_theme' ).date_i18n( get_option( 'date_format' ), strtotime( $result[0]['status_date'] ) ); ?> </small> </div>
                                                 </div>
                                           </div>
                                         <?php
@@ -207,14 +207,14 @@ if( is_user_logged_in() )
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <small><?php echo esc_html__('Remarques sur','exertio_theme'); ?></small>
-                    <h4 class="modal-title" id="review-modal-cancel"><?php echo esc_html__('Annulation du service','exertio_theme'); ?></h4>
+                    <small><?php echo esc_html__('Remarques sur le','exertio_theme'); ?></small>
+                    <h4 class="modal-title" id="review-modal-cancel"><?php echo esc_html__('Rejet du job','exertio_theme'); ?></h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true"><i class="fal fa-times"></i></span>
                     </button>
                   </div>
                   <div class="modal-body">
-                    <p><?php echo esc_html($result[0]['remarks']); ?> </p>
+                    <p><?php echo stripslashes($result[0]['remarks']); ?> </p>
                   </div>
                 </div>
               </div>

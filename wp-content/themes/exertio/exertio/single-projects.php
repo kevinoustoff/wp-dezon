@@ -100,24 +100,24 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 							</li>
 							<li>
 							  <div class="short-detail-icon"> <i class="fal fa-calendar-check"></i> </div>
-							  <div class="short-detail-meta"> <small><?php echo esc_html__('Durée du projet','exertio_theme'); ?></small> <strong>
+							  <div class="short-detail-meta"> <small><?php echo esc_html__('Date début du projet','exertio_theme'); ?></small> <strong>
 								<?php
-									$project_duration = get_term( get_post_meta($pid, '_project_duration', true));
-									if(!empty($project_duration) && ! is_wp_error($project_duration))
+									$project_date_debut = get_post_meta($pid, '_project_date_debut', true);
+									if(!empty($project_date_debut) && ! is_wp_error($project_date_debut))
 									{
-										echo esc_html($project_duration->name);
+										echo esc_html($project_date_debut);
 									}
 								?>
 								</strong> </div>
 							</li>
 							<li>
-							  <div class="short-detail-icon"> <i class="fal fa-bezier-curve"></i> </div>
-							  <div class="short-detail-meta"> <small><?php echo esc_html__('Catégorie','exertio_theme'); ?></small> <strong>
+							  <div class="short-detail-icon"> <i class="fal fa-calendar-check"></i> </div>
+							  <div class="short-detail-meta"> <small><?php echo esc_html__('Date fin du projet','exertio_theme'); ?></small> <strong>
 								<?php
-									$project_level = get_term( get_post_meta($pid, '_project_level', true));
-									if(!empty($project_level) && ! is_wp_error($project_level))
+									$project_date_fin = get_post_meta($pid, '_project_date_fin', true);
+									if(!empty($project_date_fin) && ! is_wp_error($project_date_fin))
 									{
-										echo esc_html($project_level->name);
+										echo esc_html($project_date_fin);
 									}
 								?>
 								</strong> </div>
@@ -125,7 +125,7 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 							
 							<li>
 							  <div class="short-detail-icon"> <i class="fal fa-language"></i> </div>
-							  <div class="short-detail-meta"> <small><?php echo esc_html__('Languages','exertio_theme'); ?></small>
+							  <div class="short-detail-meta"> <small><?php echo esc_html__('Langues','exertio_theme'); ?></small>
 								<?php
 									$saved_languages = wp_get_post_terms($pid, 'languages', array( 'fields' => 'all' ));
 									if(!empty($saved_languages) && ! is_wp_error($saved_languages))
@@ -154,7 +154,7 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 				  <div class="fr-project-f-des">
 					<div class="fr-project-des">
 					  <h3><?php echo esc_html__('Détails du projet','exertio_theme'); ?></h3>
-					  <?php echo wp_kses($post->post_content, exertio_allowed_html_tags()); ?>
+					  <?php echo stripslashes(wp_kses($post->post_content, exertio_allowed_html_tags())); ?>
 					</div>
 					
 					<div class="fr-project-skills">
@@ -440,7 +440,7 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 													<div class="fr-project-assets">
 													  <p>
 														<?php ?>
-														<?php echo esc_html($result->cover_letter); ?></p>
+														<?php echo stripslashes($result->cover_letter); ?></p>
 													</div>
 													</div>
 													<?php
@@ -470,7 +470,7 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 										<div class="form-group">
 											<label><?php echo esc_html__('Montant de l\'offre','exertio_theme'); ?></label>
 											<div class="input-group">
-											  <input type="text" class="form-control" id="bidding-price" name="bid_price" required data-smk-msg="<?php echo esc_html__('Provide your price in numbers only','exertio_theme'); ?>"  data-smk-type="number">
+											  <input type="text" class="form-control" id="bidding-price" name="bid_price" required data-smk-msg="<?php echo esc_html__('Indiquez votre prix en chiffres uniquement','exertio_theme'); ?>"  data-smk-type="number">
 											  <div class="input-group-prepend">
 												<div class="input-group-text"><?php echo esc_html($exertio_theme_options['fl_currency']); ?></div>
 											  </div>
@@ -587,7 +587,7 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 										$price_breakdown = '<a href="javascript:void(0)" class="price-breakdown">'.esc_html__('Répartition des prix','exertio_theme').'</a>';
 									}
 									?>
-								  <label> <?php echo esc_html__('Décrivez votre proposition','exertio_theme').$price_breakdown; ?> </label>
+								  <label> <?php echo esc_html__('Décrivez votre offre','exertio_theme').$price_breakdown; ?> </label>
 								  <textarea class="form-control" id="bid-textarea" name="bid_textarea" rows="3"></textarea>
 								</div>
 							  </div>
@@ -852,7 +852,7 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 					{
 					?>
 					<div class="custom-widget">
-					  <h3 class="widget-custom-heading"> <?php echo esc_html__(' Plus d\'info ','exertio_theme').exertio_get_username('employer', $employer_id, ''); ?></h3>
+					  <h3 class="widget-custom-heading"> <?php echo esc_html__(' Autres projets de ','exertio_theme').exertio_get_username('employer', $employer_id, ''); ?></h3>
 					  <div class="custom-widget-body">
 					  <?php
 
@@ -872,7 +872,16 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 												  <p class=""><?php echo fl_price_separator(get_post_meta($related_pid, '_project_cost', true));?>
 												  <?php
 												  $project_type = get_post_meta($related_pid, '_project_type', true);
-													echo esc_html($project_type);
+												  switch ($project_type) {
+												  	case 'fixed':
+												  		echo "Fixe";
+												  		break;
+												  	
+												  	default:
+												  		echo "par heure";
+												  		break;
+												  }
+													//echo esc_html($project_type);
 													?>
 													</p>
 												</li>

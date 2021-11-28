@@ -267,11 +267,11 @@ if (!class_exists('exertio_get_projects'))
 									<?php
 								}
 								$saved_project = '';
-								$save_text = esc_html__( 'Sauvegarder le projet', 'exertio_theme' );
+								$save_text = esc_html__( 'Enregistrer le projet', 'exertio_theme' );
 								if( get_user_meta( get_current_user_id(), '_pro_fav_id_'.$project_id, true ) == $project_id )
 								{
 									$saved_project = 'active';
-									$save_text = esc_html__( 'Déjà sauvegardé', 'exertio_theme' );
+									$save_text = esc_html__( 'Déjà enregistré', 'exertio_theme' );
 								}
 							?>
 							<div class="view-btn"><a href="javascript:void(0);" class="mark_fav protip <?php echo esc_attr($saved_project); ?>" data-post-id="<?php echo esc_attr($project_id); ?>" data-pt-position="top" data-pt-scheme="black" data-pt-title="<?php echo esc_attr($save_text); ?>"><i class="fa fa-heart active"></i></a> <a href="<?php echo esc_url(get_the_permalink()); ?>" class="btn btn-theme"><?php echo esc_html__( 'Voir le projet', 'exertio_theme' ); ?></a></div>
@@ -397,12 +397,12 @@ if (!class_exists('exertio_get_projects'))
                         <li class="fr1-top-content">
                         	<?php
 								$marked_fav = $fav  = '';
-								$fav_text = esc_html__('Sauvegarder le projet','exertio_theme');
+								$fav_text = esc_html__('Enregistrer le projet','exertio_theme');
 								$marked_fav = get_user_meta( get_current_user_id(), '_pro_fav_id_'.$project_id, true );
 								if(isset($marked_fav) && $marked_fav != '' )
 								{
 									$fav = 'fav';
-									$fav_text = esc_html__('Déjà sauvegardé','exertio_theme');
+									$fav_text = esc_html__('Déjà enregistré','exertio_theme');
 								}
 							?>
                             <span><a href="javascript:void(0)" class="mark_fav protip <?php echo esc_attr($fav); ?>"  data-post-id="<?php echo esc_attr($project_id); ?>" data-pt-position="top" data-pt-scheme="black" data-pt-title="<?php echo esc_attr($fav_text); ?>"><i class="fa fa-heart"></i></a></span>
@@ -541,12 +541,12 @@ if (!class_exists('exertio_get_projects'))
 				  <div class="fr-latest2-bid"> 
 					  <?php
 							$marked_fav = $fav  = '';
-							$fav_text = esc_html__('Save Job','exertio_theme');
+							$fav_text = esc_html__('Enregistré le projet','exertio_theme');
 							$marked_fav = get_user_meta( get_current_user_id(), '_pro_fav_id_'.$project_id, true );
 							if(isset($marked_fav) && $marked_fav != '' )
 							{
 								$fav = 'fav';
-								$fav_text = esc_html__('Déjà sauvegardé','exertio_theme');
+								$fav_text = esc_html__('Déjà enregistré','exertio_theme');
 							}
 						?>
 						<span><a href="javascript:void(0)" class="mark_fav protip <?php echo esc_attr($fav); ?>"  data-post-id="<?php echo esc_attr($project_id); ?>" data-pt-position="top" data-pt-scheme="black" data-pt-title="<?php echo esc_attr($fav_text); ?>"><i class="fa fa-heart"></i></a></span>

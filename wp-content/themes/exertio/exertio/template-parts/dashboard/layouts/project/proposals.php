@@ -34,7 +34,7 @@ $start_from = ($pageno-1) * $limit;
 					  <div class="d-flex justify-content-between flex-wrap">
 						<div class="d-flex align-items-end flex-wrap">
 						  <div class="mr-md-3 mr-xl-5">
-							<h2><?php echo esc_html__('Propositions','exertio_theme'); ?></h2>
+							<h2><?php echo esc_html__('Offres','exertio_theme'); ?></h2>
 							<div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
 								<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 								<?php echo exertio_dashboard_extention_return(); ?>
@@ -101,7 +101,7 @@ $start_from = ($pageno-1) * $limit;
 										}
 									 ?>
 								</div>
-								<div class="pro-coulmn"><span class="btn btn-theme-secondary"> <?php echo esc_html__( 'Total des propositions', 'exertio_theme' ).' ('.$total_count.')'; ?></span></div>
+								<div class="pro-coulmn"><span class="btn btn-theme-secondary"> <?php echo esc_html__( 'Total des offres', 'exertio_theme' ).' ('.$total_count.')'; ?></span></div>
 							  </div>
 						  </div>
 						   <div class="fr-project-bidding proposals-dashboard only-proposals">
@@ -114,7 +114,7 @@ $start_from = ($pageno-1) * $limit;
 											}
 										?>
 										<div class="fr-project-box">
-										  <h3><?php echo esc_html__( 'Propositions', 'exertio_theme' ); ?></h3>
+										  <h3><?php echo esc_html__( 'Offres', 'exertio_theme' ); ?></h3>
 										</div>
 										<div class="project-proposal-box">
 										  <?php
@@ -162,7 +162,7 @@ $start_from = ($pageno-1) * $limit;
 														  <ul>
 															<li> <i class="fal fa-clock"></i> <span><?php echo date_i18n( get_option( 'date_format' ), strtotime( $result->timestamp ) ); ?></span> </li>
 															<li> <span> <?php echo get_rating($result->freelancer_id, ''); ?></span> </li>
-															<li> <span> <a href="javascript:void(0)" class="cover-letter" data-prpl-id ='<?php echo esc_html($result->id); ?>'> <?php echo esc_html__( 'Afficher la lettre de motivation', 'exertio_theme' ); ?> </a></span> </li>
+															<li> <span> <a href="javascript:void(0)" class="cover-letter" data-prpl-id ='<?php echo esc_html($result->id); ?>'> <?php echo esc_html__( "Afficher l'offre", 'exertio_theme' ); ?> </a></span> </li>
 														  </ul>
 														</div>
 														<div class="fr-project-content-details">
@@ -216,10 +216,10 @@ $start_from = ($pageno-1) * $limit;
 													  </div>
 													</div>
 													<div class="fr-project-assets showhide_<?php echo esc_html($result->id); ?>">
-														<h5><?php echo esc_html__( 'Cover Letter', 'exertio_theme' ); ?></h5>
+														<h5><?php echo esc_html__( 'Offre du jobeur', 'exertio_theme' ); ?></h5>
 													  <p>
 														<?php ?>
-														<?php echo esc_html($result->cover_letter); ?></p>
+														<?php echo stripslashes($result->cover_letter); ?></p>
 													</div>
 												  </div>
 												  <?php
@@ -232,7 +232,7 @@ $start_from = ($pageno-1) * $limit;
 										{
 											?>
 										  <div class="nothing-found"> <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo get_post_meta($alt_id, '_wp_attachment_image_alt', TRUE); ?>">
-											<h3><?php echo esc_html__( 'Aucune proposition trouvée', 'exertio_theme' ); ?></h3>
+											<h3><?php echo esc_html__( 'Aucune offre trouvée', 'exertio_theme' ); ?></h3>
 										  </div>
 							  <?php
 								}

@@ -30,11 +30,6 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, in
     height: 0;
     z-index: 999;
     font-family: 'Roboto', sans-serif;
-    /*ajout css  herve*/
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
-    /*fin css*/
 }
 .chatbox-inner-holder
 {
@@ -80,7 +75,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, in
 }
 
 .chatbox-icons .fa, .chatbox-icons .fas{
-    color: #999;
+    color: #fff;
     transition: 0.3s;
     padding: 20px 10px;
     font-size:12px;
@@ -1420,13 +1415,16 @@ div.whizz-chat-wave .dot:nth-child(3) {
     margin-bottom:20px;
     margin-top:0;
     color:#999;	
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
 }
 .login-first a {
     background-color:#FFF;
     color:#999;
     border:1px solid #999;
     padding:12px 32px;
-    text-transform:capitalize;
+    /*text-transform:capitalize;*/
     border-radius:4px;	
 }
 .login-first a:hover {
@@ -1516,62 +1514,24 @@ i.fas.fa-tachometer-alt {
     position: absolute;
     font-size: 14px;
 }
-
-/*css pour le boutton chat en miniature*/
-
-#click{
-  display: none;
-}
-label[for="click"]{
-  position: fixed;
-  right: 30px;
-  bottom: 70px;
-  height: 55px;
-  width: 55px;
-  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
-  text-align: center;
-  line-height: 55px;
-  border-radius: 50px;
-  font-size: 30px;
-  color: #fff;
-  cursor: pointer;
-}
-label[for="click"] i{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.4s ease;
-}
-label[for="click"] i.fas{
-  opacity: 0;
-  pointer-events: none;
+.no_chat{
+    display: none;
 }
 
-label[for="click"] i{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.4s ease;
+.whizchat_widget_shortcode {   
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    padding: 5px;
+    opacity: 1;
+    border-radius: 3px;
+    z-index: 999;
 }
-label[for="click"] i.fas{
-  opacity: 0;
-  pointer-events: none;
+.whizchat_widget_shortcode img {
+    border-radius: 50%;
+    width: 60px;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.08);
 }
-#click:checked ~ label[for="click"] i.fas{
-  opacity: 1;
-  pointer-events: auto;
-  transform: translate(-50%, -50%) rotate(180deg);
-}
-#click:checked ~ label[for="click"] i.fab{
-  opacity: 0;
-  pointer-events: none;
-  transform: translate(-50%, -50%) rotate(180deg);
-}
-#click:checked ~ .chatbox-holder{
-  opacity: 1;
-  /*bottom: 85px;*/
-  pointer-events: auto;
-}
-/*fin css*/
+
+
+

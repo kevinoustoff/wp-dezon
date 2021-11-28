@@ -14,9 +14,7 @@ if (!function_exists('whizzChat_globalVal')) {
             return $GLOBALS["whizzChat_options"];
         }
     }
-
 }
-
 if (!function_exists('whizzChat_upload_info')) {
 
     function whizzChat_upload_info($type = '') {
@@ -79,7 +77,7 @@ if (!function_exists('whizzChat_start_session')) {
 
     function whizzChat_start_session() {
         if (!headers_sent() && '' == session_id()) {
-            session_start();
+          //  session_start();
         }
     }
 
@@ -128,7 +126,7 @@ if (!function_exists('whizzChat_showChatBox_on')) {
 
 if (!function_exists('whizzChat_allowed_pages')) {
 
-    function whizzChat_allowed_pages() {
+    function whizzChat_allowed_pages($page_id = "") {
         $allowed_types = whizzChat_globalVal('whizzChat-boxShow-on', array());
         if (isset($allowed_types) && count($allowed_types) > 0) {
             if (is_singular($allowed_types)) {
@@ -137,6 +135,9 @@ if (!function_exists('whizzChat_allowed_pages')) {
             if (is_author() && in_array('author', $allowed_types)) {
                 return true;
             }
+        }
+        if($page_id != ""){          
+            return true;
         }
         return false;
     }
@@ -241,6 +242,8 @@ if (!function_exists('whizzChat_chat_list')) {
         $chats = $wpdb->get_results($wpdb->prepare($qry, $session_id, $user_id, $status));
 
 
+            
+
         if (isset($chats) && count($chats) > 0) {
 
             foreach ($chats as $chat) {
@@ -300,17 +303,17 @@ if (!function_exists('whizzChat_chat_list')) {
 
 if (!function_exists('whizzChat_chat_boxes')) {
 
-    function whizzChat_chat_boxes($chats_data = array(), $extra_data = array()) {
+    function whizzChat_chat_boxes($chats_data = array(), $extra_data = array() ,$page_id  = "" ,$author_page_id   =  "") {
+        
         global $wpdb, $whizz_tbl_sessions, $whizzChat_options;
         $whizzChat_options = get_option('whizz-chat-options');
-
         $user_id = get_current_user_id();
 
-        $whizzChat_chat_between = $whizzChat_options["whizzChat-chat-between"];
-        $whizzchat_admin_value = $whizzChat_options["whizzChat-admin-value"];
-        $whizzchat_admin_page = $whizzChat_options["whizzChat-admin-page"];
+        $whizzChat_chat_between  = $whizzChat_options["whizzChat-chat-between"];
+        $whizzchat_admin_value   = $whizzChat_options["whizzChat-admin-value"];
+        $whizzchat_admin_page    = $whizzChat_options["whizzChat-admin-page"];
 
-        $whizzchat_admin_page = isset($whizzchat_admin_page) && $whizzchat_admin_page != '' ? $whizzchat_admin_page : 0;
+        $whizzchat_admin_page    = isset($whizzchat_admin_page) && $whizzchat_admin_page != '' ? $whizzchat_admin_page : 0;
 
         $post_ids = array();
         $session_id = whizzChat::session_id();
@@ -318,6 +321,7 @@ if (!function_exists('whizzChat_chat_boxes')) {
         $inner = false;
         $chats = array();
         $direct_load = ( isset($chats_data['direct_load']) && $chats_data['direct_load'] == true ) ? false : true;
+        
         if (isset($chats_data) && $chats_data && $direct_load) {
 
             if (isset($chats_data['id']) && $chats_data['id'] != "") {
@@ -334,20 +338,28 @@ if (!function_exists('whizzChat_chat_boxes')) {
                         $postIds[] = $val['post_id'];
                     }
                 }
+
+                    
+
+
                 if (count($ids) > 0) {
                     $ids = implode(',', $ids);
                     $postIds = implode(',', $postIds);
-                    $qry = "SELECT * FROM $whizz_tbl_sessions WHERE (`session` = %s OR `rel` = %s ) AND `id` IN ($ids) AND `chat_box_id` IN ($postIds) AND `chatbox_sender_open` = %s ORDER BY ID DESC";
+                    $qry = "SELECT * FROM $whizz_tbl_sessions WHERE (`session` = %s OR `rel` = %s ) AND `id` IN ($ids) AND `chat_box_id` IN ($postIds) ORDER BY ID DESC";
                     $chats = $wpdb->get_results($wpdb->prepare($qry, $session_id, $user_id, 1));
                 }
             }
+
+
+            
         } else {
-
             $qry = "SELECT * FROM $whizz_tbl_sessions WHERE ( (`session` = %s AND `chatbox_sender_open` = %s) OR (`rel` = %s AND `chatbox_receiver_open` = %s) ) AND `status` = %s  ORDER BY ID DESC";
-            $chats = $wpdb->get_results($wpdb->prepare($qry, $session_id, 1, $user_id, 1, 1));
+            $chats = $wpdb->get_results($wpdb->prepare($qry, $session_id ,1, $user_id, 1, 1));
+            if($page_id != ""  ){       
+           $qry = "SELECT * FROM $whizz_tbl_sessions WHERE ( (`session` = %s AND `chat_box_id` = %s ) OR   (`rel` = %s AND `chat_box_id` = %s ))  ORDER BY ID DESC";
+            $chats = $wpdb->get_results($wpdb->prepare($qry, $session_id,$page_id ,$session_id ,$page_id));
+            }
         }
-
-
         $chat_box_open = 1;
         if (isset($chats_data['chat_box_open']) && $chats_data['chat_box_open'] != true) {
             $chat_box_open = 0;
@@ -370,24 +382,20 @@ if (!function_exists('whizzChat_chat_boxes')) {
                 $chats = array_slice($chats, 0, $max_chat_box_window);  // restrict to show only required num of chat box
             }
         }
-
-
-
         if (isset($chats) && is_array($chats) && count($chats) > 0) {
             foreach ($chats as $chat) {
-
                 if (isset($chat->id)) {
                     $first_message_id = '';
                     if (isset($extra_data['message_ids'])) {
                         foreach ($extra_data['message_ids'] as $val) {
                             $get_message_id = (isset($val['get_message_id'])) ? $val['get_message_id'] : '';
-                            if ($val['chat_id'] == $chat->id) {
+                            if (isset($val['chat_id']) && $val['chat_id'] == $chat->id) {
                                 $first_message_id = $get_message_id;
                             }
                         }
-                    }
-
-                    $value[] = array(
+                    }                                                                      
+                    if($author_page_id != ""   &&  $author_page_id != $session_id){                
+                        $value[] = array(
                         "id" => (isset($chat->id)) ? $chat->id : $chat->id,
                         "name" => $chat->name,
                         "email" => $chat->email,
@@ -404,32 +412,79 @@ if (!function_exists('whizzChat_chat_boxes')) {
                         "first_message_id" => $first_message_id,
                         "send_message" => $send_message,
                         "message_for" => $chat->message_for,
-                        "message_count" => $chat->message_count
+                        "message_count" => $chat->message_count,
+                        "author_id" => $author_page_id
                     );
+                    }
+                    else{
+                          $value[] = array(
+                        "id" => (isset($chat->id)) ? $chat->id : $chat->id,
+                        "name" => $chat->name,
+                        "email" => $chat->email,
+                        "chat_status" => $chat->status,
+                        "post_id" => $chat->chat_box_id,
+                        "post_author_id" => $chat->rel,
+                        "session_id" => $chat->session,
+                        "start_time" => $chat->timestamp,
+                        "last_active_time" => $chat->last_active_timestamp,
+                        "chat_box_status" => $chat->chat_box_status,
+                        "receiver_open" => $chat->chatbox_receiver_open,
+                        "sender_open" => $chat->chatbox_sender_open,
+                        "last_chat_id" => $last_chat_id,
+                        "first_message_id" => $first_message_id,
+                        "send_message" => $send_message,
+                        "message_for" => $chat->message_for,
+                        "message_count" => $chat->message_count,
+                        
+                    );
+                    }                              
                     $post_ids[] = $chat->chat_box_id;
                 }
             }
         }
         /* Show hide chat here */
-        $allowed_pages = whizzChat_allowed_pages();
+        $allowed_pages = whizzChat_allowed_pages($page_id);
         if (!isset($chats_data['id']) && $allowed_pages == true) {
             global $wp_query;
-
             if (isset($whizzchat_between) && $whizzchat_between == '1') {
-
                 return; // return null if admin.
             } else {
-                $current_post_id = $wp_query->post->ID;
-            }
+                $current_post_id = isset($wp_query->post->ID)  ? $wp_query->post->ID : "";
+            }            
+            if($page_id != ""){              
+                $current_post_id   = $page_id;
+            }           
             $author_id = get_post_field('post_author', $current_post_id);
-            $current_user = get_current_user_id();
+            if($author_page_id != ""){
+                $author_id   =  $author_page_id;
+            }
+            $current_user = get_current_user_id();                      
             if (!in_array($current_post_id, $post_ids) && $author_id != $current_user) {
-
-                $prepared_statement = $wpdb->prepare("SELECT `chat_box_id` FROM {$whizz_tbl_sessions} WHERE `session` = '{$session_id}' OR `rel` = '{$user_id}';");
+                $prepared_statement = $wpdb->prepare("SELECT `chat_box_id` FROM {$whizz_tbl_sessions} WHERE `session` = %s OR `rel` = %s;",$session_id,$user_id);
                 $db_ids = $wpdb->get_col($prepared_statement);
 
-                $value[] = array(
-                    "id" => 0,
+                /*if new chat and request from author page */
+                if($author_page_id != ""   &&  $author_page_id != $session_id){
+                    
+                    $value[] = array(
+                    "id" => "0",
+                    "name" => '',
+                    "email" => '',
+                    "chat_status" => 0,
+                    "post_id" => $current_post_id,
+                    "post_author_id" => $author_page_id,
+                    "session_id" => $session_id,
+                    "start_time" => '',
+                    "last_active_time" => '',
+                    "message_for" => 0,
+                    "message_count" => 0,
+                    "author_id" => $author_page_id,
+                    'user_to_user' => $author_page_id,
+                );  
+                } 
+                else{               
+                    $value[] = array(
+                    "id" => "0",
                     "name" => '',
                     "email" => '',
                     "chat_status" => 0,
@@ -441,6 +496,8 @@ if (!function_exists('whizzChat_chat_boxes')) {
                     "message_for" => 0,
                     "message_count" => 0
                 );
+                    
+                }            
             }
         }
         return $value;
@@ -635,7 +692,11 @@ function whizz_chat_realtime_comm_enabled() {
     $whizzChat_record_limit = isset($whizzChat_options['whizzChat-record-limit']) && $whizzChat_options['whizzChat-record-limit'] != '' ? $whizzChat_options['whizzChat-record-limit'] : 10;
 
 
+    $pop_up_disabled   =    isset($whizzChat_options['whizzChat-shortcode-allow'])  ?  $whizzChat_options['whizzChat-shortcode-allow']  :  false;
 
+    if($pop_up_disabled){
+         echo do_shortcode('[whizchat_shortcode]');
+    }
 
     echo '<input type="hidden" id="whizz-chat-live" value="' . $whizzChat_comm_between . '"/>';
     echo '<input type="hidden" id="whizz-chat-between" value="' . $whizzChat_chat_between . '"/>';

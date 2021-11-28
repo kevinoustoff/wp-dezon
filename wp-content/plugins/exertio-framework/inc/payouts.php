@@ -60,6 +60,18 @@ if ( ! function_exists( 'exertio_save_payment_method' ) )
 				$return = array('message' => esc_html__( 'Payout detail updated', 'exertio_framework' ));
 				wp_send_json_success($return);
 		}
+		elseif($payment_method == 'mobilemoney')
+		{
+			$payment_data[] = array(
+						"payment_method" => sanitize_text_field($payment_method),
+						"mobilemoney_tel" => sanitize_text_field($params['mobilemoney_tel']),
+					);
+				$encoded_payment_data =  wp_json_encode($payment_data, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
+				update_user_meta( $current_user_id, '_mobilemoney_details', $encoded_payment_data );
+				
+				$return = array('message' => esc_html__( 'Payout detail updated', 'exertio_framework' ));
+				wp_send_json_success($return);
+		}
 		else
 		{
 			$return = array('message' => esc_html__( 'Payment method detail error', 'exertio_framework' ));

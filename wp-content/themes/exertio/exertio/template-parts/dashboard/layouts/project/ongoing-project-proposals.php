@@ -323,7 +323,7 @@ $start_from = ($pageno-1) * $limit;
 									{
 										?>
 										<div class="nothing-found"> <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo get_post_meta($alt_id, '_wp_attachment_image_alt', TRUE); ?>">
-										<h4><?php echo esc_html__( 'Aucune offre trouvé', 'exertio_theme' ); ?></h4>
+										<h4><?php echo esc_html__( 'Aucune offre trouvée', 'exertio_theme' ); ?></h4>
 										</div>
 										<?php
 									}
@@ -344,7 +344,7 @@ $start_from = ($pageno-1) * $limit;
 					  <div class="modal-dialog" role="document">
 						<div class="modal-content">
 						  <div class="modal-header">
-							<small><?php echo esc_html__('Laisser un commentaire ','exertio_theme'); ?></small>
+							<small><?php echo esc_html__('Laisser un avis ','exertio_theme'); ?></small>
 							<h4 class="modal-title" id="review-modal"><?php echo exertio_get_username('freelancer',$fl_id, 'badge', 'right'); ?></h4>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							  <span aria-hidden="true"><i class="fal fa-times"></i></span>
@@ -378,7 +378,7 @@ $start_from = ($pageno-1) * $limit;
 									</ul>
 								</div>
 								<div class="form-group">
-									<label> <?php echo esc_html__('Commentaire ','exertio_theme'); ?> </label>
+									<label> <?php echo esc_html__('Avis ','exertio_theme'); ?> </label>
 									<textarea class="form-control" name="feedback_text" rows="5" cols="10" required data-smk-msg="<?php echo esc_html__('Veuillez laisser un avis','exertio_theme'); ?>"></textarea>
 								</div>
 								<div class="form-group"> <button type="button" id="rating-btn" class="btn btn-theme btn-loading" data-pid="<?php echo esc_attr($project_id) ?>" data-status= "complete"><?php echo esc_html__('Envoyer','exertio_theme'); ?> <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button> </div>
@@ -403,7 +403,7 @@ $start_from = ($pageno-1) * $limit;
 								<div class="form-group">
 									<label> <?php echo esc_html__('Commentaire ','exertio_theme'); ?> </label>
 									<textarea class="form-control" name="feedback_text" rows="5" cols="10" required data-smk-msg="<?php echo esc_html__('Veuillez fournir la raison','exertio_theme'); ?>"></textarea>
-									<p> <?php echo esc_html__('Provide information on why you are canceling this project.','exertio_theme'); ?></p>
+									<p> <?php echo esc_html__('Fournissez des informations sur les raisons pour lesquelles vous annulez ce projet.','exertio_theme'); ?></p>
 								</div>
 								<div class="form-group"> <button type="button" id="cancel-btn" class="btn btn-theme btn-loading" data-pid="<?php echo esc_attr($project_id) ?>" data-status= "cancel"><?php echo esc_html__('Annuler le projet','exertio_theme'); ?> <div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button> </div>
 							</form>

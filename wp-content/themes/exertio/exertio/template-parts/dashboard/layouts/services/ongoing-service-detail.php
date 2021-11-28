@@ -137,7 +137,7 @@ $get_sid = $_GET['sid'];
                                                                 <span><?php echo get_profile_img($message->msg_sender_id, "employer"); ?></span>
                                                             </div>
                                                             <p class="history-text">
-                                                                <?php echo esc_html(wp_strip_all_tags($message->message)); ?>
+                                                                <?php echo stripslashes(wp_strip_all_tags($message->message)); ?>
                                                             </p>
                                                             <?php
                                                             if($message->attachment_ids >0)
@@ -168,7 +168,7 @@ $get_sid = $_GET['sid'];
                                                                 <span class="history-datetime"><?php echo time_ago_function($message->timestamp); ?></span>
                                                             </div>
                                                             <p class="history-text">
-                                                                <?php echo esc_html(wp_strip_all_tags($message->message)); ?>
+                                                                <?php echo stripslashes(wp_strip_all_tags($message->message)); ?>
                                                             </p>
                                                             <?php
                                                             if($message->attachment_ids >0)

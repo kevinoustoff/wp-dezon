@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "Project-Id-Version: Exertio Framework\n"
 "POT-Creation-Date: 2021-03-12 13:16+0500\n"
-"PO-Revision-Date: 2021-11-05 22:24+0000\n"
+"PO-Revision-Date: 2021-11-11 09:28+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
@@ -109,11 +109,11 @@ msgstr "Expiration des services sponsorisés"
 
 #: inc/utilities.php:1963
 msgid " file size:"
-msgstr ""
+msgstr "taille du fichier:"
 
 #: plugin-files/exertio-widgets/exertio-widgets.php:1598
 msgid " hourly"
-msgstr ""
+msgstr "par heure"
 
 #: inc/custom-functions.php:2006
 msgid " hours total will be  "
@@ -175,7 +175,7 @@ msgstr ""
 #: plugin-files/exertio-widgets/exertio-widgets.php:2311
 #: plugin-files/exertio-widgets/exertio-widgets.php:2434
 msgid " Purchase Now"
-msgstr "Payer"
+msgstr "S'abonner"
 
 #: inc/custom-functions.php:1171 inc/custom-functions.php:1837
 msgid " review"
@@ -401,7 +401,7 @@ msgstr ""
 
 #: plugin-files/cpt/services.php:11 plugin-files/cpt/services.php:12
 msgid "Add New Service"
-msgstr ""
+msgstr "Ajouter un nouveau job"
 
 #: plugin-files/cpt/freelancers.php:70 plugin-files/cpt/project.php:285
 msgid "Add New Skill"
@@ -1442,11 +1442,11 @@ msgstr "Expiration du projet mis en évidence"
 
 #: plugin-files/cpt/company.php:717 plugin-files/cpt/freelancers.php:1148
 msgid "Featured Projects"
-msgstr ""
+msgstr "Projets sponsorisés"
 
 #: inc/woo-employer-packages.php:124
 msgid "Featured Projects Expiry"
-msgstr ""
+msgstr "Expiration des projets sponsorisés"
 
 #: inc/woo-freelancer-packages.php:126 plugin-files/cpt/freelancers.php:1156
 msgid "Featured Services Expiry"
@@ -2071,11 +2071,11 @@ msgstr ""
 
 #: inc/utilities.php:2295
 msgid "New service has been created"
-msgstr ""
+msgstr "Un nouveau job a été crée"
 
 #: plugin-files/cpt/services.php:13
 msgid "New Services"
-msgstr ""
+msgstr "Nouveaux jobs"
 
 #: plugin-files/cpt/freelancers.php:71 plugin-files/cpt/project.php:286
 msgid "New Skill Name"
@@ -2276,7 +2276,7 @@ msgstr ""
 
 #: inc/woo-employer-packages.php:113
 msgid "Number of Featured Projects Allowed"
-msgstr ""
+msgstr "Nombre de projet autorisé"
 
 #: inc/woo-freelancer-packages.php:115
 msgid "Number of Featured Services Allowed"
@@ -2284,7 +2284,7 @@ msgstr ""
 
 #: inc/woo-freelancer-packages.php:82
 msgid "Number of Projects Credits"
-msgstr ""
+msgstr "Nombre de projets"
 
 #: plugin-files/cpt/report.php:162
 msgid "Number of Reports"
@@ -2667,7 +2667,7 @@ msgstr "Projets"
 
 #: plugin-files/cpt/freelancers.php:1124
 msgid "Projects Credits"
-msgstr ""
+msgstr "Nombre de projet"
 
 #: plugin-files/widgets/projects-widgets.php:117
 msgid "Projects Search by category"
@@ -2897,7 +2897,7 @@ msgstr ""
 
 #: plugin-files/cpt/project.php:19
 msgid "Search Projects"
-msgstr ""
+msgstr "Rechercher des projets"
 
 #: plugin-files/cpt/report.php:17
 msgid "Search Report"
@@ -3186,7 +3186,7 @@ msgstr ""
 
 #: plugin-files/cpt/company.php:701
 msgid "Simple Projects"
-msgstr ""
+msgstr "Projets"
 
 #: plugin-files/cpt/company.php:709 plugin-files/cpt/freelancers.php:1140
 msgid "Simple Projects Expiry"

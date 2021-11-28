@@ -277,6 +277,26 @@ function fl_payout_themes_custom_types() {
                     </ul>
                 </div>
               </div>
+              <div class="tab">
+                <input type="checkbox" id="chck4" <?php if($default_payout == 'mobilemoney'){echo 'checked'; } ?>>
+                <label class="tab-label" for="chck4"><?php echo __( "Mobile money", 'exertio_framework' ); if($default_payout == 'mobilemoney'){ echo __( " ( preferred )", 'exertio_framework' ); } ?></label>
+                <div class="tab-content">
+                <ul>
+                	<li>
+                        <span><?php echo __( "Numéro de téléphone:", 'exertio_framework' ); ?></span>
+                        <?php
+                        $decoded_mobilemoney ='';
+                        $decoded_mobilemoney = json_decode(get_user_meta($author_id,'_mobilemoney_details', true));
+                        foreach($decoded_paypal as $paypal_detail)
+                        {
+                            $mobilemoney_tel = $mobilemoney_detail->mobilemoney_tel;
+                        }
+                        ?>
+                        <p><?php echo esc_html($mobilemoney_tel); ?></p>
+                    </li>
+                </ul>
+                </div>
+              </div>
             </div>
         </div>
         <?php

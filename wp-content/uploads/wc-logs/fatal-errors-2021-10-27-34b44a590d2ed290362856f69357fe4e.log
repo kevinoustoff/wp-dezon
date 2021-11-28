@@ -1,9 +1,0 @@
-2021-10-27T20:03:19+00:00 CRITICAL Uncaught Error: Class 'ZipArchive' not found in /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/custom-functions.php:910
-Stack trace:
-#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(292): history_msg_atatchment_download('')
-#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
-#2 /var/www/html/wordpress/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
-#3 /var/www/html/wordpress/wp-admin/admin-ajax.php(187): do_action('wp_ajax_history...')
-#4 {main}
-  thrown dans /var/www/html/wordpress/wp-content/plugins/exertio-framework/inc/custom-functions.php à la ligne 910
-

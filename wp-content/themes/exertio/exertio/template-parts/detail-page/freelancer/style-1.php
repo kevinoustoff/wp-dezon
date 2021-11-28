@@ -38,7 +38,7 @@ else
                 <?php
 				}
 				?>
-                <li> <span> <?php echo esc_html__('Membre depuis ','exertio_theme').date_i18n( get_option( 'date_format' ), strtotime( get_the_date('dS/M/Y') ) ); ?></span> </li>
+                <li> <span> <?php echo esc_html__('Membre depuis ','exertio_theme').get_the_date(); ?></span> </li>
                 <li><span><?php echo get_rating($fl_id, ''); ?></span> </li>
               </ul>
             </div>
@@ -63,7 +63,20 @@ else
       					}
                 */
       				?>
-                <a href="#" class="btn btn-theme "><?php echo esc_html__('Contacter','exertio_theme'); ?></a>
+              <?php
+                    if( fl_framework_get_options('whizzchat_service_option') == true)
+                    {
+                      if(in_array('whizz-chat/whizz-chat.php', apply_filters('active_plugins', get_option('active_plugins'))))
+                      {
+                      ?>
+                        <a href="javascript:void(0)" class="chat_toggler btn btn-theme" data-user_id="<?php echo esc_attr($author_id); ?>" data-page_id='<?php echo esc_attr($fl_id); ?>'>
+                          <i class="far fa-comment-alt"></i>
+                          <?php echo esc_html__( 'Contacter', 'exertio_theme' ); ?>
+                        </a>
+                  <?php
+                      }
+                    }
+                ?>
             </div>
           </div>
         </div>

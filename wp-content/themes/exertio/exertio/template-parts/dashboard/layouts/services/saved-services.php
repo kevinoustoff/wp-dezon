@@ -40,9 +40,9 @@ if ( get_query_var( 'paged' ) ) {
       <div class="d-flex justify-content-between flex-wrap">
         <div class="d-flex align-items-end flex-wrap">
           <div class="mr-md-3 mr-xl-5">
-            <h2><?php echo esc_html__('Saved Services','exertio_theme').esc_html(' ('. $total_count.')');?></h2>
+            <h2><?php echo esc_html__('Jobs enregistrés','exertio_theme').esc_html(' ('. $total_count.')');?></h2>
 			<div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
-				<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Dashboard', 'exertio_theme' ); ?>&nbsp;</p>
+				<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 				<?php echo exertio_dashboard_extention_return(); ?>
 			</div>
           </div>
@@ -57,9 +57,10 @@ if ( get_query_var( 'paged' ) ) {
           <div class="pro-section">
               <div class="pro-box heading-row">
                 <div class="pro-coulmn pro-title">
+                	<?php echo esc_html__( 'Titre', 'exertio_theme' ) ?>
                 </div>
-                <div class="pro-coulmn"><?php echo esc_html__( 'in Queue', 'exertio_theme' ) ?> </div>
-                <div class="pro-coulmn"><?php echo esc_html__( 'Cost / Delivery', 'exertio_theme' ) ?> </div>
+                <div class="pro-coulmn"><?php echo esc_html__( 'En cours', 'exertio_theme' ) ?> </div>
+                <div class="pro-coulmn"><?php echo esc_html__( 'Prix / Délai de livraison', 'exertio_theme' ) ?> </div>
                 <div class="pro-coulmn"><?php echo esc_html__( 'Action', 'exertio_theme' ) ?> </div>
               </div>
 				<?php
@@ -112,7 +113,7 @@ if ( get_query_var( 'paged' ) ) {
 										}
 									 ?>
 								</div>
-								<div class="pro-coulmn"><a href="javascript:void(0)" class="btn btn-danger delete_saved_service" data-post-id="<?php echo esc_html($sid); ?>"> <?php echo esc_html__( 'Remove ', 'exertio_theme' ); ?> </a></div>
+								<div class="pro-coulmn"><a href="javascript:void(0)" class="btn btn-danger delete_saved_service" data-post-id="<?php echo esc_html($sid); ?>"> <?php echo esc_html__( 'Supprimer ', 'exertio_theme' ); ?> </a></div>
 							  </div>
 						  
 							<?php
@@ -125,8 +126,8 @@ if ( get_query_var( 'paged' ) ) {
 					{
 						?>
                         <div class="nothing-found">
-                            <h3><?php echo esc_html__( 'Sorry!!! No Record Found', 'exertio_theme' ) ?></h3>
-                            <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo esc_html__( 'Nothing found icon', 'exertio_theme' ) ?> ">
+                            <h3><?php echo esc_html__( 'Désolé!!! Aucun job trouvé', 'exertio_theme' ) ?></h3>
+                            <img src="<?php echo get_template_directory_uri() ?>/images/dashboard/nothing-found.png" alt="<?php echo esc_html__( 'Aucune icone trouvée', 'exertio_theme' ) ?> ">
                         </div>
                         <?php	
 					}

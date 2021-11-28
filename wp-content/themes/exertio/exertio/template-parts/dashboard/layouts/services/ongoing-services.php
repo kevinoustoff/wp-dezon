@@ -51,7 +51,7 @@ $start_from = ($pageno-1) * $limit;
                         <div class="pro-coulmn pro-title">
                           <?php echo esc_html__( 'Titre', 'exertio_theme' ) ?>
                         </div>
-                        <div class="pro-coulmn"><?php echo esc_html__( 'Crée par', 'exertio_theme' ) ?> </div>
+                        <div class="pro-coulmn"><?php echo esc_html__( 'Client', 'exertio_theme' ) ?> </div>
                         <div class="pro-coulmn"><?php echo esc_html__( 'Action', 'exertio_theme' ) ?> </div>
                       </div>
                         <?php

@@ -1,568 +1,1114 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Whizz Chat\n"
-"POT-Creation-Date: 2020-06-04 18:27+0500\n"
-"PO-Revision-Date: 2020-06-04 18:27+0500\n"
+"POT-Creation-Date: 2021-03-03 18:46+0500\n"
+"PO-Revision-Date: 2021-03-03 18:49+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: whizz-chat.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: includes/action-hooks.php:283
+#: includes/action-hooks.php:362
 msgid "Chat Started"
-msgstr ""
+msgstr "Le chat a commencé"
 
-#: includes/api.php:101 includes/api.php:203 includes/api.php:244
-#: includes/api.php:283 includes/api.php:323 includes/api.php:338
-#: includes/api.php:387 includes/api.php:475 includes/api.php:675
-#: includes/api.php:833 includes/api.php:1004 includes/api.php:1057
-#: includes/api.php:1117 includes/api.php:1193
+#: includes/action-hooks.php:515 includes/api.php:188 includes/api.php:220
+#: includes/api.php:246 includes/api.php:268 includes/api.php:295
+#: includes/api.php:325 includes/api.php:378 includes/api.php:407
+#: includes/api.php:465 includes/api.php:499 includes/api.php:530
+#: includes/api.php:545 includes/api.php:601 includes/api.php:686
+#: includes/api.php:907 includes/api.php:1066 includes/api.php:1222
+#: includes/api.php:1345 includes/api.php:1461 includes/api.php:1524
+#: includes/api.php:1582 includes/api.php:1699 includes/api.php:1726
+#: includes/dashboard/includes/class-dashboard-api.php:78
+#: includes/dashboard/includes/class-dashboard-api.php:102
+#: includes/dashboard/includes/class-dashboard-api.php:241
+#: includes/dashboard/includes/class-dashboard-api.php:293
+#: includes/dashboard/includes/class-dashboard-api.php:334
+#: includes/dashboard/includes/class-dashboard-api.php:540
 msgid "Invalid security token sent...."
-msgstr ""
+msgstr "Jeton de sécurité invalide envoyé ...."
 
-#: includes/api.php:251 includes/api.php:290 includes/api.php:700
-#: includes/api.php:858
+#: includes/action-hooks.php:526
+msgid "Can not send message to yourself"
+msgstr "Ne peut pas envoyer de message à vous-même"
+
+#: includes/api.php:199 includes/chatbox-html.php:586
+#: includes/dashboard/includes/class-dashboard-html.php:724
+#: includes/dashboard/page-template/template-whizzchat.php:7
+msgid "Sound off"
+msgstr "Désactiver le son"
+
+#: includes/api.php:204 includes/chatbox-html.php:589
+#: includes/dashboard/includes/class-dashboard-html.php:727
+#: includes/dashboard/page-template/template-whizzchat.php:10
+msgid "Sound on"
+msgstr "Activer le son"
+
+#: includes/api.php:471 includes/api.php:505 includes/api.php:931
+#: includes/api.php:1086 includes/dashboard/includes/class-dashboard-api.php:84
+#: includes/dashboard/includes/class-dashboard-api.php:354
 msgid "Invalid session id"
-msgstr ""
+msgstr "Id de session invalide"
 
-#: includes/api.php:364
+#: includes/api.php:578
 msgid "User Unblocked"
-msgstr ""
+msgstr "Utilisateur débloqué avec succès."
 
-#: includes/api.php:370
+#: includes/api.php:584
 msgid "User Blocked"
 msgstr "Utilisateur bloqué"
 
-#: includes/api.php:371 includes/chatbox-html.php:127
-#: includes/chatbox-html.php:153
+#: includes/api.php:585 includes/chatbox-html.php:160
+#: includes/chatbox-html.php:179
 msgid ""
 "You have blocked this user. To send message you need to unblock this user."
 msgstr ""
+"Vous avez bloqué cet utilisateur. Pour envoyer un message, vous devez "
+"débloquer cet utilisateur."
 
-#: includes/api.php:371 includes/chatbox-html.php:127
-#: includes/chatbox-html.php:153 includes/chatbox-html.php:529
-#: includes/chatbox-html.php:532 includes/chatbox-html.php:579
-#: includes/chatbox-html.php:582
+#: includes/api.php:585 includes/chatbox-html.php:160
+#: includes/chatbox-html.php:179 includes/chatbox-html.php:660
+#: includes/chatbox-html.php:663 includes/chatbox-html.php:734
+#: includes/chatbox-html.php:737
+#: includes/dashboard/includes/class-dashboard-html.php:528
+#: includes/dashboard/includes/class-dashboard-html.php:531
 msgid "Unblock"
 msgstr "Débloquer"
 
-#: includes/api.php:633
-msgid "Max allowed size is"
-msgstr ""
-
-#: includes/api.php:637
-msgid "Invalid format uploaded."
-msgstr ""
-
-#: includes/api.php:645
+#: includes/api.php:807 includes/api.php:879
 msgid "Sorry, this file type is not permitted for security reason. "
 msgstr ""
 "Désolé, ce type de fichier n'est pas autorisé pour des raisons de sécurité."
 
-#: includes/api.php:789 includes/api.php:955
+#: includes/api.php:870
+msgid "Max allowed size is"
+msgstr "La taille maximale autorisée est"
+
+#: includes/api.php:873
+msgid "Invalid format uploaded."
+msgstr "Format non valide téléchargé."
+
+#: includes/api.php:1025 includes/api.php:1182
+#: includes/dashboard/includes/class-dashboard-api.php:443
 msgid "Message sent."
 msgstr "Message envoyé."
 
-#: includes/api.php:791 includes/api.php:957
-msgid "Message not sent."
-msgstr ""
-
-#: includes/api.php:815 includes/api.php:981
-msgid "No Chat Found"
-msgstr "Aucun chat trouvé"
-
-#: includes/api.php:819 includes/api.php:985
-msgid "Action not match"
-msgstr ""
-
-#: includes/chatbox-html.php:104
-msgid "Chat Ended"
-msgstr "Discussion terminée"
-
-#: includes/chatbox-html.php:124 includes/chatbox-html.php:150
+#: includes/api.php:1028 includes/chatbox-html.php:157
+#: includes/chatbox-html.php:176
+#: includes/dashboard/includes/class-dashboard-api.php:446
 msgid ""
 "User has blocked you. You can not send the message until user unblock you."
 msgstr ""
+"L’utilisateur vous a bloqué. Vous ne pouvez pas envoyer le message tant que "
+"l’utilisateur ne vous a pas débloqué."
 
-#: includes/chatbox-html.php:479
-msgid "No Chat Available"
-msgstr ""
+#: includes/api.php:1049 includes/api.php:1205
+#: includes/dashboard/includes/class-dashboard-api.php:467
+msgid "No Chat Found"
+msgstr "Aucun chat trouvé"
 
-#: includes/chatbox-html.php:480
-msgid "Load more messages"
-msgstr ""
+#: includes/api.php:1053 includes/api.php:1209
+#: includes/dashboard/includes/class-dashboard-api.php:471
+msgid "Action not match"
+msgstr "Action ne correspond pas"
 
-#: includes/chatbox-html.php:485
-msgid "Search chat"
-msgstr ""
+#: includes/api.php:1184
+msgid "Message not sent."
+msgstr "Message non envoyé."
 
-#: includes/chatbox-html.php:505
-msgid "Chat List"
-msgstr ""
+#: includes/api.php:1740
+msgid "User not exist"
+msgstr "Utilisateur n’existe pas"
 
-#: includes/chatbox-html.php:528 includes/chatbox-html.php:533
-#: includes/chatbox-html.php:578 includes/chatbox-html.php:583
-#: options-api/api.php:165
-msgid "Block"
-msgstr "Bloc"
+#: includes/api.php:1765
+msgid "You have new Message"
+msgstr "Vous avez un nouveau message"
 
-#: includes/chatbox-html.php:564 includes/chatbox-html.php:598
-#: options-api/api.php:166
-msgid "Leave Chat"
-msgstr "Quitter le Chat"
+#: includes/chatbox-html.php:88 includes/chatbox-html.php:502
+#: includes/dashboard/includes/class-dashboard-html.php:610
+#: options-api/api.php:505
+msgid "Got Confused? let's chat with admin."
+msgstr "Vous avez été confus ? discutons avec admin."
 
-#: includes/chatbox-html.php:717 includes/chatbox-html.php:1080
-msgid "image"
-msgstr "image"
+#: includes/chatbox-html.php:139
+msgid "Chat Ended"
+msgstr "Discussion terminée"
 
-#: includes/chatbox-html.php:723 includes/chatbox-html.php:1086
-msgid "More"
-msgstr "Plus"
-
-#: includes/chatbox-html.php:847 includes/chatbox-html.php:936
-msgid "Seen"
-msgstr "Vu"
-
-#: includes/chatbox-html.php:1196
-msgid "Full Name"
-msgstr "Nom complet"
-
-#: includes/chatbox-html.php:1202
-msgid "Email Address"
-msgstr "Adresse Email"
-
-#: includes/chatbox-html.php:1205
-msgid "Start Chat"
-msgstr "Démarrer la discussion"
-
-#: includes/class-whizz-chat.php:165
+#: includes/chatbox-html.php:389 includes/class-whizz-chat.php:174
 msgid "Just Now"
 msgstr "Maintenant"
 
-#: includes/class-whizz-chat.php:168
+#: includes/chatbox-html.php:392 includes/class-whizz-chat.php:177
 msgid "1 minute ago"
 msgstr "il y a 1 minute"
 
-#: includes/class-whizz-chat.php:170
+#: includes/chatbox-html.php:394 includes/class-whizz-chat.php:179
 msgid "minutes ago"
 msgstr "il y a quelques minutes"
 
-#: includes/class-whizz-chat.php:174
+#: includes/chatbox-html.php:398 includes/class-whizz-chat.php:183
 msgid "an hour ago"
 msgstr "il y a une heure"
 
-#: includes/class-whizz-chat.php:176
+#: includes/chatbox-html.php:400 includes/class-whizz-chat.php:185
 msgid "hrs ago"
 msgstr "heures"
 
-#: includes/class-whizz-chat.php:180 includes/class-whizz-chat.php:215
+#: includes/chatbox-html.php:404 includes/class-whizz-chat.php:189
+#: includes/class-whizz-chat.php:224
 msgid "Yesterday"
 msgstr "Hier"
 
-#: includes/class-whizz-chat.php:182
+#: includes/chatbox-html.php:406 includes/class-whizz-chat.php:191
 msgid "days ago"
 msgstr "jours"
 
-#: includes/class-whizz-chat.php:186
+#: includes/chatbox-html.php:410 includes/class-whizz-chat.php:195
 msgid "a week ago"
 msgstr "il y a une semaine"
 
-#: includes/class-whizz-chat.php:188
+#: includes/chatbox-html.php:412 includes/class-whizz-chat.php:197
 msgid "weeks ago"
 msgstr "il y a plusieurs semaines"
 
-#: includes/class-whizz-chat.php:192
+#: includes/chatbox-html.php:416 includes/class-whizz-chat.php:201
 msgid "a month ago"
 msgstr "il y a un mois"
 
-#: includes/class-whizz-chat.php:194
+#: includes/chatbox-html.php:418 includes/class-whizz-chat.php:203
 msgid "months ago"
 msgstr "mois"
 
-#: includes/class-whizz-chat.php:198
+#: includes/chatbox-html.php:422 includes/class-whizz-chat.php:207
 msgid "one year ago"
 msgstr "il y a un an"
 
-#: includes/class-whizz-chat.php:200
+#: includes/chatbox-html.php:424 includes/class-whizz-chat.php:209
 msgid "years ago"
 msgstr "il y a quelques années"
 
-#: includes/class-whizz-chat.php:212
+#: includes/chatbox-html.php:572
+#: includes/dashboard/includes/class-dashboard-html.php:709
+msgid "No Chat Available"
+msgstr "Aucun chat disponible"
+
+#: includes/chatbox-html.php:573
+#: includes/dashboard/includes/class-dashboard-html.php:713
+msgid "Load more messages"
+msgstr "Charger plus de messages"
+
+#: includes/chatbox-html.php:577
+#: includes/dashboard/includes/class-dashboard-html.php:717
+msgid "Search chat"
+msgstr "Recherche de chat"
+
+#: includes/chatbox-html.php:605
+#: includes/dashboard/includes/class-dashboard-html.php:737
+#: includes/dashboard/page-template/template-whizzchat.php:42
+msgid "Chat List"
+msgstr "Liste de chat"
+
+#: includes/chatbox-html.php:617 includes/chatbox-html.php:685
+#: includes/chatbox-html.php:690
+msgid "whizzchat dashboard page"
+msgstr "page de tableau de bord whizzchat"
+
+#: includes/chatbox-html.php:659 includes/chatbox-html.php:664
+#: includes/chatbox-html.php:733 includes/chatbox-html.php:738
+#: includes/dashboard/includes/class-dashboard-html.php:527
+#: includes/dashboard/includes/class-dashboard-html.php:532
+msgid "Block"
+msgstr "Bloc"
+
+#: includes/chatbox-html.php:690
+msgid "Visit Dashboard"
+msgstr "Visiter le Tableau de Bord"
+
+#: includes/chatbox-html.php:718 includes/chatbox-html.php:741
+msgid "Leave Chat"
+msgstr "Quitter le Chat"
+
+#: includes/chatbox-html.php:830 includes/chatbox-html.php:1096
+#: includes/dashboard/includes/class-dashboard-html.php:259
+msgid "More"
+msgstr "Plus"
+
+#: includes/chatbox-html.php:947 includes/chatbox-html.php:1001
+#: includes/dashboard/includes/class-dashboard-html.php:64
+msgid "Seen"
+msgstr "Vu"
+
+#: includes/chatbox-html.php:1284
+msgid "Please login first to start chat."
+msgstr "S’il vous plaît vous connecter d’abord pour commencer le chat."
+
+#: includes/chatbox-html.php:1285
+msgid "Login Here"
+msgstr "Connectez-vous ici"
+
+#: includes/chatbox-html.php:1291
+msgid "Please Provide name and email of your choice to start chat."
+msgstr ""
+"Veuillez fournir le nom et l’e-mail de votre choix pour commencer à discuter."
+
+#: includes/chatbox-html.php:1295
+msgid "Full Name"
+msgstr "Nom commercial ou Nom et prénom"
+
+#: includes/chatbox-html.php:1300
+msgid "Email Address"
+msgstr "Adresse Email"
+
+#: includes/chatbox-html.php:1303
+msgid "Start Chat"
+msgstr "Démarrer la discussion"
+
+#: includes/class-whizz-chat.php:221
 msgid "Today"
 msgstr "Aujourd’hui"
 
-#: options-api/api.php:49
-msgid "Admin Chat"
-msgstr ""
-
-#: options-api/api.php:57
-msgid "WhizzChat Post"
-msgstr ""
-
-#: options-api/api.php:64
+#: includes/class-whizzchat-bot.php:27
 msgctxt "taxonomy general name"
 msgid "WhizzChat Bot"
-msgstr ""
+msgstr "WhizzChat Bot"
 
-#: options-api/api.php:65
+#: includes/class-whizzchat-bot.php:28
 msgctxt "taxonomy singular name"
 msgid "WhizzChat Bot"
-msgstr ""
+msgstr "WhizzChat Bot"
 
-#: options-api/api.php:66
+#: includes/class-whizzchat-bot.php:29
 msgid "Search WhizzChat Bot"
-msgstr ""
+msgstr "Rechercher WhizzChat Bot"
 
-#: options-api/api.php:67
+#: includes/class-whizzchat-bot.php:30
 msgid "All WhizzChat Bot"
-msgstr ""
+msgstr "Tous les Bot WhizzChat"
 
-#: options-api/api.php:68
+#: includes/class-whizzchat-bot.php:31
 msgid "Parent WhizzChat Bot"
-msgstr ""
+msgstr "Parent WhizzChat Bot"
 
-#: options-api/api.php:69
+#: includes/class-whizzchat-bot.php:32
 msgid "Parent WhizzChat Bot:"
-msgstr ""
+msgstr "Parent WhizzChat Bot:"
 
-#: options-api/api.php:70
+#: includes/class-whizzchat-bot.php:33
 msgid "Edit WhizzChat Bot"
-msgstr ""
+msgstr "Modifier WhizzChat Bot"
 
-#: options-api/api.php:71
+#: includes/class-whizzchat-bot.php:34
 msgid "Update WhizzChat Bot"
-msgstr ""
+msgstr "Mise à jour WhizzChat Bot"
 
-#: options-api/api.php:72
+#: includes/class-whizzchat-bot.php:35
 msgid "Add New WhizzChat Bot"
-msgstr ""
+msgstr "Ajouter un nouveau bot WhizzChat"
 
-#: options-api/api.php:73
+#: includes/class-whizzchat-bot.php:36
 msgid "New WhizzChat Bot Name"
-msgstr ""
+msgstr "Nouveau nom de bot WhizzChat"
 
-#: options-api/api.php:74
+#: includes/class-whizzchat-bot.php:37 includes/class-whizzchat-bot.php:173
+#: options-api/api.php:478 options-api/api.php:483 options-api/api.php:497
 msgid "WhizzChat Bot"
-msgstr ""
+msgstr "WhizzChat Bot"
 
-#: options-api/api.php:148
-msgid "Nothing found icon"
-msgstr ""
+#: includes/class-whizzchat-bot.php:98 includes/class-whizzchat-bot.php:116
+#: includes/class-whizzchat-bot.php:136
+msgid "Response Message"
+msgstr "Message de réponse"
 
-#: options-api/api.php:154
-msgid "Type a message"
+#: includes/class-whizzchat-bot.php:100 includes/class-whizzchat-bot.php:116
+#: includes/class-whizzchat-bot.php:136
+msgid "Type of Message"
 msgstr "Saisir un message"
 
-#: options-api/api.php:186
-msgid "0OOpsssss !!!!!! there is no chat ...."
-msgstr ""
+#: includes/class-whizzchat-bot.php:101 includes/class-whizzchat-bot.php:116
+#: includes/class-whizzchat-bot.php:136
+msgid "text"
+msgstr "texte"
 
-#: options-api/api.php:202
+#: includes/class-whizzchat-bot.php:102 includes/class-whizzchat-bot.php:116
+#: includes/class-whizzchat-bot.php:136
+msgid "URL"
+msgstr "URL"
+
+#: includes/class-whizzchat-bot.php:103 includes/class-whizzchat-bot.php:116
+#: includes/class-whizzchat-bot.php:136
+msgid "HTML"
+msgstr "HTML"
+
+#: includes/class-whizzchat-bot.php:104 includes/class-whizzchat-bot.php:116
+#: includes/class-whizzchat-bot.php:136
+msgid "Video"
+msgstr "Vidéo"
+
+#: includes/class-whizzchat-bot.php:105 includes/class-whizzchat-bot.php:116
+#: includes/class-whizzchat-bot.php:136
+msgid "Image"
+msgstr "Image"
+
+#: includes/class-whizzchat-bot.php:109 includes/class-whizzchat-bot.php:116
+msgid "Add More Fields"
+msgstr "Ajouter plus de champs"
+
+#: includes/class-whizzchat-bot.php:111 includes/class-whizzchat-bot.php:136
+msgid "Remove"
+msgstr "Supprimer"
+
+#: includes/class-whizzchat-bot.php:121
+msgid "Add Response Messages"
+msgstr "Ajouter des messages de réponse"
+
+#: includes/class-whizzchat-bot.php:125
+msgid ""
+"Please add the response messages according to the message type and format."
+"<br />"
+msgstr ""
+"Veuillez ajouter les messages de réponse en fonction du type et du format du "
+"message.<br />"
+
+#: includes/class-whizzchat-bot.php:186
+msgid "Admin ChatBox"
+msgstr "Admin ChatBox"
+
+#: includes/class-whizzchat-bot.php:200
+msgid " Online"
+msgstr " Online"
+
+#: includes/dashboard/includes/class-dashboard-html.php:365
+msgid "Location"
+msgstr "Emplacement"
+
+#: includes/dashboard/includes/class-dashboard-html.php:406
+msgid "Document"
+msgstr "Document"
+
+#: includes/dashboard/includes/class-dashboard-html.php:439
+msgid "Gallery"
+msgstr "Galerie"
+
+#: includes/dashboard/includes/class-dashboard-html.php:556
+msgid "Online"
+msgstr "En ligne"
+
+#: includes/dashboard/includes/class-dashboard-html.php:556
+msgid "Offline"
+msgstr "Hors ligne"
+
+#: includes/dashboard/includes/class-dashboard-html.php:586
+msgid "Delete"
+msgstr "Supprimer"
+
+#: includes/dashboard/page-template/template-whizzchat.php:91
+#: includes/dashboard/whizzchat-dashboard.php:162
+msgid "Welcome to WhizzChat Messenger"
+msgstr "Bienvenue sur WhizzChat Messenger"
+
+#: includes/dashboard/page-template/template-whizzchat.php:92
+#: includes/dashboard/whizzchat-dashboard.php:163
+msgid "Please select a chat to Start messaging."
+msgstr "S’il vous plaît sélectionner un chat pour démarrer la messagerie."
+
+#: includes/dashboard/whizzchat-dashboard.php:74
+msgid "Whizzchat Dashboard - Sidebar"
+msgstr "Tableau de bord Whizzchat - Barre latérale"
+
+#: includes/dashboard/whizzchat-dashboard.php:137 whizz-chat.php:206
+msgid "Please enter a valid email."
+msgstr "Veuillez saisir un email valide."
+
+#: includes/dashboard/whizzchat-dashboard.php:138 whizz-chat.php:207
+msgid "Please provide your information above."
+msgstr "Veuillez fournir vos informations ci-dessus."
+
+#: includes/dashboard/whizzchat-dashboard.php:139 whizz-chat.php:208
+msgid "Your browser don't support to send your location."
+msgstr "Votre navigateur ne prend pas en charge l’envoi de votre position."
+
+#: includes/dashboard/whizzchat-dashboard.php:140 whizz-chat.php:209
+msgid "Please enable location from your browser to send your location."
+msgstr ""
+"Veuillez activer l’emplacement à partir de votre navigateur pour envoyer "
+"votre position."
+
+#: includes/dashboard/whizzchat-dashboard.php:141 whizz-chat.php:210
+msgid "Not A Valid File/Image type uploaded"
+msgstr "Pas un fichier valide / type d’image téléchargé"
+
+#: includes/dashboard/whizzchat-dashboard.php:142 whizz-chat.php:211
+msgid "Warning"
+msgstr "Avertissement"
+
+#: includes/dashboard/whizzchat-dashboard.php:143 whizz-chat.php:212
+msgid "Type something here."
+msgstr "Tapez quelque chose ici."
+
+#: includes/dashboard/whizzchat-dashboard.php:144
+#: includes/dashboard/whizzchat-dashboard.php:150 whizz-chat.php:213
+#: whizz-chat.php:219
+msgid "Please select a chat person from the chat list."
+msgstr "S’il vous plaît sélectionner une personne de chat de la liste de chat."
+
+#: includes/dashboard/whizzchat-dashboard.php:145 whizz-chat.php:214
+msgid "Are you sure you want to remove the chat messages and chat users."
+msgstr ""
+"Êtes-vous sûr que vous voulez supprimer les messages de chat et les "
+"utilisateurs de chat."
+
+#: includes/dashboard/whizzchat-dashboard.php:146 whizz-chat.php:215
+msgid "Reset database successfully."
+msgstr "Réinitialisez la base de données avec succès."
+
+#: includes/dashboard/whizzchat-dashboard.php:147 whizz-chat.php:216
+msgid "OOoops !!!  something went wrong."
+msgstr "Oooops!!!  quelque chose s’est mal passé."
+
+#: includes/dashboard/whizzchat-dashboard.php:149 whizz-chat.php:218
+msgid "Nothing found icon"
+msgstr "Rien trouvé icône"
+
+#: includes/dashboard/whizzchat-dashboard.php:151 whizz-chat.php:220
+msgid "Add alphanemeric only."
+msgstr "Ajouter l’alphanémérique seulement."
+
+#: includes/dashboard/whizzchat-dashboard.php:152 whizz-chat.php:221
+msgid "Please input alphanumeric characters only."
+msgstr "S’il vous plaît entrer des caractères alphanumériques seulement."
+
+#: includes/dashboard/whizzchat-dashboard.php:153 whizz-chat.php:222
+msgid "it seems your message is empty or you are adding invalid type of data.."
+msgstr ""
+"il semble que votre message est vide ou vous ajoutez le type invalide de "
+"données.."
+
+#: includes/dashboard/whizzchat-dashboard.php:154 whizz-chat.php:223
+msgid "Please add messages."
+msgstr "S’il vous plaît ajouter des messages."
+
+#: includes/dashboard/whizzchat-dashboard.php:155 whizz-chat.php:224
+msgid "uploaded type and size and type is not correct."
+msgstr "le type et la taille et le type téléchargés ne sont pas corrects."
+
+#: includes/dashboard/whizzchat-dashboard.php:156 whizz-chat.php:225
+msgid "uploaded size is not correct."
+msgstr "la taille téléchargée n’est pas correcte."
+
+#: includes/dashboard/whizzchat-dashboard.php:157 whizz-chat.php:226
+msgid "uploaded type is not correct."
+msgstr "le type téléchargé n’est pas correct."
+
+#: includes/dashboard/whizzchat-dashboard.php:158 whizz-chat.php:227
+msgid "Some of these uploaded data type and size and type is not correct."
+msgstr ""
+"Certains de ces types de données téléchargées et la taille et le type n’est "
+"pas correcte."
+
+#: includes/dashboard/whizzchat-dashboard.php:159 whizz-chat.php:228
+msgid "Some of these uploaded data size is not correct."
+msgstr "Certaines de ces données téléchargées ne sont pas correctes."
+
+#: includes/dashboard/whizzchat-dashboard.php:160 whizz-chat.php:229
+msgid "Some of these uploaded data type is not correct."
+msgstr "Certains de ces types de données téléchargées ne sont pas corrects."
+
+#: includes/dashboard/whizzchat-dashboard.php:177
+msgid "WhizzChat Dashboard"
+msgstr "Tableau de bord WhizzChat"
+
+#: options-api/api.php:50
+msgid "Admin Chat"
+msgstr "Admin Chat"
+
+#: options-api/api.php:59
 msgid "Settings"
 msgstr "Réglages"
 
-#: options-api/api.php:236
+#: options-api/api.php:130
 msgid "Basic Settings"
 msgstr "Paramètres de base"
 
-#: options-api/api.php:237
+#: options-api/api.php:131
 msgid "Here you can customize your chat settings."
-msgstr ""
+msgstr "Ici, vous pouvez personnaliser vos paramètres de chat."
 
-#: options-api/api.php:241
+#: options-api/api.php:135
 msgid "WhizzChat"
-msgstr ""
+msgstr "WhizzChat ( WhizzChat )"
 
-#: options-api/api.php:242
+#: options-api/api.php:136
 msgid "Use these options to completely stop/start the chat."
-msgstr ""
+msgstr "Utilisez ces options pour arrêter/démarrer complètement le chat."
 
-#: options-api/api.php:245
+#: options-api/api.php:139 options-api/api.php:250 options-api/api.php:262
 msgid "Disable"
 msgstr "Désactiver"
 
-#: options-api/api.php:246
+#: options-api/api.php:140 options-api/api.php:251 options-api/api.php:263
 msgid "Enable"
 msgstr "Activer"
 
-#: options-api/api.php:264
+#: options-api/api.php:146
 msgid "Communication Type"
 msgstr "Type de communication"
 
-#: options-api/api.php:265
+#: options-api/api.php:147
 msgid ""
 "<span><b style=\"color:red\">Note : </b> For Real Time communication you "
 "need to follow the Real Time Communication Tab Settings.</span>"
 msgstr ""
+"<span><b style=\"color:red\">Note: </b> Pour la communication en temps réel, "
+"vous devez suivre les paramètres de l’onglet communication en temps réel.</"
+"span>"
 
-#: options-api/api.php:268
+#: options-api/api.php:150
 msgid "Ajax Based"
 msgstr "Basé sur Ajax"
 
-#: options-api/api.php:269
+#: options-api/api.php:151
 msgid "Real Time"
 msgstr "Temps réel"
 
-#: options-api/api.php:276
+#: options-api/api.php:157
 msgid "Chat Between"
-msgstr ""
+msgstr "Chat entre"
 
-#: options-api/api.php:277
+#: options-api/api.php:158
 msgid "Select option to select a chat between."
-msgstr ""
+msgstr "Sélectionnez l’option pour sélectionner un chat entre."
 
-#: options-api/api.php:280
+#: options-api/api.php:161
 msgid "Authors"
 msgstr "Auteurs"
 
-#: options-api/api.php:281
+#: options-api/api.php:162
 msgid "Admin Only"
 msgstr "Administrateurs seulement"
 
-#: options-api/api.php:288
+#: options-api/api.php:163
+msgid "Both"
+msgstr "Les deux"
+
+#: options-api/api.php:170
 msgid "Select Admin"
-msgstr ""
+msgstr "Sélectionnez Admin"
 
-#: options-api/api.php:289
+#: options-api/api.php:171
 msgid "Select admin for chat."
-msgstr ""
+msgstr "Sélectionnez admin pour le chat."
 
-#: options-api/api.php:297
+#: options-api/api.php:179
+msgid "General Queries Page"
+msgstr "Page des requêtes générales"
+
+#: options-api/api.php:180
+msgid "Select the admin page for general queries."
+msgstr "Sélectionnez la page admin pour les requêtes générales."
+
+#: options-api/api.php:188
 msgid "Chat User Type"
-msgstr ""
+msgstr "Type d’utilisateur de chat"
 
-#: options-api/api.php:298
+#: options-api/api.php:189
 msgid "Select option to select a chat type."
-msgstr ""
+msgstr "Sélectionnez l’option pour sélectionner un type de chat."
 
-#: options-api/api.php:301
+#: options-api/api.php:192
 msgid "Anyone"
 msgstr "Tout le monde"
 
-#: options-api/api.php:302
+#: options-api/api.php:193
 msgid "Require (Name and Email)"
-msgstr ""
+msgstr "Exiger (Nom et e-mail)"
 
-#: options-api/api.php:303
+#: options-api/api.php:194
 msgid "Only WordPress Login"
-msgstr ""
+msgstr "Seule la connexion WordPress"
 
-#: options-api/api.php:309
+#: options-api/api.php:201
+msgid "Login Type"
+msgstr "Type de connexion"
+
+#: options-api/api.php:202
+msgid ""
+"select the type of login wether you are using page/popup for site user login."
+msgstr ""
+"sélectionnez le type de connexion que vous utilisez page/popup pour la "
+"connexion utilisateur du site."
+
+#: options-api/api.php:205
+msgid "Page Url"
+msgstr "Page Url"
+
+#: options-api/api.php:206
+msgid "Popup"
+msgstr "Popup"
+
+#: options-api/api.php:213
+msgid "Login URL/popup"
+msgstr "URL/popup de connexion"
+
+#: options-api/api.php:214
+msgid ""
+"Pleae enter the login url or add the popup window class/id.it redirects the "
+"chatbox window to the login page."
+msgstr ""
+"Pleae entrez l’url de connexion ou ajoutez la classe fenêtre popup/id.it "
+"redirige la fenêtre chatbox vers la page de connexion."
+
+#: options-api/api.php:222
 msgid "Max chat box window"
-msgstr ""
+msgstr "Fenêtre max de boîte de chat"
 
-#: options-api/api.php:310
+#: options-api/api.php:223
 msgid "Pleae enter the number of chat box window open while chatting."
 msgstr ""
+"Pleae entrer le nombre de fenêtre de boîte de chat ouvert tout en bavardant."
 
-#: options-api/api.php:313
-msgid "3"
-msgstr "3"
+#: options-api/api.php:226
+msgid "2"
+msgstr "2"
 
-#: options-api/api.php:325
+#: options-api/api.php:230
 msgid "Notification Check Time"
-msgstr ""
+msgstr "Heure de vérification des notifications"
 
-#: options-api/api.php:326
+#: options-api/api.php:231
 msgid "Please check message notification ajax time in second(s)."
 msgstr ""
+"S’il vous plaît vérifier la notification de message ajax temps en deuxième "
+"(s)."
 
-#: options-api/api.php:329
+#: options-api/api.php:234
 msgid "15"
 msgstr "15"
 
-#: options-api/api.php:333
+#: options-api/api.php:238
 msgid "Show Chat Box on"
-msgstr ""
+msgstr "Afficher chat box sur"
 
-#: options-api/api.php:334
+#: options-api/api.php:239
 msgid "Select where you want to show the chatbox."
-msgstr ""
+msgstr "Sélectionnez où vous souhaitez afficher le chatbox."
 
-#: options-api/api.php:344
+#: options-api/api.php:246
+msgid "WhizzChat Shortcode"
+msgstr "WhizzChat Shortcode"
+
+#: options-api/api.php:247
+msgid ""
+"Use this option to add a shortcode; this will prevent chats from auto-"
+"populating; instead, a button click will open the specific chat. You can "
+"create your own customised button by using the  { class \"chat toggler\" and "
+"the data-page id = \"relevent post id\" }"
+msgstr ""
+"Utilisez cette option pour ajouter un code court; cela empêchera les "
+"conversations de peupler automatiquement; au lieu de cela, un clic de bouton "
+"ouvrira le chat spécifique. Vous pouvez créer votre propre bouton "
+"personnalisé en utilisant le { classe « chat toggler » et l’id page de "
+"données = « relevent post id » }"
+
+#: options-api/api.php:258
+msgid "Hide Show chat list"
+msgstr "Liste de chat Hide Show"
+
+#: options-api/api.php:259
+msgid "Use this option to hide show chat list on a page"
+msgstr ""
+"Utilisez cette option pour masquer la liste de chat d’exposition sur une page"
+
+#: options-api/api.php:273
 msgid "Media Settings"
 msgstr "Paramètres des médias"
 
-#: options-api/api.php:345
+#: options-api/api.php:274
 msgid "Set the Media Settings according to your requirement."
-msgstr ""
+msgstr "Définissez les paramètres multimédias en fonction de vos besoins."
 
-#: options-api/api.php:350
+#: options-api/api.php:278
 msgid "Allow Image Upload"
-msgstr ""
+msgstr "Autoriser le téléchargement d’images"
 
-#: options-api/api.php:351
+#: options-api/api.php:279
 msgid "Enable image upload feature in chat"
-msgstr ""
+msgstr "Activer la fonction de téléchargement d’images dans le chat"
 
-#: options-api/api.php:354 options-api/api.php:382
+#: options-api/api.php:282 options-api/api.php:310 options-api/api.php:337
+#: options-api/api.php:348 options-api/api.php:453 options-api/api.php:487
+#: options-api/api.php:546
 msgid "Enabled"
 msgstr "Activé"
 
-#: options-api/api.php:355 options-api/api.php:383
+#: options-api/api.php:283 options-api/api.php:311 options-api/api.php:338
+#: options-api/api.php:349 options-api/api.php:454 options-api/api.php:488
+#: options-api/api.php:547
 msgid "Disabled"
 msgstr "Désactivé"
 
-#: options-api/api.php:361
+#: options-api/api.php:289
 msgid "Image Size"
 msgstr "Taille de l'image"
 
-#: options-api/api.php:362
+#: options-api/api.php:290
 msgid "Enter image max upload size in KB"
-msgstr ""
+msgstr "Entrez la taille maximale de téléchargement d’image dans KB"
 
-#: options-api/api.php:365 options-api/api.php:393
+#: options-api/api.php:293 options-api/api.php:321
 msgid "e.g 2 or 0.8 "
-msgstr ""
+msgstr "p. ex. 2 ou 0,8 "
 
-#: options-api/api.php:369
+#: options-api/api.php:297
 msgid "Image Format"
 msgstr "Format d’image"
 
-#: options-api/api.php:370
+#: options-api/api.php:298
 msgid "Enter upload allowed image format seprate by ,"
-msgstr ""
+msgstr "Entrez télécharger le format d’image autorisé seprate par ,"
 
-#: options-api/api.php:378
+#: options-api/api.php:306
 msgid "Allow file Upload"
-msgstr ""
+msgstr "Autoriser le téléchargement de fichiers"
 
-#: options-api/api.php:379
+#: options-api/api.php:307
 msgid "Enable file upload feature in chat"
-msgstr ""
+msgstr "Activer la fonction de téléchargement de fichiers dans le chat"
 
-#: options-api/api.php:389
+#: options-api/api.php:317
 msgid "File Size"
 msgstr "Taille de Fichier"
 
-#: options-api/api.php:390
-msgid "Enter file max upload size in MB"
-msgstr ""
+#: options-api/api.php:318
+msgid "Enter file max upload size in KB"
+msgstr "Entrez la taille de téléchargement max du fichier dans KB"
 
-#: options-api/api.php:397
+#: options-api/api.php:325
 msgid "File Format"
 msgstr "Format de Fichier"
 
-#: options-api/api.php:398
+#: options-api/api.php:326
 msgid "Enter upload allowed file format seprate by ,"
-msgstr ""
+msgstr "Entrez télécharger le format de fichier autorisé seprate par ,"
 
-#: options-api/api.php:408
+#: options-api/api.php:333
+msgid "Allow Location"
+msgstr "Autoriser l’emplacement"
+
+#: options-api/api.php:334
+msgid "Enable location feature in chat"
+msgstr "Activer la fonction de localisation dans le chat"
+
+#: options-api/api.php:344
+msgid "Allow Emojies"
+msgstr "Autoriser emojies"
+
+#: options-api/api.php:345
+msgid "Enable emojies feature in chat"
+msgstr "Activer la fonction emojies dans le chat"
+
+#: options-api/api.php:357
+msgid "Design Settings"
+msgstr "Paramètres de style"
+
+#: options-api/api.php:358
+msgid "Set the Design Settings according to your requirement."
+msgstr "Définissez les paramètres de conception en fonction de vos besoins."
+
+#: options-api/api.php:362
+msgid "Chat List head Color"
+msgstr "Couleur de tête de liste de chat"
+
+#: options-api/api.php:363
+msgid "Select the Chat List Head Color."
+msgstr "Sélectionnez la couleur tête de liste de chat."
+
+#: options-api/api.php:370
+msgid "Chat List head Text Color"
+msgstr "Couleur de texte de tête de liste de chat"
+
+#: options-api/api.php:371
+msgid "Select the Chat List header Text Color."
+msgstr "Sélectionnez la couleur textuelle de l’en-tête de la liste de chat."
+
+#: options-api/api.php:378
+msgid "Chat Box head Color"
+msgstr "Couleur de tête de boîte de chat"
+
+#: options-api/api.php:379
+msgid "Select the Chat Box Head Color."
+msgstr "Sélectionnez la couleur tête de boîte de chat."
+
+#: options-api/api.php:386
+msgid "Chat Box Primary Text Color"
+msgstr "Couleur de texte primaire de boîte de chat"
+
+#: options-api/api.php:387
+msgid "Select the Chat Box header Text Primary Color."
+msgstr "Sélectionnez l’en-tête Chat Box Texte Couleur primaire."
+
+#: options-api/api.php:394
+msgid "Chat Box Secondary Text Color"
+msgstr "Couleur de texte secondaire de boîte de chat"
+
+#: options-api/api.php:395
+msgid "Select the Chat Box header Text Secondary Color."
+msgstr "Sélectionnez l’en-tête Chat Box Texte Couleur secondaire."
+
+#: options-api/api.php:402
+msgid "ChatBox Button Background Color"
+msgstr "Couleur d’arrière-plan de bouton de ChatBox"
+
+#: options-api/api.php:403
+msgid ""
+"Select the ChatBox button color for start chat form and admin chat form ."
+msgstr ""
+"Sélectionnez la couleur du bouton ChatBox pour démarrer le formulaire de "
+"chat et le formulaire de chat admin ."
+
+#: options-api/api.php:410
+msgid "ChatBox Button Text Color"
+msgstr "Couleur de texte de bouton de ChatBox"
+
+#: options-api/api.php:411
+msgid ""
+"Select the ChatBox button text color for start chat form and admin chat "
+"form ."
+msgstr ""
+"Sélectionnez la couleur de texte du bouton ChatBox pour démarrer le "
+"formulaire de chat et le formulaire de chat admin ."
+
+#: options-api/api.php:421
 msgid "Real Time Communication"
-msgstr ""
+msgstr "Communication en temps réel"
 
-#: options-api/api.php:409
+#: options-api/api.php:422
 msgid ""
 "<b style=\"color:red\">Note : </b>For RealTime Communication You have to "
 "create the agile-pusher credentials.<br/>For Creating agile-pusher "
 "Credentials please follow this link.<a href=\"https://agilepusher.com/\"> "
 "Create Credentials </a>"
 msgstr ""
+"<b style=\"color:red\">Note: </b> Pour la communication RealTime, vous devez "
+"créer les informations d’identification agile-pusher.<br/>Pour créer des "
+"informations d’identification agiles pusher s’il vous plaît suivre ce lien. "
+"<a href=\"https://agilepusher.com/\"> Créer des informations "
+"d’identification </a>"
 
-#: options-api/api.php:429
+#: options-api/api.php:426
 msgid "Agile Pusher Key"
-msgstr ""
+msgstr "Clé Pusher Agile"
 
-#: options-api/api.php:430
+#: options-api/api.php:427
 msgid "Enter the agile pusher Api key."
-msgstr ""
+msgstr "Entrez la touche pusher agile Api."
 
-#: options-api/api.php:457
+#: options-api/api.php:436
+msgid "Dashboard Settings"
+msgstr "Paramètres du tableau de bord"
+
+#: options-api/api.php:437
+msgid "Set the dashboard settings according to your requirements."
+msgstr ""
+"Définissez les paramètres du tableau de bord en fonction de vos besoins."
+
+#: options-api/api.php:441
+msgid "Dashboard Page"
+msgstr "Page du Tableau de Bord"
+
+#: options-api/api.php:442
+msgid "Select the dashboard page for chat messenger."
+msgstr "Sélectionnez la page tableau de bord pour chat messenger."
+
+#: options-api/api.php:449
+msgid "Allow dashboard sidebar"
+msgstr "Autoriser la barre latérale du tableau de bord"
+
+#: options-api/api.php:450
+msgid ""
+"Use this option to enable/disable whizzchat sidebar in the dashboard area."
+msgstr ""
+"Utilisez cette option pour activer/désactiver la barre latérale whizzchat "
+"dans la zone du tableau de bord."
+
+#: options-api/api.php:460
+msgid "Sidebar title"
+msgstr "Titre du sidebar"
+
+#: options-api/api.php:461
+msgid "Enter the sidebar section title."
+msgstr "Entrez le titre de la section barre latérale."
+
+#: options-api/api.php:463 options-api/api.php:464
+msgid "Whizzchat Sidebar."
+msgstr "Barre latérale Whizzchat."
+
+#: options-api/api.php:468
+msgid "Whizzchat Dashboard Color"
+msgstr "Couleur du tableau de bord Whizzchat"
+
+#: options-api/api.php:469
+msgid "Select the Whizzchat color for dashboard sections."
+msgstr ""
+"Sélectionnez la couleur Whizzchat pour les sections de tableau de bord."
+
+#: options-api/api.php:484
+msgid ""
+"Use these options to Enable/Disable Admin WhizzChat Bot.Make Sure you have "
+"select the chat between ( admin|both ) in Basic Settings."
+msgstr ""
+"Utilisez ces options pour activer/désactiver Admin WhizzChat Bot.Assurez-"
+"vous d’avoir sélectionné le chat entre ( admin|both ) dans les paramètres de "
+"base."
+
+#: options-api/api.php:494
+msgid "WhizzChat Bot header Text"
+msgstr "Texte de l’en-tête WhizzChat Bot"
+
+#: options-api/api.php:495
+msgid "Add the WhizzChat Bot header text,"
+msgstr "Ajouter le texte de l’en-tête WhizzChat Bot,"
+
+#: options-api/api.php:498
+msgid "Header text"
+msgstr "Texte d'entête"
+
+#: options-api/api.php:502
+msgid "WhizzChat Bot tooltip Text"
+msgstr "Texte d’outil WhizzChat Bot"
+
+#: options-api/api.php:503
+msgid "Add the WhizzChat Bot tooltip text,"
+msgstr "Ajouter le texte whizzchat bot tooltip,"
+
+#: options-api/api.php:506
+msgid "tooltip text"
+msgstr "texte tooltip"
+
+#: options-api/api.php:510
+msgid "WhizzChat Bot Header Color"
+msgstr "WhizzChat Bot Header Couleur"
+
+#: options-api/api.php:511
+msgid "Select the ChatBot header color."
+msgstr "Sélectionnez la couleur de l’en-tête ChatBot."
+
+#: options-api/api.php:518
+msgid "WhizzChat Bot Header Text Color"
+msgstr "WhizzChat Bot Header Couleur de texte"
+
+#: options-api/api.php:519
+msgid "Select the ChatBot header text color."
+msgstr "Sélectionnez la couleur de texte de l’en-tête ChatBot."
+
+#: options-api/api.php:526
+msgid "Introductory Messages"
+msgstr "Messages d’introduction"
+
+#: options-api/api.php:527
+msgid ""
+"Add the introductory Messages.You can add the multiple messages seperated by "
+"| ."
+msgstr ""
+"Ajouter l’introduction Messages.You peut ajouter les messages multiples "
+"isolés par | ."
+
+#: options-api/api.php:534
+msgid "Response Message LImit"
+msgstr "Message de réponse LImit"
+
+#: options-api/api.php:535
+msgid "Limit the Response Messages added in the whizz-chat Bot Actions."
+msgstr ""
+"Limitez les messages de réponse ajoutés dans les actions bot whizz-chat."
+
+#: options-api/api.php:538
+msgid "Add response LImit"
+msgstr "Ajouter la réponse LImit"
+
+#: options-api/api.php:542
+msgid "WhizzChat Bot Copyright"
+msgstr "WhizzChat Bot Copyright"
+
+#: options-api/api.php:543
+msgid ""
+"Enable this setion to display copyright section at the bottom of the "
+"WhizzChat Bot."
+msgstr ""
+"Permettez à cette sétion d’afficher la section copyright au bas du Bot "
+"WhizzChat."
+
+#: options-api/api.php:553
+msgid "WhizzChat Bot Copyright Text"
+msgstr "WhizzChat Bot Copyright Texte"
+
+#: options-api/api.php:554
+msgid "Add the copyright text of your choice."
+msgstr "Ajoutez le texte du droit d’auteur de votre choix."
+
+#: options-api/api.php:557
+msgid "Copyright text"
+msgstr "Texte de copyright"
+
+#: options-api/api.php:563
 msgid "Reset Data"
 msgstr "Remettre à zéro les données"
 
-#: options-api/api.php:458
+#: options-api/api.php:564
 msgid "it is used to remove all chat messages and chat users."
 msgstr ""
+"il est utilisé pour supprimer tous les messages de chat et les utilisateurs "
+"de chat."
 
-#: options-api/api.php:462
+#: options-api/api.php:568
 msgid "whizzchat database"
-msgstr ""
+msgstr "base de données whizzchat"
 
-#: options-api/api.php:463
+#: options-api/api.php:569
 msgid "Reset Database"
 msgstr "Réinitialiser la base données"
 
-#: options-api/api.php:637
+#: options-api/api.php:731
 msgid "WhizzChat Settings"
+msgstr "Paramètres WhizzChat"
+
+#. Description of the plugin/theme
+#: options-api/api.php:732
+msgid ""
+"Whizz Chat is a WordPress plugin based on Ajax and Live Chat system where "
+"buyers and seller can communicate with each other."
 msgstr ""
-
-#: options-api/api.php:638
-msgid "Some infos about my plugin."
-msgstr ""
-
-#: whizz-chat.php:238
-msgid "Please enter a valid email."
-msgstr "Veuillez saisir un email valide."
-
-#: whizz-chat.php:239
-msgid "Please provide your information above."
-msgstr ""
-
-#: whizz-chat.php:240
-msgid "Your browser don't support to send your location."
-msgstr ""
-
-#: whizz-chat.php:241
-msgid "Please enable location from your browser to send your location."
-msgstr ""
-
-#: whizz-chat.php:242
-msgid "Not A Valid File/Image type uploaded"
-msgstr ""
-
-#: whizz-chat.php:243
-msgid "Warning"
-msgstr "Avertissement"
-
-#: whizz-chat.php:244
-msgid "Type something here."
-msgstr ""
-
-#: whizz-chat.php:245
-msgid "Please select a chat person from the chat list."
-msgstr ""
-
-#: whizz-chat.php:246
-msgid "Are you sure you want to remove the chat messages and chat users."
-msgstr ""
-
-#: whizz-chat.php:247
-msgid "Reset database successfully."
-msgstr ""
-
-#: whizz-chat.php:248
-msgid "OOoops !!!  something went wrong."
-msgstr ""
+"Whizz Chat est un plugin WordPress basé sur ajax et live chat système où les "
+"acheteurs et le vendeur peuvent communiquer les uns avec les autres."
 
 #. Plugin Name of the plugin/theme
 msgid "Whizz Chat"
-msgstr ""
+msgstr "Whizz Chat"
 
 #. Plugin URI of the plugin/theme
-#. Author URI of the plugin/theme
-msgid "https://scriptsbundle.com/"
-msgstr ""
-
-#. Description of the plugin/theme
-msgid ""
-"SB Quick Chatty is WordPress plugin based Live Chat system where buyer and "
-"seller can communicate with each other."
-msgstr ""
+msgid "https://www.whizzchat.com/"
+msgstr "https://www.whizzchat.com/"
 
 #. Author of the plugin/theme
 msgid "ScriptsBundle"
 msgstr "BFI Partners"
+
+#. Author URI of the plugin/theme
+msgid "https://scriptsbundle.com/"
+msgstr "https://scriptsbundle.com/"
+
+#~ msgid "3"
+#~ msgstr "3"

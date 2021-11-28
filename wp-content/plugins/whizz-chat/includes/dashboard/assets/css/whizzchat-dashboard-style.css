@@ -134,6 +134,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, in
     right: 20px;
     top: 10px;
     font-size: 14px;
+    z-index: 99;
 }
 
 .whizz-dash-chat-body .chat-footer {
@@ -220,6 +221,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, in
 }
 .chat-footer .form-row .col-auto .btn.btn-primary{
     margin-top: 20px;
+    display: flex;
 }
 
 

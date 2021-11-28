@@ -55,16 +55,29 @@ class Whizz_Chat_box_Html {
 
         $whizzchat_between = $whizzChat_options["whizzChat-chat-between"];
         $whizzchat_admin_page = $whizzChat_options["whizzChat-admin-page"];
-        $chat_lists = whizzChat_chat_list();
+        
         $args = array();
         $args['direct_load'] = true;
         $args['chat_box_open'] = true;
         $args['chat_box_id'] = get_the_ID();
-        $chat_boxes = whizzChat_chat_boxes($args);
 
-        $chat_box_html = apply_filters('whizzChat_load_chat_chatbox', $chat_boxes);
-        $chat_list_html = apply_filters('whizzChat_load_chat_list', $chat_lists);
+        $chat_box_html   =  "";
+        $is_allowed_shortcode = isset($whizzChat_options['whizzChat-shortcode-allow']) ? $whizzChat_options['whizzChat-shortcode-allow'] : "0";
 
+        $holder_hide_class = "no_chat";
+        if ($is_allowed_shortcode != "1") {
+            $holder_hide_class = "";
+            $chat_boxes = whizzChat_chat_boxes($args);
+            $chat_box_html = apply_filters('whizzChat_load_chat_chatbox', $chat_boxes);
+        }          
+        
+          $cahtlist_allow   =   isset($whizzChat_options['whizzChat-chatlist'])   ? $whizzChat_options['whizzChat-chatlist']  :  "1";
+        
+          $chat_list_html    = "";
+          if($cahtlist_allow  ==  "1" && $is_allowed_shortcode != "1"){
+               $chat_lists = whizzChat_chat_list();
+               $chat_list_html = apply_filters('whizzChat_load_chat_list', $chat_lists);
+           }
 
         $list_render = '<div class="chatbox-inner-list">' . $chat_list_html . '</div>';
         if (isset($whizzchat_between) && $whizzchat_between == '1') { // in case of admin remove popover/chat list
@@ -86,19 +99,16 @@ class Whizz_Chat_box_Html {
                                      <div class="chatbox-inner-holder"></div>
                              </div>';
         } else {
-            $list_html_start ='<input type="checkbox" id="click">
-              <label for="click">
-              <i class="fab fa-facebook-messenger"></i>
-              <i class="fas fa-times"></i>
-              </label>';
-            $html = $list_html_start.'<div class="chatbox-holder">
+            $html = '<div class="chatbox-holder '. esc_attr($holder_hide_class).'">
                         <div class="chatbox-inner-holder">' . $chat_box_html . '</div>
                         ' . $list_render . '
                 </div>';
         }
 
+echo whizzChat_return($html);
 
-        echo whizzChat_return($html);
+
+
     }
 
     public function whizzChat_list_chat_messages_seen_html($html = '', $user_data = array(), $msg = array()) {
@@ -126,7 +136,7 @@ class Whizz_Chat_box_Html {
     }
 
     public function whizzChat_individual_user_blocked_html($html = '', $user_data = array(), $box_content = array()) {
-        $html .= "<p class='whizzChat-block-user-p blocked-chat-p'>" . esc_html__('Discussion terminée', 'whizz-chat') . "</p>";
+        $html .= "<p class='whizzChat-block-user-p blocked-chat-p'>" . esc_html__('Chat Ended', 'whizz-chat') . "</p>";
 
         return $html;
     }
@@ -255,6 +265,8 @@ class Whizz_Chat_box_Html {
             foreach ($chat_lists as $chat_list) {
                 $post_id = $chat_list["post_id"];
                 $chat_id = $chat_list["id"];
+
+
                 if ($chat_list['session_id'] != "") {
                     $blocked_status = whizzChat_is_user_blocked($chat_id, true);
                     $filters .= apply_filters('whizz_filter_chat_box_content_admin', $chat_list, $blocked_status);
@@ -285,6 +297,9 @@ class Whizz_Chat_box_Html {
 
     public function whizzChat_load_chat_chatbox_html($chat_lists = array(), $content_html = false) {
         global $whizzChat_options;
+
+        
+
         $whizzChat_options = get_option('whizz-chat-options');
 
         $filter = $list_html = '';
@@ -296,8 +311,17 @@ class Whizz_Chat_box_Html {
             foreach ($chat_lists as $chat_list) {
                 $post_id = $chat_list["post_id"];
                 $chat_id = ($chat_list["id"]);
+
                 $author_id = get_post_field('post_author', $post_id);
                 $author_id = apply_filters('whizz_chat_author_rel_id', $author_id);
+                
+                if( isset($chat_list["author_id"])  && $chat_list["author_id"] != "" ){
+
+
+                    $author_id    =   $chat_list["author_id"];
+                }
+
+
                 $filters = apply_filters('whizz_filter_chat_box_header', $chat_list);
                 if ($chat_list['session_id'] != "") {
                     $blocked_status = whizzChat_is_user_blocked($chat_id, true);
@@ -319,12 +343,17 @@ class Whizz_Chat_box_Html {
                 } else {
 
 
+                    
+
+
                     $real_com_id = $chat_list['session_id'];
                     if ($session_id == $author_id) {
                         $real_com_id = $chat_list['session_id'];
                     } else {
                         $real_com_id = $author_id;
                     }
+                        
+                
 
                     $live_room_data = ' data-room="' . md5($_SERVER['HTTP_HOST']) . '_whizchat' . $chat_id . '" ';
 
@@ -333,7 +362,7 @@ class Whizz_Chat_box_Html {
                     $session_id = md5($chat_list['session_id']);
                     $chat_attr = '';
                     $box_html = '<div  class="chatbox group-chat' . $hide_box_class . '" ' . $chat_attr . '>' . $filters . '  </div>';
-                    $filter .= '<div id="' . $chat_idd . '" data-post-id="' . $post_id . '" ' . $live_room_data . ' data-author-id="' . $author_id . '" data-comm-id="' . $real_com_id . '" data-chat-id="' . $chat_id . '" class="individual-chat-box'.$temp_class.'" data-unique-user="' . $session_id . '">' . $box_html . '</div>';
+                    $filter .= '<div id="' . $chat_idd . '" data-post-id="' . $post_id . '" ' . $live_room_data . ' data-author-id="' . $author_id . '" data-comm-id="' . $real_com_id . '" data-chat-id="' . $chat_id . '" class="individual-chat-box' . $temp_class . '" data-unique-user="' . $session_id . '">' . $box_html . '</div>';
                     $filter .= '<input id="get-chat-switch-' . $chat_idd . '" value="on" type="hidden">';
                     $chat_switch[] = $chat_idd;
                 }
@@ -345,8 +374,15 @@ class Whizz_Chat_box_Html {
     public function whizzchat_time_ago($timestamp) {
 
         $time_ago = strtotime($timestamp);
+
+        return $timestamp;
+        
         $current_time = time();
         $time_difference = $current_time - $time_ago;
+
+
+
+
         $seconds = $time_difference;
         $minutes = round($seconds / 60); // value 60 is seconds  
         $hours = round($seconds / 3600); //value 3600 is 60 minutes * 60 sec  
@@ -450,7 +486,7 @@ class Whizz_Chat_box_Html {
         $list_html_final .= '<div class="whizzchat-sidebar bg-white" data-chat-id="' . $chat_id . '" data-user-name="' . $user_name . '">
                             <div class="whizzchat-sidebar-heading bg-light">
                             
-                                <p class="h5 mb-0 py-1">  Messagerie (pour les clients et les prestataires) </p>
+                                <p class="h5 mb-0 py-1">  Chat List </p>
                             </div>
                             <div class="messages-box">
                                 <div class="list-group rounded-0">
@@ -468,7 +504,7 @@ class Whizz_Chat_box_Html {
 
         $both_chat_enable = isset($whizzChat_options['whizzChat-bot']) && $whizzChat_options['whizzChat-bot'] ? TRUE : False;
         $chat_between = isset($whizzChat_options['whizzChat-chat-between']) && $whizzChat_options['whizzChat-chat-between'] != '' ? $whizzChat_options['whizzChat-chat-between'] : '0';
-        $whizzchat_bot_tooltip = isset($whizzChat_options["whizzChatbot-tooltip"]) && $whizzChat_options["whizzChatbot-tooltip"] != '' ? $whizzChat_options["whizzChatbot-tooltip"] : esc_html__("Vous êtes confus? Discutez avec l'équipe de Dezon.", 'whizz-chat');
+        $whizzchat_bot_tooltip = isset($whizzChat_options["whizzChatbot-tooltip"]) && $whizzChat_options["whizzChatbot-tooltip"] != '' ? $whizzChat_options["whizzChatbot-tooltip"] : esc_html__("Got Confused? let's chat with admin.", 'whizz-chat');
         $image_id = '';
         $both_chat_symbol = '';
         if ($both_chat_enable && ($chat_between == '1' || $chat_between == '2') && (!in_array('administrator', wp_get_current_user()->roles) )) {
@@ -512,11 +548,19 @@ class Whizz_Chat_box_Html {
                             <a onClick="return open_whizz_chat(' . $clicked . ',' . $liste . ')" href="javascript:void(0);">' . whizzchat_words_count(get_the_title($chat_list["post_id"]), 30) . '</a></h3>';
                 $author_id = get_post_field('post_author', $chat_list['post_id']);
 
+
+
                 if ($user_id_ses == $chat_list['session_id']) {
                     $display_name = get_the_author_meta('display_name', $author_id);
                 } else {
                     $display_name = $chat_list['name'];
                 }
+                 
+                if($user_id_ses !=   $chat_list['post_author_id'] ){
+
+                        $display_name = get_the_author_meta('display_name', $chat_list['post_author_id']);
+                    }
+                
 
                 $last_active_time = whizzChat::whizzchat_time_ago($chat_list["last_active_time"]);
                 $list_html .= "<li id='" . $chat_id . "' class='" . $alert_msg_class . "'>" . $image . "
@@ -530,12 +574,12 @@ class Whizz_Chat_box_Html {
         }
 
 
-        $no_chat_message = "<p class='nochat text-center'><img src='" . plugins_url('whizz-chat') . "/assets/images/nochat.png'><span>" . esc_html__('Aucun message disponible', 'whizz-chat') . "</span></p>";
-        $load_more = "<footer><a href='#'>" . esc_html__('Charger plus de messages', 'whizz-chat') . "</a></footer>";
+        $no_chat_message = "<p class='nochat text-center'><img src='" . plugins_url('whizz-chat') . "/assets/images/nochat.png'><span>" . esc_html__('No Chat Available', 'whizz-chat') . "</span></p>";
+        $load_more = "<footer><a href='#'>" . esc_html__('Load more messages', 'whizz-chat') . "</a></footer>";
         $load_more = ($list_html != "" ) ? "" : $no_chat_message;
         $html_body = "<div class='whizz-chat-list'>
                           <div class='chat-body'>
-                            <div class='whizz-search'> <input placeholder='" . esc_html__('Rechercher un message', 'whizz-chat') . "' type='text' class='form-control chat-search'><span class='whizz-search-loader'></span></div>
+                            <div class='whizz-search'> <input placeholder='" . esc_html__('Search chat', 'whizz-chat') . "' type='text' class='form-control chat-search'><span class='whizz-search-loader'></span></div>
                                 <ul> " . $list_html . " </ul>
                           </div>
                             " . $load_more . " </div>";
@@ -544,10 +588,10 @@ class Whizz_Chat_box_Html {
 
 
         if (isset($_COOKIE['whizz_sound_enable']) && $_COOKIE['whizz_sound_enable'] == 'on') {
-            $whizz_sound_text = esc_html__('Désactiver le son', 'whizz-chat');
+            $whizz_sound_text = esc_html__('Sound off', 'whizz-chat');
             $whizz_sound_val = 'off';
         } else { // in case of value off
-            $whizz_sound_text = esc_html__('Activer le son', 'whizz-chat');
+            $whizz_sound_text = esc_html__('Sound on', 'whizz-chat');
             $whizz_sound_val = 'on';
         }
         $hide_list_class = isset($_COOKIE['whizzChat_list_close']) && $_COOKIE['whizzChat_list_close'] == 'hide' ? ' chatlist-min' : '';
@@ -559,12 +603,11 @@ class Whizz_Chat_box_Html {
             $dashboard_style = 'href="' . get_permalink($dashboard_page) . '" target="__blank" ';
         }
 
-        
         $list_html = '<div class="chatbox group-chat chatbox-list' . $hide_list_class . '" id="whizz-list-' . $user_id_ses . '">
             <div class="chatbox-top"' . $color_style . '>
               <div class="chat-group-name"> 
                     <div class="whizzChat-author-meta whizz-chat-text-nowrap">
-                        <span class="whizzChat-ad-title"' . $txtcolor_style . '>' . esc_html__("Messagerie", "whizz-chat") . '</span>
+                        <span class="whizzChat-ad-title"' . $txtcolor_style . '>' . esc_html__("Chat List", "whizz-chat") . '</span>
                          ' . $both_chat_symbol . '
                     </div>
               </div>
@@ -576,7 +619,7 @@ class Whizz_Chat_box_Html {
                         <li><a href="javascript:void(0)" class="whizzChat-sound-switch" data-sound-val="' . $whizz_sound_val . '" data-replace-text="' . $whizz_sound_text . '">' . $whizz_sound_text . '</a></li>
                       </ul>
                     </div>
-                    <label for="whizzchat-dashboard-list"><a title="' . esc_html__('Tableau de bord messagerie', 'whizz-chat') . '" ' . $dashboard_style . '><i class="fas fa-tachometer-alt"></i></a></label>
+                    <label for="whizzchat-dashboard-list"><a title="' . esc_html__('whizzchat dashboard page', 'whizz-chat') . '" ' . $dashboard_style . '><i class="fas fa-tachometer-alt"></i></a></label>
                    <a href="javascript:void(0)" class="whizz-chat-list-close"><i class="fa fa-angle-down"></i></a>    
                  </div>
               </div>
@@ -586,6 +629,8 @@ class Whizz_Chat_box_Html {
     }
 
     public function whizzChat_individual_chatbox_header_html($user_data) {
+
+
         global $whizzChat_options;
         $whizzChat_options = get_option('whizz-chat-options');
         $chatbox_head_color = isset($whizzChat_options['whizzChat-chatbox-head-color']) && $whizzChat_options['whizzChat-chatbox-head-color'] != '' ? $whizzChat_options['whizzChat-chatbox-head-color'] : '#FFFFFF';
@@ -601,8 +646,18 @@ class Whizz_Chat_box_Html {
 
         $random = rand(0, 9999);
         $current_user = whizzChat::session_id();
-        if ($user_data["post_author_id"] != $current_user) {
-            $display_name = get_the_author_meta('display_name', $user_data["post_author_id"]);
+
+          $post_author_id    =    $user_data["post_author_id"];
+
+
+          if(isset($user_data['author_id']) && $user_data['author_id'] != "" ){
+
+
+            $post_author_id    =    $user_data["author_id"];
+          }
+
+        if ($post_author_id != $current_user) {
+            $display_name = get_the_author_meta('display_name', $post_author_id);
         } else {
             $display_name = $user_data['name'];
         }
@@ -614,7 +669,7 @@ class Whizz_Chat_box_Html {
             $is_blocked1 = esc_html__("Block", "whizz-chat");
         }
         $session_user_id = $user_data["session_id"];
-        $post_author_id = $user_data["post_author_id"];
+    
         $online_status = whizzChat::user_online_status($session_user_id, $post_author_id);
         //away
         $online_status_attr = ( $online_status != "" ) ? 'online' : 'donot-disturb';
@@ -630,18 +685,31 @@ class Whizz_Chat_box_Html {
             $dashboard_style = 'href="' . get_permalink($dashboard_page) . '" target="__blank" ';
         }
 
-        $chat_dashboard_html = '';
+        $chat_dashboard_html = $dashboard_link = '';
         if ($whizzchat_between == '1') {
             $chat_dashboard_html = ' <label for="whizzchat-dashboard-list"><a title="' . esc_html__('whizzchat dashboard page', 'whizz-chat') . '" ' . $dashboard_style . '><i ' . $boxtxt2ndcolor_style . 'class="fas fa-tachometer-alt"></i></a></label>';
+        
+            
         }
 
-
+      $dashboard_link = ' <li><a title="' . esc_html__('whizzchat dashboard page', 'whizz-chat') . '" ' . $dashboard_style . '>'. esc_html__('Visit Dashboard').'</a></li>';
         /* chatbox-unread-message */
+
+          $post_title  =    get_the_title($user_data["post_id"]);
+
+
+             if($user_data["post_id"]   ==  $post_author_id ) {
+
+
+              $post_title    =   "";
+             }
+
+
         $html = '
         <div class="chatbox-top"' . $boxcolor_style . '>
             <div class="chat-group-name"> 
                 <div class="whizzChat-author-meta whizz-chat-text-nowrap">
-                    <span class="whizzChat-ad-title" title="' . get_the_title($user_data["post_id"]) . '"><a ' . $boxtxtcolor_style . ' href="' . get_the_permalink($user_data["post_id"]) . '">' . whizzchat_words_count(get_the_title($user_data["post_id"]), 25) . '</a></span>
+                    <span class="whizzChat-ad-title" title="' . $post_title . '"><a ' . $boxtxtcolor_style . ' href="' . get_the_permalink($user_data["post_id"]) . '">' . whizzchat_words_count($post_title , 25) . '</a></span>
                         <span class="whizzChat-author-name" ' . $boxtxt2ndcolor_style . '>' . $status_html . $display_name . '</span>
                 </div>
             </div>
@@ -652,7 +720,9 @@ class Whizz_Chat_box_Html {
             <div class="settings-popup">
               <ul>
                 <li><a href="javascript:void(0)" class="whizzChat-block-user" data-replace-text="' . $is_blocked1 . '">' . $is_blocked . '</a></li>
-                <li><a data-leave-chat-id="' . $user_data["id"] . '" href="javascript:void(0)" class="logout-chat-session">' . esc_html__('Quitter la discussion', 'whizz-chat') . '</a></li>
+                <li><a data-leave-chat-id="' . $user_data["id"] . '" href="javascript:void(0)" class="logout-chat-session">' . esc_html__('Leave Chat', 'whizz-chat') . '</a></li>
+                  '.$dashboard_link.'
+                
               </ul>
             </div>
             <a href="javascript:void(0);" class="whizzchat-minimize" id="minimize-' . $user_data["id"] . '"><i ' . $boxtxt2ndcolor_style . 'class="fa fa-minus"></i></a> 
@@ -665,15 +735,15 @@ class Whizz_Chat_box_Html {
     public function whizzChat_individual_chatbox_header_html_admin($chat_id, $post_id) {
         $random = rand(0, 9999);
         $current_user = whizzChat::session_id();
-        $is_blocked = esc_html__("Bloquer", "whizz-chat");
-        $is_blocked1 = esc_html__("Débloquer", "whizz-chat");
+        $is_blocked = esc_html__("Block", "whizz-chat");
+        $is_blocked1 = esc_html__("Unblock", "whizz-chat");
         $blocked = whizzChat_is_user_blocked($chat_id);
         if (isset($blocked['is_blocked']) && $blocked['is_blocked'] == true) {
-            $is_blocked = esc_html__("Débloquer", "whizz-chat");
-            $is_blocked1 = esc_html__("Bloquer", "whizz-chat");
+            $is_blocked = esc_html__("Unblock", "whizz-chat");
+            $is_blocked1 = esc_html__("Block", "whizz-chat");
         }
         return '<li><a href="javascript:void(0)" data-chat-id="' . $chat_id . '" data-post-id="' . $post_id . '" class="whizzChat-block-user-admin" data-replace-text="' . $is_blocked1 . '">' . $is_blocked . '</a></li>
-         <li><a data-leave-chat-id="' . $chat_id . '" href="javascript:void(0)" class="logout-chat-session-admin">' . esc_html__('Quitter la discussion', 'whizz-chat') . '</a></li>';
+         <li><a data-leave-chat-id="' . $chat_id . '" href="javascript:void(0)" class="logout-chat-session-admin">' . esc_html__('Leave Chat', 'whizz-chat') . '</a></li>';
     }
 
     public function whizzChat_individual_chatbox_html_admin($user_data, $box_content = array()) {
@@ -879,7 +949,7 @@ class Whizz_Chat_box_Html {
         $seen_at = '';
 
         if ($seen_at != "") {
-            $seen_text = esc_html__("Vu", "whizz-chat");
+            $seen_text = esc_html__("Seen", "whizz-chat");
             $seen_at_html = '<span class="whizzChat-chat-messages-last">' . $seen_text . ': ' . $seen_at . '</span>';
         }
 
@@ -933,7 +1003,7 @@ class Whizz_Chat_box_Html {
         $seen_at = "";
 
         if ($seen_at != "") {
-            $seen_text = esc_html__("Vu", "whizz-chat");
+            $seen_text = esc_html__("Seen", "whizz-chat");
             $seen_at_html = '<span class="whizzChat-chat-messages-last">' . $seen_text . ': ' . $seen_at . '</span>';
         }
 
@@ -953,7 +1023,7 @@ class Whizz_Chat_box_Html {
         }
     }
 
-    public function whizzChat_chat_messages_div_attributes_html($chat_html = '', $user_data, $msg) {
+    public function whizzChat_chat_messages_div_attributes_html($chat_html = '', $user_data = "", $msg ="") {
         $attr = '';
         $attr .= " data-chat-unique-id='" . $msg['chat_message_id'] . "'";
         $attr .= " data-chat-last-seen='" . $msg['seen_at'] . "'";
@@ -1216,31 +1286,30 @@ class Whizz_Chat_box_Html {
 
         $form_html = '';
         if ($user_type == 2) {
-            $form_html .= '<div class="login-first"><h3 style="padding:20px">' . esc_html__("Veuillez d'abord vous connecter pour démarrer la discussion.", 'whizz-chat') . '</h3>';
-            $form_html .= '<a  ' . $attr_cerat . 'target="_blank"> ' . esc_html__('Se connecter ici', 'whizz-chat') . '</a></div>';
+            $form_html .= '<div class="login-first"><h3>' . esc_html__('Please login first to start chat.', 'whizz-chat') . '</h3>';
+            $form_html .= '<a  ' . $attr_cerat . 'target="_blank"> ' . esc_html__('Login Here', 'whizz-chat') . '</a></div>';
         } else {
 
             $form_html .= '<div class="panel-body">';
             $form_html .= '<form accept-charset="UTF-8" role="form" class="initate-chat">';
             if ($user_type == 1) {
-                $form_html .= '<div class="whizz-chat-desc"><p>' . esc_html__("Veuillez fournir le nom et l'adresse e-mail de votre choix pour démarrer la discussion.", "whizz-chat") . '</p></div>';
+                $form_html .= '<div class="whizz-chat-desc"><p>' . esc_html__("Please Provide name and email of your choice to start chat.", "whizz-chat") . '</p></div>';
             }
             $form_html .= '                       <div class="form-group">
 								   <i class="far fa-user"></i>
-                                       <input class="form-control new-user-name" placeholder="' . esc_html__("Nom", "whizz-chat") . '" name="new_user_name" type="text" autocomplete="off">
+                                       <input class="form-control new-user-name" placeholder="' . esc_html__("Full Name", "whizz-chat") . '" name="new_user_name" type="text" autocomplete="off">
                                    </div>';
             if ($user_type != 0) {
                 $form_html .= '<div class="form-group">
 								<i class="far fa-envelope"></i>
-                              <input class="form-control new-user-email" placeholder="' . esc_html__("Email", "whizz-chat") . '" name="new_user_email" type="text" autocomplete="off">
+                              <input class="form-control new-user-email" placeholder="' . esc_html__("Email Address", "whizz-chat") . '" name="new_user_email" type="text" autocomplete="off">
                            </div><div class="whizz-chat-error"></div>';
             }
-            $form_html .= '<button class="btn btn-lg btn-success initate-chat-button"' . $btn_style . '>' . esc_html__("Commencer la discussion", "whizz-chat") . '</button>
+            $form_html .= '<button class="btn btn-lg btn-success initate-chat-button"' . $btn_style . '>' . esc_html__("Start Chat", "whizz-chat") . '</button>
                     </form></div>';
         }
         return $form_html;
     }
 
 }
-
 new Whizz_Chat_box_Html();

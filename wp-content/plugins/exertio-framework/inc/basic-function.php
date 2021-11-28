@@ -46,7 +46,7 @@ if ( ! function_exists( 'exertio_get_username' ) )
 
 				if(isset($verifed_badge) && $verifed_badge == 1)
 				{
-					$verified = '<i class="fa fa-check verified protip" data-pt-position="top" data-pt-scheme="black" data-pt-title="'.esc_html__( ' Verified', 'exertio_theme' ).'"></i> ';	
+					$verified = '<i class="fa fa-check verified protip" data-pt-position="top" data-pt-scheme="black" data-pt-title="'.esc_html__( ' Vérifié', 'exertio_theme' ).'"></i> ';	
 				}
 				else
 				{
@@ -76,7 +76,7 @@ if ( ! function_exists( 'exertio_get_username' ) )
 				$verifed_badge = get_post_meta( $fre_id, '_is_freelancer_verified' , true );
 				if(isset($verifed_badge) && $verifed_badge == 1)
 				{
-					$verified = '<i class="fa fa-check verified protip" data-pt-position="top" data-pt-scheme="black" data-pt-title="'.esc_html__( 'Verified', 'exertio_theme' ).'"></i> ';	
+					$verified = '<i class="fa fa-check verified protip" data-pt-position="top" data-pt-scheme="black" data-pt-title="'.esc_html__( 'Vérifié', 'exertio_theme' ).'"></i> ';	
 				}
 				else
 				{

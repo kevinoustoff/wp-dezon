@@ -156,7 +156,7 @@ class whizzChat_Bot {
         extract($bot_data);
 
         $this->session = whizzChat::session_id();
-
+        
         $whizzChat_options = get_option('whizz-chat-options');
         $whizzChat_copyright = isset($whizzChat_options['whizzChat-bot-copyright']) && $whizzChat_options['whizzChat-bot-copyright'] ? TRUE : FALSE;
 
@@ -180,6 +180,8 @@ class whizzChat_Bot {
 
         $admin_chat_id = isset($_COOKIE['Whizz_Admin_Chat_id']) && $_COOKIE['Whizz_Admin_Chat_id'] != '' ? $_COOKIE['Whizz_Admin_Chat_id'] : 0;
         $admin_chat_box_html = '';
+
+
         if ($admin_chat_id != 0 && $session != '') {
             $admin_chat_box_html .= '<div class="whizzchat-short-quick"><a onclick="return open_whizz_chat(' . $admin_chat_id . ')" href="javascript:void(0);"> ' . esc_html__('Admin ChatBox', 'whizz-chat') . ' </a></div>';
         }
@@ -307,7 +309,7 @@ class whizzChat_Bot {
         return $action_resp_data;
     }
 
-    public function whizzchat_render_bot_chat_arr($bot_js_data = '', $whizzchatbot_data) {
+    public function whizzchat_render_bot_chat_arr($bot_js_data = '', $whizzchatbot_data = array()) {
         if (isset($whizzchatbot_data) && $whizzchatbot_data != '' && is_array($whizzchatbot_data)) {
             $action_data = '';
             $action_counter = 0;
@@ -337,7 +339,7 @@ class whizzChat_Bot {
 
     public function whizzchat_render_bot_chat() {
         global $whizzChat_options, $wp_query;
-
+        
         $bot_js_data = '';
         $whizzChat_options = get_option('whizz-chat-options');
         $whizzChat_intro_msgs = isset($whizzChat_options['whizzChat-intro-msgs']) && $whizzChat_options['whizzChat-intro-msgs'] != '' ? $whizzChat_options['whizzChat-intro-msgs'] : '';
@@ -391,7 +393,7 @@ class whizzChat_Bot {
         $whizz_token = md5($_SERVER['HTTP_HOST']) . '_' . 'whizchat';
 
         $start_chat_data = '';
-        if ($admin_chat_id != 0) {
+        if ($admin_chat_id != 0 &&  "Session and cookies not matched" != $admin_chat_id) {
             $clicked = "'" . $admin_chat_id . "'";
             $start_chat_data = ' open_whizz_chat("' . $admin_chat_id . '");';
         } else {
@@ -426,6 +428,11 @@ class whizzChat_Bot {
                                         xhr.setRequestHeader("X-WP-Nonce", nonce_val);
                                     },
                                 }).done(function (response) {
+                                      
+
+                                      console.log(response);
+                                    
+
                                     if (response.whizz_cookie_data != "") {
                                             $.each(response.whizz_cookie_data, function (index, whizz_cooki) {
                                                 whizzchat_setCookie(whizz_cooki.key, whizz_cooki.value, whizz_cooki.time);

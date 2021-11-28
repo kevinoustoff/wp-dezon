@@ -246,8 +246,7 @@ jQuery(document).ready(function () {
         //jQuery('a.whizzchat-send-voice').disabled = false;
         jQuery('body').on('click', 'a.whizzchat-send-voice', function () {
             
-            alert('asdasd');
-            
+        
             
             var $ = jQuery;
             if (!recordRTC)

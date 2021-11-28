@@ -2322,13 +2322,13 @@ $(document).on('click', '#dispute_msg_btn', function (){
 	});
 
 
-$(document).on('click', '#paypal_pm_btn, #payoneer_pm_btn, #bank_pm_btn', function (){
-		if( $('form#paypal_pm_form, form#payoneer_pm_form, form#bank_pm_form').smkValidate() ){
+$(document).on('click', '#paypal_pm_btn, #payoneer_pm_btn, #bank_pm_btn, #mobilemoney_pm_btn', function (){
+		if( $('form#paypal_pm_form, form#payoneer_pm_form, form#bank_pm_form, form#mobilemoney_pm_form').smkValidate() ){
 			$(".btn-loading .bubbles").addClass("view");
-			$("#paypal_pm_btn, #bank_pm_btn, #payoneer_pm_btn").attr("disabled", true);
+			$("#paypal_pm_btn, #bank_pm_btn, #payoneer_pm_btn, #mobilemoney_pm_btn").attr("disabled", true);
 			var default_payout = $("#default_payout"). val();
 			var payment_method = $(this).attr('data-peyment-method');
-		  $.post(localize_vars_frontend.freelanceAjaxurl, {action: 'exertio_save_payment_method', payment_method_data: $("form#paypal_pm_form, form#payoneer_pm_form, form#bank_pm_form").serialize(), payment_method: payment_method, default_payout: default_payout, security:$('#gen_nonce').val()}).done(function (response)
+		  $.post(localize_vars_frontend.freelanceAjaxurl, {action: 'exertio_save_payment_method', payment_method_data: $("form#paypal_pm_form, form#payoneer_pm_form, form#bank_pm_form, form#mobilemoney_pm_form").serialize(), payment_method: payment_method, default_payout: default_payout, security:$('#gen_nonce').val()}).done(function (response)
 			{
 				if ( true === response.success ) 
 				{
@@ -2339,13 +2339,13 @@ $(document).on('click', '#paypal_pm_btn, #payoneer_pm_btn, #bank_pm_btn', functi
 				else
 				{
 					$(".btn-loading .bubbles").removeClass("view");
-					$('#paypal_pm_btn, #bank_pm_btn, #payoneer_pm_btn').attr("disabled", false);
+					$('#paypal_pm_btn, #bank_pm_btn, #payoneer_pm_btn, #mobilemoney_pm_btn').attr("disabled", false);
 					toastr.error(response.data.message, '', {timeOut: 8000, "closeButton": true, "positionClass": "toast-top-right", "showMethod": "slideDown", "hideMethod":"slideUp"});
 				}
 				
 			}).fail(function () {
 						$(".btn-loading .bubbles").removeClass("view");
-						$('#paypal_pm_btn, #bank_pm_btn, #payoneer_pm_btn').attr("disabled", false);
+						$('#paypal_pm_btn, #bank_pm_btn, #payoneer_pm_btn, #mobilemoney_pm_btn').attr("disabled", false);
 						toastr.error($('#nonce_error').val(), '', {timeOut: 8000, "closeButton": true, "positionClass": "toast-top-right"});
 					   });
 		}

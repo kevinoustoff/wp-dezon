@@ -549,6 +549,8 @@ if (!class_exists('WhizzChat_Dashboard_Html')) {
              $status_class = '';
              $status_label = '';
              
+             
+          
             if ($chatbox_comm_type == '1') {
                $status_class = ( $online_status != "" ) ? ' avatar-online' : ' avatar-away';
                $status_label = ( $online_status != "" ) ? '<small class="text-muted">'.__('Online','whizz-chat').'</small>' : '<small class="text-muted">'.__('Offline','whizz-chat').'</small>'; 
@@ -648,13 +650,24 @@ if (!class_exists('WhizzChat_Dashboard_Html')) {
                     }
                     $title = '<h3 class="whizz-chat-text-nowrap">
                             <a onClick="return open_whizz_chat(' . $clicked . ',' . $liste . ')" href="javascript:void(0);">' . whizzchat_words_count(get_the_title($chat_list["post_id"]), 30) . '</a></h3>';
+
+
                     $author_id = get_post_field('post_author', $chat_list['post_id']);
+
+                
                     $title = '';
                     if ($user_id_ses == $chat_list['session_id']) {
                         $display_name = get_the_author_meta('display_name', $author_id);
-                    } else {
+                    }  else {
                         $display_name = $chat_list['name'];
                     }
+
+                    if($user_id_ses !=   $chat_list['post_author_id'] ){
+
+
+                        $display_name = get_the_author_meta('display_name', $chat_list['post_author_id']);
+                    }
+
                     $last_active_time = whizzChat::whizzchat_time_ago($chat_list["last_active_time"]);
                     
                     $real_com_id = $chat_list['session_id']; //

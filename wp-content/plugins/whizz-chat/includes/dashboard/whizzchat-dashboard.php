@@ -87,8 +87,11 @@ if (!class_exists('WhizzChat_Dashboard')) {
         }
 
         function whizzchat_hide_admin_bar() {
-            if (is_page_template('template-whizzchat.php')) {
+            if (is_page_template('template-whizzchat.php')) {   
                 return false;
+            }
+            else{
+                return true;
             }
         }
 
@@ -102,6 +105,8 @@ if (!class_exists('WhizzChat_Dashboard')) {
                 $whizzChat_chatetype = isset($whizzChat_options['whizzChat-chat-type']) && $whizzChat_options['whizzChat-chat-type'] != '' ? $whizzChat_options['whizzChat-chat-type'] : '1';
                 $socket_key = isset($whizzChat_options["whizzChat-agilepusher-key"]) && $whizzChat_options["whizzChat-agilepusher-key"] != '' ? $whizzChat_options["whizzChat-agilepusher-key"] : '';
 
+                
+                $show_emoji = isset($whizzChat_options["whizzChat-allow-emojies"]) && $whizzChat_options["whizzChat-allow-emojies"] != '' ? $whizzChat_options["whizzChat-allow-emojies"] : true;
                 wp_enqueue_style('whizzchat-inter', $this->dashboard_url . 'assets/webfonts/inter/inter.css', array(), rand(12, 999), 'all');
                 wp_enqueue_style('whizzchat-app', $this->dashboard_url . 'assets/css/app.min.css', array(), rand(12, 999), 'all');
                 wp_enqueue_style('whizzchat-dashboard-style', $this->dashboard_url . 'assets/css/whizzchat-dashboard-style.css', array(), rand(12, 999), 'all');
@@ -130,7 +135,7 @@ if (!class_exists('WhizzChat_Dashboard')) {
                     'whizz_file' => whizzChat_upload_info('file'),
                     'plugin_url' => $this->plugin_dir = plugin_dir_url(__FILE__),
                     'whizzcaht_socket_key' => $socket_key,
-                    'whizzcaht_socket_url' => 'wss://socket.agilepusher.com:3000',
+                    'whizzcaht_socket_url' => 'wss://socket.agilepusher.com',
                     'whizzcaht_room' => md5($_SERVER['HTTP_HOST']) . '_' . 'whizchat',
                     'enter_valid_email' => esc_html__('Please enter a valid email.', 'whizz-chat'),
                     'provide_info' => esc_html__('Please provide your information above.', 'whizz-chat'),
@@ -156,27 +161,25 @@ if (!class_exists('WhizzChat_Dashboard')) {
                     'sm_type_size_not_valid' => esc_html__('Some of these uploaded data type and size and type is not correct.', 'whizz-chat'),
                     'sm_size_not_valid' => esc_html__('Some of these uploaded data size is not correct.', 'whizz-chat'),
                     'sm_type_not_valid' => esc_html__('Some of these uploaded data type is not correct.', 'whizz-chat'),
+                    'logo_img'=> plugin_dir_url('/') . 'whizz-chat/assets/images/whizzchat-logo-dashboard.svg',
+                    'welcome_msg'=> esc_html__('Welcome to WhizzChat Messenger', 'whizz-chat'),
+                    'plz_select'=> esc_html__('Please select a chat to Start messaging.', 'whizz-chat'),
+                    'show_emoji' =>  $show_emoji, 
+                    
                 );
-
                 wp_localize_script('whizzchat-dashboard-functions', 'whizzChat_dashboard_object', $whizz_chat_script_globals);
             }
         }
-
         public function whizzchat_dashboard_page_template($page_template) {
-
             if (get_page_template_slug() == 'template-whizzchat.php') {
                 $page_template = dirname(__FILE__) . '/page-template/template-whizzchat.php';
             }
             return $page_template;
         }
-
         public function whizzchat_page_template_selection($post_templates, $wp_theme, $post, $post_type) {
-
             $post_templates['template-whizzchat.php'] = __('WhizzChat Dashboard');
             return $post_templates;
         }
-
     }
-
 }
 new WhizzChat_Dashboard();

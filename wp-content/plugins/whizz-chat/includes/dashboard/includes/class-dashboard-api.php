@@ -65,7 +65,6 @@ if (!class_exists('WhizzChat_Dashboard_Api')) {
         public function whizzchat_dashboard_auth_callback() {
             return true;
         }
-
         public function whizzChat_load_old_chat_dashboard(WP_REST_Request $request) {
             $json_data = $request->get_json_params();
             $get_parms = $request->get_params();
@@ -117,7 +116,15 @@ if (!class_exists('WhizzChat_Dashboard_Api')) {
             $session = isset($get_parms['session']) && $get_parms['session'] != '' ? ($get_parms['session']) : '';
             $list_data = isset($get_parms['list_data']) && $get_parms['list_data'] != '' ? ($get_parms['list_data']) : 0;
             $diff_ids = array();
-            $prepared_statementR = $wpdb->prepare("SELECT * FROM {$whizz_tbl_sessions} WHERE `session` = '{$session}' OR `rel` = '{$session}' ORDER BY last_active_timestamp DESC;");
+
+             $new_qr    =    "SELECT * FROM {$whizz_tbl_sessions} WHERE `session` = %s OR `rel` = %s ORDER BY last_active_timestamp DESC";   
+
+            $prepared_statementR = $wpdb->prepare($new_qr ,$session,$session);
+
+
+
+
+
             $results_data = $wpdb->get_results($prepared_statementR);
             $results_array = array_merge();            
             if (isset($results_data) && count($results_data) > 0) {
@@ -125,7 +132,11 @@ if (!class_exists('WhizzChat_Dashboard_Api')) {
                 $usr_session_id = whizzChat::session_id();
                 foreach ($results_data as $rdata) {
                     $get_id = $rdata->id;
-                    $new_list = $wpdb->get_row($wpdb->prepare("SELECT * FROM $whizz_tblname_chat_message WHERE `session_id` = {$get_id}"));
+                     
+
+                     $query_var   =   "SELECT * FROM $whizz_tblname_chat_message WHERE `session_id` = %s";
+
+                    $new_list = $wpdb->get_row($wpdb->prepare($query_var,$get_id));
                     if (isset($new_list->post_id) && $new_list->post_id != '') {
 
                         
@@ -147,11 +158,33 @@ if (!class_exists('WhizzChat_Dashboard_Api')) {
                         $chat_title = get_the_title($new_list->post_id);
                         $author_id = get_post_field('post_author', $new_list->post_id);
 
+
                         if ($usr_session_id != $author_id) {
-                            $display_name = get_the_author_meta('display_name', $author_id);
+                          
+                           $display_name = get_the_author_meta('display_name', $author_id);
                         } else {
                             $display_name = $rdata->name;
                         }
+                         
+
+
+                       
+                       if ($usr_session_id == $author_id) {
+                         $to_display   =   $author_id ==  $rdata->rel   ?  $rdata->sender_id  : $rdata->rel;
+                         $display_name = get_the_author_meta('display_name', $to_display);
+
+                         if(isset($rdata->session) &&  !is_numeric($rdata->session)){
+                          $display_name = $rdata->name;
+
+                         }
+                        
+                       }
+                          
+                  
+
+
+                          
+
                         $last_active_time = whizzChat::whizzchat_time_ago($rdata->last_active_timestamp);
                         $liste = "'list'";
                         $message_count = $rdata->message_count;
@@ -287,7 +320,7 @@ if (!class_exists('WhizzChat_Dashboard_Api')) {
                 "current_user" => $session_id, /// current user session id /
                 "is_update" => false
             );
-            $status = ($is_show == 1 ) ? 1 : 0;
+            $status = (isset($is_show) &&  $is_show == 1 ) ? 1 : 0;
             do_action('whizzChat_new_message_and_count', $type_args, $status);
             return 'done';
         }
@@ -468,6 +501,21 @@ if (!class_exists('WhizzChat_Dashboard_Api')) {
                         $real_com_id = $author_id;
                     }
 
+
+                     if($real_com_id   ==   ""){
+
+
+                 // in case of user to user chat author id as post id
+                 if ($session_id == $post_id) {
+                        $real_com_id = $chat_list['session_id'];
+                    } else {
+                        $real_com_id = $post_id;
+                    }
+                        
+
+
+                    }
+
                     $live_room_data = ' data-room="' . md5($_SERVER['HTTP_HOST']) . '_whizchat' . $chat_id . '" ';
 
                     $session_id = md5($chat_list['session_id']);
@@ -523,7 +571,7 @@ if (!class_exists('WhizzChat_Dashboard_Api')) {
                             "chat_box_status" => $chat->chat_box_status,
                             "receiver_open" => $chat->chatbox_receiver_open,
                             "sender_open" => $chat->chatbox_sender_open,
-                            "first_message_id" => $chat->first_message_id,
+                            "first_message_id" => isset($chat->first_message_id) ? $chat->first_message_id : "",
                             "message_for" => $chat->message_for,
                             "message_count" => $chat->message_count
                         );

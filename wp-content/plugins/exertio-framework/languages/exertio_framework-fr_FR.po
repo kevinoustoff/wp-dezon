@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "Project-Id-Version: Exertio Framework\n"
 "POT-Creation-Date: 2021-03-12 13:16+0500\n"
-"PO-Revision-Date: 2021-11-11 09:28+0000\n"
+"PO-Revision-Date: 2021-11-23 14:31+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
@@ -912,11 +912,11 @@ msgstr ""
 #: inc/custom-statuses.php:26 inc/custom-statuses.php:32
 #: inc/custom-statuses.php:73 inc/custom-statuses.php:158
 msgid "Completed"
-msgstr ""
+msgstr "Terminé"
 
 #: inc/custom-statuses.php:153
 msgid "Completed."
-msgstr ""
+msgstr "Terminé."
 
 #: plugin-files/cpt/company.php:384 plugin-files/cpt/freelancers.php:441
 #: plugin-files/cpt/verification.php:69
@@ -1907,7 +1907,7 @@ msgstr ""
 
 #: inc/custom-functions.php:1025 inc/custom-functions.php:1688
 msgid "Marked as completed"
-msgstr ""
+msgstr "Marqué comme terminé"
 
 #: inc/custom-functions.php:735 inc/utilities.php:784 inc/utilities.php:1786
 #: inc/utilities.php:1937

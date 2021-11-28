@@ -63,7 +63,9 @@ if ( get_query_var( 'paged' ) ) {
 						{
 							$the_query->the_post();
 							$pid = get_the_ID();
-							$posted_date =  date_i18n( get_option( 'date_format' ), strtotime( get_the_date($pid) ) );
+							//echo get_the_date($pid); exit;
+							//$posted_date =  date_i18n( get_option( 'date_format' ), strtotime( get_the_date($pid) ) );
+							$posted_date =  get_the_date( get_option( 'date_format' ), $pid );
 							
 							$results = get_project_bids($pid);
 							$count_bids =0;

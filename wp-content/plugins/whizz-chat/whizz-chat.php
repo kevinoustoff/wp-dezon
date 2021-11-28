@@ -3,7 +3,7 @@
  * Plugin Name: Whizz Chat
  * Plugin URI: https://www.whizzchat.com/
  * Description: Whizz Chat is a WordPress plugin based on Ajax and Live Chat system where buyers and seller can communicate with each other.
- * Version: 1.0.5
+ * Version: 1.3
  * Text Domain: whizz-chat
  * Author: ScriptsBundle
  * Author URI: https://scriptsbundle.com/
@@ -11,7 +11,6 @@
 if (!defined('ABSPATH')) {
     die('-1');
 }
-
 if (!class_exists('Whizz_Chat')) {
 
     class Whizz_Chat {
@@ -31,7 +30,6 @@ if (!class_exists('Whizz_Chat')) {
 
         public function __construct() {
             global $whizzChat_options;
-
             $whizzChat_options = get_option('whizz-chat-options');
             $whizzchat_bot = isset($whizzChat_options['whizzChat-bot']) && $whizzChat_options['whizzChat-bot'] == '1' ? TRUE : FALSE;
             $whizzChat_switch = isset($whizzChat_options['whizzChat-active']) && $whizzChat_options['whizzChat-active'] != '' ? $whizzChat_options['whizzChat-active'] : '0';
@@ -47,10 +45,10 @@ if (!class_exists('Whizz_Chat')) {
             add_action('admin_head', array($this, 'whizzChat_hide_notices'));
             add_filter('upload_mimes', array($this, 'whizzchat_mime_types_webp'));
             add_action('wp_logout', array($this, 'whizzChat_reset_all_cookies_data'));
+            add_shortcode('whizchat_shortcode', array($this, 'whizchat_shorcode_fun'));
         }
 
         function whizzChat_reset_all_cookies_data() {
-
             $name = isset($_COOKIE['whizzChat_name']) && $_COOKIE['whizzChat_name'] != '' ? $_COOKIE['whizzChat_name'] : '';
             if ($name != '') {
                 $cookie_name = 'whizchat-' . str_replace(' ', '-', $name);
@@ -115,6 +113,8 @@ if (!class_exists('Whizz_Chat')) {
             require_once 'includes/api.php';
             require_once 'includes/class-whizz-chat.php';
             require_once 'includes/whizz-chat-functions.php';
+           
+
             require_once 'options-api/api.php';
 
             if ($this->whizzchat_bot) {
@@ -131,11 +131,10 @@ if (!class_exists('Whizz_Chat')) {
             $whizz_tblname_chat_message = $wpdb->prefix . "whizz_chat_message";
             $whizz_tbl_user_preferences = $wpdb->prefix . "whizz_user_preferences";
             $whizz_tblname_offline_msgs = $wpdb->prefix . "whizz_offline_messages";
-            $this->plugin_url = plugin_dir_url(__FILE__);
-            $this->plugin_dir = plugin_dir_path(__FILE__);
-            $this->whizzChat_options = $whizzChat_options;
+            $this->plugin_url           = plugin_dir_url(__FILE__);
+            $this->plugin_dir           = plugin_dir_path(__FILE__);
+            $this->whizzChat_options    = $whizzChat_options;
         }
-
         public function whizz_chat_common_scripts() {
             global $whizzChat_options;
 
@@ -158,9 +157,13 @@ if (!class_exists('Whizz_Chat')) {
                  */
             }
 
+            
+            $emoji_check = isset($whizzChat_options['whizzChat-allow-emojies']) ? $whizzChat_options['whizzChat-allow-emojies'] : true;
+            
+            if($emoji_check){
             wp_enqueue_style('emojionearea', $this->plugin_url . 'assets/css/emojionearea.min.css');
             wp_enqueue_script('emojionearea', $this->plugin_url . 'assets/scripts/emojionearea.min.js', array('jquery'), false, false);
-
+            }
             wp_enqueue_style('fancybox', $this->plugin_url . 'assets/css/jquery.fancybox.min.css');
             wp_register_script('fancybox', $this->plugin_url . 'assets/scripts/jquery.fancybox.min.js', array('jquery'), false, false);
 
@@ -182,6 +185,8 @@ if (!class_exists('Whizz_Chat')) {
             $max_box = isset($whizzChat_options["whizzChat-max-chatbox"]) && $whizzChat_options["whizzChat-max-chatbox"] != '' ? $whizzChat_options["whizzChat-max-chatbox"] : '2';
             $whizzChat_chatetype = isset($whizzChat_options['whizzChat-chat-type']) && $whizzChat_options['whizzChat-chat-type'] != '' ? $whizzChat_options['whizzChat-chat-type'] : '1';
 
+            $show_emoji = isset($whizzChat_options["whizzChat-allow-emojies"]) && $whizzChat_options["whizzChat-allow-emojies"] != '' ? $whizzChat_options["whizzChat-allow-emojies"] : true;
+            
             $whizz_chat_script_globals = array(
                 'whizz_ajax_url' => admin_url('admin-ajax.php'),
                 'whizz_server_token' => get_option("whizz_api_secret_token"),
@@ -196,7 +201,7 @@ if (!class_exists('Whizz_Chat')) {
                 'whizz_file' => whizzChat_upload_info('file'),
                 'plugin_url' => $this->plugin_dir = plugin_dir_url(__FILE__),
                 'whizzcaht_socket_key' => $socket_key,
-                'whizzcaht_socket_url' => 'wss://socket.agilepusher.com:3000',
+                'whizzcaht_socket_url' => 'wss://socket.agilepusher.com',
                 'whizzcaht_room' => md5($_SERVER['HTTP_HOST']) . '_' . 'whizchat',
                 'enter_valid_email' => esc_html__('Please enter a valid email.', 'whizz-chat'),
                 'provide_info' => esc_html__('Please provide your information above.', 'whizz-chat'),
@@ -222,7 +227,9 @@ if (!class_exists('Whizz_Chat')) {
                 'sm_type_size_not_valid' => esc_html__('Some of these uploaded data type and size and type is not correct.', 'whizz-chat'),
                 'sm_size_not_valid' => esc_html__('Some of these uploaded data size is not correct.', 'whizz-chat'),
                 'sm_type_not_valid' => esc_html__('Some of these uploaded data type is not correct.', 'whizz-chat'),
-                
+                'logo_img' => plugin_dir_url('/') . 'whizz-chat/assets/images/whizzchat-logo-dashboard.svg',
+                 'show_emoji' =>  $show_emoji, 
+               
             );
 
             wp_localize_script('whizz-chat-functions', 'whizzChat_ajax_object', $whizz_chat_script_globals);
@@ -284,7 +291,6 @@ if (!class_exists('Whizz_Chat')) {
         }
 
         public function whizzChat_hide_notices() {
-
             $whizzchat_current_screen = get_current_screen();
 
             if (isset($whizzchat_current_screen->base) && $whizzchat_current_screen->base == 'toplevel_page_whizzChat-menu') {
@@ -311,6 +317,24 @@ if (!class_exists('Whizz_Chat')) {
             </script>
             <?php
 
+        }
+
+        function whizchat_shorcode_fun($atts) {
+            global $wp_query, $whizzChat_options;
+
+            $page_id = isset($wp_query->post->ID )   ?  $wp_query->post->ID   : "" ;
+            
+            
+           $author_id = get_post_field( 'post_author', $page_id );
+            
+            
+            $custom_class = isset($atts['class']) ? $atts['class'] : "";
+            $shortcode_html = "";
+            $img_path = $this->plugin_url . "assets/images/whizzchat-logo-dashboard3.png";
+            $shortcode_html = '<div class="whizchat_widget_shortcode' . $custom_class . '">'
+                    . '<a href="javascript:void(0)" data-page_id="' . $page_id . '"  data-user_id =  "'.$author_id.'"  class="chat_toggler"><img src="' . $img_path . '"></img></a></div>';
+
+            return $shortcode_html;
         }
 
     }

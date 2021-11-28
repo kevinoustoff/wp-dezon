@@ -113,4 +113,6 @@ button.botui-actions-buttons-button:not(:last-child) {
     right: auto;
 }
 
-
+.no_chat{
+    display: none;
+}

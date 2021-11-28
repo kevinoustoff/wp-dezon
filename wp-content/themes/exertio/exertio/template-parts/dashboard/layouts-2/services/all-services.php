@@ -101,7 +101,7 @@ if ( is_user_logged_in() ) {
 				  	if(!empty($response_time) && ! is_wp_error($response_time))
 					{
 						?>
-						<i class="far fa-history"></i> <?php echo esc_html($response_time->name); ?>
+						<i class="fa fa-history"></i> <?php echo esc_html($response_time->name); ?>
 						<?php
 					}
 				  ?>

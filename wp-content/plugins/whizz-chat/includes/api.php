@@ -159,6 +159,16 @@ function whizz_rest_api_route_init() {
             return whizzchat_auth_callback();
         },
     ));
+        
+     register_rest_route('whizz-chat-api/v1', '/send-offline-user-email', array(
+        'methods' => 'GET, POST',
+        'callback' => 'send_offline_user_email_fun',
+        'permission_callback' => function () {
+            return whizzchat_auth_callback();
+        },
+    ));   
+        
+        
 }
 
 if (!function_exists('whizzchat_auth_callback')) {
@@ -285,6 +295,9 @@ if (!function_exists('whizzchat_get_admin_bot')) {
             $return = array('success' => false, 'data' => '', 'message' => esc_html__('Invalid security token sent....', 'whizz-chat'));
             wp_send_json_error($return);
         }
+
+
+
         $session = (isset($get_parms['session'])) ? $get_parms['session'] : '';
 
         $bot_params = array(
@@ -588,6 +601,8 @@ if (!function_exists('whizzChat_get_chat_box_admin')) {
             $return = array('success' => false, 'data' => '', 'message' => esc_html__('Invalid security token sent....', 'whizz-chat'));
             wp_send_json_error($return);
         }
+
+
         $session = (isset($get_parms['session'])) ? $get_parms['session'] : '';
         $chat_id = (isset($get_parms['chat_id'])) ? ($get_parms['chat_id']) : 0;
         $is_show = (isset($get_parms['is_show'])) ? ($get_parms['is_show']) : 0;
@@ -595,6 +610,7 @@ if (!function_exists('whizzChat_get_chat_box_admin')) {
         $boxes_length = (isset($get_parms['boxes_length'])) ? $get_parms['boxes_length'] : 0;
         global $wpdb;
         global $whizz_tbl_sessions;
+        
         $current_session_id = $session_id = whizzChat::session_id();
 
         $user_id = get_current_user_id();
@@ -671,6 +687,7 @@ if (!function_exists('whizzChat_get_chat_box')) {
             $return = array('success' => false, 'data' => '', 'message' => esc_html__('Invalid security token sent....', 'whizz-chat'));
             wp_send_json_error($return);
         }
+
         $session = (isset($get_parms['session'])) ? $get_parms['session'] : '';
         $chat_id = (isset($get_parms['chat_id'])) ? ($get_parms['chat_id']) : 0;
         $is_show = (isset($get_parms['is_show'])) ? ($get_parms['is_show']) : 0;
@@ -688,6 +705,9 @@ if (!function_exists('whizzChat_get_chat_box')) {
             $query = "SELECT * FROM $whizz_tbl_sessions WHERE `id` = %s AND `session` = %s LIMIT 1";
             $chats = $wpdb->get_results($wpdb->prepare($query, $chat_id, $session));
         }
+
+        
+
         if (isset($chats) && count($chats) > 0) {
             foreach ($chats as $chat) {
                 if (isset($chat->id)) {
@@ -723,6 +743,9 @@ if (!function_exists('whizzChat_get_chat_box')) {
                 }
             }
         }
+
+
+
         $box = '';
         if ($is_show == 1) {
             $box = apply_filters('whizzChat_load_chat_chatbox', $value, false);
@@ -739,6 +762,10 @@ if (!function_exists('whizzChat_get_chat_box')) {
             "is_update" => false,
         );
         $status = 0;
+        
+
+         
+
         do_action('whizzChat_new_message_and_count', $type_args, $status);
 
         return $box;
@@ -872,9 +899,14 @@ if (!function_exists('whizzChat_send_message_filter_func')) {
 if (!function_exists('whizzChat_start_chat')) {
 
     function whizzChat_start_chat(WP_REST_Request $request) {
+
+
+
+
         $json_data = $request->get_json_params();
         $get_parms = $request->get_params();
         $files_parms = $request->get_file_params();
+
         $nonce = (isset($get_parms['nonce'])) ? $get_parms['nonce'] : '';
         if (!wp_verify_nonce($nonce, 'wp_rest')) {
             $return = array('message' => esc_html__('Invalid security token sent....', 'whizz-chat'));
@@ -886,21 +918,26 @@ if (!function_exists('whizzChat_start_chat')) {
             global $whizz_tblname_chat_message;
             global $whizz_tblname_chat_ratings;
             global $whizz_tblname_offline_msgs;
-            $msg = (isset($get_parms['msg'])) ? $get_parms['msg'] : '';
-            $session = (isset($get_parms['session'])) ? $get_parms['session'] : '';
-            $post_id = (isset($get_parms['post_id'])) ? $get_parms['post_id'] : '';
+            $msg       = (isset($get_parms['msg'])) ? $get_parms['msg'] : '';
+            $session   = (isset($get_parms['session'])) ? $get_parms['session'] : '';
+            $post_id   = (isset($get_parms['post_id'])) ? $get_parms['post_id'] : '';
             $author_id = get_post_field('post_author', $post_id);
+
+           $comm_id   = (isset($get_parms['comm_id'])) ? $get_parms['comm_id'] : '';
+
+
             $url = '#';
             $chat_id = (isset($get_parms['chat_id'])) ? $get_parms['chat_id'] : '';
             $chat_id = ($chat_id);
             $message_ids = (isset($get_parms['message_ids'])) ? $get_parms['message_ids'] : '';
             $current_user = get_current_user_id();
-            $session_id = whizzChat::session_id();
+            $session_id = get_current_user_id();
             if ($session_id != $session) {
                 return array("success" => false, "data" => "", "message" => esc_html__("Invalid session id", "whizz-chat"));
             }
             $query = "SELECT * FROM $whizz_tbl_sessions WHERE `id` = %s LIMIT 1";
             $results = $wpdb->get_results($wpdb->prepare($query, $chat_id));
+            
             if (isset($results) && count($results) == 0) {
                 $server_token = $rest_token = get_option("whizz_api_secret_token");
                 $data_array = array();
@@ -912,7 +949,9 @@ if (!function_exists('whizzChat_start_chat')) {
                 $data_array['server_token'] = $server_token;
                 $data_array['chat_box_id'] = $post_id;
                 $data_array['sender_id'] = whizzChat::user_data('id');
-                $cid = apply_filters('whizzChat_register_user_and_session', $data_array);
+                $data_array['comm_id']    =  $comm_id ;
+               
+                $cid = apply_filters('whizzChat_register_user_and_session', $data_array);                               
                 $query = "SELECT * FROM $whizz_tbl_sessions WHERE `id` = %s LIMIT 1";
                 $results = $wpdb->get_results($wpdb->prepare($query, $cid));
                 $cid = $results[0]->id;
@@ -932,11 +971,14 @@ if (!function_exists('whizzChat_start_chat')) {
                 $message_for = $results[0]->message_for;
                 $message_count = $results[0]->message_count;
             }
+
+
             $msgType = isset($get_parms['message_type']) ? $get_parms['message_type'] : 'text';
             $chat_id = (isset($results[0]->id)) ? $results[0]->id : '';
             $rel_id = (isset($results[0]->rel)) ? $results[0]->rel : '';
             $sessionId = (isset($results[0]->session)) ? $results[0]->session : '';
             $sender_id = ($sessionId != $session_id) ? $sessionId : $rel_id;
+           
             $arg1 = array(
                 "user_id" => $sender_id,
                 "chat_id" => $chat_id,
@@ -981,6 +1023,10 @@ if (!function_exists('whizzChat_start_chat')) {
                     } else if ($message_type == 'map') {
                         $attachments = isset($get_parms['map_data']) ? $get_parms['map_data'] : '[]';
                     }
+
+
+
+                 
                     $blocked_status = whizzChat_is_user_blocked($cid, true);
                     if ($blocked_status['is_blocked'] != true && $is_go == true) {
                         $author_id = apply_filters('whizz_chat_author_rel_id', $author_id); // in admin only case 
@@ -1025,6 +1071,13 @@ if (!function_exists('whizzChat_start_chat_admin')) {
         $json_data = $request->get_json_params();
         $get_parms = $request->get_params();
         $files_parms = $request->get_file_params();
+
+
+
+
+
+
+
         $nonce = (isset($get_parms['nonce'])) ? $get_parms['nonce'] : '';
         if (!wp_verify_nonce($nonce, 'wp_rest')) {
             $return = array('message' => esc_html__('Invalid security token sent....', 'whizz-chat'));
@@ -1205,7 +1258,10 @@ if (!function_exists('whizzChat_get_chat_list_box')) {
 
         $diff_ids = array();
 
-        $prepared_statementR = $wpdb->prepare("SELECT * FROM {$whizz_tbl_sessions} WHERE `session` = '{$session}' OR `rel` = '{$session}' ORDER BY last_active_timestamp DESC;");
+
+        $query   =     "SELECT * FROM {$whizz_tbl_sessions} WHERE `session` = %s OR `rel` = %s ORDER BY last_active_timestamp DESC"  ;
+        $prepared_statementR = $wpdb->prepare($query,$session,$session);
+
         $results_data = $wpdb->get_results($prepared_statementR);
         $results_array = array_merge();
         if (isset($results_data) && count($results_data) > 0) {
@@ -1214,7 +1270,10 @@ if (!function_exists('whizzChat_get_chat_list_box')) {
 
             foreach ($results_data as $rdata) {
                 $get_id = $rdata->id;
-                $new_list = $wpdb->get_row($wpdb->prepare("SELECT * FROM $whizz_tblname_chat_message WHERE `session_id` = {$get_id}"));
+                
+                $new_qr  =   "SELECT * FROM $whizz_tblname_chat_message WHERE `session_id` = %s";
+                
+                $new_list = $wpdb->get_row($wpdb->prepare($new_qr,$get_id));
                 if (isset($new_list->post_id) && $new_list->post_id != '') {
 
                     if ($admin_chat_flag && $new_list->post_id == $whizzchat_admin_page) {
@@ -1238,11 +1297,29 @@ if (!function_exists('whizzChat_get_chat_list_box')) {
                     $chat_title = get_the_title($new_list->post_id);
                     $author_id = get_post_field('post_author', $new_list->post_id);
 
+
+                    if($author_id ==  ""){
+
+                      $author_id   =  $new_list->post_id;
+                    }
+
                     if ($usr_session_id != $author_id) {
                         $display_name = get_the_author_meta('display_name', $author_id);
                     } else {
                         $display_name = $rdata->name;
                     }
+
+                    if ($usr_session_id == $author_id) {
+                            
+                         $to_display   =   $author_id ==  $rdata->rel   ?  $rdata->sender_id  : $rdata->rel;
+                         $display_name = get_the_author_meta('display_name', $to_display);
+
+
+                        if(isset($rdata->session) &&  !is_numeric($rdata->session)){
+                          $display_name = $rdata->name;
+                         }
+                        }
+
                     $last_active_time = whizzChat::whizzchat_time_ago($rdata->last_active_timestamp);
                     $liste = "'list'";
                     $message_count = $rdata->message_count;
@@ -1284,6 +1361,10 @@ if (!function_exists('whizzChat_get_chat_list_box_admin')) {
         if (!wp_verify_nonce($nonce, 'wp_rest')) {
             return array("success" => false, "data" => "", "message" => esc_html__('Invalid security token sent....', 'whizz-chat'));
         }
+        
+        
+        
+        
 
         $whizzChat_options = get_option('whizz-chat-options');
         $whizzchat_admin_page = $whizzChat_options["whizzChat-admin-page"];
@@ -1304,8 +1385,10 @@ if (!function_exists('whizzChat_get_chat_list_box_admin')) {
 
         $diff_ids = array();
 
+       
+        $new_qr     =    "SELECT * FROM {$whizz_tbl_sessions} WHERE `session` = %s OR `rel` = %s ORDER BY last_active_timestamp DESC";
 
-        $prepared_statementR = $wpdb->prepare("SELECT * FROM {$whizz_tbl_sessions} WHERE `session` = '{$session}' OR `rel` = '{$session}' ORDER BY last_active_timestamp DESC;");
+        $prepared_statementR = $wpdb->prepare($new_qr, $session, $session);
         $results_data = $wpdb->get_results($prepared_statementR);
         $results_array = array_merge();
         if (isset($results_data) && count($results_data) > 0) {
@@ -1316,7 +1399,8 @@ if (!function_exists('whizzChat_get_chat_list_box_admin')) {
 
 
                 $get_id = $rdata->id;
-                $new_list = $wpdb->get_row($wpdb->prepare("SELECT * FROM $whizz_tblname_chat_message WHERE `session_id` = {$get_id}"));
+                $new_query    =    "SELECT * FROM $whizz_tblname_chat_message WHERE `session_id` = %s";
+                $new_list = $wpdb->get_row($wpdb->prepare($new_query,$get_id));
                 if (isset($new_list->post_id) && $new_list->post_id != '') {
 
                     if ($new_list->post_id != $whizzchat_admin_page) {
@@ -1382,8 +1466,13 @@ if (!function_exists('whizzChat_get_chat_list_box_admin')) {
 if (!function_exists('whizzChat_get_chat_list')) {
 
     function whizzChat_get_chat_list(WP_REST_Request $request) {
+        
+        
         $json_data = $request->get_json_params();
         $get_parms = $request->get_params();
+        
+    
+
         $nonce = (isset($get_parms['nonce'])) ? $get_parms['nonce'] : '';
         if (!wp_verify_nonce($nonce, 'wp_rest')) {
             return array("success" => false, "data" => "", "message" => esc_html__('Invalid security token sent....', 'whizz-chat'));
@@ -1396,8 +1485,14 @@ if (!function_exists('whizzChat_get_chat_list')) {
         }
         /* Load Active Chat Boxes */
         $chat_boxes_html = array();
+
+       
         $chat_boxs = (isset($get_parms['boxs'])) ? $get_parms['boxs'] : '';
+
         $message_ids = (isset($get_parms['message_ids'])) ? $get_parms['message_ids'] : '';
+
+         
+
         if ($chat_boxs != "") {
             $arr = array();
             $chats_boxes = (json_decode($chat_boxs, true));
@@ -1406,7 +1501,11 @@ if (!function_exists('whizzChat_get_chat_list')) {
             if (isset($chats_boxes) && !empty($chats_boxes)) {
                 $extra_data['send_message'] = 'text';
                 $extra_data['message_ids'] = $message_ids;
+                  
+
                 $chat_info = whizzChat_chat_boxes($chats_boxes, $extra_data);
+                
+
                 if (isset($chat_info) && count($chat_info) > 0) {
                     foreach ($chat_info as $chat) {
                         $post_id = ($chat["post_id"]);
@@ -1418,7 +1517,9 @@ if (!function_exists('whizzChat_get_chat_list')) {
                             "post_id" => $post_id,
                             "chat_id" => $chat_id,
                             "is_online" => whizzChat::user_online_status($session_id, $post_author_id),
-                            "html" => apply_filters('whizz_filter_chat_box_content', $chat, $blocked_status)
+                            "html" => apply_filters('whizz_filter_chat_box_content', $chat, $blocked_status),
+                            'session_id'=>$session_id,
+                            'post_author_id'=>$post_author_id,
                         );
                     }
                 }
@@ -1525,6 +1626,13 @@ if (!function_exists('whizz_api_register_chat_session')) {
                 $set_cookie[] = array('key' => 'whizzChat_email', 'value' => $email, 'time' => time() + 31556926);
                 $set_cookie[] = array('key' => $cookie_name, 'value' => $session_plus, 'time' => time() + 31556926);
             }
+
+
+              if(get_current_user_id() != 0 && get_current_user_id() != ""){
+
+                $session_plus = whizzChat::cookie_id();
+              }
+
         } else {
 
             if (isset($_COOKIE['whizzChat_name']) && $_COOKIE['whizzChat_name'] != '') {
@@ -1554,7 +1662,12 @@ if (!function_exists('whizz_api_register_chat_session')) {
         $data_array['url'] = $url;
         $data_array['session'] = $session_plus;
         $data_array['chat_box_id'] = $chat_box_id;
+
+
+
         $filter_data = apply_filters('whizzChat_register_user_and_session', $data_array);
+
+
         $array['id'] = $filter_data;
         $chat_list = whizzChat_chat_boxes($array);
         $chat_box_html = apply_filters('whizzChat_load_chat_chatbox', $chat_list);
@@ -1612,4 +1725,52 @@ if (!function_exists('whizz_api_end_chat_session')) {
         return ($return_data);
     }
 
+}
+
+
+
+// send email to a user if he is offile 
+
+
+
+if (!function_exists('send_offline_user_email_fun')){
+    function send_offline_user_email_fun(WP_REST_Request $request)
+    {      
+        $json_data = $request->get_json_params();
+        $get_parms = $request->get_params();   
+              
+        wp_send_json_success(array('message' => "" ,'user_name' => ""));
+        die();
+        $nonce = (isset($get_parms['nonce'])) ? $get_parms['nonce'] : '';
+        if (!wp_verify_nonce($nonce, 'wp_rest')) {
+            $return = array('message' => esc_html__('Invalid security token sent....', 'real'));
+            wp_send_json_error($return);
+        }      
+        $receiver_id = (isset($get_parms['receiver_id'])) ? $get_parms['receiver_id'] : '';        
+        $msg = (isset($get_parms['message'])) ? $get_parms['message'] : '';       
+        $chat_id = (isset($get_parms['chat_id'])) ? $get_parms['chat_id'] : '';        
+        $user_data = get_userdata( $receiver_id ); 
+        if ( $user_data == false )
+        { 
+            $return = array('message' => esc_html__('User not exist', 'real'));
+            wp_send_json_error($return);            
+        } else 
+        {                     
+          $user_email   =   isset($user_data->user_email)   ?   $user_data->user_email   : "" ;
+          $user_name   =  isset($user_data->display_name)   ?   $user_data->display_name   : "" ;
+          if($user_email != ""){                    
+              global $wpdb  , $whizz_tbl_sessions;
+              $prepared_statementR = $wpdb->prepare("SELECT * FROM {$whizz_tbl_sessions} WHERE `id` = '{$chat_id}' AND `rel` = '{$receiver_id}' ");
+              $results_data = $wpdb->get_results($prepared_statementR);                           
+              if (isset($results_data) && count($results_data) > 0) {           
+             $subject    = esc_html__('You have new Message','real');      
+             wp_mail($user_email, $subject, $msg);
+             $return = array('message' => $msg ,'user_name' => $user_name ,'site_url' => site_url() ,'site_name' =>get_bloginfo('name'));
+             wp_send_json_success($return);
+                
+                  
+              }             
+          }
+        }    
+    }     
 }

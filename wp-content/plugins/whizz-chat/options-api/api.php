@@ -27,7 +27,7 @@ class WhizzChat_Setting_Page {
      * @return void
      */
     public function init() {
-        $this->settings = $this->settings_fields();
+       $this->settings = $this->settings_fields();
         $this->options = $this->get_options();
         $this->register_settings();
     }
@@ -69,7 +69,10 @@ class WhizzChat_Setting_Page {
         global $whizzChat_options;
 
         $whizzChat_options = get_option('whizz-chat-options');
+
         $whizzChat_between = isset($whizzChat_options['whizzChat-chat-between']) && $whizzChat_options['whizzChat-chat-between'] != '' ? $whizzChat_options['whizzChat-chat-between'] : '0';
+
+
         $whizzChat_pagetype = isset($whizzChat_options['whizzChat-chat-type']) && $whizzChat_options['whizzChat-chat-type'] != '' ? $whizzChat_options['whizzChat-chat-type'] : '1';
 
         $admin_sec_class = 'whizz-chat-admin-dropdown';
@@ -92,28 +95,37 @@ class WhizzChat_Setting_Page {
             'fields' => array('display_name', 'ID', 'user_email')
         );
         $all_admins = get_users($user_args);
+
+
         $admins_arr = array();
         if (isset($all_admins) && !empty($all_admins) && is_array($all_admins)) {
             foreach ($all_admins as $each_admin) {
                 $admins_arr[$each_admin->ID] = $each_admin->display_name . ' ( ' . $each_admin->user_email . ' )';
             }
         }
-        $page_args = array(
-            'post_status' => 'publish',
-            'post_type' => 'page',
-            'fields' => 'ids',
-            'posts_per_page' => -1,
-        );
-        $page_query = new WP_Query($page_args);
-        $admin_pages = array();
-        if ($page_query->have_posts()) :
-            while ($page_query->have_posts()) : $page_query->the_post();
-                global $post;
-                $admin_pages[$post] = get_the_title($post);
-            endwhile;
-        endif;
-        wp_reset_postdata();
 
+         
+
+    
+
+       $defaults = array(
+        'numberposts'      => -1,
+        'fields'         => 'ids',
+        'post_status' => 'publish',
+        'post_type'        => 'page',
+        
+    );
+
+      $pages    =   get_posts($defaults);
+      $admin_pages   =  array();
+      if(isset($pages)  && !empty($pages)){
+
+        foreach ($pages as $page) {
+           if($page != ""){
+          $admin_pages[$page] = get_the_title($page);
+           }            # code...
+        }
+      }    
         $settings['basic_settings'] = array(
             'title' => __('Basic Settings', $this->textdomain),
             'description' => __('Here you can customize your chat settings.', $this->textdomain),
@@ -229,6 +241,30 @@ class WhizzChat_Setting_Page {
                     'options' => whizzChat_showChatBox_on(),
                     'default' => array('post'),
                 ),
+                array(
+                    'id' => 'whizzChat-shortcode-allow',
+                    'label' => __('WhizzChat Shortcode', $this->textdomain),
+                    'description' => __('Use this option to add a shortcode; this will prevent chats from auto-populating; instead, a button click will open the specific chat. You can create your own customised button by using the  { class "chat toggler" and the data-page id = "relevent post id" }', $this->textdomain),
+                    'type' => 'radio',
+                    'options' => array(
+                        '0' => __('Disable', $this->textdomain),
+                        '1' => __('Enable', $this->textdomain),
+                    ),
+                    'default' => '0'
+                ),
+                
+                array(
+                    'id' => 'whizzChat-chatlist',
+                    'label' => __('Hide Show chat list', $this->textdomain),
+                    'description' => __('Use this option to hide show chat list on a page', $this->textdomain),
+                    'type' => 'radio',
+                    'options' => array(
+                        '0' => __('Disable', $this->textdomain),
+                        '1' => __('Enable', $this->textdomain),
+                    ),
+                    'default' => '1'
+                ),
+                
             )
         );
 
@@ -538,6 +574,8 @@ class WhizzChat_Setting_Page {
             )
         );
         $settings = apply_filters('plugin_settings_fields', $settings);
+
+
         return $settings;
     }
 
@@ -593,7 +631,8 @@ class WhizzChat_Setting_Page {
         $field = $args['field'];
         $html = '';
         $option_name = $this->plugin_slug . "[" . $field['id'] . "]";
-        $data = (isset($this->options[$field['id']])) ? $this->options[$field['id']] : $this->options[$field['default']];
+        
+        $data = (isset($this->options[$field['id']])) ? $this->options[$field['id']] : $this->options[$field['default']];      
         switch ($field['type']) {
             case 'text':
             case 'password':

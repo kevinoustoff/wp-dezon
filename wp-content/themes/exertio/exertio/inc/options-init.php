@@ -178,8 +178,8 @@
         'icon'  => 'el el-youtube'
     );
     $args['share_icons'][] = array(
-        'url'   => 'https://www.facebook.com/ScriptsBundle/',
-        'title' => 'Like us on Facebook',
+        'url'   => 'https://www.facebook.com/dezon/',
+        'title' => 'Liker notre page Facebook',
         'icon'  => 'el el-facebook'
     );
 
@@ -732,7 +732,7 @@
 										</tr>
 										<tr>
 											<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-												<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service,<br>Scriptsbundle Team</p>
+												<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service,<br>L'équipe de Dezon</p>
 											</td>
 										</tr>
 									</table>
@@ -755,7 +755,7 @@
 									<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 										<tr>
 											<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-												<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+												<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 											</td>
 										</tr>
 									</table>
@@ -837,7 +837,7 @@
 									</tr>
 									<tr>
 										<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-											<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>Scriptsbundle Team</p>
+											<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>L'équipe de Dezon</p>
 					
 										</td>
 									</tr>
@@ -861,7 +861,7 @@
 								<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 									<tr>
 										<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-											<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+											<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 										</td>
 									</tr>
 								</table>
@@ -961,7 +961,7 @@
 								</tr>
 								<tr>
 									<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-										<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>Scriptsbundle Team</p>
+										<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>L'équipe de Dezon</p>
 				
 									</td>
 								</tr>
@@ -985,7 +985,7 @@
 							<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 								<tr>
 									<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-										<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+										<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 									</td>
 								</tr>
 							</table>
@@ -1077,7 +1077,7 @@
 								</tr>
 								<tr>
 									<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-										<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>Scriptsbundle Team</p>
+										<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>L'équipe de Dezon</p>
 				
 									</td>
 								</tr>
@@ -1101,7 +1101,7 @@
 							<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 								<tr>
 									<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-										<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+										<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 									</td>
 								</tr>
 							</table>
@@ -1188,7 +1188,7 @@
 										</tr>
 										<tr>
 											<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-												<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service,<br>Scriptsbundle Team</p>
+												<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service,<br>L'équipe de Dezon</p>
 											</td>
 										</tr>
 									</table>
@@ -1211,7 +1211,7 @@
 									<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 										<tr>
 											<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-												<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+												<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 											</td>
 										</tr>
 									</table>
@@ -1292,7 +1292,7 @@
 									</tr>
 									<tr>
 										<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-											<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>Scriptsbundle Team</p>
+											<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>L'équipe de Dezon</p>
 					
 										</td>
 									</tr>
@@ -1316,7 +1316,7 @@
 								<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 									<tr>
 										<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-											<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+											<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 										</td>
 									</tr>
 								</table>
@@ -1397,7 +1397,7 @@
 													</tr>
 													<tr>
 														<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>Scriptsbundle Team</p>
+															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>L'équipe de Dezon</p>
 
 														</td>
 													</tr>
@@ -1421,7 +1421,7 @@
 												<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 													<tr>
 														<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 														</td>
 													</tr>
 												</table>
@@ -1501,7 +1501,7 @@
 													</tr>
 													<tr>
 														<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>Scriptsbundle Team</p>
+															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>L'équipe de Dezon</p>
 
 														</td>
 													</tr>
@@ -1525,7 +1525,7 @@
 												<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 													<tr>
 														<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 														</td>
 													</tr>
 												</table>
@@ -1605,7 +1605,7 @@
 													</tr>
 													<tr>
 														<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>Scriptsbundle Team</p>
+															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>L'équipe de Dezon</p>
 
 														</td>
 													</tr>
@@ -1629,7 +1629,7 @@
 												<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 													<tr>
 														<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 														</td>
 													</tr>
 												</table>
@@ -1709,7 +1709,7 @@
 													</tr>
 													<tr>
 														<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>Scriptsbundle Team</p>
+															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>L'équipe de Dezon</p>
 
 														</td>
 													</tr>
@@ -1733,7 +1733,7 @@
 												<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 													<tr>
 														<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 														</td>
 													</tr>
 												</table>
@@ -1807,7 +1807,7 @@
 													</tr>
 													<tr>
 														<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>Scriptsbundle Team</p>
+															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>L'équipe de Dezon</p>
 
 														</td>
 													</tr>
@@ -1831,7 +1831,7 @@
 												<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 													<tr>
 														<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 														</td>
 													</tr>
 												</table>
@@ -1910,7 +1910,7 @@
 													</tr>
 													<tr>
 														<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>Scriptsbundle Team</p>
+															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>L'équipe de Dezon</p>
 
 														</td>
 													</tr>
@@ -1934,7 +1934,7 @@
 												<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 													<tr>
 														<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 														</td>
 													</tr>
 												</table>
@@ -2021,7 +2021,7 @@
 										</tr>
 										<tr>
 											<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-												<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service,<br>Scriptsbundle Team</p>
+												<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service,<br>L'équipe de Dezon</p>
 											</td>
 										</tr>
 									</table>
@@ -2044,7 +2044,7 @@
 									<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 										<tr>
 											<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-												<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+												<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 											</td>
 										</tr>
 									</table>
@@ -2125,7 +2125,7 @@
 									</tr>
 									<tr>
 										<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-											<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>Scriptsbundle Team</p>
+											<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>L'équipe de Dezon</p>
 					
 										</td>
 									</tr>
@@ -2149,7 +2149,7 @@
 								<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 									<tr>
 										<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-											<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+											<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 										</td>
 									</tr>
 								</table>
@@ -2230,7 +2230,7 @@
 													</tr>
 													<tr>
 														<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>Scriptsbundle Team</p>
+															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>L'équipe de Dezon</p>
 
 														</td>
 													</tr>
@@ -2254,7 +2254,7 @@
 												<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 													<tr>
 														<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 														</td>
 													</tr>
 												</table>
@@ -2334,7 +2334,7 @@
 													</tr>
 													<tr>
 														<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>Scriptsbundle Team</p>
+															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>L'équipe de Dezon</p>
 
 														</td>
 													</tr>
@@ -2358,7 +2358,7 @@
 												<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 													<tr>
 														<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 														</td>
 													</tr>
 												</table>
@@ -2438,7 +2438,7 @@
 													</tr>
 													<tr>
 														<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>Scriptsbundle Team</p>
+															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>L'équipe de Dezon</p>
 
 														</td>
 													</tr>
@@ -2462,7 +2462,7 @@
 												<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 													<tr>
 														<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 														</td>
 													</tr>
 												</table>
@@ -2542,7 +2542,7 @@
 													</tr>
 													<tr>
 														<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>Scriptsbundle Team</p>
+															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>L'équipe de Dezon</p>
 
 														</td>
 													</tr>
@@ -2566,7 +2566,7 @@
 												<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 													<tr>
 														<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 														</td>
 													</tr>
 												</table>
@@ -2640,7 +2640,7 @@
 													</tr>
 													<tr>
 														<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>Scriptsbundle Team</p>
+															<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>L'équipe de Dezon</p>
 
 														</td>
 													</tr>
@@ -2664,7 +2664,7 @@
 												<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 													<tr>
 														<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+															<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 														</td>
 													</tr>
 												</table>
@@ -2750,7 +2750,7 @@
 										</tr>
 										<tr>
 											<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-												<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service,<br>Scriptsbundle Team</p>
+												<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service,<br>L'équipe de Dezon</p>
 											</td>
 										</tr>
 									</table>
@@ -2773,7 +2773,7 @@
 									<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 										<tr>
 											<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-												<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+												<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 											</td>
 										</tr>
 									</table>
@@ -2847,7 +2847,7 @@
 									</tr>
 									<tr>
 										<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-											<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>Scriptsbundle Team</p>
+											<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service.<br>L'équipe de Dezon </p>
 					
 										</td>
 									</tr>
@@ -2871,7 +2871,7 @@
 								<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 									<tr>
 										<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-											<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+											<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 										</td>
 									</tr>
 								</table>
@@ -2952,7 +2952,7 @@
 										</tr>
 										<tr>
 											<td bgcolor='#ffffff' align='left' style='padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666;  font-size: 18px; font-weight: 400; line-height: 25px;'>
-												<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service,<br>Scriptsbundle Team</p>
+												<p style='margin: 0; font-size: 18px !important;'>Thanks for choosing our service,<br>L'équipe de Dezon</p>
 											</td>
 										</tr>
 									</table>
@@ -2975,7 +2975,7 @@
 									<table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
 										<tr>
 											<td bgcolor='#f4f4f4' align='left' style='padding: 0px 30px 30px 30px; color: #666666;  font-size: 14px; font-weight: 400; line-height: 18px;'> <br>
-												<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Scriptsbundle</a> ALL Rights Reserved.</p>
+												<p style='margin: 0;'>".date("Y")." © <a href='#' target='_blank' style='color: #111111; font-weight: 700;'>Dezon</a> Tous droits réservés.</p>
 											</td>
 										</tr>
 									</table>
@@ -3230,6 +3230,32 @@
 									),
 									'default'  => '2'
 								),
+								/*ajout des champs pour les dates*/
+								array(
+									'id'       => 'project_date_debut',
+									'type'     => 'button_set',
+									'title'    => __( 'Date début', 'exertio_theme' ),
+									'subtitle' => __( 'Select option to show hide', 'exertio_theme' ),
+										'options'  => array(
+										'1' => 'Required',
+										'2' => 'Not Required',
+										'3' => 'Hide',
+									),
+									'default'  => '2'
+								),
+								array(
+									'id'       => 'project_date_fin',
+									'type'     => 'button_set',
+									'title'    => __( 'Date fin', 'exertio_theme' ),
+									'subtitle' => __( 'Select option to show hide', 'exertio_theme' ),
+										'options'  => array(
+										'1' => 'Required',
+										'2' => 'Not Required',
+										'3' => 'Hide',
+									),
+									'default'  => '2'
+								),
+								/*fin ajout*/
 								array(
 									'id'       => 'project_freelancer_type',
 									'type'     => 'button_set',
@@ -4542,6 +4568,14 @@
 								'on'       => 'ON',
 								'off'      => 'OFF',
 							),
+						array(
+								'id'       => 'mobilemoney_switch',
+								'type'     => 'switch',
+								'title'    => __( 'Autoriser le paiement via mobile money', 'exertio_theme' ),
+								'default'  => true,
+								'on'       => 'ON',
+								'off'      => 'OFF',
+							),
         )
     ) );
 	
@@ -5822,7 +5856,7 @@ Redux::setSection( $opt_name, array(
 								'id' => 'footer_copyright_text',
 								'type' => 'editor',
 								'title' => esc_html__('Footer Copyright Text', 'exertio_theme'),
-								'default' => 'Copyright 2020 &copy; Theme Created By ScriptsBundle, All Rights Reserved.',
+								'default' => 'Copyright 2020 &copy; Theme Created By Dezon, Tous droits réservés.',
 								'args' => array(
 									'wpautop' => false,
 									'media_buttons' => false,

@@ -71,6 +71,7 @@ if ( get_query_var( 'paged' ) ) {
                             	<option value="paypal" <?php if($default_payout == 'paypal'){echo 'selected=selected'; } ?> ><?php echo esc_html__('PayPal','exertio_theme'); ?></option>
                                 <option value="bank" <?php if($default_payout == 'bank'){echo 'selected=selected'; } ?>><?php echo esc_html__('Virement bancaire','exertio_theme'); ?></option>
                                 <option value="payoneer" <?php if($default_payout == 'payoneer'){echo 'selected=selected'; } ?>><?php echo esc_html__('Payoneer','exertio_theme'); ?></option>
+                                 <option value="mobilemoney" <?php if($default_payout == 'mobilemoney'){echo 'selected=selected'; } ?>><?php echo esc_html__('Mobile money','exertio_theme'); ?></option>
                             </select>
                         </div>
                       <div class="payment_box">
@@ -95,7 +96,14 @@ if ( get_query_var( 'paged' ) ) {
 								<li class="nav-item"> <a class="nav-link <?php if($default_payout == 'payoneer'){echo 'active'; } ?>" data-toggle="pill" href="#nav-tab-card"> <i class="fa fa-credit-card"></i><?php echo esc_html__(' Payoneer','exertio_theme'); ?></a></li>
 								<?php
 							}
+							if(fl_framework_get_options('mobilemoney_switch') == 1)
+							{
+								?>
+								<li class="nav-item"> <a class="nav-link <?php if($default_payout == 'mobilemoney'){echo 'active'; } ?>" data-toggle="pill" href="#nav-tab-mobilemoney"> <i class="fa fa-credit-card"></i><?php echo esc_html__(' Mobile money','exertio_theme'); ?></a></li>
+								<?php
+							}
 							?>
+
                         </ul>
                         <div class="tab-content">
                         	<?php
@@ -117,7 +125,7 @@ if ( get_query_var( 'paged' ) ) {
                                         ?>
                                         <form id="paypal_pm_form">
                                           <div class="form-group">
-                                            <label for="paypal"><?php echo esc_html__('Email du compte PayPal','exertio_theme'); ?></label>
+                                            <label for="paypal"><?php echo esc_html__('Email du compte Paypal','exertio_theme'); ?></label>
                                             <input type="email" class="form-control" name="paypal_email" required="" value="<?php echo esc_attr($paypal_email); ?>" data-smk-msg="<?php echo esc_html__('Ce champ est requis','exertio_theme'); ?>">
                                           </div>
                                           <button class="btn btn-theme btn-loading" id="paypal_pm_btn" type="button" data-peyment-method="paypal"><?php echo esc_html__('Enregistrer','exertio_theme'); ?><div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button>
@@ -220,6 +228,34 @@ if ( get_query_var( 'paged' ) ) {
 									</form>
 								</div>
 								<?php
+							}
+							?>
+							<?php
+							if(fl_framework_get_options('mobilemoney_switch') == 1)
+							{
+								?>
+                                <div class="tab-pane fade <?php if($default_payout == 'mobilemoney'){echo 'active show'; } ?>" id="nav-tab-mobilemoney">
+                                    <?php
+                                        //$decoded_paypal = $paypal_email = '';
+                                        $decoded_mobilemoney = json_decode(get_user_meta($current_user_id,'_mobilemoney_details', true));
+                                        //print_r($decoded_paypal);
+										if(!empty($decoded_mobilemoney))
+										{
+											foreach($decoded_mobilemoney as $mobilemoney_detail)
+											{
+												$mobilemoney_tel = $mobilemoney_detail->mobilemoney_tel;
+											}
+										}
+                                        ?>
+                                        <form id="mobilemoney_pm_form">
+                                          <div class="form-group">
+                                            <label for="mobilemoney"><?php echo esc_html__('Numéro de téléphone','exertio_theme'); ?></label>
+                                            <input type="text" class="form-control" name="mobilemoney_tel" required="" value="<?php echo esc_attr($mobilemoney_tel); ?>" data-smk-msg="<?php echo esc_html__('Ce champ est requis','exertio_theme'); ?>">
+                                          </div>
+                                          <button class="btn btn-theme btn-loading" id="mobilemoney_pm_btn" type="button" data-peyment-method="mobilemoney"><?php echo esc_html__('Enregistrer','exertio_theme'); ?><div class="bubbles"> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div></button>
+                                        </form>
+                                  </div>
+                                <?php
 							}
 							?>
                         </div>

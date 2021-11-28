@@ -3,13 +3,13 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 "Project-Id-Version: Whizz Chat\n"
-"POT-Creation-Date: 2020-08-21 15:45+0500\n"
-"PO-Revision-Date: 2020-08-21 15:45+0500\n"
+"POT-Creation-Date: 2021-03-03 18:45+0500\n"
+"PO-Revision-Date: 2021-03-03 18:46+0500\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: whizz-chat.php\n"
@@ -22,242 +22,259 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: includes/action-hooks.php:285
+#: includes/action-hooks.php:362
 msgid "Chat Started"
 msgstr "بدء الدردشة"
 
-#: includes/api.php:178 includes/api.php:210 includes/api.php:236
-#: includes/api.php:258 includes/api.php:285 includes/api.php:312
-#: includes/api.php:365 includes/api.php:394 includes/api.php:452
-#: includes/api.php:486 includes/api.php:517 includes/api.php:532
-#: includes/api.php:588 includes/api.php:671 includes/api.php:880
-#: includes/api.php:1030 includes/api.php:1186 includes/api.php:1285
-#: includes/api.php:1389 includes/api.php:1440 includes/api.php:1498
-#: includes/api.php:1603 includes/dashboard/includes/class-dashboard-api.php:79
-#: includes/dashboard/includes/class-dashboard-api.php:103
-#: includes/dashboard/includes/class-dashboard-api.php:218
-#: includes/dashboard/includes/class-dashboard-api.php:270
-#: includes/dashboard/includes/class-dashboard-api.php:311
-#: includes/dashboard/includes/class-dashboard-api.php:502
+#: includes/action-hooks.php:515 includes/api.php:188 includes/api.php:220
+#: includes/api.php:246 includes/api.php:268 includes/api.php:295
+#: includes/api.php:325 includes/api.php:378 includes/api.php:407
+#: includes/api.php:465 includes/api.php:499 includes/api.php:530
+#: includes/api.php:545 includes/api.php:601 includes/api.php:686
+#: includes/api.php:907 includes/api.php:1066 includes/api.php:1222
+#: includes/api.php:1345 includes/api.php:1461 includes/api.php:1524
+#: includes/api.php:1582 includes/api.php:1699 includes/api.php:1726
+#: includes/dashboard/includes/class-dashboard-api.php:78
+#: includes/dashboard/includes/class-dashboard-api.php:102
+#: includes/dashboard/includes/class-dashboard-api.php:241
+#: includes/dashboard/includes/class-dashboard-api.php:293
+#: includes/dashboard/includes/class-dashboard-api.php:334
+#: includes/dashboard/includes/class-dashboard-api.php:540
 msgid "Invalid security token sent...."
 msgstr "رمز أمان غير صالح."
 
-#: includes/api.php:189 includes/chatbox-html.php:540
-#: includes/dashboard/includes/class-dashboard-html.php:750
+#: includes/action-hooks.php:526
+msgid "Can not send message to yourself"
+msgstr "لا يمكن إرسال رسالة لنفسك"
+
+#: includes/api.php:199 includes/chatbox-html.php:586
+#: includes/dashboard/includes/class-dashboard-html.php:724
 #: includes/dashboard/page-template/template-whizzchat.php:7
 msgid "Sound off"
 msgstr "إيقاف تشغيل الصوت"
 
-#: includes/api.php:194 includes/chatbox-html.php:543
-#: includes/dashboard/includes/class-dashboard-html.php:753
+#: includes/api.php:204 includes/chatbox-html.php:589
+#: includes/dashboard/includes/class-dashboard-html.php:727
 #: includes/dashboard/page-template/template-whizzchat.php:10
 msgid "Sound on"
 msgstr "تشغيل الصوت"
 
-#: includes/api.php:458 includes/api.php:492 includes/api.php:900
-#: includes/api.php:1050 includes/dashboard/includes/class-dashboard-api.php:85
-#: includes/dashboard/includes/class-dashboard-api.php:331
+#: includes/api.php:471 includes/api.php:505 includes/api.php:931
+#: includes/api.php:1086 includes/dashboard/includes/class-dashboard-api.php:84
+#: includes/dashboard/includes/class-dashboard-api.php:354
 msgid "Invalid session id"
 msgstr "معرف جلسة العمل غير صالح"
 
-#: includes/api.php:565
+#: includes/api.php:578
 msgid "User Unblocked"
 msgstr "إلغاء حظر المستخدم"
 
-#: includes/api.php:571
+#: includes/api.php:584
 msgid "User Blocked"
 msgstr "تم حظر المستخدم"
 
-#: includes/api.php:572 includes/chatbox-html.php:145
-#: includes/chatbox-html.php:164
+#: includes/api.php:585 includes/chatbox-html.php:160
+#: includes/chatbox-html.php:179
 msgid ""
 "You have blocked this user. To send message you need to unblock this user."
 msgstr ""
 "لقد قمت بحظر هذا المستخدم. لإرسال رسالة تحتاج إلى إلغاء حظر هذا المستخدم."
 
-#: includes/api.php:572 includes/chatbox-html.php:145
-#: includes/chatbox-html.php:164 includes/chatbox-html.php:602
-#: includes/chatbox-html.php:605 includes/chatbox-html.php:649
-#: includes/chatbox-html.php:652
-#: includes/dashboard/includes/class-dashboard-html.php:541
-#: includes/dashboard/includes/class-dashboard-html.php:544
+#: includes/api.php:585 includes/chatbox-html.php:160
+#: includes/chatbox-html.php:179 includes/chatbox-html.php:660
+#: includes/chatbox-html.php:663 includes/chatbox-html.php:734
+#: includes/chatbox-html.php:737
+#: includes/dashboard/includes/class-dashboard-html.php:528
+#: includes/dashboard/includes/class-dashboard-html.php:531
 msgid "Unblock"
 msgstr "فك الحظر"
 
-#: includes/api.php:780 includes/api.php:852
+#: includes/api.php:807 includes/api.php:879
 msgid "Sorry, this file type is not permitted for security reason. "
 msgstr "عذراً، نوع الملف هذا غير مسموح به لأسباب أمنية."
 
-#: includes/api.php:843
+#: includes/api.php:870
 msgid "Max allowed size is"
 msgstr "اقصي حجم مسموح به هو"
 
-#: includes/api.php:846
+#: includes/api.php:873
 msgid "Invalid format uploaded."
 msgstr "تم تحميل تنسيق غير صالح."
 
-#: includes/api.php:989 includes/api.php:1146
-#: includes/dashboard/includes/class-dashboard-api.php:420
+#: includes/api.php:1025 includes/api.php:1182
+#: includes/dashboard/includes/class-dashboard-api.php:443
 msgid "Message sent."
 msgstr "تم إرسال الرسالة."
 
-#: includes/api.php:992 includes/chatbox-html.php:142
-#: includes/chatbox-html.php:161
-#: includes/dashboard/includes/class-dashboard-api.php:423
+#: includes/api.php:1028 includes/chatbox-html.php:157
+#: includes/chatbox-html.php:176
+#: includes/dashboard/includes/class-dashboard-api.php:446
 msgid ""
 "User has blocked you. You can not send the message until user unblock you."
 msgstr ""
 "قام المستخدم بحظرك. لا يمكنك إرسال الرسالة حتى يقوم المستخدم بإلغاء حظرك."
 
-#: includes/api.php:1013 includes/api.php:1169
-#: includes/dashboard/includes/class-dashboard-api.php:444
+#: includes/api.php:1049 includes/api.php:1205
+#: includes/dashboard/includes/class-dashboard-api.php:467
 msgid "No Chat Found"
 msgstr "لم يتمّ إيجاد محادثات حتى الآن"
 
-#: includes/api.php:1017 includes/api.php:1173
-#: includes/dashboard/includes/class-dashboard-api.php:448
+#: includes/api.php:1053 includes/api.php:1209
+#: includes/dashboard/includes/class-dashboard-api.php:471
 msgid "Action not match"
 msgstr "اختر مهاراتك:"
 
-#: includes/api.php:1148
+#: includes/api.php:1184
 msgid "Message not sent."
 msgstr "لم يتم إرسال الرسالة."
 
-#: includes/chatbox-html.php:75 includes/chatbox-html.php:464
-#: includes/dashboard/includes/class-dashboard-html.php:641
-#: options-api/api.php:463
+#: includes/api.php:1740
+msgid "User not exist"
+msgstr "المستخدم غير موجود"
+
+#: includes/api.php:1765
+msgid "You have new Message"
+msgstr "لديك رسالة جديدة"
+
+#: includes/chatbox-html.php:88 includes/chatbox-html.php:502
+#: includes/dashboard/includes/class-dashboard-html.php:610
+#: options-api/api.php:505
 msgid "Got Confused? let's chat with admin."
 msgstr "حصلت على الخلط؟ دعونا الدردشة مع المشرف."
 
-#: includes/chatbox-html.php:124
+#: includes/chatbox-html.php:139
 msgid "Chat Ended"
 msgstr "تم إنهاء المحادثة"
 
-#: includes/chatbox-html.php:351 includes/class-whizz-chat.php:177
+#: includes/chatbox-html.php:389 includes/class-whizz-chat.php:174
 msgid "Just Now"
 msgstr "المزايدة الآن"
 
-#: includes/chatbox-html.php:354 includes/class-whizz-chat.php:180
+#: includes/chatbox-html.php:392 includes/class-whizz-chat.php:177
 msgid "1 minute ago"
 msgstr "1 منذ دقيقه"
 
-#: includes/chatbox-html.php:356 includes/class-whizz-chat.php:182
+#: includes/chatbox-html.php:394 includes/class-whizz-chat.php:179
 msgid "minutes ago"
 msgstr "دقيقة"
 
-#: includes/chatbox-html.php:360 includes/class-whizz-chat.php:186
+#: includes/chatbox-html.php:398 includes/class-whizz-chat.php:183
 msgid "an hour ago"
 msgstr "قبل ساعة"
 
-#: includes/chatbox-html.php:362 includes/class-whizz-chat.php:188
+#: includes/chatbox-html.php:400 includes/class-whizz-chat.php:185
 msgid "hrs ago"
 msgstr "منذ ساعة"
 
-#: includes/chatbox-html.php:366 includes/class-whizz-chat.php:192
-#: includes/class-whizz-chat.php:227
+#: includes/chatbox-html.php:404 includes/class-whizz-chat.php:189
+#: includes/class-whizz-chat.php:224
 msgid "Yesterday"
 msgstr "أمس"
 
-#: includes/chatbox-html.php:368 includes/class-whizz-chat.php:194
+#: includes/chatbox-html.php:406 includes/class-whizz-chat.php:191
 msgid "days ago"
 msgstr "أيام مضت"
 
-#: includes/chatbox-html.php:372 includes/class-whizz-chat.php:198
+#: includes/chatbox-html.php:410 includes/class-whizz-chat.php:195
 msgid "a week ago"
 msgstr "منذ أسبوع"
 
-#: includes/chatbox-html.php:374 includes/class-whizz-chat.php:200
+#: includes/chatbox-html.php:412 includes/class-whizz-chat.php:197
 msgid "weeks ago"
 msgstr "منذ أسابيع"
 
-#: includes/chatbox-html.php:378 includes/class-whizz-chat.php:204
+#: includes/chatbox-html.php:416 includes/class-whizz-chat.php:201
 msgid "a month ago"
 msgstr "منذ شهر"
 
-#: includes/chatbox-html.php:380 includes/class-whizz-chat.php:206
+#: includes/chatbox-html.php:418 includes/class-whizz-chat.php:203
 msgid "months ago"
 msgstr "شهر"
 
-#: includes/chatbox-html.php:384 includes/class-whizz-chat.php:210
+#: includes/chatbox-html.php:422 includes/class-whizz-chat.php:207
 msgid "one year ago"
 msgstr "قبل سنة"
 
-#: includes/chatbox-html.php:386 includes/class-whizz-chat.php:212
+#: includes/chatbox-html.php:424 includes/class-whizz-chat.php:209
 msgid "years ago"
 msgstr "سنين مضت"
 
-#: includes/chatbox-html.php:526
-#: includes/dashboard/includes/class-dashboard-html.php:735
+#: includes/chatbox-html.php:572
+#: includes/dashboard/includes/class-dashboard-html.php:709
 msgid "No Chat Available"
 msgstr "لا توجد دردشة متوفرة"
 
-#: includes/chatbox-html.php:527
-#: includes/dashboard/includes/class-dashboard-html.php:739
+#: includes/chatbox-html.php:573
+#: includes/dashboard/includes/class-dashboard-html.php:713
 msgid "Load more messages"
 msgstr "تحميل المزيد من الرسائل"
 
-#: includes/chatbox-html.php:531
-#: includes/dashboard/includes/class-dashboard-html.php:743
+#: includes/chatbox-html.php:577
+#: includes/dashboard/includes/class-dashboard-html.php:717
 msgid "Search chat"
 msgstr "دردشة البحث"
 
-#: includes/chatbox-html.php:560
-#: includes/dashboard/includes/class-dashboard-html.php:763
-#: includes/dashboard/page-template/template-whizzchat.php:40
+#: includes/chatbox-html.php:605
+#: includes/dashboard/includes/class-dashboard-html.php:737
+#: includes/dashboard/page-template/template-whizzchat.php:42
 msgid "Chat List"
 msgstr "قائمة المحادثة"
 
-#: includes/chatbox-html.php:572
+#: includes/chatbox-html.php:617 includes/chatbox-html.php:685
+#: includes/chatbox-html.php:690
 msgid "whizzchat dashboard page"
 msgstr "صفحة لوحة معلومات whizzchat"
 
-#: includes/chatbox-html.php:601 includes/chatbox-html.php:606
-#: includes/chatbox-html.php:648 includes/chatbox-html.php:653
-#: includes/dashboard/includes/class-dashboard-html.php:540
-#: includes/dashboard/includes/class-dashboard-html.php:545
+#: includes/chatbox-html.php:659 includes/chatbox-html.php:664
+#: includes/chatbox-html.php:733 includes/chatbox-html.php:738
+#: includes/dashboard/includes/class-dashboard-html.php:527
+#: includes/dashboard/includes/class-dashboard-html.php:532
 msgid "Block"
 msgstr "حظر"
 
-#: includes/chatbox-html.php:635 includes/chatbox-html.php:656
-#: includes/dashboard/includes/class-dashboard-html.php:562
+#: includes/chatbox-html.php:690
+msgid "Visit Dashboard"
+msgstr "مشاهدة اللوحة الرئيسية"
+
+#: includes/chatbox-html.php:718 includes/chatbox-html.php:741
 msgid "Leave Chat"
 msgstr "ترك الدردشة"
 
-#: includes/chatbox-html.php:745 includes/chatbox-html.php:1011
-#: includes/dashboard/includes/class-dashboard-html.php:256
+#: includes/chatbox-html.php:830 includes/chatbox-html.php:1096
+#: includes/dashboard/includes/class-dashboard-html.php:259
 msgid "More"
 msgstr "المزيد"
 
-#: includes/chatbox-html.php:862 includes/chatbox-html.php:916
+#: includes/chatbox-html.php:947 includes/chatbox-html.php:1001
 #: includes/dashboard/includes/class-dashboard-html.php:64
 msgid "Seen"
 msgstr "رأيت"
 
-#: includes/chatbox-html.php:1199
+#: includes/chatbox-html.php:1284
 msgid "Please login first to start chat."
 msgstr "يرجى تسجيل الدخول أولا لبدء الدردشة."
 
-#: includes/chatbox-html.php:1200
+#: includes/chatbox-html.php:1285
 msgid "Login Here"
 msgstr "سجل الدخول هنا"
 
-#: includes/chatbox-html.php:1206
+#: includes/chatbox-html.php:1291
 msgid "Please Provide name and email of your choice to start chat."
 msgstr "يرجى تقديم اسم والبريد الإلكتروني الذي تختاره لبدء الدردشة."
 
-#: includes/chatbox-html.php:1210
+#: includes/chatbox-html.php:1295
 msgid "Full Name"
 msgstr "الاسم بالكامل"
 
-#: includes/chatbox-html.php:1215
+#: includes/chatbox-html.php:1300
 msgid "Email Address"
 msgstr "عنوان البريد الإلكتروني"
 
-#: includes/chatbox-html.php:1218
+#: includes/chatbox-html.php:1303
 msgid "Start Chat"
 msgstr "إبدأ التحدث معنا الأن"
 
-#: includes/class-whizz-chat.php:224
+#: includes/class-whizz-chat.php:221
 msgid "Today"
 msgstr "اليوم"
 
@@ -304,7 +321,7 @@ msgid "New WhizzChat Bot Name"
 msgstr "اسم بوت WhizzChat الجديد"
 
 #: includes/class-whizzchat-bot.php:37 includes/class-whizzchat-bot.php:173
-#: options-api/api.php:436 options-api/api.php:441 options-api/api.php:455
+#: options-api/api.php:478 options-api/api.php:483 options-api/api.php:497
 msgid "WhizzChat Bot"
 msgstr "WhizzChat بوت"
 
@@ -361,141 +378,143 @@ msgid ""
 "<br />"
 msgstr "الرجاء إضافة رسائل الاستجابة وفقا لنوع الرسالة وتنسيقها.<br />"
 
-#: includes/class-whizzchat-bot.php:184
+#: includes/class-whizzchat-bot.php:186
 msgid "Admin ChatBox"
 msgstr "مسؤول الدردشةBox"
 
-#: includes/class-whizzchat-bot.php:198
+#: includes/class-whizzchat-bot.php:200
 msgid " Online"
 msgstr "عبر الإنترنت"
 
-#: includes/dashboard/includes/class-dashboard-html.php:376
+#: includes/dashboard/includes/class-dashboard-html.php:365
 msgid "Location"
 msgstr " الموقع"
 
-#: includes/dashboard/includes/class-dashboard-html.php:420
+#: includes/dashboard/includes/class-dashboard-html.php:406
 msgid "Document"
 msgstr "مستند"
 
-#: includes/dashboard/includes/class-dashboard-html.php:453
+#: includes/dashboard/includes/class-dashboard-html.php:439
 msgid "Gallery"
 msgstr "المعرض"
 
-#: includes/dashboard/includes/class-dashboard-html.php:587
+#: includes/dashboard/includes/class-dashboard-html.php:556
 msgid "Online"
 msgstr "متصل"
 
-#: includes/dashboard/includes/class-dashboard-html.php:587
+#: includes/dashboard/includes/class-dashboard-html.php:556
 msgid "Offline"
 msgstr "غير متصل"
 
-#: includes/dashboard/includes/class-dashboard-html.php:617
+#: includes/dashboard/includes/class-dashboard-html.php:586
 msgid "Delete"
 msgstr "حذف"
 
-#: includes/dashboard/page-template/template-whizzchat.php:86
+#: includes/dashboard/page-template/template-whizzchat.php:91
+#: includes/dashboard/whizzchat-dashboard.php:162
 msgid "Welcome to WhizzChat Messenger"
 msgstr "مرحبا بكم في ويز شات ماسنجر"
 
-#: includes/dashboard/page-template/template-whizzchat.php:87
+#: includes/dashboard/page-template/template-whizzchat.php:92
+#: includes/dashboard/whizzchat-dashboard.php:163
 msgid "Please select a chat to Start messaging."
 msgstr "الرجاء تحديد دردشة إلى بدء المراسلة."
 
-#: includes/dashboard/whizzchat-dashboard.php:30
+#: includes/dashboard/whizzchat-dashboard.php:74
 msgid "Whizzchat Dashboard - Sidebar"
 msgstr "لوحة معلومات Whizzchat - شريط جانبي"
 
-#: includes/dashboard/whizzchat-dashboard.php:89 whizz-chat.php:202
+#: includes/dashboard/whizzchat-dashboard.php:137 whizz-chat.php:206
 msgid "Please enter a valid email."
 msgstr "يرجى إدخال البريد الإلكتروني الصحيح."
 
-#: includes/dashboard/whizzchat-dashboard.php:90 whizz-chat.php:203
+#: includes/dashboard/whizzchat-dashboard.php:138 whizz-chat.php:207
 msgid "Please provide your information above."
 msgstr "يرجى تقديم المعلومات الخاصة بك أعلاه."
 
-#: includes/dashboard/whizzchat-dashboard.php:91 whizz-chat.php:204
+#: includes/dashboard/whizzchat-dashboard.php:139 whizz-chat.php:208
 msgid "Your browser don't support to send your location."
 msgstr "لا يدعم المتصفح إرسال موقعك."
 
-#: includes/dashboard/whizzchat-dashboard.php:92 whizz-chat.php:205
+#: includes/dashboard/whizzchat-dashboard.php:140 whizz-chat.php:209
 msgid "Please enable location from your browser to send your location."
 msgstr "يرجى تمكين الموقع من المتصفح الخاص بك لإرسال موقعك."
 
-#: includes/dashboard/whizzchat-dashboard.php:93 whizz-chat.php:206
+#: includes/dashboard/whizzchat-dashboard.php:141 whizz-chat.php:210
 msgid "Not A Valid File/Image type uploaded"
 msgstr "لم يتم تحميل نوع ملف/صورة صالح"
 
-#: includes/dashboard/whizzchat-dashboard.php:94 whizz-chat.php:207
+#: includes/dashboard/whizzchat-dashboard.php:142 whizz-chat.php:211
 msgid "Warning"
 msgstr "تحذير"
 
-#: includes/dashboard/whizzchat-dashboard.php:95 whizz-chat.php:208
+#: includes/dashboard/whizzchat-dashboard.php:143 whizz-chat.php:212
 msgid "Type something here."
 msgstr "اكتب شيئًا هنا."
 
-#: includes/dashboard/whizzchat-dashboard.php:96
-#: includes/dashboard/whizzchat-dashboard.php:102 whizz-chat.php:209
-#: whizz-chat.php:215
+#: includes/dashboard/whizzchat-dashboard.php:144
+#: includes/dashboard/whizzchat-dashboard.php:150 whizz-chat.php:213
+#: whizz-chat.php:219
 msgid "Please select a chat person from the chat list."
 msgstr "يرجى اختيار شخص دردشة من قائمة الدردشة."
 
-#: includes/dashboard/whizzchat-dashboard.php:97 whizz-chat.php:210
+#: includes/dashboard/whizzchat-dashboard.php:145 whizz-chat.php:214
 msgid "Are you sure you want to remove the chat messages and chat users."
 msgstr "هل أنت متأكد من أنك تريد إزالة رسائل الدردشة ومستخدمي الدردشة."
 
-#: includes/dashboard/whizzchat-dashboard.php:98 whizz-chat.php:211
+#: includes/dashboard/whizzchat-dashboard.php:146 whizz-chat.php:215
 msgid "Reset database successfully."
 msgstr "إعادة تعيين قاعدة البيانات بنجاح."
 
-#: includes/dashboard/whizzchat-dashboard.php:99 whizz-chat.php:212
+#: includes/dashboard/whizzchat-dashboard.php:147 whizz-chat.php:216
 msgid "OOoops !!!  something went wrong."
 msgstr "أووبز !!!  حدث خطأ ما."
 
-#: includes/dashboard/whizzchat-dashboard.php:101 whizz-chat.php:214
+#: includes/dashboard/whizzchat-dashboard.php:149 whizz-chat.php:218
 msgid "Nothing found icon"
 msgstr "لم يتم العثور على رمز"
 
-#: includes/dashboard/whizzchat-dashboard.php:103 whizz-chat.php:216
+#: includes/dashboard/whizzchat-dashboard.php:151 whizz-chat.php:220
 msgid "Add alphanemeric only."
 msgstr "إضافة هجميرية فقط."
 
-#: includes/dashboard/whizzchat-dashboard.php:104 whizz-chat.php:217
+#: includes/dashboard/whizzchat-dashboard.php:152 whizz-chat.php:221
 msgid "Please input alphanumeric characters only."
 msgstr "الرجاء إدخال الأحرف الأبجدية الرقمية فقط."
 
-#: includes/dashboard/whizzchat-dashboard.php:105 whizz-chat.php:218
+#: includes/dashboard/whizzchat-dashboard.php:153 whizz-chat.php:222
 msgid "it seems your message is empty or you are adding invalid type of data.."
 msgstr "يبدو أن رسالتك فارغة أو أنك تقوم بإضافة نوع غير صالح من البيانات."
 
-#: includes/dashboard/whizzchat-dashboard.php:106 whizz-chat.php:219
+#: includes/dashboard/whizzchat-dashboard.php:154 whizz-chat.php:223
 msgid "Please add messages."
 msgstr "الرجاء إضافة رسائل."
 
-#: includes/dashboard/whizzchat-dashboard.php:107 whizz-chat.php:220
+#: includes/dashboard/whizzchat-dashboard.php:155 whizz-chat.php:224
 msgid "uploaded type and size and type is not correct."
 msgstr "النوع الذي تم تحميله وحجمه ونوعه غير صحيح."
 
-#: includes/dashboard/whizzchat-dashboard.php:108 whizz-chat.php:221
+#: includes/dashboard/whizzchat-dashboard.php:156 whizz-chat.php:225
 msgid "uploaded size is not correct."
 msgstr "حجم تم تحميلها غير صحيح."
 
-#: includes/dashboard/whizzchat-dashboard.php:109 whizz-chat.php:222
+#: includes/dashboard/whizzchat-dashboard.php:157 whizz-chat.php:226
 msgid "uploaded type is not correct."
 msgstr "النوع الذي تم تحميله غير صحيح."
 
-#: includes/dashboard/whizzchat-dashboard.php:110 whizz-chat.php:223
+#: includes/dashboard/whizzchat-dashboard.php:158 whizz-chat.php:227
 msgid "Some of these uploaded data type and size and type is not correct."
 msgstr "بعض هذه البيانات التي تم تحميلها نوع وحجم ونوع غير صحيح."
 
-#: includes/dashboard/whizzchat-dashboard.php:111 whizz-chat.php:224
+#: includes/dashboard/whizzchat-dashboard.php:159 whizz-chat.php:228
 msgid "Some of these uploaded data size is not correct."
 msgstr "بعض هذه البيانات التي تم تحميلها حجم غير صحيح."
 
-#: includes/dashboard/whizzchat-dashboard.php:112 whizz-chat.php:225
+#: includes/dashboard/whizzchat-dashboard.php:160 whizz-chat.php:229
 msgid "Some of these uploaded data type is not correct."
 msgstr "بعض أنواع البيانات التي تم تحميلها هذه غير صحيحة."
 
-#: includes/dashboard/whizzchat-dashboard.php:129
+#: includes/dashboard/whizzchat-dashboard.php:177
 msgid "WhizzChat Dashboard"
 msgstr "لوحة معلومات WhizzChat"
 
@@ -507,35 +526,35 @@ msgstr "دردشة المشرف"
 msgid "Settings"
 msgstr "الإعدادات"
 
-#: options-api/api.php:118
+#: options-api/api.php:130
 msgid "Basic Settings"
 msgstr "الإعدادات الأساسية"
 
-#: options-api/api.php:119
+#: options-api/api.php:131
 msgid "Here you can customize your chat settings."
 msgstr "هنا يمكنك تخصيص إعدادات الدردشة الخاصة بك."
 
-#: options-api/api.php:123
+#: options-api/api.php:135
 msgid "WhizzChat"
 msgstr "WhizzChat"
 
-#: options-api/api.php:124
+#: options-api/api.php:136
 msgid "Use these options to completely stop/start the chat."
 msgstr "استخدم هذه الخيارات لإيقاف /بدء الدردشة تمامًا."
 
-#: options-api/api.php:127
+#: options-api/api.php:139 options-api/api.php:250 options-api/api.php:262
 msgid "Disable"
 msgstr "تعطيل"
 
-#: options-api/api.php:128
+#: options-api/api.php:140 options-api/api.php:251 options-api/api.php:263
 msgid "Enable"
 msgstr "تفعيل"
 
-#: options-api/api.php:134
+#: options-api/api.php:146
 msgid "Communication Type"
 msgstr "النوع :"
 
-#: options-api/api.php:135
+#: options-api/api.php:147
 msgid ""
 "<span><b style=\"color:red\">Note : </b> For Real Time communication you "
 "need to follow the Real Time Communication Tab Settings.</span>"
@@ -543,94 +562,94 @@ msgstr ""
 "<span><b style=\"color:red\">ملاحظة:</b> للاتصال في الوقت الحقيقي تحتاج إلى "
 "اتباع إعدادات علامة التبويب الاتصال في الوقت الحقيقي.</span>"
 
-#: options-api/api.php:138
+#: options-api/api.php:150
 msgid "Ajax Based"
 msgstr "استنادا اياكس"
 
-#: options-api/api.php:139
+#: options-api/api.php:151
 msgid "Real Time"
 msgstr "الوقت الحقيقي"
 
-#: options-api/api.php:145
+#: options-api/api.php:157
 msgid "Chat Between"
 msgstr "الدردشة بين"
 
-#: options-api/api.php:146
+#: options-api/api.php:158
 msgid "Select option to select a chat between."
 msgstr "حدد خيارًا لتحديد دردشة بين."
 
-#: options-api/api.php:149
+#: options-api/api.php:161
 msgid "Authors"
 msgstr "الكاتب"
 
-#: options-api/api.php:150
+#: options-api/api.php:162
 msgid "Admin Only"
 msgstr "المسؤول فقط"
 
-#: options-api/api.php:151
+#: options-api/api.php:163
 msgid "Both"
 msgstr "كلاهما"
 
-#: options-api/api.php:158
+#: options-api/api.php:170
 msgid "Select Admin"
 msgstr "حدد المسؤول"
 
-#: options-api/api.php:159
+#: options-api/api.php:171
 msgid "Select admin for chat."
 msgstr "حدد الخيار لتحديد نوع الدردشة."
 
-#: options-api/api.php:167
+#: options-api/api.php:179
 msgid "General Queries Page"
 msgstr "صفحة الاستعلامات العامة"
 
-#: options-api/api.php:168
+#: options-api/api.php:180
 msgid "Select the admin page for general queries."
 msgstr "حدد صفحة المسؤول للاستعلامات العامة."
 
-#: options-api/api.php:176
+#: options-api/api.php:188
 msgid "Chat User Type"
 msgstr "اختر نوع الدردشة"
 
-#: options-api/api.php:177
+#: options-api/api.php:189
 msgid "Select option to select a chat type."
 msgstr "حدد الخيار لتحديد نوع الدردشة."
 
-#: options-api/api.php:180
+#: options-api/api.php:192
 msgid "Anyone"
 msgstr "أي أحد"
 
-#: options-api/api.php:181
+#: options-api/api.php:193
 msgid "Require (Name and Email)"
 msgstr "الطلب (الاسم والبريد الكتروني)"
 
-#: options-api/api.php:182
+#: options-api/api.php:194
 msgid "Only WordPress Login"
 msgstr "فقط وورد تسجيل الدخول"
 
-#: options-api/api.php:189
+#: options-api/api.php:201
 msgid "Login Type"
 msgstr "نوع تسجيل الدخول"
 
-#: options-api/api.php:190
+#: options-api/api.php:202
 msgid ""
 "select the type of login wether you are using page/popup for site user login."
 msgstr ""
 "حدد نوع تسجيل الدخول wether كنت تستخدم الصفحة / المنبثقة لتسجيل الدخول إلى "
 "المستخدم الموقع."
 
-#: options-api/api.php:193
+#: options-api/api.php:205
 msgid "Page Url"
 msgstr "عنوان URL للصفحة"
 
-#: options-api/api.php:194
+#: options-api/api.php:206
 msgid "Popup"
 msgstr "نافذة منبثقة"
 
-#: options-api/api.php:201
+#: options-api/api.php:213
 msgid "Login URL/popup"
 msgstr "عنوان URL لتسجيل الدخول/منبثق"
 
-#: options-api/api.php:202
+#: options-api/api.php:214
 msgid ""
 "Pleae enter the login url or add the popup window class/id.it redirects the "
 "chatbox window to the login page."
@@ -638,198 +657,221 @@ msgstr ""
 "Pleae إدخال عنوان url تسجيل الدخول أو إضافة فئة نافذة منبثقة / id.it يعيد "
 "توجيه نافذة الدردشة إلى صفحة تسجيل الدخول."
 
-#: options-api/api.php:210
+#: options-api/api.php:222
 msgid "Max chat box window"
 msgstr "الحد الأقصى لنافذة مربع الدردشة"
 
-#: options-api/api.php:211
+#: options-api/api.php:223
 msgid "Pleae enter the number of chat box window open while chatting."
 msgstr "Pleae أدخل عدد نافذة مربع الدردشة مفتوحة أثناء الدردشة."
 
-#: options-api/api.php:214
+#: options-api/api.php:226
 msgid "2"
 msgstr "٢"
 
-#: options-api/api.php:218
+#: options-api/api.php:230
 msgid "Notification Check Time"
 msgstr "وقت التحقق من الإشعارات"
 
-#: options-api/api.php:219
+#: options-api/api.php:231
 msgid "Please check message notification ajax time in second(s)."
 msgstr "يرجى التحقق من الوقت اشعار الرسالة اياكس في الثانية (ق)."
 
-#: options-api/api.php:222
+#: options-api/api.php:234
 msgid "15"
-msgstr "١٥"
+msgstr "15"
 
-#: options-api/api.php:226
+#: options-api/api.php:238
 msgid "Show Chat Box on"
 msgstr "إظهار مربع الحوار علي"
 
-#: options-api/api.php:227
+#: options-api/api.php:239
 msgid "Select where you want to show the chatbox."
 msgstr "حدد المكان الذي تريد إظهار مربع الدردشة فيه."
 
-#: options-api/api.php:237
+#: options-api/api.php:246
+msgid "WhizzChat Shortcode"
+msgstr "WhizzChat الرمز القصير"
+
+#: options-api/api.php:247
+msgid ""
+"Use this option to add a shortcode; this will prevent chats from auto-"
+"populating; instead, a button click will open the specific chat. You can "
+"create your own customised button by using the  { class \"chat toggler\" and "
+"the data-page id = \"relevent post id\" }"
+msgstr ""
+"استخدم هذا الخيار لإضافة رمز قصير; وهذا سيمنع الدردشات من الإكتِماء التلقائي؛ "
+"بدلاً من ذلك، سوف زر انقر على فتح دردشة محددة. يمكنك إنشاء زر مخصص الخاص بك "
+"باستخدام فئة {\"مبدل الدردشة\" ومعرف صفحة البيانات = \"relevent آخر معرف\" }"
+
+#: options-api/api.php:258
+msgid "Hide Show chat list"
+msgstr "إخفاء قائمة الدردشة \"إظهار\""
+
+#: options-api/api.php:259
+msgid "Use this option to hide show chat list on a page"
+msgstr "استخدم هذا الخيار لإخفاء قائمة الدردشة المعروضة على صفحة"
+
+#: options-api/api.php:273
 msgid "Media Settings"
 msgstr "إعدادات الوسائط"
 
-#: options-api/api.php:238
+#: options-api/api.php:274
 msgid "Set the Media Settings according to your requirement."
 msgstr "تعيين إعدادات الوسائط وفقا لمتطلباتك."
 
-#: options-api/api.php:242
+#: options-api/api.php:278
 msgid "Allow Image Upload"
 msgstr "السماح بتحميل الصور"
 
-#: options-api/api.php:243
+#: options-api/api.php:279
 msgid "Enable image upload feature in chat"
 msgstr "تمكين ميزه تحميل الصور في الدردشة"
 
-#: options-api/api.php:246 options-api/api.php:274 options-api/api.php:301
-#: options-api/api.php:312 options-api/api.php:417 options-api/api.php:445
-#: options-api/api.php:504
+#: options-api/api.php:282 options-api/api.php:310 options-api/api.php:337
+#: options-api/api.php:348 options-api/api.php:453 options-api/api.php:487
+#: options-api/api.php:546
 msgid "Enabled"
 msgstr "تمكين"
 
-#: options-api/api.php:247 options-api/api.php:275 options-api/api.php:302
-#: options-api/api.php:313 options-api/api.php:418 options-api/api.php:446
-#: options-api/api.php:505
+#: options-api/api.php:283 options-api/api.php:311 options-api/api.php:338
+#: options-api/api.php:349 options-api/api.php:454 options-api/api.php:488
+#: options-api/api.php:547
 msgid "Disabled"
 msgstr "معطل"
 
-#: options-api/api.php:253
+#: options-api/api.php:289
 msgid "Image Size"
 msgstr "حجم الصورة"
 
-#: options-api/api.php:254
+#: options-api/api.php:290
 msgid "Enter image max upload size in KB"
 msgstr "أدخل الحد الأقصى لحجم تحميل الصورة في KB"
 
-#: options-api/api.php:257 options-api/api.php:285
+#: options-api/api.php:293 options-api/api.php:321
 msgid "e.g 2 or 0.8 "
 msgstr "علي سبيل المثال 2 أو 0.8"
 
-#: options-api/api.php:261
+#: options-api/api.php:297
 msgid "Image Format"
 msgstr "تنسيق الصورة"
 
-#: options-api/api.php:262
+#: options-api/api.php:298
 msgid "Enter upload allowed image format seprate by ,"
 msgstr "ادخل تنسيق الصورة المسموح بها التحميل منفصل من قبل ،"
 
-#: options-api/api.php:270
+#: options-api/api.php:306
 msgid "Allow file Upload"
 msgstr "السماح بتحميل الملف"
 
-#: options-api/api.php:271
+#: options-api/api.php:307
 msgid "Enable file upload feature in chat"
 msgstr "تمكين ميزه تحميل الملفات في الدردشة"
 
-#: options-api/api.php:281
+#: options-api/api.php:317
 msgid "File Size"
 msgstr "تحميل بحجم ملف اقصي"
 
-#: options-api/api.php:282
+#: options-api/api.php:318
 msgid "Enter file max upload size in KB"
 msgstr "إدخال حجم تحميل الملف الأقصى في كيلوبايت"
 
-#: options-api/api.php:289
+#: options-api/api.php:325
 msgid "File Format"
 msgstr "نوع الملف"
 
-#: options-api/api.php:290
+#: options-api/api.php:326
 msgid "Enter upload allowed file format seprate by ,"
 msgstr "ادخل تنسيق الملف المسموح التحميل منفصل من قبل ،"
 
-#: options-api/api.php:297
+#: options-api/api.php:333
 msgid "Allow Location"
 msgstr "السماح بالموقع"
 
-#: options-api/api.php:298
+#: options-api/api.php:334
 msgid "Enable location feature in chat"
 msgstr "تمكين ميزة الموقع في الدردشة"
 
-#: options-api/api.php:308
+#: options-api/api.php:344
 msgid "Allow Emojies"
 msgstr "السماح بالرموز التعبيرية"
 
-#: options-api/api.php:309
+#: options-api/api.php:345
 msgid "Enable emojies feature in chat"
 msgstr "تمكين ميزة الرموز التعبيرية في الدردشة"
 
-#: options-api/api.php:321
+#: options-api/api.php:357
 msgid "Design Settings"
 msgstr "إعدادات التصميم"
 
-#: options-api/api.php:322
+#: options-api/api.php:358
 msgid "Set the Design Settings according to your requirement."
 msgstr "قم بتعيين \"إعدادات التصميم\" وفقاً لمتطلباتك."
 
-#: options-api/api.php:326
+#: options-api/api.php:362
 msgid "Chat List head Color"
 msgstr "لون رئيس قائمة الدردشة"
 
-#: options-api/api.php:327
+#: options-api/api.php:363
 msgid "Select the Chat List Head Color."
 msgstr "حدد لون رئيس قائمة الدردشة."
 
-#: options-api/api.php:334
+#: options-api/api.php:370
 msgid "Chat List head Text Color"
 msgstr "لون نص رئيس قائمة الدردشة"
 
-#: options-api/api.php:335
+#: options-api/api.php:371
 msgid "Select the Chat List header Text Color."
 msgstr "حدد لون نص رأس قائمة الدردشة."
 
-#: options-api/api.php:342
+#: options-api/api.php:378
 msgid "Chat Box head Color"
 msgstr "لون رأس مربع الدردشة"
 
-#: options-api/api.php:343
+#: options-api/api.php:379
 msgid "Select the Chat Box Head Color."
 msgstr "حدد لون رأس مربع الدردشة."
 
-#: options-api/api.php:350
+#: options-api/api.php:386
 msgid "Chat Box Primary Text Color"
 msgstr "لون النص الأساسي مربع المحادثة"
 
-#: options-api/api.php:351
+#: options-api/api.php:387
 msgid "Select the Chat Box header Text Primary Color."
 msgstr "حدد لون النص الأساسي لرأس مربع مربع المحادثة."
 
-#: options-api/api.php:358
+#: options-api/api.php:394
 msgid "Chat Box Secondary Text Color"
 msgstr "لون نص مربع المحادثة الثانوي"
 
-#: options-api/api.php:359
+#: options-api/api.php:395
 msgid "Select the Chat Box header Text Secondary Color."
 msgstr "حدد لون نص نص رأس مربع الدردشة الثانوي."
 
-#: options-api/api.php:366
+#: options-api/api.php:402
 msgid "ChatBox Button Background Color"
 msgstr "لون خلفية زر مربع الدردشة"
 
-#: options-api/api.php:367
+#: options-api/api.php:403
 msgid ""
 "Select the ChatBox button color for start chat form and admin chat form ."
 msgstr "حدد لون زر ChatBox لبدء نموذج المحادثة و دردشة المشرف على شكل."
 
-#: options-api/api.php:374
+#: options-api/api.php:410
 msgid "ChatBox Button Text Color"
 msgstr "لون نص زر مربع الدردشة"
 
-#: options-api/api.php:375
+#: options-api/api.php:411
 msgid ""
 "Select the ChatBox button text color for start chat form and admin chat "
 "form ."
 msgstr "حدد زر النص ChatBox لون لبدء نموذج الدردشة و دردشة المشرف النموذج ."
 
-#: options-api/api.php:385
+#: options-api/api.php:421
 msgid "Real Time Communication"
 msgstr "الاتصال في الوقت الحقيقي"
 
-#: options-api/api.php:386
+#: options-api/api.php:422
 msgid ""
 "<b style=\"color:red\">Note : </b>For RealTime Communication You have to "
 "create the agile-pusher credentials.<br/>For Creating agile-pusher "
@@ -841,54 +883,62 @@ msgstr ""
 "اتباع هذا الرابط. <a href=\"https://agilepusher.com/\">إنشاء بيانات "
 "الاعتماد</a>"
 
-#: options-api/api.php:390
+#: options-api/api.php:426
 msgid "Agile Pusher Key"
 msgstr "مفتاح الدفع رشيقة"
 
-#: options-api/api.php:391
+#: options-api/api.php:427
 msgid "Enter the agile pusher Api key."
 msgstr "أدخل مفتاح Api السريع الرشيق."
 
-#: options-api/api.php:400
+#: options-api/api.php:436
 msgid "Dashboard Settings"
 msgstr "اعدادات لوحة التحكم"
 
-#: options-api/api.php:401
+#: options-api/api.php:437
 msgid "Set the dashboard settings according to your requirements."
 msgstr "قم بتعيين إعدادات لوحة المعلومات وفقًا لمتطلباتك."
 
-#: options-api/api.php:405
+#: options-api/api.php:441
 msgid "Dashboard Page"
 msgstr "العودة إلى لوحة التحكم الرئيسية"
 
-#: options-api/api.php:406
+#: options-api/api.php:442
 msgid "Select the dashboard page for chat messenger."
 msgstr "حدد صفحة لوحة المعلومات لمرسل المحادثة."
 
-#: options-api/api.php:413
+#: options-api/api.php:449
 msgid "Allow dashboard sidebar"
 msgstr "السماح بـ\"الشريط الجانبي للوحة المعلومات\""
 
-#: options-api/api.php:414
+#: options-api/api.php:450
 msgid ""
 "Use this option to enable/disable whizzchat sidebar in the dashboard area."
 msgstr ""
 "استخدم هذا الخيار لتمكين/تعطيل الشريط الجانبي لـ whizzchat في منطقة لوحة "
 "المعلومات."
 
-#: options-api/api.php:424
+#: options-api/api.php:460
 msgid "Sidebar title"
 msgstr "عنوان القائمة الجانبية"
 
-#: options-api/api.php:425
+#: options-api/api.php:461
 msgid "Enter the sidebar section title."
 msgstr "أدخل عنوان قسم الشريط الجانبي."
 
-#: options-api/api.php:427 options-api/api.php:428
+#: options-api/api.php:463 options-api/api.php:464
 msgid "Whizzchat Sidebar."
 msgstr "شريط جانبي من (ويزتشات)"
 
-#: options-api/api.php:442
+#: options-api/api.php:468
+msgid "Whizzchat Dashboard Color"
+msgstr "لون لوحة معلومات Whizzchat"
+
+#: options-api/api.php:469
+msgid "Select the Whizzchat color for dashboard sections."
+msgstr "حدد لون Whizzchat للوحة المعلومات المقاطع."
+
+#: options-api/api.php:484
 msgid ""
 "Use these options to Enable/Disable Admin WhizzChat Bot.Make Sure you have "
 "select the chat between ( admin|both ) in Basic Settings."
@@ -896,73 +946,73 @@ msgstr ""
 "استخدم هذه الخيارات لتمكين/تعطيل المسؤول WhizzChat Bot.Make تأكد من تحديد "
 "الدردشة بين ( admin|both ) في الإعدادات الأساسية."
 
-#: options-api/api.php:452
+#: options-api/api.php:494
 msgid "WhizzChat Bot header Text"
 msgstr "WhizzChat بوت نص الرأس"
 
-#: options-api/api.php:453
+#: options-api/api.php:495
 msgid "Add the WhizzChat Bot header text,"
 msgstr "إضافة نص رأس WhizzChat بوت،"
 
-#: options-api/api.php:456
+#: options-api/api.php:498
 msgid "Header text"
 msgstr "نص الهيدر"
 
-#: options-api/api.php:460
+#: options-api/api.php:502
 msgid "WhizzChat Bot tooltip Text"
 msgstr "WhizzChat بوت نص تلميح الأداة"
 
-#: options-api/api.php:461
+#: options-api/api.php:503
 msgid "Add the WhizzChat Bot tooltip text,"
 msgstr "إضافة نص تلميح أداة WhizzChat بوت،"
 
-#: options-api/api.php:464
+#: options-api/api.php:506
 msgid "tooltip text"
 msgstr "نص تلميح الأدوات"
 
-#: options-api/api.php:468
+#: options-api/api.php:510
 msgid "WhizzChat Bot Header Color"
 msgstr "البحث WhizzChat بوت"
 
-#: options-api/api.php:469
+#: options-api/api.php:511
 msgid "Select the ChatBot header color."
 msgstr "حدد لون رأس ChatBot."
 
-#: options-api/api.php:476
+#: options-api/api.php:518
 msgid "WhizzChat Bot Header Text Color"
 msgstr "WhizzChat بوت رأس لون النص"
 
-#: options-api/api.php:477
+#: options-api/api.php:519
 msgid "Select the ChatBot header text color."
 msgstr "حدد لون نص رأس ChatBot."
 
-#: options-api/api.php:484
+#: options-api/api.php:526
 msgid "Introductory Messages"
 msgstr "الرسائل التمهيدية"
 
-#: options-api/api.php:485
+#: options-api/api.php:527
 msgid ""
 "Add the introductory Messages.You can add the multiple messages seperated by "
 "| ."
 msgstr "إضافة الرسائل التمهيدية.يمكنك إضافة رسائل متعددة مفصولة | ."
 
-#: options-api/api.php:492
+#: options-api/api.php:534
 msgid "Response Message LImit"
 msgstr "رسالة استجابة LImit"
 
-#: options-api/api.php:493
+#: options-api/api.php:535
 msgid "Limit the Response Messages added in the whizz-chat Bot Actions."
 msgstr "الحد من رسائل الاستجابة المضافة في إجراءات بوت الأزيز الدردشة."
 
-#: options-api/api.php:496
+#: options-api/api.php:538
 msgid "Add response LImit"
 msgstr "إضافة LImit استجابة"
 
-#: options-api/api.php:500
+#: options-api/api.php:542
 msgid "WhizzChat Bot Copyright"
 msgstr "WhizzChat بوت حقوق الطبع والنشر"
 
-#: options-api/api.php:501
+#: options-api/api.php:543
 msgid ""
 "Enable this setion to display copyright section at the bottom of the "
 "WhizzChat Bot."
@@ -970,40 +1020,40 @@ msgstr ""
 "تمكين هذا الإعداد لعرض قسم حقوق الطبع والنشر في الجزء السفلي من بوت "
 "WhizzChat."
 
-#: options-api/api.php:511
+#: options-api/api.php:553
 msgid "WhizzChat Bot Copyright Text"
 msgstr "WhizzChat بوت نص حقوق الطبع والنشر"
 
-#: options-api/api.php:512
+#: options-api/api.php:554
 msgid "Add the copyright text of your choice."
 msgstr "أضف نص حقوق النشر الذي تختاره."
 
-#: options-api/api.php:515
+#: options-api/api.php:557
 msgid "Copyright text"
 msgstr "نص حقوق الطبع والنشر"
 
-#: options-api/api.php:521
+#: options-api/api.php:563
 msgid "Reset Data"
 msgstr "إعادة تعيين بيانات"
 
-#: options-api/api.php:522
+#: options-api/api.php:564
 msgid "it is used to remove all chat messages and chat users."
 msgstr "يتم استخدامه لإزالة جميع رسائل الدردشة ومستخدمي الدردشة."
 
-#: options-api/api.php:526
+#: options-api/api.php:568
 msgid "whizzchat database"
 msgstr "قاعدة بيانات whizzchat"
 
-#: options-api/api.php:527
+#: options-api/api.php:569
 msgid "Reset Database"
 msgstr "إعادة تعيين قاعدة البيانات"
 
-#: options-api/api.php:686
+#: options-api/api.php:731
 msgid "WhizzChat Settings"
 msgstr "إعدادات WhizzChat"
 
 #. Description of the plugin/theme
-#: options-api/api.php:687
+#: options-api/api.php:732
 msgid ""
 "Whizz Chat is a WordPress plugin based on Ajax and Live Chat system where "
 "buyers and seller can communicate with each other."

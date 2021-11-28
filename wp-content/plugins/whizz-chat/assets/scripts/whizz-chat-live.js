@@ -12,7 +12,8 @@ is_admin = typeof is_admin != 'undefined' && is_admin == '1' ? true : false;
 var current_id = jQuery("#whizzchat-current-userid").val();
 var whizzchat_dashboard = jQuery("#whizzchat-dashboard").val();
 
-var socket = io(whizzChat_livecore.whizzcaht_socket_url, {
+var socket = io(
+     whizzChat_livecore.whizzcaht_socket_url, {
     'reconnection': true,
     'reconnectionDelay': 50000,
     'reconnectionDelayMax': 50000,
@@ -27,16 +28,21 @@ socket.on('connect', function () {
     whizz_chat_online_user(current_session_id);
 });
 
+socket.on('error', function(err) {
+		console.log("server error: ",err);
+});
+
 // On Disconnection
 socket.on('disconnect', function () {
     console.log('disconnected to server - client side notification');
     whizz_chat_offline_user(current_session_id);
 });
-
-
+socket.on('agInfoMessage', function (msg) {
+	console.log(msg);
+});
 // reconnect in 
 socket.on('reconnect_attempt', () => {
-    socket.io.opts.transports = ['polling', 'websocket'];
+    socket.io.opts.transports = ['websocket'];
     socket.io.opts.query = {
         apiKey: whizzChat_livecore.whizzcaht_socket_key
     }
@@ -47,31 +53,32 @@ socket.on('agTyping', function (msg, chat_id) {
     } else {
         jQuery('span.typing-box-' + chat_id + '').html(' <div class="whizz-chat-wave"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>');
     }
-
 });
 socket.on('agStopTyping', function (chat_id) {
+    
     if (whizzchat_dashboard == 'active') {
         jQuery('.whizztyping-' + chat_id + '')
+       jQuery('span.typing-box-admin').html('');
     } else {
-        jQuery('span.typing-box-' + chat_id + '').html('');
+       jQuery('span.typing-box-' + chat_id + '').html('');
     }
 });
 
 socket.on('agMessageSeen', function (msg, chat_id) {
 
+
+
 });
 
 
+ 
 // Got new message	
 socket.on('agGotNewMessage', function (msg, user, chat_id) {
-
-
-    if (whizzchat_dashboard == 'active') {
-
+   
+    if (whizzchat_dashboard == 'active') {    
         whizzChat_load_chat_box_admin_live();
         whizz_chat_live_read_message_admin();
-
-        if (jQuery('.whizz-chat-body .messages-box .list-group a span.badge.badge-light').hasClass('active')) {
+        if (('jQuery.whizz-chat-body .messages-box .list-group a span.badge.badge-light').hasClass('active')) {
             jQuery('.messages-box .list-group a').removeClass('active');
         } else {
             var chat_counter_elem = '.whizz-chat-body .messages-box .list-group a span.chat-counter-' + chat_id + '';
@@ -83,16 +90,25 @@ socket.on('agGotNewMessage', function (msg, user, chat_id) {
                 jQuery(chat_counter_elem).html(parseInt(1));
             }
         }
-    } else {
-
-        whizzChat_load_chat_box_live();
-        whizz_chat_live_read_message(chat_id);
-
     }
+    else {         
+        
+    var session_id = whizz_user_token_js(whizzChat_live_object.whizz_user_token);  
+    
+    
+     
+    
+      if(user   ==  session_id){  
+         
+       whizzChat_load_chat_box_live();
+       whizz_chat_live_read_message(chat_id ,user , msg);
+        }
+    }  
+   
 });
-
 // listener of Info Messages		
 socket.on('agInfoMessage', function (data) {
+
 
 
 });
@@ -100,17 +116,25 @@ socket.on('agInfoMessage', function (data) {
 // when user online
 socket.on('agUserOnline', function (agUserID) {
     // do what you want to
+    
+    console.log("online");
 });
 
 // when user disconnected
 socket.on('agUserDisconnected', function (agUserID) {
     // do what you want to
+    
+    console.log("disconnected");
 });
 
 // Ask to Join
-socket.on('agAskedToJoin', function (room_name, user) {
-
-    socket.emit('agRoomJoined', room_name, user, '');
+socket.on('agAskedToJoin', function (room_name, user) {  
+     var  receiver_id  =   $('#whizzchat-current-userid').val();
+     
+ 
+     if(receiver_id ==   user){
+        socket.emit('agRoomJoined', room_name, user, '');   
+     }
 });
 /*
  * Message Seen functionality

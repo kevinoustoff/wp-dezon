@@ -144,12 +144,12 @@ input::placeholder {
     display: table;
 }
 .row [class*="col-"] select, .row [class*="col-"] input {
-    width:100%;
-    max-height: 50px;
-    line-height: 2.385;
-    box-shadow: none;
-    outline: none;
-    border: none;	
+  /* width:100%;
+    //max-height: 50px;
+   // line-height: 2.385;
+    //box-shadow: none;
+    //outline: none;
+    //border: none;*/	
 }
 .pb-5, .py-5 {
     /*    padding-bottom: 3rem !important;*/

@@ -7,8 +7,11 @@ var whizzchat_comm_type = $("#whizz-chat-live").val();
 var whizzchat_screen = $("#whizzchat-screen").val();
 var whizzchat_between = $("#whizz-chat-between").val();
 var whizzchat_dashboard = jQuery("#whizzchat-dashboard").val();
+
+
 if (whizzchat_comm_type == '0' && whizzchat_screen == 'user' && whizzchat_dashboard == 'active') {
 
+    
     setInterval(whizzChat_load_chat_dashboard, whizzChat_dashboard_object.check_time);
     setInterval(whizzChat_load_chat_box_dashboard, whizzChat_dashboard_object.check_time);
 
@@ -21,8 +24,6 @@ function whizzChat_load_chat_box_dashboard() {
     if($.whizzChat_ajax_get_chat_list_box_dashboard.timerx != 0){
         if( $.whizzChat_ajax_get_chat_list_box_dashboard.loaded == false ) return '';
     }
-
-
     var chat_list = [];
     var chat_id;
     var session_id = whizz_user_token_js(whizzChat_dashboard_object.whizz_user_token);
@@ -92,10 +93,10 @@ function whizzChat_load_chat_dashboard() {
     if($.whizzChat_ajax_get_chat_list_dashboard.timerx != 0){
         if( $.whizzChat_ajax_get_chat_list_dashboard.loaded == false ) return '';
     }
-    
-
-       
-
+         
+         
+    if($(".chats-tab-open .whizz-main.main-visible #whizzchat-message-body").length > 0){     
+        
     $(".chats-tab-open .whizz-main.main-visible #whizzchat-message-body").each(function (index) {
 
         var post_id = $(this).data('post-id');
@@ -202,6 +203,7 @@ function whizzChat_load_chat_dashboard() {
 
 
 }
+}
 
 
 function whizzchat_open_dashboard_chat_person(id, post_id, this_obj, comm_id, room) {
@@ -253,6 +255,9 @@ function whizzchat_open_dashboard_chat_person(id, post_id, this_obj, comm_id, ro
                 preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
             }
         });
+         var show_emoji    =  whizzChat_dashboard_object.show_emoji;
+             
+        if(show_emoji ==  "1"){
         jQuery(".whizz-dash-chat-body .whizzChat-emoji-dashb").emojioneArea({
             pickerPosition: "top",
             filtersPosition: "bottom",
@@ -280,7 +285,7 @@ function whizzchat_open_dashboard_chat_person(id, post_id, this_obj, comm_id, ro
                 },
             }
         });
-        
+    }
         $('[data-close]').on('click', function (e) {
             e.preventDefault();
             $(".whizz-main").removeClass("main-visible");
@@ -665,6 +670,17 @@ $('body').on('click', '.whizzchat-dash-location', function () {
 
 });
 
+
+
+
+$("body").delegate(".initate-chat-input-text", "keydown",function(e){
+        
+    if(e.which ==  13){
+        e.preventDefault();
+     var msg    =   $('.initate-dash-btn').click();
+    }
+    });
+
 $(document).on('click', '.initate-dash-btn', function () {
 
     var this_obj = $(this);
@@ -691,10 +707,16 @@ $(document).on('click', '.initate-dash-btn', function () {
     }).eq(0).attr("data-post-id");
 
 
-
-    var msg = '';
-    var msg = $(this).closest('div.chat-footer').find('.initate-chat-input-text').val();
+    var msg = '';    
+    var show_emoji    =  whizzChat_dashboard_object.show_emoji;
+    if(show_emoji  ==  "1"){
+    var msg = $(this).closest('div.chat-footer').find('.initate-chat-input-text').data("emojioneArea").getText();
+    }
+    else{
+        var msg = $(this).closest('div.chat-footer').find('.initate-chat-input-text').val();
+    } 
     msg = whizzchat_strip_html(msg);
+    
     if (msg == '') {
         alert(whizzChat_dashboard_object.invalid_type_data2);
         return;
@@ -848,12 +870,14 @@ $("body").delegate(".chat-input-holder-dashb", "click", function () {
     });
 });
 
-
 $(document).on('click', '.logout-chat-session-dashb', function () {
 
     var del_chat = confirm("Are you Sure you want to remove the chat");
 
     if (del_chat == true) {
+        
+        
+        console.log("fffff");
         var leave_chat_id = $(this).data('leave-chat-id');
         var whizzChat_name = '';
         var whizzChat_email = '';
@@ -886,13 +910,12 @@ $(document).on('click', '.logout-chat-session-dashb', function () {
                 var html = '<div class="d-flex flex-column justify-content-center text-center h-100 w-100">\n\
                             <div class="container">\n\
                               <div class="avatar avatar-lg mb-2">\n\
-                                 <img class="avatar-img" src="https://asif/whizzchat/wp-content/plugins/whizz-chat/assets/images/whizz-chat-logo.png">\n\
+                                 <img class="avatar-img" src="'+whizzChat_dashboard_object.logo_img+'" />\n\
                               </div>\n\
-                           <h5>Welcome to WhizzChat Messenger</h5>\n\
-                           <p class="text-muted">Please select a chat to Start messaging.</p>\n\
+                           <h5>'+whizzChat_dashboard_object.welcome_msg+'</h5>\n\
+                           <p class="text-muted">'+whizzChat_dashboard_object.plz_select+'</p>\n\
                           </div>\n\
                          </div>';
-
                 $(".chats-tab-open .whizz-main.main-visible").html(html);
             }
         });
@@ -901,12 +924,10 @@ $(document).on('click', '.logout-chat-session-dashb', function () {
 });
 
 $(document).on('click', '.whizzChat-block-user-dashb', function () {
-
-
     var this_obj = $(this);
     var chat_id = this_obj.attr("data-chat-id");
     var post_id = this_obj.attr("data-post-id");
-
+    
     var client_data = {
         chat_id: chat_id,
         post_id: post_id,

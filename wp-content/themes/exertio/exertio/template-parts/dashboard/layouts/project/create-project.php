@@ -369,20 +369,40 @@ if(!isset($_GET['pid']))
 							?>
 						  </div>
 						  <div class="form-row">
-							  <div class="form-group col-md-6">
-								  <label><?php echo esc_html__(' Date début','exertio_theme'); ?></label>
-								  <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
-									    <input class="form-control" type="text" name="project_date_debut" id="datetimepicker"/>
-									    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+							  	<?php
+								  	if(fl_framework_get_options('project_date_debut') == 3)
+									{
+
+									}
+									else{
+								?>
+							  		<div class="form-group col-md-6">
+									  <label><?php echo esc_html__(' Date début','exertio_theme'); ?></label>
+									  <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
+										    <input class="form-control" type="text" name="project_date_debut" id="datetimepicker" value="<?php echo esc_attr(get_post_meta($pid, '_project_date_debut', true));?>" <?php if(fl_framework_get_options('_project_date_debut') == 1){ ?>required data-smk-msg="<?php echo esc_html__('Veuillez saisir une date début du projet','exertio_theme'); } ?>"/>
+										    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+										</div>
 									</div>
-								</div>
+									<?php 
+									}
+									?>
+								<?php
+								  	if(fl_framework_get_options('project_date_fin') == 3)
+									{
+
+									}
+									else{
+								?>
 								<div class="form-group col-md-6">
 								  <label><?php echo esc_html__(' Date fin','exertio_theme'); ?></label>
 								  <div id="datepicker2" class="input-group date" data-date-format="mm-dd-yyyy">
-									    <input class="form-control" type="text" name="project_date_fin" id="datetimepicker2"/>
+									    <input class="form-control" type="text" name="project_date_fin" id="datetimepicker2" value="<?php echo esc_attr(get_post_meta($pid, '_project_date_fin', true));?>" <?php if(fl_framework_get_options('_project_date_fin') == 1){ ?>required data-smk-msg="<?php echo esc_html__('Veuillez saisir une date fin du projet','exertio_theme'); } ?>"/>
 									    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
 									</div>
 								</div>
+								<?php 
+									}
+								?>
 							</div>
 						  <?php
 							if(fl_framework_get_options('project_skills') == 3)

@@ -6,6 +6,45 @@
 		lazyInit:true,
 		//minDate:'0',
 	});
+	//Ajout du script pour les dates du projet
+	jQuery.datetimepicker.setLocale('fr');
+	jQuery('#datetimepicker').datetimepicker({
+	   i18n:{
+		  fr:{
+		   months:[
+		    'Janvier','Février','Mars','Avril',
+		    'Mai','Jun','Juil','Août',
+		    'Septembre','Octobre','Novembre','Decembre',
+		   ],
+		   dayOfWeek:[
+		    "Dim.", "Lun", "Mar", "Mer", 
+		    "Jeu", "Ven", "Sam",
+		   ]
+		  }
+		 },
+	  startDate:'+2021/10/01',
+	  format:'d/m/Y H:i',
+	  lazyInit:true,
+	});
+	jQuery('#datetimepicker2').datetimepicker({
+		 i18n:{
+		  fr:{
+		   months:[
+		    'Janvier','Février','Mars','Avril',
+		    'Mai','Jun','Juil','Août',
+		    'Septembre','Octobre','Novembre','Decembre',
+		   ],
+		   dayOfWeek:[
+		    "Dim.", "Lun", "Mar", "Mer", 
+		    "Jeu", "Ven", "Sam",
+		   ]
+		  }
+		 },
+	  startDate:'+2021/10/01',
+	  format:'d/m/Y H:i',
+	  lazyInit:true,
+	});
+	//fin script date
 	$('.general_select').select2();
 	$('.general_select_2').select2({ minimumResultsForSearch: -1 });
 	$('.multi_select').select2({
@@ -548,10 +587,18 @@ $("select").on("select2:select", function (evt) {
 			{
 				if ( true === response.success ) 
 				{
+					/*
 					toastr.success(response.data.message, '', {timeOut: 8000, "closeButton": true, "positionClass": "toast-top-right", "showMethod": "slideDown", "hideMethod":"slideUp"});
 					setTimeout(function(){
 					  window.location.replace(response.data.pid);
 					}, 1000);
+					*/
+
+					toastr.success(response.data.message, '', {timeOut: 8000, "closeButton": true, "positionClass": "toast-top-right", "showMethod": "slideDown", "hideMethod":"slideUp"});
+					setTimeout(function(){
+					  window.location.replace('https://dezon.app/index.php/dashboard/?ext=projects');
+					}, 1000);
+
 				}
 				else
 				{
@@ -1343,8 +1390,13 @@ $("select").on("select2:select", function (evt) {
 					this_value.find('div.bubbles').removeClass("view");
 
 					toastr.success(response.data.message, '', {timeOut: 8000, "closeButton": true, "positionClass": "toast-top-right", "showMethod": "slideDown", "hideMethod":"slideUp"});
+					/*
 					setTimeout(function(){
 					  window.location.replace(response.data.pid);
+					}, 1000);
+					*/
+					setTimeout(function(){
+					  window.location.replace('https://dezon.app/index.php/dashboard/?ext=all-services');
 					}, 1000);
 				}
 				else
