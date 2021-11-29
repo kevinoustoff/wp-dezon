@@ -670,6 +670,16 @@ function filtersProjects(){
 		{
 			update_post_meta( $pid, '_project_address', sanitize_text_field($request->get_param('project_address')));
 		}
+		if($request->get_param('project_date_debut'))
+		{
+			update_post_meta( $pid, '_project_date_debut', sanitize_text_field($request->get_param('project_date_debut')));
+			wp_set_post_terms( $pid, $request->get_param('project_date_debut'), 'project-date-debut', false );
+		}
+		if($request->get_param('project_date_fin'))
+		{
+			update_post_meta( $pid, '_project_date_fin', sanitize_text_field($request->get_param('project_date_fin')));
+			wp_set_post_terms( $pid, $request->get_param('project_date_fin'), 'project-date-fin', false );
+		}
 		
 
 		if($request->get_param('project_type') == "2" )
