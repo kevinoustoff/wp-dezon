@@ -227,6 +227,22 @@
 		$customService['id'] = $service->ID;
 		$customService['freelancer-rates-stars'] = get_freelancer_rating( $fid, 'stars', 'service' );;
 		$customService['author_id'] = intval($post_author); 
+		if($exertio_theme_options['service_ad_1'] !=null || $exertio_theme_options['project_detail_ad1'] !=''){
+			$dom = new DOMDocument();
+			$dom->loadHTML( $exertio_theme_options['service_ad_1']);
+			$customService['advert_first'] = $dom->getElementsByTagName("img")[0]->getAttributeNode('src')->value;	
+		}
+		else{
+			$customService['advert_side_first'] = null;
+		}
+		if($exertio_theme_options['sidebar_service_ad_1'] !=null || $exertio_theme_options['project_detail_ad1'] !=''){
+			$dom = new DOMDocument();
+			$dom->loadHTML( $exertio_theme_options['sidebar_service_ad_1']);
+			$customService['advert_side_first'] = $dom->getElementsByTagName("img")[0]->getAttributeNode('src')->value;	
+		}
+		else{
+			$customService['advert_side_first'] = null;
+		}
 		$pro_img_id = get_post_meta( $fid, '_profile_pic_freelancer_id', true );
 		$pro_img = wp_get_attachment_image_src( $pro_img_id, 'thumbnail' );
 		
