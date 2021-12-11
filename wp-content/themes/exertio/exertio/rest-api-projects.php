@@ -409,6 +409,27 @@ function filtersProjects(){
 			{
 				$project_ref_id = $id;
 			}
+			
+			if($exertio_theme_options['project_detail_ad1'] !=null || $exertio_theme_options['project_detail_ad1'] !=''){
+				$dom = new DOMDocument();
+				$dom->loadHTML( $exertio_theme_options['project_detail_ad1']);
+				$customProject['advert_first'] = $dom->getElementsByTagName("img")[0]->getAttributeNode('src')->value;	
+			}
+			else{
+				$customProject['advert_first'] = null;
+			}
+			if($exertio_theme_options['project_detail_sidebar_ad1'] !=null || $exertio_theme_options['project_detail_ad1'] !=''){
+				$dom = new DOMDocument();
+				$dom->loadHTML( $exertio_theme_options['project_detail_sidebar_ad1']);
+				$customProject['advert_side_first'] = $dom->getElementsByTagName("img")[0]->getAttributeNode('src')->value;	
+			}
+			else{
+				$customProject['advert_side_first'] = null;
+			}
+			// $exertio_theme_options[ 'project_detail_sidebar_ad1' ]
+			//print_r($dom->getElementsByTagName("img")[0]->getAttributeNode('src')->value);
+
+			//$customProject['advert'] = $dom->getElementsByTagName("img") ;
 
 			$customProject['reference'] = $project_ref_id; 
 
@@ -450,20 +471,20 @@ function filtersProjects(){
 			$employer_id = get_user_meta( $author_id, 'employer_id' , true );
 			$type = get_post_meta($project->ID, '_project_type', true);
 			$customProject['author_id'] = intval($author_id);
-			if($type == 'fixed')
-            {
-                $customProject['estimated_hours'] = null;
-                $customProject['hourly_price'] = null;
-                $customProject['cost'] = fl_price_separator(get_post_meta($project->ID, '_project_cost', true));
-            }
-			else if($type == 'hourly')
-            {
+			// if($type == 'fixed')
+            // {
+            //     $customProject['estimated_hours'] = null;
+            //     $customProject['hourly_price'] = null;
+            //     $customProject['cost'] = fl_price_separator(get_post_meta($project->ID, '_project_cost', true));
+            // }
+			// else if($type == 'hourly')
+            // {
                 $customProject['cost'] = null;
                 $customProject['hourly_price'] = fl_price_separator(get_post_meta($project->ID, '_project_cost', true));
                 $hourly_price = fl_price_separator(get_post_meta($project->ID, '_project_cost', true));
                 $estimated_hours = get_post_meta($project->ID, '_estimated_hours', true);
                 $customProject['estimated_hours'] = $estimated_hours;
-            }
+            // }
 
 			$customProject['id'] = $project->ID;
             $customProject['employer_name'] = get_post_meta( $employer_id, '_employer_dispaly_name' , true );

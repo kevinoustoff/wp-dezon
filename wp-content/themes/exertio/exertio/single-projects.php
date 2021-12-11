@@ -143,8 +143,8 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 					</div>
 				  </div>
 					<?php
-					if ( isset($exertio_theme_options[ 'project_detail_ad1' ]) && $exertio_theme_options[ 'project_detail_ad1' ] !='' ) {
-						?>
+						if ( isset($exertio_theme_options[ 'project_detail_ad1' ]) && $exertio_theme_options[ 'project_detail_ad1' ] !='' ) {
+					?>
 						<div class="fl-advert-box">
 						<?php echo wp_return_echo( $exertio_theme_options[ 'project_detail_ad1' ] ); ?>
 						</div>
@@ -835,7 +835,7 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 						?>
 						<div class="fl-advert-box">
 						<?php
-						echo wp_return_echo( $exertio_theme_options[ 'project_detail_sidebar_ad1' ] );
+						echo wp_return_echo( $exertio_theme_options['project_detail_sidebar_ad1'] );
 						?>
 						</div>
 						<?php
