@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "Project-Id-Version: Exertio Framework\n"
 "POT-Creation-Date: 2021-03-12 13:16+0500\n"
-"PO-Revision-Date: 2021-11-23 14:31+0000\n"
+"PO-Revision-Date: 2021-11-30 11:01+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
@@ -2221,7 +2221,7 @@ msgstr ""
 
 #: inc/basic-function.php:138
 msgid "No Result Found"
-msgstr ""
+msgstr "Aucun résultat trouvé"
 
 #: inc/custom-functions.php:1220 inc/custom-functions.php:1799
 #: inc/custom-functions.php:1885
@@ -2455,7 +2455,7 @@ msgstr ""
 
 #: inc/utilities.php:2386 inc/utilities.php:2513
 msgid "Please purchase package to send proposal"
-msgstr "Veuillez acheter un pack afin de postuler à une offre"
+msgstr "Veuillez payer un abonnement afin de postuler à une offre"
 
 #: inc/custom-functions.php:1411
 msgid "Please recharge your wallet to purchase this service"

@@ -42,7 +42,7 @@ $fl_id = get_user_meta( $current_user_id, 'freelancer_id' , true );
 			  <div class="d-flex justify-content-between flex-wrap">
 				<div class="d-flex align-items-end flex-wrap">
 				  <div class="mr-md-3 mr-xl-5">
-					<h2><?php echo esc_html__('Projets rejetés','exertio_theme');?></h2>
+					<h2><?php echo esc_html__('Projets annulés','exertio_theme');?></h2>
 					<div class="d-flex"> <i class="fas fa-home text-muted d-flex align-items-center"></i>
 						<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;<?php echo esc_html__('Tableau de bord', 'exertio_theme' ); ?>&nbsp;</p>
 						<?php echo exertio_dashboard_extention_return(); ?>

@@ -690,7 +690,7 @@ if(in_array('exertio-framework/index.php', apply_filters('active_plugins', get_o
 									  <div>
 										<div class="form-group">
 										  <div class="pretty p-icon p-thick p-curve">
-											<input type="checkbox" name="privacy_policy" required data-smk-msg="<?php echo esc_html__('Please check this box to proceed.','exertio_theme'); ?>"/>
+											<input type="checkbox" name="privacy_policy" required data-smk-msg="<?php echo esc_html__('Veuillez cocher cette case pour continuer.','exertio_theme'); ?>"/>
 											<div class="state p-warning">
 												<i class="icon fa fa-check"></i>
 											  <label></label>

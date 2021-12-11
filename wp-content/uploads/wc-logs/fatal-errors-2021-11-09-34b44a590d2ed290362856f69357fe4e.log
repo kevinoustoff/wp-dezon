@@ -1,4 +1,0 @@
-2021-11-09T03:19:30+00:00 CRITICAL syntax error, unexpected identifier "post_status", expecting ")" dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 637
-
-2021-11-09T03:19:32+00:00 CRITICAL syntax error, unexpected token "," dans C:\xampp\htdocs\wp-dezon\wp-content\themes\exertio\exertio\rest-api-projects.php à la ligne 636
-
